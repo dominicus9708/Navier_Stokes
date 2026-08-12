@@ -1,0 +1,49 @@
+{
+  "schema_version": "0.1.0",
+  "status": "DERIVED PULLBACK / BOUNDARY-GEOMETRY BRIDGE + COMPUTATIONAL CHECK",
+  "exact_identities": {
+    "bulk_pullback": "int_{Omega_t} f(x,t) dx = int_{B_ell(a)} f(Phi_t(b),t) J(b,t) db; incompressibility gives J=1",
+    "nanson": "n_t dS_t = J F^{-T} n_0 dS_0 = F^{-T} n_0 dS_0",
+    "pressure_work_pullback": "int_{boundary Omega_t} p u.n dS = int_{boundary B} p(Phi) u(Phi).(F^{-T} n_0) dS_0",
+    "viscous_flux_pullback": "int_{boundary Omega_t} grad e.n dS = int_{boundary B} grad e(Phi).(F^{-T} n_0) dS_0"
+  },
+  "checks": {
+    "J_one": true,
+    "cofactor_equals_FinvT": true,
+    "det_C_one": true,
+    "area_vector_formula_match": true,
+    "numeric_volume_factor_one": true,
+    "boundary_amp_grows": true,
+    "boundary_anisotropy_grows": true
+  },
+  "passed": 7,
+  "total": 7,
+  "symbolic_anchor": {
+    "J": "1",
+    "det_C": "1",
+    "max_boundary_amplification_t_nonnegative": "exp(4*c*t)",
+    "min_boundary_amplification_t_nonnegative": "exp(-2*c*t)",
+    "boundary_anisotropy_ratio_t_nonnegative": "exp(6*c*t)"
+  },
+  "numeric_anchor": [
+    {"tau": 0.0, "max_FinvT": 1.0, "min_FinvT": 1.0, "boundary_anisotropy": 1.0, "volume_factor": 1.0},
+    {"tau": 0.05, "max_FinvT": 1.16855, "min_FinvT": 0.925075, "boundary_anisotropy": 1.26319, "volume_factor": 1.0},
+    {"tau": 0.1, "max_FinvT": 1.3655, "min_FinvT": 0.855764, "boundary_anisotropy": 1.59565, "volume_factor": 1.0},
+    {"tau": 0.2, "max_FinvT": 1.86459, "min_FinvT": 0.732333, "boundary_anisotropy": 2.5461, "volume_factor": 1.0},
+    {"tau": 0.5, "max_FinvT": 4.74742, "min_FinvT": 0.458956, "boundary_anisotropy": 10.344, "volume_factor": 1.0}
+  ],
+  "dsd_channels": {
+    "q_bulk_measure": "J=1; material bulk aggregation uses fixed reference volume measure",
+    "q_boundary_geometry": "F^{-T} n_0; transformed oriented area vector",
+    "q_boundary_amp": "||F^{-T}||_op = 1/sigma_min(F)",
+    "q_pressure_geometry": "pressure boundary work coupled to F^{-T}",
+    "q_viscous_geometry": "viscous boundary transport coupled to F^{-T}"
+  },
+  "scaling": {
+    "flow_map": "Phi^lambda_t(a)=lambda^{-1} Phi_{lambda^2 t}(lambda a)",
+    "deformation_gradient": "F^lambda(a,t)=F(lambda a,lambda^2 t)",
+    "consequence": "F, J, C, principal-stretch ratios, Delta_shape, and ||F^{-T}|| are dimensionless/scale-covariant material channels."
+  },
+  "interpretation": "Incompressibility freezes the material bulk Jacobian but not boundary geometry. The remaining pressure and viscous boundary interactions are weighted by F^{-T}. Compression of one material direction can therefore amplify the oriented-area factor even while total volume is exactly preserved. This is a structural coupling channel, not a blow-up theorem.",
+  "claim_boundary": "Nanson pullback and J=1 are exact smooth-flow identities. The exponential formulas are only for the frozen local Gaussian anchor and do not represent a time-solved Navier-Stokes trajectory."
+}
