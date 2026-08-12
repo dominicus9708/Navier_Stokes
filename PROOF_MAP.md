@@ -28,6 +28,16 @@ This file separates established identities, DSD bridge definitions, computationa
 | Linear benchmark superposition remains divergence-free | exact symbolic identity | COMPUTATIONAL CHECK / exact symbolic |
 | Nonlinear source has nonzero `Q_cross` under superposition | exact symbolic expression + point evaluation | COMPUTATIONAL CHECK / exact symbolic |
 | DSD off-diagonal dynamic channels required for nonlinear interactions | interpretation of `Q_cross` | BRIDGE DEFINITION |
+| Vorticity-direction factorization `sigma=|omega|^2 gamma` with `gamma=xi^T S xi` | exact spectral identity | DERIVED IDENTITY |
+| Benchmark `gamma=4 z exp(-|x|^2)` where `|omega|>0` | exact symbolic identity | COMPUTATIONAL CHECK / exact symbolic |
+| `xi`/alignment undefined where `|omega|=0`, despite removable quotient extension | typed bridge | BRIDGE DEFINITION |
+| `gamma=sum_i lambda_i (xi·e_i)^2`, alignment weights sum to one | eigenframe identity + samples | DERIVED IDENTITY / CHECK |
+| Benchmark direction variation `|grad xi|^2=1/(x^2+y^2)` | exact symbolic identity | COMPUTATIONAL CHECK / exact symbolic |
+| Magnitude-weighted variation cancels axis singularity | exact identity and whole-space integral | COMPUTATIONAL CHECK / exact symbolic |
+| Constantin–Fefferman vorticity-direction regularity line | Constantin–Fefferman (1993) | EXTERNAL REGULARITY ANCHOR |
+| Stretching of a two-seed sum is not the sum of self stretchings | exact expansion | DERIVED IDENTITY |
+| Exact benchmark cross-stretching reverses the sign predicted by self terms at `(1/4,1/2,0)` | exact analytic witness | COMPUTATIONAL CHECK / exact symbolic |
+| DSD off-diagonal stretching blocks are required | sign-reversal witness | BRIDGE REQUIREMENT |
 | `L^infty_t L^3_x` control implies smoothness in the endpoint theorem | Escauriaza–Seregin–Šverák (2003) | EXTERNAL REGULARITY ANCHOR |
 | `T_3(t)=int |u|^3` is Navier–Stokes scale invariant | direct scaling | BRIDGE DEFINITION / EXACT SCALING |
 | Smooth `L^3` balance: advection cancels, viscosity dissipates, pressure correlation remains | direct calculation | DERIVED IDENTITY |
@@ -37,16 +47,21 @@ This file separates established identities, DSD bridge definitions, computationa
 | Fixed-shape amplitude laws `T3,D3~A^3`, `Pi3~A^4` | exact homogeneity | DERIVED IDENTITY |
 | Unconditional monotone decay of global `L3` | amplified positive-`Pi3` benchmark predicts positive initial rate | FAILED-ROUTE CANDIDATE / needs rigorous certification |
 | Shell-to-ball coarea reconstruction | Euclidean coarea + exact benchmark integrals | DERIVED IDENTITY / CHECK |
-| Whole kinetic energy recovered from shell family | exact symbolic radial integration | COMPUTATIONAL CHECK / exact symbolic |
-| Whole enstrophy recovered from shell family | exact symbolic radial integration | COMPUTATIONAL CHECK / exact symbolic |
+| Whole kinetic energy/enstrophy recovered from shell family | exact symbolic radial integration | COMPUTATIONAL CHECK / exact symbolic |
 | Local parabolic `C_u`, `C_p`, `E_grad` bridge quantities are scale invariant | exact scaling bookkeeping | BRIDGE DEFINITION / EXACT SCALING |
 | CKN partial regularity of suitable weak solutions | Caffarelli–Kohn–Nirenberg (1982) | EXTERNAL REGULARITY ANCHOR |
 | Scaled local norms can serve as local regularity gates | later published interior criteria | EXTERNAL REGULARITY ANCHOR |
+| Local kinetic-energy shell budget separates `F_adv,F_p,F_visc,D_r` | exact local energy identity | DERIVED IDENTITY |
+| Symmetric benchmark has `F_adv=F_p=0` on centered spheres | exact parity | COMPUTATIONAL CHECK / exact symbolic |
+| Symmetric benchmark viscous flux is outward for every `r>0` | exact positive formula | COMPUTATIONAL CHECK / exact symbolic |
+| Asymmetric two-seed shell budget has nonzero signed advection/pressure flux | two-resolution spectral/volume audit | COMPUTATIONAL CHECK |
+| Asymmetric pressure shell flux changes sign with radius | `N=64,80` deterministic audit | COMPUTATIONAL CHECK |
+| One-way outward advective/pressure redistribution on every sphere | asymmetric sign witness | FAILED-ROUTE CANDIDATE |
 | A-priori bound for `sup_t ||u||_3` from DSD channels | none | OPEN PROOF OBLIGATION |
 | Non-circular control of pressure correlation `Pi3` | none | OPEN PROOF OBLIGATION |
-| Non-circular control of positive vortex stretching `Sigma_+` | none | OPEN PROOF OBLIGATION |
+| Non-circular control of positive vortex stretching / alignment channels | none | OPEN PROOF OBLIGATION |
 | Translation-complete extension to arbitrary centers/data | finite covariance witness only | OPEN PROOF OBLIGATION |
-| General control of all off-diagonal nonlinear cross couplings | one two-seed witness only | OPEN PROOF OBLIGATION |
+| General control of all off-diagonal nonlinear cross couplings | finite two-seed witnesses only | OPEN PROOF OBLIGATION |
 | Force an established local regularity gate at every candidate singular point/scale | geometry/scaling bridge only | OPEN PROOF OBLIGATION |
 | Global a-priori bound for arbitrary admissible initial data | none | OPEN PROOF OBLIGATION |
 | DSD route proves global smoothness | none | NOT CLAIMED |
