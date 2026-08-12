@@ -3,7 +3,8 @@
 
 The theorem-level estimates live in
 notes/2026-08-12-weighted-one-step-channel-closure.md.
-This script only checks the numerical bookkeeping of the near/far pressure split.
+This script only checks numerical bookkeeping of the near/far pressure split.
+All derivatives used in the FFT audit are evaluated by the same spectral operator.
 """
 from __future__ import annotations
 
@@ -12,7 +13,7 @@ import json
 from pathlib import Path
 import numpy as np
 
-SCHEMA_VERSION = "0.2.0"
+SCHEMA_VERSION = "0.3.0"
 
 
 def seed_grid(X, Y, Z, axis, center, amp=1.0):
@@ -30,7 +31,6 @@ def seed_grid(X, Y, Z, axis, center, amp=1.0):
 
 
 def pressure_from_tensor(T, K, k2):
-    """Solve -Delta p = partial_i partial_j T_ij spectrally."""
     rhs_hat = np.zeros(T.shape[2:], dtype=complex)
     for i in range(3):
         for j in range(3):
@@ -42,29 +42,23 @@ def pressure_from_tensor(T, K, k2):
 
 
 def cinf_cutoff(r, inner, outer):
-    """C-infinity radial taper: one on r<=inner and zero on r>=outer."""
     out = np.zeros_like(r)
     out[r <= inner] = 1.0
     m = (r > inner) & (r < outer)
     s = (r[m]-inner)/(outer-inner)
     a = np.exp(-1.0/s)
     b = np.exp(-1.0/(1.0-s))
-    theta = a/(a+b)            # 0 -> 1
-    out[m] = 1.0-theta         # 1 -> 0
+    out[m] = 1.0-a/(a+b)
     return out
 
 
-def bump_and_grad(X, Y, Z, ell):
-    r2 = X*X + Y*Y + Z*Z
+def compact_bump(X, Y, Z, ell):
+    r2 = X*X+Y*Y+Z*Z
     s2 = r2/(ell*ell)
     phi = np.zeros_like(X)
     m = s2 < 1.0
-    den = 1.0-s2[m]
-    phi[m] = np.exp(-1.0/den)
-    coeff = np.zeros_like(X)
-    coeff[m] = -2.0*phi[m]/(ell*ell*den*den)
-    grad = np.array([coeff*X, coeff*Y, coeff*Z])
-    return phi, grad
+    phi[m] = np.exp(-1.0/(1.0-s2[m]))
+    return phi
 
 
 def audit(N=64, L=6.0, ell=0.9, nu=1.0):
@@ -90,7 +84,11 @@ def audit(N=64, L=6.0, ell=0.9, nu=1.0):
             grads[i, j] = np.fft.ifftn(1j*K[j]*uh).real
     divu = np.trace(grads, axis1=0, axis2=1)
 
-    phi, gradphi = bump_and_grad(X, Y, Z, ell)
+    phi = compact_bump(X, Y, Z, ell)
+    phih = np.fft.fftn(phi)
+    gradphi = np.array([np.fft.ifftn(1j*K[j]*phih).real for j in range(3)])
+    lapphi = np.fft.ifftn(-k2*phih).real
+
     mass = float(np.sum(phi)*dv)
     Ubar = np.array([float(np.sum(phi*u[i])*dv/mass) for i in range(3)])
     v = u-Ubar[:, None, None, None]
@@ -99,9 +97,6 @@ def audit(N=64, L=6.0, ell=0.9, nu=1.0):
     Tfull = np.einsum("i...,j...->ij...", u, u)
     p = pressure_from_tensor(Tfull, K, k2)
 
-    # The near source equals the full pressure source in the inner ball at the
-    # continuum level because chi=1 there and spatially constant translations
-    # disappear under partial_i partial_j for divergence-free u.
     chi = cinf_cutoff(r, 2.0*ell, 3.0*ell)
     Tnear = chi[None, None, ...]*np.einsum("i...,j...->ij...", v, v)
     pnear = pressure_from_tensor(Tnear, K, k2)
@@ -120,9 +115,7 @@ def audit(N=64, L=6.0, ell=0.9, nu=1.0):
     Pnear = float(ell*np.sum(pnear*vdotgradphi)*dv)
     Pfar = float(ell*np.sum(pfar*vdotgradphi)*dv)
 
-    # Constant and linear pressure are exactly irrelevant in the continuum
-    # weighted-variance budget; this is a quadrature audit of that identity.
-    paff = 0.37 + 0.6*X - 0.4*Y + 0.2*Z
+    paff = 0.37+0.6*X-0.4*Y+0.2*Z
     Paff = float(ell*np.sum(paff*vdotgradphi)*dv)
 
     cidx = N//2
@@ -151,7 +144,6 @@ def audit(N=64, L=6.0, ell=0.9, nu=1.0):
     cz_ratio = pnear_l32/max(v_l3*v_l3, 1e-14)
 
     A = float(ell*np.sum(0.5*v2*vdotgradphi)*dv)
-    lapphi = np.fft.ifftn(-k2*np.fft.fftn(phi)).real
     B = float(0.5*nu*ell*np.sum(v2*lapphi)*dv)
 
     return {
@@ -199,12 +191,11 @@ def run_checks():
     return {
         "schema_version": SCHEMA_VERSION,
         "status": "COMPUTATIONAL CHECK / WEIGHTED ONE-STEP CHANNEL CLOSURE",
-        "checks": checks,
-        "failed_checks": failed,
+        "checks": checks, "failed_checks": failed,
         "passed": sum(checks.values()), "total": len(checks),
         "resolution_48": a48, "resolution_64": a64,
-        "interpretation": "The audit tests weighted mean removal, near/far pressure reconstruction, affine-pressure irrelevance, inner harmonicity of the far piece, and finite benchmark interpolation/CZ ratios.",
-        "claim_boundary": "Numerical ratios are benchmark audits, not universal constants; analytic estimates are in the accompanying note."
+        "interpretation": "A single spectral derivative operator is used for velocity, pressure and the sampled cutoff. The audit checks weighted mean removal, pressure reconstruction, affine-pressure irrelevance, inner harmonicity of the far piece, and finite interpolation/CZ ratios.",
+        "claim_boundary": "Numerical ratios are benchmark audits, not universal constants; theorem-level estimates are documented separately."
     }
 
 
