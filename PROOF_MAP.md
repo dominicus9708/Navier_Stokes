@@ -1,6 +1,6 @@
 # Proof / verification map
 
-This file separates established identities, DSD bridge definitions, computational checks, and unresolved proof targets.
+This file separates established identities, DSD bridge definitions, computational checks, external regularity anchors, and unresolved proof targets.
 
 | Item | Current support | Status |
 |---|---|---|
@@ -21,7 +21,18 @@ This file separates established identities, DSD bridge definitions, computationa
 | `r^4 T_P` scaling covariance | whole-space `l=2` pressure inversion + numerical cross-check | COMPUTATIONAL CHECK |
 | Centered candidate `D_O` | finite sampling only | CONJECTURE / TARGET |
 | All-center descriptor `D_all` | definition only | CONJECTURE / TARGET |
-| Bounded DSD descriptor implies a known regularity-sufficient norm | none | OPEN PROOF OBLIGATION |
+| Velocity-gradient block has `tr S=0` | exact SymPy identity | COMPUTATIONAL CHECK / exact symbolic |
+| Benchmark vortex-stretching formula `omega^T S omega` | exact SymPy identity | COMPUTATIONAL CHECK / exact symbolic |
+| Signed shell stretching cancels but positive part is nonzero | exact shell integration | COMPUTATIONAL CHECK |
+| Global benchmark stretching cancels with `Sigma_+=Sigma_-=992*pi/81` | exact whole-space integration | COMPUTATIONAL CHECK |
+| `div R_adv=-Q`, `div R_pres=+Q`, `div R_visc=0` | smooth incompressible identity + exact benchmark check | DERIVED IDENTITY / CHECK |
+| `L^infty_t L^3_x` control implies smoothness in the external endpoint theorem | Escauriaza–Seregin–Šverák (2003) | EXTERNAL REGULARITY ANCHOR |
+| DSD critical channel `T_3(t)=int |u|^3` is Navier–Stokes scale invariant | direct scaling calculation | BRIDGE DEFINITION / EXACT SCALING |
+| Formal `L^3` balance separates advection cancellation, viscous dissipation, pressure correlation | smooth decaying solution calculation | DERIVED IDENTITY |
+| A-priori bound for `sup_t ||u||_3` from DSD channels | none | OPEN PROOF OBLIGATION |
+| Non-circular control of pressure correlation `Pi_3` | none | OPEN PROOF OBLIGATION |
+| Non-circular control of positive vortex stretching `Sigma_+` | none | OPEN PROOF OBLIGATION |
+| Translation-complete extension beyond centered benchmark | definition only | OPEN PROOF OBLIGATION |
 | Global a-priori bound for arbitrary admissible initial data | none | OPEN PROOF OBLIGATION |
 | DSD route proves global smoothness | none | NOT CLAIMED |
 
