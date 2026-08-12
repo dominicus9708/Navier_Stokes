@@ -38,6 +38,8 @@ jobs:
         run: python src/mean_flow_sphere_gate.py --output-dir results
       - name: Run pressure-free exponent bridge
         run: python src/pressure_free_exponent_bridge.py --output-dir results
+      - name: Run mean-flow moving-sphere budget
+        run: python src/mean_flow_sphere_budget.py --output-dir results
       - name: Run critical-channel checks
         run: python src/critical_channel_baseline.py --output-dir results
       - name: Run translation/coupling checks
