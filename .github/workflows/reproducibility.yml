@@ -26,6 +26,8 @@ jobs:
         run: python src/material_relative_difference_gate.py --output-dir results
       - name: Run mean-centered material oscillation gate
         run: python src/material_oscillation_gate.py --output-dir results
+      - name: Run restartable material tube gate
+        run: python src/restartable_material_tube_gate.py --output-dir results
       - name: Run critical-channel checks
         run: python src/critical_channel_baseline.py --output-dir results
       - name: Run translation/coupling checks
