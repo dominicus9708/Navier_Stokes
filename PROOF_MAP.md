@@ -31,6 +31,12 @@ This file separates established identities, DSD bridge definitions, computationa
 | Rigid co-moving sphere changes but does not eliminate relative advective energy crossing | asymmetric two-seed `N=64,80` audit | COMPUTATIONAL CHECK |
 | Relative advective kinetic-energy flux vanishes for a true material boundary | Reynolds transport with boundary velocity `w_b=u` | DERIVED IDENTITY |
 | Material-cell energy budget retains pressure work, viscous transport, and dissipation | Reynolds transport + local kinetic-energy equation | DERIVED IDENTITY |
+| Material bulk aggregation pulls back to the fixed reference ball with unit Jacobian | change of variables + `J=1` | DERIVED IDENTITY |
+| Oriented material boundary area obeys `n_t dS_t=F^{-T}n_0 dS_0` | Nanson relation + `J=1` | DERIVED IDENTITY |
+| Pressure work on a material cell couples to `F^{-T}` under reference pullback | Nanson pullback of boundary integral | DERIVED IDENTITY / BRIDGE CHANNEL |
+| Viscous boundary transport on a material cell couples to `F^{-T}` | Nanson pullback of boundary integral | DERIVED IDENTITY / BRIDGE CHANNEL |
+| Material deformation channels `F,J,C,Delta_shape,||F^{-T}||` are dimensionless/NS-scale-covariant | flow-map scaling `Phi^lambda=lambda^-1 Phi(lambda a,lambda^2t)` | DERIVED SCALING BRIDGE |
+| Frozen Gaussian boundary amplification `||F^{-T}||=exp(4c tau)` | exact local matrix model | COMPUTATIONAL CHECK / LOCAL MODEL |
 | Velocity-gradient block has `tr S=0` | exact identity | COMPUTATIONAL CHECK / exact symbolic |
 | Benchmark vortex-stretching formula `omega^T S omega` | exact identity | COMPUTATIONAL CHECK / exact symbolic |
 | Signed stretching cancels while positive/negative parts are nonzero | exact shell/whole-space integration | COMPUTATIONAL CHECK |
@@ -75,6 +81,7 @@ This file separates established identities, DSD bridge definitions, computationa
 | Non-circular control of positive vortex stretching / alignment channels | none | OPEN PROOF OBLIGATION |
 | Translation-complete all-label/all-scale a-priori control | flow-map reparameterization exists, bound does not | OPEN PROOF OBLIGATION |
 | A-priori control of material-cell deformation / accumulated positive strain | no arbitrary-data bound | OPEN PROOF OBLIGATION |
+| Joint control of pressure/viscous boundary terms with `F^{-T}` geometry amplification | exact coupling identity only | OPEN PROOF OBLIGATION |
 | General control of all off-diagonal nonlinear cross couplings | finite two-seed witnesses only | OPEN PROOF OBLIGATION |
 | Force an established local regularity gate at every candidate singular point/scale | geometry/scaling/moving-cell bridges only | OPEN PROOF OBLIGATION |
 | Global a-priori bound for arbitrary admissible initial data | none | OPEN PROOF OBLIGATION |
