@@ -24,5 +24,7 @@ jobs:
         run: python src/critical_l3_rate_baseline.py --output-dir results
       - name: Run shell-to-local coarea checks
         run: python src/coarea_local_bridge.py --output-dir results
+      - name: Run vorticity alignment checks
+        run: python src/vorticity_alignment_baseline.py --output-dir results
       - name: Run regression tests
         run: python -m unittest discover -s tests -v
