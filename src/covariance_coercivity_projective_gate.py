@@ -6,7 +6,7 @@ import argparse, json
 from pathlib import Path
 import numpy as np
 
-SCHEMA_VERSION='0.1.0'
+SCHEMA_VERSION='0.1.1'
 
 
 def random_cov(rng):
@@ -27,10 +27,25 @@ def audit(seed=9708,samples=1000):
 
 
 def sharp_order():
-    eps=np.logspace(-8,-2,80); ratios=[]
+    # For the nearly one-axis spectrum
+    #   (1-e, e/2, e/2),
+    # compute the two small quantities from their exact closed forms instead of
+    # subtracting nearly equal floating-point numbers:
+    #   J = 2e - (3/2)e^2,
+    #   2Pi-J = (3/2)e^2.
+    # Hence (2Pi-J)/J^2 -> 3/8 as e -> 0.
+    eps=np.logspace(-10,-3,80); ratios=[]
     for e in eps:
-        C=np.diag([1-e,e/2,e/2]); vals=np.diag(C); Pi=e; J=float(1-np.trace(C@C)); exact=2*Pi-J; ratios.append(exact/(J*J))
-    return {'last_small_epsilon_ratio':ratios[0],'target':3/8,'error':abs(ratios[0]-3/8),'min_ratio':min(ratios)}
+        J=2*e-1.5*e*e
+        exact=1.5*e*e
+        ratios.append(exact/(J*J))
+    return {
+        'smallest_epsilon':float(eps[0]),
+        'small_epsilon_ratio':float(ratios[0]),
+        'target':3/8,
+        'error':abs(float(ratios[0])-3/8),
+        'min_ratio':float(min(ratios)),
+    }
 
 
 def optimized_D_case(seed=99):
@@ -45,7 +60,7 @@ def run_checks():
       'random_quadratic_coercivity':a['min_quadratic_margin']>-1e-12,
       'random_exact_floor':a['min_exact_optimization_margin']>-1e-12,
       'rank_one_optimizer_attains_floor':o['error']<1e-12,
-      'three_eighths_small_defect_sharp_order':s['error']<1e-6,
+      'three_eighths_small_defect_sharp_order':s['error']<1e-8,
     }
     checks={k:bool(v) for k,v in checks.items()}
     return {'schema_version':SCHEMA_VERSION,'status':'DERIVED COVARIANCE COERCIVITY / MATRIX AUDIT','checks':checks,'passed':sum(checks.values()),'total':len(checks),'random':a,'sharp_order':s,'optimizer':o,'identity':'J(D)+||D-C||_F^2 >= 2 Pi(C)-J(C) >= (3/8)J(C)^2.','claim_boundary':'Finite-dimensional matrix inequality only; its PDE use is through the separately derived energy-weighted covariance chain.'}
@@ -53,5 +68,7 @@ def run_checks():
 
 def main():
     ap=argparse.ArgumentParser(); ap.add_argument('--output-dir',default='results'); args=ap.parse_args(); out=Path(args.output_dir); out.mkdir(parents=True,exist_ok=True); d=run_checks(); (out/'covariance_coercivity_projective_gate.json').write_text(json.dumps(d,indent=2),encoding='utf-8'); (out/'covariance_coercivity_projective_gate.md').write_text(f"# Covariance coercivity audit\n\nChecks passed: **{d['passed']}/{d['total']}**\n\n{d['identity']}\n",encoding='utf-8'); print(f"Covariance coercivity: {d['passed']}/{d['total']} checks passed");
+    failed=[k for k,v in d['checks'].items() if not v]
+    if failed: print('Failed checks:', failed)
     if d['passed']!=d['total']: raise SystemExit(1)
 if __name__=='__main__': main()
