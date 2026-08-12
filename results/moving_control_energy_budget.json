@@ -1,0 +1,53 @@
+{
+  "schema_version": "0.1.0",
+  "status": "DERIVED MOVING-CONTROL IDENTITY + COMPUTATIONAL CHECK",
+  "exact_identity": "For kinetic energy e=|u|^2/2 in a control volume with boundary velocity w_b: d/dt int_Omega e = -int_boundary e (u-w_b).n -int_boundary p u.n + nu int_boundary partial_n e -nu int_Omega |grad u|^2. For a material cell w_b=u, the relative advective term vanishes exactly.",
+  "checks": {
+    "center_velocity_64": true,
+    "center_velocity_80": true,
+    "fixed_adv_inward_r1_both": true,
+    "rigid_comoving_adv_inward_r1_both": true,
+    "rigid_comoving_adv_outward_r2_both": true,
+    "fixed_adv_still_inward_r2_both": true,
+    "material_advective_flux_exact_zero": true
+  },
+  "passed": 7,
+  "total": 7,
+  "resolution_64": {
+    "N": 64,
+    "L": 6.0,
+    "h": 0.1875,
+    "observer_center": [0.0, 0.0, 0.0],
+    "observer_velocity": [1.4715177646857693, 0.0, 4.0],
+    "rows": [
+      {"r": 0.75, "F_adv_fixed": -1.5442581914611715, "F_adv_rigid_comoving": -5.450253887863769, "F_adv_material": 0.0, "rigid_translation_correction": 3.9059956964025977},
+      {"r": 1.0, "F_adv_fixed": -9.744177721889718, "F_adv_rigid_comoving": -8.610955243696802, "F_adv_material": 0.0, "rigid_translation_correction": -1.1332224781929163},
+      {"r": 1.25, "F_adv_fixed": -12.23835913231951, "F_adv_rigid_comoving": -8.529008949321385, "F_adv_material": 0.0, "rigid_translation_correction": -3.709350182998124},
+      {"r": 1.5, "F_adv_fixed": -9.391913072563641, "F_adv_rigid_comoving": -6.186562597612133, "F_adv_material": 0.0, "rigid_translation_correction": -3.205350474951508},
+      {"r": 2.0, "F_adv_fixed": -1.3291227202578593, "F_adv_rigid_comoving": 0.5415867952019144, "F_adv_material": 0.0, "rigid_translation_correction": -1.8707095154597737}
+    ]
+  },
+  "resolution_80": {
+    "N": 80,
+    "L": 6.0,
+    "h": 0.15,
+    "observer_center": [0.0, 0.0, 0.0],
+    "observer_velocity": [1.4715177646857693, 0.0, 4.0],
+    "rows": [
+      {"r": 0.75, "F_adv_fixed": -1.84051166448416, "F_adv_rigid_comoving": -5.276194820652659, "F_adv_material": 0.0, "rigid_translation_correction": 3.435683156168499},
+      {"r": 1.0, "F_adv_fixed": -9.972613518793235, "F_adv_rigid_comoving": -8.900546504605957, "F_adv_material": 0.0, "rigid_translation_correction": -1.072067014187278},
+      {"r": 1.25, "F_adv_fixed": -11.946113217798812, "F_adv_rigid_comoving": -8.078411015902903, "F_adv_material": 0.0, "rigid_translation_correction": -3.867702201895909},
+      {"r": 1.5, "F_adv_fixed": -9.088903678160829, "F_adv_rigid_comoving": -5.870568229050204, "F_adv_material": 0.0, "rigid_translation_correction": -3.218335449110625},
+      {"r": 2.0, "F_adv_fixed": -1.391462428647729, "F_adv_rigid_comoving": 0.5438800513305854, "F_adv_material": 0.0, "rigid_translation_correction": -1.9353424799783144}
+    ]
+  },
+  "interpretation": "Translating a rigid spherical observation window with the local fluid velocity changes but does not generally remove advective energy crossing, because boundary fluid velocities are not all equal to the center velocity. A deforming material cell follows the full boundary velocity and removes relative advective crossing exactly. Advection is not removed from the Navier-Stokes dynamics; it is absorbed into the motion/deformation of the material control volume.",
+  "dsd_channel_consequence": {
+    "q_adv_fixed": "Eulerian advective flux through a fixed shell",
+    "q_adv_relative": "relative advective flux e (u-Xdot).n through a rigid co-moving shell",
+    "q_adv_material": "defined zero for a true material boundary",
+    "q_pressure_work": "pressure work remains active on a material boundary",
+    "q_viscous": "viscous boundary transport and interior dissipation remain active"
+  },
+  "claim_boundary": "The cancellation of relative material advection is exact Reynolds transport. The asymmetric sign comparisons are numerical audits on a large decay window, not a global regularity theorem."
+}
