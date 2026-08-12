@@ -1,0 +1,38 @@
+{
+  "status": "COMPUTATIONAL CHECK / CRITICAL-CHANNEL BRIDGE",
+  "checks": {
+    "trace_strain_zero": true,
+    "stretch_formula": true,
+    "signed_shell_stretch_zero": true,
+    "positive_shell_stretch_formula": true,
+    "global_signed_stretch_zero": true,
+    "global_positive_stretch_exact": true,
+    "pressure_closure_advective_divergence": true,
+    "whole_space_energy_exact": true,
+    "whole_space_enstrophy_exact": true,
+    "whole_space_grad_enstrophy_exact": true
+  },
+  "passed": 10,
+  "total": 10,
+  "strain_trace": "0",
+  "vortex_stretching_density": "64*z*(x**2 + y**2)*(2*x**2 + 2*y**2 + 2*z**2 - 5)**2*exp(-3*x**2)*exp(-3*y**2)*exp(-3*z**2)",
+  "normalized_shell_signed_stretch": "0",
+  "normalized_shell_positive_stretch": "r**3*(32*r**4 - 160*r**2 + 200)*exp(-3*r**2)",
+  "global_positive_stretch": "992*pi/81",
+  "global_negative_stretch": "-992*pi/81",
+  "global_net_stretch": "0",
+  "whole_space_integrals": {
+    "int_|u|^2": "5*sqrt(2)*pi**(3/2)/2",
+    "int_|omega|^2": "35*sqrt(2)*pi**(3/2)/2",
+    "int_|grad_omega|^2": "315*sqrt(2)*pi**(3/2)/2"
+  },
+  "pressure_closure": {
+    "Q": "32*(2*x**4 + 4*x**2*y**2 + 2*x**2*z**2 - 4*x**2 + 2*y**4 + 2*y**2*z**2 - 4*y**2 + 3*z**2)*exp(-2*x**2)*exp(-2*y**2)*exp(-2*z**2)",
+    "div_R_adv": "-32*(2*x**4 + 4*x**2*y**2 + 2*x**2*z**2 - 4*x**2 + 2*y**4 + 2*y**2*z**2 - 4*y**2 + 3*z**2)*exp(-2*x**2)*exp(-2*y**2)*exp(-2*z**2)",
+    "statement": "div R_adv = -Q, div R_pres = +Q when -Delta p=Q, and div R_visc=0."
+  },
+  "interpretation": {
+    "aggregate_cancellation": "Global signed vortex stretching is zero for this benchmark, but positive and negative stretching are separately nonzero and cancel.",
+    "proof_boundary": "This is a benchmark cancellation witness. It is not a general bound on vortex stretching."
+  }
+}
