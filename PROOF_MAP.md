@@ -26,13 +26,19 @@ This file separates established identities, DSD bridge definitions, computationa
 | Signed shell stretching cancels but positive part is nonzero | exact shell integration | COMPUTATIONAL CHECK |
 | Global benchmark stretching cancels with `Sigma_+=Sigma_-=992*pi/81` | exact whole-space integration | COMPUTATIONAL CHECK |
 | `div R_adv=-Q`, `div R_pres=+Q`, `div R_visc=0` | smooth incompressible identity + exact benchmark check | DERIVED IDENTITY / CHECK |
+| Translated benchmark recovers the same special shell about its own center | equal-solid-angle quadrature + exact scaling | COMPUTATIONAL CHECK |
+| Same-radius shell about an unrelated fixed origin becomes anisotropic | deterministic quadrature witness | COMPUTATIONAL CHECK |
+| Linear superposition of benchmark seeds remains divergence-free | exact symbolic identity | COMPUTATIONAL CHECK / exact symbolic |
+| Nonlinear pressure/advection source has nonzero `Q_cross` under superposition | exact symbolic expression + test-point evaluation | COMPUTATIONAL CHECK / exact symbolic |
+| DSD off-diagonal dynamic channels are required for nonlinear interactions | bridge interpretation of `Q_cross` | BRIDGE DEFINITION |
 | `L^infty_t L^3_x` control implies smoothness in the external endpoint theorem | Escauriaza–Seregin–Šverák (2003) | EXTERNAL REGULARITY ANCHOR |
 | DSD critical channel `T_3(t)=int |u|^3` is Navier–Stokes scale invariant | direct scaling calculation | BRIDGE DEFINITION / EXACT SCALING |
 | Formal `L^3` balance separates advection cancellation, viscous dissipation, pressure correlation | smooth decaying solution calculation | DERIVED IDENTITY |
 | A-priori bound for `sup_t ||u||_3` from DSD channels | none | OPEN PROOF OBLIGATION |
 | Non-circular control of pressure correlation `Pi_3` | none | OPEN PROOF OBLIGATION |
 | Non-circular control of positive vortex stretching `Sigma_+` | none | OPEN PROOF OBLIGATION |
-| Translation-complete extension beyond centered benchmark | definition only | OPEN PROOF OBLIGATION |
+| Translation-complete extension to arbitrary centers/data | finite covariance witness only | OPEN PROOF OBLIGATION |
+| General control of all off-diagonal nonlinear cross couplings | one two-seed witness only | OPEN PROOF OBLIGATION |
 | Global a-priori bound for arbitrary admissible initial data | none | OPEN PROOF OBLIGATION |
 | DSD route proves global smoothness | none | NOT CLAIMED |
 
