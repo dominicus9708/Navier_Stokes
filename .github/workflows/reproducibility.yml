@@ -40,6 +40,8 @@ jobs:
         run: python src/pressure_free_exponent_bridge.py --output-dir results
       - name: Run mean-flow moving-sphere budget
         run: python src/mean_flow_sphere_budget.py --output-dir results
+      - name: Run weighted mean-flow sphere gate
+        run: python src/weighted_mean_sphere_gate.py --output-dir results
       - name: Run Lagrangian diffusion metric gate
         run: python src/lagrangian_diffusion_metric_gate.py --output-dir results
       - name: Run Lagrangian metric cancellation audit
