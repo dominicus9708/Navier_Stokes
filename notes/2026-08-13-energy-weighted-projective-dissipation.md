@@ -334,11 +334,9 @@ The second factor
 =\sum_{k\ge1}k^2\widehat E_k
 \]
 
-is exactly the derivative-order quantity naturally appearing in the viscous factorial dissipation, although the projective dissipation carries the additional factors `J_k` and covariance mismatch.
+is the derivative-order quantity naturally appearing in the full analytic/Gevrey viscous energy hierarchy. The projective dissipation controls the corresponding directionally weighted part plus covariance mismatch.
 
-This is the first common factorial framework for both nonlinear and viscous directional channels.
-
-## 8. Remaining obstruction
+## 8. Remaining obstruction and corrected claim boundary
 
 The new formulation does not yet close globally because
 
@@ -362,9 +360,21 @@ rather than the full
 k^2\widehat E_k.
 \]
 
-Therefore a nearly one-axis high-derivative sector can make the full derivative generator large while the projective dissipation is small. That sector must be returned to the locally anisotropic / axis-alignment regularity gate rather than absorbed purely by this inequality.
+A nearly one-axis high-derivative sector can therefore make the full derivative generator large while the projective dissipation is small.
 
-This produces a sharper dichotomy:
+**Important typing restriction:** small `J_k` for `k>=1` describes the directional covariance of `D^k omega`. It does **not** by itself satisfy a regularity theorem stated for the original vorticity direction `omega/|omega|`. In particular, Miller's locally anisotropic criterion is a `k=0` vorticity criterion and cannot simply be applied to `D^k omega`.
+
+Thus the high-order small-`J_k` branch is not an automatic regularity gate. It creates a new bridge problem:
+
+\[
+\boxed{
+J_k\ll1\text{ at high }k
+\quad\Longrightarrow?\quad
+\text{useful information on }C_0\text{ or on a known high-derivative criterion}.
+}
+\]
+
+Until such a bridge is proved, the correct dichotomy is only
 
 \[
 \boxed{
@@ -374,13 +384,13 @@ This produces a sharper dichotomy:
 }
 \]
 
-whereas
+versus
 
 \[
 \boxed{
 \text{high derivatives become nearly one-axis}
 \Rightarrow
-\text{anisotropic alignment gate becomes the relevant branch}.
+\text{OPEN HIGH-ORDER-TO-BASE ANISOTROPY BRIDGE}.
 }
 \]
 
@@ -398,8 +408,8 @@ acquires
 2k\frac{\dot\ell}{\ell}\widehat D_k.
 \]
 
-A decreasing radius (`dot ell<0`) produces another negative derivative-order weighted term. This is the standard structural mechanism by which the `z W'(z)` commutator contribution can potentially be absorbed.
+A decreasing radius (`dot ell<0`) produces another negative derivative-order weighted term. This is the standard structural mechanism by which the derivative-generator contribution can potentially be absorbed.
 
 Any proof claim must derive a quantitative radius ODE and show that `ell(t)` cannot reach zero at a finite time under the lower-order constraints. That step remains open.
 
-Status: **OPEN DYNAMIC-RADIUS / ANISOTROPIC-DICHOTOMY CLOSURE**.
+Status: **OPEN DYNAMIC-RADIUS / HIGH-ORDER-TO-BASE ANISOTROPY BRIDGE**.
