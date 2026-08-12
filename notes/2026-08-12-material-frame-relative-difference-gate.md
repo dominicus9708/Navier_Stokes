@@ -37,7 +37,7 @@ However, because `div u=0`, the same term is exactly
 Similarly,
 
 \[
-\nu\int_{\partial\Omega_t}u\cdot\partial_nu\,dS
+\nu\int_{\partial\Omega_t}u\cdot\partial_n u\,dS
 -\nu\int_{\Omega_t}|\nabla u|^2dx
 =
 \nu\int_{\Omega_t}u\cdot\Delta u\,dx.
@@ -177,8 +177,7 @@ For each initial label `b` in `B_ell(a)`, define
 
 \[
 V(b,t)
-=
-u(\Phi_t(b),t)-U(t).
+=u(\Phi_t(b),t)-U(t).
 \]
 
 This is the velocity difference inside the same tracked material cell.
