@@ -1,0 +1,37 @@
+{
+  "status": "COMPUTATIONAL CHECK / TRANSLATION + CROSS-COUPLING",
+  "checks": {
+    "translated_center_shell_mean": true,
+    "translated_center_isotropic": true,
+    "wrong_center_not_isotropic": true,
+    "superposed_seed_divergence_free": true,
+    "nonlinear_cross_Q_nonzero": true
+  },
+  "passed": 5,
+  "total": 5,
+  "translated_seed": {
+    "physical_center": [1.5, 0.0, 0.0],
+    "lambda": 1.2,
+    "amplitude": 0.8,
+    "isotropic_shell_radius": 1.1785113019775793,
+    "centered_shell": {
+      "mean": 0.13503754239885937,
+      "coefficient_of_variation": 4.575278578547149e-16
+    },
+    "expected_centered_mean": 0.1350375423988593,
+    "origin_centered_shell": {
+      "mean": 0.14348417961647988,
+      "coefficient_of_variation": 3.2962802081830045
+    },
+    "interpretation": "The special shell is recovered around the translated seed center, not around an arbitrary fixed origin."
+  },
+  "superposition": {
+    "div_u1": "0",
+    "div_u2": "0",
+    "div_total": "0",
+    "cross_Q": "-16*z*(4*x**3 + 2*x**2 - 12*x + 6*y**2 + 6*z**2 - 3)*exp(-1)*exp(2*x)*exp(-2*x**2)*exp(-2*y**2)*exp(-2*z**2)",
+    "cross_Q_at_test_point": -14.179048016884131,
+    "interpretation": "Velocity composition is linear and remains divergence-free, but the pressure/advection closure source Q contains a nonzero cross term. Static composition therefore does not imply dynamical independence."
+  },
+  "proof_boundary": "Finite translated/superposed benchmarks establish covariance and a cross-coupling witness only; they do not cover arbitrary initial data."
+}
