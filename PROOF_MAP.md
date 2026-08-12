@@ -18,6 +18,19 @@ This file separates established identities, DSD bridge definitions, computationa
 | `r^2 T_E`, `r^4 T_W`, `r^4 T_P` scaling covariance | exact scaling + pressure inversion check | COMPUTATIONAL CHECK |
 | Centered candidate `D_O` | finite sampling only | CONJECTURE / TARGET |
 | All-center descriptor `D_all` | definition only | CONJECTURE / TARGET |
+| Co-moving rigid observation sphere `S_ell^obs(a,t)` | flow-map center `X=Phi_t(a)` + fixed spherical reference shape | BRIDGE DEFINITION |
+| Deforming material cell `Omega_ell^mat(a,t)=Phi_t(B_ell(a))` | smooth flow-map kinematics | DERIVED KINEMATIC BRIDGE |
+| Deformation gradient `F=D_a Phi_t` obeys `dot F=(grad u)F` | differentiation of the smooth flow map | DERIVED IDENTITY |
+| Material Jacobian obeys `dot J=(div u)J` and hence `J=1` | incompressibility + Liouville formula | DERIVED IDENTITY |
+| Cauchy–Green evolution `dot C=2 F^T S F` | exact flow-map algebra | DERIVED IDENTITY |
+| Instantaneous material-line stretching depends on `S`, not antisymmetric rotation | `v^T Omega v=0` + exact symbolic audit | DERIVED IDENTITY / CHECK |
+| Local DSD shape gap `Delta_shape=||log sqrt(F^T F)||_F` | application-specific rotation-insensitive deformation readout | BRIDGE DEFINITION |
+| Moving Gaussian anchor has strain eigenvalues `(-4c,2c,2c)`, `c=e^-1/4` | exact SymPy evaluation at `(0,0,1/2)` | COMPUTATIONAL CHECK / exact symbolic |
+| Frozen local Gaussian ellipsoid preserves volume exactly while aspect ratio grows | exact matrix exponential with trace-free anchor strain; Wolfram cross-check | COMPUTATIONAL CHECK / LOCAL MODEL |
+| Material-label reparameterization removes preferred fixed origin while smooth | bijectivity of the smooth flow map | DERIVED KINEMATIC BRIDGE |
+| Rigid co-moving sphere changes but does not eliminate relative advective energy crossing | asymmetric two-seed `N=64,80` audit | COMPUTATIONAL CHECK |
+| Relative advective kinetic-energy flux vanishes for a true material boundary | Reynolds transport with boundary velocity `w_b=u` | DERIVED IDENTITY |
+| Material-cell energy budget retains pressure work, viscous transport, and dissipation | Reynolds transport + local kinetic-energy equation | DERIVED IDENTITY |
 | Velocity-gradient block has `tr S=0` | exact identity | COMPUTATIONAL CHECK / exact symbolic |
 | Benchmark vortex-stretching formula `omega^T S omega` | exact identity | COMPUTATIONAL CHECK / exact symbolic |
 | Signed stretching cancels while positive/negative parts are nonzero | exact shell/whole-space integration | COMPUTATIONAL CHECK |
@@ -60,9 +73,10 @@ This file separates established identities, DSD bridge definitions, computationa
 | A-priori bound for `sup_t ||u||_3` from DSD channels | none | OPEN PROOF OBLIGATION |
 | Non-circular control of pressure correlation `Pi3` | none | OPEN PROOF OBLIGATION |
 | Non-circular control of positive vortex stretching / alignment channels | none | OPEN PROOF OBLIGATION |
-| Translation-complete extension to arbitrary centers/data | finite covariance witness only | OPEN PROOF OBLIGATION |
+| Translation-complete all-label/all-scale a-priori control | flow-map reparameterization exists, bound does not | OPEN PROOF OBLIGATION |
+| A-priori control of material-cell deformation / accumulated positive strain | no arbitrary-data bound | OPEN PROOF OBLIGATION |
 | General control of all off-diagonal nonlinear cross couplings | finite two-seed witnesses only | OPEN PROOF OBLIGATION |
-| Force an established local regularity gate at every candidate singular point/scale | geometry/scaling bridge only | OPEN PROOF OBLIGATION |
+| Force an established local regularity gate at every candidate singular point/scale | geometry/scaling/moving-cell bridges only | OPEN PROOF OBLIGATION |
 | Global a-priori bound for arbitrary admissible initial data | none | OPEN PROOF OBLIGATION |
 | DSD route proves global smoothness | none | NOT CLAIMED |
 
