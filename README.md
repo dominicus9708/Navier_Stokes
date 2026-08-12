@@ -121,6 +121,88 @@ T_3(t)=\int_{\mathbb R^3}|u|^3dx
 
 관련 노트: `notes/2026-08-12-local-parabolic-regularity-bridge.md`.
 
+### 6. Moving observer sphere and material cell
+
+고정 중심만 사용하는 대신, smooth lifespan 동안 flow map
+
+\[
+\frac{d}{dt}\Phi_t(a)=u(\Phi_t(a),t)
+\]
+
+을 따라 분석 중심과 국소 영역을 이동시킵니다.
+
+두 객체를 분리합니다.
+
+\[
+S^{\rm obs}_\ell(a,t)=\{x:|x-\Phi_t(a)|=\ell\}
+\]
+
+은 중심만 유체를 따라가고 구형을 유지하는 관측창입니다.
+
+반면
+
+\[
+\Omega^{\rm mat}_\ell(a,t)=\Phi_t(B_\ell(a))
+\]
+
+은 같은 유체 입자를 따라가므로 실제로 변형되는 물질영역입니다.
+
+변형구배
+
+\[
+F=D_a\Phi_t,
+\qquad
+J=\det F
+\]
+
+에 대해 비압축성은
+
+\[
+J=1
+\]
+
+을 강제합니다. 따라서 물질영역의 부피는 보존되지만 모양은 보존되지 않습니다.
+
+기준 Gaussian seed의 `a=(0,0,1/2)`에서는 순간 strain eigenvalue가
+
+\[
+(-4e^{-1/4},\,2e^{-1/4},\,2e^{-1/4})
+\]
+
+이어서 두 방향 팽창·한 방향 압축이 동시에 나타납니다.
+
+DSD 국소 변형 채널의 첫 후보는
+
+\[
+\Delta_{\rm shape}=\|\log (F^TF)^{1/2}\|_F
+\]
+
+입니다.
+
+또한 true material boundary에서는 상대 advective kinetic-energy flux가 정확히 0이 됩니다. 이류 자체가 Navier–Stokes에서 사라지는 것은 아니며, 물질영역의 이동·변형으로 흡수되는 것입니다.
+
+관련 노트: `notes/2026-08-12-moving-material-region-bridge.md`.
+
+### 7. Material pullback and boundary geometry
+
+비압축성 `J=1` 때문에 bulk material aggregation은 초기 reference ball로 그대로 pullback할 수 있습니다.
+
+\[
+\int_{\Omega_t}f(x,t)dx
+=
+\int_{B_\ell(a)}f(\Phi_t(b),t)db.
+\]
+
+반면 경계의 oriented area는 Nanson 관계
+
+\[
+n_t\,dS_t=F^{-T}n_0\,dS_0
+\]
+
+로 변합니다.
+
+따라서 material-cell energy budget에서 상대 advection은 소거되지만 pressure work와 viscous boundary transport는 `F^{-T}`와 결합해 남습니다. 부피보존이 경계 방향성의 증폭까지 막는 것은 아닙니다.
+
 ## Reproducibility
 
 Windows PowerShell/CMD:
@@ -128,6 +210,9 @@ Windows PowerShell/CMD:
 ```powershell
 python -m pip install -r requirements.txt
 python src\dsd_bridge_baseline.py --output-dir results
+python src\moving_material_region_baseline.py --output-dir results
+python src\moving_control_energy_budget.py --output-dir results
+python src\material_pullback_bridge.py --output-dir results
 python src\critical_channel_baseline.py --output-dir results
 python src\translation_coupling_baseline.py --output-dir results
 python src\critical_l3_rate_baseline.py --output-dir results
@@ -142,8 +227,9 @@ GitHub Actions에서도 같은 파이프라인을 실행합니다.
 수치·상징 benchmark가 통과해도 global smoothness로 승격하지 않습니다. 현재 가장 중요한 열린 단계는 다음과 같습니다.
 
 - arbitrary admissible initial data로의 일반화;
-- translation-complete all-center control;
+- material-label/all-scale a-priori control;
 - pressure correlation `Pi3`의 non-circular critical estimate;
+- pressure/viscous boundary coupling과 `F^{-T}` geometry amplification의 동시 제어;
 - positive vortex-stretching의 비상쇄 제어;
 - local scale channels가 알려진 regularity gate를 모든 잠재적 blow-up point에서 강제한다는 증명;
 - 최종 global a-priori bound.
