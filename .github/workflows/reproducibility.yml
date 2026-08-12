@@ -88,6 +88,8 @@ jobs:
         run: python src/energy_weighted_projective_dissipation_gate.py --output-dir results
       - name: Run covariance coercivity gate
         run: python src/covariance_coercivity_projective_gate.py --output-dir results
+      - name: Run high-order-to-base anisotropy gate
+        run: python src/high_order_to_base_anisotropy_gate.py --output-dir results
       - name: Run local covariance pairwise-projective gate
         run: python src/local_covariance_pairwise_projective_gate.py --output-dir results
       - name: Run local vorticity covariance-axis gate
