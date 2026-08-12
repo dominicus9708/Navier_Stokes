@@ -46,6 +46,8 @@ jobs:
         run: python src/weighted_mean_sphere_gate.py --output-dir results
       - name: Run weighted variance local-energy lemma audit
         run: python src/weighted_variance_local_energy_lemma.py --output-dir results
+      - name: Run weighted one-step channel closure
+        run: python src/weighted_channel_closure_gate.py --output-dir results
       - name: Run Lagrangian diffusion metric gate
         run: python src/lagrangian_diffusion_metric_gate.py --output-dir results
       - name: Run Lagrangian metric cancellation audit
