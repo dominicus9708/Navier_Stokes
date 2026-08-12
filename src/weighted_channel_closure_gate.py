@@ -14,7 +14,7 @@ from pathlib import Path
 import numpy as np
 
 
-SCHEMA_VERSION = "0.1.0"
+SCHEMA_VERSION = "0.1.1"
 
 
 def seed_grid(X, Y, Z, axis, center, amp=1.0):
@@ -62,8 +62,6 @@ def bump_and_grad(X, Y, Z, ell):
     phi[m] = np.exp(-1.0/denom)
 
     grad = np.zeros((3,) + X.shape, dtype=float)
-    # d/dr exponent[-1/(1-r^2/ell^2)] gives
-    # -2 x_j / (ell^2 (1-r^2/ell^2)^2).
     coeff = np.zeros_like(X)
     coeff[m] = -2.0*phi[m]/(ell*ell*denom*denom)
     grad[0] = coeff*X
@@ -101,17 +99,14 @@ def audit(N=64, L=6.0, ell=0.9, nu=1.0):
     v = u - Ubar[:, None, None, None]
     weighted_mean_v = np.array([float(np.sum(phi*v[i])*dv/mass) for i in range(3)])
 
-    # Full canonical pressure from u tensor.
     Tfull = np.einsum("i...,j...->ij...", u, u)
     p = pressure_from_tensor(Tfull, K, k2)
 
-    # Near pressure uses the Galilean-invariant local source v tensor.
     chi = smooth_cutoff(r, 2.0*ell, 3.0*ell)
     Tnear = chi[None, None, ...] * np.einsum("i...,j...->ij...", v, v)
     pnear = pressure_from_tensor(Tnear, K, k2)
     pfar = p - pnear
 
-    # Check harmonicity of pfar in an inner region separated from cutoff transition.
     pfh = np.fft.fftn(pfar)
     lap_pfar = np.fft.ifftn(-k2*pfh).real
     inner = r < 0.75*ell
@@ -124,12 +119,9 @@ def audit(N=64, L=6.0, ell=0.9, nu=1.0):
     Pnear = float(ell*np.sum(pnear*vdotgradphi)*dv)
     Pfar = float(ell*np.sum(pfar*vdotgradphi)*dv)
 
-    # Affine pressure must make no contribution to the weighted variance budget.
     paff = 0.37 + 0.6*X - 0.4*Y + 0.2*Z
     Paff = float(ell*np.sum(paff*vdotgradphi)*dv)
 
-    # Subtract an affine Taylor approximation from pfar; work should be unchanged.
-    # Center index is exact because the even periodic grid contains zero.
     cidx = N//2
     grad_pfar = np.array([
         np.fft.ifftn(1j*K[j]*pfh).real for j in range(3)
@@ -139,7 +131,6 @@ def audit(N=64, L=6.0, ell=0.9, nu=1.0):
     affine_far = p0 + gp0[0]*X + gp0[1]*Y + gp0[2]*Z
     Pfar_affine_free = float(ell*np.sum((pfar-affine_far)*vdotgradphi)*dv)
 
-    # Parent critical channels, R=4 ell.
     R = 4.0*ell
     parent = r < R
     volR = float(np.sum(parent)*dv)
@@ -158,8 +149,6 @@ def audit(N=64, L=6.0, ell=0.9, nu=1.0):
     v_l3 = float((np.sum(np.sum(v*v, axis=0)[local]**1.5)*dv)**(1.0/3.0))
     cz_ratio = near_l32/max(v_l3*v_l3, 1e-14)
 
-    # Relative advection and cutoff-viscous localization channels.
-    grad_e_v = np.einsum("i...,ij...->j...", v, grads)
     A = float(ell*np.sum(0.5*np.sum(v*v, axis=0)*np.sum(v*gradphi, axis=0))*dv)
     phih = np.fft.fftn(phi)
     lapphi = np.fft.ifftn(-k2*phih).real
@@ -176,10 +165,10 @@ def audit(N=64, L=6.0, ell=0.9, nu=1.0):
         "P_full": Pfull,
         "P_near": Pnear,
         "P_far": Pfar,
-        "pressure_split_error": abs(Pfull-(Pnear+Pfar)),
+        "pressure_split_error": float(abs(Pfull-(Pnear+Pfar))),
         "P_affine_test": Paff,
         "P_far_affine_free": Pfar_affine_free,
-        "far_affine_work_difference": abs(Pfar-Pfar_affine_free),
+        "far_affine_work_difference": float(abs(Pfar-Pfar_affine_free)),
         "far_harmonic_rms": harmonic_rms,
         "far_harmonic_relative": harmonic_relative,
         "C_R": C_R,
@@ -199,7 +188,7 @@ def run_checks():
     a48 = audit(48)
     a64 = audit(64)
 
-    checks = {
+    raw_checks = {
         "weighted_mean_zero_48": a48["weighted_mean_v_norm"] < 1e-12,
         "weighted_mean_zero_64": a64["weighted_mean_v_norm"] < 1e-12,
         "pressure_split_48": a48["pressure_split_error"] < 1e-10,
@@ -213,12 +202,13 @@ def run_checks():
         "finite_parent_interpolation": np.isfinite(a48["l3_interpolation_ratio"]) and np.isfinite(a64["l3_interpolation_ratio"]),
         "finite_near_CZ_ratio": np.isfinite(a48["near_CZ_ratio"]) and np.isfinite(a64["near_CZ_ratio"]),
     }
+    checks = {k: bool(v) for k, v in raw_checks.items()}
 
     return {
         "schema_version": SCHEMA_VERSION,
         "status": "COMPUTATIONAL CHECK / WEIGHTED ONE-STEP CHANNEL CLOSURE",
         "checks": checks,
-        "passed": sum(bool(v) for v in checks.values()),
+        "passed": sum(checks.values()),
         "total": len(checks),
         "resolution_48": a48,
         "resolution_64": a64,
