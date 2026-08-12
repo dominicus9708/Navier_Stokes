@@ -32,6 +32,8 @@ jobs:
         run: python src/pressure_difference_kernel_gate.py --output-dir results
       - name: Run accelerating-frame symmetry gate
         run: python src/accelerating_frame_symmetry_gate.py --output-dir results
+      - name: Run generalized Galilean suitable gate
+        run: python src/generalized_galilean_suitable_gate.py --output-dir results
       - name: Run material oscillation critical L3 bridge
         run: python src/material_oscillation_l3_bridge.py --output-dir results
       - name: Run mean-flow moving-sphere gate
