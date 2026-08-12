@@ -78,6 +78,8 @@ jobs:
         run: python src/projective_vorticity_dispersion_dynamics_gate.py --output-dir results
       - name: Run projective mixing-channel closure gate
         run: python src/projective_mixing_channel_closure_gate.py --output-dir results
+      - name: Run pairwise projective balance gate
+        run: python src/pairwise_projective_balance_gate.py --output-dir results
       - name: Run derivative projective covariance-chain gate
         run: python src/derivative_projective_covariance_chain_gate.py --output-dir results
       - name: Run viscous derivative-order flux gate
