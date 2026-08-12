@@ -1,94 +1,395 @@
 # Proof / verification map
 
-This file separates established identities, DSD bridge definitions, computational checks, external regularity anchors, failed-route candidates, and unresolved proof targets.
+This file is the current route map for the DSD-assisted 3D incompressible Navier–Stokes proof challenge.
 
-| Item | Current support | Status |
+It separates exact identities, derived bridge lemmas, external regularity anchors, computational checks, failed routes, and open proof obligations. Older exploratory states remain recoverable from Git history; this file records the **current** interpretation.
+
+## Status vocabulary
+
+- **NAVIER–STOKES INPUT** — part of the original PDE/problem setting.
+- **DSD BRIDGE DEFINITION** — application-specific typed representation; not a new PDE theorem.
+- **DERIVED IDENTITY** — exact algebra/calculus from stated hypotheses.
+- **DERIVED LEMMA** — proof-level internal lemma under the stated function class.
+- **COMPUTATIONAL CHECK** — symbolic/numerical benchmark only.
+- **EXTERNAL REGULARITY ANCHOR** — published theorem used as a target or implication.
+- **CONDITIONAL NECESSARY CONDITION** — follows if the bridge to an external criterion is invoked; not itself a contradiction.
+- **FAILED-ROUTE CANDIDATE** — computationally contradicted but not fully analytically excluded.
+- **FAILED ROUTE** — algebraically/analytically excluded as the proposed mechanism.
+- **OPEN PROOF OBLIGATION** — required before any global-smoothness claim.
+- **NOT CLAIMED** — explicitly outside current proof status.
+
+---
+
+# A. Original problem and invariant baseline
+
+| Item | Support | Status |
 |---|---|---|
-| 3D incompressible Navier–Stokes baseline on `R^3` | repository baseline note | NAVIER–STOKES INPUT |
-| Gaussian double-curl benchmark is divergence-free | exact SymPy identity | COMPUTATIONAL CHECK / exact symbolic |
-| Vorticity formula for benchmark | exact SymPy identity | COMPUTATIONAL CHECK / exact symbolic |
-| Pressure Poisson source `-Delta p = Q` | exact SymPy identity | COMPUTATIONAL CHECK / exact symbolic |
-| Radial channel at `r=0` is inapplicable, not zero | coordinate definition + typed DSD interpretation | BRIDGE DEFINITION |
-| Radial channel away from origin can be defined zero | direct benchmark evaluation | COMPUTATIONAL CHECK |
-| `x/y/z` seeds are rotation-equivalent | coordinate permutation | DERIVED BENCHMARK FACT |
-| Fixed-time shell terms `T_E,T_W,T_P,T_Ei` | analytic definitions | BRIDGE DEFINITION |
-| Total shell energy isotropic at `r=sqrt(2)` while axis energies remain unequal | exact angular/shell formulas | COMPUTATIONAL CHECK / exact symbolic |
-| Enstrophy shell vanishes at `r=sqrt(5/2)` while energy is nonzero | closed-form formulas | COMPUTATIONAL CHECK |
-| Quadratic descriptor collision for `u` and `-u` | exact construction | COMPUTATIONAL CHECK |
-| `r^2 T_E`, `r^4 T_W`, `r^4 T_P` scaling covariance | exact scaling + pressure inversion check | COMPUTATIONAL CHECK |
-| Centered candidate `D_O` | finite sampling only | CONJECTURE / TARGET |
-| All-center descriptor `D_all` | definition only | CONJECTURE / TARGET |
-| Co-moving rigid observation sphere `S_ell^obs(a,t)` | flow-map center `X=Phi_t(a)` + fixed spherical reference shape | BRIDGE DEFINITION |
-| Deforming material cell `Omega_ell^mat(a,t)=Phi_t(B_ell(a))` | smooth flow-map kinematics | DERIVED KINEMATIC BRIDGE |
-| Deformation gradient `F=D_a Phi_t` obeys `dot F=(grad u)F` | differentiation of the smooth flow map | DERIVED IDENTITY |
-| Material Jacobian obeys `dot J=(div u)J` and hence `J=1` | incompressibility + Liouville formula | DERIVED IDENTITY |
-| Cauchy–Green evolution `dot C=2 F^T S F` | exact flow-map algebra | DERIVED IDENTITY |
-| Instantaneous material-line stretching depends on `S`, not antisymmetric rotation | `v^T Omega v=0` + exact symbolic audit | DERIVED IDENTITY / CHECK |
-| Local DSD shape gap `Delta_shape=||log sqrt(F^T F)||_F` | application-specific rotation-insensitive deformation readout | BRIDGE DEFINITION |
-| Moving Gaussian anchor has strain eigenvalues `(-4c,2c,2c)`, `c=e^-1/4` | exact SymPy evaluation at `(0,0,1/2)` | COMPUTATIONAL CHECK / exact symbolic |
-| Frozen local Gaussian ellipsoid preserves volume exactly while aspect ratio grows | exact matrix exponential with trace-free anchor strain; Wolfram cross-check | COMPUTATIONAL CHECK / LOCAL MODEL |
-| Material-label reparameterization removes preferred fixed origin while smooth | bijectivity of the smooth flow map | DERIVED KINEMATIC BRIDGE |
-| Rigid co-moving sphere changes but does not eliminate relative advective energy crossing | asymmetric two-seed `N=64,80` audit | COMPUTATIONAL CHECK |
-| Relative advective kinetic-energy flux vanishes for a true material boundary | Reynolds transport with boundary velocity `w_b=u` | DERIVED IDENTITY |
-| Material-cell energy budget retains pressure work, viscous transport, and dissipation | Reynolds transport + local kinetic-energy equation | DERIVED IDENTITY |
-| Material bulk aggregation pulls back to the fixed reference ball with unit Jacobian | change of variables + `J=1` | DERIVED IDENTITY |
-| Oriented material boundary area obeys `n_t dS_t=F^{-T}n_0 dS_0` | Nanson relation + `J=1` | DERIVED IDENTITY |
-| Pressure work on a material cell couples to `F^{-T}` under reference pullback | Nanson pullback of boundary integral | DERIVED IDENTITY / BRIDGE CHANNEL |
-| Viscous boundary transport on a material cell couples to `F^{-T}` | Nanson pullback of boundary integral | DERIVED IDENTITY / BRIDGE CHANNEL |
-| Material deformation channels `F,J,C,Delta_shape,||F^{-T}||` are dimensionless/NS-scale-covariant | flow-map scaling `Phi^lambda=lambda^-1 Phi(lambda a,lambda^2t)` | DERIVED SCALING BRIDGE |
-| Frozen Gaussian boundary amplification `||F^{-T}||=exp(4c tau)` | exact local matrix model | COMPUTATIONAL CHECK / LOCAL MODEL |
-| Velocity-gradient block has `tr S=0` | exact identity | COMPUTATIONAL CHECK / exact symbolic |
-| Benchmark vortex-stretching formula `omega^T S omega` | exact identity | COMPUTATIONAL CHECK / exact symbolic |
-| Signed stretching cancels while positive/negative parts are nonzero | exact shell/whole-space integration | COMPUTATIONAL CHECK |
-| Benchmark `Sigma_+=Sigma_-=992*pi/81` | exact whole-space integration | COMPUTATIONAL CHECK |
-| `div R_adv=-Q`, `div R_pres=+Q`, `div R_visc=0` | incompressible identity + exact benchmark check | DERIVED IDENTITY / CHECK |
-| Translated benchmark recovers its special shell about the translated center | deterministic quadrature + scaling | COMPUTATIONAL CHECK |
-| Same-radius shell about an unrelated fixed origin becomes anisotropic | deterministic quadrature | COMPUTATIONAL CHECK |
-| Linear benchmark superposition remains divergence-free | exact symbolic identity | COMPUTATIONAL CHECK / exact symbolic |
-| Nonlinear source has nonzero `Q_cross` under superposition | exact symbolic expression + point evaluation | COMPUTATIONAL CHECK / exact symbolic |
-| DSD off-diagonal dynamic channels required for nonlinear interactions | interpretation of `Q_cross` | BRIDGE DEFINITION |
-| Vorticity-direction factorization `sigma=|omega|^2 gamma` with `gamma=xi^T S xi` | exact spectral identity | DERIVED IDENTITY |
-| Benchmark `gamma=4 z exp(-|x|^2)` where `|omega|>0` | exact symbolic identity | COMPUTATIONAL CHECK / exact symbolic |
-| `xi`/alignment undefined where `|omega|=0`, despite removable quotient extension | typed bridge | BRIDGE DEFINITION |
-| `gamma=sum_i lambda_i (xi·e_i)^2`, alignment weights sum to one | eigenframe identity + samples | DERIVED IDENTITY / CHECK |
-| Benchmark direction variation `|grad xi|^2=1/(x^2+y^2)` | exact symbolic identity | COMPUTATIONAL CHECK / exact symbolic |
-| Magnitude-weighted variation cancels axis singularity | exact identity and whole-space integral | COMPUTATIONAL CHECK / exact symbolic |
-| Constantin–Fefferman vorticity-direction regularity line | Constantin–Fefferman (1993) | EXTERNAL REGULARITY ANCHOR |
-| Stretching of a two-seed sum is not the sum of self stretchings | exact expansion | DERIVED IDENTITY |
-| Exact benchmark cross-stretching reverses the sign predicted by self terms at `(1/4,1/2,0)` | exact analytic witness | COMPUTATIONAL CHECK / exact symbolic |
-| DSD off-diagonal stretching blocks are required | sign-reversal witness | BRIDGE REQUIREMENT |
-| `L^infty_t L^3_x` control implies smoothness in the endpoint theorem | Escauriaza–Seregin–Šverák (2003) | EXTERNAL REGULARITY ANCHOR |
-| `T_3(t)=int |u|^3` is Navier–Stokes scale invariant | direct scaling | BRIDGE DEFINITION / EXACT SCALING |
-| Smooth `L^3` balance: advection cancels, viscosity dissipates, pressure correlation remains | direct calculation | DERIVED IDENTITY |
-| Symmetric single seed has `Pi3=0` by reflection parity | exact parity + numerical audit | DERIVED IDENTITY / CHECK |
-| Asymmetric two-seed benchmarks produce positive and negative `Pi3` | FFT pressure audit, multiple resolutions | COMPUTATIONAL CHECK |
-| `Pi3` positive benchmark stable over `48^3..96^3` with ~0.33% spread | deterministic convergence table | COMPUTATIONAL CHECK |
-| Fixed-shape amplitude laws `T3,D3~A^3`, `Pi3~A^4` | exact homogeneity | DERIVED IDENTITY |
-| Unconditional monotone decay of global `L3` | amplified positive-`Pi3` benchmark predicts positive initial rate | FAILED-ROUTE CANDIDATE / needs rigorous certification |
-| Shell-to-ball coarea reconstruction | Euclidean coarea + exact benchmark integrals | DERIVED IDENTITY / CHECK |
-| Whole kinetic energy/enstrophy recovered from shell family | exact symbolic radial integration | COMPUTATIONAL CHECK / exact symbolic |
-| Local parabolic `C_u`, `C_p`, `E_grad` bridge quantities are scale invariant | exact scaling bookkeeping | BRIDGE DEFINITION / EXACT SCALING |
-| CKN partial regularity of suitable weak solutions | Caffarelli–Kohn–Nirenberg (1982) | EXTERNAL REGULARITY ANCHOR |
-| Scaled local norms can serve as local regularity gates | later published interior criteria | EXTERNAL REGULARITY ANCHOR |
-| Local kinetic-energy shell budget separates `F_adv,F_p,F_visc,D_r` | exact local energy identity | DERIVED IDENTITY |
-| Symmetric benchmark has `F_adv=F_p=0` on centered spheres | exact parity | COMPUTATIONAL CHECK / exact symbolic |
-| Symmetric benchmark viscous flux is outward for every `r>0` | exact positive formula | COMPUTATIONAL CHECK / exact symbolic |
-| Asymmetric two-seed shell budget has nonzero signed advection/pressure flux | two-resolution spectral/volume audit | COMPUTATIONAL CHECK |
-| Asymmetric pressure shell flux changes sign with radius | `N=64,80` deterministic audit | COMPUTATIONAL CHECK |
-| One-way outward advective/pressure redistribution on every sphere | asymmetric sign witness | FAILED-ROUTE CANDIDATE |
-| A-priori bound for `sup_t ||u||_3` from DSD channels | none | OPEN PROOF OBLIGATION |
-| Non-circular control of pressure correlation `Pi3` | none | OPEN PROOF OBLIGATION |
-| Non-circular control of positive vortex stretching / alignment channels | none | OPEN PROOF OBLIGATION |
-| Translation-complete all-label/all-scale a-priori control | flow-map reparameterization exists, bound does not | OPEN PROOF OBLIGATION |
-| A-priori control of material-cell deformation / accumulated positive strain | no arbitrary-data bound | OPEN PROOF OBLIGATION |
-| Joint control of pressure/viscous boundary terms with `F^{-T}` geometry amplification | exact coupling identity only | OPEN PROOF OBLIGATION |
-| General control of all off-diagonal nonlinear cross couplings | finite two-seed witnesses only | OPEN PROOF OBLIGATION |
-| Force an established local regularity gate at every candidate singular point/scale | geometry/scaling/moving-cell bridges only | OPEN PROOF OBLIGATION |
-| Global a-priori bound for arbitrary admissible initial data | none | OPEN PROOF OBLIGATION |
-| DSD route proves global smoothness | none | NOT CLAIMED |
+| `R^3` incompressible Navier–Stokes, `nu>0`, `f=0` | repository baseline | NAVIER–STOKES INPUT |
+| No physical container; spheres are observation/aggregation regions | baseline note | DSD BRIDGE DEFINITION |
+| Gaussian double-curl seeds are smooth, rapidly decaying, divergence-free | exact SymPy | COMPUTATIONAL CHECK / exact symbolic |
+| `x/y/z` seed rotations are equivalent | coordinate permutation | DERIVED IDENTITY |
+| Radial readout at `r=0` is inapplicable rather than defined zero | spherical-coordinate definition + DSD typing | DSD BRIDGE DEFINITION |
+| Pressure Poisson source `-Delta p = partial_i partial_j(u_i u_j)` | incompressibility | NAVIER–STOKES IDENTITY |
+| Whole kinetic-energy inequality controls `||u(t)||_2` for finite-energy weak solutions | standard Leray energy inequality | EXTERNAL/STANDARD INPUT |
 
-## Failure rule
+---
 
-A candidate route is marked **FAILED-ROUTE CANDIDATE** when a stable computational witness contradicts it but rigorous certification is still missing. It is promoted to **FAILED ROUTE** only after analytic or certified numerical exclusion.
+# B. Primary proof track: moving weighted mean sphere
 
-Any route incompatible with the original incompressible PDE, dependent on a preferred origin, or discarding information needed for a proposed regularity implication must be rejected or repaired before use in a proof.
+The current primary local object is **not** a material cell and not a hard physical sphere. It is a smooth radial cutoff whose center follows the cutoff-weighted mean velocity.
+
+For fixed `ell>0`,
+
+\[
+\phi_\ell(x)=\phi(x/\ell),
+\qquad
+\dot X_\ell(t)
+=
+\frac{\int\phi_\ell(x-X_\ell(t))u(x,t)dx}
+{\int\phi_\ell dx}.
+\]
+
+Define
+
+\[
+\bar U_\ell(t)=\dot X_\ell(t),
+\qquad
+v=u-\bar U_\ell.
+\]
+
+Then
+
+\[
+\int\phi_\ell(x-X_\ell(t))v(x,t)dx=0.
+\]
+
+| Item | Support | Status |
+|---|---|---|
+| Weighted mean field is bounded/Lipschitz in center `X` at every fixed `ell` for global finite-energy `u` | Cauchy–Schwarz + smooth convolution | DERIVED LEMMA |
+| Center ODE has a unique absolutely continuous solution | Carathéodory ODE theorem under preceding bounds | DERIVED LEMMA |
+| Moving cutoff satisfies `partial_t phi = -Ubar·grad phi` a.e. | chain rule for AC path | DERIVED IDENTITY |
+| Weighted internal velocity has zero mean | center definition | DERIVED IDENTITY |
+| Moving weighted-variance local-energy inequality | local energy inequality + weak momentum + variance subtraction | DERIVED LEMMA |
+| No `X''` or accelerating-frame pressure is required in the rigorous route | Eulerian moving-cutoff derivation | DERIVED LEMMA / ROUTE SIMPLIFICATION |
+| Hard mean-flow sphere gives the same conceptual mean-removal but is retained mainly for diagnostics | exact mean subtraction + numerical budget | DSD BRIDGE / COMPUTATIONAL TRACK |
+
+## B1. Derived weighted-variance inequality
+
+For whole-space finite-energy suitable weak solutions, for a.e. Lebesgue times `s<t`,
+
+\[
+\boxed{
+\begin{aligned}
+&\frac12\int\varphi(t)|v(t)|^2dx
++\nu\int_s^t\int\varphi|\nabla u|^2dxdt'\\
+&\le
+\frac12\int\varphi(s)|v(s)|^2dx\\
+&\quad+
+\int_s^t\int\frac{|v|^2}{2}v\cdot\nabla\varphi\,dxdt'\\
+&\quad+
+\int_s^t\int p\,v\cdot\nabla\varphi\,dxdt'\\
+&\quad+
+\frac\nu2\int_s^t\int|v|^2\Delta\varphi\,dxdt'.
+\end{aligned}
+}
+\]
+
+Internal proof: `notes/2026-08-12-weighted-variance-lemma-completion.md`.
+
+## B2. Scale-critical typed channels
+
+Define schematically
+
+\[
+C_\phi=\ell^{-1}\int\varphi|v|^2,
+\]
+
+\[
+D_\phi=\nu\ell\int\varphi|\nabla u|^2,
+\]
+
+\[
+A_\phi=\ell\int\frac{|v|^2}{2}v\cdot\nabla\varphi,
+\]
+
+\[
+P_\phi=\ell\int p\,v\cdot\nabla\varphi,
+\]
+
+\[
+B_\phi=\frac{\nu\ell}{2}\int|v|^2\Delta\varphi.
+\]
+
+All are compatible with Navier–Stokes parabolic scaling.
+
+DSD typing:
+
+- `q_osc` — internal velocity oscillation `C_phi`;
+- `q_diss` — viscous local dissipation `D_phi`;
+- `q_adv` — relative nonlinear transport `A_phi`;
+- `q_pres` — pressure redistribution `P_phi`;
+- `q_cut` — cutoff/viscous boundary-layer term `B_phi`.
+
+These channels must remain separate; their signed cancellations are part of the dynamics.
+
+---
+
+# C. Bridge to established epsilon regularity
+
+## C1. Mean-zero interpolation
+
+For a rigid or weighted mean-zero local velocity, Poincaré–Sobolev and interpolation yield the critical family, for
+
+\[
+\frac52<p\le3,
+\]
+
+\[
+\boxed{
+A_p
+\lesssim
+(\sup C_{\rm sph})^{\alpha(p)}
+(\mathfrak E_{\rm sph})^{\beta(p)},
+}
+\]
+
+with
+
+\[
+\alpha(p)=\frac{6-p}{4},
+\qquad
+\beta(p)=\frac{3(p-2)}{4}.
+\]
+
+Representative exponents:
+
+\[
+p=3:\quad(\alpha,\beta)=\left(\frac34,\frac34\right),
+\]
+
+\[
+p=\frac{11}{4}:\quad
+(\alpha,\beta)=\left(\frac{13}{16},\frac{9}{16}\right),
+\]
+
+and as `p downarrow 5/2`,
+
+\[
+(\alpha,\beta)\to\left(\frac78,\frac38\right).
+\]
+
+| Item | Support | Status |
+|---|---|---|
+| Critical exponent interpolation family | Poincaré–Sobolev + Hölder | DERIVED IDENTITY / BRIDGE |
+| Pressure-free one-scale criterion for every exponent `5/2+delta`, `delta>0` | Wang–Wu–Zhou, arXiv:1811.09927 | EXTERNAL REGULARITY ANCHOR |
+| Classical one-scale `L^3` velocity + `L^{3/2}` pressure smallness criterion | standard epsilon-regularity literature | EXTERNAL REGULARITY ANCHOR |
+| `L^infty_t L^3_x` boundedness excludes finite-time singularity | Escauriaza–Seregin–Šverák | EXTERNAL REGULARITY ANCHOR |
+
+## C2. Current target
+
+The preferred final gate is pressure-free:
+
+\[
+\boxed{
+\ell^{p-5}
+\iint_{Q_\ell}|v|^p
+<\varepsilon_p,
+\qquad
+p>\frac52.
+}
+\]
+
+The pressure channel remains essential for **evolving** `C_phi`, but it does not have to appear in the final epsilon-smallness criterion.
+
+## C3. Conditional singularity certificate
+
+Once the weighted moving-window quantity is transferred to the fixed-cylinder hypothesis of the published theorem, a candidate singularity must prevent the DSD channel product from becoming small at arbitrarily fine scales:
+
+\[
+(\sup C_\phi)^{\alpha(p)}
+(\mathfrak E_\phi)^{\beta(p)}
+\gtrsim c\,\varepsilon_p.
+\]
+
+Status: **CONDITIONAL NECESSARY CONDITION**, not a contradiction.
+
+The central unsolved task is to prove that DSD-resolved dynamics makes such persistent critical concentration impossible.
+
+---
+
+# D. Current dynamical obstruction inside the moving sphere
+
+For the hard mean-flow sphere, the exact smooth instantaneous critical oscillation budget is
+
+\[
+\boxed{
+\frac{\ell^2}{2}\frac{d}{dt}C_{\rm sph}
+=-A_{\rm adv}-P_{\rm pressure}+V_{\rm viscous}.
+}
+\]
+
+The weighted version is the corresponding smooth-cutoff inequality in Section B.
+
+| Item | Support | Status |
+|---|---|---|
+| Mean subtraction eliminates coherent translation | exact mean identity | DERIVED IDENTITY |
+| Uniform frame acceleration is absent from Eulerian weighted-variance lemma | moving-cutoff + momentum derivation | DERIVED LEMMA |
+| Relative advection generally remains nonzero | asymmetric two-seed audit | COMPUTATIONAL CHECK |
+| Pressure redistribution generally remains nonzero | asymmetric two-seed audit | COMPUTATIONAL CHECK |
+| Mean-flow sphere budget is stable from `64^3` to `80^3` under the committed convergence test | deterministic FFT/mask audit | COMPUTATIONAL CHECK |
+| Viscosity dominates the current asymmetric benchmark at `t=0` near `ell=1` | numerical benchmark only | COMPUTATIONAL CHECK |
+| Universal sign/monotonicity of the moving oscillation channel | none | NOT CLAIMED |
+
+### Main dynamical proof obligation
+
+Derive a non-circular estimate that prevents
+
+\[
+A_\phi+P_\phi+B_\phi
+\]
+
+from sustaining the critical concentration required to keep the pressure-free epsilon criterion above threshold on every sufficiently small scale.
+
+Status: **OPEN PROOF OBLIGATION**.
+
+---
+
+# E. Pressure localization as a secondary dynamics tool
+
+Pressure is nonlocal, but differential/localized channels gain far-field kernel decay.
+
+| Item | Support | Status |
+|---|---|---|
+| Pressure kernel degree `-3`, gradient degree `-4`, next derivative degree `-5` | Newtonian/Riesz kernel homogeneity | DERIVED IDENTITY |
+| Difference of pressure gradients at nearby points gains one far-field decay power | mean-value theorem | DERIVED BRIDGE |
+| Under critical local `L^2`-Morrey control, far differential pressure has scale-critical dyadic bound | shell summation | DERIVED BRIDGE |
+| Near pressure remains coupled to local nonlinear/strain structure | no closed arbitrary-data bound | OPEN PROOF OBLIGATION |
+
+Because the preferred final epsilon criterion is pressure-free, this pressure decomposition is now used mainly to understand/control the **evolution** of the oscillation channel rather than the final regularity threshold.
+
+---
+
+# F. Material-cell / Lagrangian track: secondary structural diagnostics
+
+The deforming material cell remains useful for following the same fluid particles and for DSD structural lineage:
+
+\[
+\Omega_\ell^{\rm mat}(t)=\Phi_t(B_\ell(a)).
+\]
+
+Exact identities:
+
+\[
+\dot F=(\nabla u)F,
+\qquad
+J=\det F=1,
+\]
+
+\[
+\dot C=2F^TSF,
+\]
+
+\[
+n_t\,dS_t=F^{-T}n_0\,dS_0.
+\]
+
+Material coordinates use
+
+\[
+A=F^{-1}F^{-T},
+\]
+
+and
+
+\[
+\partial_tU
+=-F^{-T}\nabla_aP
++\nu\operatorname{div}_a(A\nabla_aU).
+\]
+
+### Critical correction
+
+The metric `A` is a coordinate representation, not a new physical viscosity mechanism. Since
+
+\[
+\nabla_aU=(\nabla_xu)F,
+\]
+
+\[
+\boxed{
+(\nabla_aU)A(\nabla_aU)^T
+=(\nabla_xu)(\nabla_xu)^T.
+}
+\]
+
+Likewise, explicit `F^{-T}` amplification in a pulled-back boundary integral is not an independent pressure-energy source; equivalent volume forms remove that explicit factor.
+
+| Item | Current status |
+|---|---|
+| Material flow-map/Jacobian/shape identities | DERIVED IDENTITIES |
+| Material-cell relative advection vanishes at a true material boundary | DERIVED IDENTITY |
+| `F^{-T}` as geometry diagnostic | RETAINED DIAGNOSTIC |
+| `F^{-T}` as independent pressure-amplification source | FAILED ROUTE |
+| `det A=1` or `tr A>=3` as new viscous coercivity | FAILED ROUTE |
+| Large/small eigenvalue of `A` alone as physical enhanced/weak viscosity | FAILED ROUTE |
+| Lagrangian coordinates for removing explicit advection/fixing reference domain | RETAINED SECONDARY TRACK |
+
+---
+
+# G. Strain, vorticity, and off-diagonal interaction diagnostics
+
+These remain possible mechanisms for estimating the moving-sphere redistribution channels.
+
+| Item | Support | Status |
+|---|---|---|
+| `tr S=0` | incompressibility | DERIVED IDENTITY |
+| Vortex stretching `omega^T S omega` is locally sign-indefinite | exact benchmark + standard identity | DERIVED/CHECK |
+| Signed global stretching can cancel while positive/negative parts are nonzero | exact Gaussian integration | COMPUTATIONAL CHECK / exact integral |
+| Two-seed cross stretching is not sum of self terms | exact expansion | DERIVED IDENTITY |
+| Cross stretching can reverse sign relative to self-term expectation | exact benchmark witness | COMPUTATIONAL CHECK / exact symbolic |
+| Vorticity-direction factorization `sigma=|omega|^2 xi^T S xi` | spectral identity | DERIVED IDENTITY |
+| `xi` is undefined where `|omega|=0` even if a quotient has removable extension | DSD typing | DSD BRIDGE DEFINITION |
+| `-det S <= (1/2) lambda_2^+ |S|^2` | trace-free eigenvalue algebra | DERIVED IDENTITY |
+| Middle-eigenvalue regularity criteria | Miller (2020) and related work | EXTERNAL REGULARITY ANCHOR |
+| Vorticity-direction coherence criteria | Constantin–Fefferman line | EXTERNAL REGULARITY ANCHOR |
+| Arbitrary-data bound forcing favorable alignment | none | OPEN PROOF OBLIGATION |
+
+---
+
+# H. Routes pruned or demoted
+
+| Proposed route | Current status | Reason |
+|---|---|---|
+| Global `L^3` is universally monotone decreasing | FAILED-ROUTE CANDIDATE | stable asymmetric positive pressure-correlation benchmark |
+| `Pi_3` can be controlled by `T_3` alone | FAILED ROUTE as instantaneous scale-compatible closure | `T_3` is scale invariant while `Pi_3` scales like `lambda^2` |
+| One-way outward pressure/advection flux on every sphere | FAILED-ROUTE CANDIDATE | asymmetric sphere flux changes sign with radius |
+| Fixed-origin sphere alone is translation complete | FAILED ROUTE | translated benchmark |
+| Point-centered `sup_ell C_rel` is a good all-scale internal-difference norm | REPAIRED ROUTE | large cells count center-vs-far-field drift; mean centering fixes this |
+| `lambda_2^+` alone controls material boundary geometry | FAILED ROUTE for that geometric claim | trace-free model `diag(-M,0,M)` has `lambda_2^+=0` while `||F^{-T}||` grows |
+| `F^{-T}` is an independent energy-amplification source | FAILED ROUTE | surface/volume representation equivalence |
+| Lagrangian `A` eigenvalues generate new enhanced viscosity | FAILED ROUTE | exact metric-gradient coordinate cancellation |
+| Accelerating-frame pressure correction is required for the main rigorous bridge | DEMOTED | Eulerian moving-cutoff variance lemma avoids `X''` entirely |
+
+---
+
+# I. Current open proof obligations, in priority order
+
+1. **Weighted moving-sphere dynamics:** obtain a non-circular estimate on `A_phi`, `P_phi`, and `B_phi` in terms of channels that prevent sustained critical concentration.
+2. **Pressure-free epsilon threshold:** prove that for every candidate singular point there is a sufficiently small scale on which the moving weighted internal velocity satisfies one published pressure-free one-scale criterion.
+3. **Fixed-cylinder transfer:** state carefully how the moving weighted window produces or is covered by the fixed parabolic cylinder required by the selected external theorem; use the Eulerian moving-cutoff lemma rather than an unjustified accelerating-frame assumption.
+4. **Multiscale compatibility:** show that dangerous oscillation cannot simply move from one scale/center to another while avoiding the estimate.
+5. **Strain/vorticity/off-diagonal mechanism:** determine whether these typed DSD channels force decay of the nonlinear/pressure redistribution terms or otherwise block persistent concentration.
+6. **Arbitrary admissible data:** every final estimate must depend only on allowed initial-data quantities and `nu`, not on a benchmark symmetry or a posteriori smoothness.
+7. **Global conclusion:** after all preceding bridges are rigorous, combine them with an established epsilon-regularity theorem to rule out every finite-time singularity.
+
+Global smoothness is **not currently proved**.
+
+---
+
+# J. Benchmark / reproducibility policy
+
+The repository intentionally contains exact symbolic checks, deterministic numerical audits, and failed-route witnesses. They are used to test bridge definitions and eliminate false shortcuts.
+
+A benchmark result is never promoted to an arbitrary-data theorem without an analytic proof.
+
+The GitHub Actions reproducibility workflow is the executable audit layer. `results/` records representative deterministic outputs; `notes/` records derivations and claim boundaries.
