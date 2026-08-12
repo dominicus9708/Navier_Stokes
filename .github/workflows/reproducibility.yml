@@ -30,6 +30,10 @@ jobs:
         run: python src/stretching_coupling_baseline.py --output-dir results
       - name: Run vorticity direction-gradient checks
         run: python src/vorticity_direction_gradient_baseline.py --output-dir results
+      - name: Run middle-eigenvalue alignment checks
+        run: python src/middle_eigenvalue_alignment_baseline.py --output-dir results
+      - name: Run strain-alignment gate checks
+        run: python src/strain_alignment_gate_baseline.py --output-dir results
       - name: Run symmetric spherical energy budget
         run: python src/spherical_energy_budget.py --output-dir results
       - name: Run asymmetric spherical energy budget
