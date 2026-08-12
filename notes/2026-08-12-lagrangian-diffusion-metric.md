@@ -1,8 +1,8 @@
-# Lagrangian diffusion metric and deformation–viscosity compensation
+# Lagrangian diffusion metric: exact bridge and coordinate-cancellation audit
 
 Date: 2026-08-12
 
-Status: **DERIVED MATERIAL-COORDINATE BRIDGE + DSD AXIS-MATRIX INTERPRETATION + OPEN ALIGNMENT OBLIGATION**.
+Status: **DERIVED MATERIAL-COORDINATE BRIDGE + ROUTE PRUNING**.
 
 ## 1. Exact material-coordinate equation on the smooth lifespan
 
@@ -16,7 +16,7 @@ F=D_a\Phi,
 J=\det F=1,
 \]
 
-and define
+and
 
 \[
 U(a,t)=u(\Phi(a,t),t),
@@ -24,258 +24,118 @@ U(a,t)=u(\Phi(a,t),t),
 P(a,t)=p(\Phi(a,t),t).
 \]
 
-Since material differentiation absorbs advection,
+Material differentiation absorbs explicit advection.  With
 
 \[
-\partial_tU
-=-F^{-T}\nabla_aP
-+\nu(\Delta_xu)\circ\Phi.
+A=F^{-1}F^{-T},
 \]
 
-Using the Piola transform and `J=1`, introduce
-
-\[
-\boxed{
-A=F^{-1}F^{-T}.
-}
-\]
-
-Then componentwise
+the smooth equation becomes
 
 \[
 \boxed{
 \partial_tU
 =-F^{-T}\nabla_aP
-+\nu\operatorname{div}_a(A\nabla_aU).
++\nu\operatorname{div}_a(A\nabla_aU),
 }
 \]
 
-The incompressibility constraint becomes
+and incompressibility becomes
 
 \[
 \operatorname{div}_a(F^{-1}U)=0.
 \]
 
-Thus in material coordinates:
-
-- nonlinear advection disappears from the explicit evolution operator;
-- deformation moves into `F^{-T}` in the pressure term;
-- deformation also moves into the anisotropic diffusion metric `A`.
-
-## 2. Axis-matrix properties
-
 `A` is symmetric positive definite and
 
 \[
-\boxed{
-\det A=(\det F)^{-2}=1.
-}
+\det A=1.
 \]
 
-If the singular values of `F` are
+Also
 
 \[
-s_1,s_2,s_3,
-\qquad
-s_1s_2s_3=1,
+\dot A=-2F^{-1}SF^{-T}.
 \]
 
-then the eigenvalues of `A` are
+These are exact material-coordinate identities while the flow map remains a sufficiently regular diffeomorphism.
+
+## 2. Important correction: `A` does not create extra physical viscosity
+
+Because
 
 \[
-s_1^{-2},s_2^{-2},s_3^{-2}.
+\nabla_aU=(\nabla_xu)F,
 \]
 
-Therefore a compressed material direction obtains a larger reference-coordinate diffusion weight, while a stretched direction obtains a smaller one.
-
-This is the precise deformation–viscosity compensation mechanism.
-
-## 3. Metric evolution
-
-From
-
-\[
-\dot F=(\nabla_xu)F
-\]
-
-and
-
-\[
-S=\frac12(\nabla u+\nabla u^T),
-\]
-
-one obtains
+we have the pointwise identity
 
 \[
 \boxed{
-\dot A
-=-2F^{-1}SF^{-T}.
-}
-\]
-
-The determinant remains one because `tr S=0`.
-
-This gives an explicit DSD dynamic matrix channel: strain changes the reference diffusion metric without changing its determinant.
-
-## 4. Viscous energy in the reference axes
-
-The physical dissipation pulls back as
-
-\[
-\boxed{
-\int_{\Omega_t}|\nabla_xu|^2dx
+(\nabla_aU)A(\nabla_aU)^T
 =
-\int_{B}
-\sum_i
-(\nabla_aU_i)^T
-A
-(\nabla_aU_i)\,da.
+(\nabla_xu)(\nabla_xu)^T.
 }
 \]
 
-Let
-
-\[
-A e_j=\alpha_j e_j,
-\qquad
-\alpha_j>0,
-\qquad
-\prod_j\alpha_j=1.
-\]
-
-Define gradient-alignment weights
-
-\[
-w_j
-=
-\frac{
-\sum_i |\nabla_aU_i\cdot e_j|^2
-}{
-|\nabla_aU|^2
-},
-\qquad
-\sum_jw_j=1.
-\]
-
-Then the local effective diffusion multiplier is
+Therefore
 
 \[
 \boxed{
-\kappa_{\rm eff}
-=
-\sum_j\alpha_jw_j.
+\sum_i(\nabla_aU_i)^TA(\nabla_aU_i)
+=|\nabla_xu|^2.
 }
 \]
 
-Hence deformation alone does not determine whether viscosity is strengthened or weakened.  The orientation of the velocity-gradient energy relative to the eigenvectors of `A` is essential.
+The apparently enhanced diffusion coefficient in a compressed reference direction is exactly accompanied by the corresponding transformation of the reference gradient.  Likewise, a small eigenvalue of `A` does not by itself represent physical loss of viscosity.
 
-## 5. Frozen Gaussian anchor
+Thus the phrase **deformation–viscosity compensation** is retained only as a coordinate-level cancellation identity, not as a new stabilizing physical mechanism.
 
-For the existing local Gaussian deformation
+## 3. Frozen Gaussian example
 
-\[
-F=\operatorname{diag}
-(e^{2c\tau},e^{2c\tau},e^{-4c\tau}),
-\qquad
-c=e^{-1/4},
-\]
-
-we have
+For
 
 \[
-A=\operatorname{diag}
-(e^{-4c\tau},e^{-4c\tau},e^{8c\tau}).
+F=\operatorname{diag}(e^{2c\tau},e^{2c\tau},e^{-4c\tau}),
+\qquad c=e^{-1/4},
 \]
 
-Thus the direction compressed by `e^{-4c tau}` receives diffusion weight
+one has
 
 \[
-e^{8c\tau},
+A=\operatorname{diag}(e^{-4c\tau},e^{-4c\tau},e^{8c\tau}).
 \]
 
-while the two stretched directions receive
+Although the third reference-coordinate diffusion coefficient becomes large, the transformed gradient changes simultaneously so that the metric-weighted dissipation is exactly the original physical dissipation.
+
+## 4. Routes rejected
+
+The following are rejected as proof mechanisms:
+
+1. `det A=1` implies a new uniform viscous coercivity;
+2. `tr A>=3` implies enhanced physical dissipation;
+3. a large eigenvalue of `A` alone regularizes the flow;
+4. a small eigenvalue of `A` alone identifies a physical weak-viscosity direction.
+
+All fail because `A` and `grad_a U` are linked by the exact coordinate transformation.
+
+Status: **FAILED ROUTES / ALGEBRAICALLY PRUNED**.
+
+## 5. What remains useful
+
+The Lagrangian transformation still has two genuine organizational advantages:
+
+1. the explicit nonlinear advection term disappears;
+2. a moving/deforming physical fluid region is represented on a fixed material reference domain.
+
+The price is that pressure, incompressibility, and diffusion acquire coefficients depending on `F`.
+
+Therefore any actual proof gain must come from a new estimate for the **coupled transformed system**
 
 \[
-e^{-4c\tau}.
+(U,P,F),
 \]
 
-The compensation is therefore very strong in the compressed direction, but diffusion becomes weak along the stretched directions.
+not from `A` eigenvalues considered in isolation.
 
-## 6. Why `det A=1` is not enough
-
-AM--GM gives
-
-\[
-\operatorname{tr}A\ge3.
-\]
-
-However this does not imply
-
-\[
-A\ge cI
-\]
-
-with a universal positive `c`, because one eigenvalue can approach zero while another grows.
-
-Therefore the route
-
-\[
-\det A=1
-\Longrightarrow
-\text{uniform viscous coercivity}
-\]
-
-is a **FAILED ROUTE** at the algebraic level.
-
-The retained route is the alignment-sensitive one:
-
-\[
-\boxed{
-\text{A dangerous material configuration must combine large stretch with persistent gradient alignment into the weak-diffusion eigendirections.}
-}
-\]
-
-## 7. DSD interpretation
-
-This bridge fits the four-paper DSD structure naturally:
-
-- **Formation Axiom System:** keep deformation, pressure, diffusion, and gradient-alignment channels typed separately;
-- **축 속성공리계:** `F` and `A` describe properties/relations of the three realized spatial axes without increasing spatial rank;
-- **Static Aggregation:** aggregate eigenvalues `alpha_j` and weights `w_j` without collapsing them prematurely to `tr A`;
-- **Structural Reorganization Dynamics:** evolve `A` by `dot A=-2F^{-1}SF^{-T}` and track its coupling to gradient orientation.
-
-A scalar such as `tr A` is insufficient because it loses the alignment information that determines `kappa_eff`.
-
-## 8. Next proof target
-
-The next question is whether the weak-diffusion alignment can persist strongly enough to support critical concentration.
-
-Candidate channel:
-
-\[
-\Gamma_{\rm weak}
-=
-\frac{
-\sum_{j:\alpha_j<1}
-(1-\alpha_j)w_j
-}{
-\sum_jw_j
-}.
-\]
-
-More conservatively, retain the full tuple
-
-\[
-(\alpha_1,\alpha_2,\alpha_3;w_1,w_2,w_3)
-\]
-
-until a coercive inequality is proved.
-
-A useful proof would show that either
-
-1. gradients are forced into compressed/high-diffusion directions often enough for viscosity to dominate, or
-2. persistent alignment with stretched/weak-diffusion directions forces another already controlled DSD channel (pressure, vorticity alignment, or oscillation) to violate a compatibility condition.
-
-No such arbitrary-data theorem is presently established here.
-
-Status: **OPEN PROOF OBLIGATION**.
+This remains compatible with the DSD four-layer bookkeeping: the matrix channels are useful for preserving structural information, but no coordinate artifact is promoted to a new physical damping term.
