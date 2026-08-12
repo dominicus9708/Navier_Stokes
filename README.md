@@ -74,6 +74,21 @@ E(r,t)=\frac{1}{4\pi r^2}\int_{|x|=r}\frac12|u(x,t)|^2\,dS.
 
 실제 유한 전파속도의 압력파를 조사할 경우 `compressible/` 별도 트랙으로 분리하며, 그것을 Clay 문제의 직접 증명 단계와 혼합하지 않습니다.
 
+## DSD four-paper bridge
+
+The first DSD-assisted design is recorded in
+
+`notes/2026-08-12-dsd-four-paper-first-pass.md`.
+
+It applies the four layers conservatively in the order
+
+1. Formation Axiom System,
+2. axis-property layer,
+3. Channel-Indexed Static Aggregation,
+4. Structural Reorganization Dynamics.
+
+The DSD layer is initially an auxiliary representation and proof-audit layer. It does not modify the baseline Navier–Stokes PDE, and any new application-specific identification is marked as a bridge definition or conjectural target.
+
 ## 디렉터리
 
 - `notes/`: 정의, 보조정리 후보, 실패 경로, 문헌 대조
