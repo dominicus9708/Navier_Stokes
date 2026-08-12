@@ -18,5 +18,7 @@ jobs:
         run: python src/dsd_bridge_baseline.py --output-dir results
       - name: Run critical-channel checks
         run: python src/critical_channel_baseline.py --output-dir results
+      - name: Run translation/coupling checks
+        run: python src/translation_coupling_baseline.py --output-dir results
       - name: Run regression tests
         run: python -m unittest discover -s tests -v
