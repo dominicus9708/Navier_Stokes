@@ -1,0 +1,58 @@
+{
+  "schema_version": "0.1.0",
+  "status": "DERIVED KINEMATIC BRIDGE + COMPUTATIONAL CHECK",
+  "claim_boundary": "The flow-map/Jacobian identities are exact for a smooth incompressible flow up to the lifespan on which the flow map is a diffeomorphism. The Gaussian frozen-gradient ellipsoid is only a local t=0 deformation model and is not a time-integrated Navier-Stokes solution.",
+  "exact_general_identities": {
+    "center_trajectory": "dX/dt = u(X,t)",
+    "flow_map": "d Phi_t(a)/dt = u(Phi_t(a),t)",
+    "deformation_gradient": "dF/dt = (grad u)(Phi_t(a),t) F",
+    "jacobian": "dJ/dt = (div u)(Phi_t(a),t) J; hence J=1 if J(0)=1",
+    "cauchy_green": "dC/dt = 2 F^T S F",
+    "material_volume": "|Phi_t(B)|=|B| for incompressible smooth flow",
+    "material_scalar_transport": "d/dt integral_{Omega(t)} f dx = integral_{Omega(t)} D_t f dx when div u=0",
+    "line_element": "d/dt |Fv|^2 = 2 (Fv)^T S (Fv); instantaneous stretching is strain-controlled"
+  },
+  "checks": {
+    "gaussian_divergence_zero": true,
+    "anchor_strain_match": true,
+    "anchor_rotation_zero": true,
+    "anchor_trace_zero": true,
+    "frozen_local_volume_preserved": true,
+    "frozen_local_log_shape_formula": true,
+    "rotation_no_length_change": true,
+    "length_rate_strain_only": true,
+    "trace_S_equals_trace_grad": true,
+    "numeric_det_close_one": true
+  },
+  "passed": 10,
+  "total": 10,
+  "gaussian_anchor": {
+    "anchor": ["0", "0", "1/2"],
+    "anchor_velocity": ["0", "0", "4*exp(-1/4)"],
+    "anchor_eigenvalues_ordered": ["-4*exp(-1/4)", "2*exp(-1/4)", "2*exp(-1/4)"],
+    "frozen_local_det_F": "1",
+    "frozen_local_log_shape_sq": "24*tau**2*exp(-1/2)",
+    "frozen_local_aspect_ratio_tau_nonnegative": "exp(6*tau*exp(-1/4))",
+    "classification": "LOCAL FROZEN-GRADIENT MODEL / NOT A TIME-SOLVED NS TRAJECTORY"
+  },
+  "frozen_local_numeric": [
+    {"tau": 0.0, "sigma_x": 1.0, "sigma_y": 1.0, "sigma_z": 1.0, "det_F": 1.0, "aspect_ratio": 1.0, "log_shape_gap": 0.0},
+    {"tau": 0.05, "sigma_x": 1.08099, "sigma_y": 1.08099, "sigma_z": 0.855764, "det_F": 1.0, "aspect_ratio": 1.26319, "log_shape_gap": 0.190766},
+    {"tau": 0.1, "sigma_x": 1.16855, "sigma_y": 1.16855, "sigma_z": 0.732333, "det_F": 1.0, "aspect_ratio": 1.59565, "log_shape_gap": 0.381533},
+    {"tau": 0.2, "sigma_x": 1.3655, "sigma_y": 1.3655, "sigma_z": 0.536311, "det_F": 1.0, "aspect_ratio": 2.5461, "log_shape_gap": 0.763066},
+    {"tau": 0.5, "sigma_x": 2.17886, "sigma_y": 2.17886, "sigma_z": 0.210641, "det_F": 1.0, "aspect_ratio": 10.344, "log_shape_gap": 1.90766}
+  ],
+  "dsd_channels": {
+    "q_center": "X(a,t) = Phi_t(a)",
+    "q_observer_shell": "S_ell^obs(t) = {x: |x-X(a,t)|=ell}",
+    "q_material_cell": "Omega_ell^mat(t) = Phi_t(B_ell(a))",
+    "q_F": "F(a,t) = D_a Phi_t(a)",
+    "q_J": "J(a,t) = det F(a,t)",
+    "q_C": "C(a,t) = F(a,t)^T F(a,t)",
+    "q_sigma": "principal stretches sigma_1,sigma_2,sigma_3",
+    "q_shape": "Delta_shape = ||log U||_F, U=sqrt(C)",
+    "q_strain": "ordered eigenvalues lambda_1<=lambda_2<=lambda_3 of S",
+    "q_middle_positive": "lambda_2^+",
+    "q_rotation": "Omega=(grad u-grad u^T)/2"
+  }
+}
