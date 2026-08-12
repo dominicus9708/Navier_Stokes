@@ -72,6 +72,10 @@ jobs:
         run: python src/derivative_channel_generating_gate.py --output-dir results
       - name: Run global vorticity covariance-axis gate
         run: python src/global_vorticity_axis_gate.py --output-dir results
+      - name: Run projective vorticity-dispersion gate
+        run: python src/projective_vorticity_dispersion_gate.py --output-dir results
+      - name: Run projective vorticity-dispersion dynamics gate
+        run: python src/projective_vorticity_dispersion_dynamics_gate.py --output-dir results
       - name: Run local vorticity covariance-axis gate
         run: python src/local_vorticity_covariance_axis_gate.py --output-dir results
       - name: Run axis-conversion strain-variance gate
