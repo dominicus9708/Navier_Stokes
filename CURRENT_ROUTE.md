@@ -1,10 +1,10 @@
 # Current DSD-assisted Navier–Stokes route
 
-Date: 2026-08-12
+Date: 2026-08-13
 
 Status: **ACTIVE PROOF-CHALLENGE MAP — GLOBAL REGULARITY NOT PROVED**.
 
-This file records only the currently active route.  Exploratory/failed branches remain in `PROOF_MAP.md`, notes, and Git history.
+This file records only the currently active route. Exploratory/failed branches remain in `PROOF_MAP.md`, notes, and Git history.
 
 ---
 
@@ -26,7 +26,7 @@ DSD is used as a representation / aggregation / proof-audit layer, not as an add
 
 ---
 
-# 2. Primary physical-scale track: moving weighted mean sphere
+## 2. Primary physical-scale track: moving weighted mean sphere
 
 For a smooth scale kernel/cutoff `phi_ell`, choose the center by the local weighted mean velocity,
 
@@ -48,8 +48,6 @@ Then
 \int\phi_\ell(x-X_\ell)v\,dx=0.
 \]
 
-### Derived lemma
-
 For the whole-space finite-energy suitable class, the moving weighted variance satisfies
 
 \[
@@ -67,17 +65,11 @@ For the whole-space finite-energy suitable class, the moving weighted variance s
 
 A generalized time-dependent translation maps this moving window to an ordinary suitable cylinder.
 
-### External gate
-
-A published pressure-free epsilon-regularity criterion can therefore be fed by the critical internal-velocity norm rather than by the coherent local translation.
-
-### Current requirement
-
-A hypothetical singularity must retain non-small internal oscillation/dissipation at arbitrarily small endpoint scales.
+**Current requirement:** a hypothetical singularity must retain non-small internal oscillation/dissipation at arbitrarily small endpoint scales.
 
 ---
 
-# 3. One-step physical-scale closure
+## 3. One-step physical-scale closure
 
 At parent radius `R=4 ell`, define
 
@@ -97,7 +89,7 @@ A_\phi,\ P_{\rm near}
 }
 \]
 
-while the cutoff-viscous term satisfies
+while
 
 \[
 \boxed{
@@ -115,15 +107,11 @@ After subtracting its dynamically irrelevant affine part, the genuinely remote p
 }
 \]
 
-Thus macroscopically remote pressure cannot inject order-one affine-free pressure directly into arbitrarily small scales.
-
-### Current requirement
-
-A singular cascade must be mainly **locally sustained in physical scale**.
+**Current requirement:** a singular cascade must be mainly **locally sustained in physical scale**.
 
 ---
 
-# 4. Vorticity occupancy / sparseness track
+## 4. Vorticity occupancy / sparseness track
 
 At the natural vorticity scale
 
@@ -134,11 +122,10 @@ r\sim\|\omega\|_\infty^{-1/2},
 define
 
 \[
-\mathcal W_r
-=r\int_{B_r}|\omega|^2dx.
+\mathcal W_r=r\int_{B_r}|\omega|^2dx.
 \]
 
-For an intense-vorticity set `S subset B_r`, the exact geometry lemma is
+For an intense-vorticity set `S subset B_r`,
 
 \[
 \boxed{
@@ -148,9 +135,7 @@ For an intense-vorticity set `S subset B_r`, the exact geometry lemma is
 }
 \]
 
-Small local enstrophy therefore forces a sparse direction and can feed an external geometric regularity theorem.
-
-### Time-window channel
+The natural-window channel is
 
 \[
 \boxed{
@@ -161,11 +146,11 @@ Small local enstrophy therefore forces a sparse direction and can feed an extern
 }
 \]
 
-A residual singularity must keep this channel non-small on arbitrarily late dangerous natural windows.
+**Current requirement:** a residual singularity must remain non-sparse and keep this natural-window cost non-small on arbitrarily late dangerous windows.
 
 ---
 
-# 5. Direction–strain competition
+## 5. Direction–strain competition
 
 Where `omega != 0`,
 
@@ -187,15 +172,13 @@ The exact magnitude equation is
 }
 \]
 
-Thus rough direction is dynamically penalized by diffusion; positive strain alignment must overcome this penalty to grow maximum vorticity.
-
-At a maximum-vorticity point with positive excess
+At a maximum-vorticity point with
 
 \[
 g=\gamma-\nu|\nabla\xi|^2>0,
 \]
 
-one has the branch
+one has
 
 \[
 \boxed{
@@ -205,17 +188,11 @@ one has the branch
 }
 \]
 
-### External gates
-
-- vorticity-direction coherence criteria;
-- middle-strain-eigenvalue criteria;
-- a recent 2026 preprint log-BMO direction gate, used only in its stated critical-point/Lorentz scope.
+External anchors remain the direction-coherence criteria, middle-strain-eigenvalue criteria, and the 2026 log-BMO direction preprint only in its stated scope.
 
 ---
 
-# 6. Occupancy / segregation / palinstrophy track
-
-Danger channels are not tracked only by their scalar size.  Their spatial overlap is retained.
+## 6. Occupancy / segregation / palinstrophy track
 
 For intense vorticity
 
@@ -231,9 +208,7 @@ and direction-gradient energy,
 \frac{\int_{V_a}|\nabla\xi|^2}{\int_B|\nabla\xi|^2}.
 \]
 
-A residual flow must either let direction-gradient diffusion overlap the intense core, or spatially segregate the directional defects into lower-vorticity regions.
-
-If both a substantial high-vorticity set and a substantial low-vorticity set coexist,
+If both a substantial high-vorticity and low-vorticity region coexist,
 
 \[
 \boxed{
@@ -255,12 +230,12 @@ spatial segregation pushes the residual burden into critical palinstrophy or an 
 
 ---
 
-# 7. Global vorticity-axis matrix
+## 7. Global vorticity-axis matrix
 
 Define
 
 \[
-\mathsf C_\omega(t)
+\mathsf C_\omega
 =
 \frac{\int\omega\otimes\omega dx}{\|\omega\|_2^2},
 \]
@@ -298,24 +273,236 @@ A corollary of the external locally-anisotropic criterion gives the necessary bl
 }
 \]
 
-Combining this with finite energy dissipation gives the sufficient condition
+and the sufficient condition
 
 \[
 \boxed{
-\sup_{t<T^*}
-\|\omega(t)\|_2\Pi_\omega(t)<\infty
+\sup_{t<T^*}\|\omega(t)\|_2\Pi_\omega(t)<\infty
 \Longrightarrow
 \text{no finite-time blowup}.
 }
 \]
 
-### Current requirement
+---
 
-Enstrophy growth in a residual singularity must retain enough **multi-axis directional participation**.
+## 8. Axis-choice-free projective dispersion
+
+Define
+
+\[
+\boxed{
+\mathcal J_\omega
+=1-\operatorname{tr}(\mathsf C_\omega^2).
+}
+\]
+
+Exactly,
+
+\[
+\boxed{
+\mathcal J_\omega
+=
+\frac{
+\iint|\omega(x)\times\omega(y)|^2dxdy
+}{
+\|\omega\|_2^4
+}.
+}
+\]
+
+Thus `J_omega` is a sign-free, eigenvector-free projective directional-dispersion channel.
+
+It is uniformly equivalent to the principal-axis defect:
+
+\[
+\boxed{
+\frac12\mathcal J_\omega
+\le
+\Pi_\omega
+\le
+\frac32\mathcal J_\omega.
+}
+\]
+
+Hence a hypothetical blowup must also satisfy
+
+\[
+\boxed{
+\|\omega\|_2^2\mathcal J_\omega
+\notin L^2(0,T^*),
+}
+\]
+
+and in particular
+
+\[
+\boxed{
+\sup_{t<T^*}
+\|\omega(t)\|_2\mathcal J_\omega(t)
+=\infty.
+}
+\]
+
+**Current requirement:** enstrophy concentration must retain genuine pairwise cross-axis content rather than collapsing rapidly to a one-axis covariance state.
 
 ---
 
-# 8. Local vorticity covariance-axis lemma
+## 9. Exact projective-dispersion dynamics
+
+Let
+
+\[
+N=\int\omega\otimes\omega,
+\qquad
+A=\int(S\omega)\otimes\omega,
+\]
+
+\[
+H=\sum_k\int(\partial_k\omega)\otimes(\partial_k\omega),
+\]
+
+with
+
+\[
+E=\operatorname{tr}N,
+\quad
+B=A/E,
+\quad
+G=H/E,
+\quad
+q=\operatorname{tr}B,
+\quad
+p=\operatorname{tr}G.
+\]
+
+Then
+
+\[
+\boxed{
+\dot C
+=B+B^T-2\nu G-2(q-\nu p)C.
+}
+\]
+
+For
+
+\[
+J=1-\operatorname{tr}(C^2),
+\]
+
+\[
+\boxed{
+\dot J
+=4\mathcal M_S+4\nu\mathcal M_\nu,
+}
+\]
+
+where
+
+\[
+\mathcal M_S
+=q\operatorname{tr}(C^2)-\operatorname{tr}(CB),
+\]
+
+\[
+\mathcal M_\nu
+=\operatorname{tr}(CG)-p\operatorname{tr}(C^2).
+\]
+
+Thus total enstrophy amplification is separated from directional mixing/demixing.
+
+---
+
+## 10. S/V projective mixing closure
+
+Define
+
+\[
+\mathcal L_S
+=
+\left(\frac1E\int|S\omega|^2dx\right)^{1/2}.
+\]
+
+Then
+
+\[
+\boxed{
+|\mathcal M_S|
+\le
+\sqrt{J(1-J)}\,\mathcal L_S.
+}
+\]
+
+Moreover,
+
+\[
+\mathcal L_S^2
+=
+\frac1E\int|\omega|^2
+\left[
+\gamma^2+|P_{\xi^\perp}S\xi|^2
+\right]dx.
+\]
+
+Thus large strain-driven directional mixing requires magnitude stretching and/or strain-gap axis conversion.
+
+If
+
+\[
+C_\nabla=H/P,
+\qquad
+\Delta_\nu=\|C_\nabla-C\|_F,
+\]
+
+then
+
+\[
+\boxed{
+|\mathcal M_\nu|
+\le
+\frac PE\sqrt{1-J}\,\Delta_\nu.
+}
+\]
+
+Therefore
+
+\[
+\boxed{
+\dot J
+\le
+4\sqrt{1-J}
+\left[
+\sqrt J\,\mathcal L_S
++\nu(P/E)\Delta_\nu
+\right].
+}
+\]
+
+This yields two active branches:
+
+1. **S-branch:** strain exposure / magnitude stretching / axis conversion;
+2. **V-branch:** palinstrophy-to-enstrophy ratio times vorticity-gradient covariance mismatch.
+
+If `M_nu<=0`, raising `J` from `J0` to `J1` costs
+
+\[
+\boxed{
+\int_s^t\mathcal L_S d\tau
+\ge
+\frac12
+\left[
+\arcsin\sqrt{J_1}
+-
+\arcsin\sqrt{J_0}
+\right].
+}
+\]
+
+No general finite bound on this regeneration cost has yet been proved.
+
+---
+
+## 11. Local vorticity covariance-axis lemma
 
 Use the positive Student-type kernel
 
@@ -327,13 +514,9 @@ Use the positive Student-type kernel
 Define
 
 \[
-E_r(x)=\eta_r*|\omega|^2,
-\]
-
-\[
-C_r(x)
-=
-\frac{\eta_r*(\omega\otimes\omega)}{E_r(x)}.
+E_r=\eta_r*|\omega|^2,
+\qquad
+C_r=\frac{\eta_r*(\omega\otimes\omega)}{E_r}.
 \]
 
 Let
@@ -348,11 +531,11 @@ Then
 
 \[
 \boxed{
-\delta_r\ge1-2\Pi_r.
+\delta_r\ge1-2\Pi_r,
 }
 \]
 
-For the principal axis `n_r`,
+and for the principal axis `n_r`,
 
 \[
 \boxed{
@@ -362,63 +545,19 @@ m\frac{\sqrt{\mu_1\Pi_r}}{\delta_r}.
 }
 \]
 
-Hence small local multi-axis defect automatically both opens the eigenvalue gap and smooths the best local axis.
-
-A strong corollary through the external locally-anisotropic theorem is:
-
-if
-
-\[
-\varepsilon(t)=\sup_x\Pi_{r(t)}(x,t)
-\le\varepsilon_0<1/2,
-\]
-
-\[
-r^{-1}\in L^\infty_{\rm loc}(0,T^*),
-\]
-
-and
-
-\[
-\boxed{
-\sup_{t<T^*}
-\varepsilon(t)\|\omega(t)\|_2<\infty,
-}
-\]
-
-then finite-time blowup is excluded.
-
-### Current requirement
-
-A residual singularity must maintain dynamically significant local multi-axis participation strongly enough to violate this gate.
+Thus small local multi-axis defect automatically opens the eigenvalue gap and smooths the best local axis.
 
 ---
 
-# 9. Dynamics of local multi-axis participation
+## 12. Local multi-axis dynamics and axis conversion
 
-For the moving local covariance block, define the optimal off-axis enstrophy
-
-\[
-D_\perp
-=E_r(1-\mu_1).
-\]
-
-Its exact smooth budget is
+For
 
 \[
-\begin{aligned}
-\dot D_\perp
-&+2\nu\int\varphi_r|\nabla\omega_\perp|^2\\
-&=
-2\int\varphi_r\omega_\perp\cdot S\omega\\
-&\quad+
-\int|\omega_\perp|^2(u-U)\cdot\nabla\varphi_r
-+
-u\int|\omega_\perp|^2\Delta\varphi_r.
-\end{aligned}
+D_\perp=E_r(1-\mu_1),
 \]
 
-The nonlinear production splits exactly into
+the nonlinear production splits exactly as
 
 \[
 \boxed{
@@ -429,43 +568,23 @@ The nonlinear production splits exactly into
 }
 \]
 
-Thus multi-axis content is maintained by
-
-1. off-axis self stretching;
-2. principal-axis to off-axis conversion;
-3. relative physical-scale flux.
-
----
-
-# 10. Axis conversion = strain-eigenvalue variance
-
-Let
-
-\[
-b_i=(n\cdot e_i)^2
-\]
-
-in the strain eigenframe.  Then
+In the strain eigenframe,
 
 \[
 \boxed{
 |P_\perp Sn|^2
 =
-\sum_{i<j}
-b_i b_j(\lambda_i-\lambda_j)^2.
+\sum_{i<j}b_i b_j(\lambda_i-\lambda_j)^2,
+\qquad
+b_i=(n\cdot e_i)^2.
 }
 \]
 
-Therefore principal-to-off-axis vorticity conversion requires both
-
-- mixing of the vorticity best axis across different strain eigendirections;
-- and nonzero strain eigenvalue gaps.
-
-This is a genuine off-diagonal axis-property channel already contained in NSE.
+Thus local multi-axis content is maintained through off-axis self stretching, strain-gap weighted axis conversion, and relative physical-scale flux.
 
 ---
 
-# 11. Higher derivative / two-index track
+## 13. Higher derivative / physical-scale track
 
 Keep physical scale and derivative order separate:
 
@@ -473,17 +592,17 @@ Keep physical scale and derivative order separate:
 \mathcal K_{j,k}.
 \]
 
-Factorial normalization of derivative channels removes Leibniz binomial coefficients:
+Factorial normalization removes Leibniz binomial coefficients and leaves the near-scale nonlinear derivative Cauchy convolution
 
 \[
 \boxed{
-N_k\lesssim\sum_{m=0}^{k}A_mB_{k-m}.
+N_k^{\rm nl}
+\lesssim
+\sum_{m=0}^{k}A_mB_{k-m}.
 }
 \]
 
-The generating functions therefore satisfy a Cauchy-product structure.
-
-Meanwhile affine-free remote derivative pressure satisfies
+Affine-free remote derivative pressure satisfies
 
 \[
 \boxed{
@@ -494,13 +613,147 @@ H_{\ell,k}
 }
 \]
 
-Thus at high derivative order the direct remote-pressure sector becomes increasingly weak; the unresolved high-order obstruction is the **near-scale nonlinear derivative convolution**.
-
-The established Grujic--Xu higher-derivative sparseness framework is treated as an external anchor here, not as DSD novelty.
+Thus the unresolved high-order pressure/nonlinearity burden is local in physical scale and concentrated in the derivative convolution.
 
 ---
 
-# 12. Current residual singularity class
+## 14. Derivative-order projective covariance chain
+
+Use ordered derivative words `I in {1,2,3}^k` and define
+
+\[
+N_k
+=\sum_I\int(\partial_I\omega)\otimes(\partial_I\omega)dx,
+\]
+
+\[
+E_k=\operatorname{tr}N_k,
+\qquad
+C_k=N_k/E_k,
+\qquad
+J_k=1-\operatorname{tr}(C_k^2).
+\]
+
+For
+
+\[
+F_I
+=\partial_I(S\omega)-[\partial_I,u\cdot\nabla]\omega,
+\]
+
+let
+
+\[
+A_k=\sum_I\int F_I\otimes\partial_I\omega dx.
+\]
+
+Then viscosity nests exactly into the next derivative covariance:
+
+\[
+\boxed{
+\dot N_k
+=A_k+A_k^T-2\nu N_{k+1}.
+}
+\]
+
+Writing
+
+\[
+B_k=A_k/E_k,
+\quad
+q_k=\operatorname{tr}B_k,
+\quad
+r_k=E_{k+1}/E_k,
+\]
+
+we obtain
+
+\[
+\boxed{
+\frac14\dot J_k
+=
+\mathcal M_{N,k}
++
+u r_k
+\left[
+\operatorname{tr}(C_kC_{k+1})
+-\operatorname{tr}(C_k^2)
+\right].
+}
+\]
+
+Define
+
+\[
+\Delta_k=\|C_{k+1}-C_k\|_F
+\]
+
+and
+
+\[
+L_k
+=\left(
+\frac{\sum_I\|F_I\|_2^2}{E_k}
+\right)^{1/2}.
+\]
+
+Then
+
+\[
+\boxed{
+|\mathcal M_{N,k}|
+\le
+\sqrt{J_k(1-J_k)}L_k,
+}
+\]
+
+\[
+\boxed{
+\left|
+\operatorname{tr}[C_k(C_{k+1}-C_k)]
+\right|
+\le
+\sqrt{1-J_k}\,\Delta_k,
+}
+\]
+
+and therefore
+
+\[
+\boxed{
+\dot J_k
+\le
+4\sqrt{1-J_k}
+\left[
+\sqrt{J_k}L_k
++\nu r_k\Delta_k
+\right].
+}
+\]
+
+The previous V-branch is exactly the first link `k=0 -> 1`:
+
+\[
+C_1=C_\nabla,
+\qquad
+r_0=P/E.
+\]
+
+Hence the active structure is now
+
+\[
+\boxed{
+\text{physical scale }j
+\times
+\text{derivative order }k
+\times
+\text{directional covariance }C_k.
+}
+\]
+
+---
+
+## 15. Current residual singularity class
 
 Any hypothetical singularity surviving the current route must simultaneously exhibit:
 
@@ -512,33 +765,42 @@ Any hypothetical singularity surviving the current route must simultaneously exh
 6. enough positive strain/extensional alignment to beat direction diffusion;
 7. Miller-critical positive-middle-strain behavior;
 8. enough global and local multi-axis vorticity participation to evade optimal-axis gates;
-9. sustained off-axis self stretching and/or strain-axis conversion;
-10. critical palinstrophy / dense-core structure when danger channels segregate;
-11. survival of higher-derivative sparseness/analyticity restrictions;
-12. near-scale nonlinear derivative convolution strong enough to continue the cascade.
+9. non-integrable pairwise projective cross-axis enstrophy `E J`;
+10. persistent positive projective mixing through the S-branch and/or V-branch;
+11. sustained off-axis self stretching and/or strain-gap axis conversion;
+12. critical palinstrophy / dense-core structure when danger channels segregate;
+13. survival of higher-derivative sparseness/analyticity restrictions;
+14. near-scale nonlinear derivative convolution strong enough to continue the cascade;
+15. derivative covariance mismatch `r_k Delta_k` that remains active whenever viscous directional regeneration is used.
 
-No contradiction among all twelve has yet been proved.
+No contradiction among all fifteen has yet been proved.
 
 ---
 
-# 13. Principal open target
+## 16. Principal open target
 
-The most concentrated remaining target is now
+The remaining problem has been reduced to an intersection of two chains:
 
 \[
 \boxed{
-\text{persistent local multi-axis vorticity participation}
-\quad\text{versus}\quad
-\text{off-axis diffusion + strain-axis conversion cost}.
+\textbf{S-chain:}
+\quad
+\sqrt{J_k}L_k
+\ \longleftrightarrow\ 
+\text{nonlinear derivative convolution / strain-alignment gates},
 }
 \]
 
-A proof-level next step would derive a scale-critical estimate that makes
-
 \[
-\|\omega\|_2\sup_x\Pi_{r(t)}
+\boxed{
+\textbf{V-chain:}
+\quad
+\nu r_k\Delta_k
+\ \longleftrightarrow\ 
+\text{neighboring derivative covariance mismatch / palinstrophy hierarchy}.
+}
 \]
 
-remain bounded, or else forces one of the already established sparseness / strain / higher-derivative regularity gates.
+A proof-producing next step would show that these two chains cannot both remain active through arbitrarily small physical scales and arbitrarily high derivative orders while respecting the known finite-energy and geometric/sparseness constraints.
 
-Until such a closure is proved, global smoothness remains **NOT CLAIMED**.
+Until such a uniform closure is proved, global smoothness remains **NOT CLAIMED**.
