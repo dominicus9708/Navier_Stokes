@@ -84,6 +84,8 @@ jobs:
         run: python src/viscous_derivative_order_flux_gate.py --output-dir results
       - name: Run factorial-normalized viscous budget gate
         run: python src/factorial_normalized_viscous_budget_gate.py --output-dir results
+      - name: Run energy-weighted projective dissipation gate
+        run: python src/energy_weighted_projective_dissipation_gate.py --output-dir results
       - name: Run local vorticity covariance-axis gate
         run: python src/local_vorticity_covariance_axis_gate.py --output-dir results
       - name: Run axis-conversion strain-variance gate
