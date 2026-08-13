@@ -74,6 +74,8 @@ jobs:
         run: python src/fixed_material_core_exclusion_gate.py --output-dir results
       - name: Run Cauchy-vorticity turnover gate
         run: python src/cauchy_vorticity_turnover_gate.py --output-dir results
+      - name: Run amplification-step Cauchy dichotomy gate
+        run: python src/amplification_cauchy_dichotomy_gate.py --output-dir results
       - name: Run vorticity direction-strain competition gate
         run: python src/vorticity_direction_strain_competition_gate.py --output-dir results
       - name: Run middle-eigenvalue residual branch gate
