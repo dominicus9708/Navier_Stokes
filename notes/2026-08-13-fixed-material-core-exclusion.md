@@ -2,7 +2,7 @@
 
 Date: 2026-08-13
 
-Status: **DERIVED CONDITIONAL EXCLUSION + EXTERNAL BKM CONTINUATION CRITERION / OPEN MATERIAL-TURNOVER CLOSURE**.
+Status: **DERIVED CONDITIONAL EXCLUSION + EXTERNAL BKM CONTINUATION CRITERION / OPEN SHRINKING-MATERIAL CORE CLOSURE**.
 
 This note rules out one important residual geometry: the same positive-volume material tube cannot remain, all the way to a finite singular time, a natural-area intense oriented-vorticity core with uniformly nontrivial signed flux.
 
@@ -241,73 +241,79 @@ No pressure estimate is needed.
 
 A hypothetical singular core must therefore violate at least one hypothesis.  The meaningful possibilities are:
 
-### M1. Material turnover
+### M1. Material recruitment / turnover
 
-The material occupying the dangerous core is continually replaced, so no fixed positive `V_0` survives in the core.
+New material labels continually enter the dangerous threshold.  Under bounded recent deformation this branch is charged to the Cauchy-vorticity `k=2` defect.
 
-### M2. Viscous flux erosion/recreation
+### M2. Nested material pruning / selection
 
-The signed material flux is repeatedly destroyed and recreated; this is charged to the material-flux erosion / palinstrophy channel.
+The later dangerous core uses only a progressively smaller subset of already-dangerous material.  Because the natural core volume itself scales like `W^{-3/2}`, this branch does not require positive material volume to survive.  It is treated separately by the pruning and material-flux-amplification notes.
 
-### M3. Loss of natural-area tube geometry
+### M3. Viscous flux erosion/recreation
+
+The signed material flux is repeatedly destroyed or recreated; this is charged to the material-flux erosion / palinstrophy hierarchy.
+
+### M4. Loss of natural-area tube geometry
 
 The intense set ceases to admit the assumed natural-area cross-sectional foliation.  Then occupancy/sparseness/projective geometry must be used instead.
 
-### M4. Strong tube distortion
+### M5. Strong tube distortion
 
 The foliation Jacobian constant `K_g` becomes large.  This returns to the Lagrangian deformation / strain channel.
 
-Hence the genuinely new residual branch is **material turnover of the intense core**.
+Thus the genuinely unresolved material class is **shrinking exceptional material-label sets**, realized through some combination of turnover and pruning, rather than a fixed positive-volume tube.
 
 ---
 
 ## 8. DSD channel interpretation
 
-The material identity of the core should now be typed separately from its instantaneous geometry.
+The material identity of the core should be typed separately from its instantaneous geometry.
 
-Define a material-retention channel
+For consecutive dangerous cores define the overlap normalized by the new, smaller core:
 
 \[
 \boxed{
-\mathcal R_{\rm mat}(t_0,t)
+\mathcal O_{j\to j+1}
 =
 \frac{
-|\mathcal C(t)\cap X(\mathcal C(t_0),t;t_0)|
+|\mathcal C_{j+1}\cap X(\mathcal C_j,t_{j+1};t_j)|
 }{
-|\mathcal C(t)|
-},
+|\mathcal C_{j+1}|
+}.
 }
 \]
 
-for a chosen dangerous core `C(t)`.
+- `O near 1`: the new core is mostly a pruned subset of old dangerous material;
+- `O small`: substantial genuine material recruitment/turnover occurs.
 
-- `R_mat near 1`: the same material persists;
-- `R_mat small`: strong material turnover.
-
-The fixed-material-core exclusion says that a residual singular cascade cannot keep a positive-volume material subset with retention bounded away from zero forever while also maintaining the robust natural-area/flux hypotheses.
+This normalization is preferable to retention divided by the old-core volume because the natural dangerous volume shrinks like `W^{-3/2}`.
 
 ---
 
 ## 9. Principal next target
 
-Quantify the cost of repeatedly replacing the material inside a shrinking dangerous core.
-
-A useful next object is the symmetric-difference turnover rate between
+The active material problem is now the normalized-overlap cascade:
 
 \[
-\mathcal C(t+dt)
+\boxed{
+\text{low overlap}
+\Rightarrow
+\text{Cauchy-defect recruitment cost},
+}
 \]
 
-and the material image
+while
 
 \[
-X(\mathcal C(t),t+dt;t).
+\boxed{
+\text{high overlap}
+\Rightarrow
+\text{pruning of old material}.
+}
 \]
 
-If high turnover is caused by relative motion of the threshold boundary rather than by material advection, the vorticity equation should charge it to
+The pruning branch is further constrained by oriented material-flux amplification: under bounded surface deformation, a much later/higher-vorticity natural subdisk cannot already carry the required order-one flux at the earlier lower-vorticity time, so viscosity must create flux.
 
-- diffusion across the threshold boundary;
-- strain-driven magnitude growth across the threshold;
-- or threshold-level geometric area.
+The remaining geometry gap is to pass from high three-dimensional material overlap to a controlled old-material surface patch, or else charge the resulting interface complexity to palinstrophy/deformation.
 
-Status: **OPEN MATERIAL-TURNOVER / THRESHOLD-FLUX CLOSURE**.
+Status: **OPEN NORMALIZED-OVERLAP / MATERIAL-PATCH FLUX CLOSURE**.
