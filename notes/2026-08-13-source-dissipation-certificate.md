@@ -1,14 +1,22 @@
-# Combined source/dissipation certificate from angular and magnitude deficits
+# Factorized source/dissipation diagnostic certificate
 
 Date: 2026-08-13
 
-Status: **DERIVED DIMENSIONLESS ENSTROPHY-GROWTH CERTIFICATE / CONSTANT-DEPENDENT BUT EXACT GIVEN SOURCE BOUND**.
+Status: **DERIVED DIMENSIONLESS CERTIFICATE FOR THE FACTORIZED INTERPOLATION/SOBOLEV CHAIN / NOT THE CANONICAL SHARP-GN CERTIFICATE**.
 
-The magnitude-direction palinstrophy split and the magnitude-heterogeneity interpolation gap can be combined into one dimensionless certificate that is necessary for nondecreasing global enstrophy.
+> **Audit update.** The inequality in this note remains valid with its own composite constant `C_chain`, but the canonical scalar source bound is now the direct sharp Gagliardo--Nirenberg estimate recorded in `2026-08-13-sharp-gagliardo-nirenberg-consolidation.md`.  The factor `(1+chi_mag)^(-1/2)` must not be multiplied on top of the sharp GN constant unless a separate sharp-GN stability/refinement theorem is proved.
+
+This note is retained as a DSD diagnostic decomposition of why the elementary
+
+\[
+L^2\to L^3\to L^6\to\dot H^1
+\]
+
+chain loses sharpness.
 
 ---
 
-## 1. Refined source bound
+## 1. Factorized source bound
 
 Let
 
@@ -30,15 +38,16 @@ when `P>0`, and let
 \chi_{\rm mag}\ge0
 \]
 
-be the enstrophy-weighted magnitude coefficient of variation.
+be the enstrophy-weighted magnitude heterogeneity channel.
 
-The refined source estimate is
+For the factorized interpolation/Sobolev route one has
 
 \[
 \boxed{
 |Q|
 \le
-C_*E^{3/4}P^{3/4}
+C_{\rm chain}
+E^{3/4}P^{3/4}
 (1-\eta_{\rm ang})^{3/4}
 (1+\chi_{\rm mag})^{-1/2}.
 }
@@ -52,97 +61,101 @@ The global enstrophy identity is
 
 ---
 
-## 2. Dimensionless certificate
+## 2. Factorized diagnostic certificate
 
-For `E,P>0` and `eta_ang<1`, define
+Define
 
 \[
 \boxed{
-\mathfrak D
+\mathfrak D_{\rm chain}
 =
-\frac{\nu^4P}{C_*^4E^3}
+\frac{\nu^4P}{C_{\rm chain}^4E^3}
 \frac{(1+\chi_{\rm mag})^2}
 {(1-\eta_{\rm ang})^3}.
 }
 \]
 
-The fourth power of the source/dissipation ratio obeys
+Then
 
 \[
+\boxed{
 \left(
 \frac{|Q|}{\nu P}
 \right)^4
 \le
-\frac1{\mathfrak D}.
+\frac1{\mathfrak D_{\rm chain}}.
+}
 \]
 
 Therefore
 
 \[
 \boxed{
-\mathfrak D>1
+\mathfrak D_{\rm chain}>1
 \Longrightarrow
-|Q|<\nu P.
-}
-\]
-
-Consequently
-
-\[
-\boxed{
-\mathfrak D>1
+|Q|<\nu P
 \Longrightarrow
 \dot E<0.
 }
 \]
 
+Conversely, a nondecreasing-enstrophy phase must satisfy
+
+\[
+\boxed{
+\mathfrak D_{\rm chain}\le1.
+}
+\]
+
+This implication is exact **for this stated source upper bound and constant**.
+
 ---
 
-## 3. Necessary condition for enstrophy growth
+## 3. Canonical sharp-GN certificate
 
-If
-
-\[
-\dot E\ge0,
-\]
-
-then
-
-\[
-Q\ge\nu P>0.
-\]
-
-Hence necessarily
+The preferred source estimate is now
 
 \[
 \boxed{
-\mathfrak D\le1.
-}
-\]
-
-Equivalently,
-
-\[
-\boxed{
-\nu^4P(1+\chi_{\rm mag})^2
+|Q|
 \le
-C_*^4E^3(1-\eta_{\rm ang})^3.
+C_\sharp E^{3/4}P^{3/4}
+(1-\eta_{\rm ang})^{3/4},
+\qquad
+C_\sharp=C_RC_{\rm GN}^3.
 }
 \]
 
-This is a combined compatibility condition among
+Accordingly define
 
-- total palinstrophy;
-- angular/directional palinstrophy fraction;
-- enstrophy-weighted magnitude heterogeneity;
-- viscosity;
-- total enstrophy.
+\[
+\boxed{
+\mathfrak D_{\rm GN}
+=
+\frac{\nu^4P}
+{C_\sharp^4E^3(1-\eta_{\rm ang})^3}.
+}
+\]
+
+Then
+
+\[
+\boxed{
+\mathfrak D_{\rm GN}>1
+\Longrightarrow
+Q<\nu P
+\Longrightarrow
+\dot E<0.
+}
+\]
+
+No `chi_mag` factor is inserted into this sharp certificate without an independent sharp-GN stability theorem.
 
 ---
 
 ## 4. DSD interpretation
 
-Keep the underlying channel block
+Keep
 
 \[
 \boxed{
@@ -150,49 +163,17 @@ Keep the underlying channel block
 }
 \]
 
-as primary data.  The scalar
+as primary channels.
 
-\[
-\mathfrak D
-\]
+- `D_GN`: canonical sharp scalar certificate;
+- `D_chain`: diagnostic certificate exposing the additional loss in the elementary interpolation/Sobolev factorization;
+- `chi_mag`: magnitude-distribution diagnostic and multicore aggregation channel, not an automatic correction of `C_GN`.
 
-is a **derived certificate**, not a replacement for those channels.
-
-- `D>1`: guaranteed dissipative side of the derived bound;
-- `D<=1`: potentially source-active, but not guaranteed to grow;
-- `D near 1`: candidate near-saturation state requiring further equality/geometry checks.
-
-Thus no information-loss claim is made from the single aggregate value.
+This prevents double counting while preserving the structural information discovered by the decomposed route.
 
 ---
 
-## 5. Equality/saturation stack
-
-A sequence with
-
-\[
-\dot E\ge0
-\]
-
-and
-
-\[
-\mathfrak D\to1
-\]
-
-must approach equality in several separate estimates, including
-
-1. the strain/vorticity `L3` singular-integral bound;
-2. the critical `L2-L3-L6` interpolation;
-3. scalar Sobolev for `rho=|omega|`;
-4. the angular-palinstrophy split with the required total-palinstrophy ratio;
-5. any localization/far-field decompositions used in the local version.
-
-The previously derived compactness-rigidity gap shows that one of these equality requirements (`chi_mag -> 0`) is impossible on a strongly `H1`-compact nontrivial cutoff family.
-
----
-
-## 6. Scale invariance
+## 5. Scale invariance
 
 Under Navier--Stokes scaling,
 
@@ -210,30 +191,12 @@ while
 \chi_{\rm mag}
 \]
 
-are invariant.
-
-Therefore
-
-\[
-\frac{P}{E^3}
-\]
-
-and hence
-
-\[
-\boxed{\mathfrak D}
-\]
-
-are scale invariant.
-
-This makes `mathfrak D` suitable for comparison across the natural-window amplification checkpoints.
+are invariant.  Therefore both `D_chain` and `D_GN` are scale invariant when their respective constants are fixed.
 
 ---
 
-## 7. Claim boundary
+## 6. Claim boundary
 
-The certificate uses the analytical constant `C_*` from the singular-integral/interpolation/Sobolev chain.  It does not prove that `mathfrak D>1` for arbitrary data.  Its role is to define the exact channel inequality that any enstrophy-growing residual state must satisfy.
+Neither certificate proves that its value exceeds one for arbitrary data.  Local moving-window versions also contain shell, near/far strain, and cutoff terms.
 
-A local moving-window version also requires the already-typed shell, near/far strain, and cutoff terms.
-
-Status: **GLOBAL CERTIFICATE DERIVED / LOCAL CERTIFICATE WITH REMAINDERS STILL TO CLOSE**.
+Status: **SHARP/NONSHARP CONSTANTS SEPARATED / DOUBLE-COUNTING CORRECTED**.
