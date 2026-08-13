@@ -1,0 +1,20 @@
+name: gaussian-residual-audit
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  gaussian-residual-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Audit self-consistent Gaussian affine residual identities
+        run: python src/self_consistent_gaussian_affine_residual_gate.py --output-dir results
+      - name: Audit four-channel Gaussian residual and Betchov orbit identities
+        run: python src/gaussian_four_channel_betchov_gate.py --output-dir results
