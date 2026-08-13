@@ -78,6 +78,10 @@ jobs:
         run: python src/amplification_cauchy_dichotomy_gate.py --output-dir results
       - name: Run natural-window renormalization gate
         run: python src/natural_window_renormalization_gate.py --output-dir results
+      - name: Run amplification-time noncollapse gate
+        run: python src/amplification_time_noncollapse_gate.py --output-dir results
+      - name: Run magnitude-direction source-gap gate
+        run: python src/magnitude_direction_source_gap_gate.py --output-dir results
       - name: Run vorticity direction-strain competition gate
         run: python src/vorticity_direction_strain_competition_gate.py --output-dir results
       - name: Run middle-eigenvalue residual branch gate
