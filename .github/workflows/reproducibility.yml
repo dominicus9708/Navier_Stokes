@@ -70,6 +70,10 @@ jobs:
         run: python src/oriented_flux_side_leakage_gate.py --output-dir results
       - name: Run material vorticity-flux erosion gate
         run: python src/material_vorticity_flux_erosion_gate.py --output-dir results
+      - name: Run fixed material core exclusion gate
+        run: python src/fixed_material_core_exclusion_gate.py --output-dir results
+      - name: Run Cauchy-vorticity turnover gate
+        run: python src/cauchy_vorticity_turnover_gate.py --output-dir results
       - name: Run vorticity direction-strain competition gate
         run: python src/vorticity_direction_strain_competition_gate.py --output-dir results
       - name: Run middle-eigenvalue residual branch gate
