@@ -23,6 +23,10 @@ def weighted_sse(x: np.ndarray, w: np.ndarray, mean: np.ndarray) -> float:
     return float(np.sum(w * np.sum(d * d, axis=(1, 2))))
 
 
+def rel_error(a: float, b: float) -> float:
+    return abs(a - b) / max(1.0, abs(a), abs(b))
+
+
 def two_cell_anova(rng: np.random.Generator) -> dict:
     # Use volume ratio |B_R| : |A_R| = 1 : 7 in three dimensions.
     n_inner, n_ann = 64, 448
@@ -44,13 +48,15 @@ def two_cell_anova(rng: np.random.Generator) -> dict:
 
     parent_jump = float(np.sum((m_inner - m_parent) ** 2))
     lower = (8.0 / 7.0) * parent_jump  # |B_R| normalized to one.
+    anova_rel = rel_error(lhs, rhs)
 
     return {
         "anova_abs_error": abs(lhs - rhs),
+        "anova_rel_error": anova_rel,
         "parent_variance": lhs,
         "two_scale_jump_lower_bound": lower,
         "two_scale_jump_margin": lhs - lower,
-        "passed": bool(abs(lhs - rhs) < 1e-10 and lhs + 1e-12 >= lower),
+        "passed": bool(anova_rel < 1e-13 and lhs + 1e-12 >= lower),
     }
 
 
@@ -58,12 +64,12 @@ def martingale_chain(rng: np.random.Generator, levels: int = 6) -> dict:
     # Build disjoint radial cells with normalized 3D volumes:
     # core volume 1 and annulus k volume 7*8^k.
     # We use one matrix-valued sample per cell; this isolates the between-cell
-    # martingale identity exactly.  Within-cell variance would only add cost.
+    # martingale identity exactly. Within-cell variance would only add cost.
     volumes = [1.0] + [7.0 * (8.0**k) for k in range(levels)]
     cells = rng.normal(size=(levels + 1, 3, 3))
 
     # L_k is the mean on the inner ball with radius 2^k R0, made of
-    # core + annuli 0,...,k-1.  L_0 is core; L_levels is largest ball.
+    # core + annuli 0,...,k-1. L_0 is core; L_levels is largest ball.
     means = []
     for k in range(levels + 1):
         w = np.array(volumes[: k + 1], dtype=float)
@@ -91,19 +97,23 @@ def martingale_chain(rng: np.random.Generator, levels: int = 6) -> dict:
 
     # Exact orthogonality for the piecewise-constant radial martingale.
     orth_error = abs(total_between_variance - increment_sum)
+    orth_rel = rel_error(total_between_variance, increment_sum)
 
     # Since v_ann/v_parent = 7/8 for every dyadic 3D split,
     # increment = (8/7) v_child |L_child-L_parent|^2.
     expected_increment_from_jumps = (8.0 / 7.0) * weighted_core_jump_sum
     jump_error = abs(increment_sum - expected_increment_from_jumps)
+    jump_rel = rel_error(increment_sum, expected_increment_from_jumps)
 
     return {
         "total_between_variance": total_between_variance,
         "martingale_increment_sum": increment_sum,
         "orthogonality_abs_error": orth_error,
+        "orthogonality_rel_error": orth_rel,
         "weighted_core_jump_sum": weighted_core_jump_sum,
         "jump_identity_abs_error": jump_error,
-        "passed": bool(orth_error < 1e-10 and jump_error < 1e-10),
+        "jump_identity_rel_error": jump_rel,
+        "passed": bool(orth_rel < 1e-13 and jump_rel < 1e-13),
     }
 
 
