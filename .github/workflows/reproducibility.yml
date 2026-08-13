@@ -88,6 +88,12 @@ jobs:
         run: python src/angular_palinstrophy_threshold_gate.py --output-dir results
       - name: Run magnitude-heterogeneity gap gate
         run: python src/magnitude_heterogeneity_gap_gate.py --output-dir results
+      - name: Run source-dissipation certificate gate
+        run: python src/source_dissipation_certificate_gate.py --output-dir results
+      - name: Run renormalized remote-tail gate
+        run: python src/renormalized_remote_tail_gate.py --output-dir results
+      - name: Run multicore static-aggregation gate
+        run: python src/multicore_static_aggregation_gate.py --output-dir results
       - name: Run vorticity direction-strain competition gate
         run: python src/vorticity_direction_strain_competition_gate.py --output-dir results
       - name: Run middle-eigenvalue residual branch gate
@@ -114,7 +120,7 @@ jobs:
         run: python src/energy_weighted_projective_dissipation_gate.py --output-dir results
       - name: Run covariance coercivity gate
         run: python src/covariance_coercivity_projective_gate.py --output-dir results
-      - name: Run high-order-to-base anisotropy gate
+      - name: Run high-order to base anisotropy gate
         run: python src/high_order_to_base_anisotropy_gate.py --output-dir results
       - name: Run local covariance pairwise-projective gate
         run: python src/local_covariance_pairwise_projective_gate.py --output-dir results
