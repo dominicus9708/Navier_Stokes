@@ -84,6 +84,10 @@ jobs:
         run: python src/magnitude_direction_source_gap_gate.py --output-dir results
       - name: Run far-strain covariance-gap gate
         run: python src/far_strain_covariance_gap_gate.py --output-dir results
+      - name: Run angular-palinstrophy threshold gate
+        run: python src/angular_palinstrophy_threshold_gate.py --output-dir results
+      - name: Run magnitude-heterogeneity gap gate
+        run: python src/magnitude_heterogeneity_gap_gate.py --output-dir results
       - name: Run vorticity direction-strain competition gate
         run: python src/vorticity_direction_strain_competition_gate.py --output-dir results
       - name: Run middle-eigenvalue residual branch gate
