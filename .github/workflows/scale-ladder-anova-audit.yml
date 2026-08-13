@@ -16,3 +16,5 @@ jobs:
         run: python -m pip install -r requirements.txt
       - name: Audit dyadic scale-ladder ANOVA identities
         run: python src/scale_ladder_anova_gate.py --output-dir results
+      - name: Audit Gaussian residual semigroup variance identity
+        run: python src/gaussian_semigroup_variance_gate.py --output-dir results
