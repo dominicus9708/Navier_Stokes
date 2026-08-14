@@ -2,182 +2,168 @@
 
 Date: 2026-08-14
 
-Status: **DERIVED FOR THE QUADRATIC-CORE DEGREE-TWO TRACE SOURCE ON THE BOUNDED-CONDITION AFFINE-GAUSSIAN HEAT STRUCTURE. A FIXED MESOSCOPIC TRACE ACTION IS EXCLUDED FOR LARGE FIRST-HITTING LEVELS. HIGH-HERMITE CORRECTIONS AND THE PROJECTIVE `Ab` LANE REMAIN. GLOBAL REGULARITY NOT PROVED.**
+Status: **DERIVED FOR THE QUADRATIC-CORE DEGREE-TWO TRACE SOURCE ON THE BOUNDED-CONDITION, BOUNDED-ACCUMULATED-STRAIN AFFINE-GAUSSIAN BRANCH. A FIXED STRICT-MESOSCOPIC TRACE ACTION IS EXCLUDED FOR LARGE FIRST-HITTING LEVELS. HIGH-HERMITE CORRECTIONS AND THE PROJECTIVE `Ab` LANE REMAIN. GLOBAL REGULARITY NOT PROVED.**
 
-## 1. Why the earlier survival/erasure split can be strengthened
+## 1. Quadratic-core split
 
-The quadratic-core identity writes the Gaussian mean-vorticity source as
-
-\[
-J_{\rm core}
-=J_{\rm tr}+J_{Ab},
-\]
-
-where
+The quadratic-core Gaussian mean-vorticity source is
 
 \[
-J_{\rm tr}=E_\gamma P
+J_{\rm core}=J_{\rm tr}+J_{Ab},
 \]
 
-is a fixed finite-dimensional trace functional of the degree-two centered vorticity source and
+where `J_tr` is a finite-dimensional trace functional of the centered degree-two vorticity source and `J_Ab=Ab` is the projective constant-shift contribution.
 
-\[
-J_{Ab}=Ab
-\]
+The key point is that degree-two states at adjacent matched blocks are the same physical state expressed in compatible co-affine Gaussian bases. Their internal boundary terms therefore telescope.
 
-is the projective constant-shift term.
+## 2. Moving degree-two equation and audited coefficient variation
 
-The previous heat-erasure note treated each matched block separately. But degree-two states at adjacent block boundaries are the same physical state written in compatible moving Gaussian bases. Therefore the surviving boundary contributions telescope when the full mesoscopic interval is considered at once.
-
-## 2. Moving degree-two coefficient equation
-
-Let `Y_2(t)` denote the actual degree-two residual-vorticity coefficient vector in the Gaussian basis matched to the bounded-affine heat covariance.
-
-Pure affine+heat evolution preserves Hermite degree. Hence, after putting all genuinely nonlinear degree-two forcing into `F_2`, we may write
+Let `Y_2(t)` be the actual degree-two residual-vorticity coefficient vector in the co-affine Gaussian basis matched to the affine heat covariance. Pure affine kinematics plus viscosity preserves Hermite degree, so
 
 \[
 \boxed{
-Y_2'+\mathcal A_2(t)Y_2=F_2.
+Y_2'+\mathcal A_2(t)Y_2=F_2,
 }
 \]
 
-On a bounded-condition geometric block of radius `R(t)`,
+where `F_2` contains the genuine degree-two nonlinear forcing.
+
+On a geometric block of Gaussian radius `R(t)`, covariance normalization contributes
 
 \[
+\|\mathcal A_{2,\rm cov}(t)\|\lesssim_KR(t)^{-2}.
+\]
+
+Affine strain can also change the finite-dimensional coefficient representation. After rigid rotations are factored out, this gives the audited bound
+
+\[
+\boxed{
 \|\mathcal A_2(t)\|
-\lesssim_K R(t)^{-2}.
-\]
-
-Let `ell_t` be the bounded linear functional recovering the quadratic-core trace contribution from the centered degree-two source:
-
-\[
-\boxed{
-J_{\rm tr}(t)=\ell_tF_2(t).
+\lesssim_K
+R(t)^{-2}+|S(t)|.
 }
 \]
 
-Because the only time dependence of this finite-dimensional identification comes from the bounded-condition affine/Gaussian normalization,
+Let `ell_t` recover the quadratic-core trace source from `F_2`:
 
 \[
-\|\ell_t\|
-\lesssim_K1,
+\boxed{J_{\rm tr}(t)=\ell_tF_2(t).}
+\]
+
+The same covariance/affine decomposition gives
+
+\[
+\boxed{
+\|\ell_t\|\lesssim_K1,
 \qquad
 \|\ell_t'\|
-\lesssim_KR(t)^{-2}.
+\lesssim_K
+R(t)^{-2}+|S(t)|.
+}
 \]
 
-These are the natural scale bounds for the moving covariance basis.
+The antisymmetric affine part acts by rigid tensor rotation and does not create a norm-growth term in these estimates.
 
 ## 3. Exact telescoping identity
 
-Using
+Using `F_2=Y_2'+A_2Y_2`,
 
 \[
-F_2=Y_2'+\mathcal A_2Y_2,
-\]
-
-we obtain
-
-\[
-\begin{aligned}
-\int_IJ_{\rm tr}(t)dt
-&=
-\int_I\ell_tY_2'(t)dt
-+
-\int_I\ell_t\mathcal A_2(t)Y_2(t)dt\\
-&=
 \boxed{
+\int_IJ_{\rm tr}(t)dt
+=
 [\ell_tY_2(t)]_{\partial I}
 +
 \int_I
 (\ell_t\mathcal A_2(t)-\ell_t')Y_2(t)dt.
 }
-\end{aligned}
 \]
 
-Thus all internal degree-two survival terms cancel exactly. There is no need to decide block by block whether the second chaos survives or is erased.
+Thus all internal degree-two survival boundary terms cancel exactly.
 
-## 4. Boundary terms vanish on the intermediate-pulse branch
+## 4. Boundary and accumulated-strain terms vanish with the pulse height
 
-Throughout the responsible branch,
+On the intermediate branch,
 
 \[
 B(t)\le m,
 \qquad
-m=W^{-1/3}\Lambda,
-\qquad
-m\to0.
+m=W^{-1/3}\Lambda\to0,
 \]
 
-The degree-two vorticity coefficient is part of the residual variance, so
+and `Y_2` is part of the residual-vorticity variance, so
 
 \[
-|Y_2(t)|
-\lesssim\sqrt{B(t)}
-\le\sqrt m.
+|Y_2(t)|\lesssim\sqrt m.
 \]
 
-Therefore at the two boundaries of a mesoscopic subinterval,
+Hence
+
+\[
+|[\ell_tY_2]_{\partial I}|
+\lesssim_K\sqrt m\to0.
+\]
+
+The audited affine-strain contribution satisfies
+
+\[
+\int_I |S(t)|\,|Y_2(t)|dt
+\le
+\sqrt m\int_I|S(t)|dt.
+\]
+
+On the bounded accumulated-strain branch,
+
+\[
+\int_I|S(t)|dt\le K,
+\]
+
+therefore
 
 \[
 \boxed{
-|[\ell_tY_2]_{\partial I}|
-\lesssim_K\sqrt m
-\to0.
+\int_I |S|\,|Y_2|dt
+\lesssim_K\sqrt m\to0.
 }
 \]
 
-Suppose the quadratic-core trace lane carries a fixed positive signed endpoint action `rho>0` on this mesoscopic interval. For sufficiently large `W`, the boundary term is smaller than `rho/2`, so
+Thus neither moving-basis strain nor endpoint survival can carry a fixed positive trace action as `m -> 0`.
+
+If `J_tr` carries a fixed signed action `rho>0`, then for sufficiently large `W`,
 
 \[
+\boxed{
 \rho
 \lesssim_K
 \int_I R(t)^{-2}|Y_2(t)|dt.
+}
 \]
 
-## 5. Geometric block decomposition
+This is the scale term that must pay the remaining action.
 
-Partition the strict mesoscopic interval into geometric matched blocks `I_j` with radii `R_j`, so
+## 5. Geometric-block lower bound
 
-\[
-|I_j|\asymp_KR_j^2
-\]
-
-and the number of blocks satisfies
+Partition the strict mesoscopic interval into geometric matched blocks `I_j` with
 
 \[
+|I_j|\asymp_KR_j^2,
+\qquad
 N_W\lesssim_K\log W.
 \]
 
 Define
 
 \[
-b_j
-:=
-\int_{I_j}R_j^{-2}|Y_2(t)|dt.
+b_j:=\int_{I_j}R_j^{-2}|Y_2(t)|dt.
 \]
 
-The fixed trace action forces
+Then
 
 \[
 \sum_jb_j\gtrsim_{K,\rho}1.
 \]
 
-By Cauchy--Schwarz,
-
-\[
-\begin{aligned}
-b_j^2
-&\le
-R_j^{-4}|I_j|
-\int_{I_j}|Y_2(t)|^2dt\\
-&\lesssim_K
-R_j^{-2}
-\int_{I_j}|Y_2(t)|^2dt.
-\end{aligned}
-\]
-
-Hence
+Cauchy--Schwarz gives
 
 \[
 \boxed{
@@ -189,29 +175,20 @@ R_j^2b_j^2.
 
 ## 6. Physical dissipation price
 
-Since `Y_2` is part of the residual-vorticity variance,
+Since
 
 \[
-B(t)\gtrsim|Y_2(t)|^2.
+B(t)\gtrsim|Y_2(t)|^2
 \]
 
-The Gaussian-volume inequality gives
+and a bounded-condition Gaussian of radius `R_j` satisfies
 
 \[
 \|\nabla U(t)\|_2^2
-\gtrsim_K
-R_j^3B(t)
+\gtrsim_KR_j^3B(t),
 \]
 
-on block `I_j`. Therefore
-
-\[
-\int_{I_j}\|\nabla U\|_2^2dt
-\gtrsim_K
-R_j^5b_j^2.
-\]
-
-Returning to physical variables,
+we obtain
 
 \[
 D_{\rm phys}^{\rm tr}
@@ -219,11 +196,10 @@ D_{\rm phys}^{\rm tr}
 W^{-1/2}\sum_jR_j^5b_j^2.
 \]
 
-If the entire responsible trace action lies in the strict mesoscopic band
+If
 
 \[
-R_j\ge R_*
-=W^{1/10+\varepsilon},
+R_j\ge R_*=W^{1/10+\varepsilon},
 \]
 
 then
@@ -231,76 +207,52 @@ then
 \[
 D_{\rm phys}^{\rm tr}
 \gtrsim_K
-W^{-1/2}R_*^5
-\sum_jb_j^2.
+W^{-1/2}R_*^5\sum_jb_j^2.
 \]
 
-Because
+Using `sum b_j >= c` and `N_W <= C log W`,
 
 \[
-\sum_jb_j\gtrsim1,
-\qquad
-N_W\lesssim\log W,
+\sum_jb_j^2\gtrsim\frac1{\log W}.
 \]
 
-Cauchy gives
-
-\[
-\sum_jb_j^2
-\gtrsim
-\frac1{\log W}.
-\]
-
-Thus
+Therefore
 
 \[
 \boxed{
 D_{\rm phys}^{\rm tr}
 \gtrsim_{K,\rho}
-\frac{W^{5\varepsilon}}{\log W}.
+\frac{W^{5\varepsilon}}{\log W}
+\to\infty.
 }
 \]
 
-The right-hand side diverges as `W -> infinity`.
-
-Hence a fixed positive quadratic-core trace action cannot be carried by the strict mesoscopic band at sufficiently large first-hitting level.
+A fixed positive quadratic-core trace action is therefore impossible on the strict mesoscopic band for sufficiently large first-hitting level.
 
 ## 7. Revised quadratic-core routing
 
-The quadratic-core mean source obeys
-
-\[
-J_{\rm core}
-=J_{\rm tr}+J_{Ab}.
-\]
-
 On the strict mesoscopic band:
 
-1. `J_tr` carrying fixed endpoint action is excluded by the telescoping/dissipation barrier;
-2. `J_Ab` is the projective constant-shift lane and, if it carries fixed action on an infinite cascade, it must satisfy
+1. a fixed `J_tr` action is excluded by telescoping plus physical dissipation;
+2. the moving affine-strain contribution to the trace functional is `O_K(sqrt(m))` and cannot replace it;
+3. the remaining low-Hermite quadratic-core source is the projective `J_Ab` lane, whose surviving infinite cascade requires
 
 \[
-\Lambda^{3/5}\Theta\to\infty
+\Lambda^{3/5}\Theta\to\infty;
 \]
 
-(up to dyadic localization of `Theta`);
-3. failure of the quadratic-core approximation is charged to higher Hermite curvature/chaos.
-
-Therefore the low-Hermite quadratic-core source has no remaining non-projective mesoscopic fixed-action escape.
+4. failure of quadratic-core dominance is charged to higher Hermite curvature/chaos.
 
 ## 8. Scope boundary
 
-This theorem concerns the **quadratic-core degree-two trace identity**. It does not assert that the full nonlinear mean-vorticity source, including arbitrary high-Hermite interactions, is a degree-two trace.
+This result concerns the quadratic-core degree-two trace identity. Arbitrary high-Hermite nonlinear interactions are not asserted to reduce to this trace and remain in the high-Hermite nonlinear-cascade ledger.
 
-Those higher interactions remain in the Hermite-curvature / gap-two / nonlinear-cascade ledger.
-
-Likewise, the full transverse stretching projective term
+Likewise the full transverse stretching source
 
 \[
-J_\perp
-=\int\gamma\,\delta S\,\beta
+J_\perp=\int\gamma\,\delta S\,\beta
 \]
 
-is not identical to `J_Ab`; only the quadratic-core projective constant-shift sublane has the stronger `Theta B` estimate.
+is broader than `J_Ab`; only the quadratic-core projective constant-shift sublane has the stronger `Theta B` bound.
 
-Status: **STRICT-MESOSCOPIC QUADRATIC-CORE SECOND-CHAOS TRACE LANE EXCLUDED BY GLOBAL TELESCOPING PLUS PHYSICAL DISSIPATION / REMAINING LOW-HERMITE CORE ESCAPE = PROJECTIVE `Ab`; OTHER ESCAPE = HIGH-HERMITE STRUCTURE / GLOBAL REGULARITY NOT PROVED.**
+Status: **AUDITED TRACE TELESCOPING BARRIER HOLDS AFTER ROUTING MOVING-BASIS AFFINE STRAIN INTO THE BOUNDED ACCUMULATED-STRAIN LEDGER / STRICT-MESOSCOPIC QUADRATIC-CORE TRACE LANE EXCLUDED / REMAINING LOW-HERMITE CORE ESCAPE = PROJECTIVE `Ab` / GLOBAL REGULARITY NOT PROVED.**
