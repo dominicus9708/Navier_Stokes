@@ -1,8 +1,8 @@
-# Stochastic directional stretching localizes to the mesoscopic annulus
+# Stochastic directional stretching localizes on the final crossing-parabolic block
 
 Date: 2026-08-16
 
-Status: **DERIVED CONDITIONAL LOCALIZATION USING THE EXISTING BUFFERED CONSTANT-AXIS CHANNEL DECOMPOSITION / CORE SELF-STRETCH AND MACROSCOPIC FAR FIELD ARE O(1) ON A CROSSING PARABOLIC BLOCK / INTERMEDIATE ANNULUS OR DIRECTION-DERIVATIVE CHANNEL REMAINS.**
+Status: **CORRECTED BLOCK-LOCAL STATEMENT / CORE SELF-STRETCH AND MACROSCOPIC FAR FIELD ARE O(1) ON THE FINAL `O(R^2)` CROSSING BLOCK / NO CLAIM THAT THE FULL DEEP-CHECKPOINT `log q` ACTION OCCURS IN THIS BLOCK.**
 
 ## 1. Coherent crossing geometry
 
@@ -34,7 +34,7 @@ R^3V_\omega
 R^{-1}.
 \]
 
-In particular the off-axis vorticity satisfies
+In particular
 
 \[
 \boxed{
@@ -71,20 +71,19 @@ where the existing buffered local constant-axis route gives
 \[
 \boxed{
 \|(Se)_{\rm core}\|_{L^2(B_{cR})}
-\lesssim
-R^{-1/2}
+\lesssim R^{-1/2}
 }
 \]
 
 provided the cutoff/divergence-correction leakage is assigned to `(Se)_ann`.
 
-Thus the coherent one-axis core has only `R^-1/2` local `L2` axial-strain content; all failure of this statement is explicitly an annular/projective/derivative channel.
+Thus the coherent one-axis core has only `R^-1/2` local `L2` axial-strain content; all failure is explicitly annular/projective/derivative.
 
 ---
 
-## 3. Exact directional growth instead of the crude operator norm
+## 3. Exact directional growth
 
-For the stochastic Cauchy deformation vector `Z`, define its transported unit direction
+For a stochastic Cauchy deformation vector `Z`, define
 
 \[
 n_s=Z_s/|Z_s|.
@@ -99,9 +98,7 @@ Along each stochastic history,
 }
 \]
 
-Therefore the relevant potential is directional strain, not the full operator norm.
-
-When `n_s` remains close to the coherent axis `e`,
+When `n_s` stays close to `e`,
 
 \[
 |n_s^TSn_s-e^TSe|
@@ -109,11 +106,11 @@ When `n_s` remains close to the coherent axis `e`,
 2|n_s-e|\,|S|.
 \]
 
-The second term is retained as the **direction-rotation / projective defect channel**.
+The second term is retained as the direction-rotation/projective channel.
 
 ---
 
-## 4. Core self-stretching is O(1) over parabolic age R^2
+## 4. Core self-stretching is `O(1)` on the final `R^2` block
 
 Let `K_tau` be the backward advection--diffusion transition density from the terminal point. The divergence-free Nash estimate gives
 
@@ -123,7 +120,7 @@ Let `K_tau` be the backward advection--diffusion transition density from the ter
 (\nu\tau)^{-3/4}.
 \]
 
-Hence the expected contribution of the core axial strain is bounded by
+Hence
 
 \[
 \mathbb E
@@ -134,33 +131,26 @@ Hence the expected contribution of the core axial strain is bounded by
 (\nu\tau)^{-3/4}R^{-1/2}.
 \]
 
-Integrating over a crossing-parabolic backward age `0<tau<cR^2`,
+Integrating over
 
 \[
-\begin{aligned}
-A_{\rm core}
-&\lesssim
-R^{-1/2}
-\int_0^{cR^2}(\nu\tau)^{-3/4}d\tau\\
-&\lesssim_ν
-R^{-1/2}(R^2)^{1/4}\\
-&\lesssim_ν 1.
-\end{aligned}
+0<\tau<cR^2,
 \]
 
-Therefore
+we get
 
 \[
 \boxed{
-A_{\rm core}=O_\nu(1).
+A_{\rm core}^{\rm final}
+\lesssim_\nu 1.
 }
 \]
 
-The coherent core cannot by its own nearly-one-axis strain produce a directional stochastic amplification whose logarithm tends to infinity.
+This is a statement only about the final crossing-parabolic block.
 
 ---
 
-## 5. Choose a mesoscopic far cutoff that is also O(1) over R^2
+## 5. Macroscopic far strain is also `O(1)` on that block
 
 The finite-kinetic-energy remote-strain tail in terminal normalization is
 
@@ -174,8 +164,7 @@ Choose
 
 \[
 \boxed{
-M_*
-=R^{4/5}W^{1/10}.
+M_*=R^{4/5}W^{1/10}.
 }
 \]
 
@@ -185,118 +174,100 @@ Then
 M_*^{5/2}=R^2W^{1/4},
 \]
 
-so over a parabolic block of duration `O(R^2)`,
+so
 
 \[
 \boxed{
 R^2\|S_{>M_*}\|_\infty
-\lesssim
-C(\|u_0\|_2).
+\lesssim C(\|u_0\|_2).
 }
 \]
 
-The far-field directional action is therefore also `O(1)`.
-
-The crossing kinetic-energy duality gives `R \lesssim W^{1/10}`. Consequently
+Also, using `R \lesssim W^{1/10}`,
 
 \[
-\frac{M_*}{R}
-=W^{1/10}R^{-1/5}\to\infty
+M_*/R\to\infty,
+\qquad
+M_*/\sqrt W\to0.
 \]
 
-along the late coherent branch, while
-
-\[
-\frac{M_*}{\sqrt W}
-=R^{4/5}W^{-2/5}\to0.
-\]
-
-Thus the surviving annulus is broad in terminal normalized coordinates but shrinks to zero physical radius.
+Thus the final-block intermediate annulus is broad in terminal normalized coordinates but physically shrinking.
 
 ---
 
-## 6. Localization of any divergent stochastic directional action
+## 6. Correct block-local conclusion
 
-Suppose a stochastic Cauchy amplification needs
+Define the directional stochastic action accumulated **only on the final crossing-parabolic block** by
 
 \[
-\log q\to\infty.
+A_{\rm final}
+=
+\int_{-cR^2}^{0}
+ n_s^TS(X_s,s)n_s\,ds
 \]
 
-The core self-stretching and the field outside `M_*` contribute only `O(1)` on one crossing-parabolic block.
+with the appropriate backward-time convention.
 
-Therefore any divergent directional action must be supplied by at least one of
+The core and region beyond `M_*` contribute only `O(1)` to this final-block action. Therefore
 
 \[
 \boxed{
-\text{intermediate annulus }R\lesssim|y-x_*|\lesssim M_*,
-}
-\]
-
-\[
-\boxed{
-\text{direction rotation / projective mismatch},
-}
-\]
-
-or
-
-\[
-\boxed{
-\text{cutoff commutator / Hessian / higher-derivative concentration}.
-}
-\]
-
-Schematically,
-
-\[
-\boxed{
-\log q
+A_{\rm final}
 \lesssim
 O(1)
-+A_{R<|y|<M_*}
-+A_{\rm dir}
-+A_{\rm deriv}.
++A_{\rm ann}^{\rm final}
++A_{\rm dir}^{\rm final}
++A_{\rm deriv}^{\rm final}.
 }
 \]
 
-Hence
+Consequently, **if the final block itself carries a divergent amount of directional action**, then that divergent part must lie in
 
 \[
-\boxed{
-\log q\to\infty
-\Longrightarrow
-A_{\rm ann}+A_{\rm dir}+A_{\rm deriv}\to\infty.
-}
+R\lesssim|y-x_*|\lesssim M_*,
 \]
+
+or in direction/projective rotation, or in derivative/cutoff/Hessian forcing.
 
 ---
 
-## 7. Relation to the stochastic ancestor escape theorem
+## 7. What this note does NOT say
 
-The deep-checkpoint ancestor result independently gives
+A deeper first-hitting checkpoint may satisfy
 
 \[
-\frac{L}{R_-}\gtrsim R^{(16-\beta)/6}
-\quad\lor\quad
-\frac{\rho_{\rm reach}}{R_-}\lesssim R^{(\beta-4)/6}.
+\|\Omega(s_-)\|_\infty\le q^{-1}
 \]
 
-The present result says that the deformation needed to realize that geometry cannot be supplied by
+with `q -> infinity`. The stochastic Cauchy formula then requires an amplification action comparable to `log q` over the **entire interval from that checkpoint to the terminal state**.
 
-- the coherent core itself; or
-- the macroscopic/fixed physical far field.
+It is not proved that this whole `log q` action occurs in the last `O(R^2)` block. In fact the coherent mean vorticity is already order one at the first Reynolds-one crossing, so a substantial portion of the amplification may have occurred earlier.
 
-Thus scale-space escape must be dynamically generated inside a shrinking mesoscopic annulus, or be paid by direction/derivative degeneration.
+Therefore the previous stronger schematic statement
 
-This is a considerably smaller spatial target than all of `R^3`.
+\[
+\log q
+\lesssim
+O(1)+A_{\rm ann}^{\rm final}+A_{\rm dir}^{\rm final}+A_{\rm deriv}^{\rm final}
+\]
+
+is withdrawn.
+
+The correct next task is a **time-scale decomposition** of the full deep-checkpoint-to-crossing interval.
 
 ---
 
-## 8. Claim boundary
+## 8. Relation to the deep stochastic-ancestor geometry
 
-The local `R^-1/2` estimate uses the repository's buffered localization of the exact whole-space constant-axis identity. Annular cutoff/divergence-correction errors are not discarded; they are precisely part of the surviving intermediate-annulus channel.
+The deep-checkpoint ancestor results remain independent of this correction. They force large ancestor circulation into
 
-No summable spacetime budget for that annular directional-strain action is proved here.
+- long diameter/length escape;
+- small reach;
+- large curvature;
+- or geometrically inefficient folding.
 
-Overall status: **COHERENT SELF-STRETCH AND MACROSCOPIC FAR STRAIN REMOVED FROM THE DIVERGENT STOCHASTIC ACTION; ACTIVE SOURCE LOCALIZED TO A SHRINKING MESOSCOPIC ANNULUS OR DIRECTION/HIGH-DERIVATIVE DEGENERATION.**
+The efficient precursor slab has separately been excluded by the first-hitting global enstrophy ceiling.
+
+Thus the global proof frontier is not invalidated; only the localization of the full `log q` action to the final block was too strong.
+
+Overall status: **FINAL CROSSING BLOCK LOCALIZATION VALID / FULL DEEP-CHECKPOINT AMPLIFICATION REQUIRES A SEPARATE TIME-SCALE PACKING ARGUMENT.**
