@@ -1,25 +1,12 @@
-# Coherent crossing forces bulk stochastic cofactor distortion
+# Coherent crossing forces pointwise-in-core stochastic cofactor distortion of order `q`
 
 Date: 2026-08-16
 
-Status: **DERIVED VOLUME-INTEGRATED STOCHASTIC CAUCHY LOWER BOUND / REMOVES DEPENDENCE ON A SINGLE ANCESTOR LOOP GEOMETRY / CRITICAL DEFORMATION-PACKING REMAINS OPEN.**
+Status: **SHARPENED STOCHASTIC CAUCHY CONSEQUENCE / ALMOST EVERY GOOD CORE POINT REQUIRES EXPECTED AREA DISTORTION `>= c q` / RARE STOCHASTIC-HISTORY CRITICALITY REMAINS.**
 
-## 1. Terminal coherent cylinder
+## 1. Good coherent core
 
-At the coherent Reynolds-one crossing choose a fixed fractional cylinder
-
-\[
-\mathcal C_R
-\subset B_{cR}(x_*),
-\]
-
-of radius and axial length comparable to `R`, aligned with
-
-\[
-e=\bar\Omega/|\bar\Omega|.
-\]
-
-The crossing satisfies
+At the coherent Reynolds-one crossing,
 
 \[
 |\bar\Omega|\ge c_0,
@@ -28,57 +15,52 @@ The crossing satisfies
 \lesssim R^{-1}.
 \]
 
-Therefore the axial vorticity integral over the cylinder obeys
+Let
+
+\[
+e=\bar\Omega/|\bar\Omega|.
+\]
+
+Since the core volume is `~R^3` while the fluctuation `L2` mass is `O(R^-1)`, Chebyshev gives a good set
+
+\[
+G_R\subset B_{cR}
+\]
+
+with
+
+\[
+|G_R|\ge (1-o(1))|B_{cR}|\asymp R^3
+\]
+
+such that
 
 \[
 \boxed{
-I_T
-:=
-\int_{\mathcal C_R}\Omega_T(x)\cdot e\,dx
-\gtrsim R^3.
+\Omega_T(x)\cdot e\ge c_1>0
+\qquad (x\in G_R).
 }
 \]
 
-The error from the fluctuation is at most
-
-\[
-|\mathcal C_R|^{1/2}
-\|\Omega-\bar\Omega\|_{L^2(B_{cR})}
-\lesssim
-R^{3/2}R^{-1/2}=R,
-\]
-
-which is negligible compared with the mean contribution `~R^3`.
-
 ---
 
-## 2. Backward stochastic flow and cofactor form of Cauchy
+## 2. Backward stochastic flow
 
 Let
 
 \[
-Y^\varpi(x)=A_{T}^{s_- ,\varpi}(x)
-\]
-
-be the backward stochastic Lagrangian map from the terminal crossing time to a deeper first-hitting checkpoint `s_-`. Write
-
-\[
+Y^\varpi(x)=A_T^{s_-,\varpi}(x),
+\qquad
 G^\varpi(x)=\nabla_xY^\varpi(x).
 \]
 
-For the Constantin--Iyer stochastic flow, incompressibility gives pathwise volume preservation,
+Incompressibility gives pathwise
 
 \[
-\boxed{\det G^\varpi=1.}
+\det G^\varpi=1.
 \]
 
-Let `F^varpi` be the corresponding forward deformation gradient evaluated at the inverse point. Then
-
-\[
-F^\varpi=(G^\varpi)^{-1}
-\]
-
-and, because `det G=1`,
+If `F^varpi` is the inverse forward deformation gradient, then
 
 \[
 (F^\varpi)^T
@@ -86,18 +68,7 @@ and, because `det G=1`,
 =\operatorname{cof}G^\varpi.
 \]
 
-The stochastic Cauchy representation is
-
-\[
-\Omega_T(x)
-=
-\mathbb E\left[
-F^\varpi(Y^\varpi(x))
-\Omega_-(Y^\varpi(x))
-\right].
-\]
-
-Dotting with `e`,
+The stochastic Cauchy formula gives
 
 \[
 \Omega_T(x)\cdot e
@@ -111,218 +82,187 @@ Dotting with `e`,
 
 ---
 
-## 3. Integrate over the whole coherent core
+## 3. Pointwise first-hitting cap gives the sharp lower bound
 
-Integrating over `C_R` and using Fubini,
+At a deeper first-hitting checkpoint with amplification ratio `q`,
 
 \[
-I_T
-=
+\boxed{
+\|\Omega_-\|_\infty\le q^{-1}.
+}
+\]
+
+Therefore, for every `x in G_R`,
+
+\[
+\begin{aligned}
+c_1
+&\le
+\Omega_T(x)\cdot e\\
+&\le
+q^{-1}
 \mathbb E
-\int_{\mathcal C_R}
-\Omega_-(Y^\varpi(x))
-\cdot
-\operatorname{cof}G^\varpi(x)e\,dx.
-\]
-
-Apply Cauchy--Schwarz on the product probability--space measure:
-
-\[
-I_T^2
-\le
-\left(
-\mathbb E\int_{\mathcal C_R}
-|\Omega_-(Y^\varpi(x))|^2dx
-\right)
-\left(
-\mathbb E\int_{\mathcal C_R}
-|\operatorname{cof}G^\varpi(x)e|^2dx
-\right).
-\]
-
-For every realization, volume preservation gives
-
-\[
-\int_{\mathcal C_R}
-|\Omega_-(Y^\varpi(x))|^2dx
-=
-\int_{Y^\varpi(\mathcal C_R)}
-|\Omega_-(a)|^2da
-\le
-E_-.
+|\operatorname{cof}G^\varpi(x)e|.
+\end{aligned}
 \]
 
 Hence
 
 \[
 \boxed{
-\mathbb E\int_{\mathcal C_R}
-|\operatorname{cof}G^\varpi e|^2dx
-\gtrsim
-\frac{R^6}{E_-}.
+\mathbb E
+|\operatorname{cof}G^\varpi(x)e|
+\ge c_1q
+\qquad (x\in G_R).
 }
 \]
 
-This estimate is independent of the topology, length, reach, or curvature of any one stochastic ancestor loop.
+By Jensen,
+
+\[
+\boxed{
+\mathbb E
+|\operatorname{cof}G^\varpi(x)e|^2
+\ge c_1^2q^2
+\qquad (x\in G_R).
+}
+\]
+
+This is substantially stronger than the earlier volume-integrated estimate obtained from the global enstrophy `E_-`.
 
 ---
 
-## 4. Insert the deep first-hitting enstrophy ceiling
+## 4. Bulk consequence
 
-For
-
-\[
-q_\beta=W/R^\beta,
-\]
-
-the earlier first-hitting logistic ceiling is
-
-\[
-E_-
-\lesssim
-\frac{R^\beta}{W^{1/2}}.
-\]
-
-Therefore
+Averaging over the good core,
 
 \[
 \boxed{
-\mathbb E\int_{\mathcal C_R}
-|\operatorname{cof}G^\varpi e|^2dx
-\gtrsim
-R^{6-\beta}W^{1/2}.
+\mathbb E\fint_{G_R}
+|\operatorname{cof}G^\varpi e|\,dx
+\gtrsim q,
 }
 \]
 
-Since `|C_R| ~ R^3`, the volume-averaged distortion satisfies
+and
 
 \[
 \boxed{
-\mathbb E\fint_{\mathcal C_R}
+\mathbb E\fint_{G_R}
 |\operatorname{cof}G^\varpi e|^2dx
-\gtrsim
-R^{3-\beta}W^{1/2}.
+\gtrsim q^2.
 }
 \]
 
-The Gaussian-tail energy relation
+For the deep checkpoint
 
 \[
-W^{1/2}
-\gtrsim
-R^5(\log R)^{5/2}
+q_\beta=\frac{W}{R^\beta},
 \]
 
-gives the purely crossing-scale form
+we get
 
 \[
 \boxed{
-\mathbb E\fint_{\mathcal C_R}
+\mathbb E\fint_{G_R}
 |\operatorname{cof}G^\varpi e|^2dx
 \gtrsim
-R^{8-\beta}(\log R)^{5/2}.
+\frac{W^2}{R^{2\beta}}.
 }
 \]
 
-For every fixed `beta<8`, the expected mean-square cofactor stretch diverges.
+Using
 
-For the canonical choice `beta=2`,
+\[
+W^{1/2}\gtrsim R^5(\log R)^{5/2},
+\]
+
+this implies
 
 \[
 \boxed{
-\mathbb E\fint_{\mathcal C_R}
+\mathbb E\fint_{G_R}
 |\operatorname{cof}G^\varpi e|^2dx
 \gtrsim
-R^6(\log R)^{5/2},
+R^{20-2\beta}(\log R)^{10}.
 }
 \]
 
-so the RMS cofactor stretch is at least of order `R^3 (log R)^(5/4)`.
+For the canonical `beta=2`, the expected mean-square cofactor stretch is at least
+
+\[
+\boxed{R^{16}(\log R)^{10},}
+\]
+
+and the expected/RMS area stretch scale is at least order `q`.
 
 ---
 
-## 5. Geometric meaning
+## 5. Relation to the previous enstrophy-based bulk bound
 
-The cofactor vector
+Integrating stochastic Cauchy first and applying Cauchy--Schwarz with the global earlier enstrophy gave
+
+\[
+\mathbb E\int_{G_R}
+|\operatorname{cof}G^\varpi e|^2dx
+\gtrsim
+R^6/E_-.
+\]
+
+This remains correct, but the pointwise cap is stronger on the coherent good set:
+
+\[
+\boxed{
+\text{pointwise cap }q^{-1}
+\Longrightarrow
+\text{expected cofactor stretch }q
+\text{ at essentially every core point}.
+}
+\]
+
+Thus the bulk distortion is not merely forced by one large global integral.
+
+---
+
+## 6. Geometric and probabilistic meaning
+
+The vector
 
 \[
 \operatorname{cof}G\,e
 \]
 
-is the oriented area vector obtained by pulling a terminal transverse area element back to the earlier checkpoint.
+is the backward area vector associated with a terminal area element whose normal is `e`.
 
-Thus the result states that the entire coherent core cannot be explained by only one exceptional ancestor loop. On the product probability--core measure there must be an enormous backward area distortion.
+Therefore almost every good point of the terminal coherent core demands a stochastic ancestor area amplification of order `q` **in expectation**.
 
-The earlier loop consequences
+This removes the need to choose one special ancestor loop or one special spanning surface as the primary descriptor.
 
-- large diameter;
-- large total curvature;
-- small reach;
-- inefficient spanning surfaces;
+However expectation still leaves a genuine loophole:
 
-are possible manifestations of this bulk cofactor blowup, but they are no longer the fundamental descriptor.
+- a typical stochastic history may have moderate deformation;
+- a sufficiently rare set of histories may have deformation much larger than `q` and carry the expectation.
 
-The sharper proof target is now
-
-\[
-\boxed{
-\text{Can a finite-energy NS flow create the required bulk stochastic cofactor distortion}
-}
-\]
-
-while all strain-Kato, positive-middle-strain, and higher-derivative budgets remain critically admissible?
+The stochastic Feynman--Kac/Kato estimate already shows that such rare-history amplification requires critical `L_t^{8/5}L_x^4` strain action. That exponent lies exactly on the known vorticity/gradient regularity scaling line, so no contradiction follows from the moment bound alone.
 
 ---
 
-## 6. Evolution of the cofactor distortion
+## 7. Updated active target
 
-Pathwise the forward deformation gradient obeys
-
-\[
-F'=\nabla U\,F.
-\]
-
-Equivalently, the backward cofactor vector appearing above evolves by the transpose deformation law. Its Euclidean magnitude is changed only by the symmetric strain:
-
-\[
-\frac d{dt}\log|z|
-=\pm n^TSn
-\]
-
-with sign depending on forward/backward orientation convention.
-
-Therefore bulk cofactor blowup is not a new source mechanism. It is an integrated strain-deformation requirement over a positive-volume stochastic ensemble.
-
-However, large expectation may still be carried by rare stochastic histories or by a small subset of material labels. The previously derived stochastic Feynman--Kac/Kato bound controls the first loophole only at a scale-critical exponent; concentration in material labels remains a spatial-intermittency branch.
-
----
-
-## 7. Updated frontier
-
-The stochastic ancestry endgame can now be organized more economically as
+The final stochastic ancestry problem is now more sharply stated:
 
 \[
 \boxed{
-\text{coherent }R^3\text{ terminal vorticity volume}
-\Longrightarrow
-\text{bulk stochastic cofactor distortion}
+\begin{gathered}
+\text{At almost every point of an }R^3\text{ coherent core,}\
+\mathbb E|\operatorname{cof}G\,e|\gtrsim q\to\infty.\\
+\text{Can this expectation be supported by increasingly rare}\
+\text{stochastic histories while finite-energy NS remains}\
+\text{inside all critical strain/middle-strain/derivative budgets?}
+\end{gathered}
 }
 \]
 
-with quantitative lower bound
+Loop length, diameter, reach, and curvature are now secondary geometric manifestations of this pointwise-in-core stochastic area-distortion demand.
 
-\[
-\boxed{
-\mathbb E\fint_{\mathcal C_R}|\operatorname{cof}G\,e|^2
-\gtrsim R^{8-\beta}(\log R)^{5/2}.
-}
-\]
-
-Avoiding a contradiction requires this distortion to be supported by
-
-- critical strain-Kato action;
-- positive-middle-strain enstrophy production;
-- higher-derivative/Hessian concentration;
-- or increasingly intermittent stochastic/material subsets.
-
-Overall status: **SINGLE-LOOP GEOMETRY REPLACED BY A BULK STOCHASTIC DEFORMATION BARRIER / CRITICAL STRAIN-INTERMITTENCY PACKING REMAINS OPEN.**
+Overall status: **POINTWISE-IN-CORE STOCHASTIC AREA DISTORTION SHARPENED TO ORDER `q`; ONLY RARE-HISTORY CRITICAL SATURATION / DERIVATIVE INTERMITTENCY REMAINS.**
