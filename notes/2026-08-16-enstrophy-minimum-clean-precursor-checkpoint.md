@@ -1,0 +1,289 @@
+# Enstrophy-minimum checkpoint gives a clean low-palinstrophy precursor or immediate V2 concentration
+
+Date: 2026-08-16
+
+Status: **EXACT CHECKPOINT SELECTION ON THE TERMINAL FIRST-HITTING INTERVAL. IT PRODUCES A SOURCE-ACTIVE PRECURSOR WITH `P <= C E`; IF ITS VORTICITY MAXIMUM DOES NOT BECOME SMALL, SECOND-VORTICITY-DERIVATIVE CONCENTRATION IS FORCED. GLOBAL REGULARITY NOT PROVED.**
+
+## 1. Terminal first-hitting interval
+
+Use terminal normalization with
+
+\[
+\|\Omega(s)\|_\infty\le1
+\]
+
+throughout the past first-hitting interval.
+
+Let a deep checkpoint `s_-` precede the coherent Reynolds-one crossing `s_c`. The deep checkpoint satisfies
+
+\[
+E(s_-)=E_-
+\lesssim
+\frac{R^\beta}{W^{1/2}},
+\qquad
+0<\beta<4.
+\]
+
+Since
+
+\[
+W^{1/2}\gtrsim R^5(\log R)^{5/2},
+\]
+
+we have
+
+\[
+\boxed{E_-\to0.}
+\]
+
+---
+
+## 2. Select the minimum-enstrophy time
+
+Choose
+
+\[
+\boxed{
+s_m\in[s_-,s_c]
+\quad\text{with}\quad
+E_m:=E(s_m)=\min_{[s_-,s_c]}E(s).
+}
+\]
+
+Then automatically
+
+\[
+\boxed{E_m\le E_-\to0.}
+\]
+
+If the minimum is interior, `E'(s_m)=0`. If it occurs at the left endpoint, its right upper derivative is nonnegative because the function cannot immediately decrease below its selected minimum. Thus in either case the source-active inequality
+
+\[
+\boxed{D_+E(s_m)\ge0}
+\]
+
+is available in the appropriate classical/Dini sense.
+
+---
+
+## 3. First-hitting enstrophy source bound
+
+The global normalized enstrophy equation is
+
+\[
+\frac12E'(s)+\nu P(s)=Q(s),
+\]
+
+where
+
+\[
+E=\|\Omega\|_2^2,
+\qquad
+P=\|\nabla\Omega\|_2^2,
+\qquad
+Q=\int S\Omega\cdot\Omega.
+\]
+
+On the first-hitting past, `||Omega||_infty<=1`. Calderon--Zygmund and interpolation give
+
+\[
+\begin{aligned}
+|Q|
+&\le\|S\|_2\|\Omega\|_4^2\\
+&\lesssim\|\Omega\|_2
+\left(\|\Omega\|_\infty\|\Omega\|_2\right)\\
+&\lesssim E.
+\end{aligned}
+\]
+
+At `s_m`, `D_+E>=0`, hence
+
+\[
+\nu P_m
+\le Q_m
+\lesssim E_m.
+\]
+
+Therefore
+
+\[
+\boxed{
+P_m\lesssim_\nu E_m.
+}
+\]
+
+This is stronger than merely knowing that a high-palinstrophy state is dissipative: the selected precursor slice is explicitly source-active and has a linear palinstrophy/enstrophy ratio.
+
+---
+
+## 4. Trace precursor norm collapses with enstrophy
+
+For every unit direction `e`, the transverse mixed-norm trace estimate gives
+
+\[
+M_{\Pi,e}^4
+\le4E_mP_{e,m}
+\le4E_mP_m.
+\]
+
+Using `P_m<=C_nu E_m`,
+
+\[
+\boxed{
+M_{\Pi,e}^2
+\lesssim_\nu E_m
+}
+\]
+
+uniformly in the direction `e`.
+
+Thus every transverse precursor reservoir relevant to a future random Malliavin covariance frame is small on this slice.
+
+This uniformity is important: random rotation of the strong diffusion directions does not require a separate directional choice at the checkpoint.
+
+---
+
+## 5. L-infinity versus V2 dichotomy
+
+Let
+
+\[
+M_m=\|\Omega(s_m)\|_\infty,
+\qquad
+Z_m=\|D^2\Omega(s_m)\|_2^2.
+\]
+
+The three-dimensional Gagliardo--Nirenberg inequality gives
+
+\[
+\|\Omega\|_\infty
+\lesssim
+\|\Omega\|_2^{1/4}
+\|D^2\Omega\|_2^{3/4}.
+\]
+
+Since `||Omega||_2=E^(1/2)` and `||D2 Omega||_2=Z^(1/2)`, this becomes
+
+\[
+\boxed{
+M_m
+\lesssim
+E_m^{1/8}Z_m^{3/8}.
+}
+\]
+
+Equivalently,
+
+\[
+\boxed{
+Z_m
+\gtrsim
+M_m^{8/3}E_m^{-1/3}.
+}
+\]
+
+Hence:
+
+### Non-small precursor maximum
+
+If along a subsequence
+
+\[
+M_m\ge m_0>0,
+\]
+
+then
+
+\[
+\boxed{
+Z_m\gtrsim m_0^{8/3}E_m^{-1/3}\to\infty.
+}
+\]
+
+This is immediate `V2` / higher-derivative concentration.
+
+### No V2 concentration at the critical threshold
+
+If instead
+
+\[
+Z_m=o(E_m^{-1/3}),
+\]
+
+then
+
+\[
+\boxed{M_m\to0.}
+\]
+
+Thus a non-V2 survivor acquires an automatically large amplification ratio
+
+\[
+\boxed{q_m:=M_m^{-1}\to\infty}
+\]
+
+from the clean minimum-enstrophy precursor to the terminal order-one coherent core.
+
+---
+
+## 6. Why this checkpoint is better than the raw deep W-level checkpoint
+
+At the raw deep first-hitting level one has a small vorticity cap but no guarantee that ordinary palinstrophy is source-active or small.
+
+At the minimum-enstrophy checkpoint one has simultaneously
+
+\[
+\boxed{
+E_m\to0,
+\qquad
+P_m\lesssim E_m,
+\qquad
+M_{\Pi,e}^2\lesssim E_m\ \text{for every }e,
+}
+\]
+
+plus the dichotomy
+
+\[
+\boxed{
+M_m\to0
+\quad\lor\quad
+V2\text{ concentration}.
+}
+\]
+
+Therefore, after excluding the already typed `V2` branch, `s_m` is the preferred starting slice for the random-Gramian Malliavin smoothing problem.
+
+---
+
+## 7. Target use in the stochastic deformation route
+
+On the non-V2 branch the terminal coherent vorticity must be reconstructed from a precursor satisfying
+
+\[
+\|\Omega_m\|_\infty=M_m\to0,
+\]
+
+with all directional mixed-norm reservoirs bounded by `C E_m^(1/2)`.
+
+The pathwise deformation--diffusion area theorem says that histories with large Cauchy deformation possess a large two-dimensional pulled-back Malliavin covariance unless their pathwise strain-square action is large.
+
+A successful two-dimensional Malliavin density / mixed-norm transfer would therefore act on a precursor whose ordinary `E`, `P`, and every transverse trace norm are already small.
+
+Any failure of that transfer is Hessian-generated by the exact Malliavin-deformation identity.
+
+This sharpens the final bridge to
+
+\[
+\boxed{
+\text{clean }(E_m,P_m,M_m)\text{ precursor}
++
+\text{pathwise Malliavin diffusion area}
+\Longrightarrow
+\text{terminal order-one core?}
+}
+\]
+
+with only the `V2` / deformation-weighted Hessian error left untyped quantitatively.
+
+Overall status: **CANONICAL CLEAN PRECURSOR CHECKPOINT DERIVED / NON-SMALL PRECURSOR MAXIMUM ROUTED TO V2 / PREFERRED FINAL STARTING SLICE = ENSTROPHY MINIMUM.**
