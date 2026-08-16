@@ -2,7 +2,7 @@
 
 Date: 2026-08-16
 
-Overall status: **THE RECENT-SOURCE ENDGAME HAS BEEN SHARPENED TO A PARABOLIC-CRITICAL RENORMALIZATION LOOP. SCALAR ENERGY/TIME ESTIMATES ARE NOW EXPLICITLY SATURATED. EVERY MINIMAL LATE EPISODE MUST RETURN TO A SUPERCRITICAL RESIDUAL CROSSING, A THIN DERIVATIVE/PRESSURE PULSE, OR LOGARITHMIC SYMMETRIC STRAIN. GLOBAL REGULARITY NOT PROVED.**
+Overall status: **THE RECENT-SOURCE ENDGAME HAS BEEN SHARPENED TO A PARABOLIC-CRITICAL RENORMALIZATION LOOP. SCALAR ENERGY/TIME ESTIMATES ARE NOW EXPLICITLY SATURATED. EVERY MINIMAL LATE EPISODE MUST RETURN TO A SUPERCRITICAL RESIDUAL CROSSING, A THIN DERIVATIVE/PRESSURE PULSE, OR LOGARITHMIC SYMMETRIC STRAIN. THE SPATIALLY TIGHT TURNOVER-BAND NEAR-SLOW FAST-ROTATION INPUT HAS ALSO BEEN DEPLETED BY A LOCAL UNCERTAINTY GAIN. GLOBAL REGULARITY NOT PROVED.**
 
 ---
 
@@ -225,7 +225,83 @@ External rapidly rotating Navier--Stokes regularity results do not directly clos
 
 ---
 
-## 8. Closed renormalization graph
+## 8. Local near-slow uncertainty depletion
+
+The earlier helical reduction left near-slow input concentration as one exact-resonance remainder.
+
+On the spatially tight turnover branch, write
+
+\[
+\nabla_y r=R^{-1}G(z),
+\qquad y=Rz,
+\]
+
+with `G` bounded in `L2` on a fixed turnover-scale cutoff and with turnover-band frequencies `|xi| asymp 1`.
+
+For the near-slow slab
+
+\[
+|\xi_\parallel|\le\delta,
+\]
+
+its dyadic frequency volume is `O(delta)`. Spatial localization gives `||G||_1 <= C||G||_2`, hence
+
+\[
+\boxed{
+\|P_{\rm slow,\delta}G\|_2
+\lesssim
+\delta^{1/2}\|G\|_2.
+}
+\]
+
+To remain slow over `O(R)` fast-rotation turnover blocks requires
+
+\[
+\delta\lesssim R^{-1}.
+\]
+
+Therefore
+
+\[
+\|P_{\rm slow}G\|_2\lesssim R^{-1/2}.
+\]
+
+Since the residual mean source contains the physical gradient scaling `R^-2`, a local bilinear source with one near-slow factor obeys
+
+\[
+|J_{\rm slow}|\lesssim R^{-5/2}.
+\]
+
+Integrated through the full `R^2` mean-creation time,
+
+\[
+\boxed{
+\int|J_{\rm slow}|dt
+\lesssim R^{-1/2}\to0.
+}
+\]
+
+Hence the **spatially tight, turnover-band near-slow input cannot provide an order-one secular source**.
+
+A surviving near-slow branch must lose at least one hypothesis:
+
+\[
+\boxed{
+\text{spatial nontightness}
+\quad\lor\quad
+\text{low/high-frequency escape}
+\quad\lor\quad
+\text{localization/shell commutator}.
+}
+\]
+
+These are already existing branches.
+
+This does **not** yet close general uniformly-fast near-resonant interactions, because the Gaussian localized output is not literally a single global slow Fourier mode.
+
+---
+
+## 9. Closed renormalization graph
 
 The endgame is now the loop
 
@@ -253,11 +329,13 @@ with
 }
 \]
 
+Inside the fast-rotation realization of this loop, a spatially tight near-slow turnover packet is now perturbative and cannot be the secular source.
+
 Thus no qualitatively new source branch remains at the present level of decomposition. The unresolved issue is whether this loop can be repeated indefinitely with scale separation.
 
 ---
 
-## 9. Sharpness audit
+## 10. Sharpness audit
 
 The adversarial power family
 
@@ -291,15 +369,15 @@ Therefore scalar exponent bookkeeping is exhausted.
 
 ---
 
-## 10. Current single mathematical wall
+## 11. Current single mathematical wall
 
 A proof now requires a genuinely structural nonrepeatability theorem of one of the following forms:
 
 1. **cross-scale productive-channel packing:** recurrent residual-seed or log-strain episodes cannot occupy mutually shrinking regions while remaining compatible with finite kinetic-energy dissipation;
-2. **resonant rigidity:** the fast-rotation near-resonant/near-slow source required by the supercritical branch cannot remain spatially tight and source-active across the recursive crossings;
+2. **uniformly-fast resonant rigidity:** after the local near-slow packet has been depleted, the remaining near-resonant uniformly-fast interactions plus Gaussian localization commutators cannot sustain the order-one secular source;
 3. **derivative nonrepeatability:** repeated thin V2/pressure-Hessian pulses force a non-summable factorial/projective derivative cost;
 4. **critical residual rigidity:** the crossing-scale residual equation with bounded affine/Coriolis background admits no nontrivial ancient/recursive source-saturating limit compatible with all established ledgers.
 
 The correct next target is not another scalar lower bound. It is a theorem that prevents the **renormalization loop itself** from recurring indefinitely.
 
-Overall status: **RECENT SOURCE SHARPENED TO PARABOLIC CRITICAL SATURATION / EXACT SEED--AMPLIFICATION TRADEOFF / RESIDUAL SEED RECURSIVELY RETURNS TO DYNAMIC REYNOLDS CROSSING / THIN SEED RETURNS TO DERIVATIVE-PRESSURE / SMALL SEED RETURNS TO LOG STRAIN / GLOBAL REGULARITY NOT PROVED.**
+Overall status: **RECENT SOURCE SHARPENED TO PARABOLIC CRITICAL SATURATION / EXACT SEED--AMPLIFICATION TRADEOFF / RESIDUAL SEED RECURSIVELY RETURNS TO DYNAMIC REYNOLDS CROSSING / THIN SEED RETURNS TO DERIVATIVE-PRESSURE / SMALL SEED RETURNS TO LOG STRAIN / TIGHT NEAR-SLOW FAST-ROTATION INPUT DEPLETED / GLOBAL REGULARITY NOT PROVED.**
