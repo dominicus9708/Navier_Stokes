@@ -179,21 +179,9 @@ Thus an affine-dominant deep-to-late amplification cannot remain in a bounded or
 
 ---
 
-## 5. Quantitative dichotomy
+## 5. Exact bounded-factor consequences
 
-For any splitting parameter `0<theta<1`, the product inequality implies at least one of
-
-\[
-\boxed{
-J\gtrsim
-\nu^\theta
-\left(\frac{W^{5/2}}{R^{3\beta}}\right)^{\theta/2}
-}
-\]
-
-or the complementary lower bound on `P_{e,-}` obtained by solving the product inequality.
-
-More simply, if `J<=J0` is bounded along a candidate sequence, then
+If `J<=J0` is bounded along a candidate sequence, then
 
 \[
 \boxed{
@@ -217,7 +205,7 @@ J
 }
 \]
 
-Thus the affine branch has no bounded-state saturation.
+Thus the affine branch has no bounded-state saturation. No arbitrary splitting exponent is needed: the product lower bound itself is the invariant statement.
 
 ---
 
