@@ -2,7 +2,37 @@
 
 Date: 2026-08-17
 
-Status: **DERIVED FROM THE EXACT ENSTROPHY IDENTITY, GLOBAL BETCHOV, HOLDER/GAGLIARDO--NIRENBERG, AND OPTIMIZATION OVER PALINSTROPHY. EVERY CLEAN-PRECURSOR TO COHERENT-CROSSING EPISODE PAYS A LOGARITHMIC SCALE-CRITICAL `L_t^2L_x^3` ACTION OF THE POSITIVE MIDDLE STRAIN EIGENVALUE. LARGE PALINSTROPHY CANNOT REMOVE THIS COST. GLOBAL REGULARITY NOT PROVED.**
+Status: **PROJECT-SPECIFIC QUANTITATIVE EPISODE LOWER BOUND. THE UNDERLYING `L_t^2L_x^3` MIDDLE-EIGENVALUE REGULARITY CRITERION IS KNOWN: THIS NOTE RECOVERS THE `p=2,q=3` CRITICAL FORM ON THE CLEAN-PRECURSOR -> COHERENT-CROSSING INTERVAL AND MAKES THE EPISODE COST EXPLICIT IN TERMS OF `log(E_c/E_m)`. LARGE PALINSTROPHY CANNOT REMOVE THIS COST. GLOBAL REGULARITY NOT PROVED.**
+
+## 0. Literature boundary
+
+Evan Miller, *A regularity criterion for the Navier-Stokes equation involving only the middle eigenvalue of the strain tensor*, Archive for Rational Mechanics and Analysis 235 (2020), 99--139; arXiv:1710.05569, proves a scale-critical family depending only on the positive part of the middle strain eigenvalue:
+
+\[
+\frac2p+\frac3q=2,
+\qquad
+\frac32<q\le\infty.
+\]
+
+The choice
+
+\[
+p=2,
+\qquad q=3
+\]
+
+is therefore already a known regularity/blow-up criterion. The present note does **not** claim a new criterion.
+
+What is project-specific here is the connection to the DSD first-hitting reduction: the clean-precursor and coherent-crossing estimates provide an explicit growing ratio `E_c/E_m`, and the calculation below recovers a quantitative lower bound on this specific episode:
+
+\[
+\int_{t_m}^{t_c}\|\lambda_2^+\|_3^2dt
+\gtrsim
+\nu\log(E_c/E_m)
+\gtrsim c\log R.
+\]
+
+This is used only as a boundary condition on the surviving critical cascade.
 
 ## 1. Setup
 
@@ -78,7 +108,7 @@ M
 \|\lambda_2^+\|_3\,\|S\|_3^2.
 \]
 
-For a divergence-free whole-space velocity field, Calderon--Zygmund/Fourier equivalence gives
+For a divergence-free whole-space velocity field, Fourier/Calderon--Zygmund equivalence gives
 
 \[
 \|S\|_2\asymp\|\omega\|_2=E^{1/2},
@@ -257,7 +287,7 @@ is scale invariant:
 2/2+3/3=2.
 \]
 
-Thus the productive branch has now been converted into a standard critical function-space quantity rather than a custom enstrophy-weighted action.
+Thus the productive branch is expressed in a standard critical function-space quantity rather than only a custom enstrophy-weighted action.
 
 ## 6. Why large derivative concentration does not evade the bound
 
@@ -285,14 +315,8 @@ does not remove the critical middle-strain cost.
 
 ## 7. Limitation and next target
 
-This is not by itself a contradiction. A hypothetical singular solution may have
+Miller's criterion already implies that a genuine finite-time singularity must make the global critical middle-eigenvalue norm diverge. Therefore divergence of the quantity above is **compatible** with a hypothetical singularity and cannot be used as a contradiction by itself.
 
-\[
-\int^{T^*}\|\lambda_2^+(t)\|_3^2dt=\infty.
-\]
+The project-specific remaining question is narrower: whether the special spatial organization already proved for each coherent episode permits a scale-frequency packing estimate for the productive part of `lambda_2^+`, or forces it into the local Betchov buffer/derivative channels.
 
-The new advantage is that the final nonrepeatability problem is now expressed in one standard scale-critical norm.
-
-The next question is whether the special spatial organization already proved for each coherent episode permits a scale-frequency packing estimate for the productive part of `lambda_2^+` which is stronger than arbitrary divergence of the full critical norm.
-
-Status: **PRODUCTIVE STRAIN -> LOGARITHMIC CRITICAL `L_t^2L_x^3` ACTION / PALINSTROPHY OPTIMIZED OUT / CROSS-SCALE PACKING STILL OPEN / GLOBAL REGULARITY NOT PROVED.**
+Status: **KNOWN `p=2,q=3` MIDDLE-EIGENVALUE CRITERION RECOVERED ON THE DSD EPISODE / PROJECT-SPECIFIC `>= c log R` EPISODE LOWER BOUND / PALINSTROPHY OPTIMIZED OUT / CROSS-SCALE ORGANIZATION STILL OPEN / GLOBAL REGULARITY NOT PROVED.**
