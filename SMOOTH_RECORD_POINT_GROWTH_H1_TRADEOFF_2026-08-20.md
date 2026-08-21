@@ -1,8 +1,10 @@
 # Smooth Record-Point Growth / H1 Production Tradeoff — 2026-08-20
 
-Status: **S-LEVEL POINTWISE LEMMA ON THE ORIGINAL SMOOTH SOLUTION. GLOBAL REGULARITY NOT PROVED.**
+Status: **S-LEVEL POINTWISE LEMMA ON THE ORIGINAL SMOOTH SOLUTION, TRANSPOSE-AUDITED 2026-08-21. GLOBAL REGULARITY NOT PROVED.**
 
 This note works only at finite smooth first-hitting times. It quantifies a direct incompatibility between efficient growth of the running vorticity maximum and strong local `P_V` H1 production at the same spatial point.
+
+**Audit correction (2026-08-21):** with the convention `G_ij = partial_j Omega_i`, a maximum of `|Omega|` gives `G^T xi = 0`, not `G xi = 0`. The universal Böttcher–Wenzel tradeoff was unaffected, but the earlier exact-alignment spectral sharpening was too strong and has been corrected below.
 
 ## 1. Record-growth point
 
@@ -36,22 +38,31 @@ y=M^{1/2}(x-X_0).
 Let
 
 \[
-G=\nabla_y\Omega.
+G=\nabla_y\Omega,
+\qquad
+G_{ij}=\partial_j\Omega_i.
 \]
 
 At the maximum,
 
 \[
-\nabla_y|\Omega|^2=0,
+\nabla_y|\Omega|^2=0.
 \]
 
-hence
+Since
 
 \[
-\boxed{G\xi=0.}
+\partial_j|\Omega|^2
+=2\Omega_i\partial_j\Omega_i,
 \]
 
-This is an exact first-hitting constraint on the vorticity-gradient matrix.
+we have
+
+\[
+\boxed{G^T\xi=0.}
+\]
+
+This is the exact first-hitting constraint on the vorticity-gradient matrix in the stated convention.
 
 ## 2. Record growth has an exact viscous loss
 
@@ -93,14 +104,14 @@ and
 b=\frac{M'}{M^2},
 \]
 
-we get the exact normalized inequality
+we get
 
 \[
 \boxed{
 b+\nu|G|^2\le\xi^T\Sigma\xi.}
 \]
 
-If `s3` is the largest eigenvalue of `Sigma`, define the alignment defect
+If `s3` is the largest eigenvalue of `Sigma`, define
 
 \[
 \boxed{
@@ -118,12 +129,7 @@ s_3-b-\delta_{align}.
 }
 \]
 
-Thus inefficient record amplification has only two local sources:
-
-1. vorticity is not aligned with the strongest extensional strain direction;
-2. vorticity-gradient diffusion is non-negligible.
-
-## 3. Exact local H1 production density
+## 3. Universal local H1 production tradeoff
 
 The vorticity-gradient representation of H1 production has density
 
@@ -134,39 +140,29 @@ n_{H1}
 }
 \]
 
-Bottcher--Wenzel gives
+Böttcher–Wenzel gives
 
 \[
 |G^TG-GG^T|
-\le\sqrt2|G|^2,
+\le\sqrt2|G|^2.
 \]
 
-therefore
+Therefore
 
 \[
 \boxed{
 (n_{H1})^+
 \le
-\frac{|\Sigma|}{\sqrt2}|G|^2.
-}
-\]
-
-Combining with the record-growth inequality yields the universal record-point tradeoff
-
-\[
-\boxed{
-(n_{H1})^+
+\frac{|\Sigma|}{\sqrt2}|G|^2
 \le
 \frac{|\Sigma|}{\sqrt2\nu}
-\left(
- s_3-b-\delta_{align}
-\right).
+\left(s_3-b-\delta_{align}\right).
 }
 \]
 
-This is a direct smooth first-hitting statement.
+This part never used `G xi = 0` and is unchanged by the transpose audit.
 
-If record amplification approaches the local extensional ceiling,
+In particular, if
 
 \[
 b\to s_3,
@@ -174,7 +170,7 @@ b\to s_3,
 \delta_{align}\to0,
 \]
 
-then necessarily
+then
 
 \[
 (n_{H1})^+\to0
@@ -182,9 +178,9 @@ then necessarily
 
 at the same record point.
 
-## 4. Sharpening under exact extensional alignment
+## 4. Correct exact-alignment sharpening
 
-Assume now
+Assume
 
 \[
 \xi=e_3
@@ -200,54 +196,66 @@ s_1\le s_2\le s_3,
 s_1+s_2+s_3=0.
 \]
 
-Because `G xi = 0` and `tr G=0`, in this eigenframe
+The correct maximum constraint is
 
 \[
-G=
-\begin{pmatrix}
-a&c_{12}&0\\
-c_{21}&-a&0\\
-c_{31}&c_{32}&0
-\end{pmatrix}.
+G^Te_3=0.
 \]
 
-A direct calculation gives
+Thus the third row of `G` vanishes. Since `tr G=div Omega=0`,
+
+\[
+\boxed{
+G=
+\begin{pmatrix}
+a&c_{12}&c_{13}\\
+c_{21}&-a&c_{23}\\
+0&0&0
+\end{pmatrix}.
+}
+\]
+
+Direct calculation gives
 
 \[
 \boxed{
 \begin{aligned}
 2n_{H1}
-={}&(s_1-s_2)c_{21}^2
-+(s_2-s_1)c_{12}^2\\
-&+(s_1-s_3)c_{31}^2
-+(s_2-s_3)c_{32}^2.
+={}&(s_2-s_1)c_{12}^2
++(s_3-s_1)c_{13}^2\\
+&+(s_1-s_2)c_{21}^2
++(s_3-s_2)c_{23}^2.
 \end{aligned}
 }
 \]
 
-Every coefficient except the `c12` coefficient is nonpositive. Hence
+The positive coefficients are `s2-s1`, `s3-s1`, and `s3-s2`. Hence
 
 \[
 \boxed{
 (n_{H1})^+
 \le
-\frac12(s_2-s_1)c_{12}^2
-\le
-\frac12(s_2-s_1)|G|^2.
+\frac12(s_3-s_1)|G|^2.
 }
 \]
 
-Combining with record growth,
+Using exact alignment in the record-growth inequality,
+
+\[
+\nu|G|^2\le s_3-b,
+\]
+
+we obtain
 
 \[
 \boxed{
 (n_{H1})^+
 \le
-\frac{s_2-s_1}{2\nu}(s_3-b).
+\frac{s_3-s_1}{2\nu}(s_3-b).
 }
 \]
 
-## 5. Positive-middle spectral parameter
+## 5. Correct positive-middle spectral parameter
 
 Write
 
@@ -261,18 +269,18 @@ x=d/m\in[0,1].
 Then
 
 \[
-s_2-s_1=m(3-x),
+s_3-s_1=m(3+x),
 \qquad
 s_3=m(1+x).
 \]
 
-Thus
+Therefore
 
 \[
 \boxed{
 (n_{H1})^+
 \le
-\frac{3-x}{2(1+x)}
+\frac{3+x}{2(1+x)}
 \frac{s_3(s_3-b)}{\nu}.
 }
 \]
@@ -283,31 +291,31 @@ At the middle-zero endpoint `x=1`,
 \boxed{
 (n_{H1})^+
 \le
-\frac{s_3(s_3-b)}{2\nu}.
+\frac{s_3(s_3-b)}{\nu}.
 }
 \]
 
-So the very spectrum previously favored by the nonnormality branch has a strong same-point growth/production incompatibility: if `b` is close to `s3`, local H1 production collapses.
+The earlier factor `1/2` at `x=1` and the associated special `x>3/5` record-point suppression are withdrawn.
+
+The robust conclusion is instead spectral-independent in its main feature: efficient record growth `b -> s3` still forces same-point H1 production to vanish.
 
 ## 6. Smooth branch routing
-
-This yields a finite-solution trichotomy at a record point.
 
 ### R1 — efficient record amplification
 
 If
 
 \[
-s_3-b\ll1
+s_3-b-\delta_{align}\ll1,
 \]
 
-and alignment is good, then
+then
 
 \[
 (n_{H1})^+\ll1.
 \]
 
-A globally significant `P_V` production packet must therefore sit away from the record point. On the single-core mainline, this becomes a spatial-overlap/turnover question rather than a new local equality regime.
+A globally significant `P_V` production packet must then sit away from the record point, creating a spatial-overlap/turnover obligation.
 
 ### R2 — strong local P_V production at the record point
 
@@ -317,40 +325,33 @@ If `(n_H1)^+` is order one, then
 s_3-b-\delta_{align}
 \]
 
-is order one as well. The record core pays a definite vorticity-gradient diffusion cost.
-
-This feeds the derivative/H channel directly.
+is order one as well, and the record core pays a definite vorticity-gradient diffusion cost. This feeds the derivative/H channel.
 
 ### R3 — extensional misalignment
 
-If
+If `delta_align` is not small, vorticity is not aligned with the strongest extensional strain axis. This feeds the projective/covariance/turnover deficit.
 
-\[
-\delta_{align}
-\]
+Thus the record maximum cannot simultaneously be
 
-is not small, vorticity is not aligned with the strongest extensional strain axis. This feeds the already tracked projective/covariance/turnover deficit.
-
-Hence the record maximum cannot simultaneously be
-
-- spectrally efficient for vorticity amplification;
+- maximally efficient for vorticity amplification;
 - diffusion-light;
 - and a strong local H1 nonnormality producer.
 
-At least one role must be surrendered.
+## 7. Dependency audit
 
-## 7. What remains before S-closing a branch
+The transpose correction affects only arguments that used the stronger aligned matrix form from the old Sections 4–5.
 
-The pointwise lemma does not yet say that global `N` is concentrated at the vorticity record point.
+The following later ingredients remain valid because they use only the universal record-growth inequality or independent global identities:
 
-The next smooth-only step is therefore an overlap lemma. For each finite stage, define a record tube around the maximizing trajectory and quantify the fraction of the global vorticity-gradient production measure contained in that tube.
+- `b + nu |G|^2 <= xi^T Sigma xi`;
+- the universal Böttcher–Wenzel record-point tradeoff;
+- record-point scalar Taylor mass floors for `g=xi dot Omega`, since `grad g=G^T xi=0` is exactly the corrected condition;
+- the smooth frequency corridor;
+- the compatible projective-speed bound based on global `Q` and `Z`;
+- the moving-ball variance closure;
+- positive-middle transverse ribbon geometry;
+- the anti-ribbon projective-speed time comparison.
 
-Then:
+Any note that invokes the old statement that only one positive H1 matrix coefficient survives at exact alignment must be treated as superseded by this file.
 
-- small overlap routes to spatial separation / turnover;
-- large overlap allows the pointwise tradeoff above to control a fixed fraction of global `N`;
-- large diffusion slack routes to `H`.
-
-No compact limit is required for this program.
-
-Status: **AT A SMOOTH VORTICITY RECORD POINT, EFFICIENT VORTICITY AMPLIFICATION AND STRONG LOCAL P_V H1 PRODUCTION ARE QUANTITATIVELY INCOMPATIBLE. NEXT = FINITE-STAGE RECORD-TUBE OVERLAP LEMMA.**
+Status: **TRANSPOSE ERROR CORRECTED. THE UNIVERSAL SMOOTH RECORD-GROWTH/H1 TRADEOFF SURVIVES; THE FORMER MIDDLE-ZERO-SPECIFIC SHARPENING IS WITHDRAWN. THE CURRENT PURE-P_V MOVING-BALL / ANTI-RIBBON S-CLOSURE DOES NOT DEPEND ON THE WITHDRAWN SHARPENING.**
