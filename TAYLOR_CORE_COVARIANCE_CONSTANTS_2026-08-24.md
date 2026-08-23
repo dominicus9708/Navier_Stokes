@@ -1,8 +1,10 @@
 # Taylor Thick-Core Covariance Constants — 2026-08-24
 
-Status: **EXPLICIT ENDPOINT COVARIANCE CONSTANTS / STAGE-PERSISTENCE BRIDGE STILL REQUIRED / GLOBAL REGULARITY NOT PROVED.**
+Status: **EXPLICIT ENDPOINT COVARIANCE CONSTANTS / REMOTE-ACTION PERSISTENCE AND DOMINANCE STILL REQUIRED / GLOBAL REGULARITY NOT PROVED.**
 
-This note supplies concrete values for the new transverse covariance ratio appearing in `TRANSVERSE_COVARIANCE_TO_PROJECTIVE_TAX_2026-08-24.md` from the already-derived Taylor thick core.
+This note supplies concrete values for the transverse covariance ratio appearing in `TRANSVERSE_COVARIANCE_TO_PROJECTIVE_TAX_2026-08-24.md` from the already-derived Taylor thick core.
+
+The covariance constants are geometric and apply independently of whether the driving transverse strain is remote or full. Any numerical substitution of `log 2 / sqrt(2)` for the transverse action, however, is only a **full-D / exactly remote-dominant benchmark**.
 
 ---
 
@@ -83,7 +85,7 @@ q_\perp\ge q_-:=\frac{\beta a^2}{4},
 }
 \]
 
-and, because a transverse trace-free `2 x 2` covariance has eigenvalues `+/- delta`,
+and
 
 \[
 \boxed{
@@ -103,24 +105,24 @@ Therefore
 }
 \]
 
-This ratio is scale-free: the cylinder radius cancels.
+This ratio is scale-free.
 
 ---
 
 ## 2. Insert the existing Taylor cylinder
 
-At a first-hitting endpoint, the existing Taylor estimate gives, with
+At a first-hitting endpoint, with
 
 \[
 r_0=K_{2,+}^{-1/2},
 \]
 
-on
+the existing Taylor estimate gives on
 
 \[
 |z|\le\frac{r_0}{2},
 \qquad
-|y_\perp|\le\frac{r_0}{2},
+|y_\perp|\le\frac{r_0}{2}
 \]
 
 that
@@ -178,40 +180,61 @@ Therefore
 }
 \]
 
-For the ideal `q=2` positive-middle action floor
+This endpoint ratio is valid before any remote/full-strain dominance decision is made.
+
+---
+
+## 3. Insert a generic active remote-D floor
+
+Let
 
 \[
-a_D=\frac{\log2}{\sqrt2}\approx0.4901290717,
+A_{{D,rem},j}\ge a_{D,rem}>0
 \]
 
-the covariance ratio from the preceding note obeys
+be the actual active remote transverse action threshold.
+
+The dimensionless covariance/action ratio obeys
+
+\[
+\boxed{
+\Xi_{\perp,rem}
+:=\frac{E_+}{q_-a_{D,rem}}
+\le
+\frac{14\sqrt2}{9a_{D,rem}}.
+}
+\]
+
+Thus the Taylor endpoint removes the shape part of the unknown constant. What remains is the genuine remote action floor `a_D,rem` and the remote-to-full dominance/cancellation fraction.
+
+No `log 2 / sqrt(2)` value is inserted at this generic stage.
+
+---
+
+## 4. Full-D / exactly remote-dominant benchmark only
+
+If, as a special benchmark,
+
+1. the transverse affine strain under study is the full positive-middle transverse strain, or the remote component is exactly dominant with no compensating near component; and
+2. a `q=2` flux-preserving stage gives
+
+\[
+a_D=\frac{\log2}{\sqrt2}
+\approx0.4901290717,
+\]
+
+then
 
 \[
 \boxed{
 \Xi_\perp
-:=\frac{E_+}{q_-a_D}
 \le
 \frac{14\sqrt2}{9a_D}
 \approx4.488384572.
 }
 \]
 
-Thus `Xi_perp` is not an arbitrary infinite parameter at a Taylor-thick endpoint.
-
----
-
-## 3. Residual-free projective-action benchmark
-
-The optimized zero-residual multistage estimate was
-
-\[
-a_\theta^{opt}
-\ge
-0.2805481691\,
-\frac{q_-a_D}{E_+}.
-\]
-
-Using the Taylor-cylinder ratio gives
+On the further zero-residual / zero-compensation benchmark, the optimized covariance-to-projective estimate gives
 
 \[
 \boxed{
@@ -221,30 +244,27 @@ a_\theta^{opt}
 }
 \]
 
-The baseline in the explicit projective-speed inequality is
+With
 
 \[
-c_0=\frac{\sqrt2}{4}\approx0.35355339.
+c_0=\frac{\sqrt2}{4},
 \]
 
-Therefore this crude Taylor-cylinder benchmark produces a strictly positive Sobolev frequency tax whenever the normalized stage ceiling obeys
+this benchmark alone creates positive excess projective action over the baseline only when
 
 \[
 \boxed{
-L_+
-<
-\frac{a_\theta^{opt}}{c_0}
-\approx0.17679190.
+L_+\lesssim0.17679190.
 }
 \]
 
-Using the broad pure moving-ball estimate
+Using
 
 \[
 L_{max}(r)=0.7483880874r^2,
 \]
 
-this benchmark condition is
+this corresponds to
 
 \[
 \boxed{
@@ -252,13 +272,13 @@ r\lesssim0.48603523.
 }
 \]
 
-This narrow numerical window is **not** a new best closure radius: the existing anti-ribbon/projective-action closure is already much stronger on its own stated pure corridor. The significance here is different: the transverse covariance route no longer requires an unspecified shape constant at a Taylor-thick endpoint.
+This is **not** a new best closure radius and is **not** valid for a generic remote transverse field. It is only a consistency benchmark showing that the endpoint covariance constants are numerically finite once a legitimate transverse-action floor and dominance transfer are supplied.
 
 ---
 
-## 4. Variable Taylor subradius
+## 5. Variable Taylor subradius
 
-The Taylor estimate can be used on a smaller cylinder. Let
+Let
 
 \[
 a=\theta r_0,
@@ -266,13 +286,7 @@ a=\theta r_0,
 0<\theta<1/\sqrt2.
 \]
 
-Since every point in the cylinder satisfies
-
-\[
-|y|^2\le2a^2,
-\]
-
-Taylor gives
+Since `|y|^2 <= 2a^2` in the cylinder,
 
 \[
 \xi\cdot\Omega
@@ -281,7 +295,7 @@ Taylor gives
 =1-\theta^2.
 \]
 
-Therefore the enstrophy-density ratio is
+Therefore
 
 \[
 \boxed{
@@ -289,7 +303,7 @@ Therefore the enstrophy-density ratio is
 }
 \]
 
-The scale-free covariance ratio becomes
+and
 
 \[
 \boxed{
@@ -302,48 +316,51 @@ The scale-free covariance ratio becomes
 
 As `theta -> 0`, the local vorticity becomes nearly constant and this ratio improves strongly.
 
-However this does **not** give a free arbitrarily large projective-action bound: shrinking the cutoff increases sensitivity to material crossing, non-affine variation, and cutoff/viscous residual terms. Those contributions appear in `r_0` of the multistage covariance bridge.
+However shrinking the cylinder also magnifies cutoff/material/non-affine sensitivity. Those terms enter the covariance residual density `r_0`; furthermore the remote-to-full cancellation parameter `epsilon_D` remains separate.
 
-Thus the small-cylinder limit exposes the correct tradeoff:
+Thus the correct small-cylinder tradeoff is
 
 \[
 \boxed{
 \text{nearly isotropic Taylor core}
 \quad\text{vs}\quad
-\text{cutoff/material/non-affine residual action}.
+\text{cutoff/material residual + near-field compensation}.
 }
 \]
 
-If the residual remains subcritical as the cylinder is reduced, the projective-action lower bound strengthens. If it does not, that growth is itself the `T/H/residual` exit.
-
 ---
 
-## 5. Remaining issue: endpoint thickness versus stage-wide thickness
+## 6. Remaining issue: endpoint thickness versus remote-action-carrying thickness
 
-The Taylor estimate is automatic at record first-hitting endpoints and, more generally, at times where the normalized maximum and Hessian cap give the same local lower bound.
-
-The covariance-to-projective block argument uses
+The Taylor estimate is automatic at record first-hitting endpoints. The remote covariance block argument needs
 
 \[
 q_\perp(s)\ge q_->0
 \]
 
-on the portions of time carrying the transverse `D` action. The existing Taylor note by itself does not yet prove this lower bound uniformly over every instant of a whole stage.
+on the times that actually carry
 
-Therefore the remaining bridge is precisely:
+\[
+|D_{\rm rem}|ds.
+\]
+
+The endpoint estimate by itself does not prove this overlap.
+
+The repository already contains two relevant persistence mechanisms:
+
+- terminal natural-block packet persistence versus I/V rebuild;
+- oriented-flux persistence / flux-change budgets.
+
+They suggest the following narrower next bridge:
 
 \[
 \boxed{
-\text{positive-middle D-action carrying time}
+\text{remote-D action carried while the Taylor packet is thin}
 \Longrightarrow
-\text{persistent Taylor/thick covariance}
-\quad\lor\quad
-T/H\text{ loss of persistence}.
+\text{packet rebuild / flux turnover / derivative or deformation cost}.
 }
 \]
 
-This is narrower than the previous vague transverse-affine obstruction.
+If that implication is quantified, the complementary action must occur while the packet is thick enough for the covariance lower bound, and the corrected remote-to-full transfer note can be applied.
 
-A natural next calculation is to combine the temporal-enstrophy/analytic persistence estimates with the Taylor cylinder so that loss of `q_perp` during an action-carrying interval has an explicit flux/palinstrophy cost.
-
-Status: **THE NEW THICK-CORE COVARIANCE RATIO IS EXPLICIT AT FIRST-HITTING ENDPOINTS: `q_-/E_+ >= 9/(14 sqrt(2))`. THE REMAINING OBSTRUCTION IS TEMPORAL PERSISTENCE OF THIS THICK COVARIANCE ON THE TIMES THAT CARRY TRANSVERSE STRAIN ACTION, NOT AN UNCONTROLLED ENDPOINT SHAPE PARAMETER. GLOBAL REGULARITY REMAINS UNPROVED.**
+Status: **THE TAYLOR ENDPOINT GIVES THE EXPLICIT SHAPE RATIO `q_-/E_+ >= 9/(14 sqrt(2))` INDEPENDENTLY OF THE REMOTE/FULL-STRAIN SPLIT. THE GENERIC REMOTE BRANCH STILL NEEDS ITS OWN ACTION FLOOR, ACTION/T HICKNESS OVERLAP, AND A DOMINANCE-OR-COMPENSATION BUDGET. GLOBAL REGULARITY REMAINS UNPROVED.**
