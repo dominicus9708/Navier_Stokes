@@ -1,0 +1,484 @@
+# Recurrent Log-Frequency Viscous Gronwall Gate — 2026-08-24
+
+Status: **TAIL-INDEPENDENT VISCOUS IMPROVEMENT OF THE ANCIENT RIGIDITY GATE / GLOBAL REGULARITY NOT PROVED.**
+
+This note combines
+
+- `ANCIENT_ENSTROPHY_GRONWALL_SMALL_TYPEI_GATE_2026-08-24.md`;
+- `LERAY_ACTIVE_CORE_INVARIANT_MEASURE_2026-08-24.md`;
+- `LERAY_RECURRENT_ENSTROPHY_STATISTICAL_BALANCE_2026-08-24.md`.
+
+The result is an explicit positive logarithmic frequency tax. It improves the small-Type-I coefficient needed for ancient rigidity and still does not require any control of the persistent velocity tail.
+
+---
+
+## 1. Logarithmic enstrophy inequality with viscosity retained
+
+For the physical ancient vorticity,
+
+\[
+Z(t)=\|\Omega(t)\|_2^2,
+\qquad
+Q(t)=\|\nabla\Omega(t)\|_2^2,
+\]
+
+the enstrophy identity and the universal stretching ceiling give
+
+\[
+\boxed{
+\frac d{dt}\log Z(t)
+\le
+\sqrt2\|\Omega(t)\|_\infty
+-2\nu\frac{Q(t)}{Z(t)}
+}
+\]
+
+whenever `Z(t)>0`.
+
+The first-hitting ancient cap is
+
+\[
+\|\Omega(t)\|_\infty
+\le
+K_I|t|^{-1}.
+\]
+
+Thus
+
+\[
+\boxed{
+\log\frac{Z(t)}{Z(t_0)}
+\le
+\sqrt2K_I\log\frac{|t_0|}{|t|}
+-2\nu
+\int_{t_0}^{t}
+\frac{Q(s)}{Z(s)}ds.
+}
+\]
+
+---
+
+## 2. Convert the frequency ratio exactly to Leray time
+
+Let
+
+\[
+T=-t,
+\qquad
+s=-\log T,
+\]
+
+and define Leray vorticity
+
+\[
+W(Y,s)=T\Omega(x,t).
+\]
+
+Then
+
+\[
+Z_L(s):=\|W(s)\|_2^2=T^{1/2}Z(t),
+\]
+
+\[
+Q_L(s):=\|\nabla_YW(s)\|_2^2=T^{3/2}Q(t).
+\]
+
+Since
+
+\[
+dt=Tds,
+\]
+
+we obtain the exact identity
+
+\[
+\boxed{
+\frac{Q(t)}{Z(t)}dt
+=
+\frac{Q_L(s)}{Z_L(s)}ds.
+}
+\]
+
+Therefore the desired logarithmic physical-time tax is exactly a long-time mean of the Leray frequency ratio
+
+\[
+\lambda_L(s):=\frac{Q_L(s)}{Z_L(s)}.
+\]
+
+---
+
+## 3. Active-core windows give a pointwise frequency-ratio floor
+
+The recurrent active-core construction supplies constants
+
+\[
+d_*>0,
+\qquad
+R_*>0,
+\qquad
+z_*>0
+\]
+
+such that on a set of Leray times with lower density at least `d_*`, one has
+
+\[
+\int_{B_{R_*}}|W|^2dY\ge z_*.
+\]
+
+The whole-space Sobolev inequality gives
+
+\[
+\|W\|_6^2
+\le S_3^{-1}Q_L,
+\]
+
+where
+
+\[
+S_3=3(\pi/2)^{4/3}.
+\]
+
+Holder on `B_{R_*}` gives
+
+\[
+z_*
+\le
+|B_{R_*}|^{2/3}\|W\|_6^2.
+\]
+
+Hence on every active window,
+
+\[
+\boxed{
+Q_L
+\ge
+\kappa_Q(R_*)z_*,
+\qquad
+\kappa_Q(R_*):=
+S_3|B_{R_*}|^{-2/3}.
+}
+\]
+
+On the vorticity-tight ancient branch,
+
+\[
+\boxed{Z_L(s)\le Z_+.}
+\]
+
+Therefore on every active window,
+
+\[
+\boxed{
+\lambda_L(s)
+=
+\frac{Q_L}{Z_L}
+\ge
+\lambda_*:=
+\frac{\kappa_Q(R_*)z_*}{Z_+}.
+}
+\]
+
+---
+
+## 4. Positive logarithmic frequency density
+
+Because active windows have lower Leray-time density at least `d_*`, for every sufficiently long backward interval `[s_0,s]` one has
+
+\[
+\int_{s_0}^{s}\lambda_L(\sigma)d\sigma
+\ge
+d_*\lambda_*(s-s_0)-O(1).
+\]
+
+Define
+
+\[
+\boxed{
+c_{log}
+:=
+d_*\lambda_*
+=
+d_*\frac{\kappa_Q(R_*)z_*}{Z_+}
+>0.
+}
+\]
+
+Since
+
+\[
+s-s_0=\log\frac{|t_0|}{|t|},
+\]
+
+we obtain
+
+\[
+\boxed{
+\int_{t_0}^{t}\frac{Q}{Z}d\tau
+\ge
+c_{log}\log\frac{|t_0|}{|t|}
+-O(1).
+}
+\]
+
+This is the explicit logarithmic viscous tax required by the previous Gronwall note.
+
+---
+
+## 5. Viscously improved ancient rigidity certificate
+
+Substitute the logarithmic tax into the enstrophy inequality:
+
+\[
+Z(t)
+\le
+C(t)
+Z(t_0)
+\left(
+\frac{|t_0|}{|t|}
+\right)^{
+\sqrt2K_I-2\nu c_{log}
+},
+\]
+
+where `C(t)` is independent of the remote backward starting time `t_0`.
+
+The restricted ancient branch also has
+
+\[
+Z(t_0)
+\le
+C_Z|t_0|^{-1/2}.
+\]
+
+Therefore
+
+\[
+Z(t)
+\le
+C'
+|t|^{-(\sqrt2K_I-2\nu c_{log})}
+|t_0|^{
+\sqrt2K_I-2\nu c_{log}-1/2
+}.
+\]
+
+If
+
+\[
+\boxed{
+\sqrt2K_I
+-2\nu c_{log}
+<
+\frac12,
+}
+\]
+
+then `t_0->-infinity` forces
+
+\[
+\boxed{Z(t)=0.}
+\]
+
+Thus the nontrivial ancient survivor is impossible.
+
+Equivalently, every nonzero recurrent survivor must satisfy the necessary condition
+
+\[
+\boxed{
+\sqrt2K_I
+\ge
+\frac12
++
+2\nu
+d_*\frac{\kappa_Q(R_*)z_*}{Z_+}.
+}
+\]
+
+This is the central certificate of the note.
+
+---
+
+## 6. Stage-length form
+
+Using
+
+\[
+K_I(q)
+=
+\frac{q^2}{q-1}L_+(q),
+\]
+
+a sufficient contradiction is
+
+\[
+\boxed{
+\sqrt2
+\frac{q^2}{q-1}L_+(q)
+<
+\frac12
++
+2\nu
+d_*\frac{\kappa_Q(R_*)z_*}{Z_+}.
+}
+\]
+
+Equivalently,
+
+\[
+\boxed{
+L_+(q)
+<
+\frac{q-1}{\sqrt2q^2}
+\left[
+\frac12
++
+2\nu
+d_*\frac{\kappa_Q(R_*)z_*}{Z_+}
+\right].
+}
+\]
+
+The right side is strictly larger than the no-viscosity threshold
+
+\[
+\frac{q-1}{2\sqrt2q^2}.
+\]
+
+---
+
+## 7. Geometric meaning of the constants
+
+The new gain depends only on quantities already present in the recurrent compact-core route:
+
+\[
+\boxed{
+d_*
+}
+\]
+
+measures the Leray-time density of active thick-core windows;
+
+\[
+\boxed{
+z_*
+}
+\]
+
+is the fixed local enstrophy carried during such windows;
+
+\[
+\boxed{
+\kappa_Q(R_*)
+=
+S_3|B_{R_*}|^{-2/3}
+}
+\]
+
+is the Sobolev frequency floor generated by concentrating `z_*` inside a fixed ball;
+
+\[
+\boxed{
+Z_+
+}
+\]
+
+is the global normalized enstrophy ceiling.
+
+Thus the gain is stronger when the recurrent core is thicker, more frequent, or occupies a smaller spatial region, and weaker when the global enstrophy reservoir is large.
+
+---
+
+## 8. Relation to the recurrent Leray balance
+
+The Leray enstrophy identity is
+
+\[
+\frac12Z_L'
++\frac14Z_L
++\nu Q_L
+=
+\mathcal P_L.
+\]
+
+Dividing by `Z_L` gives
+
+\[
+\boxed{
+\frac d{ds}\log Z_L
++\frac12
++2\nu\lambda_L
+\le
+\sqrt2M_L,
+}
+\]
+
+where
+
+\[
+M_L=\|W\|_\infty.
+\]
+
+On a recurrent nonzero orbit, the long-time mean logarithmic derivative vanishes along recurrent return intervals. Therefore the same necessary condition can be read directly as
+
+\[
+\boxed{
+\sqrt2\,\overline{M_L}
+\ge
+\frac12+2\nu\,\overline{\lambda_L}.
+}
+\]
+
+The first-hitting cap `M_L<=K_I` and the active-window lower bound `overline{lambda_L}>=c_log` reproduce the Gronwall certificate.
+
+Thus the physical ancient argument and the recurrent Leray argument are exactly the same rigidity mechanism in two coordinate systems.
+
+---
+
+## 9. What remains to turn this into a numerical closure
+
+The inequality is theorem-level once the previously established recurrent constants are accepted, but the current repository has not yet inserted sharp explicit values for
+
+\[
+d_*,
+\quad z_*,
+\quad R_*,
+\quad Z_+.
+\]
+
+The next quantitative task is to derive these from the existing first-hitting analytic terminal tube:
+
+\[
+\delta_T
+=
+\frac1{4(2B_++3\nu K_{2,+})},
+\qquad
+r_T
+=
+\frac1{4K_{1,+}},
+\qquad
+|\Omega|\ge\frac12,
+\]
+
+and the geometric checkpoint bounds
+
+\[
+c_-q^m\le|t_m|\le c_+q^m.
+\]
+
+That conversion will produce a fully explicit lower bound for `c_log` in terms of
+
+\[
+B_+,
+K_{1,+},
+K_{2,+},
+L_-,
+L_+,
+q,
+Z_+,
+\nu.
+\]
+
+No velocity-tail constant is needed.
+
+Status: **THE RECURRENT THICK CORE SUPPLIES A POSITIVE LONG-LOG-TIME FREQUENCY TAX `c_log >= d_* kappa_Q z_*/Z_+`. INSERTING THIS INTO THE ANCIENT ENSTROPHY GRONWALL ARGUMENT IMPROVES THE RIGIDITY CONDITION TO `sqrt2 K_I - 2 nu c_log < 1/2`. A NONZERO RECURRENT ANCIENT SURVIVOR MUST SATISFY THE OPPOSITE INEQUALITY. THE NEXT STEP IS TO MAKE `d_*, z_*, R_*` EXPLICIT FROM THE TERMINAL ANALYTIC THICK WINDOW. GLOBAL REGULARITY REMAINS UNPROVED.**
