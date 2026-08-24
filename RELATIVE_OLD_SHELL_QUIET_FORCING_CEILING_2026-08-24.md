@@ -1,0 +1,518 @@
+# Relative Old-Shell Quiet Forcing Ceiling — 2026-08-24
+
+Status: **GALILEAN-INVARIANT REPAIR OF THE OLD-SHELL FORCING CEILING / NO SPATIAL `1/R` ASSUMPTION REQUIRED / GLOBAL REGULARITY NOT PROVED.**
+
+The 2026-08-23 old-shell forcing audit used the pointwise Type-I amplitude constant
+
+\[
+A_0=R\|u\|_{L^\infty(A_R^+)}.
+\]
+
+After the anti-proof audit, this is too strong to assume on the full tail corridor: spatial `1/R` decay is a possible conclusion, not an automatic input.
+
+This note replaces `A_0` by Galilean-invariant relative quantities and shows that the natural forcing ceiling
+
+\[
+\|P_R\mathcal N_R\|_2+
+\|P_R\mathcal R_R\|_2
+\lesssim R^{-3/2}
+\]
+
+still follows on a quiet relative-Campanato / derivative / pressure corridor.
+
+---
+
+## 1. Relative shell variables
+
+Fix a shell of physical radius `R` and a fixed-shape enlarged annulus `A_R^+`.
+
+Let `m_R(t)` be a coherent local velocity mean, for example a smooth weighted mean on the shell/parent region, and define
+
+\[
+\boxed{v=u-m_R(t).}
+\]
+
+Use a center path `a(t)` satisfying
+
+\[
+\boxed{\dot a(t)=m_R(t).}
+\]
+
+In translated coordinates
+
+\[
+z=x-a(t),
+\]
+
+the relative velocity satisfies
+
+\[
+\boxed{
+\partial_tv+(v\cdot\nabla)v+\nabla\pi
+=\nu\Delta v,
+\qquad
+\nabla\cdot v=0,
+}
+\]
+
+with the accelerated-frame pressure
+
+\[
+\boxed{
+\pi(z,t)=p(z+a(t),t)+\dot m_R(t)\cdot z
+}
+\]
+
+up to an arbitrary time-dependent scalar.
+
+Thus the large coherent drift disappears exactly from the nonlinear term. Its acceleration appears only as an affine pressure contribution.
+
+---
+
+## 2. Relative scale-invariant corridor constants
+
+Define
+
+\[
+\boxed{
+C_0
+:=
+R^{-1}\|v\|_{L^2(A_R^+)}^2,
+}
+\]
+
+\[
+\boxed{
+G_0
+:=
+R^{1/2}\|\nabla u\|_{L^2(A_R^+)},
+}
+\]
+
+\[
+\boxed{
+H_2
+:=
+R^{3/2}\|\nabla^2u\|_{L^2(A_R^+)},
+}
+\]
+
+and relative pressure constants
+
+\[
+\boxed{
+P_0
+:=
+R^{1/2}
+\inf_c\|\pi-c\|_{L^2(A_R^+)},
+}
+\]
+
+\[
+\boxed{
+P_1
+:=
+R^{3/2}\|\nabla\pi\|_{L^2(A_R^+)}.
+}
+\]
+
+All are Navier--Stokes scale invariant.
+
+`C_0` is a shell version of the relative Campanato quantity. Failure of a uniform `C_0` bound is the already identified relative-energy / coherent-affine escalation branch.
+
+Large `G_0` or `H_2` is a first-/second-derivative tail branch. Large `P_0` or `P_1` is a pressure branch.
+
+---
+
+## 3. Scaled H2 Sobolev recovers the relative Type-I amplitude
+
+On a fixed-shape annulus, scale `x=Rz`. Standard `H^2 -> L^infty` gives
+
+\[
+\|v\|_{L^\infty(A_R)}
+\le
+C_{Sob}
+\left[
+R^{-3/2}\|v\|_2
++R^{-1/2}\|\nabla v\|_2
++R^{1/2}\|\nabla^2v\|_2
+\right].
+\]
+
+Since spatial derivatives of `v` equal those of `u`, the corridor constants imply
+
+\[
+\boxed{
+R\|v\|_{L^\infty(A_R)}
+\le
+C_{Sob}
+\left(
+C_0^{1/2}+G_0+H_2
+\right)
+=:A_{rel}.
+}
+\]
+
+This is exactly the amplitude estimate needed in the old-shell forcing calculation, but now it is relative and Galilean invariant.
+
+No absolute spatial `1/R` bound on `u` is assumed.
+
+---
+
+## 4. Internal nonlinear forcing in the relative frame
+
+Localize `v` by the same shell cutoff and Bogovskii correction. The internal nonlinear term is
+
+\[
+\mathcal N_R
+=-\mathbb P\nabla\cdot(\chi_Rv\otimes v).
+\]
+
+Using
+
+\[
+\|v\|_\infty\le A_{rel}R^{-1},
+\]
+
+\[
+\|v\|_2\le C_0^{1/2}R^{1/2},
+\]
+
+\[
+\|\nabla v\|_2\le G_0R^{-1/2},
+\]
+
+we obtain
+
+\[
+\boxed{
+\|\mathcal N_R\|_2
+\le
+C_N
+A_{rel}
+\left(G_0+C_0^{1/2}\right)
+R^{-3/2}.
+}
+\]
+
+There is no inverse dependence on the packet amplitude selected later by the genealogy gate.
+
+---
+
+## 5. Material cutoff forcing also becomes relative
+
+Because the cutoff center moves with `dot a=m_R`, the advective cutoff term is
+
+\[
+(v\cdot\nabla\chi_R)v.
+\]
+
+Hence
+
+\[
+\boxed{
+\|(v\cdot\nabla\chi_R)v\|_2
+\le
+C_{mat}
+A_{rel}C_0^{1/2}R^{-3/2}.
+}
+\]
+
+Thus a large constant drift cannot fake a material-turnover forcing event.
+
+---
+
+## 6. Mean acceleration is itself controlled by relative boundary quantities
+
+Let the mean be defined with a smooth nonnegative weight `phi_R` of mass
+
+\[
+M_\phi=\int\phi_R\,dx\simeq c_\phi R^3.
+\]
+
+For the self-consistent path `dot a=m_R`, the exact weighted-mean acceleration identity is
+
+\[
+\boxed{
+M_\phi\dot m_R
+=
+\int(v\otimes v)\nabla\phi_R\,dx
++
+\int(p-c)\nabla\phi_R\,dx
++
+\nu\int v\,\Delta\phi_R\,dx.
+}
+\]
+
+The constant drift cancels exactly.
+
+Using the shell scales,
+
+\[
+\left|\int(v\otimes v)\nabla\phi_R\right|
+\lesssim C_0,
+\]
+
+\[
+\left|\int(p-c)\nabla\phi_R\right|
+\lesssim P_{phys,0},
+\]
+
+and
+
+\[
+\nu\left|\int v\Delta\phi_R\right|
+\lesssim \nu C_0^{1/2},
+\]
+
+where `P_phys,0` denotes the corresponding scale-invariant physical-pressure oscillation constant before adding the affine acceleration gauge.
+
+Therefore
+
+\[
+\boxed{
+R^3|\dot m_R|
+\le
+C_{acc}
+\left(
+C_0+P_{phys,0}+\nu C_0^{1/2}
+\right).
+}
+\]
+
+So the accelerated-frame affine pressure
+
+\[
+\dot m_R\cdot z
+\]
+
+has exactly natural pressure size on the shell:
+
+\[
+R^{1/2}
+\|\dot m_R\cdot z\|_{L^2(A_R^+)}
+\lesssim
+R^3|\dot m_R|.
+\]
+
+Large frame acceleration is therefore not an untyped escape; it is generated by large relative-energy, pressure, or viscous boundary action.
+
+---
+
+## 7. Pressure-buffer forcing
+
+After absorbing the acceleration into `pi`, subtract a scalar shell pressure gauge `c_R(t)`. Then
+
+\[
+\mathbb P(\pi\nabla\chi_R)
+=
+\mathbb P((\pi-c_R)\nabla\chi_R).
+\]
+
+Hence
+
+\[
+\boxed{
+\|\mathbb P(\pi\nabla\chi_R)\|_2
+\le
+C_pP_0R^{-3/2}.
+}
+\]
+
+The pressure term remains at the natural shell forcing scale with no drift-amplitude loss.
+
+---
+
+## 8. Viscous cutoff terms
+
+Exactly as in the 2026-08-23 audit,
+
+\[
+\boxed{
+\|-2\nu\nabla\chi_R\cdot\nabla v
+-\nu(\Delta\chi_R)v\|_2
+\le
+C_{vis}\nu
+\left(G_0+C_0^{1/2}\right)
+R^{-3/2}.
+}
+\]
+
+Again only relative quantities enter.
+
+---
+
+## 9. Bogovskii correction in the relative frame
+
+Set
+
+\[
+g_R=\nabla\chi_R\cdot v.
+\]
+
+The radial-transition compatibility remains valid because adding/subtracting a constant velocity has zero flux through every centered sphere.
+
+Static estimates give
+
+\[
+\|b_R\|_2
+\lesssim
+C_0^{1/2}R^{1/2},
+\]
+
+\[
+\|\nabla b_R\|_2
+\lesssim
+C_0^{1/2}R^{-1/2},
+\]
+
+and
+
+\[
+\nu\|\Delta b_R\|_2
+\lesssim
+\nu(C_0^{1/2}+G_0)R^{-3/2}.
+\]
+
+For the time derivative, use the relative-frame Navier--Stokes equation
+
+\[
+\partial_tv
+=
+\nu\Delta v-(v\cdot\nabla)v-\nabla\pi.
+\]
+
+Thus
+
+\[
+R^{3/2}\|\partial_tv\|_2
+\le
+C
+\left[
+\nu H_2
++A_{rel}G_0
++P_1
+\right].
+\]
+
+The scaled Bogovskii mapping then yields
+
+\[
+\boxed{
+\|\partial_tb_R\|_2
+\le
+C_{Bt}
+\left[
+\nu H_2
++A_{rel}G_0
++P_1
+\right]
+R^{-3/2}.
+}
+\]
+
+Hence the full divergence-correction forcing also stays at natural scale unless a derivative or pressure corridor fails.
+
+---
+
+## 10. Repaired quiet forcing ceiling
+
+Collecting the terms gives
+
+\[
+\boxed{
+\|P_R\mathcal N_R\|_2
++
+\|P_R\mathcal R_R\|_2
+\le
+K_{rel,*}R^{-3/2},
+}
+\]
+
+where
+
+\[
+\boxed{
+K_{rel,*}
+=F_{loc}
+\left(
+C_0,G_0,H_2,P_0,P_1,\nu
+\right)
+}
+\]
+
+for an explicit polynomial-type function `F_loc` depending only on the fixed cutoff/Bogovskii geometry.
+
+Crucially,
+
+\[
+\boxed{
+K_{rel,*}
+\text{ contains no factor }
+1/a_{j,k}
+\text{ and no absolute drift amplitude.}
+}
+\]
+
+Therefore the amplitude-sensitive genealogy comparison
+
+\[
+a_{j,k}K_k^2\lesssim K_{rel,*}C_T
+\]
+
+is stable as `a_{j,k}->0`.
+
+---
+
+## 11. Failure routing
+
+If `K_{rel,*}` cannot be kept uniform on the selected old shells, then at least one of the following occurs:
+
+\[
+\boxed{
+\begin{aligned}
+&C_0\to\infty
+&&\Rightarrow\text{relative-Campanato/local-energy escalation},\\
+&G_0\to\infty
+&&\Rightarrow H_{1,crit}^{tail},\\
+&H_2\to\infty
+&&\Rightarrow H_{2,crit}^{tail},\\
+&P_0\text{ or }P_1\to\infty
+&&\Rightarrow\text{pressure/parent/residual branch}.
+\end{aligned}
+}
+\]
+
+The first critical derivative tail is already reduced by the annular interpolation bridge to relative-Campanato escalation or second-derivative failure when needed.
+
+Thus failure of the repaired forcing ceiling is itself typed; it is not a hidden assumption.
+
+---
+
+## 12. Consequence for the amplitude-sensitive historical genealogy gate
+
+The main possible defect in the new genealogy gate was that the old `K_*R^{-3/2}` ceiling might rely on an absolute pointwise Type-I velocity amplitude and therefore fail for diffuse non-`L^3` tails.
+
+The relative-frame calculation removes that defect:
+
+\[
+\boxed{
+\text{uniform relative Campanato}
++
+\text{bounded scaled first/second derivatives}
++
+\text{bounded relative pressure}
+\Longrightarrow
+\text{uniform natural old-shell forcing ceiling}.
+}
+\]
+
+Hence an amplitude-selected shell satisfying
+
+\[
+a_{j,k}K_k^2\to\infty
+\]
+
+cannot be quietly forgotten merely because its absolute amplitude tends to zero.
+
+Status: **THE OLD-SHELL QUIET FORCING CEILING CAN BE REFORMULATED ENTIRELY IN GALILEAN-INVARIANT RELATIVE QUANTITIES. THE ABSOLUTE SPATIAL `1/R` VELOCITY ENVELOPE IS NOT NEEDED AS AN INPUT. THIS REMOVES THE MAIN AMPLITUDE-DEPENDENCE DEFECT IN THE NEW HISTORICAL GENEALOGY GATE. GLOBAL REGULARITY REMAINS UNPROVED.**
