@@ -356,9 +356,7 @@ The crossing lemma above forces an **absolute** annular `L^3` amplitude `a_R`. A
 For a relative fluctuation, however, Poincare-Sobolev gives
 
 \[
-\left\|
-u-
-u_{B_{4R}}
+\left\|u-u_{B_{4R}}
 \right\|_{L^3(B_{4R})}
 \le
 C R^{1/2}
@@ -369,16 +367,12 @@ that is,
 
 \[
 \boxed{
-\left\|
-u-
-u_{B_{4R}}
+\left\|u-u_{B_{4R}}
 \right\|_{L^3(B_{4R})}^2
 \le
 C J_R^{\rm phys}.
 }
 \]
-
-Here the symbol on the left is the velocity fluctuation `u-u_{B_{4R}}`; the displayed `\nu` notation is not viscosity.
 
 Therefore a **relative/Galilean-invariant** forced `L^3` amplitude would feed directly into the gradient-shell genealogy, while the absolute amplitude obtained above does not yet do so.
 
