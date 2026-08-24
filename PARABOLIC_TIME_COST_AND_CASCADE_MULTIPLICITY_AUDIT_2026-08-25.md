@@ -21,8 +21,8 @@ Throughout Sections 2–8 we nondimensionalize viscosity to
 The standard Navier–Stokes scaling is
 
 \[
-u_
- u_\lambda(x,t)=\lambda u(\lambda x,\lambda^2 t).
+u
+u_\lambda(x,t)=\lambda u(\lambda x,\lambda^2 t).
 \]
 
 Global regularity is not claimed.
