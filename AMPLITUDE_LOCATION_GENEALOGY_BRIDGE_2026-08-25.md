@@ -2,66 +2,60 @@
 
 Date: 2026-08-25
 
-Status: **FORWARD MATERIAL-PACKET BRIDGE PROVED / REVERSE ANNULAR-TO-ANCESTOR IDENTIFICATION NOT DERIVED / RADIAL DEPHASING ISOLATED / GLOBAL REGULARITY NOT PROVED.**
+Status: **LOCAL MATERIAL-PACKET BRIDGE PROVED / REMOTE CENTER-SEPARATION GATE PROVED / REVERSE ANNULAR-TO-ANCESTOR IDENTIFICATION NOT DERIVED / GLOBAL REGULARITY NOT PROVED.**
 
-## 1. Scope and purpose
+## 1. Scope and audit correction
 
 The repository already contains the exact scale identity
 
 \[
-R_{j,k}^{\mathrm{phys}}=r_{j-k},
+R_{j,k}^{\mathrm{phys}}=r_{j-k}.
 \]
 
-where the age-\(k\) annulus at first-hitting stage \(j\) has the same physical radius as the distinguished natural scale at the earlier stage \(n=j-k\).
+This identifies only a physical radius. It does **not** identify the current age-\(k\) annulus with the material image of the earlier first-hitting maximum packet.
 
-That identity is purely a radius identity. It does **not** imply that the current annular packet is the same material packet that occupied the earlier maximum-centered core.
+A first draft of this note used global \(L^\infty\) deformation exposure. That statement was correct but too strong for remote genealogy, because first-hitting amplification itself forces an arbitrarily large *global* integrated strain over many generations. The correct genealogy quantity is therefore a deformation/diffusion exposure localized to the transported ancestor packet and its deformation tube.
 
-This note derives the strongest forward statement that is available without assuming such an identification.
-
-Throughout Sections 2–7 let
+Throughout let
 
 \[
 n=j-k,
 \qquad
 W_n=\|\omega(t_n)\|_\infty,
 \qquad
-r_n=\left(\frac{\nu}{W_n}\right)^{1/2}.
+r_n=\left(\frac{\nu}{W_n}\right)^{1/2},
 \]
 
-Let \(x_n\) be a first-hitting maximum point at time \(t_n\). The imported first-hitting analyticity corridor gives fixed constants \(a_0,b_0>0\) such that
+and let \(x_n\) be a first-hitting maximum point at time \(t_n\).
+
+The imported first-hitting analyticity corridor supplies fixed \(a_0,b_0>0\) such that
 
 \[
 \boxed{
 |\omega(x,t_n)|\ge b_0W_n
-\qquad
-(x\in B_{a_0r_n}(x_n)).
+\qquad(x\in B_{a_0r_n}(x_n)).
 }
 \]
 
-Call this initial occupied ball \(A_n^0\).
+Set
+
+\[
+A_n^0:=B_{a_0r_n}(x_n).
+\]
 
 ---
 
-## 2. Material transport of the occupied ancestor ball
+## 2. Material ancestor packet
 
-Let \(\Phi_{t_n,t}\) be the smooth Lagrangian flow map before the hypothetical first singular time:
-
-\[
-\frac{d}{dt}\Phi_{t_n,t}(a)
-=u(\Phi_{t_n,t}(a),t),
-\qquad
-\Phi_{t_n,t_n}(a)=a.
-\]
-
-Define
+Let \(\Phi_{t_n,t}\) be the smooth Lagrangian flow and define
 
 \[
-A_n(t):=\Phi_{t_n,t}(A_n^0),
+A_n(t)=\Phi_{t_n,t}(A_n^0),
 \qquad
-z_n(t):=\Phi_{t_n,t}(x_n).
+z_n(t)=\Phi_{t_n,t}(x_n).
 \]
 
-Because \(\nabla\cdot u=0\), the flow is volume preserving:
+Since \(\nabla\cdot u=0\),
 
 \[
 \boxed{
@@ -70,206 +64,206 @@ Because \(\nabla\cdot u=0\), the flow is volume preserving:
 }
 \]
 
-This is exact for every smooth pre-singular interval.
-
 **Status: PROVED.**
 
 ---
 
-## 3. Amplitude retention under strain and diffusion exposure
+## 3. Local packet exposures
 
-Along any material trajectory, the vorticity equation is
+For \(I=[t_n,t]\), define the packet strain exposure
+
+\[
+\boxed{
+\Sigma_n(I)
+:=
+\int_I
+\sup_{x\in A_n(s)}|S(x,s)|\,ds,
+}
+\]
+
+and the packet diffusion exposure
+
+\[
+\boxed{
+\mathcal D_n(I)
+:=
+\frac{\nu}{W_n}
+\int_I
+\sup_{x\in A_n(s)}|\Delta\omega(x,s)|\,ds.
+}
+\]
+
+To control the geometry of the whole packet, let \(H_n(s)\) denote any connected tube containing all line segments joining points of \(A_n(s)\), for example its convex hull, and define
+
+\[
+\boxed{
+\Lambda_n(I)
+:=
+\int_I
+\sup_{x\in H_n(s)}|\nabla u(x,s)|\,ds.
+}
+\]
+
+Then \(\Sigma_n(I)\le\Lambda_n(I)\) whenever \(A_n(s)\subset H_n(s)\).
+
+These quantities are Galilean invariant under constant Galilean transformations because they involve derivatives of \(u\) and relative material geometry.
+
+---
+
+## 4. Two-sided amplitude retention on the material packet
+
+Along a trajectory starting in \(A_n^0\), write
+
+\[
+a(t)=|\omega(\Phi(a_*,t),t)|.
+\]
+
+From
 
 \[
 D_t\omega=S\omega+\nu\Delta\omega,
 \]
 
-where \(S=(\nabla u+\nabla u^T)/2\).
-
-At points where \(\omega\ne0\), with \(a(t)=|\omega(\Phi(a_0,t),t)|\),
+we have
 
 \[
-\frac{d}{dt}a(t)
-\ge
--\|S(t)\|_{L^\infty}a(t)
--\nu\|\Delta\omega(t)\|_{L^\infty}.
+-|S|a-\nu|\Delta\omega|
+\le
+\frac{d}{dt}a
+\le
+|S|a+\nu|\Delta\omega|.
 \]
 
-For an interval \(I=[t_n,t]\), define the dimensionless exposures
+Suppose
 
 \[
-\Lambda_I
-:=
-\int_{t_n}^{t}\|\nabla u(s)\|_{L^\infty}\,ds,
+\Sigma_n(I)\le L,
+\qquad
+\mathcal D_n(I)\le D.
+\]
+
+Because initially
+
+\[
+b_0W_n\le a(t_n)\le W_n,
+\]
+
+integrating factors give the uniform packet bounds
+
+\[
+\boxed{
+a(t)
+\ge
+\left(b_0e^{-L}-D\right)W_n}
 \]
 
 and
 
 \[
-\mathcal D_I
-:=
-\frac{\nu}{W_n}
-\int_{t_n}^{t}\|\Delta\omega(s)\|_{L^\infty}\,ds
-=
-r_n^2
-\int_{t_n}^{t}\|\Delta\omega(s)\|_{L^\infty}\,ds.
+\boxed{
+a(t)
+\le
+e^L(1+D)W_n.}
 \]
 
-Since \(\|S\|_\infty\le\|\nabla u\|_\infty\), the integrating-factor inequality gives
+In particular, if
+
+\[
+D\le\frac{b_0}{2}e^{-L},
+\]
+
+then
 
 \[
 \boxed{
-\frac{a(t)}{W_n}
-\ge
-e^{-\Lambda_I}
-\left(
-\frac{a(t_n)}{W_n}
--e^{\Lambda_I}\mathcal D_I
-\right).
+q_LW_n
+\le
+|\omega(x,t)|
+\le
+Q_LW_n
+\qquad(x\in A_n(t)),
 }
 \]
 
-Therefore, if
+where
 
 \[
-\Lambda_I\le L,
+q_L:=\frac{b_0}{2}e^{-L},
 \qquad
-\mathcal D_I\le \frac{b_0}{2}e^{-L},
+Q_L:=e^L\left(1+\frac{b_0}{2}e^{-L}\right).
 \]
 
-then every trajectory starting in \(A_n^0\) obeys
-
-\[
-\boxed{
-|\omega(\Phi(a,t),t)|
-\ge
-q_LW_n,
-\qquad
-q_L:=\frac{b_0}{2}e^{-L}>0.
-}
-\]
-
-Thus a fixed fraction of the ancestor amplitude survives unless either integrated pointwise deformation or integrated normalized vorticity-Laplacian exposure becomes large.
+Thus a locally quiet ancestor packet retains not only a lower amplitude fraction but also an upper amplitude of the same ancestor order.
 
 **Status: PROVED.**
 
 ---
 
-## 4. Coherence radius under bounded deformation
+## 5. Coherence radius under local tube deformation
 
-For two material trajectories,
+For any two trajectories starting in \(A_n^0\), the line-segment mean-value estimate inside \(H_n(s)\) gives
 
 \[
 \frac{d}{dt}|\Phi(a,t)-\Phi(b,t)|
 \le
-\|\nabla u(t)\|_\infty
+\sup_{H_n(t)}|\nabla u|
 |\Phi(a,t)-\Phi(b,t)|.
 \]
 
-Gronwall yields
+The inverse-flow estimate gives the corresponding lower Lipschitz bound. Hence, if
 
 \[
-|\Phi(a,t)-\Phi(b,t)|
-\le e^{\Lambda_I}|a-b|.
+\Lambda_n(I)\le L,
 \]
 
-Applying the same estimate to the inverse flow gives the lower bi-Lipschitz bound
-
-\[
-|\Phi(a,t)-\Phi(b,t)|
-\ge e^{-\Lambda_I}|a-b|.
-\]
-
-Consequently the transported image of the initial ball contains a definite ball around the transported ancestor center:
+then the transported packet is bi-Lipschitz at distortion at most \(e^L\), and in particular
 
 \[
 \boxed{
-B_{\rho_I}(z_n(t))
+B_{\theta_Lr_n}(z_n(t))
 \subset A_n(t),
 \qquad
-\rho_I=a_0e^{-\Lambda_I}r_n.
+\theta_L:=a_0e^{-L}.
 }
 \]
 
-In particular, on \(\Lambda_I\le L\),
-
-\[
-\rho_I\ge a_0e^{-L}r_n.
-\]
-
-Combining with Section 3, if deformation and diffusion are quiet then
+Combining Sections 4 and 5, under the quiet local packet/tube conditions
 
 \[
 \boxed{
-|\omega(x,t)|\ge q_LW_n
+q_LW_n
+\le|\omega(x,t)|\le Q_LW_n
 \quad
-(x\in B_{a_0e^{-L}r_n}(z_n(t))).
+(x\in B_{\theta_Lr_n}(z_n(t))).
 }
 \]
 
-This is a genuine material occupied packet at the ancestor natural scale.
-
-**Status: PROVED.**
+**Status: PROVED CONDITIONAL on the explicit local tube exposure bound.**
 
 ---
 
-## 5. Contact fraction gives an exact annular \(J\)-cost
+## 6. Exact annular contact-to-\(J\) bridge
 
-At descendant stage \(j\), let \(\mathcal A_{j,k}\) be the physical age-\(k\) annulus used in the definition
+At descendant stage \(j\), let \(\mathcal A_{j,k}\) be the physical age-\(k\) annulus and
 
 \[
 J_{j,k}
-=
-R_{j,k}^{\mathrm{phys}}
-\int_{\mathcal A_{j,k}}|\nabla u(x,t_j)|^2dx.
+=r_n\int_{\mathcal A_{j,k}}|\nabla u(x,t_j)|^2dx,
 \]
 
-The ancestor-radius identity gives
+using the exact ancestor-radius identity.
 
-\[
-R_{j,k}^{\mathrm{phys}}=r_n.
-\]
-
-Define the normalized material contact fraction
+Define
 
 \[
 \boxed{
 \chi_{j,k}
 :=
-\frac{
-|A_n(t_j)\cap\mathcal A_{j,k}|
-}{r_n^3}.
+\frac{|A_n(t_j)\cap\mathcal A_{j,k}|}{r_n^3}.
 }
 \]
 
-Suppose amplitude retention gives
-
-\[
-|\omega|\ge qW_n
-\]
-
-on the intersecting portion. Since pointwise
-
-\[
-|\omega|^2\le2|\nabla u|^2,
-\]
-
-we obtain
-
-\[
-\begin{aligned}
-J_{j,k}
-&\ge
-\frac{r_n}{2}
-\int_{A_n(t_j)\cap\mathcal A_{j,k}}|\omega|^2dx\\
-&\ge
-\frac{q^2}{2}
-r_nW_n^2
-|A_n(t_j)\cap\mathcal A_{j,k}|.
-\end{aligned}
-\]
-
-Using \(W_n=\nu/r_n^2\),
+If the packet lower amplitude satisfies \(|\omega|\ge qW_n\) on the contact set, then pointwise \(|\omega|^2\le2|\nabla u|^2\) gives
 
 \[
 \boxed{
@@ -289,266 +283,309 @@ Equivalently,
 }
 \]
 
-This is the precise amplitude-location bridge: retained material overlap with the descendant shell cannot be large while the shell amplitude \(J_{j,k}\) is small.
+Therefore a small-\(J\) remote annulus can contain only a small fraction of a quietly retained ancestor packet.
 
 **Status: PROVED.**
 
 ---
 
-## 6. Deep radial contact forces order-one shell amplitude
+## 7. Deep radial contact forces an order-one shell cost
 
-Write the shell geometrically as a fixed-ratio annulus
+Write, up to the fixed cutoff constants,
 
 \[
 \mathcal A_{j,k}
 =\{x:c_-r_n<|x-X_j|<c_+r_n\},
-\qquad
-0<c_-<c_+,
+\qquad0<c_-<c_+.
 \]
 
-up to the fixed cutoff-core constants used by the repository.
-
-On the quiet corridor \(\Lambda_I\le L\), set
+Under \(\Lambda_n\le L\), if
 
 \[
-\theta_L:=a_0e^{-L},
-\qquad
-\rho_L=\theta_Lr_n.
-\]
-
-If the transported ancestor center satisfies the deep-contact condition
-
-\[
-\boxed{
 (c_-+\theta_L)r_n
 \le
 |z_n(t_j)-X_j|
 \le
 (c_+-\theta_L)r_n,
-}
 \]
 
 then
 
 \[
-B_{\rho_L}(z_n(t_j))\subset\mathcal A_{j,k}.
+B_{\theta_Lr_n}(z_n(t_j))
+\subset\mathcal A_{j,k}.
 \]
 
-The contact fraction is therefore at least
-
-\[
-\chi_{j,k}\ge \frac{4\pi}{3}\theta_L^3.
-\]
-
-Together with the amplitude-retention bound \(q=q_L\),
+The contact fraction has a fixed positive lower bound and therefore
 
 \[
 \boxed{
 J_{j,k}
 \ge
-c(a_0,b_0,L,c_\pm)\,\nu^2.
+c(a_0,b_0,L,c_\pm)\nu^2.
 }
 \]
 
-Hence a shell with
+Thus a diffuse shell with \(J_{j,k}/\nu^2\to0\) cannot be a deep annular image of a locally quiet ancestor maximum packet.
 
-\[
-J_{j,k}/\nu^2\to0
-\]
-
-cannot be the deep annular intersection of a quietly transported ancestor maximum packet.
-
-**Status: PROVED CONDITIONAL only on the explicit quiet-exposure and deep-contact hypotheses.**
+**Status: PROVED CONDITIONAL.**
 
 ---
 
-## 7. Forward genealogy escape theorem
+## 8. Remote descendant maximum cannot stay inside a quiet ancestor packet
 
-For the ancestor occupied first-hitting packet over \(I=[t_n,t_j]\), fix a deformation threshold \(L>0\).
+The first-hitting amplitudes obey
 
-At least one of the following must occur:
+\[
+W_j=q^kW_n.
+\]
 
-### A. Large deformation exposure
+Equivalently, with
+
+\[
+K_k=q^{k/2},
+\]
+
+\[
+\boxed{W_j=K_k^2W_n.}
+\]
+
+Let \(X_j\) be a current first-hitting maximum point, so
+
+\[
+|\omega(X_j,t_j)|=W_j.
+\]
+
+If \(X_j\in A_n(t_j)\), the quiet-packet upper bound from Section 4 would imply
+
+\[
+K_k^2W_n=W_j\le Q_LW_n.
+\]
+
+Hence, whenever
+
+\[
+\boxed{K_k^2>Q_L,}
+\]
+
+the current maximum point cannot belong to the quietly transported ancestor packet:
+
+\[
+\boxed{X_j\notin A_n(t_j).}
+\]
+
+Using the coherent inner ball from Section 5,
 
 \[
 \boxed{
-\Lambda_I
-=
-\int_I\|\nabla u\|_\infty dt
->L.
+|X_j-z_n(t_j)|
+\ge
+\theta_Lr_n
+\qquad(K_k^2>Q_L).
 }
 \]
 
-### B. Large normalized diffusion/derivative exposure
+This is a Galilean-invariant remote center-separation statement. It does not say whether the old packet moved away or the active maximum switched to a different packet; it proves that the two cannot remain the same quiet material core for arbitrarily large age.
+
+**Status: PROVED CONDITIONAL on local packet/tube quietness.**
+
+---
+
+## 9. First-hitting amplification forces global strain exposure
+
+The previous section explains why a *local* genealogy exposure is needed rather than a global one.
+
+Let
+
+\[
+M(t)=\|\omega(t)\|_\infty.
+\]
+
+For
+
+\[
+f=|\omega|^2,
+\]
+
+the vorticity equation gives
+
+\[
+(\partial_t+u\cdot\nabla)f
+=
+2\omega\cdot S\omega
++\nu\Delta f
+-2\nu|\nabla\omega|^2.
+\]
+
+At a spatial maximum of \(f\), the diffusion contribution is nonpositive. Hence the upper Dini derivative obeys
+
+\[
+D^+M(t)
+\le
+\|S(t)\|_\infty M(t).
+\]
+
+Integrating from \(t_n\) to \(t_j\),
+
+\[
+\log\frac{W_j}{W_n}
+\le
+\int_{t_n}^{t_j}\|S(t)\|_\infty dt.
+\]
+
+Since \(W_j/W_n=q^k=K_k^2\),
 
 \[
 \boxed{
-\mathcal D_I
-=
-\frac{\nu}{W_n}
-\int_I\|\Delta\omega\|_\infty dt
->
-\frac{b_0}{2}e^{-L}.
+\int_{t_n}^{t_j}\|S(t)\|_\infty dt
+\ge
+k\log q
+=2\log K_k.
 }
 \]
 
-### C. Coherent amplitude-retaining material packet survives
+Thus the global deformation exposure necessarily diverges with remote age. If the old material packet remains locally quiet, this required amplification must be carried elsewhere in the flow, naturally producing a center-switch/new-active-region alternative.
 
-There exists
+**Status: PROVED.**
 
-\[
-B_{a_0e^{-L}r_n}(z_n(t_j))
-\subset A_n(t_j)
-\]
+---
 
-on which
+## 10. Correct forward genealogy decomposition
 
-\[
-|\omega|\ge q_LW_n.
-\]
+For a remote ancestor packet, one now has the following valid tree.
 
-In branch C, either:
-
-1. the packet has nontrivial contact with \(\mathcal A_{j,k}\), in which case
-   \[
-   J_{j,k}\ge \frac{q_L^2}{2}\nu^2\chi_{j,k};
-   \]
-2. or its contact fraction is small, which is a **radial/location dephasing event** relative to the current age-\(k\) shell.
-
-Thus
+Either
 
 \[
 \boxed{
-\text{ancestor first-hitting occupied packet}
+\Sigma_n(I)>L
+\quad\text{or}\quad
+\mathcal D_n(I)>\frac{b_0}{2}e^{-L}
+\quad\text{or}\quad
+\Lambda_n(I)>L,
+}
+\]
+
+which is a local strain/diffusion/deformation escape,
+
+or the ancestor packet remains a coherent \(O(r_n)\), amplitude-\(O(W_n)\) material packet.
+
+In the quiet case:
+
+- deep annular contact forces \(J_{j,k}\gtrsim\nu^2\);
+- small \(J_{j,k}\) forces small material contact fraction;
+- for sufficiently remote age, the current maximum lies outside the old coherent packet;
+- meanwhile first-hitting amplification requires global strain exposure at least \(2\log K_k\), so the active growth occurs outside the quiet old core.
+
+Therefore
+
+\[
+\boxed{
+\text{remote ancestor packet}
 \Longrightarrow
 \begin{cases}
-\text{large strain/deformation exposure},\\
-\text{large diffusion/fixed-derivative exposure},\\
-\text{annular }J\text{-cost},\\
-\text{radial/location dephasing}.
+\text{local strain/diffusion/tube deformation},\\
+\text{order-one annular }J\text{-contact},\\
+\text{radial dephasing + center/packet switch}.
 \end{cases}
 }
 \]
 
-**Status: PROVED as a forward conditional genealogy decomposition.**
+**Status: PROVED as a forward decomposition.**
 
 ---
 
-## 8. Important consequence for diffuse cubic tails
+## 11. Consequence for diffuse cubic tails
 
-Suppose along a remote-shell subsequence
+On a remote subsequence with
 
 \[
-J_{j,k}/\nu^2\to0.
+J_{j,k}/\nu^2\to0,
 \]
 
-If both deformation and diffusion exposures remain uniformly quiet, then the ancestor packet retains a fixed amplitude and a fixed \(r_n^3\)-scale volume.
-
-Section 5 then forces
+if the ancestor packet is locally quiet, then
 
 \[
-\boxed{
 \chi_{j,k}\to0.
-}
 \]
 
-Therefore a diffuse small-\(J\) shell cannot be identified with a quietly transported first-hitting maximum packet occupying a fixed fraction of that annulus.
+For all sufficiently remote ages it is also distinct from the current maximum packet.
 
-This is a useful negative identification result:
+Hence a diffuse cubic tail cannot be interpreted simply as the same first-hitting maximum packet being quietly carried from generation \(j-k\) to generation \(j\) at its matching radius.
 
-\[
-\boxed{
-J_{j,k}\to0
-+\text{quiet ancestor transport}
-\Longrightarrow
-\text{material genealogy dephases from the annulus}.
-}
-\]
+It requires at least one of:
 
-Hence the non-\(L^3\) cubic tail, if carried by amplitudes tending to zero, must be generated by one or more of:
+1. active local deformation/diffusion of the old packet;
+2. loss of annular contact;
+3. a new active packet / center switch;
+4. shell rebuilding not material-identical to the old maximum packet.
 
-- loss of material amplitude through strain/diffusion exposure;
-- migration away from the annular location;
-- replacement by a different packet / center switch;
-- non-material rebuilding of shell structure.
-
-It cannot simply be the same maximum-centered ancestor packet sitting quietly at its matching scale.
-
-**Status: PROVED within the explicit quiet-exposure hypothesis.**
+**Status: PROVED within the stated local quiet hypotheses.**
 
 ---
 
-## 9. What is still not derived
+## 12. What remains open
 
 The reverse implication
 
 \[
-\boxed{
 J_{j,k}>0
 \stackrel{?}{\Longrightarrow}
-\text{the shell comes from the stage }j-k\text{ maximum packet}
-}
+\text{the shell descends from the stage }j-k\text{ maximum packet}
 \]
 
-is **NOT DERIVED**.
+remains **NOT DERIVED**.
 
-The exact radius identity does not supply this reverse material identification.
+Likewise, center switching alone has not yet been shown to violate the finite energy ledger. Packets at geometrically separated natural scales may have geometrically summable ordinary energy/enstrophy costs.
 
-Likewise, the present calculation does not prove that radial dephasing has a large ordinary energy cost. A current first-hitting center may switch to a different packet, and absolute translation is Galilean-dependent.
-
-The correct next object is therefore not an absolute center displacement. It is a Galilean-invariant dichotomy between
-
-1. **transport dephasing of the same packet**, which should force integrated relative deformation; and
-2. **center/packet switching**, which creates multiplicity of occupied critical packets and should be charged through a packing/time-overlap ledger.
+The next calculation must therefore test whether repeated center switching can carry the **divergent cubic annular mass**, rather than merely whether several packets can coexist.
 
 ---
 
-## 10. Audit table
+## 13. Audit table
 
 | Statement | Status |
 |---|---|
-| Ancestor first-hitting analytic core contains an \(O(r_n)\) occupied ball | PROVED by imported analyticity corridor |
-| Material flow preserves its volume | PROVED |
-| Quiet strain + quiet Laplacian exposure retain a fixed vorticity fraction | PROVED |
-| Bounded integrated \(\|\nabla u\|_\infty\) keeps an \(O(r_n)\) coherent material ball | PROVED |
-| Contact fraction \(\chi\) forces \(J\ge(q^2/2)\nu^2\chi\) | PROVED |
+| Exact ancestor radius identity | PROVED previously |
+| Material ancestor volume preservation | PROVED |
+| Local packet strain/diffusion control gives two-sided amplitude retention | PROVED |
+| Local tube deformation control gives coherent \(O(r_n)\) packet | PROVED CONDITIONAL |
+| Material contact fraction forces \(J\)-cost | PROVED |
 | Deep annular contact forces \(J\gtrsim\nu^2\) | PROVED CONDITIONAL |
-| Small \(J\) + quiet transport forces vanishing ancestor/shell overlap | PROVED |
-| Radius matching alone identifies the same material packet | FALSE |
+| Remote current maximum cannot remain inside a quiet ancestor packet | PROVED CONDITIONAL |
+| First-hitting age \(k\) amplification forces \(\int\|S\|_\infty\ge k\log q\) | PROVED |
+| Global exposure can be assumed uniformly quiet for remote age | FALSE |
+| Radius matching identifies the same material packet | FALSE |
 | Current annular \(J\) automatically comes from the ancestor maximum packet | NOT DERIVED |
-| Radial dephasing automatically contradicts finite energy | NOT DERIVED |
+| Center switching alone contradicts finite energy | NOT DERIVED |
 | Global regularity | UNPROVED |
 
 ---
 
-## 11. Updated frontier
+## 14. Updated frontier
 
-The amplitude/location problem is no longer an undifferentiated missing arrow.
-
-The forward material bridge is now explicit:
+The amplitude/location bridge is now localized correctly:
 
 \[
 \boxed{
-\text{ancestor occupied packet}
+\text{ancestor packet}
 \to
-\text{strain}
-\lor
-\text{diffusion/derivative}
+\text{local deformation/diffusion}
 \lor
 J\text{-contact}
 \lor
-\text{location dephasing}.
+\text{dephasing + center switch}.
 }
 \]
 
-The unresolved genealogy problem is concentrated in
+The next sharp question is
 
 \[
 \boxed{
-\text{location dephasing}
-\quad\text{and}\quad
-\text{packet/center switching}.
+\text{Can repeated center/packet switching support the bounded-}Z\text{ divergent cubic ledger }
+\sum_kJ_k^{3/2}=\infty
+\text{ while all physical dissipation ledgers remain finite?}
 }
 \]
 
-These must be handled Galilean-invariantly; absolute center motion by itself is not a legitimate contradiction mechanism.
+That is now the principal genealogy bottleneck on the corrected bounded-\(Z\), recurrent, non-\(L^3\) branch.
