@@ -1,6 +1,6 @@
 # Global Betchov-Residual / Palinstrophy Absorption — 2026-08-24
 
-Status: **SPATIAL-SEGREGATION LOOPHOLE REMOVED AT THE LEVEL OF A GLOBAL ABSORPTION INEQUALITY / NEW TAIL-INDEPENDENT RIGIDITY CERTIFICATE / GLOBAL REGULARITY NOT PROVED.**
+Status: **SPATIAL-SEGREGATION LOOPHOLE REMOVED AT THE LEVEL OF A GLOBAL ABSORPTION INEQUALITY / SHARP SOBLEV CONSTANT INSERTED / NEW TAIL-INDEPENDENT RIGIDITY CERTIFICATE / GLOBAL REGULARITY NOT PROVED.**
 
 This note strengthens `POSITIVE_MIDDLE_BETCHOV_RESIDUAL_PRODUCTION_SPLIT_2026-08-24.md` and `LERAY_AVERAGED_BETCHOV_RESIDUAL_REQUIREMENT_2026-08-24.md`.
 
@@ -85,8 +85,6 @@ Thus
 }
 \]
 
-The coefficient is sharp for matrices whose three singular values are equal and whose determinant has the appropriate sign.
-
 Consequently the negative-middle positive residual satisfies
 
 \[
@@ -102,7 +100,7 @@ Spatial segregation therefore does not create an unbounded new algebraic object:
 
 ---
 
-## 3. Interpolate the cubic gradient norm by enstrophy and palinstrophy
+## 3. Sharp Sobolev interpolation of the cubic gradient norm
 
 For a smooth finite-energy divergence-free whole-space velocity,
 
@@ -120,14 +118,20 @@ and
 =Q.
 \]
 
-Let `C_S` denote the homogeneous Sobolev constant in
+Use the sharp homogeneous Sobolev inequality in `R3`, written as
 
 \[
+\boxed{
 \|f\|_6
-\le C_S\|\nabla f\|_2.
+\le
+C_S\|\nabla f\|_2,
+\qquad
+C_S
+=\frac1{\sqrt3}\left(\frac2\pi\right)^{2/3}.
+}
 \]
 
-Applying this to the matrix magnitude through the Kato inequality and interpolating `L2` with `L6`,
+Apply it to the matrix magnitude `|grad u|` using the Kato inequality and interpolate `L2` with `L6`:
 
 \[
 \|\nabla u\|_3
@@ -151,7 +155,11 @@ Define
 
 \[
 \boxed{
-C_B:=\frac4{3\sqrt3}C_S^{3/2}.
+C_B
+:=\frac4{3\sqrt3}C_S^{3/2}
+=
+\frac8{\pi\,3^{9/4}}
+\approx0.2149895205.
 }
 \]
 
@@ -181,15 +189,17 @@ C_BZ^{3/4}Q^{3/4}
 C_0\delta^{-3}\nu^{-3}Z^3,
 \]
 
-where
+with the now explicit constant
 
 \[
 \boxed{
-C_0:=\frac{27}{256}C_B^4.
+C_0
+:=\frac{27}{256}C_B^4
+=
+\frac{16}{729\pi^4}
+\approx2.2531648296\times10^{-4}.
 }
 \]
-
-Indeed, choose the Young parameter so that the `Q` coefficient is exactly `delta nu`.
 
 Thus the positive-middle/Betchov production split becomes
 
@@ -268,7 +278,8 @@ the preceding inequality yields the effective backward logarithmic exponent
 \Gamma(\delta)
 :=
 K
-+2C_0\delta^{-3}\nu^{-3}A^2
++\frac{32}{729\pi^4}
+\delta^{-3}\nu^{-3}A^2
 -2(1-\delta)\nu c_{\log}.
 }
 \]
@@ -300,7 +311,8 @@ Hence any `delta in (0,1]` satisfying
 \[
 \boxed{
 K
-+2C_0\delta^{-3}\nu^{-3}A^2
++\frac{32}{729\pi^4}
+\delta^{-3}\nu^{-3}A^2
 -2(1-\delta)\nu c_{\log}
 <\frac12
 }
@@ -312,12 +324,7 @@ closes the bounded-enstrophy ancient branch independently of the velocity tail a
 
 ## 6. Optimize the absorption fraction
 
-For `c_log>0`, differentiate the nonconstant part of `Gamma(delta)`:
-
-\[
--6C_0\delta^{-4}\nu^{-3}A^2
-+2\nu c_{\log}=0.
-\]
+For `c_log>0`, differentiate the nonconstant part of `Gamma(delta)`.
 
 The formal optimizer is
 
@@ -327,6 +334,10 @@ The formal optimizer is
 =
 \left(
 \frac{3C_0A^2}{\nu^4c_{\log}}
+\right)^{1/4}
+=
+\left(
+\frac{16A^2}{243\pi^4\nu^4c_{\log}}
 \right)^{1/4}.
 }
 \]
@@ -359,8 +370,8 @@ The present bound replaces this by
 
 \[
 K
-+\text{a cubic-enstrophy correction}
--\text{a retained viscous correction}.
++\frac{32}{729\pi^4}\delta^{-3}\nu^{-3}A^2
+-2(1-\delta)\nu c_{\log}.
 \]
 
 Thus it is stronger when the ancient enstrophy-amplitude constant `A` is sufficiently small relative to viscosity and/or when the recurrent frequency floor `c_log` is sufficiently large.
@@ -389,10 +400,11 @@ Now the total residual, including any remote/diffuse part, obeys
 
 \[
 \boxed{
-\mathcal R_B\le C_BZ^{3/4}Q^{3/4}.
+\mathcal R_B\le
+\frac8{\pi3^{9/4}}Z^{3/4}Q^{3/4}.
 }
 \]
 
 Therefore spatial segregation is no longer a separate terminal obstruction for the **enstrophy-rigidity route**. It may still matter for the geometric/projective route, but the global vorticity-only route can absorb it analytically.
 
-Status: **THE NEGATIVE-MIDDLE BETCHOV RESIDUAL IS EXACTLY A FULL-VELOCITY-GRADIENT DETERMINANT AND IS GLOBALLY CONTROLLED BY `Z^(3/4) Q^(3/4)`. AFTER YOUNG ABSORPTION THIS PRODUCES AN OPTIMIZABLE TAIL-INDEPENDENT RIGIDITY CERTIFICATE. THE NEW QUANTITATIVE INPUTS ARE ONLY THE ANCIENT TYPE-I CONSTANT `K`, THE ENSTROPHY-DECAY AMPLITUDE `A`, AND THE LOGARITHMIC FREQUENCY FLOOR `c_log`. GLOBAL REGULARITY REMAINS UNPROVED.**
+Status: **THE NEGATIVE-MIDDLE BETCHOV RESIDUAL IS EXACTLY A FULL-VELOCITY-GRADIENT DETERMINANT AND IS GLOBALLY CONTROLLED BY `Z^(3/4) Q^(3/4)` WITH AN EXPLICIT SHARP-SOBLEV-BASED CONSTANT. AFTER YOUNG ABSORPTION THIS PRODUCES AN OPTIMIZABLE TAIL-INDEPENDENT RIGIDITY CERTIFICATE. THE NEW QUANTITATIVE INPUTS ARE ONLY THE ANCIENT TYPE-I CONSTANT `K`, THE ENSTROPHY-DECAY AMPLITUDE `A`, AND THE LOGARITHMIC FREQUENCY FLOOR `c_log`. GLOBAL REGULARITY REMAINS UNPROVED.**
