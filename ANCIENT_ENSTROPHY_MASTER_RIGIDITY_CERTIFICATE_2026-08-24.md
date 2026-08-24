@@ -1,19 +1,20 @@
 # Ancient Enstrophy Master Rigidity Certificate — 2026-08-24
 
-Status: **BOUNDED-ENSTROPHY ANCIENT ENDGAME REDUCED TO THREE NORMALIZED CONSTANTS / VELOCITY TAIL DOES NOT ENTER THE CERTIFICATE / GLOBAL REGULARITY NOT PROVED.**
+Status: **STAGE-WIDE VORTICITY TIGHTNESS REDUCES THE BOUNDED-ENSTROPHY ANCIENT ENDGAME TO `K_I, R_Z, epsilon_Z` / VELOCITY TAIL DOES NOT ENTER / GLOBAL REGULARITY NOT PROVED.**
 
-This note combines the two tail-independent vorticity-only rigidity routes:
+This note combines three tail-independent vorticity-only inputs:
 
 1. the universal trace-free stretching coefficient;
-2. the positive-middle/Betchov-residual absorption inequality.
+2. the positive-middle/Betchov-residual palinstrophy absorption inequality;
+3. the optimized Dirichlet frequency floor forced directly by stage-wide vorticity tightness.
 
-The purpose is to remove redundant constants and identify the smallest remaining quantitative target.
+The previous version used a separately constructed logarithmic frequency average `c_log`. On the stage-wide vorticity-tight corridor, the Dirichlet floor is stronger and pointwise, so the master certificate can be simplified.
 
 ---
 
 ## 1. Restricted ancient inputs
 
-On the vorticity-tight ancient branch, the existing first-hitting inheritance gives
+On the vorticity-tight ancient branch, first-hitting inheritance gives
 
 \[
 \boxed{
@@ -35,81 +36,182 @@ Z_+K_I^{1/2}|t|^{-1/2}.
 Thus the backward decay exponent is
 
 \[
-\alpha=\frac12
+\alpha=\frac12.
 \]
 
-and the amplitude constant in the notation of the Betchov-absorption note is not independent:
+The stage-wide tightness hypothesis is
+
+\[
+\int_{B_{R_Z}}|\Omega|^2
+\ge
+(1-\varepsilon_Z)Z.
+\]
+
+Since `||Omega||_infinity<=1`,
 
 \[
 \boxed{
-A=Z_+K_I^{1/2},
-\qquad
-A^2=Z_+^2K_I.
+Z_+
+=\frac{4\pi R_Z^3}{3(1-\varepsilon_Z)}.
 }
 \]
 
-The recurrent active-core windows additionally give a logarithmic frequency floor
+The optimized Dirichlet cutoff calculation gives the dynamically normalized frequency floor
 
 \[
 \boxed{
-\liminf_{T\to\infty}
-\frac1{\log T}
-\int_{-T}^{-1}\frac{Q}{Z}\,dt
-\ge c_{\log}>0.
+\frac{Q_{dyn}}{Z_{dyn}}
+\ge
+\lambda_{tight}
+:=
+\frac{\Lambda_{tight}(\varepsilon_Z)}{R_Z^2},
 }
 \]
+
+where
+
+\[
+\boxed{
+\Lambda_{tight}(\varepsilon_Z)
+=
+\left[
+\sqrt\pi(1-\varepsilon_Z)^{1/4}
+-
+\varepsilon_Z^{1/4}
+\right]^4.
+}
+\]
+
+Returning to physical/ancient variables,
+
+\[
+\boxed{
+\frac QZ
+\ge
+\lambda_{tight}M(t).
+}
+\]
+
+This is pointwise on the stage-wide tight corridor.
 
 ---
 
-## 2. Route A: universal trace-free stretching
+## 2. Route A: trace-free stretching plus tightness viscosity
 
-The sharp trace-free eigenvalue estimate gives
+The universal trace-free strain eigenvalue estimate gives
 
 \[
 \mathcal P\le\frac1{\sqrt3}MZ.
 \]
 
-Hence
+The enstrophy identity then yields
 
 \[
 \frac d{dt}\log Z
 \le
-\frac{2K_I}{\sqrt3|t|}
--2\nu\frac QZ.
+2\left(
+\frac1{\sqrt3}
+-
+u\lambda_{tight}
+\right)M(t).
 \]
 
-After logarithmic averaging, define
+Define
 
 \[
 \boxed{
-\Gamma_{TF}
+\Gamma_{TF}^{tight}
 :=
-\frac{2K_I}{\sqrt3}
--2\nu c_{\log}.
+2K_I
+\left(
+\frac1{\sqrt3}
+-
+u\lambda_{tight}
+\right).
 }
 \]
 
-Then
+If the bracket is nonpositive, the nontrivial ancient branch is impossible without any timing comparison.
+
+If the bracket is positive, backward comparison with `Z=O(|t|^-1/2)` gives
 
 \[
 \boxed{
-\Gamma_{TF}<\frac12
+\Gamma_{TF}^{tight}<\frac12
 \quad\Longrightarrow\quad
 Z\equiv0.
 }
 \]
 
-Without the frequency floor this reduces to
+Equivalently,
 
 \[
-K_I<\frac{\sqrt3}{4}.
+\boxed{
+2K_I
+\left(
+\frac1{\sqrt3}
+-
+u\frac{\Lambda_{tight}(\varepsilon_Z)}{R_Z^2}
+\right)_+
+<\frac12.
+}
 \]
+
+This is the first master route.
 
 ---
 
-## 3. Route B: positive-middle coefficient plus global Betchov absorption
+## 3. Timing-independent tight-radius closure
 
-The sharp global absorption note gives, for `0<delta<=1`,
+A particularly clean consequence is
+
+\[
+\boxed{
+\nu\lambda_{tight}
+\ge\frac1{\sqrt3}
+\quad\Longrightarrow\quad
+Z\equiv0.
+}
+\]
+
+That is,
+
+\[
+\boxed{
+R_Z^2
+\le
+\sqrt3\,\nu\Lambda_{tight}(\varepsilon_Z)
+\quad\Longrightarrow\quad
+\text{tight ancient branch impossible.}
+}
+\]
+
+For quarter tails,
+
+\[
+\varepsilon_Z=\frac14,
+\qquad
+\Lambda_{tight}(1/4)
+\approx0.7885770233.
+\]
+
+Thus for viscosity normalized to `nu=1`,
+
+\[
+\boxed{
+R_Z\lesssim1.16869819
+\quad\Longrightarrow\quad
+Z\equiv0
+}
+\]
+
+independently of `K_I`.
+
+---
+
+## 4. Route B: positive-middle coefficient plus global Betchov absorption
+
+The global determinant/Hadamard/Sobolev estimate gives, for every `0<delta<=1`,
 
 \[
 \frac d{dt}\log Z
@@ -123,187 +225,176 @@ M
 Use
 
 \[
-M\le K_I|t|^{-1}
+M\le K_I|t|^{-1},
 \]
-
-and
 
 \[
-Z^2
-\le Z_+^2K_I|t|^{-1}.
+Z^2\le Z_+^2K_I|t|^{-1},
 \]
 
-Then the effective logarithmic exponent is
+and the pointwise tightness frequency floor
+
+\[
+Q/Z\ge\lambda_{tight}M.
+\]
+
+Then
 
 \[
 \boxed{
-\Gamma_B(\delta)
+\Gamma_B^{tight}(\delta)
 =
 K_I\left[
-1+
+1
+-2(1-\delta)\nu\lambda_{tight}
++
 \frac{32}{729\pi^4}
 \frac{Z_+^2}{\nu^3\delta^3}
-\right]
--2(1-\delta)\nu c_{\log}.
+\right].
 }
 \]
 
-Therefore
+Hence
 
 \[
 \boxed{
-\inf_{0<\delta\le1}\Gamma_B(\delta)<\frac12
+\inf_{0<\delta\le1}\Gamma_B^{tight}(\delta)
+<\frac12
 \quad\Longrightarrow\quad
 Z\equiv0.
 }
 \]
 
-The formal optimizer is
+The one-dimensional optimizer is determined by
+
+\[
+6\left(
+\frac{16}{729\pi^4}
+\frac{Z_+^2}{\nu^3}
+\right)\delta^{-4}
+=2\nu\lambda_{tight},
+\]
+
+or equivalently
 
 \[
 \boxed{
 \delta_*
 =
 \left(
-\frac{16Z_+^2K_I}
-{243\pi^4\nu^4c_{\log}}
+\frac{16Z_+^2}
+{243\pi^4\nu^4\lambda_{tight}}
 \right)^{1/4},
 \qquad
 \delta_{opt}=\min\{1,\delta_*\}.
 }
 \]
 
+Unlike the previous averaged version, `K_I` cancels from the optimizer because both the Type-I and cubic-enstrophy terms carry the same first-hitting factor.
+
 ---
 
-## 4. Master certificate
+## 5. Master certificate
 
 Define
 
 \[
 \boxed{
-\Gamma_{best}
+\Gamma_{best}^{tight}
 :=
 \min\left\{
-\Gamma_{TF},
-\Gamma_B(\delta_{opt})
+\Gamma_{TF}^{tight},
+\Gamma_B^{tight}(\delta_{opt})
 \right\}.
 }
 \]
 
-Then the bounded-enstrophy ancient branch is impossible whenever
+Then the stage-wide vorticity-tight ancient branch is impossible whenever
 
 \[
 \boxed{
-\Gamma_{best}<\frac12.
+\Gamma_{best}^{tight}<\frac12.
 }
 \]
 
-Indeed backward integration would force `Z(t0)=0` for every finite `t0<0`, contradicting terminal first-hitting nontriviality.
+The ancient low-frequency velocity tail, remote velocity radius, and spatial Betchov segregation do not enter this certificate.
 
 ---
 
-## 5. Remaining normalized parameters
+## 6. Eliminate `Z_+` and `lambda_tight`
 
-The certificate depends only on
+Both remaining quantities are explicit functions of the tightness geometry:
+
+\[
+\boxed{
+Z_+
+=
+\frac{4\pi R_Z^3}{3(1-\varepsilon_Z)},
+}
+\]
+
+\[
+\boxed{
+\lambda_{tight}
+=
+\frac{
+[\sqrt\pi(1-\varepsilon_Z)^{1/4}-\varepsilon_Z^{1/4}]^4
+}{R_Z^2}.
+}
+\]
+
+Thus, for fixed viscosity, the complete tight-branch master certificate depends only on
 
 \[
 \boxed{
 K_I,
 \qquad
-Z_+,
+R_Z,
 \qquad
-c_{\log},
-\qquad
-\nu.
+\varepsilon_Z.
 }
 \]
 
-For fixed viscosity, there are only three dynamical normalized constants.
-
-Their meanings are:
-
-- `K_I`: continuous backward Type-I vorticity constant inherited from first-hitting stage timing;
-- `Z_+`: normalized dynamic enstrophy ceiling from the vorticity-tight corridor;
-- `c_log`: logarithmic frequency/palinstrophy floor forced by recurrent active-core windows.
-
-No global velocity `L3` norm, weak-`L3` tail, remote velocity radius, or spatial Betchov-localization constant appears.
+This is a genuine reduction from the previous independent list `K_I,Z_+,c_log`.
 
 ---
 
-## 6. Substitute the known enstrophy-tightness ceiling
+## 7. Remaining global issue
 
-If
+The certificate does **not** prove that every singular candidate is vorticity-tight with a universal `R_Z`. The anti-proof audit already identified diffuse/global enstrophy escape as a separate possibility.
 
-\[
-\int_{B_{R_Z}}|\Omega|^2
-\ge(1-\varepsilon_Z)Z
-\]
-
-and `||Omega||_infinity<=1`, then
+Therefore the correct global proof tree is now:
 
 \[
 \boxed{
-Z_+
-=\frac{4\pi R_Z^3}{3(1-\varepsilon_Z)}.
+\text{singular candidate}
+\Longrightarrow
+\text{stage-wide vorticity-tight branch}
+\quad\lor\quad
+\text{vorticity non-tight/escape branch}.
 }
 \]
 
-Thus `Z_+` can itself be replaced by the geometric pair
+On the tight branch, the endgame is now the scalar inequality above. The non-tight branch must still be routed through the corrected historical/rebuild/remote mechanisms or bypassed by a local compactness argument.
 
-\[
-R_Z,\qquad\varepsilon_Z.
-\]
-
-The Betchov cubic correction becomes
-
-\[
-\frac{32}{729\pi^4}Z_+^2
-=
-\boxed{
-\frac{512}{6561\pi^2}
-\frac{R_Z^6}{(1-\varepsilon_Z)^2}
-}
-\]
-
-before the factors `K_I/(nu^3 delta^3)` are inserted.
-
-Hence a tighter enstrophy radius directly improves the new rigidity gate with sixth-power sensitivity.
+This distinction is important: the new frequency floor makes the tight branch substantially stronger, but it does not justify silently treating global non-tightness as `T`.
 
 ---
 
-## 7. Interpretation
+## 8. Highest-leverage next targets
 
-The ancient low-frequency velocity tail remains a genuine object geometrically, but it is no longer present in this particular closure test.
-
-The proof program now has two logically different options:
-
-1. continue classifying/removing the persistent passive velocity tail;
-2. prove `Gamma_best<1/2` from first-hitting timing, enstrophy tightness, and recurrent frequency production alone.
-
-The second route is shorter if its constants can be closed.
-
----
-
-## 8. Next quantitative target
-
-The highest-leverage next calculation is not another tail decomposition. It is to reduce or lower-bound the three master inputs:
+Inside the tight branch, only two quantitative improvements remain useful:
 
 \[
 \boxed{
-K_I\downarrow,
-\qquad
-Z_+\downarrow,
-\qquad
-c_{\log}\uparrow.
+K_I\downarrow
+\qquad\text{or}\qquad
+R_Z\downarrow.
 }
 \]
 
-The existing files already contain separate estimates for all three:
+`epsilon_Z` may also be optimized, but it is already explicit.
 
-- moving-variance / stage-duration ceilings for `K_I`;
-- thick-core/tightness geometry for `Z_+`;
-- active-core Poincare/palinstrophy windows for `c_log`.
+Outside the tight branch, the parallel anti-proof task remains to classify vorticity non-tightness without assuming it is turnover.
 
-They should now be optimized against the single scalar inequality `Gamma_best<1/2` instead of being developed as separate proof branches.
-
-Status: **THE BOUNDED-ENSTROPHY ANCIENT ENDGAME HAS A SINGLE EXPLICIT TAIL-INDEPENDENT MASTER CERTIFICATE. FOR FIXED VISCOSITY IT DEPENDS ONLY ON `K_I`, `Z_+`, AND `c_log`. GLOBAL REGULARITY REMAINS UNPROVED.**
+Status: **STAGE-WIDE VORTICITY TIGHTNESS CONVERTS PALINSTROPHY INTO A POINTWISE DAMPING TERM AT THE SAME SCALE AS VORTEX STRETCHING. FOR FIXED VISCOSITY THE BOUNDED-ENSTROPHY ANCIENT ENDGAME NOW DEPENDS ONLY ON `K_I,R_Z,epsilon_Z`. QUARTER-TAIL TIGHTNESS WITH `R_Z<=1.1687 sqrt(nu)` IS CLOSED INDEPENDENTLY OF STAGE TIMING. GLOBAL REGULARITY REMAINS UNPROVED.**
