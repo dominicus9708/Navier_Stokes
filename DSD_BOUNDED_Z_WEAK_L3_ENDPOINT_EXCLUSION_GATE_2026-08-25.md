@@ -1,319 +1,100 @@
-# DSD Bounded-Z Weak-\(L^3\) Endpoint Exclusion Gate
+# DSD Bounded-Z Weak-L3 Endpoint Exclusion Gate — SUPERSEDED
 
 Date: 2026-08-25
 
-Status: **CONDITIONAL ENDPOINT CLOSURE USING A KNOWN TYPE-I QUANTITATIVE THEOREM / BOUNDED-Z PLUS UNIFORM WEAK-\(L^3\) IS INCOMPATIBLE WITH THE SINGULAR FIRST-HITTING CORRIDOR / REMAINING SURVIVOR MUST ESCALATE ITS WEAK-\(L^3\) NORM OR LEAVE THE CORRIDOR / GLOBAL REGULARITY UNPROVED.**
+Audit correction: 2026-08-26
 
-## 1. Purpose
+Status: **SUPERSEDED / TERMINAL EXCLUSION INVALID / INTERNAL DISTRIBUTION AND BIOT-SAVART ESTIMATES RETAINED / SEE `DSD_AUDIT_BARKER_PRANGE_CUBIC_LOG_RATE_CORRECTION_2026-08-26.md` / GLOBAL REGULARITY UNPROVED.**
 
-The critical flux-loop model shows that a pure \(1/R\) conveyor naturally lives in the scale-invariant Lorentz space \(L^{3,\infty}\).
+## Correction
 
-This note asks whether such a **uniformly weak-critical** conveyor can coexist with the additional bounded normalized-enstrophy structure of the present proof corridor.
+The original version of this file mis-transcribed the Barker--Prange quantitative Type-I lower bound.
 
-The answer is no, provided the weak-\(L^3\) bound holds uniformly on the full near-singular time corridor required by the external Type-I theorem.
-
-## 2. Uniform normalized velocity \(L^\infty\) bound from first hitting and bounded Z
-
-At a first-hitting normalized time,
+The correct theorem-level quantity is the cubic integral
 
 \[
-\|\Omega\|_\infty\le1
+\int_{B_R}|u(x,t)|^3\,dx
+\gtrsim
+c(M)\log\frac1{T^*-t},
 \]
 
-(and on an entire stage the same argument gives a fixed q-dependent bound if normalized by the stage base amplitude).
+not the L3 norm itself with a logarithmic lower bound.
 
-Assume
+Equivalently,
 
 \[
-\|\Omega\|_2^2\le Z_+.
+\|u(t)\|_{L^3(B_R)}
+\gtrsim
+c(M)^{1/3}
+\left(\log\frac1{T^*-t}\right)^{1/3}.
 \]
 
-Biot--Savart gives
+The internal weak-L3 plus Linfinity estimate gives
 
 \[
-|U(x)|
-\le C
-\int\frac{|\Omega(y)|}{|x-y|^2}dy.
+\int_{B_R}|U|^3
+\lesssim
+C(M,Z_+)(1+\log R),
 \]
 
-Split at radius \(a\):
+which, at the Barker--Prange radius, has the same logarithmic order as the external lower bound.
+
+Therefore the old claimed contradiction
 
 \[
-\int_{|x-y|<a}\frac{|\Omega(y)|}{|x-y|^2}dy
-\le C\|\Omega\|_\infty a,
+\text{bounded Z}+	ext{uniform weak-L3}
+\Longrightarrow
+\bot
 \]
 
-while Cauchy--Schwarz gives
+is not established.
+
+## Retained valid ingredients
+
+The following parts of the original calculation remain valid and may still be cited independently:
+
+1. If normalized vorticity satisfies
 
 \[
-\int_{|x-y|>a}\frac{|\Omega(y)|}{|x-y|^2}dy
-\le
-C\|\Omega\|_2a^{-1/2}.
+\|\Omega\|_\infty\le C_\Omega,
+\qquad
+\|\Omega\|_2^2\le Z_+,
 \]
 
-Optimizing
+then Biot--Savart splitting gives a normalized velocity ceiling of the form
 
 \[
-a\asymp
-\left(
-\frac{\|\Omega\|_2}{\|\Omega\|_\infty}
-\right)^{2/3}
-\]
-
-yields
-
-\[
-\boxed{
 \|U\|_\infty
 \le
-C_{BS}\|\Omega\|_\infty^{1/3}
-\|\Omega\|_2^{2/3}.
-}
+C\|\Omega\|_\infty^{1/3}\|\Omega\|_2^{2/3}.
 \]
 
-Hence on the bounded-Z first-hitting corridor,
+2. If additionally
 
 \[
-\boxed{
-\|U\|_\infty\le K_\infty
-:=C_{BS}Z_+^{1/3}.
-}
+\|U\|_{L^{3,\infty}}\le M,
 \]
 
-The exact numerical Biot--Savart constant is not needed.
-
-## 3. Weak \(L^3\) plus \(L^\infty\) gives only logarithmic local \(L^3^3\) growth
-
-Assume now the endpoint bound
+then on a measurable set E of finite volume,
 
 \[
-\boxed{
-\|U(s)\|_{L^{3,\infty}(\mathbb R^3)}
-\le M
-}
-\]
-
-uniformly on the near-singular corridor.
-
-For any measurable region \(E\) of volume \(V\), the distribution function satisfies
-
-\[
-\mu_E(\lambda)
-:=|\{x\in E:|U(x)|>\lambda\}|
+\int_E|U|^3
 \le
-\min\{V,M^3\lambda^{-3}\}.
+M^3+3M^3
+\log_+\left(\frac{K_\infty |E|^{1/3}}{M}\right).
 \]
 
-Since \(|U|\le K_\infty\), layer cake gives
+3. Therefore on large balls the cubic integral grows at most logarithmically under uniform weak-L3 and Linfinity control.
 
-\[
-\int_E|U|^3dx
-=3\int_0^{K_\infty}\lambda^2\mu_E(\lambda)d\lambda.
-\]
+These are estimates, not a singularity exclusion theorem.
 
-Let
+## Correct dependency
 
-\[
-\lambda_0=MV^{-1/3}.
-\]
+For the full audit and the corrected W1 frontier, use
 
-Then, whenever \(\lambda_0<K_\infty\),
+`DSD_AUDIT_BARKER_PRANGE_CUBIC_LOG_RATE_CORRECTION_2026-08-26.md`.
 
-\[
-\begin{aligned}
-\int_E|U|^3dx
-&\le
-3V\int_0^{\lambda_0}\lambda^2d\lambda
-+3M^3\int_{\lambda_0}^{K_\infty}\frac{d\lambda}{\lambda}\\
-&=
-M^3
-+3M^3\log\frac{K_\infty V^{1/3}}{M}.
-\end{aligned}
-\]
-
-Therefore for a ball \(B_R\),
-
-\[
-\boxed{
-\|U\|_{L^3(B_R)}^3
-\le
-C M^3
-\left[
-1+\log_+\left(\frac{K_\infty R}{M}\right)
-\right].
-}
-\]
-
-In particular,
-
-\[
-\boxed{
-\|U\|_{L^3(B_R)}
-\lesssim_{M,Z_+}
-(1+\log R)^{1/3}.
-}
-\]
-
-This upper bound uses only the weak-critical distribution estimate and the bounded-Z-induced amplitude ceiling.
-
-## 4. External Type-I quantitative lower bound
-
-Barker--Prange, *Quantitative Regularity for the Navier--Stokes Equations Via Spatial Concentration*, Communications in Mathematical Physics 385 (2021), prove a quantitative result for a first singular time under a uniform Type-I weak-critical bound
-
-\[
-\|u\|_{L_t^\infty L_x^{3,\infty}}\le M_{phys}.
-\]
-
-In particular, near a singular point the strong \(L^3\) norm on a ball whose physical radius is slightly larger than the parabolic scale has a lower bound of logarithmic order:
-
-\[
-\boxed{
-\|u(t)\|_{L^3(B_{\mathcal R(t)})}
-\ge
-c(M_{phys})
-\log\frac1{T^*-t}
-}
-\]
-
-for an admissible
-
-\[
-\mathcal R(t)
-=O\big((T^*-t)^{1/2-\delta}\big)
-\]
-
-with fixed \(\delta>0\) in the quantitative formulation.
-
-This is an external theorem, not a new derivation in this repository.
-
-## 5. Convert the theorem radius to normalized radius
-
-On the present corridor,
-
-\[
-r(t)\asymp\sqrt{T^*-t}
-\]
-
-up to fixed \(\nu\) and \(\Theta\) factors.
-
-Therefore the corresponding normalized radius is
-
-\[
-R(t)
-=\frac{\mathcal R(t)}{r(t)}
-\lesssim
-(T^*-t)^{-\delta}.
-\]
-
-Hence
-
-\[
-\boxed{
-\log R(t)
-\lesssim
-\delta\log\frac1{T^*-t}+O(1).
-}
-\]
-
-The \(L^3\) norm is scale invariant up to the fixed \(\nu\)-normalization used in this repository.
-
-Thus the internal weak-\(L^3\)+bounded-Z upper estimate gives
-
-\[
-\|u(t)\|_{L^3(B_{\mathcal R(t)})}
-\lesssim
-C(M,Z_+)
-\left(
-\log\frac1{T^*-t}
-\right)^{1/3}.
-\]
-
-The external singularity lower bound requires
-
-\[
-\|u(t)\|_{L^3(B_{\mathcal R(t)})}
-\gtrsim
-c(M)
-\log\frac1{T^*-t}.
-\]
-
-For sufficiently late times these are incompatible.
-
-Therefore
-
-\[
-\boxed{
-\text{bounded normalized enstrophy}
-+
-\text{uniform full-corridor }L^{3,\infty}
-+
-\text{first singular time}
-\quad\text{is impossible.}
-}
-\]
-
-Status: **CONDITIONAL CLOSURE, with the condition being the full-corridor weak-\(L^3\) bound needed by the external theorem.**
-
-## 6. Consequence for the permanent conveyor
-
-An ideal fixed-amplitude \(1/R\) pulse train with bounded overlap is uniformly bounded in \(L^{3,\infty}\).
-
-Therefore such a genuinely uniform weak-critical permanent conveyor cannot be the final singular survivor inside the bounded-Z corridor.
-
-Any surviving export branch must instead satisfy at least one of:
-
-\[
-\boxed{
-\begin{aligned}
-&\|U(s)\|_{L^{3,\infty}}\to\infty
-\quad\text{along the near-singular corridor},\\
-&Z\text{ loses its bounded recurrent corridor},\\
-&\text{the tail ceases to be a uniformly critical bounded-overlap conveyor},\\
-&\text{or another previously typed H/T complement activates.}
-\end{aligned}
-}
-\]
-
-This sharpens the earlier phrase “critical \(1/R\) tail.”
-
-A singular survivor cannot remain uniformly weak-critical while also retaining the bounded-Z structure.
-
-## 7. Important scope point
-
-A weak-\(L^3\) bound only at the discrete first-hitting times is **not** enough to invoke the Barker--Prange \(L_t^\infty L_x^{3,\infty}\) theorem.
-
-Therefore the next internal task is not to assume endpoint boundedness silently.
-
-It is to prove one of:
-
-1. the quiet passive-export corridor propagates a uniform weak-\(L^3\) bound throughout every late stage; or
-2. failure of such propagation forces a typed amplitude/overlap/turnover/H event.
-
-This is now the precise remaining bridge.
-
-## 8. Audit verdict
-
-### PROVED INTERNALLY
-
-- bounded normalized vorticity amplitude and bounded normalized enstrophy imply a uniform normalized velocity \(L^\infty\) bound;
-- weak \(L^3\)+\(L^\infty\) implies local strong \(L^3^3\) growth at most logarithmic in radius.
-
-### EXTERNAL THEOREM
-
-- a Type-I weak-\(L^3\) singularity must exhibit a much stronger logarithmic lower growth of the strong \(L^3\) norm on an admissible shrinking physical ball (Barker--Prange 2021).
-
-### CONDITIONAL CLOSURE
-
-- bounded Z + a uniform **full-time-corridor** weak-\(L^3\) bound excludes the singular survivor.
-
-### NEW FRONTIER
-
-\[
-\boxed{
-\text{prove weak-}L^3\text{ propagation on quiet permanent export}
-\quad\text{or route its failure to H/T.}
-}
-\]
+The original pre-correction content remains available in Git history.
 
 \[
 \boxed{\text{GLOBAL REGULARITY REMAINS UNPROVED.}}
