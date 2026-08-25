@@ -2,24 +2,24 @@
 
 Date: 2026-08-26
 
-Status: **TEMPTING DIRECT FINITE-ENERGY CONTRADICTION REJECTED FOR THE OMEGA-LIMIT ORBIT / CONDITIONAL DIAGONAL-INHERITANCE LEMMA SHOWN TO CLOSE THE PERIODIC CRITICAL TAIL / PRELIMIT-TO-LIMIT MOVING-SHELL TRANSFER IDENTIFIED AS THE MISSING BRIDGE / GLOBAL REGULARITY UNPROVED.**
+Status: **DIRECT FINITE-ENERGY CONTRADICTION REJECTED / A STRONG DIAGONAL-INHERITANCE STATEMENT WOULD CLOSE THE PERIODIC TAIL, BUT THE ALL-AGE CHARACTERISTIC CALCULATION SHOWS THAT FIXED PHYSICAL RADII TRACE BACK TO FIXED ABSOLUTE LERAY TIMES RATHER THAN TO THE LATE PERIODIC OMEGA-LIMIT / THE FORMER SIMPLE TWO-STEP INHERITANCE ROUTE IS WITHDRAWN / GLOBAL REGULARITY UNPROVED.**
 
-## 1. The tempting argument
+## 1. The tempting finite-energy argument
 
-The periodic W1 omega-limit orbit has a nonzero canonical physical critical trace
+The periodic W1 omega-limit orbit has a nonzero canonical critical trace
 
 \[
 t_*(x)
 =|x-X_*|^{-1}\Phi(\widehat{x-X_*},\log|x-X_*|).
 \]
 
-A nonzero discretely homogeneous degree-`-1` field is locally `L2` near the origin but not globally `L2` at spatial infinity.  Indeed, if one canonical annular cell carries positive energy
+A nonzero discretely homogeneous degree-`-1` field is locally `L2` near the origin but not globally `L2` at infinity.  If one canonical annular cell carries
 
 \[
 E_*:=\int_{1<|x|<\lambda}|t_*|^2dx>0,
 \]
 
-then discrete scaling gives
+then
 
 \[
 \int_{\lambda^k<|x|<\lambda^{k+1}}|t_*|^2dx
@@ -29,59 +29,42 @@ then discrete scaling gives
 Hence
 
 \[
-\boxed{t_*\notin L^2(\mathbb R^3)}
+\boxed{t_*\notin L^2(\mathbb R^3)}.
 \]
 
-whenever it is nonzero.
+The original smooth physical solution has finite kinetic energy before the candidate singular time.  This makes a direct contradiction look possible.
 
-The original smooth Navier--Stokes solution, however, has finite kinetic energy uniformly before the candidate singular time.  This makes a direct contradiction look possible.
+## 2. Why the omega-limit trace is not automatically a physical final trace
 
-## 2. Why the direct argument is invalid
-
-The periodic W1 object `U_per` is not the original rescaled trajectory itself.  It is an omega-limit orbit obtained from a sequence of Leray time shifts
+The periodic object `U_per` is an omega-limit ancient orbit obtained from time shifts of the original Leray trajectory,
 
 \[
-U_{orig}(s_n+\cdot)\to U_{per}(\cdot)
+U_{orig}(s_n+\cdot)\to U_{per}(\cdot),
 \]
 
-in the compact topology, in particular globally in `Lp` for the fixed `p>3` used in W1 and smoothly on bounded spatial sets.
+in the W1 compact topology: smoothly on bounded Leray sets and globally in the fixed `Lp`, `p>3`, topology.
 
-The physical inverse transform at a fixed nonzero physical point uses the rescaled coordinate
+A fixed nonzero physical point at time `s_n` corresponds instead to
 
 \[
 Y_n
 =\frac{x-X_*}{\sqrt{T^*-t_n}}
-\asymp e^{s_n/2}.
+\asymp e^{s_n/2},
 \]
 
-Thus the point/shell relevant to the physical final trace moves to spatial infinity **at the same time as** `s_n->infinity`.
+which moves to spatial infinity at the same time as `s_n->infinity`.
 
-Convergence on every fixed Leray ball does not control this diagonal regime.
+Thus fixed-Leray-radius omega-limit convergence does not control the required diagonal.
 
-Even global `Lp`, `p>3`, convergence does not solve the problem, because a critical `1/R` shell has
+Global `Lp`, `p>3`, convergence also does not solve this: a critical `1/R` shell has
 
 \[
-\int_{A_R}|U|^p
-\sim R^{3-p}\to0
+\int_{A_R}|U|^p\sim R^{3-p}\to0
 \]
 
-while its physical critical `L2` energy after inverse scaling can remain order one on a fixed physical annulus.  The critical memory is therefore invisible to the `p>3` tail norm in precisely the moving-shell limit needed here.
+while its inverse-scaled physical `L2` contribution on an appropriate annulus can remain critical.  The `p>3` topology therefore loses precisely the endpoint memory relevant to this question.
 
-Hence
-
-\[
-\boxed{
-U_{orig}(s_n)\to U_{per}
-\text{ in W1 topology}
-\not\Rightarrow
-\text{physical convergence to }t_*
-\text{ on fixed spatial annuli}.
-}
-\]
-
-This rejects the naive finite-energy closure.
-
-## 3. Exact diagonal shell corresponding to a fixed physical annulus
+## 3. The finite-energy diagonal
 
 Let
 
@@ -93,158 +76,205 @@ and fix a physical annulus
 
 \[
 A^{phys}_{a,b}
-=\{a<|x-X_*|<b\},
-\qquad0<a<b<\infty.
+=\{a<|x-X_*|<b\}.
 \]
 
-In Leray variables this becomes
+Its Leray image is
 
 \[
-A^{Leray}_{n}
-=\{a\tau_n^{-1/2}<|Y|<b\tau_n^{-1/2}\}.
+A^{Leray}_n
+=\{a\tau_n^{-1/2}<|Y|<b\tau_n^{-1/2}\},
 \]
 
-Thus its characteristic radius is
+so its characteristic radius satisfies
 
 \[
 \boxed{R_n\asymp e^{s_n/2}.}
 \]
 
-This is the **finite-energy diagonal**.
+This simultaneous `s_n->infinity`, `R_n->infinity` regime is the finite-energy diagonal.
 
-A tail theorem that is uniform for fixed `R` and then takes `R->infinity` is not automatically a theorem on `R=R_n` simultaneously with `s=s_n`.
+## 4. A sufficiently strong diagonal inheritance theorem would close the periodic trace
 
-## 4. Conditional diagonal-inheritance lemma
-
-Suppose one could prove, along a blow-up sequence, that for every fixed physical annulus `A_phys`,
+If, along a blow-up sequence, one could prove for every fixed physical annulus that
 
 \[
 \boxed{
-\|u(t_n)-t_*\|_{L^2(A^{phys})}\to0.
+\|u(t_n)-t_*\|_{L^2(A^{phys}_{a,b})}\to0,
 }
 \]
 
-Equivalently in Leray variables,
+then the physical energy inequality would imply
+
+\[
+\int_{a<|x-X_*|<b}|t_*|^2dx\le E_0
+\]
+
+for every `0<a<b<infinity`.  Sending `a downarrow0` and `b upward infinity` would give
+
+\[
+\|t_*\|_2^2\le E_0,
+\]
+
+contradicting the nonzero degree-`-1` DSS energy scaling.
+
+Thus the purely conditional implication remains true:
 
 \[
 \boxed{
-\tau_n^{1/4}
-\|U_{orig}(s_n)-T_{per}(\cdot,s_n^{phase})\|_{L^2(A^{Leray}_n)}
-\to0.
-}
-\]
-
-This is the missing **diagonal tail inheritance** statement.
-
-## 5. Such inheritance would immediately force the trace into global L2
-
-The physical energy inequality gives
-
-\[
-\sup_{t<T^*}\|u(t)\|_2^2\le E_0<\infty.
-\]
-
-If the local annular convergence above holds, then for every `0<a<b<infinity`,
-
-\[
-\int_{a<|x-X_*|<b}|t_*|^2dx
-=
-\lim_{n\to\infty}
-\int_{a<|x-X_*|<b}|u(t_n)|^2dx
-\le E_0.
-\]
-
-Let `a downarrow 0` and `b upward infinity`.  Monotone convergence gives
-
-\[
-\boxed{
-\|t_*\|_2^2\le E_0.
-}
-\]
-
-But every nonzero discretely homogeneous degree-`-1` trace has infinite global L2 energy.  Therefore
-
-\[
-\boxed{t_*=0.}
-\]
-
-This contradicts the nonzero periodic W1 critical-shell/canonical-tail result.
-
-Hence
-
-\[
-\boxed{
-\text{DIAGONAL TAIL INHERITANCE}
+\text{global fixed-physical-radius diagonal inheritance}
 \Longrightarrow
-\text{NO NONZERO PERIODIC W1 SURVIVOR}.
+\text{no nonzero periodic W1 trace}.
 }
 \]
 
-## 6. Why the existing exterior L2 quotient does not already prove inheritance
+The issue is whether such inheritance is compatible with the actual all-age transport geometry.
 
-For the periodic omega-limit orbit itself,
+## 5. Exact all-age characteristic calculation
 
-\[
-U_{per}-T_{per}\in L^2(\{|Y|>R_0\})
-\]
-
-uniformly in periodic phase.  If `U_per` were the actual rescaled physical solution, inverse scaling would indeed give
-
-\[
-\|u-t_*\|_{L^2(A^{phys})}
-\le
-\tau^{1/4}\|U_{per}-T_{per}\|_2
-\to0.
-\]
-
-But `U_per` is only an omega-limit model.  The missing estimate is for
-
-\[
-U_{orig}(s_n)-U_{per}(s_n^{phase})
-\]
-
-on the moving annulus `R_n~e^{s_n/2}`, not on a fixed Leray ball.
-
-This distinction is essential.
-
-## 7. Relation to the all-age co-moving transport estimate
-
-The repository has the strong all-age shell estimate
+The repository has the all-age co-moving estimate, schematically,
 
 \[
 \|W_R(h)-W_R(0)\|_{H^{-1}}
 \le CR^{-2}
-\qquad\forall h\ge0.
+\qquad\forall h\ge0,
 \]
 
-This removes deterioration with shell age and is therefore highly relevant to the diagonal problem.
+and by autonomy it may be started at a late base time `s_b`:
 
-However it compares a shell to its own co-moving ancestor on the **same actual orbit**.  It does not by itself identify that ancestor with the phase of the omega-limit periodic orbit at a fixed remote base radius.
+\[
+W_{R,s_b}(h,z)
+=e^{h/2}R\,
+U_{orig}(e^{h/2}Rz,s_b+h).
+\]
 
-The remaining bridge can therefore be formulated as a two-step compatibility problem:
+At final Leray time `s_n`, a fixed physical radius `r` corresponds to
 
-1. use all-age co-moving transport to pull the diagonal shell `R_n~e^{s_n/2}` back to one controlled remote base shell;
-2. use omega-limit recurrence/convergence strongly enough on that base shell to identify the pulled-back profile with the canonical periodic phase.
+\[
+R_n=e^{s_n/2}r.
+\]
 
-A successful estimate must keep the base radius large enough for the all-age error to be small while keeping it fixed enough for omega-limit convergence to apply.
+To pull this shell back to one fixed normalized base radius `R_0`, one must choose age
 
-This is now a sharply posed diagonal compactness problem rather than a vague finite-energy objection.
+\[
+\boxed{
+h_n=2\log(R_n/R_0)
+=s_n+2\log(r/R_0).}
+\]
 
-## 8. Candidate epsilon--R order of limits
+Therefore the corresponding base time is
 
-The natural safe order is:
+\[
+\boxed{
+s_b=s_n-h_n
+=2\log(R_0/r),}
+\]
 
-- first choose a large but finite base radius `R0` so the all-age transport error is `O(R0^-alpha)`;
-- then take the omega-limit sequence `s_n->infinity`, using compact/smooth convergence on the fixed ball containing the `R0` shell;
-- only after passing `n->infinity`, send `R0->infinity`.
+which is **independent of `n`**.
 
-If the accumulated comparison error remains uniform when the co-moving age is chosen to hit the physical diagonal, this order of limits may produce the desired diagonal inheritance.
+This is the key ancestry identity.
 
-The existing all-age estimate is designed precisely to avoid an age-dependent constant, so this route is technically plausible.  It is not completed in this note.
+## 6. Consequence: fixed physical radii do not trace back to the late omega-limit phase
 
-## 9. Updated periodic closure target
+For fixed `r` and fixed `R0`, the all-age characteristic does not pull the diagonal shell back to a state whose Leray time tends to infinity.  It pulls it back to one fixed absolute time
 
-The periodic branch now has two complementary endgame routes:
+\[
+s_b=2\log(R_0/r).
+\]
+
+Hence the earlier proposed argument
+
+\[
+\text{pull to fixed }R_0
+\quad+\quad
+\text{use }U_{orig}(s_n)\to U_{per}
+\]
+
+mixes incompatible base times and is withdrawn.
+
+The correct structural statement is
+
+\[
+\boxed{
+\text{fixed physical final radius}
+\longleftrightarrow
+\text{its own earlier actual-orbit shell ancestry},
+}
+\]
+
+not automatically the late periodic omega-limit phase.
+
+## 7. Why allowing the base radius to vary does not immediately repair the argument
+
+One could try to make the base time late by taking
+
+\[
+R_0=R_0(n)\to\infty.
+\]
+
+Indeed
+
+\[
+s_b(n)=2\log(R_0(n)/r)\to\infty.
+\]
+
+But then the base shell itself moves to infinity.  Fixed-radius omega-limit compactness no longer applies there.
+
+Thus one faces the same diagonal problem in a different form:
+
+\[
+\boxed{
+R_0(n)\to\infty
+\quad\text{and}\quad
+s_b(n)\to\infty.
+}
+\]
+
+No existing W1 convergence theorem identifies such a moving base shell with the periodic canonical phase.
+
+## 8. Physical meaning of the periodic omega-limit tail
+
+The periodic omega-limit tail should therefore not be interpreted as a globally established final physical field on all fixed radii.
+
+Its rigorous meaning is a critical intermediate-asymptotic structure in rescaled variables.  In physical variables, the region controlled directly by late omega-limit information shrinks toward the singular point as `t->T*`, unless an additional moving-shell inheritance theorem is proved.
+
+This also explains why an infinite-energy ancient/DSS blow-up model can arise from a finite-energy physical solution: energy may be lost in the blow-up limit through the spatial scale sent to infinity in Leray coordinates.
+
+## 9. Consistency with normalized finite energy
+
+The physical energy relation is
+
+\[
+\|u(t)\|_2^2
+=
+\tau^{1/2}\|U_{orig}(s)\|_2^2.
+\]
+
+Thus finite physical energy permits normalized `L2` size as large as
+
+\[
+\|U_{orig}(s)\|_2^2
+\lesssim E_0e^{s/2}.
+\]
+
+A critical `1/R` tail truncated at normalized radius `R\sim e^{s/2}` has exactly linear-in-R energy growth, of this admissible order.  Therefore the prelimit energy scaling itself is consistent with a growing critical conveyor over the normalized range available before the fixed physical scale is reached.
+
+This is an anti-proof check: no hidden power mismatch appears.
+
+## 10. What finite-energy route actually remains
+
+A finite-energy contradiction would require a stronger theorem than ordinary omega-limit compactness.  Examples of sufficient, but presently unproved, statements include:
+
+1. a moving-shell convergence theorem on `R_n~e^{s_n/2}` to one nonzero DSS phase;
+2. a genealogy theorem forcing the same nonzero critical coefficient across a family of physical radii whose total `L2` energy diverges;
+3. a uniform prelimit lower bound placing more than the allowed `O(e^{s/2})` normalized energy into the critical tail;
+4. a no-loss-at-Leray-infinity compactness theorem strong enough to retain endpoint `L2` mass.
+
+None is derived from the current W1 data.
+
+## 11. Revised periodic closure target
+
+The periodic branch retains the proved internal reduction
 
 \[
 \boxed{
@@ -252,39 +282,39 @@ P_{DSS}^{long}
 \Longrightarrow
 H_{2,crit}^{tail}
 \lor
-P_{ren}^{core},
+P_{ren}^{core}.
 }
 \]
 
-from the renormalized-interface audit, and independently
+The finite-energy route is now classified as a separate, stronger transfer problem:
 
 \[
 \boxed{
 P_{DSS}^{long}
 +
-\text{diagonal tail inheritance}
+\text{moving-shell no-loss / genealogy theorem}
 \Longrightarrow
-\bot
+\text{possible finite-energy contradiction}.
 }
 \]
 
-from the original finite-energy bound.
+It is **not** counted as a current closure lemma.
 
-The second route is especially attractive because it does not require a sign-definite renormalized core functional; it requires only a sufficiently uniform prelimit/omega-limit tail-transfer lemma.
+## 12. DSD audit
 
-## 10. DSD audit
-
-The following are explicitly distinguished:
+The argument explicitly distinguishes:
 
 - original finite-energy physical solution;
-- rescaled original Leray orbit;
-- omega-limit ancient orbit;
-- canonical tail of the omega-limit orbit;
-- fixed-Leray-radius convergence;
-- moving diagonal radius `R~e^{s/2}`;
-- local physical convergence versus formal inverse transformation of an infinite-energy ancient model.
+- rescaled original orbit;
+- periodic omega-limit ancient orbit;
+- fixed normalized shell;
+- fixed physical shell;
+- moving Leray diagonal `R~e^{s/2}`;
+- late omega-limit recurrence;
+- fixed absolute-time shell ancestry;
+- local blow-up-model validity versus global physical final-trace validity.
 
-The direct finite-energy contradiction is not used without the diagonal bridge.
+The corrected ancestry calculation removes an attractive but invalid shortcut.
 
 \[
 \boxed{\text{GLOBAL REGULARITY REMAINS UNPROVED.}}
