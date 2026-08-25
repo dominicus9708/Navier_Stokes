@@ -1,240 +1,212 @@
-# DSD W1 Single Critical Formation Flux
+# DSD W1 Single Critical Scale Current
 
 Date: 2026-08-26
 
-Status: **CRITICAL SHELL DENSITY, LOG-RADIUS CONVEYOR RATE, AND THE `R3/6` GAUSSIAN ENDPOINT RESIDUE IDENTIFIED AS ONE FLUX CONSTANT / FINITE-ENERGY COST KERNEL EXPLAINS WHY THIS FLUX IS NOT EXCLUDED BY L2 ENERGY / GLOBAL REGULARITY UNPROVED.**
+Status: **AUDIT-CORRECTED / CRITICAL SHELL DENSITY, LOG-RADIUS DRIFT, AND THE `R3/6` ENDPOINT RESIDUE ARE ONE SIMILARITY-SCALE CURRENT / THIS IS NOT A PHYSICAL MATERIAL OR ENERGY FLUX / GLOBAL REGULARITY UNPROVED.**
 
 ## 1. Critical log-shell density
 
-The invariant W1 endpoint has
+The invariant endpoint has
 
 \[
-M_{crit}>0
-\]
-
-and the Abelian density
-
-\[
+M_{crit}>0,
+\qquad
 \boxed{
-\mathscr R_3
-=
+\mathscr R_3=
 \frac{M_{crit}}{\log2}.
 }
 \]
 
-Interpret `R3` as the asymptotic cubic mass per unit logarithmic radius.
+`R3` is the cubic mass density per unit logarithmic Leray radius.
 
 ---
 
-## 2. The far-tail conveyor has speed one half
+## 2. Leray log-radius drift
 
-In log-radius coordinates
+Let
 
 \[
-\rho=\log|Y|,
+\rho=\log|Y|.
 \]
 
-the leading far transport obeys
+The far leading transport is
 
 \[
 \partial_s+rac12\partial_\rho.
 \]
 
-Hence the critical memory moves at velocity
+Hence
 
 \[
 \boxed{
-v_\rho=\frac12.
+\frac{d\rho}{ds}=\frac12.
 }
 \]
 
-Therefore a log-radius density `R3` carries cubic mass across scales at the rate
+The associated cubic scale-current is
 
 \[
-\boxed{
-J_{3,mass}
+J_{3,scale}
 =
 \frac12\mathscr R_3.
-}
 \]
 
----
-
-## 3. Why the endpoint residue is `R3/6`
-
-The `p=3` energy ledger uses
-
-\[
-\frac13\frac d{ds}\int |U|^3.
-\]
-
-Therefore the cubic-energy flux corresponding to the mass conveyor is
+Because the `p=3` ledger carries the factor `1/3`, define
 
 \[
 \boxed{
 \mathfrak J_c
 :=
-\frac13J_{3,mass}
+\frac13J_{3,scale}
 =
 \frac{\mathscr R_3}{6}.
 }
 \]
 
-This is exactly the residue that appeared independently in the endpoint `p downarrow 3` balance and in the Gaussian scale-chain identity.
-
-Thus the three earlier quantities are one structural object:
-
-\[
-\boxed{
-\text{critical shell density}
-\longleftrightarrow
-\text{log-radius transport rate}
-\longleftrightarrow
-\text{endpoint residue }\mathscr R_3/6.
-}
-\]
-
-The natural DSD name for this common object is the **critical formation flux** `J_c`.
+This is exactly the endpoint residue already derived independently.
 
 ---
 
-## 4. Relation to prelimit `L3` growth
+## 3. Audit correction: this drift is not physical radial transport
 
-If the actual prelimit shell corridor realizes the invariant asymptotic density in Cesaro form, the number of newly populated logarithmic shells grows at speed `1/2` in Leray time.
-
-Accordingly the cubic mass has the asymptotic rate
+The physical radius corresponding to `(rho,s)` is
 
 \[
-\frac d{ds}\|U(s)\|_3^3
-\sim
-\frac{\mathscr R_3}{2},
+r_{phys}
+=
+\sqrt\tau\,e^\rho
+=
+e^{-s/2}e^\rho.
 \]
 
-or at the level of Cesaro growth,
+Along the scale characteristic,
+
+\[
+\frac d{ds}\log r_{phys}
+=
+-\frac12+rac{d\rho}{ds}
+=0.
+\]
+
+Therefore
 
 \[
 \boxed{
-\frac1S\|U(S)\|_3^3
-\to
-\frac{\mathscr R_3}{2}
+r_{phys}=\text{constant along the Leray log-radius characteristic}.}
+\]
+
+The apparent outward motion in `Y` is the zooming coordinate passing a fixed physical radius.
+
+Hence
+
+\[
+\boxed{
+\text{similarity-scale current}
+\neq
+\text{material turnover}
+\neq
+\text{physical radial energy flux}.
 }
 \]
 
-when the required prelimit-to-invariant transport is available.
-
-Then
-
-\[
-\frac13\frac d{ds}\|U\|_3^3
-\sim
-\mathfrak J_c.
-\]
-
-The equality of constants is not accidental: it is the same log-scale flux seen in a time ledger.
-
-Where a full prelimit Cesaro limit has not been proved, this paragraph is an interpretation/target rather than an additional theorem. The invariant flux identity `J_c=R3/6` remains exact.
+This restates and strengthens the earlier audit that the similarity-radial `p=3` term cannot be charged directly to material turnover.
 
 ---
 
-## 5. Minimum kinetic-energy price of one critical shell
+## 4. What remains true
 
-Suppose on a physical logarithmic shell of radius `r` the cubic mass satisfies
-
-\[
-\int_{A_r}|u|^3dx\ge m_0>0
-\]
-
-and the Type-I envelope gives
-
-\[
-\|u\|_{L^\infty(A_r)}
-\le
-\frac{A_0}{r}.
-\]
-
-Then
-
-\[
-\int_{A_r}|u|^3dx
-\le
-\|u\|_\infty
-\int_{A_r}|u|^2dx,
-\]
-
-so
+The numerical identity
 
 \[
 \boxed{
+\mathfrak J_c
+=
+\frac{\mathscr R_3}{6}
+}
+\]
+
+remains exact.
+
+It says that one and the same critical memory is seen as:
+
+\[
+\boxed{
+\text{log-shell density}
+\longleftrightarrow
+\text{Leray scale drift}
+\longleftrightarrow
+\text{endpoint similarity residue}.
+}
+\]
+
+It does **not** by itself give a causal chain from a finite core to a remote physical shell.
+
+Any such core-to-tail statement needs an additional material, pressure, or prelimit-diagonal bridge.
+
+---
+
+## 5. Relation to prelimit `L3` growth
+
+If a prelimit corridor has an expanding range of physical radii whose Leray representation carries the same critical density, then the number of occupied logarithmic Leray shells can grow like `s/2` and one obtains cubic-mass growth of order
+
+\[
+\|U(s)\|_3^3\sim
+\frac{\mathscr R_3}{2}s.
+\]
+
+However this is a statement about the moving rescaling window, not proof that cubic material is physically emitted outward.
+
+A full prelimit Cesaro growth law still requires the appropriate fixed-`R`/diagonal inheritance hypotheses.
+
+---
+
+## 6. Finite-energy compatibility remains unchanged
+
+For a physical critical shell of radius `r`, Type-I amplitude control gives
+
+\[
 \int_{A_r}|u|^2dx
 \ge
-\frac{m_0}{A_0}r.
-}
+\frac{r}{A_0}
+\int_{A_r}|u|^3dx.
 \]
 
-Thus one order-one critical cubic shell costs only order `r` kinetic energy.
+Thus an order-one cubic shell costs only order `r` kinetic energy.
+
+For geometric radii,
+
+\[
+\sum_j r_j<\infty.
+\]
+
+Therefore the local `1/r` critical memory remains compatible with finite `L2` energy.
+
+This energy calculation concerns shell occupancy and does not convert the similarity current into a physical flux.
 
 ---
 
-## 6. Why finite energy does not stop infinitely many emitted shells
+## 7. Correct DSD interpretation
 
-For geometric radii
-
-\[
-r_j=r_0\lambda^{-j},
-\qquad \lambda>1,
-\]
-
-the minimum total kinetic-energy cost is
-
-\[
-\sum_j
-\frac{m_0}{A_0}r_j
-<\infty.
-\]
-
-Therefore an infinite critical memory ladder can have
-
-\[
-\text{order-one cubic mass per log shell}
-\]
-
-while paying only finite total `L2` energy.
-
-This is precisely the integrability of the physical `1/r` trace in `L2_loc`.
-
-It also explains the repeated half-power barrier encountered in the turnover and parent-energy ledgers.
-
----
-
-## 7. DSD source-chain
-
-The current endpoint can be written with one flux symbol:
+The current endpoint is
 
 \[
 \boxed{
-\text{recurrent nonlinear core}
-\longrightarrow
+M_{crit}>0
+\Longrightarrow
 \mathfrak J_c>0
-\longrightarrow
-\text{outward log-scale critical memory}
-\longrightarrow
-\text{positive-density }1/r\text{ shell corridor}.
+\text{ as a similarity-scale current}.
 }
 \]
 
-The far tail is the stored historical record of the same flux; it is not a second independent source.
+The remaining proof must determine whether the original unforced finite-energy parent can realize this nonzero critical scale current together with the recurrent W1 dynamics.
 
-The finite-energy parent does not kill `J_c` because its energy price has positive scaling exponent `beta=1`.
+It is not legitimate to argue that a finite core must continuously *emit* the tail merely from `J_c>0`.
 
-A final contradiction therefore requires a scale-critical or scale-breaking theorem that forces
+The remaining bridge is still one of:
 
-\[
-\boxed{
-\mathfrak J_c=0.
-}
-\]
-
-No such theorem is proved here.
+- actual material/pressure transfer;
+- prelimit diagonal inheritance;
+- or another scale-critical compatibility identity.
 
 \[
 \boxed{\text{GLOBAL REGULARITY REMAINS UNPROVED.}}
