@@ -210,9 +210,9 @@ The correct interpretation is
 \[
 \boxed{
 \begin{array}{c}
-\text{fixed normalized amplitude boundary}\
+\text{fixed normalized amplitude boundary}\\
 \Downarrow\\
-\text{nonzero }R3/6\text{ boundary charge}\
+\text{nonzero }R3/6\text{ boundary charge}
 \end{array}
 }
 \]
@@ -222,9 +222,9 @@ while
 \[
 \boxed{
 \begin{array}{c}
-\text{fixed physical amplitude boundary}\
+\text{fixed physical amplitude boundary}\\
 \Downarrow\\
-\text{boundary-motion cancellation}\
+\text{boundary-motion cancellation}
 \end{array}
 }
 \]
