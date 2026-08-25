@@ -1,72 +1,148 @@
-# DSD W1 Solenoidal-Lamb Spectral Transfer Ledger
+# DSD W1 Solenoidal-Lamb Spectral Transfer Ledger — Audit Correction
 
 Date: 2026-08-26
 
-Status: **EXACT ZERO TOTAL ENERGY WORK + POSITIVE INVARIANT ENSTROPHY-WEIGHTED WORK DERIVED FOR THE SAME SOLENOIDAL LAMB FORCE / W1 NONLINEAR ENDPOINT IDENTIFIED AS A CRITICAL CASCADE OPERATOR RATHER THAN AN ENERGY SOURCE / GLOBAL REGULARITY UNPROVED.**
+Status: **AUDIT-CORRECTED / GLOBAL W1 ZERO-L2-WORK AND WHOLE-SPACE FOURIER TRANSFER CLAIMS WITHDRAWN / EXACT ZERO NONLINEAR ENERGY WORK RETAINED ON EACH FINITE-ENERGY PRELIMIT AND ON GENUINE L2 QUOTIENTS / POSITIVE ENSTROPHY-WEIGHTED LAMB PAIRING RETAINED WHERE THE W1 DERIVATIVE INTEGRALS ARE FINITE / GLOBAL REGULARITY UNPROVED.**
 
-## 1. Purpose
+## 1. Purpose of the correction
 
-The Lamb--Hodge note identified
+The solenoidal Lamb field is
 
 \[
-L_s:=\mathbb P(\Omega\times U)
+L_s:=\mathbb P(\Omega\times U).
 \]
 
-as the single nonlinear structural force behind both mandatory W1 critical currents.
+A previous version of this note wrote the whole-space W1 identity
 
-The next DSD question is whether this force acts as an external source of energy or only redistributes already existing energy among scales.
+\[
+\int_{\mathbb R^3}U\cdot L_s=0
+\]
 
-The answer is exact: it performs zero total kinetic-energy work but positive enstrophy-weighted work on every nontrivial invariant W1 class.
+and then introduced a whole-space Fourier transfer density for the invariant W1 state.
 
-Thus the endpoint is a cascade requirement.
+That step is not justified at the endpoint currently under study.
+
+A critical W1 tail may satisfy
+
+\[
+U(Y)\sim |Y|^{-1},
+\]
+
+and therefore
+
+\[
+\int_{|Y|>R}|U|^2dY
+\sim
+\int_R^\infty dr
+=\infty.
+\]
+
+Thus the invariant W1 limit need not belong to `L2(R3)`.  The standard whole-space L2 self-adjoint pairing with the Helmholtz projector and the corresponding Parseval/Fourier transfer identity cannot be invoked without an additional finite-energy subtraction or cutoff argument.
+
+This is a substantive audit correction, not merely a technical wording change.
 
 ---
 
-## 2. Zero total nonlinear kinetic-energy work
+## 2. What remains exactly true on the physical prelimit
 
-Because `U` is divergence-free and the Leray projector is self-adjoint in whole-space L2,
-
-\[
-\int U\cdot L_s
-=
-\int U\cdot\mathbb P L
-=
-\int \mathbb P U\cdot L
-=
-\int U\cdot L.
-\]
-
-But
+For every physical time `t<T_*`, the smooth finite-energy Navier--Stokes prelimit satisfies
 
 \[
-U\cdot L
-=
-U\cdot(\Omega\times U)=0
+u(\cdot,t)\in L^2(\mathbb R^3).
 \]
 
-pointwise.
+Write
 
-Therefore
+\[
+\omega=\nabla\times u,
+\qquad
+\ell_s:=\mathbb P(\omega\times u).
+\]
+
+Then the standard nonlinear kinetic-energy cancellation is legitimate:
+
+\[
+\int u\cdot \ell_s
+=
+\int \mathbb P u\cdot(\omega\times u)
+=0.
+\]
+
+Hence
 
 \[
 \boxed{
-\int_{\mathbb R^3}U\cdot L_s\,dY=0.
+\int_{\mathbb R^3}u\cdot\mathbb P(\omega\times u)\,dx=0
+\qquad (t<T_*).
 }
 \]
 
-This is the nonlinear kinetic-energy conservation identity in Lamb form.
+Equivalently, each finite Leray-time prelimit profile has finite normalized L2 norm and the same cancellation before the limiting escape of normalized energy to similarity infinity is taken.
 
-It is independent of recurrence and holds at each sufficiently regular time.
+The obstruction is therefore a **noncommutation of the limits**
+
+\[
+s\to\infty
+\qquad\text{and}\qquad
+R\to\infty,
+\]
+
+not a failure of the physical nonlinear energy cancellation.
 
 ---
 
-## 3. Positive enstrophy-weighted nonlinear work
+## 3. Localized W1 pairing is a projection-cutoff commutator
 
-The nonlinear vorticity term is
+Let `chi_R` be a smooth radial cutoff.  Since `U` is divergence-free,
 
 \[
-\nabla\times L_s.
+\int \chi_R U\cdot L_s
+=
+\langle \mathbb P(\chi_RU),\Omega\times U\rangle.
 \]
+
+Because
+
+\[
+\mathbb P(\chi_RU)
+=
+\chi_RU+[
+\mathbb P,\chi_R
+]U
+\]
+
+and
+
+\[
+U\cdot(\Omega\times U)=0
+\]
+
+pointwise,
+
+\[
+\boxed{
+\int \chi_R U\cdot L_s
+=
+\left\langle
+[
+\mathbb P,\chi_R
+]U,
+\Omega\times U
+\right\rangle.
+}
+\]
+
+Thus the failure of global normalized zero work is entirely an **interface/projection defect** at similarity infinity.
+
+No decay rate for this cutoff commutator is asserted here without an independent estimate.
+
+This is the correct W1 replacement for the invalid whole-space L2 pairing.
+
+---
+
+## 4. Positive enstrophy-weighted Lamb pairing survives
+
+The vorticity identity uses derivative quantities that are integrable on the critical `1/r` tail under the current W1 derivative bounds.
 
 Let
 
@@ -74,38 +150,17 @@ Let
 Z:=\|\Omega\|_2^2,
 \qquad
 P_\Omega:=\|\nabla\Omega\|_2^2,
-\]
-
-and
-
-\[
+\qquad
 Q:=\int\Omega\cdot S\Omega.
 \]
 
 Using
 
 \[
-\nabla\times\Omega=-\Delta U,
+\nabla\times\Omega=-\Delta U
 \]
 
-and curl integration by parts,
-
-\[
-\int \Omega\cdot(\nabla\times L_s)
-=
-\int L_s\cdot(\nabla\times\Omega)
-=-\int L_s\cdot\Delta U.
-\]
-
-On the other hand,
-
-\[
-\int \Omega\cdot(\nabla\times L_s)
-=
-- Q.
-\]
-
-Hence
+and curl integration by parts in the admissible derivative class gives
 
 \[
 \boxed{
@@ -115,7 +170,7 @@ Q
 }
 \]
 
-The invariant W1 enstrophy identity already gives
+The invariant W1 enstrophy identity yields
 
 \[
 \boxed{
@@ -127,190 +182,91 @@ The invariant W1 enstrophy identity already gives
 }
 \]
 
-Therefore
-
-\[
-\boxed{
-\left\langle
-\int \Delta U\cdot L_s
-\right\rangle_\mu
->0.
-}
-\]
-
-The same nonlinear force that performs zero total energy work must perform strictly positive Laplacian/enstrophy-weighted work on average.
+Therefore the positive high-derivative nonlinear pairing remains a valid endpoint requirement.
 
 ---
 
-## 4. Fourier transfer density
+## 5. Whole-space Fourier transfer is not an invariant-W1 theorem
 
-Use a Fourier convention in which Parseval constants are suppressed for readability.
-
-Define the signed nonlinear kinetic-energy transfer density
+The previous whole-space definition
 
 \[
-\boxed{
 T(k,s)
-:=-\operatorname{Re}
-\bigl(\widehat U(k,s)\cdot\overline{\widehat{L_s}(k,s)}\bigr).
-}
+=-\operatorname{Re}
+(\widehat U\cdot\overline{\widehat{L_s}})
 \]
 
-Then the zero-energy-work identity becomes
+was useful heuristically, but it is not a justified invariant-W1 object when `U` is not in L2.
+
+Accordingly the claims
 
 \[
-\boxed{
-\int_{\mathbb R^3}T(k,s)\,dk=0.
-}
+\int T=0,
+\qquad
+\int |k|^2T>0
 \]
 
-Also
+are withdrawn as whole-space W1 identities.
 
-\[
-\int \Delta U\cdot L_s
-=
--\int |k|^2
-\operatorname{Re}
-(\widehat U\cdot\overline{\widehat{L_s}})dk,
-\]
+They remain legitimate in either of two settings:
 
-so
+1. each finite-energy physical/Leray prelimit before taking `s->infinity`;
+2. a genuinely L2 remainder/quotient, such as the divergence-free periodic quotient constructed after subtracting the canonical DSS tail, provided all forcing/background terms are retained.
 
-\[
-\boxed{
-Q(s)
-=
-\int |k|^2T(k,s)\,dk.
-}
-\]
-
-Invariant averaging yields
-
-\[
-\boxed{
-\int |k|^2\langle T(k)\rangle_\mu dk
-=
-\frac14\langle Z\rangle_\mu
-+\nu\langle P_\Omega\rangle_\mu
->0,
-}
-\]
-
-while
-
-\[
-\boxed{
-\int\langle T(k)\rangle_\mu dk=0.
-}
-\]
-
-Therefore the nonlinear transfer cannot have one sign or remain spectrally neutral.  Positive energy transfer must be weighted toward higher wave numbers than the compensating negative transfer.
+In the second setting the quotient is forced, so the transfer ledger must include the background and forcing terms.  It cannot be imported as an unforced W1 contradiction.
 
 ---
 
-## 5. DSD interpretation: the nonlinear field is a transfer operator
+## 6. DSD interpretation after the correction
 
-The W1 survivor does not require the Navier--Stokes nonlinearity to create kinetic energy.
-
-It requires
+The correct structural statement is now
 
 \[
 \boxed{
-\text{zero net nonlinear energy work}
+\text{physical prelimit nonlinear work}=0
+}
+\]
+
+but the invariant normalized endpoint may retain
+
+\[
+\boxed{
+\text{positive critical p=3 projection work}
 +
-\text{positive high-frequency-weighted nonlinear work}.
+\text{positive enstrophy-weighted Lamb work}
 }
 \]
 
-Thus `L_s` acts as a scale-conversion operator:
+because normalized L2 energy can escape to similarity infinity before the W1 limit is formed.
+
+Hence the missing bridge is not simply `cascade nonrepeatability`.  It is more precisely
 
 \[
 \boxed{
-\text{lower-frequency donor sector}
-\longrightarrow
-\text{higher-frequency recipient sector}.
+\text{finite-energy prelimit cancellation}
+\Longrightarrow
+\text{control of the similarity-infinity projection/interface defect}.
 }
 \]
 
-Viscosity then acts on the recipient sector.
-
-In backward Leray variables the similarity terms can replenish the normalized state, so this transfer pattern is not by itself contradictory with an unforced physical solution.
+This places the endpoint back on the same interface/injection frontier previously found in the periodic tail analysis.
 
 ---
 
-## 6. Relation to the p=3 critical current
+## 7. Corrected endpoint search
 
-The same field also satisfies
+A closing theorem may take one of the following forms:
 
-\[
-\boxed{
-F_R
-=-\int\phi_R|U|U\cdot L_s.
-}
-\]
+- show that the cutoff projection defect
+  \[
+  \langle [\mathbb P,\chi_R]U,\Omega\times U\rangle
+  \]
+  vanishes sufficiently fast as `R->infinity` on every W1 state;
+- prove that any nonvanishing limit of that defect forces a quantified critical shell export/turnover event incompatible with the finite physical prelimit budget;
+- in the periodic branch, use the canonical-tail subtraction to turn the defect into the forcing/interface term of the finite-energy quotient and prove a forced-Liouville/backward-uniqueness theorem;
+- in the aperiodic branch, construct an analogous canonical/statistical tail object before making any global L2 transfer claim.
 
-For the invariant W1 endpoint,
-
-\[
-\bar F_R
-=
-\nu\bar D_R+\mathcal S_B(R),
-\]
-
-with
-
-\[
-\mathcal S_B(R)\to\mathscr R_3/6>0.
-\]
-
-Thus `L_s` simultaneously has
-
-1. zero unweighted L2 energy pairing with `U`;
-2. strictly signed critical p=3 weighted pairing with `|U|U`;
-3. strictly positive invariant Laplacian pairing with `U`.
-
-Schematically,
-
-\[
-\boxed{
-\langle U,L_s\rangle=0,
-\qquad
--\langle |U|U,L_s\rangle_{critical}>0,
-\qquad
-\langle\Delta U,L_s\rangle_{avg}>0.
-}
-\]
-
-This is the current three-moment signature of a hypothetical W1 singular cascade.
-
----
-
-## 7. Why this does not yet contradict finite physical energy
-
-A positive normalized cascade action per Leray time does not automatically produce a divergent physical energy cost.
-
-The backward self-similar conversion attaches shrinking physical weights to late normalized events. This is the previously identified half-power barrier.
-
-Similarly, ordinary physical enstrophy dissipation is compatible with a Type-I critical cascade because its late-time growth may remain time integrable.
-
-Therefore the three-moment signature is a necessary structural condition, not yet a nonexistence theorem.
-
----
-
-## 8. Updated endpoint search
-
-The DSD reduction now suggests that a successful theorem should not seek an external energy source contradiction.
-
-It should seek a **nonrepeatability or compactness obstruction for a recurrent critical transfer operator** satisfying all three pairings above.
-
-Possible targets are:
-
-- a phase-space packing inequality combining spatial critical-shell transport with positive spectral transfer;
-- a commutator estimate showing that the p=3 signed pairing cannot stay positive while the zero-energy pairing and finite-energy prelimit constraints hold;
-- a recurrent spectral-flux theorem forcing vanishing of the high-frequency second moment along some sequence;
-- an endpoint improvement for the solenoidal Lamb force.
-
-No such closing theorem is proved in this note.
+No one of these is yet proved.
 
 \[
 \boxed{\text{GLOBAL REGULARITY REMAINS UNPROVED.}}
