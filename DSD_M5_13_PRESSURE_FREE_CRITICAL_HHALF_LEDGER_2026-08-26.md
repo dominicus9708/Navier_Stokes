@@ -2,7 +2,7 @@
 
 Date: 2026-08-26
 
-Status: **DERIVED CRITICAL PRESSURE-FREE LEDGER / SMALL CRITICAL NORM CLOSES BY VISCOSITY / LARGE W1 ENDPOINT REMAINS / GLOBAL REGULARITY UNPROVED.**
+Status: **DERIVED CRITICAL PRESSURE-FREE PRELIMIT LEDGER / SMALL CRITICAL NORM CLOSES BY VISCOSITY / GLOBAL `dot H^{1/2}` FINITENESS IS NOT AUTOMATIC ON A `1/r` W1 OMEGA-LIMIT / GLOBAL REGULARITY UNPROVED.**
 
 ## 1. Motivation
 
@@ -19,9 +19,9 @@ Let
 
 This is exactly scale invariant for 3D Navier--Stokes.
 
-## 2. Exact Leray critical ledger
+## 2. Exact critical ledger on smooth finite prelimit states
 
-The Leray equation is
+For every smooth finite-energy prelimit state for which the displayed critical norms are finite, the Leray equation is
 
 \[
 U_s-\nu\Delta U+(U\cdot\nabla)U
@@ -58,7 +58,7 @@ Then
 }
 \]
 
-Thus this ledger is free of both pressure work and similarity-coordinate source terms. The only source is the genuine projected nonlinear cascade.
+Thus this prelimit ledger is free of both pressure work and similarity-coordinate source terms. The only source is the genuine projected nonlinear cascade.
 
 ## 3. Standard critical estimate
 
@@ -91,15 +91,9 @@ This is the familiar critical-smallness mechanism behind Fujita--Kato theory.
 
 ## 4. Why this does not close M5
 
-The W1 survivor is a **large critical** endpoint. No preceding module forces
+The W1 survivor is a **large critical** endpoint. No preceding module forces the prelimit critical Sobolev norm below the small-data threshold.
 
-\[
-\|U\|_{\dot H^{1/2}}
-\]
-
-below the small-data threshold.
-
-Indeed, for the infrared dilation family
+For the one-scale infrared dilation family
 
 \[
 U_R(Y)=R^{-1}\phi(Y/R),
@@ -116,7 +110,25 @@ one has exactly
 
 Thus `dot H^{1/2}` sees the critical dilation defect that `L^p`, `p>3`, misses, but it does not make that defect small.
 
-## 5. DSD interpretation
+## 5. Domain audit: do not automatically evaluate the global norm on the W1 limit
+
+A genuine cross-radius `1/r` critical corridor contains order-one critical content on infinitely many logarithmic scales. Exact homogeneous `1/r` behavior is borderline for `dot H^{1/2}` and can produce logarithmic divergence.
+
+Therefore this file must **not** assume that every positive-defect W1 omega-limit belongs globally to `dot H^{1/2}`.
+
+The exact ledger above is safe on each smooth finite prelimit state. Passing it to a W1 omega-limit requires an additional critical-tightness or truncation argument, which is itself part of M5.
+
+Thus
+
+\[
+\boxed{
+\text{prelimit }\dot H^{1/2}\text{ ledger is exact}
+\quad\not\Rightarrow\quad
+\text{global finite }\dot H^{1/2}\text{ W1 limit}.
+}
+\]
+
+## 6. DSD interpretation
 
 M5-12 and M5-13 together separate two obstructions:
 
@@ -132,15 +144,15 @@ whereas
 
 \[
 \boxed{
-\text{critical Hodge-projected functional}
+\text{critical Hodge-projected prelimit functional}
 \Rightarrow
 \text{pressure removed but nonlinear cascade remains}.
 }
 \]
 
-Therefore pressure itself is not the final obstruction. After pressure is eliminated exactly, the large critical projected Lamb cascade remains.
+Therefore pressure itself is not the final obstruction. After pressure is eliminated exactly, the large critical projected Lamb cascade remains on the prelimit track.
 
-## 6. Updated target
+## 7. Updated target
 
 Any strict critical Lyapunov route must now do more than remove pressure. It must also provide a sign or absorption mechanism for
 
@@ -150,9 +162,7 @@ Any strict critical Lyapunov route must now do more than remove pressure. It mus
 }
 \]
 
-without assuming the critical norm is already small.
-
-That is a genuinely large-data critical statement.
+without assuming either smallness or an unproved global critical norm bound on the W1 limit.
 
 \[
 \boxed{\text{GLOBAL REGULARITY REMAINS UNPROVED.}}
