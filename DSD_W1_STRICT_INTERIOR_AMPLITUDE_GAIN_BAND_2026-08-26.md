@@ -2,39 +2,51 @@
 
 Date: 2026-08-26
 
-Status: **THE POSITIVE RENORMALIZED CUBIC GAIN IS LOCALIZED TO AN AMPLITUDE BAND BOUNDED AWAY FROM BOTH ZERO AMPLITUDE AND THE MAXIMUM-AMPLITUDE CONTACT SET / FAR TAIL AND MAXIMUM DEGENERACY ARE DEMOTED FROM POSSIBLE GAIN SOURCES / GLOBAL REGULARITY UNPROVED.**
+Status: **THE POSITIVE INVARIANT-AVERAGED RENORMALIZED CUBIC GAIN IS LOCALIZED TO AN AMPLITUDE BAND BOUNDED AWAY FROM BOTH ZERO AMPLITUDE AND A COMMON UPPER AMPLITUDE CEILING / THE RESULT IS STATISTICAL FIRST, WITH RECURRENT INSTANTANEOUS WITNESSES EXTRACTED BY MINIMALITY / GLOBAL REGULARITY UNPROVED.**
 
-## 1. Net gain and defect primitive
+## 1. Invariant defect primitive
 
-For the invariant threshold ledger,
+For one state define
 
 \[
-G(\lambda):=J_P(\lambda)-\nu D_\lambda
-=-\frac12K'(\lambda),
+K_U(\lambda)=\lambda\mathcal E_{\lambda,U}.
 \]
 
-where
+Let
 
 \[
-K(\lambda)=\lambda\mathcal E_\lambda.
+\bar K(\lambda)=\langle K_U(\lambda)\rangle_\mu.
+\]
+
+The invariant threshold ledger gives
+
+\[
+\boxed{
+\bar G(\lambda)
+:=
+\left\langle J_P(\lambda)-\nu D_\lambda\right\rangle_\mu
+=-\frac12\bar K'(\lambda).
+}
 \]
 
 The total endpoint gain is
 
 \[
 \boxed{
-\int_0^{A_{max}}G(\lambda)d\lambda
-=\frac12K(0+)
-=\frac{\mathscr R_3}{6}>0.
+\int_0^{A_*}\bar G(\lambda)d\lambda
+=\frac12\bar K(0+)
+=\frac{\mathscr R_3}{6}>0,
 }
 \]
+
+where `A_*` is any common W1 amplitude ceiling above all statewise essential suprema.
 
 ## 2. Low-amplitude boundary contributes arbitrarily little
 
 Since
 
 \[
-K(\lambda)\to K(0+)
+\bar K(\lambda)\to\bar K(0+)
 \quad(\lambda\downarrow0),
 \]
 
@@ -42,102 +54,149 @@ one has
 
 \[
 \boxed{
-\int_0^{\lambda_-}G(\lambda)d\lambda
+\int_0^{\lambda_-}\bar G(\lambda)d\lambda
 =
-\frac{K(0+)-K(\lambda_-)}2
-\to0
+\frac{\bar K(0+)-\bar K(\lambda_-)}2
+\to0.
 }
 \]
 
-as `lambda_- downarrow0`.
+Thus an arbitrarily thin low-amplitude boundary layer cannot carry a fixed fraction of the positive mean gain.
 
-Thus the weak-L3 / far-tail boundary stores the defect but does not supply a fixed fraction of its net gain in an arbitrarily thin boundary layer.
+## 3. Upper-amplitude boundary also contributes arbitrarily little
 
-## 3. Maximum-amplitude boundary also contributes arbitrarily little
-
-Let
+Because `A_*` is a common upper ceiling,
 
 \[
-A_{max}:=\|U\|_\infty
+K_U(A_*)=0
 \]
 
-on a fixed state, or use a common W1 ceiling and the actual essential supremum where needed. Since the superlevel set shrinks to zero and
+for every W1 state and hence
 
 \[
-\mathcal E_\lambda\to0
-\quad(\lambda\uparrow A_{max}),
+\bar K(A_*)=0.
 \]
 
-one has
+By continuity from below,
 
 \[
-K(\lambda)\to0=K(A_{max}).
+\bar K(\lambda)\to0
+\quad(\lambda\uparrow A_*).
 \]
 
 Therefore
 
 \[
 \boxed{
-\int_{\lambda_+}^{A_{max}}G(\lambda)d\lambda
+\int_{\lambda_+}^{A_*}\bar G(\lambda)d\lambda
 =
-\frac{K(\lambda_+)}2
+\frac{\bar K(\lambda_+)}2
 \to0
 }
 \]
 
-as `lambda_+ upward A_max`.
+as `lambda_+ upward A_*`.
 
-Hence neither a degenerate maximum-contact layer nor an arbitrarily thin top-amplitude layer can carry the full positive endpoint gain.
+## 4. Strict interior invariant band
 
-## 4. Strict interior band
-
-Choose `lambda_->0` small and `lambda_+<A_max` close enough to `A_max` so that the two boundary contributions together are less than half of the total positive gain. Then
+Choose
 
 \[
-\boxed{
-0<\lambda_-<\lambda_+<A_{max}
-}
+0<\lambda_-<\lambda_+<A_*
 \]
 
-and
+so that the two boundary contributions together are less than half the total gain. Then
 
 \[
 \boxed{
 \int_{\lambda_-}^{\lambda_+}
-\bigl(J_P(\lambda)-\nu D_\lambda\bigr)d\lambda
+\left\langle
+J_P(\lambda)-\nu D_\lambda
+\right\rangle_\mu d\lambda
 \ge c_*>0.
 }
 \]
 
-The constants may be chosen on the invariant-average level; compactness can then be used to extract recurrent finite-state witnesses.
+The strict band is fixed at the invariant-measure level.
 
 ## 5. Spatial localization
 
-Because `lambda_->0` and the W1 tail obeys `|U(Y)|<=A_0/|Y|`, the whole superlevel region `|U|>=lambda_-` lies in one finite Leray parent ball. Because `lambda_+<A_max`, the band is also separated from the maximum-contact set.
+Since `lambda_->0` and the W1 tail obeys
 
-Thus the net gain is a genuine finite-core **interior-state** phenomenon.
+\[
+|U(Y)|\le A_0/|Y|
+\]
 
-## 6. DSD chain
+for large `|Y|`, every statewise superlevel set `|U|>=lambda_-` lies in one fixed finite Leray parent ball.
 
-The corrected state-space picture is
+Thus the invariant gain on the strict band is finite-parent.
+
+## 6. Recurrent instantaneous witnesses
+
+Define the state functional
+
+\[
+\mathcal G_I(U)
+=
+\int_{\lambda_-}^{\lambda_+}
+[J_P(\lambda,U)-\nu D_\lambda(U)]d\lambda
+\]
+
+using smooth truncation at exceptional levels where needed.
+
+Then
+
+\[
+\langle\mathcal G_I\rangle_\mu\ge c_*>0.
+\]
+
+On the compact finite-parent W1 class this functional is continuous after the standard regularization. Hence there exists a nonempty open event with
+
+\[
+\mathcal G_I(U)>c_*/2.
+\]
+
+Minimality makes this event recurrent with bounded gaps along every orbit.
+
+Thus the correct logical order is
+
+\[
+\boxed{
+\text{positive invariant interior-band gain}
+\Longrightarrow
+\text{recurrent instantaneous finite-core pump witnesses}.
+}
+\]
+
+## 7. DSD chain
+
+The state-space picture is
 
 \[
 \boxed{
 \text{strict interior amplitude band}
-\xrightarrow{\text{positive pressure-viscous net gain}}
-\text{amplitude characteristic}
+\xrightarrow{\text{positive mean pressure-viscous gain}}
+\text{time-amplitude characteristic transport}
 \xrightarrow{}
-\text{neutral slope-3 low-amplitude boundary defect}.
+\text{neutral slope-three low-amplitude boundary defect}.
 }
 \]
 
-The zero-amplitude tail is the output boundary. The maximum-amplitude contact set is an upper state boundary. The positive gain is generated between them.
+The lower and upper amplitude boundaries are output/termination layers, not the source of the fixed positive mean gain.
 
-## 7. Consequence
+## 8. Remaining issue
 
-A complete W1 closure can focus on a compact amplitude interval separated from all state boundaries. This removes singular low-amplitude asymptotics and maximum-contact degeneracy from the local gain estimate itself.
+A complete W1 closure can focus on this compact interior amplitude interval. The missing theorem is a genuinely large-critical statement forcing
 
-The remaining challenge is to show that, on this strict interior band, pressure work cannot exceed critical viscous cost by the fixed positive amount required by the W1 defect.
+\[
+\int_{\lambda_-}^{\lambda_+}
+\left\langle J_P-\nu D_\lambda\right\rangle_\mu d\lambda
+\le0
+\]
+
+or otherwise ruling out the recurrent pump events extracted from it.
+
+No such unconditional theorem is proved here.
 
 \[
 \boxed{\text{GLOBAL REGULARITY REMAINS UNPROVED.}}
