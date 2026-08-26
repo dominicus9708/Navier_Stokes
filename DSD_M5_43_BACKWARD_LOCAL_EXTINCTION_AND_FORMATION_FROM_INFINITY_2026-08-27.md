@@ -1,235 +1,240 @@
-# DSD M5-43 — Backward Local Extinction and Formation from Infinity
+# DSD M5-43 — Backward Local Extinction and Pump-to-Defect Formation from Infinity
 
 Date: 2026-08-27
 
-Status: **DERIVED FROM COMPLETE W1 COMPACTNESS + ANCIENT INVERSE-LERAY REPRESENTATION / THE FIRST-HIT ANCIENT CELL VANISHES LOCALLY BACKWARD IN TIME WHILE RETAINING A NONZERO STATIC `1/r` RESERVOIR AT SPATIAL INFINITY / THIS IS A NECESSARY FORMATION-FROM-INFINITY STRUCTURE, NOT A CONTRADICTION / GLOBAL REGULARITY UNPROVED.**
+Status: **AUDITED AFTER M5-41 / THE PUMP-ANCHORED ANCIENT-TO-TERMINAL CELL VANISHES LOCALLY IN THE REMOTE PAST, HAS A FINITE-AMPLITUDE PUMP AT `sigma=0`, AND RETAINS A STATIC `1/r` RESERVOIR AT SPATIAL INFINITY / GLOBAL REGULARITY UNPROVED.**
 
-## 1. Ancient representation
+## 1. Correct ancient-to-terminal representation
 
 M5-41 gives
 
 \[
 V_*(z,\sigma)
-=(-\sigma)^{-1/2}
+=
+(\lambda_c^2-\sigma)^{-1/2}
 U^\#\!\left(
-\frac z{\sqrt{-\sigma}},
--\log(-\sigma)
+\frac z{\sqrt{\lambda_c^2-\sigma}},
+\log\frac{\lambda_c^2}{\lambda_c^2-\sigma}
 \right),
-\qquad \sigma<0,
+\qquad
+\sigma<\lambda_c^2,
 \]
 
 where `U^#` is a complete trajectory in the compact recurrent W1 set.
 
-Because the W1 set has a uniform finite-core ceiling and a uniform `1/|Y|` tail envelope, there exists `M_*<infinity` such that
+There exists `M_*<infinity` such that
 
 \[
-\boxed{
-\sup_{\eta\in\mathbb R}
-\|U^\#(\eta)\|_{L^\infty(\mathbb R^3)}
-\le M_*.
-}
+\sup_{\eta}\|U^\#(\eta)\|_\infty\le M_*.
 \]
 
 ---
 
-## 2. Global Type-I ancient bound
+## 2. Global Type-I backward bound
 
-The inverse-Leray formula immediately yields
+Therefore
 
 \[
 \boxed{
 \|V_*(\sigma)\|_\infty
 \le
-\frac{M_*}{\sqrt{-\sigma}}
-\qquad(\sigma<0).
+\frac{M_*}{\sqrt{\lambda_c^2-\sigma}}.
 }
 \]
 
-Thus the ancient cell has the standard Type-I backward decay rate.
+As
 
-In particular, for every fixed compact set `K subset R^3`,
+\[
+\sigma\to-\infty,
+\]
+
+one has
 
 \[
 \boxed{
 V_*(\cdot,\sigma)\to0
-\quad\text{uniformly on }K
-\quad(\sigma\to-\infty).
+\quad\text{locally uniformly, and in the available local smooth topology}.
 }
 \]
 
-Using the corresponding local derivative bounds on the compact W1 orbit gives the stronger local smooth convergence
+For the threshold-one quadratic excess
 
 \[
-V_*(\cdot,\sigma)\to0
-\quad\text{in }C^m_{loc}
-\]
-
-for each fixed derivative order for which the retained W1 compactness provides uniform bounds.
-
----
-
-## 3. Exact backward extinction of the threshold excess
-
-For the threshold-one excess
-
-\[
-\mathcal G(V)
-:=\frac12\int (|V|-1)_+^2dz,
+\mathcal G(V)=\frac12\int(|V|-1)_+^2dz,
 \]
 
 if
 
 \[
--\sigma>M_*^2,
+\lambda_c^2-\sigma>M_*^2,
 \]
 
-then
-
-\[
-\|V_*(\sigma)\|_\infty<1.
-\]
-
-Hence
+then `||V_*(sigma)||_infinity<1`, so
 
 \[
 \boxed{
 \mathcal G(V_*(\sigma))=0
-\qquad
-\text{for all sufficiently negative }\sigma.
+\quad\text{for all sufficiently negative }\sigma.
 }
 \]
 
-Therefore the nonzero terminal first hit is formed during a finite ancient-time interval; it is not present throughout the whole ancient history.
+Thus the high-amplitude state is absent in the remote ancient past.
 
 ---
 
-## 4. Simultaneous nonzero spatial-infinity reservoir
+## 3. Finite-amplitude pump at `sigma=0`
 
-M5-42 shows that every selected W1 tail-hull profile becomes a static ancient far field
+The corrected M5-41 anchor is not a boundary first hit. It is a recurrent pump-active event at the fixed W1 amplitude `lambda_c`.
+
+At
+
+\[
+\sigma=0,
+\]
+
+threshold `|V|=1` corresponds exactly to `|U|=lambda_c`, and the W1 gain satisfies
+
+\[
+\boxed{
+J_P(\lambda_c)-\nu D_{\lambda_c}\ge g_c>0
+}
+\]
+
+on the selected pump sequence.
+
+Hence the high-amplitude excess is actively driven at a finite ancient time before the terminal boundary is reached.
+
+The M5-23--40 Hodge/direction-compression estimates should be read in this audited pump-event form rather than as properties of a `lambda->0` first-hit sequence.
+
+---
+
+## 4. Static spatial-infinity reservoir
+
+M5-42 gives the static leading far field
 
 \[
 \boxed{
 V_{tail}(z)
 =\frac1{|z|}
 \Phi\!\left(
-\frac z{|z|},\log|z|
-\right),
+\frac z{|z|},
+\log\frac{|z|}{\lambda_c}
+\right).
 }
 \]
 
-independent of `sigma` at leading order.
+If the W1 critical residue is nonzero, this reservoir is nontrivial in the selected hull/averaged sense.
 
-If the W1 critical residue is nonzero, this tail is nontrivial in the corresponding hull/averaged sense.
-
-Thus the ancient cell has the simultaneous asymptotics
+Thus the same cell simultaneously has
 
 \[
 \boxed{
-V_*(\cdot,\sigma)\to0
-\text{ locally as }\sigma\to-\infty,
+\text{local state }\to0
+\quad(\sigma\to-\infty)
 }
+\]
+
+and
+
+\[
+\boxed{
+\text{nonzero static critical `1/r` ancestry at spatial infinity}.
+}
+\]
+
+---
+
+## 5. Forward transport to the terminal boundary
+
+The same fixed physical threshold corresponds to the W1 amplitude
+
+\[
+\lambda(\sigma)=\sqrt{\lambda_c^2-\sigma}.
+\]
+
+Therefore
+
+\[
+\lambda(0)=\lambda_c,
 \]
 
 while
 
 \[
 \boxed{
-\text{a nonzero static critical `1/r` reservoir persists at spatial infinity.}
+\lambda(\sigma)\downarrow0
+\qquad(\sigma\uparrow\lambda_c^2).
 }
 \]
 
----
-
-## 5. DSD formation typing
-
-The ancient-cell history therefore has the exact qualitative type
+Hence the complete DSD history is
 
 \[
 \boxed{
 \begin{array}{c}
-\text{local backward vacuum / vanishing state}\\
+\text{remote-past local extinction}\\
 +\\
-\text{static critical reservoir at spatial infinity}\\
+\text{static critical reservoir at infinity}\\
 \Downarrow\\
-\text{inward/intermediate-scale transport and pressure--Hodge formation}\\
+\text{finite-amplitude pump at }\sigma=0\\
 \Downarrow\\
-\text{finite-time first positive high-amplitude excess}.
+\text{same-threshold amplitude transport}\\
+\Downarrow\\
+\text{zero-amplitude boundary defect as }\sigma\uparrow\lambda_c^2.
 \end{array}
 }
 \]
 
-The terminal defect is therefore neither:
-
-- an unexplained boundary creation; nor
-- a quantity that was already locally present at arbitrarily early ancient times.
-
-It has a same-trajectory formation ancestry from spatial infinity.
+This is the corrected formation-from-infinity topology.
 
 ---
 
 ## 6. Fixed-ball local-energy consequence
 
-For every fixed `R<infinity`, define
+For fixed `R`,
 
 \[
-E_R(\sigma)
-:=\frac12\int_{B_R}|V_*(z,\sigma)|^2dz.
+E_R(\sigma):=\frac12\int_{B_R}|V_*|^2dz
 \]
 
-The global Type-I bound gives
+satisfies
 
 \[
-E_R(\sigma)
-\le
-C_R(-\sigma)^{-1}
-\]
-
-for sufficiently negative `sigma`, hence
-
-\[
-\boxed{
 E_R(\sigma)\to0
 \qquad(\sigma\to-\infty).
-}
 \]
 
-Integrating the local-energy identity from `-infinity` to a later time therefore represents every positive local energy amount as accumulated boundary flux minus local viscous dissipation.
+Thus every positive later local energy amount must be accumulated through boundary flux minus local viscous loss.
 
-Thus any nontrivial first-hit cell requires a genuinely nonzero inward energy ancestry across finite spheres.
-
-This is a necessary flux statement, not yet a finite-budget contradiction, because the ancient limit possesses an infinite critical reservoir at spatial infinity.
+This does not by itself contradict finite-energy ancestry because the ancient limit contains an infinite critical reservoir at spatial infinity.
 
 ---
 
-## 7. Relation to standard Type-I ancient theory
+## 7. Relation to Type-I ancient theory
 
-The backward decay
+The backward decay is consistent with standard Type-I ancient solutions. Albritton--Barker show that Type-I singularities correspond to nontrivial Type-I ancient profiles and obtain Liouville rigidity under a strong-`L^3` backward-sequence assumption.
 
-\[
-\|V_*(\sigma)\|_\infty\lesssim(-\sigma)^{-1/2}
-\]
+The present cell remains on the weak-critical side because of its static `1/r` tail.
 
-is consistent with the standard Type-I ancient-solution framework. It therefore does not by itself improve the known Liouville frontier.
-
-The extra W1-specific content is the coexistence of:
+The W1-specific additions are:
 
 - complete recurrent inverse-Leray ancestry;
-- static nonzero `1/r` far-field memory;
-- first-hit threshold history;
-- and the terminal threshold--Hodge / direction-compression formation constraints.
+- a distinguished finite-amplitude pump time;
+- static far-tail memory;
+- and forward transport of that same threshold into the terminal boundary sector.
 
 ---
 
 ## 8. Updated target
 
-A genuinely new M5 closure must use the interaction between the backward-local-zero state and the static critical reservoir, rather than either property in isolation.
+A genuinely new M5 rigidity theorem would have to use the **whole pump-to-defect history**, not merely backward Type-I decay or the static tail separately.
 
-Natural next candidates are:
+Natural next targets are:
 
-1. a moving-radius local-energy flux law measuring how the static reservoir feeds the interior;
-2. a same-trajectory rigidity theorem excluding a first-hit cell with zero local backward state and nonzero static critical tail;
-3. a tail-subtracted formulation with a controllable forcing/residual;
-4. or a direct ancient Liouville theorem for this specific static-tail formation class.
+1. a same-trajectory flux law connecting the pump event to the later boundary defect;
+2. a tail-subtracted or renormalized ancient formulation;
+3. a rigidity theorem for an ancient solution with local backward extinction, static critical far field, a positive finite-amplitude pump, and a finite forward terminal horizon;
+4. or a bridge producing a strong-`L^3` backward sequence after a legitimate tail cancellation.
 
 No such closure is proved here.
 
