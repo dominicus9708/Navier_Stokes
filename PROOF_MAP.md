@@ -1,24 +1,43 @@
-# Proof / verification map
+# Proof / verification map — current audited route
 
-This file records the **current** route of the DSD-assisted 3D incompressible Navier–Stokes proof challenge. Older exploratory states remain recoverable from Git history.
+Date: 2026-08-26
 
-## Status vocabulary
+This file is the **current proof ledger** for the DSD-assisted 3D incompressible Navier–Stokes project.
+Older exploratory routes remain in Git history and dated notes, but they are not independent terminal proof branches unless explicitly listed here.
 
-- **NAVIER–STOKES INPUT** — original PDE/problem setting.
-- **DSD BRIDGE DEFINITION** — application-specific typed representation.
-- **DERIVED IDENTITY** — exact algebra/calculus under stated hypotheses.
-- **DERIVED LEMMA** — proof-level internal lemma under the stated function class.
-- **COMPUTATIONAL CHECK** — symbolic/numerical benchmark only.
-- **EXTERNAL REGULARITY ANCHOR** — published theorem used as an implication/target.
-- **CONDITIONAL NECESSARY CONDITION** — follows conditionally from a regularity gate; not a contradiction.
-- **FAILED-ROUTE CANDIDATE** — computationally contradicted but not analytically excluded.
-- **FAILED ROUTE** — algebraically/analytically excluded as the proposed mechanism.
-- **OPEN PROOF OBLIGATION** — required before global smoothness.
-- **NOT CLAIMED** — explicitly not established.
+## Final status
+
+\[
+\boxed{\text{GLOBAL REGULARITY OF 3D NAVIER--STOKES REMAINS UNPROVED.}}
+\]
+
+The current work has reduced the retained W1 singular corridor to one large weak-critical endpoint and proved one continuation/absorption lemma.
+The reverse critical-tail-tightness implication is still open.
+
+Primary references:
+
+- `DSD_NAVIER_STOKES_FINAL_CLOSURE_AUDIT_2026-08-26.md`
+- `DSD_W1_CRITICAL_HIGH_AMPLITUDE_TAIL_ABSORPTION_LEMMA_2026-08-26.md`
+- `DSD_W1_INTERIOR_BOUNDARY_DECOUPLING_AND_UNIFORM_NO_DEFECT_TARGET_2026-08-26.md`
+- `DSD_W1_WEAK_L3_DISTRIBUTION_DEFECT_EQUIVALENCE_2026-08-26.md`
+- GitHub Issue #2: `Final endpoint: prove critical K-tail tightness or equivalent pump absorption`
 
 ---
 
-# A. Original problem and baseline
+## Status vocabulary
+
+- **STANDARD INPUT** — standard Navier–Stokes/Leray/suitable-solution fact used as input.
+- **DERIVED IDENTITY** — exact algebra/calculus identity under the stated class.
+- **DERIVED LEMMA** — internally proved analytic lemma under stated hypotheses.
+- **W1-CONDITIONAL** — proved inside the retained W1 recurrent corridor; not yet a theorem for every possible finite-time singularity.
+- **DIAGNOSTIC** — useful structural information but not an independent closure obligation.
+- **SUPERSEDED / INVALID SHORTCUT** — explicitly rejected by audit.
+- **OPEN MILLENNIUM-LEVEL BRIDGE** — genuinely unresolved implication needed for unconditional closure.
+- **FINAL AUDIT REQUIRED** — must be rechecked after the open bridge is solved before any global-regularity claim.
+
+---
+
+# A. Standard problem
 
 \[
 \partial_tu+(u\cdot\nabla)u=-\nabla p+\nu\Delta u,
@@ -26,462 +45,371 @@ This file records the **current** route of the DSD-assisted 3D incompressible Na
 \nabla\cdot u=0,
 \qquad
 x\in\mathbb R^3,
-\quad \nu>0,
-\quad f=0.
+\qquad
+\nu>0,
+\qquad
+f=0.
 \]
 
-| Item | Support | Status |
-|---|---|---|
-| Whole-space `R^3` problem; no physical container | baseline | NAVIER–STOKES INPUT |
-| Observation spheres/cutoffs are not physical boundaries | baseline | DSD BRIDGE DEFINITION |
-| Gaussian double-curl benchmark is smooth, rapidly decaying, divergence-free | exact symbolic audit | COMPUTATIONAL CHECK |
-| `x/y/z` rotated benchmarks agree up to rotation | coordinate symmetry | DERIVED IDENTITY |
-| Radial channel at `r=0` is undefined/inapplicable, not defined zero | coordinate definition + DSD typing | DSD BRIDGE DEFINITION |
-| Global finite-energy weak track has `L^2` energy control | Leray/suitable theory | EXTERNAL/STANDARD INPUT |
+DSD does not modify this PDE. It is used only to keep domains, state boundaries, channels, limit operations, and causal/representational distinctions explicit.
+
+Status: **STANDARD INPUT**.
 
 ---
 
-# B. Primary proof object: weighted mean-flow moving sphere
+# B. Retained W1 corridor
 
-Choose a nonnegative smooth compactly supported radial cutoff
+The late blow-up analysis uses a recurrent W1 corridor with the previously recorded assumptions and compactness/tail hypotheses.
+Inside this corridor the omega-limit contains a compact minimal recurrent set and a nontrivial critical endpoint.
 
-\[
-\phi_\ell(x)=\phi(x/\ell).
-\]
-
-Let
-
-\[
-\mathcal U_\ell(X,t)
-=
-\frac{\int\phi_\ell(x-X)u(x,t)dx}
-{\int\phi_\ell dx}
-\]
-
-and solve
+The current proof map does **not** claim, without a final branch-completeness audit, that every conceivable finite-time singularity has already been reduced to W1.
+Therefore:
 
 \[
 \boxed{
-\dot X_\ell(t)=\mathcal U_\ell(X_\ell(t),t).
+\text{W1 closure} \neq \text{global regularity until upstream branch completeness is re-audited.}
 }
 \]
+
+Status: **W1-CONDITIONAL REDUCTION**.
+
+---
+
+# C. Endpoint quantity: critical cubic residue
+
+On the retained recurrent W1 endpoint, the audited critical residue is
+
+\[
+\boxed{\mathscr R_3>0.}
+\]
+
+Its robust general definition is Abel/Mellin in nature, schematically
+
+\[
+\mathscr R_3
+=
+\lim_{\varepsilon\downarrow0}
+\varepsilon
+\left\langle
+\int |U|^{3+\varepsilon}\,dY
+\right\rangle_\mu.
+\]
+
+The general aperiodic lane must **not** automatically identify this with a pointwise limit of
+
+\[
+\lambda^3|\{|U|>\lambda\}|.
+\]
+
+That upgrade needs a Tauberian/regular-variation hypothesis.
+
+Status: **W1-CONDITIONAL ENDPOINT + AUDITED TAUBERIAN CAUTION**.
+
+---
+
+# D. Exact boundary coordinate: truncated critical energy
 
 Define
 
 \[
-\bar U_\ell=\dot X_\ell,
-\qquad
-v=u-\bar U_\ell,
-\qquad
-\varphi(x,t)=\phi_\ell(x-X_\ell(t)).
+\mathcal E_\lambda(U)
+:=
+\frac12\int_{\mathbb R^3}(|U|^2-\lambda^2)_+\,dY,
 \]
-
-Then
 
 \[
 \boxed{
-\int\varphi vdx=0.
+K(U;\lambda)
+:=
+\lambda\mathcal E_\lambda(U).
 }
 \]
 
-| Item | Support | Status |
-|---|---|---|
-| Weighted mean field is bounded and Lipschitz in `X` for fixed `ell` | global energy + smooth convolution | DERIVED LEMMA |
-| Center ODE has unique AC solution forward or backward on finite intervals | Caratheodory ODE | DERIVED LEMMA |
-| Moving cutoff obeys `partial_t varphi=-Ubar·grad varphi` a.e. | AC chain rule | DERIVED IDENTITY |
-| Mean-zero internal velocity | center definition | DERIVED IDENTITY |
-| Smooth hard-sphere analogue and asymmetric flux audits | deterministic computations | COMPUTATIONAL TRACK |
-
----
-
-# C. Moving weighted-variance local-energy lemma
-
-For whole-space finite-energy suitable weak solutions, for a.e. Lebesgue times `s<t`,
+This coordinate does not require the pointwise weak-`L3` distribution limit.
+Invariant averaging on W1 gives
 
 \[
 \boxed{
-\begin{aligned}
-&\frac12\int\varphi(t)|v(t)|^2dx
-+\nu\int_s^t\int\varphi|\nabla u|^2dxdt'\\
-&\le
-\frac12\int\varphi(s)|v(s)|^2dx\\
-&\quad+
-\int_s^t\int\frac{|v|^2}{2}v\cdot\nabla\varphi\,dxdt'\\
-&\quad+
-\int_s^t\int p\,v\cdot\nabla\varphi\,dxdt'\\
-&\quad+
-\frac\nu2\int_s^t\int|v|^2\Delta\varphi\,dxdt'.
-\end{aligned}
-}
-\]
-
-Proof: `notes/2026-08-12-weighted-variance-lemma-completion.md`.
-
-The proof uses the ordinary suitable local-energy inequality, the weak momentum equation with the same moving cutoff, and the variance identity
-
-\[
-\frac12\int\varphi|v|^2
+\lim_{\lambda\downarrow0}
+\langle K(U;\lambda)\rangle_\mu
 =
-\frac12\int\varphi|u|^2
--
-\frac{M_\ell}{2}|\bar U|^2.
+\frac{\mathscr R_3}{3}>0.
+}
 \]
 
-No `X''` is needed for this local-energy lemma.
+Thus the surviving normalized state has a positive critical boundary defect in the exact `K` sense.
 
-Status: **DERIVED LEMMA**.
-
-## Critical typed channels
-
-\[
-C_\phi=\ell^{-1}\int\varphi|v|^2,
-\]
-
-\[
-D_\phi=\nu\ell\int\varphi|\nabla u|^2,
-\]
-
-\[
-A_\phi=\ell\int\frac{|v|^2}{2}v\cdot\nabla\varphi,
-\]
-
-\[
-P_\phi=\ell\int p\,v\cdot\nabla\varphi,
-\]
-
-\[
-B_\phi=\frac{\nu\ell}{2}\int|v|^2\Delta\varphi.
-\]
-
-All have the correct critical scaling.  DSD typing keeps oscillation, dissipation, relative advection, pressure redistribution, and cutoff diffusion separate.
+Status: **DERIVED W1-CONDITIONAL IDENTITY**.
 
 ---
 
-# D. Generalized Galilean suitable-solution lemma
+# E. Exact amplitude-state transport
 
-The weighted mean momentum identity gives
+For almost every regular amplitude level,
 
 \[
-\bar U_\ell'\in L^{3/2}_{loc}(dt),
-\qquad
-X_\ell\in W^{2,3/2}_{loc}(dt).
+\boxed{
+\partial_s\mathcal E_\lambda
+-\frac12\partial_\lambda(\lambda\mathcal E_\lambda)
++\nu D_\lambda
+=J_P(\lambda),
+}
 \]
 
-For any
+where `D_lambda>=0` is the thresholded viscous cost and `J_P(lambda)` is the gauge-independent pressure work through the velocity-magnitude level surface.
+
+Equivalently,
 
 \[
-X\in W^{2,3/2}_{loc},
-\]
-
-define
-
-\[
-y=x-X(t),
-\]
-
-\[
-v(y,t)=u(y+X(t),t)-\dot X(t),
-\]
-
-\[
-q(y,t)=p(y+X(t),t)+\ddot X(t)\cdot y.
-\]
-
-Then on bounded translated cylinders `(v,q)` is again a suitable weak solution.
-
-Key facts:
-
-1. the distributional momentum equation transforms exactly;
-2. `X''·y` lies in local `L^{3/2}` because `X'' in L^{3/2}_t`;
-3. the local energy defect transforms by
-
-\[
-\mathcal D[v,q]
+\boxed{
+\partial_sK
+-\frac\lambda2\partial_\lambda K
 =
-\mathcal D[u,p]\circ(y+X)
--
-\dot X\cdot\mathcal R[v,q],
-\]
-
-and `mathcal R[v,q]=0` distributionally.
-
-Proof: `notes/2026-08-12-generalized-galilean-suitable-lemma.md`.
-
-Status: **DERIVED LEMMA**.
-
-## Consequence: fixed-cylinder transfer is closed
-
-Given a candidate endpoint `(x_*,T)` and scale `ell`, solve the weighted center ODE **backward** with
-
-\[
-X_\ell(T)=x_*.
-\]
-
-The candidate point becomes `(0,T)` in the translated `y` coordinates, where `v` is suitable on an ordinary fixed parabolic cylinder.
-
-Therefore the former requirement to geometrically cover a moving sphere by a fixed cylinder is no longer open.
-
----
-
-# E. External pressure-free epsilon-regularity gate
-
-Wang–Wu–Zhou prove a one-scale pressure-free criterion for suitable weak solutions: for every
-
-\[
-\delta>0,
-\]
-
-sufficiently small
-
-\[
-\iint_{Q(1)}|v|^{5/2+\delta}dxdt
-\]
-
-implies regularity in a smaller cylinder.
-
-Status: **EXTERNAL REGULARITY ANCHOR**.
-
-The proof track therefore uses a fixed exponent
-
-\[
-p=\frac52+\delta>\frac52.
-\]
-
-For `5/2<p<=3`, mean-zero interpolation gives
-
-\[
-\boxed{
-A_p
-\lesssim
-(\sup C_\phi)^{\alpha(p)}
-(\mathfrak E_\phi)^{\beta(p)},
+\lambda(J_P-\nu D_\lambda).
 }
 \]
 
-with
+The amplitude characteristic is
 
 \[
-\alpha(p)=\frac{6-p}{4},
+\boxed{\lambda'(s)=-\lambda/2,}
+\]
+
+which corresponds exactly to one fixed physical velocity threshold.
+
+Status: **DERIVED IDENTITY**.
+
+---
+
+# F. DSD interior/boundary separation
+
+The current state description is:
+
+### Interior
+
+Finite normalized amplitude/finite-parent structures, including pressure work, `D3` dissipation, amplitude BMO oscillation, direction deformation, vorticity stretching, and strain diagnostics.
+
+### Boundary
+
+The critical `K` defect at normalized amplitude zero/spatial infinity.
+
+### Joint projective boundary
+
+The critical endpoint sits on
+
+\[
+\boxed{\lambda |Y|=O(1),}
+\]
+
+which is the amplitude-space form of the `1/r` critical geometry.
+
+Therefore the boundary defect is not treated as an ex-nihilo source. It has a describable amplitude-state formation path.
+
+Status: **DSD STRUCTURAL REDUCTION**.
+
+---
+
+# G. Retired terminal branches
+
+The following are retained as diagnostics/internal realization classes but are **not separate final proof obligations**:
+
+- periodic versus aperiodic recurrence;
+- `H2` coherent versus derivative-escalating tail behavior;
+- middle/top strain subbranches;
+- maximum-vorticity contact geometry;
+- Bernoulli versus pressure-free vorticity current descriptions;
+- turnover/material-export subcases;
+- Lamb/Hodge projection descriptions;
+- finite-core pressure-pump geometry.
+
+They all feed the same large weak-critical W1 endpoint.
+
+Status: **DIAGNOSTIC / SUBSUMED**.
+
+---
+
+# H. Completed continuation lemma
+
+For a smooth physical solution on `(t0,T*)`, fix `L>0` and split
+
+\[
+u=v_L+w_L,
+\]
+
+\[
+v_L=u\mathbf1_{|u|\le L},
 \qquad
-\beta(p)=\frac{3(p-2)}{4}.
+w_L=u\mathbf1_{|u|>L}.
 \]
 
-Examples:
-
-\[
-p=3:
-\quad
-(\alpha,\beta)=\left(\frac34,\frac34\right),
-\]
-
-\[
-p=\frac{11}{4}:
-\quad
-(\alpha,\beta)=\left(\frac{13}{16},\frac{9}{16}\right),
-\]
-
-and
-
-\[
-p\downarrow\frac52:
-\quad
-(\alpha,\beta)\to\left(\frac78,\frac38\right).
-\]
-
-The epsilon threshold depends on `p`; there is no assumed uniform optimization in `p`.
-
----
-
-# F. Current singularity concentration certificate
-
-If `(x_*,T)` were singular, then for the backward weighted-mean path ending at `x_*`, the pressure-free epsilon criterion cannot be satisfied on every sufficiently small scale.
-
-Consequently, for the selected exponent `p`, arbitrarily small critical scales must retain a non-small internal channel product of the schematic form
+The repository proves that there exists a viscosity-dependent threshold `epsilon_nu>0` such that
 
 \[
 \boxed{
-(\sup C_\phi)^{\alpha(p)}
-(\mathfrak E_\phi)^{\beta(p)}
-\gtrsim c\varepsilon_p.
+\sup_{t_0<t<T_*}
+\|w_L(t)\|_{L^{3,\infty}}
+<\varepsilon_\nu
 }
 \]
 
-Status: **CONDITIONAL NECESSARY CONDITION FOR A SINGULARITY**.
+for one finite `L` implies uniform `H1` control and continuation past `T*`.
 
-This is not yet a contradiction.
-
-The Millennium-level problem has now been reduced, in this route, to showing that such persistent critical concentration is impossible for arbitrary admissible smooth initial data.
-
----
-
-# G. Dynamics of the internal oscillation channel
-
-For a hard mean-flow sphere, the smooth critical variance budget is
-
-\[
-\frac{\ell^2}{2}\frac{d}{dt}C_{\rm sph}
-=-A_{\rm adv}-P_{\rm pressure}+V_{\rm viscous}.
-\]
-
-The weighted theorem-level version is Section C.
-
-| Item | Support | Status |
-|---|---|---|
-| Mean subtraction removes coherent translation | exact | DERIVED IDENTITY |
-| Relative advection generally remains | asymmetric audit | COMPUTATIONAL CHECK |
-| Pressure redistribution generally remains | asymmetric audit | COMPUTATIONAL CHECK |
-| `64^3 -> 80^3` moving-sphere budget convergence check passes | CI numerical audit | COMPUTATIONAL CHECK |
-| Viscosity dominates the current asymmetric benchmark at `t=0` near `ell=1` | benchmark only | COMPUTATIONAL CHECK |
-| Universal monotonic decay of local oscillation | none | NOT CLAIMED |
-
-### Primary unresolved inequality
-
-Control
-
-\[
-A_\phi+P_\phi+B_\phi
-\]
-
-well enough that the critical concentration certificate in Section F cannot persist down to arbitrarily small scales.
-
-Status: **OPEN PROOF OBLIGATION**.
-
----
-
-# H. Pressure localization: secondary dynamics tool
-
-The pressure kernel is nonlocal, but spatial differences improve far-field decay:
-
-- pressure kernel: degree `-3`;
-- gradient: degree `-4`;
-- next derivative: degree `-5`.
-
-Thus for nearby points and far sources,
-
-\[
-|\delta\nabla p_{far}|
-\lesssim
-|x-y|
-\int_{far}\frac{|u(z)|^2}{|z-X|^5}dz.
-\]
-
-Under a critical local `L^2`-Morrey bound, the dyadic far-pressure difference is scale-critically controlled.
-
-Status: **DERIVED BRIDGE**.
-
-Near pressure remains coupled to local nonlinear structure and is still an open dynamics channel.  Because the final epsilon gate is pressure-free, pressure is needed to control the **evolution** of `C_phi`, not the final regularity condition itself.
-
----
-
-# I. Strain, vorticity, and off-diagonal DSD diagnostics
-
-Retained exact/benchmark structures include:
-
-\[
-\operatorname{tr}S=0,
-\]
-
-\[
-\omega^TS\omega,
-\]
-
-\[
-\omega^TS\omega
-=|\omega|^2\,\xi^TS\xi,
-\]
-
-and
-
-\[
--\det S
-\le
-\frac12\lambda_2^+|S|^2.
-\]
-
-Two-seed audits show that nonlinear cross terms and cross stretching cannot be reconstructed from diagonal/self channels alone; DSD off-diagonal channels must be retained.
-
-External anchors include Constantin–Fefferman-type vorticity-direction criteria and middle-strain-eigenvalue criteria.
-
-The open task is to connect these structures to a quantitative decay/control of the moving weighted-sphere redistribution channels.
-
-Status: **OPEN PROOF OBLIGATION**.
-
----
-
-# J. Material/Lagrangian track: secondary diagnostics only
-
-For the material flow map,
-
-\[
-\dot F=(\nabla u)F,
-\qquad
-\det F=1,
-\]
-
-and
-
-\[
-A=F^{-1}F^{-T}.
-\]
-
-Material coordinates remove explicit advection, but no new physical viscosity is generated. Exactly,
-
-\[
-(\nabla_aU)A(\nabla_aU)^T
-=(\nabla_xu)(\nabla_xu)^T.
-\]
-
-Likewise, explicit `F^{-T}` factors in pulled-back boundary integrals are geometric representations, not independent energy sources.
-
-Retained uses:
-
-- follow the same fluid particles;
-- inspect deformation/strain lineage;
-- keep a fixed material reference domain;
-- generate structural diagnostics.
-
-Not retained as proof mechanisms:
-
-- `F^{-T}` as an independent pressure amplification source;
-- `det A=1` or `tr A>=3` as enhanced viscous coercivity;
-- eigenvalues of `A` alone as physical weak/strong viscosity directions.
-
-Status: **SECONDARY TRACK + FAILED ROUTES PRUNED**.
-
----
-
-# K. Other routes pruned or demoted
-
-| Route | Status | Reason |
-|---|---|---|
-| Global `L^3` universally decreases | FAILED-ROUTE CANDIDATE | stable asymmetric positive pressure-correlation audit |
-| `Pi_3` bounded by a function of `T_3` alone | FAILED ROUTE for scale-compatible instantaneous closure | scaling mismatch |
-| One-way outward pressure/advection flux at every radius | FAILED-ROUTE CANDIDATE | asymmetric sign changes |
-| Fixed-origin shell family is translation complete | FAILED ROUTE | translated benchmark |
-| Point-centered `sup_ell C_rel` as all-scale internal norm | REPAIRED | large-scale center/far-field drift artifact; mean centering fixes it |
-| `lambda_2^+` alone controls material boundary geometry | FAILED ROUTE for geometric claim | trace-free `diag(-M,0,M)` countermodel |
-| Accelerating-frame assumption needed for suitable bridge | DEMOTED | Eulerian weighted-variance lemma and generalized suitable translation are now derived |
-
----
-
-# L. Remaining proof obligations, in priority order
-
-1. **Critical concentration exclusion:** prove that the weighted internal velocity around every candidate singular endpoint cannot keep the pressure-free `L^{5/2+delta}` quantity above its epsilon threshold on arbitrarily small scales.
-2. **Redistribution estimate:** obtain a non-circular multiscale estimate for `A_phi`, `P_phi`, and `B_phi` against oscillation/dissipation and DSD strain/alignment/cross channels.
-3. **Multiscale migration:** prevent dangerous concentration from merely moving between nearby centers or adjacent scales while avoiding any one fixed-scale estimate.
-4. **Arbitrary-data closure:** every final constant must depend only on admissible initial-data quantities and `nu`, not Gaussian symmetry or a posteriori smoothness.
-5. **Global conclusion:** combine the concentration exclusion with the published pressure-free epsilon-regularity theorem to rule out every finite-time singularity.
+Thus
 
 \[
 \boxed{
-\text{Global smoothness is not currently proved.}
+\text{small high-amplitude weak-}L^3\text{ tail}
+\Longrightarrow
+\text{regularity}.
 }
+\]
+
+Status: **DERIVED LEMMA — COMPLETED**.
+
+Reference: `DSD_W1_CRITICAL_HIGH_AMPLITUDE_TAIL_ABSORPTION_LEMMA_2026-08-26.md`.
+
+---
+
+# I. `K` and the physical high-amplitude tail
+
+Define
+
+\[
+K_L^{phys}(t)
+:=
+\frac L2\int(|u|^2-L^2)_+\,dx.
+\]
+
+The Leray/physical correspondence is exact:
+
+\[
+\boxed{
+K(U(s);L\sqrt{T_*-t})
+=
+K_L^{phys}(t).
+}
+\]
+
+The repository also derives quantitative comparison between `K_L^{phys}` and the high-amplitude weak-`L3` distribution tail.
+Hence critical `K`-tail tightness is an equivalent/sufficient route into the completed absorption lemma.
+
+Status: **DERIVED LEMMA/IDENTITY**.
+
+---
+
+# J. Single live endpoint bridge
+
+The principal unresolved implication is
+
+\[
+\boxed{
+\text{finite-energy Navier--Stokes + retained W1/prelimit structure}
+\stackrel{?}{\Longrightarrow}
+\text{uniform critical high-amplitude tail tightness}.
+}
+\]
+
+A sufficient form is
+
+\[
+\boxed{
+\lim_{L\to\infty}
+\sup_{t_0<t<T_*}
+K_L^{phys}(t)=0
+}
+\]
+
+on some terminal interval.
+
+Equivalently, it is enough to prove one of:
+
+1. a high-amplitude weak-`L3` tail eventually below the absorption threshold;
+2. defect-aware late compactness controlling `K`;
+3. pressure-pump absorption on the strict interior amplitude band;
+4. a strong-critical upgrade to a known continuation class;
+5. direct exclusion of the large weak-critical recurrent W1 ancient class.
+
+Finite `L2` energy and ordinary dissipation alone do not yield this implication.
+
+Status: **OPEN MILLENNIUM-LEVEL BRIDGE**.
+
+Tracked in GitHub Issue #2.
+
+---
+
+# K. Major invalid shortcuts — do not reopen
+
+The following routes were explicitly audited and must not be reused without new hypotheses:
+
+| Shortcut | Audit result |
+|---|---|
+| Uniform weak-`L3` contradicts logarithmic cubic concentration | False; the two are compatible |
+| Similarity-radial current is material turnover | False |
+| Periodic omega-limit tail automatically transfers to the original parent on fixed physical annuli | False without a diagonal convergence rate |
+| `R3/6` is a new physical power source | False; it is a normalized amplitude-boundary term |
+| Large `H2` capacity is the actual reformation action | False |
+| Mellin/Abel residue automatically equals `lim lambda^3 N(lambda)` | False without Tauberian regularity |
+| Pointwise sign of pressure is physically/gauge invariant | False; use gradients, differences, or level-set work |
+| Infinite normalized events automatically violate finite physical energy | False for positive scaling exponent costs |
+
+Status: **SUPERSEDED / INVALID SHORTCUTS**.
+
+---
+
+# L. What would count as completion
+
+### Step 1 — endpoint bridge
+
+Resolve GitHub Issue #2 by proving one valid closure route under the retained hypotheses.
+
+### Step 2 — W1 contradiction
+
+Use that theorem to force
+
+\[
+\mathscr R_3=0
+\]
+
+or continuation, contradicting the nontrivial W1 endpoint.
+
+### Step 3 — upstream branch-completeness audit
+
+Re-run the route from an arbitrary finite-time blow-up assumption and verify that no singular lane escapes the W1 reduction.
+
+### Step 4 — external theorem audit
+
+Check exact hypotheses, constants, domains, pressure gauges, limit order, compactness topology, and all Tauberian claims.
+
+### Step 5 — only then consider a global claim
+
+Until Steps 1–4 are complete,
+
+\[
+\boxed{\text{GLOBAL REGULARITY IS NOT CLAIMED.}}
 \]
 
 ---
 
-# M. Reproducibility policy
+# M. Current one-line proof ledger
 
-Exact symbolic checks, deterministic numerical audits, and failed-route witnesses are executable through GitHub Actions.
+\[
+\boxed{
+\begin{array}{c}
+\text{candidate blow-up}\
+\Downarrow\quad\text{(upstream completeness still to be finally audited)}\\
+\text{retained recurrent W1 corridor}\
+\Downarrow\\
+\mathscr R_3>0\ \Longleftrightarrow\ \text{positive critical }K\text{ boundary defect}\
+\Downarrow\\
+\text{large high-amplitude weak-critical tail}\
+\Downarrow\\
+\textbf{OPEN: prove uniform tail tightness / pump absorption}\
+\Downarrow\\
+\text{completed }H^1\text{ absorption lemma}\
+\Downarrow\\
+\text{continuation, hence contradiction to }T_*.
+\end{array}
+}
+\]
 
-A benchmark is never promoted to an arbitrary-data theorem without proof.  The successful CI run at the current bridge stage verifies the executable algebra/numerics; it is not evidence by itself for global regularity.
+This is the only live top-level route in the repository as of 2026-08-26.
