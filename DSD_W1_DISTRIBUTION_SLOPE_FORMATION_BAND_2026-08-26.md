@@ -2,191 +2,174 @@
 
 Date: 2026-08-26
 
-Status: **THE PRESSURE-MINUS-VISCOUS AMPLITUDE GAIN IS REWRITTEN PURELY IN TERMS OF THE VELOCITY DISTRIBUTION FUNCTION / POSITIVE GAIN REQUIRES A FINITE-AMPLITUDE DISTRIBUTION SLOPE STEEPER THAN THE WEAK-L3 EXPONENT THREE / THE FAR DEFECT TAIL IS THE NEUTRAL SLOPE-THREE OUTPUT / GLOBAL REGULARITY UNPROVED.**
+Status: **THE INVARIANT-AVERAGED PRESSURE-MINUS-VISCOUS AMPLITUDE GAIN IS REWRITTEN IN TERMS OF THE INVARIANT-AVERAGED VELOCITY DISTRIBUTION FUNCTION / POSITIVE GAIN REQUIRES A FINITE-AMPLITUDE DISTRIBUTION PROFILE STEEPER THAN THE WEAK-L3 EXPONENT THREE IN THE POWER-LAW MODEL / INDIVIDUAL NONSTATIONARY STATES MUST RETAIN TIME DEPENDENCE / GLOBAL REGULARITY UNPROVED.**
 
-## 1. Distribution variables
+## 1. Statewise distribution variables
 
-Let
+For one state `U`, let
 
 \[
-N(\lambda)=|\{|U|>\lambda\}|,
+N_U(\lambda)=|\{|U|>\lambda\}|,
 \qquad
-C(\lambda)=\lambda^3N(\lambda).
+C_U(\lambda)=\lambda^3N_U(\lambda),
 \]
 
-The threshold energy is
-
 \[
-\mathcal E_\lambda
+\mathcal E_{\lambda,U}
 =
-\int_\lambda^\infty \mu N(\mu)d\mu,
+\int_\lambda^\infty \mu N_U(\mu)d\mu,
+\qquad
+K_U(\lambda)=\lambda\mathcal E_{\lambda,U}.
 \]
 
-and define
-
-\[
-K(\lambda)=\lambda\mathcal E_\lambda.
-\]
-
-Equivalently,
+For every fixed state, purely algebraically,
 
 \[
 \boxed{
-K(\lambda)
-=
-\lambda\int_\lambda^\infty
-\frac{C(\mu)}{\mu^2}d\mu.
+\lambda\partial_\lambda K_U
+=K_U-C_U.
 }
 \]
 
-Thus `K` is a forward Hardy average of the instantaneous weak-L3 coefficient `C`.
+## 2. Invariant averages
 
-## 2. Exact derivative identity
-
-Since
+Let `mu` be an invariant probability measure on the compact minimal W1 set and define
 
 \[
-\partial_\lambda\mathcal E_\lambda
-=-\lambda N(\lambda),
+\bar N(\lambda)=\langle N_U(\lambda)\rangle_\mu,
+\qquad
+\bar C(\lambda)=\lambda^3\bar N(\lambda),
 \]
 
-one gets
+\[
+\bar K(\lambda)=\langle K_U(\lambda)\rangle_\mu.
+\]
+
+Linearity gives
 
 \[
 \boxed{
-\lambda K'(\lambda)
-=K(\lambda)-C(\lambda).
+\lambda\bar K'(\lambda)
+=\bar K(\lambda)-\bar C(\lambda).
 }
 \]
 
 The invariant threshold balance gives
 
 \[
-J_P(\lambda)-\nu D_\lambda
-=-\frac12K'(\lambda).
-\]
-
-Therefore
-
-\[
 \boxed{
-J_P(\lambda)-\nu D_\lambda
+\left\langle J_P(\lambda)-\nu D_\lambda\right\rangle_\mu
+=-\frac12\bar K'(\lambda)
 =
-\frac{C(\lambda)-K(\lambda)}{2\lambda}.
+\frac{\bar C(\lambda)-\bar K(\lambda)}{2\lambda}.
 }
 \]
 
-Positive net gain occurs exactly when the instantaneous coefficient exceeds its Hardy average:
+Thus positive **mean** gain occurs exactly when
 
 \[
-\boxed{C(\lambda)>K(\lambda).}
+\boxed{\bar C(\lambda)>\bar K(\lambda).}
 \]
 
-## 3. Local power-law interpretation
+This statement is invariant-average, not a same-time identity for an arbitrary nonstationary state.
 
-Suppose on one amplitude band
+## 3. Hardy-average representation
+
+The averaged threshold energy satisfies
 
 \[
-N(\lambda)\approx c\lambda^{-\alpha},
+\boxed{
+\bar K(\lambda)
+=
+\lambda\int_\lambda^\infty
+\frac{\bar C(\mu)}{\mu^2}d\mu.
+}
+\]
+
+Hence `bar K` is the forward Hardy average of the invariant-averaged weak-L3 coefficient `bar C`.
+
+## 4. Power-law model
+
+Suppose on one amplitude band the **averaged** distribution is approximately
+
+\[
+\bar N(\lambda)\approx c\lambda^{-\alpha},
 \qquad \alpha>2.
 \]
 
 Then
 
 \[
-C(\lambda)=c\lambda^{3-\alpha},
+\bar C(\lambda)=c\lambda^{3-\alpha},
 \]
 
-and
+and away from the upper cutoff
 
 \[
-K(\lambda)
+\bar K(\lambda)
 \approx
-\frac{1}{\alpha-2}C(\lambda)
+\frac{1}{\alpha-2}\bar C(\lambda).
 \]
 
-away from the upper cutoff.
-
-Hence
+Therefore
 
 \[
 \boxed{
-J_P-\nu D_\lambda>0
+\left\langle J_P-\nu D_\lambda\right\rangle_\mu>0
 \iff
-\alpha>3.
+\alpha>3
 }
 \]
 
-At the critical weak-L3 slope
+within this local power-law model.
+
+At the weak-L3 slope `alpha=3`,
 
 \[
-\alpha=3,
+\bar K\approx\bar C
 \]
 
-one has
+and the local mean gain is neutral to leading order.
 
-\[
-K=C
-\]
+## 5. DSD interpretation
 
-to leading order and the local amplitude gain is neutral.
-
-## 4. DSD formation interpretation
-
-The positive W1 defect therefore requires a change of distribution regime:
+The invariant endpoint requires a change of amplitude-distribution regime:
 
 \[
 \boxed{
-\text{finite-amplitude band with effective slope }\alpha>3
+\text{finite-amplitude averaged formation band}
 \longrightarrow
-\text{amplitude-state transport}
+\text{time-amplitude characteristic transport}
 \longrightarrow
-\text{low-amplitude boundary with slope }\alpha=3.
+\text{neutral slope-three boundary defect}.
 }
 \]
 
-The finite core is a **formation band** where supercritical distribution steepness supplies positive net gain. The far weak-L3 tail is the neutral storage/output state.
+The finite-core distribution statement is an invariant statistical description. Minimality and continuity are then used separately to extract recurrent instantaneous pump events.
 
-## 5. Geometric level-set form
+## 6. Statewise geometric identity
 
-For regular levels,
+For each regular level of each state,
 
 \[
--N'(\lambda)
+-N_U'(\lambda)
 =
 \int_{\{|U|=\lambda\}}
 \frac{dS}{|\nabla|U||}.
 \]
 
-The effective logarithmic distribution slope is
+Thus statewise level-set geometry remains available for any instantaneous recurrent witness selected from the positive invariant band.
+
+## 7. Closure target
+
+A W1 closure would follow from a theorem forbidding the invariant-averaged finite-parent distribution/gain profile required above, or equivalently forcing
 
 \[
-\boxed{
-\alpha_{eff}(\lambda)
-:=-\frac{\lambda N'(\lambda)}{N(\lambda)}.
-}
+\int
+\left\langle J_P-\nu D_\lambda\right\rangle_\mu d\lambda\le0.
 \]
 
-Thus a positive-gain power-law-like band requires
-
-\[
-\boxed{
-\lambda
-\int_{\{|U|=\lambda\}}
-\frac{dS}{|\nabla|U||}
->3N(\lambda)
-}
-\]
-
-in the corresponding differential sense.
-
-This connects the amplitude-state gain to the geometry of velocity-magnitude level sets.
-
-## 6. Closure target
-
-A new route to W1 closure would be any theorem forbidding a recurrent finite-parent band with the required supercritical distribution slope and positive pressure-minus-viscous gain while maintaining the W1 critical boundary output.
-
-No such large-data level-set theorem is proved here.
+No such unconditional large-data theorem is proved here.
 
 \[
 \boxed{\text{GLOBAL REGULARITY REMAINS UNPROVED.}}
