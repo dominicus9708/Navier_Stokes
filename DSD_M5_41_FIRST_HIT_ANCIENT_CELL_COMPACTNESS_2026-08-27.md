@@ -1,28 +1,93 @@
-# DSD M5-41 — First-Hit Ancient Cell Compactness
+# DSD M5-41 — Audited Pump-Anchored Ancient-to-Terminal Cell
 
 Date: 2026-08-27
 
-Status: **W1-SPECIFIC ANCIENT-CELL EXTRACTION / COMPLETE W1 ORBIT REPRESENTATION DERIVED / FIRST-HIT HISTORY PASSES FOR NEGATIVE TIMES / TERMINAL TRACE REQUIRES THE EXISTING PHASE-CELL COMPACTNESS / GLOBAL REGULARITY UNPROVED.**
+Status: **AUDIT CORRECTION / THE PREVIOUS IDENTIFICATION OF A `lambda_j -> 0` BOUNDARY SEQUENCE WITH A FIRST-HIT SEQUENCE WAS TOO STRONG / THE CORRECT SAME-TRAJECTORY OBJECT IS AN ANCIENT-TO-TERMINAL CELL ANCHORED AT A FIXED POSITIVE NORMALIZED PUMP LEVEL `lambda_c` / GLOBAL REGULARITY UNPROVED.**
 
-## 1. Setup
+## 1. Audit correction
 
-Let `L_j -> infinity` be a sequence of physical velocity thresholds at which the W1 critical tail produces a fixed positive normalized excess. Choose first-hit times `t_j < T_*` so that a fixed positive excess level is first reached at `t_j`.
-
-Write
+The previous version of M5-41 simultaneously imposed
 
 \[
-\tau_j:=T_*-t_j,
-\qquad
-\lambda_j:=L_j\sqrt{\tau_j}.
+\lambda_j:=L_j\sqrt{T_*-t_j}\to0
 \]
 
-The W1 boundary-defect regime corresponds to the joint limit
+and treated `t_j` as first-hit/formation times for a fixed positive excess level.
+
+This is not justified in general.
+
+The earlier amplitude-state analysis already identifies the correct topology:
+
+- the defect is **formed** at a strict interior normalized amplitude band;
+- one may choose a fixed level
+  \[
+  \boxed{\lambda_c\in(\lambda_-,\lambda_+)}
+  \]
+  at which the invariant mean pressure-minus-viscous gain is positive;
+- the same fixed physical threshold is then transported toward
+  \[
+  \lambda=L\sqrt{T_*-t}\downarrow0
+  \]
+  as the singular time is approached.
+
+Thus finite-amplitude formation and zero-amplitude boundary storage are two different stages of one amplitude characteristic.
+
+---
+
+## 2. Pump-event sequence
+
+Choose recurrent pump-active W1 times
 
 \[
-\boxed{L_j\to\infty,\qquad \lambda_j\to0.}
+s_j\to\infty
 \]
 
-Define the physical parabolic blow-up around `(X_*,t_j)` by
+at which the fixed normalized threshold `lambda_c` satisfies a strict positive gain condition, schematically
+
+\[
+\boxed{
+J_P(\lambda_c,s_j)
+-\nu D_{\lambda_c}(s_j)
+\ge g_c>0.
+}
+\]
+
+Let
+
+\[
+t_j:=T_*-e^{-s_j}.
+\]
+
+Define the corresponding physical threshold
+
+\[
+\boxed{
+L_j:=\lambda_c e^{s_j/2}
+=\frac{\lambda_c}{\sqrt{T_*-t_j}}.
+}
+\]
+
+Then
+
+\[
+L_j\to\infty
+\]
+
+while exactly
+
+\[
+\boxed{
+L_j\sqrt{T_*-t_j}=\lambda_c.
+}
+\]
+
+This is the correct scaling relation for the formation event.
+
+---
+
+## 3. Physical parabolic rescaling
+
+Define
 
 \[
 \boxed{
@@ -36,39 +101,33 @@ L_j^{-1}
 }
 \]
 
-Each `V_j` solves the 3D incompressible Navier--Stokes equations with the same viscosity `nu` on its lifespan.
+Each `V_j` solves the same 3D incompressible Navier--Stokes equation with viscosity `nu`.
 
-The original singular time `T_*` becomes
+The original singular time `T_*` appears at
 
 \[
-\sigma_j^*
+\sigma_*^{(j)}
 =L_j^2(T_*-t_j)
-=\lambda_j^2\to0.
+=\lambda_c^2.
 \]
 
-Hence every fixed negative interval `[-S,0]` lies in the smooth lifespan of `V_j` for large `j`, while the positive forward horizon collapses to zero.
+Hence the forward horizon is **fixed**, not collapsing:
+
+\[
+\boxed{\sigma_* = \lambda_c^2>0.}
+\]
+
+The desired same-trajectory limit therefore lives on
+
+\[
+\boxed{
+\mathbb R^3\times(-\infty,\lambda_c^2).
+}
+\]
 
 ---
 
-## 2. Exact relation to Leray variables
-
-Let
-
-\[
-s=-\log(T_*-t),
-\qquad
-U(Y,s)=\sqrt{T_*-t}\,u(x,t),
-\qquad
-Y=\frac{x-X_*}{\sqrt{T_*-t}}.
-\]
-
-Set
-
-\[
-a_j:=2\log L_j,
-\qquad
-U_j^\#(Y,\eta):=U(Y,a_j+\eta).
-\]
+## 4. Exact relation to the recurrent W1 orbit
 
 For
 
@@ -80,199 +139,232 @@ one has
 
 \[
 T_*-t
-=\frac{\lambda_j^2-\sigma}{L_j^2},
+=e^{-s_j}
+\frac{\lambda_c^2-\sigma}{\lambda_c^2}.
 \]
 
-and therefore exactly
+Therefore
 
 \[
-\boxed{
-V_j(z,\sigma)
-=
-(\lambda_j^2-\sigma)^{-1/2}
-U_j^\#\!\left(
-\frac z{\sqrt{\lambda_j^2-\sigma}},
--\log(\lambda_j^2-\sigma)
-\right).
-}
-\]
-
-This formula is the key W1-specific bridge.
-
----
-
-## 3. Complete W1 orbit extraction
-
-The W1 late orbit is precompact in the local smooth topology used throughout the recurrent reduction. Since
-
-\[
-a_j=2\log L_j\to\infty,
-\]
-
-a subsequence of the time translates `U_j^#` converges on compact subsets of `(Y,eta)` to a complete W1 trajectory
-
-\[
-U^\#(Y,\eta),
-\qquad \eta\in\mathbb R.
-\]
-
-Thus for every fixed `sigma<0`,
-
-\[
-\lambda_j^2-\sigma\to-\sigma,
-\]
-
-and the preceding exact relation gives
-
-\[
-\boxed{
-V_j(z,\sigma)
-\longrightarrow
-V_*(z,\sigma)
-:=
-(-\sigma)^{-1/2}
-U^\#\!\left(
-\frac z{\sqrt{-\sigma}},
--\log(-\sigma)
-\right)
-}
-\]
-
-locally smoothly away from any terminal singular point.
-
-Therefore `V_*` is a one-sided ancient Navier--Stokes solution on
-
-\[
-\boxed{\mathbb R^3\times(-\infty,0).}
-\]
-
-It is not an arbitrary ancient profile: it is exactly the inverse-Leray image of one complete recurrent W1 orbit.
-
----
-
-## 4. First-hit history
-
-Use the quadratic excess functional
-
-\[
-\mathcal G(V)
-:=
-\frac12\int_{\mathbb R^3}(|V|-1)_+^2\,dz.
-\]
-
-Choose the first-hit normalization so that
-
-\[
-\mathcal G(V_j(0))=g_0>0
+Y
+=\frac z{\sqrt{\lambda_c^2-\sigma}},
 \]
 
 and
 
 \[
-\mathcal G(V_j(\sigma))<g_0
-\qquad(\sigma<0)
+s
+=s_j
++\log\frac{\lambda_c^2}{\lambda_c^2-\sigma}.
 \]
 
-for every preterminal time in the corresponding first-hit interval.
-
-For a fixed `sigma<0`, the threshold `|V_j|>1` corresponds in Leray variables to
+Let
 
 \[
-|U_j^#|>\sqrt{\lambda_j^2-\sigma}.
+U_j^\#(Y,\eta):=U(Y,s_j+\eta).
 \]
 
-Since this threshold stays strictly positive and W1 has the `1/|Y|` tail envelope, the active set is contained in a fixed finite Leray ball. Hence local convergence is sufficient to pass the excess functional, giving
+Then exactly
 
 \[
 \boxed{
-\mathcal G(V_*(\sigma))\le g_0
-\qquad\forall\sigma<0.
+V_j(z,\sigma)
+=
+(\lambda_c^2-\sigma)^{-1/2}
+U_j^\#\!\left(
+\frac z{\sqrt{\lambda_c^2-\sigma}},
+\log\frac{\lambda_c^2}{\lambda_c^2-\sigma}
+\right).
 }
 \]
 
-Strict inequality may be lost in the subsequential limit and is not claimed.
+W1 compactness and recurrence allow a subsequence for which
+
+\[
+U_j^\#\to U^\#
+\]
+
+on compact `(Y,eta)` sets, where `U^#` is a complete recurrent W1 trajectory.
+
+Hence
+
+\[
+\boxed{
+V_*(z,\sigma)
+=
+(\lambda_c^2-\sigma)^{-1/2}
+U^\#\!\left(
+\frac z{\sqrt{\lambda_c^2-\sigma}},
+\log\frac{\lambda_c^2}{\lambda_c^2-\sigma}
+\right)
+}
+\]
+
+for
+
+\[
+\sigma<\lambda_c^2.
+\]
+
+Thus the limit is an ancient-to-terminal Navier--Stokes cell generated exactly from one complete W1 orbit.
 
 ---
 
-## 5. Terminal mark
+## 5. Meaning of the anchor time `sigma=0`
 
-At `sigma=0`,
+At the pump anchor,
 
 \[
-V_j(z,0)
-=\lambda_j^{-1}
-U\!\left(\frac z{\lambda_j},s_j\right),
+\sigma=0,
 \]
 
-so the terminal slice is exactly the W1 joint boundary blow-down
+one has
 
 \[
-\lambda_j\downarrow0,
+V_*(z,0)
+=\lambda_c^{-1}U^\#(z/\lambda_c,0).
+\]
+
+Therefore threshold `|V|=1` corresponds exactly to the W1 amplitude level
+
+\[
+|U|=\lambda_c.
+\]
+
+The positive W1 net gain at `lambda_c` becomes a positive threshold-one physical/rescaled formation rate.
+
+Indeed the scale-critical threshold quantity
+
+\[
+K(U;\lambda)=\lambda E_\lambda(U)
+\]
+
+satisfies along the physical-amplitude characteristic
+
+\[
+\frac{dK}{ds}
+=\lambda(J_P-\nu D_\lambda).
+\]
+
+Since
+
+\[
+\frac{ds}{d\sigma}\Big|_{\sigma=0}
+=\lambda_c^{-2},
+\]
+
+the pump condition gives a fixed positive normalized formation rate at `sigma=0`.
+
+Thus the M5-23--40 threshold-Hodge / direction-compression constraints should be attached to **pump-active events**, not to an unjustified `lambda_j->0` first-hit sequence.
+
+---
+
+## 6. Forward evolution to the boundary defect
+
+For the same physical threshold `L_j`, the corresponding W1 normalized amplitude at rescaled time `sigma` is
+
+\[
+\boxed{
+\lambda(\sigma)
+=\sqrt{\lambda_c^2-\sigma}.
+}
+\]
+
+Hence
+
+\[
+\lambda(0)=\lambda_c,
+\]
+
+while
+
+\[
+\boxed{
+\lambda(\sigma)\downarrow0
 \qquad
-|Y|\sim\lambda_j^{-1}.
-\]
-
-The M5-21--29 fixed phase-cell compactness and the uniform `1/|z|` envelope give local compactness of this terminal family. After a further subsequence, one obtains a terminal trace `V_0` satisfying
-
-\[
-\boxed{
-\mathcal G(V_0)=g_0>0.
+(\sigma\uparrow\lambda_c^2).
 }
 \]
 
-The suitable/local-energy compactness needed to identify `V_0` as the terminal trace of `V_*` is the same Type-I ancient compactness mechanism used in standard blow-up extraction. Under the retained W1 local compactness hypotheses, this is the natural terminal object.
-
-What is **not** claimed is smooth extendibility through `sigma=0`.
-
----
-
-## 6. Type-I / weak-critical character
-
-For every fixed `sigma<0`, `V_*` is smooth and bounded locally. At spatial infinity it retains the W1 critical `1/|z|` tail. Therefore the ancient cell is naturally in the weak critical class
+Therefore one and the same rescaled cell realizes the DSD formation chain
 
 \[
-V_*(\sigma)\in L^{3,\infty}_{loc/global\;weak\;sense},
+\boxed{
+\text{finite-amplitude pump at }\sigma=0
+\longrightarrow
+\text{amplitude-characteristic transport}
+\longrightarrow
+\text{zero-amplitude boundary defect as }\sigma\uparrow\lambda_c^2.
+}
 \]
 
-while strong global `L^3` may fail logarithmically.
-
-This is precisely why the standard Liouville theorem requiring bounded strong `L^3` along a backward sequence is not automatically applicable.
+This is the correct same-trajectory object.
 
 ---
 
-## 7. Literature anchor
+## 7. Backward ancient behavior
 
-Albritton--Barker prove that local Type-I singularities are equivalent to the existence of nontrivial bounded mild ancient solutions satisfying Type-I decay, and they prove a Liouville theorem when an ancient solution is bounded in strong `L^3` along a backward sequence.
+As
 
-The present W1 ancient cell lies on the weak-critical side of that frontier because the inherited `1/r` tail is compatible with `L^{3,\infty}` but not with global strong `L^3`.
+\[
+\sigma\to-\infty,
+\]
 
-Thus the ancient extraction itself does not close M5; it relocates the endpoint into a sharper same-trajectory ancient-cell problem.
+one has
+
+\[
+\log\frac{\lambda_c^2}{\lambda_c^2-\sigma}\to-\infty,
+\]
+
+while the complete W1 orbit remains in a compact bounded class. Therefore
+
+\[
+\|V_*(\sigma)\|_\infty
+\lesssim
+(\lambda_c^2-\sigma)^{-1/2}
+\to0.
+\]
+
+Thus the pump-to-defect cell is ancient backward and locally vanishing in the remote past.
 
 ---
 
-## 8. DSD interpretation
+## 8. Relation to standard Type-I ancient compactness
 
-The first-hit ancient cell separates three layers:
+The existence of ancient limits under Type-I rescaling is consistent with the known Albritton--Barker framework. The W1-specific addition is the exact recurrent inverse-Leray representation and the identification of two distinguished stages in the same cell:
 
-1. **prelimit physical history:** smooth finite-energy solution before `T_*`;
-2. **complete recurrent W1 orbit:** the normalized internal dynamics;
-3. **terminal projective boundary:** `lambda -> 0`, `|Y| -> infinity`, `lambda|Y|=O(1)`.
+1. a fixed positive normalized pump event;
+2. the later low-amplitude critical boundary defect.
 
-The ancient cell is the exact spacetime object obtained by gluing layers 2 and 3 through the physical parabolic scaling.
-
-Hence the final endpoint cannot be dismissed as a static boundary artifact. It has a same-trajectory ancient Navier--Stokes ancestry.
+The strong-`L^3` Liouville theorem is still not automatically applicable because the inherited `1/r` tail remains weak-critical.
 
 ---
 
-## 9. Updated target
+## 9. Correct updated target
 
-A successful continuation from M5-41 must now rule out a nonzero one-sided ancient cell satisfying simultaneously:
+The endpoint is no longer
 
-- inverse-Leray representation by a complete recurrent W1 orbit;
-- first-hit history `G(sigma)<=g_0` for all `sigma<0`;
-- nonzero terminal excess `G(V_0)=g_0`;
-- weak-critical `1/r` far-field ancestry;
-- the M5-23--40 threshold-Hodge / direction-compression / strict pressure-tail formation constraints at the terminal hit.
+\[
+\text{rule out an arbitrary first-hit ancient terminal cell}.
+\]
+
+It is now the more structured problem
+
+\[
+\boxed{
+\text{rule out a pump-anchored ancient-to-terminal cell}
+}
+\]
+
+with all of the following:
+
+- complete recurrent W1 ancestry;
+- fixed positive finite-amplitude gain at `sigma=0`;
+- threshold-Hodge / direction-compression formation geometry at the pump;
+- static critical `1/r` far-field ancestry;
+- transport of the same physical threshold toward `lambda->0`;
+- positive critical boundary defect as `sigma -> lambda_c^2`;
+- local backward decay as `sigma -> -infinity`.
 
 No contradiction is proved here.
 
