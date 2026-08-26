@@ -2,11 +2,11 @@
 
 Date: 2026-08-26
 
-Status: **DERIVED STRUCTURAL REDUCTION / POSITIVE CRITICAL H^{1/2} NONLINEAR TRANSFER REQUIRES DEPARTURE FROM A PURE ONE-HELICITY STATE / NO UNIVERSAL QUANTITATIVE MINORITY-HELICITY FLOOR PROVED YET / GLOBAL REGULARITY UNPROVED.**
+Status: **DERIVED PRELIMIT STRUCTURAL REDUCTION / POSITIVE CRITICAL H^{1/2} NONLINEAR TRANSFER REQUIRES DEPARTURE FROM A PURE ONE-HELICITY STATE / NO UNIVERSAL QUANTITATIVE MINORITY-HELICITY FLOOR PROVED / GLOBAL W1 HELICAL NORM FINITENESS NOT ASSUMED / GLOBAL REGULARITY UNPROVED.**
 
 ## 1. Helical sector energies
 
-In Fourier variables use curl eigenvectors
+On a smooth finite prelimit state with finite critical helical norms, use the Fourier curl eigenvectors
 
 \[
 ik\times h_\pm(k)=\pm |k|h_\pm(k),
@@ -18,7 +18,7 @@ and write
 \widehat U=u_+h_+ + u_-h_-.
 \]
 
-Define the positive critical sector energies
+Define
 
 \[
 X_\pm
@@ -31,7 +31,7 @@ Then
 \frac12\|U\|_{\dot H^{1/2}}^2=X_++X_-,
 \]
 
-up to the chosen normalization, while helicity is proportional to
+up to normalization, while helicity is proportional to
 
 \[
 X_+-X_-.
@@ -39,7 +39,7 @@ X_+-X_-.
 
 ## 2. Sector evolution
 
-Let `T_+` and `T_-` denote the nonlinear contributions to `dX_+/ds` and `dX_-/ds`. Then
+Let `T_+` and `T_-` be the nonlinear contributions to `dX_+/ds` and `dX_-/ds`. Then
 
 \[
 \frac{dX_\pm}{ds}
@@ -47,41 +47,35 @@ Let `T_+` and `T_-` denote the nonlinear contributions to `dX_+/ds` and `dX_-/ds
 =T_\pm,
 \]
 
-where
+with
 
 \[
 Y_\pm:=\int |k|^3|u_\pm(k)|^2\,dk\ge0.
 \]
 
-The Euler nonlinearity conserves helicity, hence its contribution to
-
-\[
-X_+-X_-
-\]
-
-vanishes. Therefore
+The Euler nonlinearity conserves helicity, hence its contribution to `X_+-X_-` vanishes. Therefore
 
 \[
 \boxed{T_+=T_-.}
 \]
 
-Consequently the nonlinear source in the total critical Sobolev ledger is twice one common sector transfer.
+The nonlinear source in the total critical Sobolev ledger is twice one common sector transfer.
 
 ## 3. Pure one-helicity states
 
-Suppose at one instant
+If at one instant
 
 \[
-u_-=0.
+u_-=0,
 \]
 
-Then `X_-=0` has vanishing first derivative contribution from the quadratic energy pairing at that instant, so
+then `X_-=0` has zero first derivative contribution from the quadratic energy pairing at that instant, so
 
 \[
 T_-=0.
 \]
 
-By `T_+=T_-`,
+Since `T_+=T_-`,
 
 \[
 \boxed{T_+=T_-=0}
@@ -89,59 +83,57 @@ By `T_+=T_-`,
 
 at that instant.
 
-Thus a strictly homochiral state cannot support a positive instantaneous nonlinear source in the `dot H^{1/2}` ledger.
-
-The same holds with `+` and `-` interchanged.
+Thus a strictly homochiral state cannot support a positive instantaneous nonlinear source in the `dot H^{1/2}` ledger. The same holds with the signs reversed.
 
 ## 4. DSD consequence
 
-M5-13 shows that a large W1 endpoint can evade viscous absorption only by sustaining a sufficiently strong nonlinear critical transfer.
-
-M5-15 shows that such transfer cannot be supported at a purely one-helicity state.
-
-Hence a surviving large-critical recurrent orbit must repeatedly depart from the homochiral boundary of phase space.
-
-Schematically,
+On the finite prelimit track,
 
 \[
 \boxed{
-\text{positive critical cascade}
+\text{positive critical Sobolev cascade}
 \Longrightarrow
-\text{two-helicity participation}.
+\text{departure from the homochiral boundary}.
 }
 \]
 
+This is a qualitative phase-space boundary exclusion.
+
 ## 5. What is not yet proved
 
-The present argument gives a qualitative boundary exclusion, not yet a universal quantitative estimate of the form
+No universal quantitative estimate of the form
 
 \[
-\min(X_+,X_-)\ge c_*>0.
+\min(X_+,X_-)\ge c_*>0
 \]
 
-To obtain such a floor one needs a trilinear estimate that degenerates quantitatively as one helical sector tends to zero, for example a bound schematically of the form
+has been established.
+
+A useful next estimate would have to degenerate quantitatively when one helical sector becomes small, schematically
 
 \[
 |T|
 \le
-C\,\mathcal M(X_+,X_-)\,(Y_++Y_-)
+C\,\mathcal M(X_+,X_-,Y_+,Y_-)\,(Y_++Y_-)
 \]
 
-with
+with the multiplier tending to zero near a homochiral boundary.
 
-\[
-\mathcal M(X_+,X_-)\to0
-\quad\text{as}\quad
-\min(X_+,X_-)\to0.
-\]
+No such closing estimate is proved here.
 
-No such closing estimate is proved in this file.
+## 6. Domain audit
 
-## 6. Why this is relevant
+A positive-defect W1 omega-limit may carry a logarithmically nonintegrable `1/r` critical corridor. Therefore the global quantities `X_+`, `X_-`, and the full `dot H^{1/2}` norm need not be finite on the limiting state.
 
-A helical-decimated model with one sign retained has a sign-definite helicity equivalent to the critical `H^{1/2}` norm and is globally regular. The full system escapes that mechanism only through two-sector interaction.
+Hence M5-15 must be used on smooth finite prelimit states or on critically truncated/localized helical quantities. Passing the statement to the W1 limit requires precisely the kind of critical tightness that M5 is trying to prove.
 
-Therefore the next useful M5 subproblem is not another scalar energy estimate, but a **quantitative helical-mixing estimate**.
+Do not use the qualitative two-sector statement as if the full omega-limit had finite global helical energies without an additional argument.
+
+## 7. Why this is still relevant
+
+A helical-decimated model with one sign retained has sign-definite helicity equivalent to the critical `H^{1/2}` norm and is globally regular. The full system escapes that mechanism through two-sector interaction.
+
+Therefore, after the domain correction, the next useful subproblem is a **critically localized quantitative helical-mixing estimate**, not a global W1 helical norm estimate.
 
 \[
 \boxed{\text{GLOBAL REGULARITY REMAINS UNPROVED.}}
