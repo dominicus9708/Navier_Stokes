@@ -1,0 +1,284 @@
+# DSD W1 Unified Log-Tail Hull — Periodic/Aperiodic Boundary Collapse
+
+Date: 2026-08-26
+
+Status: **REMOTE W1 LIMITS ORGANIZED INTO ONE COMPACT LOG-RADIUS TRANSLATION HULL / THE FAR LIMIT OBEYS PURE LINEAR DILATION TRANSPORT / PERIODIC AND APERIODIC TAILS BECOME ORBIT TYPES OF THE SAME BOUNDARY DYNAMICAL SYSTEM / POSITIVE DEFECT IS THE NONZERO CUBIC MEAN OF THE HULL / GLOBAL REGULARITY UNPROVED.**
+
+## 1. Log-radius state
+
+Write
+
+\[
+Y=e^\rho\theta,
+\qquad
+\theta\in S^2,
+\]
+
+and define the critical amplitude
+
+\[
+\boxed{
+w(\theta,\rho,s)
+:=
+e^\rho U(e^\rho\theta,s).
+}
+\]
+
+The critical cubic measure is exactly flat in `rho`:
+
+\[
+\boxed{
+\int|U|^3dY
+=
+\int |w|^3d\rho d\theta.
+}
+\]
+
+Thus the W1 defect charge is a mean cubic density in log radius.
+
+---
+
+## 2. Uniform fixed-cell compactness
+
+The W1 far-shell estimates give, on every fixed log cell of length `L`, uniform bounds equivalent to
+
+\[
+\boxed{
+\|w\|_{H^1(S^2\times[\rho_0,\rho_0+L])}
+\le C_L
+}
+\]
+
+uniformly for large `rho0` and for states in the compact W1 class, at the resolution already used in the far-blowdown and canonical-tail arguments.
+
+The Type-I envelope additionally gives a uniform `L-infinity` bound for `w`.
+
+Therefore any sequence of log translations
+
+\[
+\rho_n\to\infty
+\]
+
+has a subsequence such that
+
+\[
+w(\theta,\rho+\rho_n,s_n)
+\rightharpoonup
+W(\theta,\rho,s)
+\]
+
+locally weakly in `H1` and strongly in `L2`; the uniform `L-infinity` ceiling upgrades this to strong local `L3` convergence after interpolation.
+
+---
+
+## 3. Define the tail hull
+
+Let `H_infty` be the set of all such remote translation limits on the log cylinder.
+
+By diagonal compactness,
+
+\[
+\boxed{
+\mathcal H_\infty
+\text{ is compact in }L^2_{loc}
+}
+\]
+
+and the cubic cell observable is continuous on the hull.
+
+The log-translation operator
+
+\[
+(T_aW)(\theta,\rho)
+:=
+W(\theta,\rho+a)
+\]
+
+preserves `H_infty`.
+
+Thus
+
+\[
+\boxed{
+(\mathcal H_\infty,T_a)
+}
+\]
+
+is a compact boundary dynamical system.
+
+---
+
+## 4. Far dynamics becomes pure translation
+
+The exact log-radius Leray equation has the form
+
+\[
+\left(\partial_s+\frac12\partial_\rho\right)w
+=
+e^{-2\rho}\mathcal N[w,P],
+\]
+
+with the nonlinear/viscous residual uniformly controlled in the weak fixed-cell topology used by the all-age transport theorem.
+
+After translating `rho->rho+rho_n` and sending `rho_n->infinity`, the right-hand side vanishes.
+
+Therefore every tail-hull orbit satisfies
+
+\[
+\boxed{
+\partial_sW+rac12\partial_\rho W=0.
+}
+\]
+
+Hence
+
+\[
+\boxed{
+W(\theta,\rho,s)
+=
+\Phi(\theta,\rho-s/2)
+}
+\]
+
+for some log-profile `Phi` belonging to the hull.
+
+So time evolution on the boundary sector is exactly log translation.
+
+---
+
+## 5. Positive defect gives a nonzero hull measure
+
+The critical defect coefficient is
+
+\[
+\mathscr R_3>0.
+\]
+
+At the log-cylinder level this is the asymptotic cubic density
+
+\[
+\boxed{
+\mathscr R_3
+=
+\lim_{L\to\infty}
+\frac1L
+\int_{\rho_0}^{\rho_0+L}
+\int_{S^2}|w|^3d\theta d\rho
+}
+\]
+
+in the invariant/Abelian sense established earlier.
+
+Krylov--Bogoliubov averaging of the translation orbit on the compact hull gives an invariant probability measure `nu_infty` satisfying
+
+\[
+\boxed{
+\int_{\mathcal H_\infty}
+\int_{[0,1]\times S^2}|W|^3
+\,d\theta d\rho\,
+d\nu_\infty(W)
+=
+\mathscr R_3>0
+}
+\]
+
+up to the chosen unit-cell normalization.
+
+Thus the boundary hull is nontrivial exactly when the weak-L3 defect is nonzero.
+
+---
+
+## 6. Periodic and aperiodic tails are not separate boundary mechanisms
+
+If one hull orbit satisfies
+
+\[
+T_LW=W
+\]
+
+for some `L>0`, then
+
+\[
+W(\rho+L)=W(\rho)
+\]
+
+and the associated Leray tail is the previously constructed backward DSS/log-periodic tail.
+
+If no nonzero translation period exists on a minimal hull component, the tail is aperiodic recurrent under log translation.
+
+Therefore
+
+\[
+\boxed{
+P_{DSS}^{long}
+\quad\text{and}\quad
+A_{min}^{aper}
+}
+\]
+
+are, at the boundary-at-infinity level, merely two orbit types of the same compact translation system.
+
+They are no longer independent proof obligations for the defect sector.
+
+---
+
+## 7. Relation to the defect first integral
+
+The previous first-integral theorem gives
+
+\[
+\partial_s\mathscr R_3=0.
+\]
+
+This is automatic in the hull description because time evolution is a translation in `rho` and the mean cubic density is translation invariant.
+
+Thus the defect first integral has a geometric interpretation:
+
+\[
+\boxed{
+\mathscr R_3
+=
+\text{translation-invariant cubic mass of the boundary hull}.
+}
+\]
+
+---
+
+## 8. DSD state decomposition
+
+The W1 survivor can now be represented as
+
+\[
+\boxed{
+\text{finite-parent recurrent interior dynamics}
+\quad\oplus\quad
+\text{nontrivial compact log-tail hull }\mathcal H_\infty.
+}
+\]
+
+The second factor carries the conserved defect charge. Its internal motion is passive log translation; nonlinear Navier--Stokes effects are lower order at the boundary scale.
+
+This makes precise why the defect should not be described as being continuously generated by the core.
+
+---
+
+## 9. Remaining interface problem
+
+The boundary hull itself is not contradictory. Nonzero divergence-free `1/r`-critical log profiles are compatible with finite local physical energy, and the pure translation dynamics has no internal dissipation contradiction.
+
+The unresolved theorem is therefore an **interface compactness theorem**:
+
+\[
+\boxed{
+\text{show that the omega-limit of the finite-energy prelimit cannot acquire a nontrivial }\mathcal H_\infty
+\text{ with }\mathscr R_3>0.
+}
+\]
+
+Equivalently, prove the uniform no-defect condition from the companion note.
+
+Periodic/aperiodic classification is secondary to this single boundary-interface question.
+
+\[
+\boxed{\text{GLOBAL REGULARITY REMAINS UNPROVED.}}
+\]
