@@ -1,207 +1,212 @@
 # Navier–Stokes verification
 
-3차원 비압축성 Navier–Stokes 존재성·정칙성 문제를 DSD 네 층과 함께 구조적으로 분석하는 작업 저장소입니다.
+3차원 비압축성 Navier–Stokes 존재성·정칙성 문제를 표준 수학과 DSD(Dimensional-Structural Describability) 논리 감사를 함께 사용하여 분석하는 작업 저장소입니다.
 
-## 기본 공간
+## Problem setting
 
-기본 영역은 경계 없는 전체 3차원 공간
+기본 문제는 경계 없는 전체 공간
 
 \[
 \Omega=\mathbb R^3
 \]
 
-입니다. 유체를 수영장·상자·탱크·유한 구형 용기에 담긴 것으로 해석하지 않습니다.
-
-원점 또는 임의의 분석 중심 `x_0`에서
+에서의 비강제 incompressible Navier–Stokes입니다.
 
 \[
-S_r(x_0)=\{x\in\mathbb R^3:|x-x_0|=r\}
-\]
-
-를 관측·집계용 구면으로 사용합니다. 이 구면은 물리적 벽이 아니며 `r`에 상한이 없습니다.
-
-## 기본 PDE
-
-\[
-\partial_tu+(u\cdot\nabla)u=-\nabla p+\nu\Delta u,
+\partial_tu+(u\cdot\nabla)u
+=-\nabla p+\nu\Delta u,
 \qquad
 \nabla\cdot u=0,
 \qquad
 \nu>0,
 \qquad
-f\equiv0.
+f=0.
 \]
 
-DSD 적용은 이 방정식을 바꾸지 않습니다. 특히 표준 비압축성 트랙에 임의의 유한 전파속도나 추가 힘을 삽입하지 않습니다.
+관측 구면·cutoff·Leray 좌표의 shell은 분석 도구이며 물리적 용기나 벽이 아닙니다.
+DSD는 PDE를 수정하지 않고, 상태·경계·채널·극한·원인/표현을 구분하는 감사 틀로만 사용합니다.
 
-## DSD four-paper bridge
+---
 
-다음 네 층을 순서대로 사용합니다.
-
-1. **Formation Axiom System** — 채널 존재·적용가능성·undefined/defined-zero·합성 충돌 구분.
-2. **축 속성공리계** — 공간 실현축 랭크 3을 유지하고 좌표·방향·행렬 크기를 공간차원과 혼동하지 않음.
-3. **Channel-Indexed Static Aggregation** — 고정시간의 속도·압력·와도·축별/구면별 항을 집계하되 조기 스칼라화로 인한 정보손실을 검사.
-4. **Structural Reorganization Dynamics** — 고정시간 집계의 시간 lineage와 advection/pressure/viscous 재구성 채널을 연결.
-
-첫 설계는 `notes/2026-08-12-dsd-four-paper-first-pass.md`에 기록되어 있습니다.
-
-## 현재 확인된 구조
-
-### 1. Analytic benchmark
-
-재현성 기준장은 Schwartz 함수
+## Current status — 2026-08-26
 
 \[
-\psi(x)=e^{-|x|^2}
+\boxed{\text{GLOBAL REGULARITY OF 3D NAVIER--STOKES REMAINS UNPROVED.}}
 \]
 
-에 대해
+현재 증명 시도는 많은 내부 가지를 하나의 large weak-critical endpoint로 압축했습니다.
+
+가장 짧은 현행 사슬은
 
 \[
-u_0^{(a)}=\nabla\times\nabla\times(\psi e_a),
-\qquad a\in\{x,y,z\}
+\boxed{
+\begin{array}{c}
+\text{candidate blow-up}\
+\Downarrow\quad\text{(upstream branch completeness still requires final audit)}\\
+\text{retained recurrent W1 corridor}\
+\Downarrow\\
+\mathscr R_3>0\ \Longleftrightarrow\ \text{positive critical }K\text{ boundary defect}\
+\Downarrow\\
+\text{large high-amplitude weak-critical tail}\
+\Downarrow\\
+\textbf{OPEN: critical tail tightness / equivalent pump absorption}\
+\Downarrow\\
+\text{proved high-tail absorption lemma}\
+\Downarrow\\
+H^1\text{ control and continuation.}
+\end{array}
+}
 \]
 
-로 둡니다. 이는 매끄럽고 발산이 0이며 무한원점에서 급감합니다.
+정확한 proof ledger는 [`PROOF_MAP.md`](PROOF_MAP.md)를 기준으로 합니다.
 
-### 2. Shell-information separation
+---
 
-기준장에서는
+## Exact critical boundary coordinate
 
-- `r=sqrt(2)`에서 총 구면 에너지는 각방향으로 등방적이지만 축별 에너지는 서로 다름;
-- `r=sqrt(5/2)`에서 shell enstrophy는 0이지만 velocity energy는 0이 아님;
-- `u`와 `-u`는 여러 이차 집계량이 같아도 signed state는 다름;
-- signed vortex-stretching 합은 0이어도 positive/negative stretching은 각각 nonzero임.
-
-따라서 하나의 스칼라 합계만으로 상태를 동일시하지 않습니다.
-
-### 3. Translation and nonlinear coupling
-
-번역된 seed의 특수 구면은 그 seed의 새 중심에서 복원되며, 옛 원점 하나만 보는 분석은 translation complete하지 않습니다.
-
-또한 두 divergence-free seed의 합도 divergence-free이지만
+일반 W1 endpoint에서는 pointwise weak-`L3` distribution coefficient를 자동으로 가정하지 않습니다.
+Tauberian 가정 없이 사용할 최종 경계좌표는
 
 \[
-Q(u)=\sum_{i,j}\partial_i u_j\partial_j u_i
-\]
-
-에는 nonzero cross term이 생깁니다. DSD 동역학에서는 이를 off-diagonal interaction channel로 보존합니다.
-
-### 4. Critical regularity bridge
-
-전역 critical channel로
-
-\[
-T_3(t)=\int_{\mathbb R^3}|u|^3dx
-\]
-
-를 추적합니다. Smooth decaying solution의 형식적 balance는
-
-\[
-\frac{dT_3}{dt}+3\nu D_3=3\Pi_3
-\]
-
-형태이며, 핵심 미해결 항은 pressure correlation `Pi3`입니다.
-
-대칭 단일 seed에서는 `Pi3=0`이 symmetry로 소거되지만, 비대칭 superposition에서는 deterministic spectral audit에서 positive/negative `Pi3`가 모두 나타났습니다. 따라서 global `L3` monotone-decay shortcut은 **FAILED-ROUTE CANDIDATE**로 관리합니다.
-
-관련 노트: `notes/2026-08-12-critical-l3-pressure-rate.md`.
-
-### 5. Local/parabolic bridge
-
-모든 중심의 shell data는 coarea로 ball integral을 복원합니다.
-
-\[
-\int_{B_R(x_0)}f\,dx
+\mathcal E_\lambda(U)
 =
-\int_0^R\int_{S_r(x_0)}f\,dS\,dr.
+\frac12\int (|U|^2-\lambda^2)_+dY,
 \]
 
-따라서 천구형 관점을 물리적 경계 없이 local ball / parabolic-cylinder regularity quantities와 연결할 수 있습니다.
-
-관련 노트: `notes/2026-08-12-local-parabolic-regularity-bridge.md`.
-
-### 6. Moving observer sphere and material cell
-
-고정 중심만 사용하는 대신, smooth lifespan 동안 flow map
-
 \[
-\frac{d}{dt}\Phi_t(a)=u(\Phi_t(a),t)
-\]
-
-을 따라 분석 중심과 국소 영역을 이동시킵니다.
-
-두 객체를 분리합니다.
-
-\[
-S^{\rm obs}_\ell(a,t)=\{x:|x-\Phi_t(a)|=\ell\}
-\]
-
-은 중심만 유체를 따라가고 구형을 유지하는 관측창입니다.
-
-반면
-
-\[
-\Omega^{\rm mat}_\ell(a,t)=\Phi_t(B_\ell(a))
-\]
-
-은 같은 유체 입자를 따라가므로 실제로 변형되는 물질영역입니다.
-
-변형구배
-
-\[
-F=D_a\Phi_t,
-\qquad
-J=\det F
-\]
-
-에 대해 비압축성은
-
-\[
-J=1
-\]
-
-을 강제합니다. 따라서 물질영역의 부피는 보존되지만 모양은 보존되지 않습니다.
-
-기준 Gaussian seed의 `a=(0,0,1/2)`에서는 순간 strain eigenvalue가
-
-\[
-(-4e^{-1/4},\,2e^{-1/4},\,2e^{-1/4})
-\]
-
-이어서 두 방향 팽창·한 방향 압축이 동시에 나타납니다.
-
-DSD 국소 변형 채널의 첫 후보는
-
-\[
-\Delta_{\rm shape}=\|\log (F^TF)^{1/2}\|_F
-\]
-
-입니다.
-
-또한 true material boundary에서는 상대 advective kinetic-energy flux가 정확히 0이 됩니다. 이류 자체가 Navier–Stokes에서 사라지는 것은 아니며, 물질영역의 이동·변형으로 흡수되는 것입니다.
-
-관련 노트: `notes/2026-08-12-moving-material-region-bridge.md`.
-
-### 7. Material pullback and boundary geometry
-
-비압축성 `J=1` 때문에 bulk material aggregation은 초기 reference ball로 그대로 pullback할 수 있습니다.
-
-\[
-\int_{\Omega_t}f(x,t)dx
+\boxed{
+K(U;\lambda)
 =
-\int_{B_\ell(a)}f(\Phi_t(b),t)db.
+\lambda\mathcal E_\lambda(U).
+}
 \]
 
-반면 경계의 oriented area는 Nanson 관계
+W1 invariant endpoint에서는
 
 \[
-n_t\,dS_t=F^{-T}n_0\,dS_0
+\boxed{
+\lim_{\lambda\downarrow0}
+\langle K(U;\lambda)\rangle_\mu
+=
+\frac{\mathscr R_3}{3}>0.
+}
 \]
 
-로 변합니다.
+물리 변수에서는
 
-따라서 material-cell energy budget에서 상대 advection은 소거되지만 pressure work와 viscous boundary transport는 `F^{-T}`와 결합해 남습니다. 부피보존이 경계 방향성의 증폭까지 막는 것은 아닙니다.
+\[
+K_L^{phys}(t)
+=
+\frac L2\int(|u|^2-L^2)_+dx
+\]
+
+와 정확히 연결됩니다.
+
+---
+
+## Completed regularity lemma
+
+저장소에서는 다음 보조정리를 완료했습니다.
+
+어떤 유한 `L>0`와 terminal interval `(t0,T*)`에서
+
+\[
+\sup_{t_0<t<T_*}
+\|u(t)\mathbf1_{|u(t)|>L}\|_{L^{3,\infty}}
+<\varepsilon_\nu
+\]
+
+이면 nonlinear high-amplitude part를 viscosity에 흡수할 수 있고
+
+\[
+\sup_{t_0<t<T_*}\|\nabla u(t)\|_2<\infty,
+\]
+
+따라서 `T*`를 넘어 continuation이 가능합니다.
+
+Reference:
+
+`DSD_W1_CRITICAL_HIGH_AMPLITUDE_TAIL_ABSORPTION_LEMMA_2026-08-26.md`
+
+---
+
+## Single live endpoint issue
+
+남은 주된 implication은
+
+\[
+\boxed{
+\text{finite-energy Navier--Stokes + retained W1/prelimit structure}
+\stackrel{?}{\Longrightarrow}
+\text{uniform critical high-amplitude tail tightness}.
+}
+\]
+
+예를 들어 다음이면 충분합니다.
+
+\[
+\boxed{
+\lim_{L\to\infty}
+\sup_{t_0<t<T_*}
+K_L^{phys}(t)=0.
+}
+\]
+
+이 문제는 GitHub **Issue #2**
+`Final endpoint: prove critical K-tail tightness or equivalent pump absorption`
+에서 단일 open endpoint로 관리합니다.
+
+---
+
+## DSD audit rules retained
+
+현재 계산에서 다음 구분을 유지합니다.
+
+- interior formation vs boundary storage;
+- similarity-coordinate current vs material transport;
+- defined zero vs undefined/inapplicable;
+- physical source vs coordinate/boundary term;
+- actual reformation vs derivative capacity;
+- fixed Leray scale vs fixed physical scale;
+- pointwise distribution limit vs Abel/Cesaro residue;
+- gauge-dependent pressure value vs gauge-invariant pressure gradient/difference/work.
+
+이 구분으로 여러 false closure를 제거했습니다.
+
+---
+
+## Routes that must not be reopened without new hypotheses
+
+다음 shortcut은 감사에서 폐기되었습니다.
+
+- weak-`L3` upper bound가 cubic logarithmic concentration과 모순이라는 주장;
+- similarity-radial flux를 material turnover로 해석;
+- periodic omega-limit tail을 원래 physical parent의 fixed annulus에 자동 상속;
+- `R3/6`을 새 physical power source로 해석;
+- 큰 `H2` capacity를 실제 reformation action으로 동일시;
+- Mellin/Abel residue를 자동으로 `lim lambda^3 N(lambda)`와 동일시;
+- pointwise pressure sign을 gauge-independent quantity로 사용;
+- normalized recurrent event가 무한히 반복되면 finite physical energy와 자동 모순이라는 주장.
+
+전체 목록과 이유는 `PROOF_MAP.md` 및 final audit를 참조합니다.
+
+---
+
+## Repository navigation
+
+현재 읽을 순서는 다음과 같습니다.
+
+1. `README.md` — 저장소 범위와 현재 상태.
+2. `PROOF_MAP.md` — 최신 live proof ledger.
+3. `DSD_NAVIER_STOKES_FINAL_CLOSURE_AUDIT_2026-08-26.md` — 최종 구조 감사.
+4. `DSD_W1_CRITICAL_HIGH_AMPLITUDE_TAIL_ABSORPTION_LEMMA_2026-08-26.md` — 완료된 continuation lemma.
+5. `DSD_W1_INTERIOR_BOUNDARY_DECOUPLING_AND_UNIFORM_NO_DEFECT_TARGET_2026-08-26.md` — exact `K` boundary target.
+6. `DSD_W1_WEAK_L3_DISTRIBUTION_DEFECT_EQUIVALENCE_2026-08-26.md` — Tauberian correction 포함 distribution audit.
+7. GitHub Issue #2 — 마지막 open endpoint.
+
+날짜별 다른 문서는 위 사슬을 만들기 위한 증명·감사·폐기 기록입니다.
+
+---
 
 ## Reproducibility
 
@@ -220,18 +225,18 @@ python src\coarea_local_bridge.py --output-dir results
 python -m unittest discover -s tests -v
 ```
 
-GitHub Actions에서도 같은 파이프라인을 실행합니다.
+GitHub Actions에서도 같은 baseline 파이프라인을 실행합니다.
 
-## 증명 상태 원칙
+---
 
-수치·상징 benchmark가 통과해도 global smoothness로 승격하지 않습니다. 현재 가장 중요한 열린 단계는 다음과 같습니다.
+## Definition of done
 
-- arbitrary admissible initial data로의 일반화;
-- material-label/all-scale a-priori control;
-- pressure correlation `Pi3`의 non-circular critical estimate;
-- pressure/viscous boundary coupling과 `F^{-T}` geometry amplification의 동시 제어;
-- positive vortex-stretching의 비상쇄 제어;
-- local scale channels가 알려진 regularity gate를 모든 잠재적 blow-up point에서 강제한다는 증명;
-- 최종 global a-priori bound.
+전역 정칙성을 주장하려면 최소한 다음을 모두 끝내야 합니다.
 
-세부 상태는 `PROOF_MAP.md`, 실행 범위는 `REPRODUCIBILITY.md`를 기준으로 합니다.
+1. Issue #2의 critical endpoint bridge를 표준 수학으로 증명;
+2. 그 결과로 W1 endpoint를 실제 모순으로 폐쇄;
+3. arbitrary finite-time blow-up 가정에서 W1까지의 branch completeness를 처음부터 재감사;
+4. 외부 정리의 정확한 hypotheses, 상수, domain, gauge, limit order를 독립적으로 재검증;
+5. 그 이후에만 global regularity claim 검토.
+
+그 전까지 이 저장소의 상태는 **structurally reduced proof attempt, not a Millennium-problem solution**입니다.
