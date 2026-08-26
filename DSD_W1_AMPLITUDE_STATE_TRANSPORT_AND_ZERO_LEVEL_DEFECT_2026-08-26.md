@@ -1,0 +1,285 @@
+# DSD W1 Amplitude-State Transport and Zero-Level Defect
+
+Date: 2026-08-26
+
+Status: **FINITE-AMPLITUDE THRESHOLD LEDGER REWRITTEN AS A FIRST-ORDER TRANSPORT EQUATION IN VELOCITY-AMPLITUDE STATE SPACE / `R3/6` IDENTIFIED AS THE ZERO-LEVEL DEFECT OF `lambda E_lambda` / PHYSICAL-THRESHOLD CHARACTERISTICS RECOVER THE PREVIOUS CANCELLATION / GLOBAL REGULARITY UNPROVED.**
+
+## 1. Threshold energy
+
+Let
+
+\[
+a:=|U|,
+\]
+
+and for a regular amplitude level `lambda>0` define
+
+\[
+\boxed{
+\mathcal E_\lambda(s)
+:=
+\frac12\int_{\mathbb R^3}(a^2-\lambda^2)_+dY.
+}
+\]
+
+Also let
+
+\[
+V_\lambda:=|\{a>\lambda\}|,
+\]
+
+and let `D_lambda` denote the corresponding superlevel viscous/directional dissipation from the exact thresholded energy ledger.
+
+The amplitude-level pressure flux is
+
+\[
+J_P(\lambda,s)
+:=
+\int_{\{a=\lambda\}}P\,U\cdot n_\lambda\,dS,
+\qquad
+n_\lambda:=\frac{\nabla a}{|\nabla a|}.
+\]
+
+The exact threshold identity is
+
+\[
+\boxed{
+\partial_s\mathcal E_\lambda
+-\frac12\mathcal E_\lambda
++\frac12\lambda^2V_\lambda
++\nu D_\lambda
+=J_P(\lambda).
+}
+\]
+
+---
+
+## 2. Convert the volume term into an amplitude derivative
+
+Differentiate the threshold energy with respect to `lambda`:
+
+\[
+\boxed{
+\partial_\lambda\mathcal E_\lambda
+=-\lambda V_\lambda.
+}
+\]
+
+Therefore
+
+\[
+\frac12\lambda^2V_\lambda
+=-\frac12\lambda\partial_\lambda\mathcal E_\lambda.
+\]
+
+The threshold equation becomes
+
+\[
+\boxed{
+\partial_s\mathcal E_\lambda
+-\frac12\lambda\partial_\lambda\mathcal E_\lambda
+-\frac12\mathcal E_\lambda
++\nu D_\lambda
+=J_P(\lambda).
+}
+\]
+
+Equivalently,
+
+\[
+\boxed{
+\partial_s\mathcal E_\lambda
+-\frac12\partial_\lambda(\lambda\mathcal E_\lambda)
++\nu D_\lambda
+=J_P(\lambda).
+}
+\]
+
+This is a genuine transport-dissipation equation in amplitude-state space.
+
+---
+
+## 3. Amplitude-state characteristics
+
+The transport operator is
+
+\[
+\partial_s-\frac12\lambda\partial_\lambda.
+\]
+
+Hence the characteristics satisfy
+
+\[
+\boxed{
+\lambda'(s)=-\frac12\lambda(s),
+}
+\]
+
+so
+
+\[
+\boxed{
+\lambda(s)e^{s/2}=\text{constant}.
+}
+\]
+
+But physical and Leray velocities obey
+
+\[
+|u|=e^{s/2}|U|.
+\]
+
+Therefore the amplitude-state characteristic is exactly a **fixed physical velocity threshold**.
+
+This reproduces the previously derived moving-threshold cancellation without an auxiliary argument.
+
+---
+
+## 4. Invariant amplitude-state balance
+
+Let `mu` be an invariant probability measure on the compact nontrivial W1 minimal set and write
+
+\[
+\bar E(\lambda):=\langle\mathcal E_\lambda\rangle_\mu,
+\qquad
+\bar D(\lambda):=\langle D_\lambda\rangle_\mu,
+\qquad
+\bar J(\lambda):=\langle J_P(\lambda)\rangle_\mu.
+\]
+
+Invariance removes the time derivative:
+
+\[
+\boxed{
+\bar J(\lambda)-\nu\bar D(\lambda)
+=-\frac12\partial_\lambda\bigl(\lambda\bar E(\lambda)\bigr).
+}
+\]
+
+Thus the net pressure-over-dissipation surplus at amplitude level `lambda` is exactly the derivative of one scalar state-boundary profile
+
+\[
+\boxed{
+K(\lambda):=\lambda\bar E(\lambda).
+}
+\]
+
+---
+
+## 5. The zero-amplitude endpoint
+
+The earlier endpoint theorem gives
+
+\[
+\boxed{
+\frac\lambda2\bar E(\lambda)
+\longrightarrow
+\frac{\mathscr R_3}{6}
+\qquad(\lambda\downarrow0).
+}
+\]
+
+Hence
+
+\[
+\boxed{
+K(0+)
+:=
+\lim_{\lambda\downarrow0}\lambda\bar E(\lambda)
+=
+\frac{\mathscr R_3}{3}>0.
+}
+\]
+
+For `lambda` above the W1 amplitude ceiling,
+
+\[
+K(\lambda)=0.
+\]
+
+Therefore the entire endpoint residue can be read as a nonzero boundary trace of the amplitude-state profile `K` at the state-space boundary `lambda=0`.
+
+It is not a new physical power source.
+
+---
+
+## 6. Relation to loss of `L2` tightness
+
+If a state were globally in `L2`, then as `lambda downarrow0`,
+
+\[
+\mathcal E_\lambda
+\le
+\frac12\|U\|_2^2
+\]
+
+and therefore
+
+\[
+\lambda\mathcal E_\lambda\to0.
+\]
+
+The W1 endpoint instead has
+
+\[
+\lambda\bar E(\lambda)\to\mathscr R_3/3>0.
+\]
+
+Thus the zero-level defect is precisely a failure of global `L2` tightness in the omega-limit class.
+
+This is compatible with the physical finite-energy parent because the Leray `L2` norm scales like
+
+\[
+\|U(s)\|_2^2
+=e^{s/2}\|u(t)\|_2^2,
+\]
+
+so finite physical energy does not give a uniform Leray-space `L2` bound.
+
+---
+
+## 7. DSD interpretation
+
+The W1 endpoint may be written entirely in state-space language:
+
+\[
+\boxed{
+\text{interior amplitude states }\lambda>0
+\xrightarrow{\text{pressure/dissipation transport}}
+K(\lambda)
+\xrightarrow{\lambda\downarrow0}
+K(0+)=\mathscr R_3/3.
+}
+\]
+
+The quantity `R3/6` is one half of this zero-level boundary trace because of the cubic-energy normalization.
+
+This clarifies three distinct notions that must not be conflated:
+
+1. physical energy source;
+2. scale current;
+3. amplitude-state boundary defect.
+
+The endpoint residue belongs to items 2--3, not item 1.
+
+---
+
+## 8. Current proof target
+
+A final endpoint theorem can now be phrased equivalently as a no-defect statement:
+
+\[
+\boxed{
+\text{show that a W1 omega-limit generated by a finite-energy parent must satisfy}
+\quad
+K(0+)=0.
+}
+\]
+
+At present this implication is not known. The finite-energy parent does not automatically transfer `L2` tightness to the expanding Leray omega-limit, as already shown by the diagonal audit.
+
+Thus the problem has been reduced, but not solved, to a critical compactness/defect question.
+
+\[
+\boxed{\text{GLOBAL REGULARITY REMAINS UNPROVED.}}
+\]
