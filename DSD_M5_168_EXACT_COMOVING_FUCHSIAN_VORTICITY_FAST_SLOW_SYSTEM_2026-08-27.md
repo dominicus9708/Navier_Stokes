@@ -2,55 +2,83 @@
 
 Date: 2026-08-27
 
-Status: **P1_B^S EXACT AXIS REFACTOR / THE FIXED-TIME INVERSE-RADIUS VORTICITY EQUATION IS REWRITTEN IN `z=e^-tau` AND PHYSICAL-GENEALOGICAL COORDINATE `q=s+log z` AS A COMPACT FUCHSIAN OPERATOR `4nu D^2+6nu D+partial_z+nu(2+Delta)` WITH `D=z partial_z+partial_q` / DEFINING THE FAST DEFECT `R=z F_z` PRODUCES AN EXACT FIRST-ORDER FAST EQUATION COUPLED TO THE SLOW RECONSTRUCTION `F_z=R/z` / THIS IS THE PREFERRED FORM FOR THE REMAINING DIRICHLET-QUOTIENT COMPATIBILITY AUDIT / GLOBAL REGULARITY UNPROVED.**
+Status: **CORRECTED EXACT AXIS REFACTOR / THE CO-MOVING FUCHSIAN VORTICITY EQUATION IS `4nu D^2 F + 6nu D F + F_z + nu(2+Delta)F - N[F]=0` WITH NO EXTRA `z` IN FRONT OF THE RELATIVE NONLINEAR OPERATOR / THE FAST DEFECT `R=zF_z` OBEYS AN EXACT FIRST-ORDER EQUATION WITH SOURCE `LF+N[F]` / THIS CORRECTION RESTORES EXACT AGREEMENT WITH M5-153/M5-154 / GLOBAL REGULARITY UNPROVED.**
 
 ---
 
-## 1. Starting equation
+## 1. Correction note
 
-M5-153 gives the exact fixed-Leray-time inverse-radius relative-vorticity equation
+The first version of M5-168 incorrectly carried an extra factor `z` in front of the scaled relative transport/stretching term after the `(xi,s)->(z,q)` change of variables.
+
+The mistake came from transforming the equation after division by `xi` and then losing one common factor `z` in the derivative terms.
+
+Re-deriving from the original undivided M5-153 equation gives the corrected system below.
+
+This correction also changes the source in M5-169 and the relative-coupling scale in M5-170.
+
+---
+
+## 2. Starting equation
+
+M5-153 gives
 
 \[
-0=
-4\nu K_{\xi\xi}
--\left(1+\frac{2\nu}{\xi}\right)K_\xi
--\frac1\xi K_s
-+\frac\nu{\xi^2}(2+\Delta_{S^2})K
--\frac1{\xi^2}\mathcal N_s[K].
+K_s+\xi K_\xi
+-4\nu\xi K_{\xi\xi}
++2\nu K_\xi
+-\frac\nu\xi(2+\Delta_{S^2})K
++\frac1\xi\mathcal N_s[K]=0.
 \]
 
 Set
 
 \[
-\boxed{z:=\xi^{-1}=e^{-\tau}}
+z:=\xi^{-1}=e^{-\tau},
+\qquad
+q:=s+\log z=s-\tau,
 \]
 
-and introduce
-
-\[
-\boxed{q:=s+\log z=s-\tau.}
-\]
-
-Write
+and write
 
 \[
 F(z,q,\theta):=K(\xi,s,\theta).
 \]
 
-At fixed `s`,
+Define
 
 \[
-\partial_z|_s
-=
-\partial_z|_q
-+\frac1z\partial_q.
+\boxed{D:=z\partial_z+\partial_q.}
 \]
+
+Since the fixed-`s` logarithmic radial derivative equals `-D`, direct substitution gives the exact corrected equation
+
+\[
+\boxed{
+4\nu D^2F
++6\nu DF
++F_z
++\nu(2+\Delta_{S^2})F
+-\mathcal N[F]
+=0.
+}
+\]
+
+There is **no factor `z` multiplying `N[F]`** in this `z`-equation.
+
+Equivalently, returning to `tau=-log z`, the nonlinear term in the forward `tau` equation carries the expected factor `e^-tau=z`, in agreement with M5-154.
 
 ---
 
-## 2. Exact transformed equation
+## 3. Expanded form
 
-A direct calculation gives
+Using
+
+\[
+D^2F
+=z^2F_{zz}+zF_z+2zF_{zq}+F_{qq},
+\]
+
+the corrected equation is
 
 \[
 \boxed{
@@ -62,273 +90,168 @@ A direct calculation gives
 &+4\nu F_{qq}
 +6\nu F_q
 +\nu(2+\Delta_{S^2})F
--z\mathcal N[F].
+-\mathcal N[F].
 \end{aligned}
 }
 \]
 
-No asymptotic truncation is used.
+---
+
+## 4. Fast defect
+
+Set
+
+\[
+G:=\partial_q
+\]
+
+on the invariant pair Hilbert space and define
+
+\[
+\boxed{R:=DF-GF=zF_z.}
+\]
+
+Thus
+
+\[
+\boxed{F_z=R/z.}
+\]
+
+Also
+
+\[
+DF=GF+R,
+\qquad
+D(GF+R)=G^2F+2GR+zR_z.
+\]
+
+Insert these into the corrected compact equation.
 
 ---
 
-## 3. Compact covariant-normal operator
+## 5. Exact corrected fast equation
 
 Define
 
 \[
-\boxed{D:=z\partial_z+\partial_q.}
-\]
-
-Then
-
-\[
-D^2F
-=
-z^2F_{zz}
-+zF_z
-+2zF_{zq}
-+F_{qq}.
-\]
-
-Therefore
-
-\[
-4\nu D^2F
-+6\nu DF
-+F_z
-\]
-
-has exactly the normal/genealogical derivative coefficients in Section 2.
-
-Hence the full equation becomes
-
-\[
 \boxed{
-4\nu D^2F
-+6\nu DF
-+F_z
-+\nu(2+\Delta_{S^2})F
--z\mathcal N[F]
-=0.
+L:=-4\nu G^2-6\nu G-\nu(2+\Delta_{S^2}).
 }
 \]
 
-This is the preferred exact co-moving Fuchsian vorticity equation.
-
----
-
-## 4. Fast defect variable
-
-Since
+Equivalently, with
 
 \[
-DF=zF_z+F_q,
+A_0:=-4G^2-\Delta_{S^2}\ge0,
 \]
-
-define
 
 \[
-\boxed{R:=DF-F_q=zF_z.}
+L=\nu A_0-6\nu G-2\nu I.
 \]
 
-Thus the slow field is reconstructed from
-
-\[
-\boxed{F_z=\frac Rz.}
-\]
-
-The flat boundary gives
-
-\[
-F=O(z^N),\qquad R=O(z^N)
-\]
-
-for every finite `N` in the audited same-tail Hilbert topology.
-
----
-
-## 5. Exact fast equation
-
-Let `G:=partial_q`, interpreted on the invariant pair Hilbert space as the skew-adjoint pair-flow generator.
-
-Using
-
-\[
-DF=GF+R
-\]
-
-and
-
-\[
-D(GF+R)
-=
-G^2F+2GR+zR_z,
-\]
-
-the compact equation yields
+The fast equation is
 
 \[
 \boxed{
 4\nu zR_z
 +\left(\frac1z+6\nu+8\nu G\right)R
 =
-LF
-+z\mathcal N[F],
+LF+\mathcal N[F].
 }
 \]
 
-where
-
-\[
-\boxed{
-L:=
--4\nu G^2
--6\nu G
--\nu(2+\Delta_{S^2}).
-}
-\]
-
-Equivalently, defining the positive self-adjoint second-order cross operator
-
-\[
-A_0:=-4G^2-\Delta_{S^2}\ge0,
-\]
-
-we may write
-
-\[
-L
-=
-\nu A_0
--6\nu G
--2\nu I.
-\]
-
-Thus `L` has
-
-- positive self-adjoint second-order part `nu A_0` in the backward-`z` orientation;
-- skew first-order drift `-6nu G`;
-- harmless zeroth-order shift.
+The source is `LF+N[F]`, not `LF+zN[F]`.
 
 ---
 
 ## 6. Fast-normal structure
 
-The leading fast equation is
+The leading homogeneous equation remains
 
 \[
-4\nu zR_z+\frac1zR\approx LF.
+4\nu zR_z+\frac1zR=0,
 \]
 
-The homogeneous branch satisfies
-
-\[
-R_z+\frac1{4\nu z^2}R=0,
-\]
-
-hence
+so
 
 \[
 R_{hom}\sim e^{1/(4\nu z)}.
 \]
 
-This is exactly the explosive fast normal mode already excluded by M5-146/M5-160.
+The flat branch excludes this mode exactly as before.
 
-The flat-selected branch is therefore the stable particular branch with `R` slaved to the cross-section operator applied to `F`.
-
-At formal leading order,
+On the stable particular branch, formally,
 
 \[
-R\sim zLF,
-\qquad
-F_z\sim LF,
+R\sim z(LF+\mathcal N[F]),
 \]
 
-which is the backward-parabolic slow equation underlying M5-166.
+hence
+
+\[
+\boxed{
+F_z\sim LF+\mathcal N[F].
+}
+\]
+
+Consequently, in forward `tau=-log z`,
+
+\[
+F_\tau=-zF_z
+\sim
+-z(LF+\mathcal N[F]),
+\]
+
+which reproduces the M5-154 `e^-tau` scaling of both cross-section viscosity and relative transport/stretching.
 
 ---
 
 ## 7. Exact fast energy identity
 
-Take the real `H` inner product of the fast equation with `R` and use skew-adjointness of `G`:
-
-\[
-\operatorname{Re}\langle GR,R\rangle=0.
-\]
-
-Then
+Taking the real inner product with `R` and using skew-adjointness of `G` gives
 
 \[
 \boxed{
 2\nu z\frac d{dz}\|R\|^2
-+
-\left(\frac1z+6\nu\right)\|R\|^2
++\left(\frac1z+6\nu\right)\|R\|^2
 =
-\operatorname{Re}\langle LF,R\rangle
-+z\operatorname{Re}\langle\mathcal N[F],R\rangle.
+\operatorname{Re}\langle LF+\mathcal N[F],R\rangle.
 }
 \]
 
-The singular positive coefficient
+Thus the singular positive fast coercivity
 
 \[
-\boxed{z^{-1}\|R\|^2}
+z^{-1}\|R\|^2
 \]
 
-is the exact fast-normal coercivity available for the compatibility audit.
+is unchanged.
 
 ---
 
-## 8. Why this form is preferable to a frozen asymptotic expansion
+## 8. DSD cross-audit
 
-M5-167 proves monotone damping of every frozen stable principal mode.
+### Formation — GREEN after correction
 
-M5-168 provides the exact nonautonomous equation behind that result.  The change `a(τ)=e^-τ` is no longer an implicit adiabatic error; it is represented explicitly by the singular coefficient `1/z` and the small nonlinear factor `z`.
-
-Thus the remaining task can be posed without freezing `a`:
-
-\[
-\boxed{
-\text{combine the fast coercive identity with a Dirichlet quotient for }F
-\text{ and prove that frequency cannot escape to infinity as }z\downarrow0.
-}
-\]
-
----
-
-## 9. DSD four-chain audit
-
-### Formation — GREEN
-
-The equation is an exact reparameterization of M5-153.
+The corrected equation is obtained directly from the undivided M5-153 equation.
 
 ### Axis — GREEN
 
-`z` is normal terminal depth and `q` is the co-moving genealogical/physical-log-radius axis. Their derivative roles are explicit in `D`.
+`z`, `q`, and the pair-flow generator remain separated.
 
 ### Static aggregation — GREEN
 
-The fast variable `R` is not a new independent field; it is exactly `z F_z`.
+The scaling of `N[F]` is now consistent across M5-153, M5-154, and M5-168.
 
 ### Dynamics — GREEN
 
-The explosive homogeneous fast branch is the already-audited rejected branch; the remaining flat solution lies on the stable particular branch.
+The forward `tau` coupling has the expected integrable factor `z=e^-tau`.
 
-### Cross-audit — GREEN
+### Error status
 
-The compact equation reproduces both the M5-153 fixed-time identity and the M5-160/M5-167 fast-slow interpretation.
+The earlier extra-`z` version is **REJECTED** and must not be used downstream.
 
----
-
-## 10. Next compatibility calculation
-
-The remaining M5-166 YELLOW edge is now:
-
-1. use the `z^-1 ||R||^2` fast coercivity to control deviation from `R=zLF`;
-2. derive the Dirichlet-quotient/log-convexity inequality for the slow field `F` directly from the exact `(F,R)` system;
-3. compare the resulting bounded-frequency conclusion with the M5-154 necessary parabolic frequency escape.
-
-No Gaussian spectral assumption is required in this formulation.
+M5-169 and M5-170 are corrected accordingly.
 
 ---
 
