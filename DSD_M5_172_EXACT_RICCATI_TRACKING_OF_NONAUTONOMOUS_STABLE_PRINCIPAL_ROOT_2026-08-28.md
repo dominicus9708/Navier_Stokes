@@ -2,7 +2,7 @@
 
 Date: 2026-08-28
 
-Status: **P1_B^S PRINCIPAL-LAG RESOLUTION / THE EXACT PRINCIPAL CO-MOVING MODE EQUATION REDUCES TO A RICCATI FLOW FACTORED BY THE TWO M5-167 FROZEN ROOTS / THE FLAT-SELECTED BRANCH TRACKS THE SLOW ROOT WITH ERROR `O_kappa(a)` ON EVERY FIXED PARABOLIC CORRIDOR `a A <= kappa` BECAUSE THE FAST/SLOW GAP IS `~a^-1` WHILE THE SLOW ROOT ITSELF CHANGES AT ONLY `O_kappa(1)` RATE / THIS REMOVES THE MAIN NONAUTONOMOUS VOLTERRA-LAG OBSTRUCTION INSIDE THE FIRST-HITTING CORRIDOR / GLOBAL REGULARITY UNPROVED.**
+Status: **P1_B^S PRINCIPAL-LAG MODEWISE RESULT / THE EXACT PRINCIPAL CO-MOVING MODE EQUATION REDUCES TO A RICCATI FLOW FACTORED BY THE TWO M5-167 FROZEN ROOTS / THE FLAT-SELECTED BRANCH TRACKS THE SLOW ROOT WITH ERROR `O_kappa(a)` FOR EACH MODE SATISFYING THE SUPPORT CONDITION `a A_mode <= kappa` / THIS IS GREEN MODEWISE, BUT IT DOES NOT BY ITSELF IMPLY THE M5-171 MEAN DIRICHLET-QUOTIENT CORRIDOR `a N <= kappa`, BECAUSE A SMALL AMOUNT OF SPECTRAL MASS MAY LIE ABOVE THE SUPPORT CORRIDOR / THE MEAN-TO-SUPPORT STEP IS EXPLICITLY YELLOW / GLOBAL REGULARITY UNPROVED.**
 
 ---
 
@@ -16,9 +16,7 @@ a=e^{-\tau}.
 
 For the principal relative-vorticity equation, take a genealogical Fourier mode `omega` and a spherical harmonic of degree `ell`.
 
-Write its scalar amplitude as `f(tau)`.
-
-Define
+Write its scalar amplitude as `f(tau)` and define
 
 \[
 \boxed{
@@ -30,8 +28,7 @@ The exact principal mode equation gives
 \[
 \boxed{
 4\nu a y_\tau
-+
-4\nu a y^2
++4\nu a y^2
 -(1+6\nu a)y
 +\nu a c_\ell
 -i\omega
@@ -49,7 +46,7 @@ c_\ell:=2-\ell(\ell+1).
 
 ## 2. Frozen roots factor the exact Riccati equation
 
-For frozen `a`, M5-167 defines the two roots
+For frozen `a`, M5-167 defines
 
 \[
 y_\pm(a)
@@ -77,21 +74,18 @@ Therefore
 4\nu a y^2
 -(1+6\nu a)y
 +\nu a c_\ell
--i\omega.
+-i\omega,
 \]
 
-Hence the **exact nonautonomous** equation is
+so the exact nonautonomous equation is
 
 \[
-\boxed{
-y_\tau=-(y-y_-)(y-y_+).}
+\boxed{y_\tau=-(y-y_-)(y-y_+).}
 \]
-
-No frozen approximation is used in this identity.
 
 ---
 
-## 3. Equation for deviation from the slow root
+## 3. Deviation from the slow root
 
 Let
 
@@ -99,13 +93,7 @@ Let
 \delta:=y-y_-(a(\tau)).
 \]
 
-Since
-
-\[
-y-y_+=\delta-(y_+-y_-),
-\]
-
-we get
+Then
 
 \[
 \boxed{
@@ -126,8 +114,6 @@ where
 }
 \]
 
-The positive real part of `Delta` is the fast/slow separation rate.
-
 ---
 
 ## 4. Exact derivative of the frozen slow root
@@ -143,13 +129,7 @@ Q(a,y)
 -i\omega.
 \]
 
-Since
-
-\[
-Q(a,y_-(a))=0,
-\]
-
-implicit differentiation with `a_tau=-a` gives
+Since `Q(a,y_-(a))=0` and `a_tau=-a`, implicit differentiation gives
 
 \[
 Q_y(y_-)_\tau-aQ_a=0.
@@ -158,30 +138,16 @@ Q_y(y_-)_\tau-aQ_a=0.
 At the minus root,
 
 \[
-Q_y
-=
-8\nu a y_--(1+6\nu a)
-=-\sqrt D.
+Q_y=-\sqrt D.
 \]
 
-Moreover the frozen equation itself gives
+Also the frozen equation gives
 
 \[
-aQ_a
-=
-y_-+i\omega
-=\lambda_s,
+aQ_a=y_-+i\omega=\lambda_s.
 \]
 
-where
-
-\[
-\lambda_s:=y_-+i\omega
-\]
-
-is the M5-167 frozen stable growth rate.
-
-Therefore
+Hence
 
 \[
 \boxed{
@@ -190,19 +156,11 @@ Therefore
 }
 \]
 
-This identity is exact.
-
 ---
 
-## 5. Gap estimate
+## 5. Fast/slow gap
 
-The M5-167 square-root formula gives
-
-\[
-\operatorname{Re}\sqrt D>0.
-\]
-
-For sufficiently small `a`, uniformly on every fixed finite parabolic corridor,
+For sufficiently small `a`,
 
 \[
 \boxed{
@@ -210,19 +168,17 @@ For sufficiently small `a`, uniformly on every fixed finite parabolic corridor,
 =
 \frac{\operatorname{Re}\sqrt D}{4\nu a}
 \ge
-\frac{c_0}{a}
+\frac{c_0}{a}.
 }
 \]
 
-with `c_0>0` depending only on viscosity and the fixed corridor convention.
-
-Thus deviations from the slow manifold evolve on the fast normal scale `O(a)`.
+The principal square-root branch has positive real part, and the real part stays uniformly away from zero at fixed finite parabolic mode size.
 
 ---
 
-## 6. Fixed parabolic corridor
+## 6. Modewise fixed parabolic support corridor
 
-Let the cross-frequency operator have scalar mode size
+For one scalar mode define
 
 \[
 \mathfrak A_{\ell,\omega}
@@ -236,15 +192,13 @@ Fix
 \boxed{a\mathfrak A_{\ell,\omega}\le\kappa<\infty.}
 \]
 
-The explicit slow-root formula then gives
+Then the explicit root formula gives
 
 \[
-|\lambda_s|\le C_\kappa
+|\lambda_s|\le C_\kappa,
 \]
 
-for sufficiently small `a`.
-
-Since `|sqrt D|` stays bounded away from zero in this corridor,
+and therefore
 
 \[
 \boxed{
@@ -253,153 +207,171 @@ Since `|sqrt D|` stays bounded away from zero in this corridor,
 }
 \]
 
+This is a **support condition for the individual mode**.  It is not the same statement as the mean Dirichlet-quotient condition `a N <= kappa`.
+
 ---
 
 ## 7. Stable Volterra tracking
 
-The equation
+The flat selection removes the growing homogeneous solution of
 
 \[
 \delta_\tau
-=\Delta\delta-\delta^2-(y_-)_\tau
-\]
-
-has a growing homogeneous branch because `Re Delta ~ a^-1`.
-
-The already-audited flat selection removes that branch.
-
-Thus the stable solution has a future-Volterra representation schematically
-
-\[
-\delta(\tau)
 =
-\int_\tau^\infty
-\exp\left[-\int_\tau^\sigma\Delta(r)dr\right]
-\left[(y_-)_\sigma+\delta(\sigma)^2\right]d\sigma.
+\Delta\delta-\delta^2-(y_-)_\tau.
 \]
 
-The exponential kernel has total mass
+The stable branch therefore has a future-Volterra representation with kernel decay rate `Re Delta >= c_0/a`.
 
-\[
-\boxed{O(a)}
-\]
-
-because `Re Delta >= c_0/a` and `a=e^-tau` changes only relatively by `O(a)` across one kernel width.
-
-A standard small-ball bootstrap therefore gives, for sufficiently small `a`,
+Its kernel mass is `O(a)`.  A small-ball bootstrap yields
 
 \[
 \boxed{
 |\delta(\tau)|
-\le
-C_\kappa a.
+\le C_\kappa a
 }
 \]
 
-The quadratic `delta^2` term is absorbed by the same contraction.
+for each mode remaining in the fixed support corridor.
 
----
-
-## 8. Consequence for the exact principal growth rate
-
-The actual principal logarithmic growth rate is
-
-\[
-\frac{f_\tau}{f}
-=i\omega+y
-=
-\lambda_s+\delta.
-\]
-
-Hence on every fixed parabolic corridor
+Hence
 
 \[
 \boxed{
 \operatorname{Re}\frac{f_\tau}{f}
 =
-\operatorname{Re}\lambda_s
-+O_\kappa(a).
+\operatorname{Re}\lambda_s+O_\kappa(a)
 }
 \]
 
-M5-167 proves that `Re lambda_s` is monotone nonincreasing in cross frequency.
-
-Therefore the exact nonautonomous principal evolution differs from a frequency-monotone damping family only by a diagonal scalar error of size `O_kappa(a)` on the sub-parabolic corridor.
+modewise.
 
 ---
 
-## 9. Dirichlet-quotient implication
+## 8. What is GREEN
 
-A diagonal modewise perturbation bounded by `C_kappa a` cannot generate a leading parabolic frequency drift.
+M5-167 gives frozen principal frequency-monotone damping.
 
-In a quotient derivative it contributes at most a covariance error controlled by
+M5-172 now proves that for every individual mode satisfying
 
 \[
-C_\kappa a
-\times
-\text{spectral spread}.
+a\mathfrak A_{\ell,\omega}\le\kappa,
 \]
 
-The positive principal spectral-variance term from M5-166/M5-170 absorbs the spread-dependent part by Young splitting, leaving only
+the exact nonautonomous stable rate differs from the frozen rate by only `O_kappa(a)`.
+
+Thus there is no hidden fast-normal frequency-production channel **inside a fixed spectral support corridor**.
+
+---
+
+## 9. Mean-to-support audit — YELLOW
+
+The M5-171 corridor is
 
 \[
-\boxed{C_\kappa a(1+\mathcal N)}
+\boxed{a\mathcal N\le\kappa}
 \]
 
-at the quotient level.
+with
 
-Thus M5-172 removes the **nonautonomous principal-lag** obstruction inside the M5-171 fixed corridor.
+\[
+\mathcal N
+=
+\frac{\langle AF,F\rangle}{\|F\|^2}.
+\]
 
-The only remaining contribution to the corridor inequality is the actual variable first-order relative coupling, already of the same permitted order by the M5-163 commutator estimate.
+This controls only a spectral mean.
 
----
+It does **not** imply
 
-## 10. DSD audit
+\[
+aA\le\kappa
+\]
 
-### Formation — GREEN
+on every mode in the support.
 
-The Riccati variable is formed from an actual nonzero scalar principal mode; zeros are handled by interval decomposition/continuity and do not create a new branch.
+A very small amount of mass may occur at much larger frequency while the mean remains within the corridor.
 
-### Axis — GREEN
-
-Frozen root, actual nonautonomous rate, and fast deviation are kept distinct.
-
-### Static aggregation — GREEN
-
-The `O_kappa(a)` tracking error is not treated as a new dissipative budget; it is only an error in the principal quotient generator.
-
-### Dynamics — GREEN on each fixed parabolic corridor
-
-The future Volterra selection is exactly the already-accepted flat/stable branch condition.
-
-### Cross-audit — GREEN
-
-No Gaussian spectral envelope or backward amplification product is used.
-
----
-
-## 11. Remaining step
-
-Combine:
-
-1. M5-172 principal nonautonomous tracking;
-2. M5-163 first-order commutator estimate;
-3. the M5-166 Dirichlet-quotient variance absorption;
-
-to write the explicit corridor inequality
+Therefore the following inference is forbidden:
 
 \[
 \boxed{
-\mathcal N_\tau
-\le
-C_\kappa a(1+\mathcal N)
-\qquad(a\mathcal N\le\kappa).
+a\mathcal N\le\kappa
+\not\Rightarrow
+\text{all modes satisfy }aA_{mode}\le\kappa.
 }
 \]
 
-Once this bookkeeping lemma is GREEN, M5-171 closes `P1_B^S`.
+The previous draft of M5-172 implicitly crossed this boundary in its quotient-level interpretation.  That overreach is removed here.
 
-`P1_B^P` remains separate.
+---
+
+## 10. What may still absorb the high-frequency dust
+
+The exact Dirichlet-quotient derivative contains the positive spectral variance
+
+\[
+\mathcal V
+:=
+\frac{\|(A-\mathcal N)F\|^2}{\|F\|^2}.
+\]
+
+Modes far above the mean make `V` large.
+
+Therefore the natural remaining route is a spectral split:
+
+1. low/support corridor: use the GREEN modewise M5-172 tracking;
+2. high-frequency dust: use the positive variance and the stronger frozen principal damping to absorb the tail;
+3. variable first-order coupling: use M5-163 and Young splitting against the same variance.
+
+This split has not yet been completed quantitatively.
+
+---
+
+## 11. DSD audit
+
+### Formation — GREEN
+
+The Riccati variable and frozen roots are actual modewise objects.
+
+### Axis — GREEN
+
+Modewise frequency support and mean frequency are now explicitly separated.
+
+### Static aggregation — CORRECTED
+
+A mean frequency bound is no longer promoted into a support bound.
+
+### Dynamics — GREEN modewise / YELLOW after aggregation
+
+Stable root tracking is GREEN for each mode in a fixed support corridor.  The aggregate quotient step remains YELLOW.
+
+### Cross-audit — GREEN after correction
+
+The correction prevents a disguised `mean -> support` circular shortcut.
+
+---
+
+## 12. Next target
+
+Prove the spectral-split estimate
+
+\[
+\boxed{
+\text{low modewise tracking}
++
+\text{high-mode variance absorption}
++
+\text{first-order commutator control}
+\Rightarrow
+\mathcal N_\tau
+\le C_\kappa a(1+\mathcal N)
+}
+\]
+
+under the mean corridor `a N <= kappa`.
+
+If this succeeds, M5-171 closes `P1_B^S`.
 
 \[
 \boxed{\text{GLOBAL REGULARITY REMAINS UNPROVED.}}
