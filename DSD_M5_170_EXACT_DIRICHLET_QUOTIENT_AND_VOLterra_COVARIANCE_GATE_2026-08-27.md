@@ -2,27 +2,25 @@
 
 Date: 2026-08-27
 
-Status: **P1_B^S EXACT FREQUENCY REDUCTION / USING `R=z F_z`, THE CROSS-SECTION DIRICHLET QUOTIENT HAS AN EXACT DERIVATIVE FORMULA; INSERTING THE M5-169 STABLE KERNEL SHOWS THAT THE LAST FAST-NORMAL COMPATIBILITY EDGE IS A SINGLE VOLTERRA COVARIANCE SIGN/ERROR ESTIMATE / THE SAME-POINT PRINCIPAL TERM IS A NONNEGATIVE SPECTRAL VARIANCE AND THE VARIABLE RELATIVE COUPLING ENTERS WITH AN EXTRA FACTOR `z` / GLOBAL REGULARITY UNPROVED.**
+Status: **CORRECTED P1_B^S FREQUENCY REDUCTION / THE EXACT QUOTIENT DERIVATIVE REMAINS VALID; AFTER THE M5-168 SCALING CORRECTION THE FAST SOURCE IS `LF+N[F]`, SO THE RELATIVE COUPLING CONTRIBUTES `O(1+N)` IN BACKWARD `z` AND `O(z(1+N))=O(e^-tau(1+N))` IN FORWARD `tau` / THE SAME-POINT PRINCIPAL TERM IS A NONNEGATIVE SPECTRAL VARIANCE / ONE VOLTERRA PRINCIPAL-COVARIANCE LAG ESTIMATE REMAINS / GLOBAL REGULARITY UNPROVED.**
 
 ---
 
 ## 1. Frequency objects
 
-Use the invariant pair Hilbert space and define
+Define
 
 \[
-A:=I-4G^2-\Delta_{S^2}>0.
+A:=I-4G^2-\Delta_{S^2}>0,
 \]
-
-Let
 
 \[
 E(z):=\|F(z)\|^2,
 \qquad
-H(z):=\langle AF(z),F(z)\rangle.
+H(z):=\langle AF(z),F(z)\rangle,
 \]
 
-Whenever `E(z)>0`, define
+and, when `E>0`,
 
 \[
 \boxed{
@@ -30,334 +28,275 @@ Whenever `E(z)>0`, define
 }
 \]
 
-This is equivalent to the square of the audited cross-section frequency up to harmless fixed constants.
-
 ---
 
 ## 2. Exact quotient derivative
 
-M5-168 gives
+Since M5-168 gives
 
 \[
-F_z=\frac Rz.
+F_z=R/z,
+\]
+
+we have
+
+\[
+E'=\frac2z\operatorname{Re}\langle R,F\rangle,
+\qquad
+H'=\frac2z\operatorname{Re}\langle AF,R\rangle.
 \]
 
 Therefore
-
-\[
-E'
-=
-\frac2z\operatorname{Re}\langle R,F\rangle
-\]
-
-and, because `A` is `z`-independent,
-
-\[
-H'
-=
-\frac2z\operatorname{Re}\langle AF,R\rangle.
-\]
-
-Hence
 
 \[
 \boxed{
 \mathcal N_z
 =
 \frac{2}{zE}
-\operatorname{Re}
-\langle
-(A-\mathcal N)F,
-R
-\rangle.
+\operatorname{Re}\langle(A-\mathcal N)F,R\rangle.
 }
 \]
 
-No slow approximation is used.
+This identity is exact and unaffected by the M5-168 scaling correction.
 
 ---
 
-## 3. Insert the exact stable kernel
+## 3. Corrected stable-kernel decomposition
 
-M5-169 gives
+M5-169 now gives
 
 \[
 R(z)
 =
-\int_0^z
-\mathcal K(z,\zeta)
+\int_0^z\mathcal K(z,\zeta)
 \left[
-LF(\zeta)
-+\zeta\mathcal N_{rel}(\zeta)F(\zeta)
+LF(\zeta)+\mathcal N_{rel}F(\zeta)
 \right]d\zeta.
 \]
 
-Therefore
+Thus
 
 \[
-\boxed{
 \mathcal N_z
 =
-\mathcal V_{pr}(z)
-+\mathcal V_{rel}(z),
-}
+\mathcal V_{pr}+\mathcal V_{rel}
 \]
 
-where
-
-\[
-\mathcal V_{pr}
-:=
-\frac2{zE}
-\operatorname{Re}
-\left\langle
-(A-\mathcal N)F(z),
-\int_0^z\mathcal K(z,\zeta)LF(\zeta)d\zeta
-\right\rangle
-\]
-
-and
-
-\[
-\mathcal V_{rel}
-:=
-\frac2{zE}
-\operatorname{Re}
-\left\langle
-(A-\mathcal N)F(z),
-\int_0^z\mathcal K(z,\zeta)\zeta\mathcal N_{rel}F(\zeta)d\zeta
-\right\rangle.
-\]
-
-The entire fast-normal compatibility question is now contained in these two explicit terms.
+with the obvious principal and relative kernel pairings.
 
 ---
 
 ## 4. Same-point principal covariance
 
-If the kernel were replaced by its leading mass `z delta_zeta=z`, then
+If the normalized kernel is replaced by its leading same-point mass, then
 
 \[
-R_{pr}=zLF.
+R_{pr}\approx zLF.
 \]
 
-Recall
+Write
 
 \[
-L
-=
-\nu A_0
--6\nu G
--2\nu I,
+L=\nu A_0-6\nu G-2\nu I,
+\qquad
+A=I+A_0.
 \]
 
-with `A=I+A_0`.
+The skew term `G` commutes with `A`, and the scalar term cancels in the quotient covariance.
 
-The skew term `G` commutes with `A`, and the scalar term cancels from the quotient covariance.  Thus
-
-\[
-\operatorname{Re}\langle(A-\mathcal N)F,LF\rangle
-=
-\nu
-\left[
-\|A F\|^2
--\frac{\langle AF,F\rangle^2}{E}
-\right]
-\]
-
-up to the harmless shift convention in `A`.
-
-Therefore
+Hence
 
 \[
 \boxed{
-\mathcal V_{pr}^{same}
+\operatorname{Re}\langle(A-\mathcal N)F,LF\rangle
 =
-\frac{2\nu}{E}
-\left[
+\nu\left[
 \|AF\|^2
--\mathcal N^2E
+-\frac{\langle AF,F\rangle^2}{E}
 \right]
-\ge0.
+\ge0
 }
 \]
 
-This is exactly the Agmon--Nirenberg / Dirichlet-quotient variance sign in the backward-`z` orientation.
+up to the harmless fixed shift convention in `A`.
 
-Equivalently, in the forward `tau=-log z` direction the same term is nonpositive.
+Therefore the principal same-point contribution satisfies
+
+\[
+\boxed{
+\mathcal V_{pr}^{same}\ge0.
+}
+\]
+
+This is the exact Dirichlet-quotient variance sign in backward `z`, or equivalently nonpositive frequency production in forward `tau=-log z`.
 
 ---
 
-## 5. Relative coupling has the correct small factor
+## 5. Corrected relative-coupling scale
 
-The nonlinear relative term enters the fast source as
+The relative operator now enters the fast source without an extra `z`:
 
 \[
-\zeta\mathcal N_{rel}F.
+S_{rel}=\mathcal N_{rel}F.
 \]
 
-The M5-169 kernel has total mass at most `z`. Hence the relative part of `R` contains two small normal factors in the crude graph estimate:
+The M5-169 kernel has mass `<=z`, so
 
 \[
 \boxed{
 \|R_{rel}(z)\|
 \le
-z^2
-\sup_{\zeta\le z}
+z\sup_{\zeta\le z}
 \|\mathcal N_{rel}F(\zeta)\|.
 }
 \]
 
-After division by the `z` in the quotient derivative, its natural scale is therefore
+Because the quotient derivative contains `1/z`, the natural backward-`z` contribution is first-order size
 
 \[
 \boxed{
-O(z)\times\text{first-order cross-frequency transfer}.
+O(1+\mathcal N).
 }
 \]
 
-This matches M5-154/M5-166 exactly.
-
-The M5-163 commutator estimate then predicts
-
-\[
-\mathcal V_{rel}
-\ge
--Cz(1+\mathcal N)
-\]
-
-once the kernel-local future envelope is converted into the quotient energy form.
-
----
-
-## 6. The one remaining principal kernel question
-
-The only nontrivial issue not resolved by the same-point calculation is that
-
-\[
-\mathcal K(z,\zeta)LF(\zeta)
-\]
-
-uses nearby smaller normal depths and includes a unitary genealogical shift.
-
-Thus one must prove a lower bound of the form
+Using the M5-163/M5-166 commutator estimate, the target lower bound is
 
 \[
 \boxed{
-\mathcal V_{pr}(z)
+\mathcal V_{rel}(z)
 \ge
-- C z(1+\mathcal N(z)).
+-C(1+\mathcal N(z))
 }
 \]
 
-The positive same-point spectral variance may be discarded; only the negative error caused by Volterra lag must be estimated.
+once the kernel-local future envelope is converted into the quotient form.
 
-If this and the corresponding relative estimate hold, then
+Since
 
 \[
-\boxed{
-\mathcal N_z
-\ge
--Cz(1+\mathcal N).
-}
+\mathcal N_\tau=-z\mathcal N_z,
 \]
 
-Equivalently, since `z=e^-tau`,
+this becomes exactly
 
 \[
 \boxed{
 \mathcal N_\tau
 \le
-Cz^2(1+\mathcal N)
+Cz(1+\mathcal N)
+=
+Ce^{-\tau}(1+\mathcal N),
 }
 \]
 
-under this normalization convention; with the unshifted M5-166 time scaling the equivalent bound is at worst `C e^-tau(1+N)`.  Either form is integrable and forbids parabolic frequency escape.
-
-The precise power of `z` is secondary; integrability is the structural requirement.
+which is the M5-166 scaling.
 
 ---
 
-## 7. Kernel localization data available for the lag estimate
+## 6. Remaining principal Volterra covariance gate
 
-From M5-169, after
-
-\[
-t=\zeta^{-1}-z^{-1},
-\]
-
-the scalar kernel measure is proportional to
+The principal kernel uses nearby smaller depths and a unitary genealogical shift:
 
 \[
-e^{-t/(4\nu)}(1+zt)^{-5/2}dt.
+\int_0^z\mathcal K(z,\zeta)LF(\zeta)d\zeta.
 \]
 
-Thus the normalized kernel is exponentially localized at bounded `t`, which means
-
-\[
-\boxed{
-|z-\zeta|=O(z^2),
-\qquad
-|\log(\zeta/z)|=O(z)
-}
-\]
-
-in every finite kernel moment.
-
-Consequently:
-
-- normal lag costs one factor `z^2 F_z`;
-- genealogical unitary lag costs one factor `z G`;
-- coefficient variation costs at least one factor `z`.
-
-These are the exact small parameters available to prove the Section-6 lower bound.
-
----
-
-## 8. DSD four-chain audit
-
-### Formation — GREEN
-
-The quotient derivative and kernel decomposition are exact.
-
-### Axis — GREEN
-
-Normal lag, genealogical shift, and cross spectral frequency are represented by distinct terms.
-
-### Static aggregation — GREEN
-
-The positive principal variance is not counted as transfer; only the Volterra-lag error can reduce it.
-
-### Dynamics — GREEN / ONE YELLOW LEMMA
-
-All remaining dynamics are isolated in the principal Volterra covariance lower bound plus the already-first-order relative commutator estimate.
-
-### Cross-audit — GREEN
-
-No Gaussian envelope, finite critical budget, or same-norm analytic derivative estimate is used.
-
----
-
-## 9. Next calculation
-
-Prove the kernel-lag estimate
+The exact remaining goal is therefore
 
 \[
 \boxed{
 \mathcal V_{pr}(z)
 \ge
--Cz(1+\mathcal N(z))
+-C(1+\mathcal N(z)).
 }
 \]
 
-using the exact kernel moments and the stable graph-norm slaving, then combine it with
+The positive same-point variance can be discarded.  Only the negative error produced by normal lag and genealogical shift needs control.
+
+Combined with Section 5 this would give
 
 \[
-\mathcal V_{rel}(z)
-\ge-Cz(1+\mathcal N(z)).
+\boxed{
+\mathcal N_z
+\ge
+-C(1+\mathcal N),
+}
 \]
 
-This is now the single explicit compatibility gate between M5-166 and the exact M5-168/M5-169 system.
+or equivalently
+
+\[
+\boxed{
+\mathcal N_\tau
+\le
+C e^{-\tau}(1+\mathcal N).
+}
+\]
+
+Integration would uniformly bound the forward cross-section frequency and contradict the M5-154 necessary parabolic escape for a nonzero statistical flat fiber.
+
+---
+
+## 7. Kernel localization
+
+The exact kernel moments remain
+
+\[
+|z-\zeta|=O(z^2),
+\qquad
+|\log(\zeta/z)|=O(z)
+\]
+
+under its normalized exponentially localized measure.
+
+Thus the lag mechanisms carry:
+
+- normal displacement `O(z^2)`;
+- genealogical shift `O(z)`;
+- coefficient change over the kernel width `O(z)`.
+
+These are small in the forward `tau` asymptotic region, but they must be estimated without using a same-norm derivative/amplitude shortcut.
+
+---
+
+## 8. DSD correction audit
+
+### Formation — GREEN
+
+The quotient derivative is exact and the corrected kernel source matches M5-168/M5-169.
+
+### Axis — GREEN
+
+Backward `z` transfer of size `O(1)` becomes the expected integrable `O(z)` frequency-production rate in forward `tau`.
+
+### Static aggregation — GREEN
+
+The erroneous extra nonlinear factor `z` is removed; no artificial gain remains.
+
+### Dynamics — GREEN / ONE YELLOW LEMMA
+
+The only remaining compatibility edge is the principal Volterra covariance lower bound plus the routine kernel-local version of the first-order commutator estimate.
+
+### Error status
+
+All earlier M5-170 statements using `R_rel=O(z^2 N F)`, `V_rel=O(z...)` in backward `z`, or `N_tau=O(z^2...)` are **REJECTED**.
+
+---
+
+## 9. Next calculation
+
+Prove
+
+\[
+\boxed{
+\mathcal V_{pr}(z)
+\ge-C(1+\mathcal N(z))
+}
+\]
+
+from kernel localization and stable graph-norm slaving, and package the relative kernel commutator in the same form.
+
+This would complete the M5-166 fast-normal compatibility edge.
 
 ---
 
