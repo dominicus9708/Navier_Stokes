@@ -1,47 +1,40 @@
-# DSD M5-192 — Abstract Backward-Uniqueness Critical-Time-Singularity Firewall
+# DSD M5-192 — Abstract Backward-Uniqueness Critical-Time-Singularity Firewall — CORRECTED
 
 Date: 2026-08-28
 
-Status: **P1_B ABSTRACT-THEOREM AUDIT / CLASSICAL LIONS--MALGRANGE / AGMON--NIRENBERG BACKWARD UNIQUENESS COVERS UNIFORMLY PARABOLIC EVOLUTIONS WITH SUFFICIENT COEFFICIENT REGULARITY AND A CONTROLLED PRINCIPAL FORM, BUT THE W1 COMMON-TAIL LINEARIZATION HAS AN EXACT TERMINAL-CRITICAL `1/tau` SYMMETRIC CHANNEL / A SCALAR MODEL ALREADY SUPPORTS NONZERO TERMINAL-ZERO SOLUTIONS AT THAT ORDER / THEREFORE NO GENERIC ABSTRACT PARABOLIC THEOREM CAN CLOSE THE LARGE-AMPLITUDE W1 GATE WITHOUT USING EXTRA NAVIER--STOKES STRUCTURE / GLOBAL REGULARITY UNPROVED.**
+Status: **P1_B ABSTRACT-THEOREM AUDIT / CLASSICAL BACKWARD-UNIQUENESS THEORY DOES NOT AUTOMATICALLY COVER THE W1 TERMINAL-CRITICAL `1/tau` SYMMETRIC CHANNEL / A SCALAR MODEL SUPPORTS NONZERO TERMINAL-ZERO SOLUTIONS AT THAT ORDER / HOWEVER PHYSICAL TERMINAL L2 COLLAPSE MUST NOT BE IDENTIFIED WITH DECAY OF THE NORMALIZED W1 DIFFERENCE, BECAUSE LERAY SCALING ALONE PRODUCES THE COLLAPSE / GENERIC ABSTRACT PARABOLIC THEORY THEREFORE CANNOT CLOSE THE GATE, AND MINIMAL RECURRENCE CANNOT BE INVOKED FROM PHYSICAL TERMINAL ZERO WITHOUT AN ADDITIONAL NORMALIZED BRIDGE / GLOBAL REGULARITY UNPROVED.**
 
 ---
 
 ## 1. Classical backward-uniqueness framework
 
-Classical Lions--Malgrange / Agmon--Nirenberg theory proves backward uniqueness for broad uniformly parabolic evolution equations under hypotheses such as:
+Classical Lions--Malgrange / Agmon--Nirenberg theory proves backward uniqueness for broad uniformly parabolic evolutions with a controlled principal form, sufficient coefficient regularity, and an admissible finite-energy solution class.
 
-- a well-controlled elliptic principal part;
-- sufficient time regularity of the principal coefficients;
-- a solution class with finite Hilbert-space energy/regularity;
-- lower-order terms that remain controlled relative to the principal evolution.
-
-This framework explains why many bounded-coefficient heat/Oseen problems enjoy backward uniqueness.
-
-It does **not** say that every time-singular scale-critical lower-order form is backward injective.
+It does not imply injectivity for every signed time-singular critical lower-order form.
 
 ---
 
 ## 2. W1 terminal-critical scale
 
-For the same-tail physical realization set
+Set
 
 \[
 \tau:=T_*-t.
 \]
 
-The common-tail strain has the scale
+The common-tail strain satisfies
 
 \[
-|S_{B_T}(x,\tau)|\lesssim (|x-x_*|^2+\tau)^{-1}.
+|S_{B_T}(x,\tau)|\lesssim(|x-x_*|^2+\tau)^{-1},
 \]
 
-At the terminal center,
+so at the center
 
 \[
-\boxed{|S_{B_T}(x_*,\tau)|\sim \tau^{-1}.}
+\boxed{|S_{B_T}(x_*,\tau)|\sim\tau^{-1}.}
 \]
 
-Hence the symmetric part of the relative generator is exactly at the nonintegrable temporal critical scale.
+This is the nonintegrable terminal-critical temporal scale.
 
 ---
 
@@ -57,177 +50,187 @@ The ODE
 has
 
 \[
-\boxed{f(\tau)=C\tau^c}.
+\boxed{f(\tau)=C\tau^c},
 \]
 
-Thus
+with
 
 \[
-f(0)=0
-\]
-
-but
-
-\[
+f(0)=0,
+\qquad
 f\not\equiv0.
 \]
 
-The coefficient has precisely the critical time scale `tau^-1`.
-
-Therefore the terminal condition alone cannot distinguish the zero branch from a nonzero algebraically vanishing branch for a generic signed critical potential.
+Thus a generic signed `1/tau` potential can support a nontrivial terminal-zero branch.
 
 ---
 
-## 4. Why finite energy does not repair the generic countermodel
+## 4. Finite energy does not repair the generic model
 
-Finite `L2` energy controls the spatial size of the solution but does not remove a purely temporal critical factor.
-
-A separable Hilbert-space model
+For `w_0 in L2`,
 
 \[
-W(\tau)=\tau^c w_0,
-\qquad w_0\in L^2,
+W(\tau)=\tau^cw_0
 \]
 
-satisfies
+is a finite-energy nonzero terminal-zero solution of
 
 \[
-\partial_\tau W-\frac c\tau W=0
+\partial_\tau W-\frac c\tau W=0.
 \]
 
-and still has
+Therefore
 
 \[
-W(0)=0
+\boxed{
+L^2+\text{terminal zero}+\text{generic critical }1/\tau\text{ coefficient}
+\not\Rightarrow
+\text{backward uniqueness}.
+}
 \]
 
-in `L2`.
+---
+
+## 5. Why a classical theorem cannot simply be inserted
+
+For each fixed `tau>0` the physical W1 coefficients are smooth and bounded, but
+
+\[
+\|U(\tau)\|_\infty\sim\tau^{-1/2},
+\qquad
+\|\nabla U(\tau)\|_\infty\sim\tau^{-1}
+\]
+
+as `tau downarrow0`.
+
+The common-tail strain has no geometry-only sign by M5-191.
+
+Hence a standard uniformly controlled parabolic backward-uniqueness theorem does not automatically cover the terminal endpoint.
+
+---
+
+## 6. Critical correction: physical collapse is not normalized decay
+
+The scalar ODE intuition must **not** be transferred directly to the normalized W1 pair.
+
+For the physical same-tail difference `w` and normalized Leray difference `Z`, scaling gives
+
+\[
+\boxed{
+\|w(t)\|_2^2
+=
+\tau^{1/2}\|Z(s)\|_2^2,
+\qquad s=-\log\tau.
+}
+\]
+
+Therefore even if
+
+\[
+\|Z(s)\|_2\sim1
+\]
+
+along a compact recurrent normalized orbit, one still has
+
+\[
+\|w(t)\|_2\to0
+\]
+
+as `t up T_*`.
+
+This is exactly the M5-117/M5-128 firewall:
+
+\[
+\boxed{
+\text{physical terminal }L^2\text{ collapse}
+\not\Rightarrow
+\text{normalized terminal equality or decay}.
+}
+\]
+
+Consequently a physical terminal-critical mode cannot be labeled a normalized exponentially decaying direction without removing the similarity prefactor and spatial dilation explicitly.
+
+The former Section-6 statement asserting such a direct correspondence is withdrawn.
+
+---
+
+## 7. Consequence for minimal recurrence
+
+Minimal recurrence cannot be invoked merely from
+
+\[
+w(T_*)=0
+\]
+
+in physical `L2`.
+
+A legitimate recurrence contradiction would require a new normalized observable `J[Z]` such that:
+
+1. `J` removes the universal similarity collapse;
+2. `J` is continuous on the compact W1 pair system;
+3. the critical physical dynamics forces `J(S_sV,S_sW) -> 0` for a nontrivial same-tail pair.
+
+No such observable has yet been proved.
 
 Thus
 
 \[
 \boxed{
-W\in L^2
-+\text{terminal zero}
-+\text{critical }1/\tau\text{ coefficient}
+\text{physical backward criticality}
 \not\Rightarrow
-W\equiv0
+\text{minimal-pair contraction}
 }
 \]
 
-without further operator structure.
+is now a permanent RED arrow.
 
 ---
 
-## 5. Why the classical theorem cannot simply be inserted
+## 8. What remains valid
 
-For each fixed `tau>0` the W1 physical coefficients are smooth and bounded.
+The scalar countermodel still proves the intended negative result:
 
-However their bounds deteriorate at the terminal endpoint as
+- finite energy alone is insufficient;
+- Hardy boundedness alone is insufficient;
+- critical differential order alone is insufficient;
+- generic abstract backward uniqueness cannot be inserted without verifying endpoint assumptions.
 
-\[
-\|U(\tau)\|_\infty\sim\tau^{-1/2},
-\qquad
-\|\nabla U(\tau)\|_\infty\sim\tau^{-1}.
-\]
-
-The symmetric form therefore has no uniform integrable bound up to `tau=0`.
-
-Moreover M5-191 shows that the pointwise common-tail strain has no geometry-only sign.
-
-Hence the standard chain
-
-\[
-\text{finite-energy parabolic evolution}
-\to
-\text{Lions--Malgrange}
-\to
-\text{terminal injectivity}
-\]
-
-is not justified for the present endpoint.
+The actual W1 problem still may possess additional structure, but it must be demonstrated explicitly.
 
 ---
 
-## 6. Connection to the normalized W1 dynamics
+## 9. Legitimate next routes
 
-The critical temporal singularity is not accidental.
+After M5-190/M5-191 and the present correction, the noncircular routes are:
 
-Under Leray similarity time
-
-\[
-s=-\log\tau,
-\]
-
-a factor `tau^c` becomes
-
-\[
-e^{-cs}.
-\]
-
-Thus a terminal-zero critical mode is exactly a normalized exponentially decaying direction.
-
-The W1 minimal recurrent structure severely constrains such directions, but **that recurrence information must be used explicitly**; it cannot be replaced by a generic parabolic theorem.
-
-This observation reconnects the physical backward problem to the normalized dynamical system without identifying the two proofs.
+1. an adapted symmetrizer or log-convexity observable for the **full common canonical-tail operator**;
+2. a critical Oseen--Stokes Carleman theorem using genuine divergence-free/pressure structure;
+3. a normalized pair observable removing the similarity prefactor and proving actual contraction, not physical `L2` collapse;
+4. an external theorem whose hypotheses explicitly allow the terminal Type-I critical coefficient class.
 
 ---
 
-## 7. Consequence for the first large gate
-
-The first large gate cannot be closed by one of the following alone:
-
-- finite energy;
-- Hardy boundedness;
-- coefficient smoothness for every `tau>0`;
-- a generic Hilbert-space backward-uniqueness theorem.
-
-A successful proof must use at least one genuinely NSE/W1-specific input such as:
-
-1. compact minimal recurrence in normalized time;
-2. the common canonical-tail factor structure;
-3. an adapted operator symmetrizer that excludes the dangerous critical mode;
-4. a critical Stokes Carleman inequality whose positivity relies on divergence-free/pressure structure rather than order alone.
-
----
-
-## 8. DSD four-chain audit
+## 10. DSD audit
 
 ### Formation — GREEN
 
-The countermodel is a legitimate abstract terminal-critical evolution and is used only to test theorem generality.
+The abstract countermodel is used only as a theorem-generality test.
 
-### Axis — GREEN
+### Axis — CORRECTED
 
-Physical terminal time and normalized Leray time are related but not identified.
+Physical terminal time and normalized Leray dynamics are no longer conflated.
 
 ### Static aggregation — GREEN
 
 Finite energy is not mistaken for temporal coercivity.
 
-### Dynamics — GREEN FIREWALL
+### Dynamics — GREEN FIREWALL / W1 INJECTIVITY OPEN
 
-Generic critical backward uniqueness is excluded; actual W1 backward injectivity remains OPEN.
+Generic critical backward uniqueness is excluded; actual W1 backward injectivity remains open.
 
 ### Cross-audit — GREEN
 
-This corrects the overstrong wording in the original M5-185 and is consistent with M5-190/M5-191.
-
----
-
-## 9. Next route
-
-The next calculation should exploit the last line of Section 6:
-
-\[
-\boxed{
-\text{a nonzero terminal-critical mode corresponds to a decaying normalized direction.}
-}
-\]
-
-On a compact **minimal recurrent** W1 pair system, determine whether a same-tail flat difference can possess such a one-sided exponentially decaying direction without forcing the entire invariant pair measure onto the diagonal.
-
-This uses actual W1 dynamics and avoids a false generic backward-uniqueness theorem.
+The correction restores consistency with M5-117/M5-128.
 
 ---
 
