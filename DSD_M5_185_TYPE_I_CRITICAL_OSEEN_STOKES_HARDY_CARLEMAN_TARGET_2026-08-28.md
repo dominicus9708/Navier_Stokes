@@ -1,8 +1,8 @@
-# DSD M5-185 — Type-I Critical Oseen–Stokes Hardy–Carleman Target
+# DSD M5-185 — Type-I Critical Oseen–Stokes Hardy–Carleman Target — CORRECTED
 
 Date: 2026-08-28
 
-Status: **W1-CONDITIONAL / THE WHOLE-SPACE SAME-TAIL PHYSICAL DIFFERENCE HAS AN EXACT SCALE-CRITICAL OSEEN–STOKES COEFFICIENT CLASS `|a|~rho^-1`, `|B|~rho^-2` WITH `rho^2=|x-x_*|^2+(T_*-t)` / AT THE LEVEL OF DIFFERENTIAL ORDER THESE TERMS ARE PRECISELY ABSORBABLE BY A HARDY-TYPE PARABOLIC CARLEMAN ESTIMATE WITH LARGE PARAMETER / THE ONLY UNPROVED OBJECT IS A PRESSURE-COMPATIBLE DIVERGENCE-FREE STOKES VERSION OF THAT CRITICAL CARLEMAN ESTIMATE / GLOBAL REGULARITY UNPROVED.**
+Status: **W1-CONDITIONAL / THE SAME-TAIL PHYSICAL DIFFERENCE HAS THE EXACT SCALE-CRITICAL COEFFICIENT CLASS `|a|~rho^-1`, `|B|~rho^-2`, BUT DIFFERENTIAL-ORDER MATCHING DOES NOT IMPLY ARBITRARY-AMPLITUDE BACKWARD ABSORPTION / A TERMINAL `1/tau` POTENTIAL CAN ITSELF SUPPORT NONZERO TERMINAL-ZERO SOLUTIONS / ANY VALID CARLEMAN MUST USE ADDITIONAL DIVERGENCE-FREE, STOKES, CANONICAL-TAIL, SIGN, OR SPECTRAL STRUCTURE / GLOBAL REGULARITY UNPROVED.**
 
 ---
 
@@ -15,314 +15,189 @@ Let
 \qquad
 r:=|x-x_*|,
 \qquad
-\rho(x,t):=(r^2+\vartheta)^{1/2}.
+\rho:=(r^2+\vartheta)^{1/2}.
 \]
 
-For every W1 state in the compact normalized class, previous tail and local-smooth bounds give a uniform profile estimate of the schematic form
+The compact W1 Type-I class gives
 
 \[
-|U(Y,s)|\le \frac{C}{1+|Y|},
+\boxed{|u(x,t)|\le C\rho^{-1}},
 \qquad
-|\nabla_YU(Y,s)|+|\Omega(Y,s)|
-\le \frac{C}{(1+|Y|)^2}.
+\boxed{|\nabla u(x,t)|+|\omega(x,t)|\le C\rho^{-2}}.
 \]
 
-Under inverse Leray scaling
+For the same-tail difference `Z=u^V-u^W`,
 
 \[
-u(x,t)=\vartheta^{-1/2}U\!\left(\frac{x-x_*}{\sqrt\vartheta},s\right),
+\partial_t Z-\nu\Delta Z+a\cdot\nabla Z+BZ+\nabla q=0,
+\qquad \nabla\cdot Z=0,
 \]
 
-this becomes
+with
 
 \[
-\boxed{
-|u(x,t)|\le \frac{C}{\rho(x,t)},
-}
+\boxed{|a|\le C\rho^{-1},\qquad |B|\le C\rho^{-2}}.
 \]
 
-and
-
-\[
-\boxed{
-|\nabla u(x,t)|+|\omega(x,t)|
-\le \frac{C}{\rho(x,t)^2}.
-}
-\]
-
-Higher derivatives have the corresponding parabolic inverse-distance powers.
-
-These estimates are uniform over the compact W1 class.
+This coefficient class is exactly parabolically scale-critical.
 
 ---
 
-## 2. Relative velocity-pressure system
+## 2. Terminal flatness
 
-For same-tail physical realizations `u^V,u^W`, define
-
-\[
-Z:=u^V-u^W,
-\qquad
-q:=p^V-p^W.
-\]
-
-Then
+M5-145/M5-181 give, for every fixed `x != x_*`,
 
 \[
-\boxed{
-\partial_t Z-\nu\Delta Z
-+a\cdot\nabla Z
-+B Z
-+\nabla q=0,
-\qquad
-\nabla\cdot Z=0,
-}
+\boxed{\partial_t^mZ(x,T_*)=0\qquad\forall m<\infty.}
 \]
 
-where one may take
+At the Fuchsian level the same-tail difference is flat to every algebraic normal order.
+
+---
+
+## 3. Differential-order audit remains GREEN
+
+The lower terms satisfy
 
 \[
-a:=u^V,
-\qquad
-BZ:=(Z\cdot\nabla)u^W.
+|a\cdot\nabla Z|^2\lesssim\rho^{-2}|\nabla Z|^2,
 \]
+
+\[
+|BZ|^2\lesssim\rho^{-4}|Z|^2.
+\]
+
+Thus the drift and stretching sit exactly at the critical derivative orders expected in a Hardy/Carleman estimate.
+
+What is **not** valid is the former inference that a sufficiently large Carleman parameter must absorb an arbitrary finite coefficient amplitude.
+
+---
+
+## 4. Terminal-critical ODE firewall
+
+Consider reverse time `tau=T_*-t` and the scalar equation
+
+\[
+\boxed{\partial_\tau f-\frac c\tau f=0,\qquad c>0.}
+\]
+
+It has
+
+\[
+\boxed{f(\tau)=C\tau^c},
+\]
+
+so
+
+\[
+f(0)=0
+\]
+
+while `f` is not identically zero.
+
+At the Type-I center,
+
+\[
+\rho^{-2}\sim\tau^{-1}.
+\]
+
+Hence an arbitrary signed terminal-critical zeroth-order coefficient can generate a genuine terminal-zero branch.
 
 Therefore
 
 \[
 \boxed{
-|a(x,t)|\le C\rho^{-1},
-\qquad
-|B(x,t)|\le C\rho^{-2}.
+|B|\lesssim\rho^{-2}
++\text{large Carleman parameter}
+\not\Rightarrow
+\text{backward uniqueness at arbitrary amplitude}.
 }
 \]
 
-This is exactly scale-critical under the Navier–Stokes parabolic scaling.
+This is a permanent RED firewall.
 
 ---
 
-## 3. Terminal flatness
+## 5. Spatial inverse-square theorems do not remove this firewall
 
-M5-145/M5-181 give, away from the terminal center,
+Strong unique continuation for spatial inverse-square potentials concerns a different mechanism.
 
-\[
-\partial_t^m Z(x,T_*)=0
-\qquad\forall m<\infty,\ x\neq x_*.
-\]
+Here the same parabolic coefficient becomes a **terminal time singularity** `~1/tau` at the center.
 
-At the Fuchsian level the same-tail difference is flat to every algebraic normal order.
-
-The objective is to prove that the homogeneous critical Oseen–Stokes system cannot support a nonzero solution with this terminal flatness.
+Thus spatial Hardy control and terminal backward injectivity must not be identified.
 
 ---
 
-## 4. Differential-order audit
+## 6. Corrected Stokes-Carleman target
 
-The lower-order terms satisfy
-
-\[
-|a\cdot\nabla Z|^2
-\le C\rho^{-2}|\nabla Z|^2,
-\]
-
-and
+A pressure-compatible estimate may still contain weighted critical coercivities such as
 
 \[
-|BZ|^2
-\le C\rho^{-4}|Z|^2.
+s\int e^{2s\Phi}\rho^{-2}|\nabla v|^2
++s^3\int e^{2s\Phi}\rho^{-4}|v|^2,
 \]
 
-Thus the first-order drift costs exactly one critical inverse distance and the zeroth-order strain costs exactly the critical inverse-square potential.
+but a valid proof must contain an additional mechanism excluding the ODE-type critical mode.
 
-There is **no supercritical coefficient** in the physical relative equation.
+Legitimate candidates are:
 
-This is stronger structural information than the coarse statement
+1. divergence-free transport skewness;
+2. a canonical-tail adapted symmetrizer;
+3. a spectral/log-convexity gap for the full common-tail operator;
+4. Stokes pressure/divergence structure;
+5. a genuinely small Hardy subbranch.
 
-\[
-a\in L_t^\infty L_x^{3,\infty}.
-\]
+No one of these is assumed by coefficient order alone.
 
 ---
 
-## 5. Scalar Hardy-Carleman precedent
+## 7. Pressure is not the sole obstruction
 
-For scalar heat operators, critical inverse-square potentials are known to admit strong unique-continuation Carleman estimates even for arbitrary finite potential size `M`.
+M5-190 shows that for the finite-energy same-tail difference the Leray projection is harmless at the `L2/H^-1` form level and the strong-`L3` quotient is infinitesimally form-bounded.
 
-The structural lesson used here is only:
+The non-small obstruction is the common canonical-tail stretching form.
+
+Thus the earlier statement that pressure was the only theorem-level issue is withdrawn.
+
+---
+
+## 8. Corrected first large target
+
+The remaining analytic problem is
 
 \[
 \boxed{
-\text{critical }\rho^{-2}\text{ order is not by itself beyond Carleman absorption.}
+\text{backward injectivity for the finite-energy common-tail Oseen operator at actual W1 critical amplitude},
 }
 \]
 
-No scalar theorem is inserted as a Stokes theorem.
+with the strong-`L3` quotient treated perturbatively.
+
+A generic arbitrary-amplitude `rho^-2` backward-uniqueness theorem would be false without additional hypotheses.
 
 ---
 
-## 6. Exact Stokes-Carleman target
-
-A sufficient estimate would have the following form.
-
-For a terminal/backward weight `Phi` adapted to
-
-\[
-\rho^2=r^2+\vartheta
-\]
-
-and sufficiently large Carleman parameter `s`, prove for smooth divergence-free test fields `(v,pi)`
-
-\[
-\boxed{
-\begin{aligned}
-& s\int e^{2s\Phi}\rho^{-2}|\nabla v|^2
-+s^3\int e^{2s\Phi}\rho^{-4}|v|^2\\
-&\qquad\le
-C\int e^{2s\Phi}
-|\partial_t v-\nu\Delta v+\nabla\pi|^2
-+\mathcal B_s[v,\pi].
-\end{aligned}}
-\]
-
-Here `B_s` must either vanish in the whole-space formulation or be controllable without prescribing artificial lateral boundary data.
-
-The precise powers of `s` may differ in a final optimized estimate; the essential structural outputs are the two critical weighted coercivities
-
-\[
-\rho^{-2}|\nabla v|^2,
-\qquad
-\rho^{-4}|v|^2.
-\]
-
----
-
-## 7. Critical lower-order absorption
-
-Assume the target estimate of Section 6.
-
-For the actual relative solution,
-
-\[
-\partial_tZ-\nu\Delta Z+\nabla q
-= -a\cdot\nabla Z-BZ.
-\]
-
-Hence
-
-\[
-\begin{aligned}
-\int e^{2s\Phi}|PZ+\nabla q|^2
-&\le
-C_1\int e^{2s\Phi}\rho^{-2}|\nabla Z|^2\\
-&\quad+C_2\int e^{2s\Phi}\rho^{-4}|Z|^2.
-\end{aligned}
-\]
-
-Because `C_1,C_2` are fixed W1-class constants, sufficiently large `s` absorbs both terms into the left side:
-
-\[
-\boxed{
-\text{no smallness of the Type-I coefficient is needed once the critical Stokes Carleman is available.}
-}
-\]
-
-This is the central order calculation of the present note.
-
----
-
-## 8. Why pressure is now the genuine theorem-level issue
-
-The scalar critical Hardy-Carleman theory does not automatically control
-
-\[
-\nabla q,
-\qquad
-\nabla\cdot Z=0.
-\]
-
-Eliminating pressure via vorticity reintroduces the elliptically coupled velocity terms identified in M5-183.
-
-Thus the two equivalent target formulations are:
-
-### Velocity-pressure form
-
-Prove Section 6 directly for the nonstationary Stokes operator.
-
-### Vorticity-velocity form
-
-Combine a critical parabolic Hardy-Carleman estimate for `eta=curl Z` with a simultaneously weighted elliptic estimate for
-
-\[
--\Delta Z=\nabla\times\eta.
-\]
-
-The latter is the M5-183 formulation.
-
-No direct equivalence is asserted until the weights and boundary terms are audited.
-
----
-
-## 9. Relation to existing literature
-
-Current audited literature provides complementary pieces:
-
-- classical heat backward uniqueness with bounded lower-order terms;
-- strong unique continuation for critical inverse-square parabolic potentials;
-- Stokes/Oseen Carleman estimates and spatial unique continuation;
-- whole-space bounded-mild Navier–Stokes backward uniqueness with weighted Calderón–Zygmund control.
-
-No retrieved theorem has yet supplied **all** of:
-
-1. terminal backward propagation;
-2. nonstationary Stokes pressure/divergence structure;
-3. arbitrary-size critical `rho^-1/rho^-2` coefficients;
-4. no artificial boundary equality.
-
-Therefore the target estimate remains YELLOW.
-
----
-
-## 10. DSD four-chain audit
+## 9. DSD audit
 
 ### Formation — GREEN
 
-The coefficient class is derived from the actual W1 physical scaling, not introduced as an ansatz.
+The Type-I coefficient class is derived from actual W1 scaling.
 
 ### Axis — GREEN
 
-Spatial inverse distance and terminal parabolic distance are combined only through the scale-covariant quantity `rho`.
+Spatial inverse-square order and terminal `1/tau` singularity are distinguished.
 
-### Static aggregation — GREEN
+### Static aggregation — CORRECTED
 
-Drift and strain are not treated as new independent budgets; they are lower-order terms to be absorbed into one Carleman coercivity.
+Critical differential order is no longer converted into automatic arbitrary-amplitude absorption.
 
 ### Dynamics — YELLOW
 
-The critical Stokes Hardy-Carleman estimate is not yet proved.
+Backward injectivity of the actual canonical-tail principal operator remains open.
 
 ### Cross-audit — GREEN
 
-No smallness, terminal analyticity, artificial boundary condition, or theorem-name substitution is used.
-
----
-
-## 11. Closure consequence
-
-If the critical Stokes-Carleman target is proved with admissible whole-space/boundary-free terminal weights, then the actual same-tail difference satisfies
-
-\[
-Z\equiv0.
-\]
-
-Hence both remaining flat branches disappear simultaneously:
-
-\[
-\boxed{P1_B^S=P1_B^P=\varnothing.}
-\]
-
-This would close the same-tail injectivity problem **inside W1 only**.
-
-The separate global branch-completeness gate would remain open.
+This correction is consistent with M5-190/M5-191 and prevents importing spatial Hardy or bounded-coefficient backward uniqueness into the terminal-critical class.
 
 ---
 
