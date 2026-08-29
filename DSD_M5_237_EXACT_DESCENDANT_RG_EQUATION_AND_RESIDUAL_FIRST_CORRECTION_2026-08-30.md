@@ -1,0 +1,447 @@
+# DSD M5-237 — Exact Descendant RG Equation and Residual as the First Irrelevant Correction
+
+Date: 2026-08-30
+
+Parent: `DSD_M5_236_FIXED_FORCE_LOW_MODE_FIREWALL_AND_STRESS_NEUTRAL_SECTOR_2026-08-30.md`
+
+Status: **MAJOR STRUCTURAL REINTERPRETATION / THE CANONICAL DESCENDANT FIELD SATISFIES AN EXACT SLOW NAVIER--STOKES RENORMALIZATION EQUATION WITH COEFFICIENT `e^{-h}` / THE CANONICAL TAIL RESIDUAL IS EXACTLY THE FIRST `e^{-h}=R^{-2}` CORRECTION TO DESCENDANT CONVERGENCE / A RESIDUAL-ACTIVE TAIL IS THEREFORE NOT AN EXTERNALLY FORCED ENDPOINT BUT A NONSTATIONARY RENORMALIZATION FIXED-BOUNDARY DATA SET / RECONSTRUCTING THE FINITE-SCALE STATE FROM THE TAIL IS A BACKWARD-PARABOLIC RG PROBLEM / GLOBAL REGULARITY UNPROVED.**
+
+---
+
+## 1. Descendant field
+
+For one W1 state `V`, let `S(h)V` denote the autonomous Leray flow and define
+
+\[
+\boxed{
+\mathcal D_h[V](Y)
+:=
+e^{h/2}(S(h)V)(e^{h/2}Y).
+}
+\]
+
+Put
+
+\[
+R=e^{h/2}.
+\]
+
+Then
+
+\[
+\mathcal D_h(Y)=R\,V_h(RY),
+\qquad V_h:=S(h)V.
+\]
+
+By construction,
+
+\[
+\boxed{
+\mathcal D_h[V]\to T_V
+\quad(h\to\infty)
+}
+\]
+
+locally on the punctured space in the retained tail topology.
+
+---
+
+## 2. Leray equation
+
+The backward Leray equation is
+
+\[
+\boxed{
+\partial_hV_h
+-\nu\Delta V_h
++\frac12V_h
++\frac12(X\cdot\nabla)V_h
++(V_h\cdot\nabla)V_h
++\nabla P_h
+=0.
+}
+\]
+
+Equivalently, after Leray projection,
+
+\[
+\partial_hV_h
++
+\frac12V_h
++
+\frac12X\cdot\nabla V_h
+=
+\nu\Delta V_h
+-
+\mathbb P\nabla\cdot(V_h\otimes V_h).
+\]
+
+---
+
+## 3. Differentiate the descendant exactly
+
+Differentiate
+
+\[
+\mathcal D_h(Y)=R V_h(RY),
+\qquad R'=R/2.
+\]
+
+Then
+
+\[
+\partial_h\mathcal D_h
+=
+\frac12RV_h
++
+R\partial_hV_h
++
+\frac12R(RY\cdot\nabla)V_h.
+\]
+
+Insert the Leray equation.  The two similarity-drift terms cancel exactly, leaving
+
+\[
+\partial_h\mathcal D_h
+=
+R
+\left[
+\nu\Delta_XV_h
+-
+\mathbb P\nabla_X\cdot(V_h\otimes V_h)
+\right]_{X=RY}.
+\]
+
+Under the scaling
+
+\[
+\mathcal D_h(Y)=R V_h(RY),
+\]
+
+both stationary Navier--Stokes terms scale with `R^{-2}` after the outer factor `R` is included.
+
+Since
+
+\[
+R^{-2}=e^{-h},
+\]
+
+we obtain the exact equation
+
+\[
+\boxed{
+\partial_h\mathcal D_h
+=
+e^{-h}\,\mathcal F(\mathcal D_h),
+}
+\]
+
+where
+
+\[
+\boxed{
+\mathcal F(U)
+:=
+\nu\Delta U
+-
+\mathbb P\nabla\cdot(U\otimes U).
+}
+\]
+
+This is exact, not asymptotic.
+
+---
+
+## 4. Tail residual is the limiting RG vector field
+
+The stationary residual of the canonical tail is precisely
+
+\[
+\boxed{
+F_T=\mathcal F(T_V).
+}
+\]
+
+Assume the local derivative compactness already retained in the W1 tail corridor, so that
+
+\[
+\mathcal F(\mathcal D_h)	o\mathcal F(T_V)
+\]
+
+locally in `H^{-1}` (and more strongly on the smooth punctured corridor).
+
+Multiplying the exact descendant equation by `e^h` gives
+
+\[
+\boxed{
+e^h\partial_h\mathcal D_h
+=\mathcal F(\mathcal D_h)
+\to F_T.
+}
+\]
+
+Thus the residual is the exact renormalized descendant velocity at scale infinity.
+
+---
+
+## 5. First correction to the tail
+
+Because
+
+\[
+T_V-\mathcal D_h
+=
+\int_h^\infty
+\partial_\sigma\mathcal D_\sigma
+\,d\sigma,
+\]
+
+we have
+
+\[
+T_V-\mathcal D_h
+=
+\int_h^\infty
+ e^{-\sigma}\mathcal F(\mathcal D_\sigma)d\sigma.
+\]
+
+Multiply by `e^h` and put `a=sigma-h`:
+
+\[
+\boxed{
+ e^h(T_V-\mathcal D_h)
+=
+\int_0^\infty
+ e^{-a}\mathcal F(\mathcal D_{h+a})da.
+}
+\]
+
+Dominated local compactness and convergence therefore give
+
+\[
+\boxed{
+ e^h(T_V-\mathcal D_h)
+\to
+F_T.
+}
+\]
+
+Equivalently,
+
+\[
+\boxed{
+\mathcal D_h
+=
+T_V
+-e^{-h}F_T
++o(e^{-h}).
+}
+\]
+
+Since `e^{-h}=R^{-2}`, the residual is exactly the first `R^{-2}` descendant correction.
+
+---
+
+## 6. Second formal coefficient
+
+Let
+
+\[
+\rho=e^{-h}.
+\]
+
+Then
+
+\[
+\partial_h=-\rho\partial_\rho.
+\]
+
+The exact RG equation becomes
+
+\[
+\boxed{
+\partial_\rho\mathcal D
+=-\mathcal F(\mathcal D).
+}
+\]
+
+Formally expand at the tail boundary `rho=0`:
+
+\[
+\mathcal D(\rho)
+=
+T
+-\rho A
++\rho^2B
++O(\rho^3).
+\]
+
+The equation gives
+
+\[
+A=\mathcal F(T)=F_T,
+\]
+
+and
+
+\[
+\boxed{
+B
+=\frac12D\mathcal F_T[F_T].
+}
+\]
+
+Thus, whenever the required regularity exists,
+
+\[
+\boxed{
+\mathcal D_h
+=
+T
+-e^{-h}F_T
++\frac12e^{-2h}D\mathcal F_T[F_T]
++O(e^{-3h}).
+}
+\]
+
+This is the dynamical origin of the triangular descendant/Fuchsian hierarchy previously found algebraically.
+
+---
+
+## 7. Residual-active branch is not an external-work branch
+
+M5-220 described `F_T` as the forcing appearing in the finite-energy quotient equation.  That remains algebraically correct.
+
+But M5-237 shows a more precise interpretation:
+
+\[
+\boxed{
+F_T
+=
+\text{first irrelevant RG correction required to connect the tail boundary to a finite descendant state}.
+}
+\]
+
+Therefore
+
+\[
+\text{positive residual norm}
+\not\Rightarrow
+\text{non-summable external energy input}.
+\]
+
+The residual is internally generated by the stationary NS operator evaluated on the passive tail.
+
+Its physical contribution is suppressed by the exact scale factor `R^{-2}` along descendant reconstruction.
+
+This explains why repeated critical residual cells can remain compatible with finite physical energy.
+
+---
+
+## 8. Stationary tail as the true RG fixed point
+
+If
+
+\[
+F_T=0,
+\]
+
+then
+
+\[
+\mathcal F(T)=0,
+\]
+
+and the first descendant correction vanishes.
+
+Thus the M5-220 stationary branch is literally the fixed-point set of the RG vector field `F` at the tail boundary.
+
+A nonstationary tail has
+
+\[
+F_T\ne0
+\]
+
+and leaves the boundary with first speed `-F_T` in the `rho` variable.
+
+---
+
+## 9. The remaining problem is backward parabolic
+
+The `rho` equation is
+
+\[
+\boxed{
+\partial_\rho\mathcal D
+=-\nu\Delta\mathcal D
++\mathbb P\nabla\cdot(\mathcal D\otimes\mathcal D).
+}
+\]
+
+The linear principal part is
+
+\[
+-\nu\Delta,
+\]
+
+so reconstruction **away from the tail boundary `rho=0`** is a backward-heat/backward-parabolic evolution.
+
+This is the correct analytical meaning of tail-to-core reconstruction.
+
+M5-217 proved uniqueness inside a same-tail fiber by Carleman methods; it did not prove that arbitrary critical tail data generate such a backward trajectory.
+
+Hence the canonical tail space realized by W1 is a highly restricted subset of all formal `1/r` critical profiles:
+
+\[
+\boxed{
+\text{realized tail}
+\Longrightarrow
+\text{admits a smooth backward-RG reconstruction satisfying all W1 bounds}.
+}
+\]
+
+---
+
+## 10. New endgame interpretation
+
+After M5-217 and M5-237, the tail factor is both:
+
+1. a complete topological code of the W1 state;
+2. boundary data at `rho=0` for a backward-parabolic RG equation.
+
+Thus the remaining aperiodic problem is more sharply stated as:
+
+\[
+\boxed{
+\text{Can a compact aperiodic minimal log-translation critical tail}
+\text{ belong to the global smooth range of this backward RG reconstruction?}
+}
+\]
+
+This is stronger than asking whether an abstract aperiodic `1/r` field exists.
+
+---
+
+## 11. DSD verdict
+
+### PROVED
+
+- exact descendant RG equation;
+- exact `e^{-h}=R^{-2}` residual suppression;
+- `F_T` is the first descendant correction;
+- stationary tail equals RG fixed point;
+- tail-to-core reconstruction is backward parabolic in `rho`.
+
+### CORRECTED
+
+Residual-active tail forcing should not be charged automatically as repeated external work.
+
+### NEW FRONTIER
+
+The high-leverage remaining question is a **range/realizability theorem for the backward RG map** on the compact critical tail hull.
+
+If a nonstationary aperiodic tail cannot lie in this range, the residual-active branch closes.  The stationary branch remains the large fixed-force nondegeneracy problem isolated in M5-236.
+
+\[
+\boxed{\text{GLOBAL REGULARITY REMAINS UNPROVED.}}
+\]
