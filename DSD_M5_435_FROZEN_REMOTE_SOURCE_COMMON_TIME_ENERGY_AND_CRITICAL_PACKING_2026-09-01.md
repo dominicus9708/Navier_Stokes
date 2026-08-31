@@ -2,7 +2,7 @@
 
 Date: 2026-09-01
 
-Status: **M5-434 CONVERTS EVERY SUFFICIENTLY REMOTE QUIET FIXED-FRACTION STRAIN SOURCE INTO A FROZEN PHYSICAL OLD-SHELL PACKET / A GEOMETRICALLY SEPARATED SUBSEQUENCE OF SUCH PACKETS CAN BE OBSERVED SIMULTANEOUSLY AT ONE LATE PHYSICAL TIME, SO ORDINARY KINETIC ENERGY BECOMES ADDITIVE WITHOUT SUMMING DIFFERENT TIME SLICES / THE RESULT FORCES `SUM (R_n/r_n^(4/5))^5 < INFINITY` ON THE NON-ATOMIC FROZEN REMOTE LANE / THE SAME NATURAL-BAND PACKETS FORCE A CUMULATIVE `dot H^(1/2)` LOWER LEDGER, BUT BOTH CONSTRAINTS REMAIN COMPATIBLE WITH SUFFICIENTLY FAST FIFTH-ROOT SUB-SATURATION / GLOBAL REGULARITY REMAINS UNPROVED.**
+Status: **M5-434 CONVERTS EVERY SUFFICIENTLY REMOTE QUIET FIXED-FRACTION STRAIN SOURCE INTO A FROZEN PHYSICAL OLD-SHELL PACKET / A GEOMETRICALLY SEPARATED SUBSEQUENCE OF SUCH PACKETS CAN BE OBSERVED SIMULTANEOUSLY AT ONE LATE PHYSICAL TIME, SO ORDINARY KINETIC ENERGY BECOMES ADDITIVE WITHOUT SUMMING DIFFERENT TIME SLICES / THE RIGOROUS RESULT FORCES `SUM (R_n/r_n^(4/5))^5 < INFINITY` ON THE NON-ATOMIC FROZEN REMOTE LANE / EACH LOCALIZED PACKET INDIVIDUALLY HAS CRITICAL SIZE `~nu^2 K_n^4`, BUT A CUMULATIVE GLOBAL `dot H^(1/2)` LOWER BOUND REQUIRES A SEPARATE UNIFORM ALMOST-ORTHOGONALITY THEOREM FOR THE SCALE-DEPENDENT BOGOVSKII LOCALIZATION OPERATORS AND IS THEREFORE RETAINED ONLY AS A CANDIDATE / GLOBAL REGULARITY REMAINS UNPROVED.**
 
 ---
 
@@ -82,14 +82,14 @@ Fix `N` and choose a time immediately after the formation of the `N`th selected 
 
 By the frozen-lane assumption, packets `1,...,N` are all still present at that same physical time.
 
-The compact solenoidal packet satisfies a fixed localization estimate of the form
+The compact solenoidal localization satisfies a fixed estimate
 
 \[
 \|f_n(t)\|_2
 \le C_B\|u(t)\|_{L^2(\widetilde A_n)},
 \]
 
-where the enlarged annuli `widetilde A_n` remain disjoint after the geometric separation selection.
+where the enlarged annuli `\widetilde A_n` remain disjoint after the geometric separation selection.
 
 Therefore
 
@@ -165,9 +165,9 @@ Thus a quiet non-atomic frozen remote conveyor must be not merely sub-fifth-root
 
 ---
 
-## 5. Critical norm of one frozen remote source
+## 5. Critical size of one localized frozen source
 
-Because `P_{R_n}f_n` lies at frequency comparable to `R_n^-1`, its homogeneous critical velocity norm satisfies
+Because `P_{R_n}f_n` lies at frequency comparable to `R_n^-1`, its own homogeneous critical norm satisfies
 
 \[
 \|P_{R_n}f_n\|_{\dot H^{1/2}}^2
@@ -194,76 +194,63 @@ where
 K_n:=\frac{R_n}{r_n}\to\infty.
 \]
 
-Thus every genuinely remote frozen source is itself a large critical object even though its physical kinetic energy may tend to zero.
+Thus every genuinely remote frozen source is individually a large critical localized object even though its physical kinetic energy may tend to zero.
 
-This makes explicit the distinction:
+This makes explicit the distinction
 
 \[
 \boxed{
 \text{small physical energy}
 \not\Rightarrow
-\text{small scale-critical content}.
+\text{small localized scale-critical content}.
 }
 \]
 
 ---
 
-## 6. Cumulative critical packing at common times
+## 6. Audit correction: cumulative global H1/2 packing is not yet automatic
 
-Choose the geometric subsequence so that the natural frequency bands around `R_n^-1` are also disjoint. At a common late time after the first `N` source formations, Fourier orthogonality gives schematically
+It is tempting to use the separated frequency bands to write
+
+\[
+\|u(t)\|_{\dot H^{1/2}}^2
+\stackrel{?}{\gtrsim}
+\sum_n
+\|P_{R_n}f_n(t)\|_{\dot H^{1/2}}^2.
+\]
+
+This is **not yet proved**.
+
+The reason is that
+
+\[
+f_n=\chi_{R_n}u-b_{R_n}[u]
+\]
+
+is the output of a scale-dependent spatial cutoff plus Bogovskii correction. The packets `P_{R_n}f_n` are not literal orthogonal Fourier projections of the original global field `u`.
+
+A cumulative global critical lower bound requires a separate vector-valued estimate of the schematic form
 
 \[
 \boxed{
-X(t)
-:=\|u(t)\|_{\dot H^{1/2}}^2
-\ge
-c_X\nu^2
-\sum_{n=1}^N K_n^4
+\sum_n
+\|P_{R_n}\mathcal L_{R_n}u\|_{\dot H^{1/2}}^2
+\le C
+\|u\|_{\dot H^{1/2}}^2,
 }
 \]
 
-up to the fixed localization/Bogovskii comparison constants.
+for the localized solenoidal operators `\mathcal L_R`, uniformly over geometrically separated phase-space cells.
 
-The global Leray-level interpolation ledger from M5-430 gives
+Such an almost-orthogonality theorem is plausible but is not imported silently.
 
-\[
-\int_0^{T_*}X(t)^2dt<\infty.
-\]
-
-Use the first-hitting lower stage-duration bound on the stage after the `N`th selected source is formed:
-
-\[
-\Delta t_{j_N}\gtrsim\frac{r_N^2}{\nu}.
-\]
-
-On the fully frozen lane all earlier selected packets remain present throughout this short later interval. Hence
-
-\[
-\boxed{
-\sum_N
-r_N^2
-\left(
-\sum_{n\le N}K_n^4
-\right)^2
-<\infty
-}
-\]
-
-for a stage-disjoint selected subsequence, up to fixed viscosity and stage-spacing constants.
-
-This is stronger than the individual M5-430 condition
-
-\[
-\sum_n r_n^2K_n^8<\infty
-\]
-
-because it records cumulative coexistence of the frozen stack.
+Therefore the previously suggested cumulative `dot H^(1/2)` stack is demoted to a **candidate next lemma**, not a derived result.
 
 ---
 
-## 7. Why the new ledgers still do not contradict a singular tower
+## 7. Why the rigorous l5 ledger still does not contradict a singular tower
 
-Both packing conditions are strong but scale-compatible.
+The ordinary-energy packing is strong but scale-compatible.
 
 For example, if along a geometric first-hitting subsequence
 
@@ -281,25 +268,7 @@ a_n^5
 r_n^{5\alpha-4},
 \]
 
-which is geometrically summable because `5 alpha-4>0`.
-
-Also
-
-\[
-K_n^4
-\asymp
-r_n^{-4(1-\alpha)},
-\]
-
-and
-
-\[
-r_n^2K_n^8
-\asymp
-r_n^{8\alpha-6},
-\]
-
-which is summable throughout the fifth-root sub-saturated range `alpha>4/5`.
+which is geometrically summable because `5\alpha-4>0`.
 
 Thus the frozen sub-fifth-root conveyor remains a mathematically compatible critical escape at the present resolution.
 
@@ -321,7 +290,7 @@ The M5-433--435 chain now derives such a frozen stack directly from the need to 
 \to
 \text{frozen packet or strong throughput}
 \to
-\text{common-time energy/critical stack}.
+\text{common-time ordinary-energy stack}.
 }
 \]
 
@@ -336,14 +305,18 @@ This is a genuine connection between the formerly separate remote-source and his
 - geometrically separated quiet frozen remote packets coexist at one late physical time;
 - ordinary energy yields additive common-time packing;
 - fifth-root saturation factors satisfy an `ell^5` condition;
-- natural-band frozen sources force cumulative critical `dot H^(1/2)` growth;
-- the global `L4_t dot H^(1/2)` ledger gives a cumulative coexistence restriction.
+- each localized natural-band source individually has critical size `>=c nu^2 K_n^4`.
+
+### Conditional / next lemma
+
+- cumulative global `dot H^(1/2)` packing of the Bogovskii-localized packets;
+- any `L4_t dot H^(1/2)` consequence that depends on that cumulative lower bound.
 
 ### Firewall
 
 - `ell^5` sub-saturation is not a contradiction;
 - the critical norm is allowed to diverge near a hypothetical singularity;
-- the selected subsequence must be physically/frequency separated before additive estimates are used;
+- selected shells must be physically separated before ordinary-energy additivity is used;
 - no fixed-volume material ancestry is assumed.
 
 ---
@@ -366,9 +339,9 @@ F_{sub5}^{frozen}:
 }
 \]
 
-with a persistent natural-frequency physical shell stack and the cumulative critical-mass constraint of Section 6.
+with a persistent natural-frequency physical shell stack.
 
-This is the exact surviving quiet conveyor to be retained in the final master audit.
+This is the exact rigorously retained quiet conveyor for the final master audit.
 
 ---
 
