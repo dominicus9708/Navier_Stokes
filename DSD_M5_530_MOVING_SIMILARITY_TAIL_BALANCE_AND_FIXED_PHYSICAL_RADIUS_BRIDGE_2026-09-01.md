@@ -1,0 +1,469 @@
+# DSD M5-530 — Moving similarity-tail balance is exactly the fixed-physical-radius enstrophy bridge
+
+Date: 2026-09-01
+
+Status: **SPACE-TIME TAIL TRANSPORT IDENTITY / FOR THE SIMILARITY VORTICITY ENSTROPHY DENSITY `h=|W|^2`, THE CRITICAL EXTERIOR TAIL `T(R,theta)=R int_{|y|>R} h` SATISFIES AN EXACT FIRST-ORDER TRANSPORT LAW IN `(theta,log R)` / ALONG THE CHARACTERISTIC `R'=R/2`, THE SIMILARITY DAMPING AND RADIAL DILATION TERMS CANCEL EXACTLY / THE RESULTING CHARACTERISTIC IS NOT A NEW ABSTRACT SCALE FLOW: UNDER THE INVERSE SIMILARITY MAP IT TRACKS ONE FIXED PHYSICAL RADIUS IN THE ANCIENT CELL / HENCE M5-530 PROVIDES THE PRECISE SPACE-TIME BRIDGE NEEDED AFTER M5-528, BUT THE SOURCE AND BOUNDARY FLUX ARE SIGN-INDEFINITE, SO NO MONOTONICITY OR TERMINAL-TAIL CONTRADICTION IS YET OBTAINED / GLOBAL REGULARITY REMAINS UNPROVED.**
+
+---
+
+## 1. Similarity local enstrophy balance
+
+On the M5-508 globally smooth compact branch, the similarity vorticity satisfies
+
+\[
+\partial_\theta W
++W
++\frac12(y\cdot\nabla)W
++(U\cdot\nabla)W
+=(W\cdot\nabla)U
++\Delta W,
+\]
+
+with
+
+\[
+\nabla\cdot U=\nabla\cdot W=0.
+\]
+
+Set
+
+\[
+h:=|W|^2,
+\qquad
+p:=|\nabla W|^2,
+\qquad
+q:=W\cdot\Sigma W,
+\]
+
+where
+
+\[
+\Sigma=\frac12(\nabla U+\nabla U^T).
+\]
+
+Then the exact local enstrophy equation is
+
+\[
+\boxed{
+\partial_\theta h
++\frac12 h
++\nabla\cdot\left[\left(U+\frac y2\right)h-\nabla h\right]
+=2q-2p.
+}
+\]
+
+Write
+
+\[
+B:=U+\frac y2.
+\]
+
+---
+
+## 2. Exterior tail at a fixed similarity radius
+
+For `R>0`, define
+
+\[
+E_>(R,\theta)
+:=
+\int_{|y|>R}h(y,\theta)\,dy
+\]
+
+and the scale-critical exterior tail
+
+\[
+\boxed{
+\mathfrak T(R,\theta)
+:=
+R E_>(R,\theta).
+}
+\]
+
+Let `S_R={|y|=R}` and use `U_r=U\cdot e_r`.
+
+Integrating the local balance on the exterior region gives, at fixed `R`,
+
+\[
+\begin{aligned}
+\partial_\theta E_>
+={}&
+-\frac12E_>
++2\int_{|y|>R}(q-p)dy\\
+&+
+\int_{S_R}
+\left[
+\left(U_r+\frac R2\right)h
+-\partial_r h
+\right]dS.
+\end{aligned}
+\]
+
+The sign follows from the fact that the outward unit normal of the exterior domain at its inner boundary is `-e_r`.
+
+---
+
+## 3. Log-radius transport form
+
+Set
+
+\[
+\rho:=\log R.
+\]
+
+Because
+
+\[
+\partial_\rho\mathfrak T
+=
+\mathfrak T
+-R^2\int_{S_R}h\,dS,
+\]
+
+the fixed-radius identity can be rewritten as
+
+\[
+\boxed{
+\left(
+\partial_\theta
++\frac12\partial_\rho
+\right)
+\mathfrak T
+=
+\mathcal S(R,\theta),
+}
+\]
+
+where
+
+\[
+\boxed{
+\mathcal S(R,\theta)
+:=
+2R\int_{|y|>R}(q-p)dy
++
+R\int_{S_R}
+\left(U_rh-\partial_r h\right)dS.
+}
+\]
+
+Thus the critical exterior enstrophy obeys a genuine transport equation in similarity time and logarithmic radius.
+
+---
+
+## 4. Characteristic radius
+
+The characteristic curves satisfy
+
+\[
+\boxed{
+\frac{dR}{d\theta}=\frac12R.
+}
+\]
+
+Hence
+
+\[
+R(\theta)
+=R_0e^{(\theta-\theta_0)/2}.
+\]
+
+Along such a characteristic,
+
+\[
+\boxed{
+\frac d{d\theta}
+\mathfrak T(R(\theta),\theta)
+=
+2R\int_{|y|>R}(q-p)dy
++
+R\int_{S_R}
+\left(U_rh-\partial_rh\right)dS.
+}
+\]
+
+The explicit similarity damping `+h/2` and the radial `y/2` transport have cancelled exactly.
+
+---
+
+## 5. Exact physical interpretation of the characteristic
+
+Return to the M5-478 ancient cell variables.
+
+Let
+
+\[
+a=-s=e^{-\theta},
+\qquad
+x=\sqrt a\,y,
+\]
+
+and
+
+\[
+W(y,\theta)
+=a\,\Omega(\sqrt a\,y,-a).
+\]
+
+Choose the characteristic in the form
+
+\[
+\boxed{
+R(\theta)=\frac{r_0}{\sqrt a}=r_0e^{\theta/2}.
+}
+\]
+
+Then
+
+\[
+|y|>R(\theta)
+\quad\Longleftrightarrow\quad
+|x|>r_0.
+\]
+
+The similarity enstrophy transforms as
+
+\[
+\begin{aligned}
+E_>(R(\theta),\theta)
+&=
+\int_{|y|>R}a^2|\Omega(\sqrt a y,-a)|^2dy\\
+&=
+a^{1/2}
+\int_{|x|>r_0}|\Omega(x,s)|^2dx.
+\end{aligned}
+\]
+
+Multiplying by
+
+\[
+R(\theta)=r_0a^{-1/2}
+\]
+
+gives the exact identity
+
+\[
+\boxed{
+\mathfrak T(R(\theta),\theta)
+=
+r_0
+\int_{|x|>r_0}|\Omega(x,s)|^2dx.
+}
+\]
+
+Therefore the M5-530 characteristic is precisely one **fixed physical radius** in the ancient solution.
+
+---
+
+## 6. This is the correct bridge after the M5-528 audit
+
+M5-528 proved that the dilation-hull shift cannot be reinterpreted as a spatial shell shift at interior similarity time.
+
+M5-530 resolves the correct relation:
+
+\[
+\boxed{
+\text{similarity characteristic }R'=R/2
+\Longleftrightarrow
+\text{fixed physical radius }r_0.
+}
+\]
+
+Thus any transfer from backward interior packing to a terminal spatial tail must be mediated through the actual PDE flux/source on these characteristics, not through a formal Birkhoff shell shift.
+
+---
+
+## 7. Backward boundary condition on a fixed physical radius
+
+M5-475--478 give
+
+\[
+\|\Omega(s)\|_2^2
+\le C(-s)^{-1/2}.
+\]
+
+Hence for every fixed physical radius `r_0`,
+
+\[
+0
+\le
+r_0\int_{|x|>r_0}|\Omega(x,s)|^2dx
+\le
+Cr_0(-s)^{-1/2}
+\to0
+\]
+
+as
+
+\[
+s\to-\infty.
+\]
+
+Equivalently, along every fixed-radius characteristic,
+
+\[
+\boxed{
+\mathfrak T(R(\theta),\theta)
+\to0
+\qquad
+(\theta\to-\infty).
+}
+\]
+
+Thus any nonzero terminal exterior enstrophy at that physical radius must be generated by the integrated source/boundary-flux budget along the characteristic.
+
+---
+
+## 8. Integrated bridge identity
+
+For finite `theta_1<theta_2`,
+
+\[
+\boxed{
+\begin{aligned}
+&\mathfrak T(R(\theta_2),\theta_2)
+-
+\mathfrak T(R(\theta_1),\theta_1)\\
+&=
+\int_{\theta_1}^{\theta_2}
+\Bigg[
+2R(\theta)
+\int_{|y|>R(\theta)}(q-p)dy\\
+&\hspace{3.0cm}+
+R(\theta)
+\int_{S_{R(\theta)}}
+(U_rh-\partial_rh)dS
+\Bigg]d\theta.
+\end{aligned}
+}
+\]
+
+Taking `theta_1 -> -infinity` is legitimate at the lower endpoint by Section 7.
+
+Taking `theta_2 -> +infinity` requires the same terminal suitable-trace/pressure regularity firewall already identified in M5-478--481.
+
+No terminal trace is silently assumed here.
+
+---
+
+## 9. Source/flux decomposition
+
+The right side contains three distinct channels.
+
+### 9.1 Exterior stretching production
+
+\[
+2R\int_{|y|>R}q\,dy.
+\]
+
+This is sign indefinite.
+
+### 9.2 Exterior palinstrophy dissipation
+
+\[
+-2R\int_{|y|>R}p\,dy.
+\]
+
+This has the favorable sign.
+
+### 9.3 Radial boundary transport
+
+\[
+R\int_{S_R}
+(U_rh-\partial_rh)dS.
+\]
+
+The first term is advective enstrophy transport and the second is diffusive transport.
+
+Neither has a fixed sign at one radius.
+
+Therefore
+
+\[
+\boxed{
+\text{moving-tail identity}
+\not\Rightarrow
+\text{monotone tail quantity}.
+}
+\]
+
+---
+
+## 10. Relation to M5-529 first radial moment
+
+The M5-529 moment can be represented by the exterior-tail family through the layer-cake identity
+
+\[
+\boxed{
+\mathcal M_1(\theta)
+:=
+\int |y||W|^2dy
+=
+\int_0^\infty E_>(R,\theta)dR
+=
+\int_{-\infty}^{\infty}
+\mathfrak T(e^\rho,\theta)d\rho.
+}
+\]
+
+Thus first-moment divergence means that the critical exterior-tail function carries an infinite amount of mass in **log-radius measure**.
+
+It does not imply that one single characteristic `R'=R/2` carries a large tail.
+
+This is another firewall against collapsing diffuse packing to one fixed-radius packet.
+
+---
+
+## 11. New exact frontier
+
+M5-527--530 now give
+
+\[
+\boxed{
+\text{nontrivial ancient compact survivor}
+\Longrightarrow
+\text{unbounded/infinite log-radius critical tail packing},
+}
+\]
+
+while each fixed physical-radius characteristic begins with zero critical exterior enstrophy at backward infinity.
+
+Therefore the surviving mechanism must be a genuine **radially distributed source/flux cascade** rather than one stationary remote packet.
+
+The next audit should combine this with invariant recurrence.
+
+---
+
+## 12. Highest-value next target
+
+Define the extended first moment on the invariant similarity suspension,
+
+\[
+\mathcal M_1(Y)
+=
+\int |y||W_Y|^2dy
+\in[0,\infty].
+\]
+
+M5-527 plus M5-526 imply that any backward sequence on which `M_1` stays bounded would produce a bounded `L3` ancient subsequence and hence triviality by the Albritton--Barker ancient Liouville theorem.
+
+Because the compact hard component also carries an invariant probability measure, Poincare recurrence should force the following alternative:
+
+\[
+\boxed{
+\mathcal M_1=\infty
+\quad\text{for invariant-almost every hard-core state}.
+}
+\]
+
+if the measure is supported on the nontrivial recurrent component.
+
+This is the next calculation.
+
+---
+
+## 13. Status
+
+\[
+\boxed{\text{GLOBAL REGULARITY REMAINS UNPROVED.}}
+\]
