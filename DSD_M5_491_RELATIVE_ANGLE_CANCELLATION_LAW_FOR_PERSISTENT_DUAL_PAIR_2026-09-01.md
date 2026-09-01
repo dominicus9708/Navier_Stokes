@@ -1,0 +1,491 @@
+# DSD M5-491 — Persistent dual pair obeys an exact relative-angle strain/diffusion cancellation law
+
+Date: 2026-09-01
+
+Status: **PAIR-DYNAMICS AUDIT / THE TWO PERSISTENT DUAL-FLUX PACKETS NEED NOT OCCUPY THE SAME POINT, SO A SINGLE COMMON `2x2` STRAIN MATRIX `xi_a · Sigma xi_b` IS NOT GENERALLY A LEGITIMATE DESCRIPTION / TRACKING EACH MATERIAL LINEAGE WITH ITS OWN LOCAL STRAIN AND PROJECTED DIFFUSION GIVES THE EXACT RELATIVE-GRAM LAW `c' = tau_a·xi_b + xi_a·tau_b + D_a·xi_b + xi_a·D_b` / ON A RECURRENT INVARIANT PAIR COMPONENT THE MEAN SIGNED STRAIN-DRIVEN RELATIVE ROTATION MUST CANCEL THE MEAN SIGNED DIFFUSION-DRIVEN RELATIVE ROTATION / THIS IS A NEW RIGID BALANCE BUT NOT A CONTRADICTION BECAUSE BOTH CHANNELS CAN OSCILLATE OR THE PAIR CAN ROTATE COHERENTLY WITH FIXED GRAM ANGLE / GLOBAL REGULARITY REMAINS UNPROVED.**
+
+---
+
+## 1. Scope correction to M5-490 target D1
+
+M5-490 proposed studying a pair interaction matrix schematically written as
+
+\[
+M_{ab}=\xi_a\cdot\Sigma\xi_b.
+\]
+
+This notation is only legitimate if both directions are sampled against the same local strain tensor.
+
+The persistent dual-source packets are generally distinct material populations at different spatial locations.
+
+Therefore their actual local strains are
+
+\[
+\Sigma_a
+:=\Sigma(Y_a(\theta),\theta),
+\qquad
+\Sigma_b
+:=\Sigma(Y_b(\theta),\theta),
+\]
+
+and they must not be silently identified.
+
+The correct pair dynamics is obtained by differentiating the two direction fields along their own material trajectories.
+
+---
+
+## 2. Similarity material trajectories
+
+M5-489 gives the similarity material velocity
+
+\[
+B(y,\theta)=U(y,\theta)+\frac12y.
+\]
+
+Let the two persistent lineages have material centers/representative active trajectories
+
+\[
+Y_a'(\theta)=B(Y_a(\theta),\theta),
+\]
+
+\[
+Y_b'(\theta)=B(Y_b(\theta),\theta).
+\]
+
+Define
+
+\[
+\xi_a(\theta)
+:=\xi(Y_a(\theta),\theta),
+\qquad
+\xi_b(\theta)
+:=\xi(Y_b(\theta),\theta).
+\]
+
+On the active carrier each is well defined.
+
+---
+
+## 3. Individual direction equations
+
+M5-487 gives
+
+\[
+\frac{d\xi_a}{d\theta}
+=\tau_a+\mathcal D_a,
+\]
+
+\[
+\frac{d\xi_b}{d\theta}
+=\tau_b+\mathcal D_b,
+\]
+
+where
+
+\[
+\tau_a
+=(I-\xi_a\otimes\xi_a)\Sigma_a\xi_a,
+\]
+
+\[
+\tau_b
+=(I-\xi_b\otimes\xi_b)\Sigma_b\xi_b,
+\]
+
+and
+
+\[
+\mathcal D_a
+=\rho_a^{-1}
+(I-\xi_a\otimes\xi_a)
+\Delta W(Y_a,\theta),
+\]
+
+with the analogous formula for `mathcal D_b`.
+
+All four vectors are tangent to the corresponding unit sphere:
+
+\[
+\tau_a\cdot\xi_a
+=
+\mathcal D_a\cdot\xi_a
+=0,
+\]
+
+and similarly for `b`.
+
+---
+
+## 4. Exact relative-Gram law
+
+Define
+
+\[
+\boxed{
+c(\theta):=\xi_a(\theta)\cdot\xi_b(\theta).}
+\]
+
+Then
+
+\[
+\begin{aligned}
+c'
+&=
+\xi_a'\cdot\xi_b
++
+\xi_a\cdot\xi_b'\\
+&=
+(\tau_a+\mathcal D_a)\cdot\xi_b
++
+\xi_a\cdot(\tau_b+\mathcal D_b).
+\end{aligned}
+\]
+
+Therefore
+
+\[
+\boxed{
+\frac{dc}{d\theta}
+=
+\underbrace{\tau_a\cdot\xi_b
++
+\xi_a\cdot\tau_b}_{R_{strain}}
++
+\underbrace{\mathcal D_a\cdot\xi_b
++
+\xi_a\cdot\mathcal D_b}_{R_{diff}}.
+}
+\]
+
+This is the exact two-lineage relative-angle action identity.
+
+---
+
+## 5. Tangential projection form
+
+Because `tau_a` and `mathcal D_a` are perpendicular to `xi_a`,
+
+\[
+\tau_a\cdot\xi_b
+=
+\tau_a\cdot
+(I-\xi_a\otimes\xi_a)\xi_b,
+\]
+
+and similarly for the other terms.
+
+Let
+
+\[
+s(\theta)
+:=
+\sqrt{1-c(\theta)^2}
+=
+|\xi_a\times\xi_b|.
+\]
+
+Then
+
+\[
+|(I-\xi_a\otimes\xi_a)\xi_b|
+=s,
+\]
+
+and likewise with `a,b` exchanged.
+
+Hence
+
+\[
+\boxed{
+|c'|
+\le
+s
+\left(
+|\tau_a|+|\mathcal D_a|
++|\tau_b|+|\mathcal D_b|
+\right).
+}
+\]
+
+If
+
+\[
+c=\cos\gamma,
+\qquad
+0<\gamma<\pi,
+\]
+
+then
+
+\[
+c'=-\sin\gamma\,\gamma'.
+\]
+
+Therefore wherever the pair is noncollinear,
+
+\[
+\boxed{
+|\gamma'|
+\le
+|\tau_a|+|\mathcal D_a|
++|\tau_b|+|\mathcal D_b|.
+}
+\]
+
+Thus relative-angle variation is genuinely paid by the same local tilt/directional-diffusion channels as the one-lineage ratchet.
+
+---
+
+## 6. Positive-angle event does not imply angle variation
+
+M5-490 gives recurrent events with
+
+\[
+\sin\gamma\ge s_0>0.
+\]
+
+This says the pair is repeatedly noncollinear.
+
+It does **not** imply
+
+\[
+|\gamma'|>0.
+\]
+
+A pair may maintain a fixed nonzero relative angle while both directions rotate together, or may remain stationary in direction while the rest of the flow evolves.
+
+Therefore the pair Gram mark and the pair angular-action mark must remain distinct.
+
+---
+
+## 7. Recurrent invariant average
+
+On the compact persistent pair hull, `c` is bounded in `[-1,1]`.
+
+For a complete recurrent orbit or invariant suspension measure,
+
+\[
+\boxed{
+\left\langle\frac{dc}{d\theta}\right\rangle=0.
+}
+\]
+
+Using the exact Gram law,
+
+\[
+\boxed{
+\langle R_{strain}\rangle
++
+\langle R_{diff}\rangle
+=0.
+}
+\]
+
+Equivalently,
+
+\[
+\boxed{
+\langle R_{strain}\rangle
+=-\langle R_{diff}\rangle.
+}
+\]
+
+Thus any nonzero mean signed relative rotation generated by local strain must be canceled exactly by mean signed projected diffusion, and conversely.
+
+This cancellation is a genuine invariant constraint.
+
+---
+
+## 8. Zero signed mean does not remove positive absolute activity
+
+The cancellation law permits
+
+\[
+\langle R_{strain}\rangle
+=
+\langle R_{diff}\rangle
+=0
+\]
+
+while
+
+\[
+\langle|R_{strain}|\rangle>0,
+\qquad
+\langle|R_{diff}|\rangle>0.
+\]
+
+It also permits
+
+\[
+\langle R_{strain}\rangle=q_*,
+\qquad
+\langle R_{diff}\rangle=-q_*
+\]
+
+with `q_* != 0`.
+
+Therefore bounded recurrence imposes signed cancellation, not vanishing of the two mechanisms.
+
+This is directly analogous to the M5-489 scalar-flux relation
+
+\[
+\langle D_{flux}\rangle=0
+\]
+
+with potentially positive absolute variation.
+
+---
+
+## 9. Common rigid pair rotation is invisible to the Gram observable
+
+If
+
+\[
+\xi_a'=A(\theta)\xi_a,
+\qquad
+\xi_b'=A(\theta)\xi_b
+\]
+
+for the same instantaneous skew generator `A`, then
+
+\[
+\frac d{d\theta}(\xi_a\cdot\xi_b)=0.
+\]
+
+Thus the pair Gram observable cannot detect a common rotation of the entire dual-pair frame.
+
+This is an important geometric firewall.
+
+Any future orientation cocycle must either
+
+1. include an external/material geometric reference such as carrier separation or deformation frame; or
+2. use an irreversible analytic quantity rather than only relative orientation.
+
+---
+
+## 10. Relation to the M5-486 axial production
+
+The relative-angle strain term
+
+\[
+R_{strain}
+\]
+
+uses the **projected local strain vectors** `tau_a,tau_b`.
+
+The M5-486 enstrophy production
+
+\[
+Q
+=
+\int\rho^2\sigma\,dy
+\]
+
+uses the **longitudinal** strain coefficient
+
+\[
+\sigma=\xi\cdot\Sigma\xi.
+\]
+
+Therefore the invariant constraints
+
+\[
+\langle Q\rangle>0
+\]
+
+and
+
+\[
+\langle R_{strain}\rangle
+=-\langle R_{diff}\rangle
+\]
+
+are independent longitudinal and projective balance laws.
+
+The compact endpoint must satisfy both simultaneously.
+
+---
+
+## 11. Refined persistent-pair endpoint
+
+The M5-490 persistent pair is now constrained by
+
+\[
+\boxed{
+|\Phi_a|,|\Phi_b|\ge\phi_0,
+}
+\]
+
+recurrent
+
+\[
+\boxed{
+1-(\xi_a\cdot\xi_b)^2\ge s_0^2,
+}
+\]
+
+and the two zero-drift relations
+
+\[
+\boxed{
+\langle D_{flux,a}\rangle
+=
+\langle D_{flux,b}\rangle
+=0,
+}
+\]
+
+\[
+\boxed{
+\langle R_{strain}\rangle
++
+\langle R_{diff}\rangle=0.
+}
+\]
+
+At the same time the global similarity field obeys
+
+\[
+\boxed{
+\langle Q\rangle
+=
+\frac14\langle E\rangle+
+\langle P\rangle>0.
+}
+\]
+
+Thus the survivor is a recurrent system with positive longitudinal production but zero net drift in its bounded material flux and pair-Gram observables.
+
+---
+
+## 12. Highest-value next target
+
+The present calculation shows why pure bounded observables repeatedly fail: recurrence converts their derivatives into zero-mean cancellation laws.
+
+The next useful target should therefore be an **irreversible nonnegative production ledger** with a globally controlled or bounded-per-scale budget.
+
+The most concrete candidate is to ask whether the persistent dual pair plus active-carrier analyticity forces a fixed lower amount of
+
+\[
+P_{dir}
+=
+\int\rho^2|\nabla\xi|^2dy
+\]
+
+on recurrent pair events.
+
+This requires a new geometric dichotomy:
+
+1. the two noncollinear active packets are connected through an active-vorticity bridge, which may force a direction-gradient cost; or
+2. every connecting route crosses a low-vorticity separator, which must be classified as a persistent component-separation/reformation structure rather than silently ignored.
+
+No such bridge theorem is assumed yet.
+
+---
+
+## 13. Status
+
+\[
+\boxed{\text{GLOBAL REGULARITY REMAINS UNPROVED.}}
+\]
