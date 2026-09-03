@@ -28,33 +28,38 @@ Can the mandatory CE-H curvature/replacement cycle sustain an infinite nested re
 - M16-016 — compact-recurrence no-go: positive unsigned event charge is compatible with recurrence unless tied to a bounded-state coboundary, finite resource debit, or signed material exit.
 - M16-017 — exact CE-H material law `D_B log rho = sigma+kappa-1`, `D_B xi=0`; fixed-threshold crossing sign and finite high-amplitude material-label residence.
 - M16-018 — a hysteretic upward recharge requires positive strain or positive `kappa`; positive `kappa` necessarily carries larger negative-`kappa` enstrophy-weight compensation because `int kappa rho^2 = -P`.
-- M16-019 — exact infinitesimal vortex-tube triad: `D_B log rho = sigma+kappa-1`, `D_B log A = 1-sigma`, `D_B log Phi = kappa`; closed same-lineage cycles are `kappa`-neutral with mean `sigma=1`, while the full field retains an irreducible negative-`kappa` debt `K_- - K_+ = P`.
+- M16-019 — exact infinitesimal vortex-tube triad: `D_B log rho = sigma+kappa-1`, `D_B log A = 1-sigma`, `D_B log Phi = kappa`. **Audit note:** its final inference that a separate negative-`kappa` population is mandatory was retracted in M16-020 because flux-neutral tubes may still have negative enstrophy-weighted `kappa` through covariance.
+- M16-020 — correction/restoration of the measure-mismatch firewall. Tube enstrophy is `e_tube = Phi L_rho`, and a neutral-flux tube may satisfy `⟨kappa e_tube⟩<0` through negative covariance with residence/enstrophy weight. Exact residence law: `D_B log L_rho = kappa + 2 bar(sigma)_rho - 1/2`.
+- M16-021 — quantitative bias split: a negative enstrophy-weighted `kappa` budget forces either strict negative current-flux bias (hence flux decay/replacement) or strict negative covariance between `kappa` and line residence `L_rho`; the latter forces a residence-variance floor.
+- M16-022 — same-marker recycled active tube: bounded flux and bounded line residence give `⟨bar(sigma)_rho⟩=1/4`, while bounded recurrent marker amplitude gives `⟨sigma_marker⟩=1`; therefore either marker/sheath turnover occurs or the same tube carries positive-density axial strain heterogeneity.
+- M16-023 — exact CE-H resolution of axial strain heterogeneity: `W·grad sigma = Sigma:grad W - (1/2) W·curl W`. The same-tube covariance branch therefore reduces to strain--vorticity derivative interaction or vorticity self-helicity activity, unless marker/sheath turnover already occurs.
 
-## Current reduced frontier after M16-019
-The surviving compact CE-H scenario has been reduced to two recurrent populations:
+## Corrected frontier after M16-023
+The old two-population statement `S <-> D` is **not canonical** because M16-020 shows that the same flux-neutral tube population may carry the negative enstrophy-weighted `kappa` debt through phase covariance.
 
-1. **S — source/recharge population**: coherent high-amplitude vortex tubes, positive strain and/or positive `kappa` during recharge, possibly nearly closed same-lineage cycles.
-2. **D — dissipative/negative-`kappa` compensator population**: carries the strict global excess
-
-\[
-K_- - K_+ = P,
-\]
-
-and must be renewed because positive-volume high-amplitude material labels have finite residence in similarity space.
-
-Thus the present closure problem is no longer an abstract local-payer classification. It is the exchange ledger
+The retained exact branch tree is
 
 \[
-\boxed{S\rightleftarrows D}
+\boxed{
+\text{negative enstrophy-weighted `kappa`}
+\Longrightarrow
+B_{\rm flux}^{-}
+\ \lor\ 
+T_{\rm marker/sheath}
+\ \lor\ 
+C_{SD}^{axial}
+\ \lor\ 
+C_{H_W}^{axial}.
+}
 \]
 
-for finite transverse vorticity flux.
+1. **`B_flux^-`** — the current material-flux measure itself has a strict negative `kappa` mean; fixed-label flux decays and replacement is required.
+2. **`T_marker/sheath`** — the tube avoids same-marker recurrence by active-marker or sheath turnover.
+3. **`C_SD^axial`** — same-tube axial strain variation is paid by the signed strain--vorticity derivative contraction `Sigma:grad W`.
+4. **`C_H_W^axial`** — same-tube axial strain variation is paid by vorticity self-helicity density `W dot curl W`.
 
 ### Next target
-Determine whether the strict **enstrophy-weighted** negative-`kappa` excess forces a strict **flux-weighted** negative cycle bias once the covariance between `kappa`, amplitude, and transverse flux density is retained.
-
-- If a strict flux-weighted negative bias follows, same-lineage recycling loses finite transverse flux and the recurrent loop closes.
-- If not, isolate the precise covariance mechanism that allows flux-neutral recycling despite `K_- - K_+=P>0`.
+Audit the last two same-tube PDE channels. The question is whether compact recurrent CE-H dynamics can support `C_SD^axial` or `C_H_W^axial` indefinitely without forcing one of the already established Beltrami-collapse, strain-sheet, or material-turnover mechanisms.
 
 \[
 \boxed{\text{GLOBAL REGULARITY REMAINS UNPROVED.}}
