@@ -1,0 +1,264 @@
+# DSD M5-637 — Persistent zero-kappa spine straightens; zero-level vorticity maxima are first-order flat
+
+Date: 2026-09-03
+
+Status: **INTERNAL ZERO-LEVEL RIGIDITY / ON THE ONLY RELABELING NO-TURNOVER SYNCHRONIZED SURVIVOR `c_* identically 0`, MATERIAL VORTICITY FLUX IS EXACTLY CONSTANT. M5-621 THEN MAKES `rho |K| / |Phi|` DECAY EXACTLY LIKE `exp(-3 theta/2)` ON A FIXED FLUX LABEL, SO ANY NONDEGENERATE RECURRENT AMPLITUDE LABEL STRAIGHTENS IN CURVATURE. IN ADDITION, IF A ZERO-KAPPA POINT IS A POSITIVE SPATIAL MAXIMUM OF `rho=|W|`, THE SCALAR EIGENVALUE EQUATION FORCES `grad rho=0`, `grad xi=0`, `Delta rho=0`, HENCE `grad W=0` AND THE LOCAL NON-BELTRAMI VECTOR VANISHES THERE. THEREFORE THE UNIFORM NON-BELTRAMI DEFECT CANNOT BE PAID AT A ZERO-LEVEL VORTICITY MAXIMUM; IT MUST LIVE IN A TRANSVERSE-MAGNITUDE/CURVATURE SHEATH OR A TURNOVER POPULATION. GLOBAL REGULARITY REMAINS UNPROVED.**
+
+---
+
+## 1. Zero-kappa persistent synchronized level
+
+M5-636 reduces the relabeling no-turnover survivor to
+
+\[
+\boxed{c_*(\theta)\equiv0.}
+\]
+
+Thus on every synchronized persistent material flux lineage,
+
+\[
+\kappa=0.
+\]
+
+The finite material-flux law from M5-603 becomes
+
+\[
+\boxed{\Phi'=0.}
+\]
+
+Hence the material vorticity flux is exactly constant, not merely recurrent with zero mean logarithmic drift.
+
+---
+
+## 2. Curvature decay on one zero-level flux label
+
+M5-621 gives on every infinitesimal material vortex tube
+
+\[
+D_B\log\frac{\rho|\mathcal K|}{|\phi|}
+=-\frac32.
+\]
+
+On the zero-kappa branch `phi` is constant.
+
+Therefore
+
+\[
+\boxed{
+\rho(\theta)|\mathcal K(\theta)|
+=ho(\theta_0)|\mathcal K(\theta_0)|
+ e^{-\frac32(\theta-\theta_0)}.
+}
+\]
+
+If the recurrent coherent marker amplitude remains nondegenerate,
+
+\[
+0<\rho_-\le\rho(\theta_j)\le\rho_+<\infty
+\]
+
+along return times, then
+
+\[
+\boxed{
+|\mathcal K(\theta_j)|\to0.
+}
+\]
+
+Thus a fixed persistent zero-level material flux label asymptotically straightens at its recurrent returns.
+
+---
+
+## 3. Amplitude and line-stretch law on kappa=0
+
+The CE-H amplitude equation becomes
+
+\[
+\boxed{
+D_B\log\rho=\sigma-1.
+}
+\]
+
+The material line-length law remains
+
+\[
+D_B\log\ell=\sigma+\frac12.
+\]
+
+Hence
+
+\[
+D_B\log\frac{\rho}{\ell}
+=-\frac32.
+\]
+
+This is the same universal material-volume scaling in another form.
+
+If the same marker amplitude is recurrent, its time-mean axial strain is
+
+\[
+\langle\sigma\rangle_{marker}=1,
+\]
+
+while its material tangent length grows on average at rate `3/2` and its curvature decays at the matching rate.
+
+The infinitesimal turning vector `ell K` remains invariant, as in M5-620.
+
+---
+
+## 4. Zero-kappa maximum condition
+
+On CE-H,
+
+\[
+\kappa
+=\frac{\Delta\rho}{\rho}-|\nabla\xi|^2.
+\]
+
+At a zero-kappa point,
+
+\[
+\Delta\rho=\rho|\nabla\xi|^2\ge0.
+\]
+
+Suppose the point is also a positive local spatial maximum of `rho`.
+
+Then
+
+\[
+\nabla\rho=0,
+\qquad
+\Delta\rho\le0.
+\]
+
+Combining the two signs gives
+
+\[
+\boxed{
+\Delta\rho=0,
+\qquad
+|\nabla\xi|=0.
+}
+\]
+
+Hence
+
+\[
+\boxed{
+\nabla\rho=0,
+\qquad
+\nabla\xi=0.
+}
+\]
+
+Since
+
+\[
+\nabla W=\xi\otimes\nabla\rho+\rho\nabla\xi,
+\]
+
+we obtain
+
+\[
+\boxed{\nabla W=0}
+\]
+
+at every positive vorticity maximum lying on `kappa=0`.
+
+---
+
+## 5. Non-Beltrami vector at a zero-level maximum
+
+The M5-619 vector is
+
+\[
+J_B=W\times(\nabla\times W).
+\]
+
+If
+
+\[
+\nabla W=0,
+\]
+
+then
+
+\[
+\nabla\times W=0
+\]
+
+at the point, so
+
+\[
+\boxed{J_B=0.}
+\]
+
+Equivalently, using the magnitude-curvature decomposition,
+
+\[
+J_B
+=\rho P_\xi^\perp\nabla\rho
+-\rho^2\mathcal K,
+\]
+
+both terms vanish at such a maximum.
+
+Therefore the uniform global non-Beltrami defect from M5-618 **cannot be concentrated at a zero-level vorticity maximum itself**.
+
+---
+
+## 6. Persistent spine versus non-Beltrami sheath
+
+A zero-level persistent flux label can remain nontrivial and carry stretching because `Sigma W=sigma W` is nonlocal and need not vanish when `grad W=0` at one point.
+
+However its repeated high-amplitude maximum points become locally first-order flat, while its fixed-label curvature decays.
+
+Thus persistent non-Beltrami geometry must be supplied by at least one of
+
+\[
+\boxed{
+\begin{array}{l}
+\text{transverse magnitude variation in a surrounding sheath},\\
+\text{curvature carried by newly replaced labels},\\
+\text{another nonpersistent active population}.
+\end{array}
+}
+\]
+
+This sharpens the M5-633 persistent-spine/renewing-sheath picture.
+
+---
+
+## 7. Updated zero-level frontier
+
+The relabeling no-turnover hard object is now
+
+\[
+\boxed{
+\text{constant-flux, zero-kappa persistent material spine}
++
+\text{external non-Beltrami sheath/turnover geometry}.
+}
+\]
+
+On the persistent spine itself:
+
+- curvature on one fixed label decays;
+- a zero-level amplitude maximum is first-order flat;
+- positive stretching may still be nonlocally generated by the velocity strain.
+
+The next target is therefore the **transverse-magnitude sheath**, not another curvature invariant on the same spine.
+
+---
+
+## 8. Firewall
+
+`kappa=0` is known on the synchronized persistent level/labels, not on an open three-dimensional region.
+
+Therefore the equation `Delta W=0` cannot be analytically continued to all space from this information alone.
+
+Likewise, first-order flatness at isolated or lower-dimensional maximum points does not imply that `W` is spatially constant.
+
+\[
+\boxed{\text{GLOBAL REGULARITY REMAINS UNPROVED.}}
+\]
