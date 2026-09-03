@@ -1,0 +1,313 @@
+# DSD M5-664 — A finite-order kappa fold has an exact higher-jet material-crossing law
+
+Date: 2026-09-03
+
+Status: **INTERNAL HIGHER-JET GENERALIZATION OF M5-660 / M5-663 FORCES EVERY ACTIVE HIGHER-DEGENERATE KAPPA BRANCH TO HAVE A FINITE NORMAL VANISHING ORDER / FOR A SMOOTH MOVING CRITICAL HYPERSURFACE WITH `partial_n^j kappa=0` FOR `1<=j<m` AND `partial_n^m kappa !=0`, THE FIRST NORMAL JET OF `h=D_B kappa` THAT DETECTS RELATIVE MATERIAL CROSSING IS ORDER `m-1`, WITH THE EXACT LEADING LAW `(B-V_Sigma)·n = partial_n^{m-1}(h-h_Sigma)/partial_n^m kappa` / THEREFORE A FINITE-ORDER FOLD IS EITHER A HIGHER-JET CRITICAL-CREATION EVENT OR, IF THAT JET VANISHES, A MATERIAL NORMAL BARRIER TO WHICH THE M5-661--662 VOLUME/TURNOVER REDUCTIONS APPLY / A GENUINE CODIMENSION-ONE MULTI-SHEET FOLD REQUIRES EVEN NORMAL ORDER `m` / GLOBAL REGULARITY REMAINS UNPROVED.**
+
+---
+
+## 1. Finite-order critical hypersurface
+
+Let `Sigma(theta)` be a smooth connected active critical hypersurface and let `r` be a signed normal coordinate with
+
+\[
+r=0
+\quad\text{on }\Sigma.
+\]
+
+Let `n` be the chosen unit normal.
+
+Assume the first nonzero normal derivative of `kappa-kappa_Sigma` has finite order `m>=2`:
+
+\[
+\boxed{
+\partial_n^j\kappa|_\Sigma=0
+\quad(1\le j<m),
+\qquad
+\partial_n^m\kappa|_\Sigma=a_m\ne0.
+}
+\]
+
+M5-663 guarantees a uniform upper bound on such finite orders on the retained high-amplitude compact branch whenever the branch is represented by a smooth hypersurface stratum.
+
+---
+
+## 2. Normal Taylor form
+
+Along a normal coordinate line through one surface point,
+
+\[
+\boxed{
+\kappa(r,\theta)
+=
+c_\Sigma(\theta)
++
+\frac{a_m(\theta)}{m!}r^m
++
+O(r^{m+1}).
+}
+\]
+
+Because `grad kappa=0` on the critical hypersurface, `kappa` is constant along each connected surface component at fixed time; denote that value by `c_Sigma(theta)`.
+
+---
+
+## 3. Moving coordinates
+
+Let `V_Sigma` be a surface velocity.
+
+Its tangential component is a parametrization choice, so at the point under consideration choose the tangential velocity to agree with the tangential part of `B`.
+
+Then the relative velocity is purely normal at leading order:
+
+\[
+B-V_\Sigma
+=
+\delta v_n\,n
+\]
+
+at the surface point, where
+
+\[
+\delta v_n:=(B-V_\Sigma)\cdot n.
+\]
+
+In the coordinates moving with the surface,
+
+\[
+D_B\kappa
+=
+\partial_\theta^{\Sigma}\kappa
++
+(B-V_\Sigma)\cdot\nabla\kappa.
+\]
+
+---
+
+## 4. Expansion of h = D_B kappa
+
+Differentiate the normal Taylor expansion.
+
+The moving-coordinate time derivative contributes
+
+\[
+c_\Sigma'(\theta)+O(r^m).
+\]
+
+The relative normal transport contributes
+
+\[
+\delta v_n\partial_r\kappa
+=
+\delta v_n
+\frac{a_m}{(m-1)!}r^{m-1}
++
+O(r^m).
+\]
+
+Hence
+
+\[
+\boxed{
+h(r,\theta)
+=
+c_\Sigma'(\theta)
++
+\delta v_n
+\frac{a_m}{(m-1)!}r^{m-1}
++
+O(r^m).
+}
+\]
+
+Write
+
+\[
+\boxed{h_\Sigma:=c_\Sigma'(\theta).}
+\]
+
+---
+
+## 5. Exact first detecting jet
+
+Take `m-1` normal derivatives at the surface:
+
+\[
+\partial_n^{m-1}(h-h_\Sigma)
+=
+\delta v_n a_m.
+\]
+
+Since
+
+\[
+a_m=\partial_n^m\kappa,
+\]
+
+we obtain
+
+\[
+\boxed{
+(B-V_\Sigma)\cdot n
+=
+\frac{
+\partial_n^{m-1}(h-h_\Sigma)
+}{
+\partial_n^m\kappa
+}.
+}
+\]
+
+This is the finite-order generalization of M5-660.
+
+For `m=2`, it reduces to
+
+\[
+(B-V_\Sigma)\cdot n
+=
+\frac{\partial_n h}{\partial_n^2\kappa}.
+\]
+
+---
+
+## 6. Higher-jet critical creation
+
+If
+
+\[
+\partial_n^{m-1}(h-h_\Sigma)\ne0,
+\]
+
+then
+
+\[
+\boxed{(B-V_\Sigma)\cdot n\ne0.}
+\]
+
+Thus material trajectories cross the moving critical hypersurface.
+
+For `m>2`, the first gradient `grad h` can still vanish at the surface, so M5-654's first-order critical-force creation observable need not see this event.
+
+Define the higher-jet creation branch
+
+\[
+\boxed{
+C_{crit}^{(m-1)}:
+\quad
+\partial_n^{m-1}(h-h_\Sigma)\ne0.
+}
+\]
+
+This is the correct finite-order replacement for first-order force creation on higher-degenerate folds.
+
+---
+
+## 7. Higher-order silent branch is again a material barrier
+
+If instead
+
+\[
+\boxed{
+\partial_n^{m-1}(h-h_\Sigma)=0,
+}
+\]
+
+then
+
+\[
+\boxed{
+(B-V_\Sigma)\cdot n=0.
+}
+\]
+
+Therefore the finite-order critical hypersurface is a material normal barrier.
+
+All of the M5-661--662 geometric consequences now apply independently of the value of `m`:
+
+- a closed barrier encloses a material volume and is incompatible with bounded recurrent similarity storage;
+- a boundary-attached barrier forces material sheath turnover through the amplitude threshold.
+
+Hence finite-order degeneracy does not create a new turnover-free sheet mechanism.
+
+---
+
+## 8. Parity of a codimension-one multi-sheet fold
+
+Consider the normal map at fixed tangential coordinates:
+
+\[
+\kappa-c_\Sigma
+\sim
+\frac{a_m}{m!}r^m.
+\]
+
+If `m` is odd, this map is locally one-to-one across `r=0`.
+
+There is no two-sided fold of the same nearby `kappa` value generated by the normal coordinate.
+
+If `m` is even, the two signs of `r` produce the same leading `kappa` value and a genuine two-sheet normal fold is possible.
+
+Therefore a codimension-one analytic multi-sheet branch requires
+
+\[
+\boxed{m\ \text{even}.}
+\]
+
+Odd-order critical hypersurfaces may be degenerate but do not provide the ordinary two-sheet folding mechanism.
+
+---
+
+## 9. Updated finite-order silent-sheet closure
+
+For every smooth finite-order high-amplitude critical hypersurface,
+
+\[
+\boxed{
+K_{finite\ fold}^{(m)}
+\Longrightarrow
+C_{crit}^{(m-1)}
+\lor
+K_{material\ barrier}^{(m)}.
+}
+\]
+
+The barrier branch then satisfies
+
+\[
+\boxed{
+K_{material\ barrier}^{(m)}
+\Longrightarrow
+T_{sheath}^{rho=a_0}
+}
+\]
+
+unless the fold is closed, in which case M5-661 excludes persistent recurrence.
+
+Thus the only silent multi-sheet topology not yet covered is a **singular analytic critical stratum that is not locally one smooth hypersurface**.
+
+---
+
+## 10. Next target
+
+The remaining geometry consists of intersections, cusps, self-contacts, or lower-dimensional critical strata where several finite-order hypersurface branches meet.
+
+Because M5-663 gives a uniform finite jet order, standard analytic stratification should reduce these to finitely many local models.
+
+The next calculation should determine whether every recurrent singular-stratum topology change necessarily produces either
+
+1. one of the finite-order higher-jet crossing events above, or
+2. a lower-dimensional material skeleton whose surrounding positive-volume sectors must again turn over by the `3/2` volume law.
+
+---
+
+## 11. Firewall
+
+The exact formula is derived for a smooth critical hypersurface with a well-defined normal coordinate and finite nonzero first normal jet.
+
+It does not by itself classify singular critical sets with no single normal direction.
+
+No contradiction is claimed for higher-jet creation activity alone.
+
+\[
+\boxed{\text{GLOBAL REGULARITY REMAINS UNPROVED.}}
+\]
