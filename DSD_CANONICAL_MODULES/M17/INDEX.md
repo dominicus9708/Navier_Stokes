@@ -22,6 +22,7 @@ The provisional M16 source files are retained for provenance and are superseded 
 - **M17-008** — axisymmetric Navier--Stokes without swirl is an exact known-regular model of the material great-circle/winding CE-H geometry; winding itself is therefore a firewall, not a contradiction.
 - **M17-009** — nodal creation/reconnection cannot evade through arbitrarily flat zeros; compactness plus analyticity gives a uniform finite nodal-jet order `m_*` and nonzero jet floor.
 - **M17-010** — a regular winding core forces transverse strain isotropy `spec Sigma = {lambda,lambda,-2lambda}`. The nodal Jacobian obeys exact multiplier laws; recurrent regular horizontal Jacobian forces `⟨kappa⟩_nodal = 3/2`, while a persistent slanted derivative additionally forces `⟨lambda⟩_nodal = 0`.
+- **M17-011** — the regular nodal skeleton is enstrophy-measure-thin: `∫_{D_r} kappa|W|^2 = O(r^4)` per unit filament length, while transverse gradient energy and radial boundary flux are both `O(r^2)` with the same leading coefficient. Hence the positive nodal mean does not force an infinitesimal sign contradiction. Differentiating `Delta W = kappa W` at the zero gives the exact third-jet law `Delta G = kappa_0 G` for `G=∇W`, and the recurrent nodal constraint becomes a normalized Jacobian-curvature mean of `3/2`.
 
 ## Current frontier
 
@@ -47,30 +48,76 @@ The great-circle branch is now
 \boxed{
 R_1^{great-circle}
 \Longrightarrow
-R_{nodal}^{material}
+J_{core}^{3rd\text{-}jet}
 \ \lor\ 
-T_{nodal}^{finite-jet}
+S_{finite\text{-}radius}
+\ \lor\ 
+T_{nodal}^{finite\text{-}jet}
+\ \lor\ 
+G_{axis/no\text{-}swirl}
 \ \lor\ 
 G_{nonaxis}^{rank1}.
 }
 \]
 
-- `R_nodal^material`: regular winding nodal filaments transported materially; every uniformly recurrent regular filament has `⟨kappa⟩_nodal = 3/2`.
+- `J_core^{3rd-jet}`: regular material winding filaments satisfy `Delta G = kappa_0 G`; every uniformly recurrent regular filament retains `⟨kappa_0⟩_nodal = 3/2` under the M17-010 bounded-Jacobian assumptions.
+- `S_finite-radius`: unresolved transfer from the nondegenerate first-jet skeleton to a finite-radius sheath where the `|W|^2` measure is no longer negligible.
 - `T_nodal^{finite-jet}`: topology change through a uniformly bounded finite-order analytic nodal-jet event.
-- `G_nonaxis^{rank1}`: persistent non-axisymmetric great-circle geometry without nodal topology turnover. The axisymmetric no-swirl class is a known regular submodel, so this is a classification gap rather than a topology-exclusion problem.
+- `G_axis/no-swirl`: known regular axisymmetric no-swirl firewall model.
+- `G_nonaxis^{rank1}`: persistent non-axisymmetric great-circle geometry without nodal topology turnover; this remains a classification gap.
 
-## Next target
-The highest-value next calculation is the **nodal-skeleton / bulk-sheath compatibility**:
+## DSD audit conclusion at M17-011
+
+The former apparent sign conflict
+
+\[
+\langle\kappa\rangle_{nodal}=\frac32
+\quad\text{versus}\quad
+\int\kappa|W|^2=-P<0
+\]
+
+cannot be closed by a direct measure comparison.
+The nodal set is suppressed by the enstrophy weight, but its first jet is not: the correct descriptor switch is
+
+\[
+W=0
+\quad\leadsto\quad
+G=\nabla W\neq0,
+\qquad
+\Delta G=\kappa_0G.
+\]
+
+Thus the infinitesimal sign-contradiction branch is pruned, while a sharper finite-radius transfer problem survives.
+
+## Next target — Jet-to-Sheath Transfer Gate (JSTG)
+
+The highest-value next calculation is to connect the recurrent core constraint
 
 \[
 \boxed{
-\langle\kappa\rangle_{nodal}=\frac32
-\quad\text{versus}\quad
-\int\kappa|W|^2=-P<0.
+\Delta G=\kappa_0G,
+\qquad
+\langle\kappa_0\rangle_{nodal}=\frac32
 }
 \]
 
-Determine whether the positive-`kappa` material winding skeleton can coexist recurrently with the negative enstrophy-weighted bulk without forcing a `kappa=0` sheet, nodal degeneration, or material turnover already audited in M14--M16.
+to a nonzero-radius consequence before the structure can disappear into measure zero.
+
+The target alternatives are
+
+\[
+\boxed{
+\text{finite-radius negative payer}
+\ \lor\ 
+\kappa=0\text{ sheet}
+\ \lor\ 
+\text{rank loss / finite-jet turnover}
+\ \lor\ 
+\text{axisymmetric-type regular escape}
+\ \lor\ 
+\text{non-axisymmetric recurrent survivor}.
+}
+\]
 
 \[
 \boxed{\text{GLOBAL REGULARITY REMAINS UNPROVED.}}
