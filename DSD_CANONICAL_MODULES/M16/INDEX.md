@@ -1,13 +1,13 @@
 # M16 — Kappa-space conveyor, hysteresis audit, and PDE constitutive closure
 
 Legacy source range: `M5-677~688`
-Canonical legacy-derived IDs: `M16-001~012`
-Canonical continuation: `M16-013+`
+Canonical IDs from legacy: `M16-001~012`
+Native canonical continuation: `M16-013+`
 
 ## Independent question
 Can the mandatory CE-H curvature/replacement cycle sustain an infinite nested recharge/retirement cascade once the material `kappa` current is constrained by the actual Navier–Stokes constitutive law?
 
-## Canonical crosswalk for legacy-derived frontier
+## Canonical crosswalk for legacy frontier
 - M16-001 = Legacy M5-677 — zero-curvature branch linearizes NS; uniform curvature floor.
 - M16-002 = Legacy M5-678 — late curvature-label amplification gate.
 - M16-003 = Legacy M5-679 — physical-variable audit of curvature/flux cocycle.
@@ -21,22 +21,40 @@ Can the mandatory CE-H curvature/replacement cycle sustain an infinite nested re
 - M16-011 = Legacy M5-687 — uniform nonzero `grad kappa` diffusion charge.
 - M16-012 = Legacy M5-688 — exponential-`kappa` ledger and quantitative PDE payer dichotomy.
 
-## Canonical-native continuation
-- **M16-013** — exact integration-by-parts collapse of the CE-H geometric remainder. The explicit curl-vorticity/amplitude-gradient term cancels via `div Sigma = -(1/2) curl W`, leaving strain/derivative-Gram, `grad kappa`–`grad rho`, and amplitude-transition terms.
-- **M16-014** — quantitative consolidation: the M16-012 payer floor forces one of five coherent finite-core charges: `grad sigma`, strain residence, amplitude transition, strain/derivative-Gram overlap, or `grad rho`.
+## Native canonical continuation
+- M16-013 — exact collapse of the CE-H geometric remainder into strain/derivative and `kappa`--magnitude couplings; curl-gradient term cancels after integration by parts.
+- M16-014 — payer floor quantized into five coherent local charges: `grad sigma`, strain residence, amplitude transition, strain/`grad W` overlap, and `grad rho`.
+- M16-015 — audit correction: P1/P4/P5 are unsigned derivative occupancies dominated by palinstrophy-type activity; they do not by themselves force turnover.
+- M16-016 — compact-recurrence no-go: positive unsigned event charge is compatible with recurrence unless tied to a bounded-state coboundary, finite resource debit, or signed material exit.
+- M16-017 — exact CE-H material law `D_B log rho = sigma+kappa-1`, `D_B xi=0`; fixed-threshold crossing sign and finite high-amplitude material-label residence.
+- M16-018 — a hysteretic upward recharge requires positive strain or positive `kappa`; positive `kappa` necessarily carries larger negative-`kappa` enstrophy-weight compensation because `int kappa rho^2 = -P`.
+- M16-019 — exact infinitesimal vortex-tube triad: `D_B log rho = sigma+kappa-1`, `D_B log A = 1-sigma`, `D_B log Phi = kappa`; closed same-lineage cycles are `kappa`-neutral with mean `sigma=1`, while the full field retains an irreducible negative-`kappa` debt `K_- - K_+ = P`.
 
-## Current frontier after M16-014
-The last PDE closure problem is no longer an abstract `kappa`-space hysteresis problem and no longer contains an opaque geometric remainder.
+## Current reduced frontier after M16-019
+The surviving compact CE-H scenario has been reduced to two recurrent populations:
 
-A nonzero compact CE-H survivor must recurrently realize at least one positive-density coherent event family:
+1. **S — source/recharge population**: coherent high-amplitude vortex tubes, positive strain and/or positive `kappa` during recharge, possibly nearly closed same-lineage cycles.
+2. **D — dissipative/negative-`kappa` compensator population**: carries the strict global excess
 
-1. aligned-strain-gradient packet;
-2. signed strain-residence packet;
-3. amplitude-transition packet;
-4. strain / vorticity-derivative overlap packet;
-5. magnitude-gradient packet.
+\[
+K_- - K_+ = P,
+\]
 
-The next target is to determine which of these can persist on the same finite material/vorticity source network without entering the already audited M13–M15 replacement, sheet-crossing, or sheath-turnover mechanisms.
+and must be renewed because positive-volume high-amplitude material labels have finite residence in similarity space.
+
+Thus the present closure problem is no longer an abstract local-payer classification. It is the exchange ledger
+
+\[
+\boxed{S\rightleftarrows D}
+\]
+
+for finite transverse vorticity flux.
+
+### Next target
+Determine whether the strict **enstrophy-weighted** negative-`kappa` excess forces a strict **flux-weighted** negative cycle bias once the covariance between `kappa`, amplitude, and transverse flux density is retained.
+
+- If a strict flux-weighted negative bias follows, same-lineage recycling loses finite transverse flux and the recurrent loop closes.
+- If not, isolate the precise covariance mechanism that allows flux-neutral recycling despite `K_- - K_+=P>0`.
 
 \[
 \boxed{\text{GLOBAL REGULARITY REMAINS UNPROVED.}}
