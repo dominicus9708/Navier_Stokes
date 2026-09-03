@@ -23,6 +23,7 @@ The provisional M16 source files are retained for provenance and are superseded 
 - **M17-009** — nodal creation/reconnection cannot evade through arbitrarily flat zeros; compactness plus analyticity gives a uniform finite nodal-jet order `m_*` and nonzero jet floor.
 - **M17-010** — a regular winding core forces transverse strain isotropy `spec Sigma = {lambda,lambda,-2lambda}`. The nodal Jacobian obeys exact multiplier laws; recurrent regular horizontal Jacobian forces `⟨kappa⟩_nodal = 3/2`, while a persistent slanted derivative additionally forces `⟨lambda⟩_nodal = 0`.
 - **M17-011** — the regular nodal skeleton is enstrophy-measure-thin: `∫_{D_r} kappa|W|^2 = O(r^4)` per unit filament length, while transverse gradient energy and radial boundary flux are both `O(r^2)` with the same leading coefficient. Hence the positive nodal mean does not force an infinitesimal sign contradiction. Differentiating `Delta W = kappa W` at the zero gives the exact third-jet law `Delta G = kappa_0 G` for `G=∇W`, and the recurrent nodal constraint becomes a normalized Jacobian-curvature mean of `3/2`.
+- **M17-012** — compact hard-hull bounds upgrade the recurrent nodal mean to a positive-density set of strongly positive `kappa_0` phases. Uniform Jacobian nondegeneracy plus derivative bounds produce a fixed finite-radius positive-`kappa` sheath with `∫ kappa|W|^2 >= Q_* > 0`; the global signed identity then forces a fixed-size negative-`kappa` payer. The pure measure-zero escape is therefore closed on the uniformly regular recurrent-filament branch, linking M17 directly to the M5 zero-level/sheath-turnover and flux-hysteresis mechanisms.
 
 ## Current frontier
 
@@ -42,31 +43,36 @@ R_1^{great-circle/winding}.
 `R_2` carries a nonzero pullback of the `S^2` area 2-form. In material coordinates the director-area charge is exactly conserved. This is not yet a contradiction; the remaining question is its compatibility with finite transverse vorticity flux and recurrent material cross-sections.
 
 ### Rank one
-The great-circle branch is now
+The uniformly regular recurrent great-circle branch is now
 
 \[
 \boxed{
-R_1^{great-circle}
+R_{nodal}^{uniform}
 \Longrightarrow
-J_{core}^{3rd\text{-}jet}
+P_{tube}^{+}
+\Longrightarrow
+N_{bulk}^{-}
+\Longrightarrow
+Z_\kappa
 \ \lor\ 
-S_{finite\text{-}radius}
-\ \lor\ 
-T_{nodal}^{finite\text{-}jet}
+D_\kappa^{sing}
 \ \lor\ 
 G_{axis/no\text{-}swirl}
 \ \lor\ 
-G_{nonaxis}^{rank1}.
+H_{CE-H}^{nonaxis}.
 }
 \]
 
-- `J_core^{3rd-jet}`: regular material winding filaments satisfy `Delta G = kappa_0 G`; every uniformly recurrent regular filament retains `⟨kappa_0⟩_nodal = 3/2` under the M17-010 bounded-Jacobian assumptions.
-- `S_finite-radius`: unresolved transfer from the nondegenerate first-jet skeleton to a finite-radius sheath where the `|W|^2` measure is no longer negligible.
-- `T_nodal^{finite-jet}`: topology change through a uniformly bounded finite-order analytic nodal-jet event.
+- `P_tube^+`: positive-density finite-radius positive-`kappa` sheath forced by `⟨kappa_0⟩=3/2`, compactness, and the nodal Jacobian lower bound.
+- `N_bulk^-`: compensating negative weighted payer with fixed lower bound on every strongly positive nodal phase.
+- `Z_kappa`: regular zero-level/sheath-turnover channel, linking to M5-638.
+- `D_kappa^{sing}`: singular or critical zero-level geometry, rank loss, or finite-jet nodal turnover.
 - `G_axis/no-swirl`: known regular axisymmetric no-swirl firewall model.
-- `G_nonaxis^{rank1}`: persistent non-axisymmetric great-circle geometry without nodal topology turnover; this remains a classification gap.
+- `H_CE-H^{nonaxis}`: genuinely non-axisymmetric recurrent constitutive hysteresis branch, linking to M5-685.
 
-## DSD audit conclusion at M17-011
+The broader rank-one branch still contains `T_nodal^{finite-jet}` and non-uniform regularity exits outside the M17-010 bounded-Jacobian hypothesis.
+
+## DSD audit conclusion through M17-012
 
 The former apparent sign conflict
 
@@ -76,46 +82,65 @@ The former apparent sign conflict
 \int\kappa|W|^2=-P<0
 \]
 
-cannot be closed by a direct measure comparison.
-The nodal set is suppressed by the enstrophy weight, but its first jet is not: the correct descriptor switch is
-
-\[
-W=0
-\quad\leadsto\quad
-G=\nabla W\neq0,
-\qquad
-\Delta G=\kappa_0G.
-\]
-
-Thus the infinitesimal sign-contradiction branch is pruned, while a sharper finite-radius transfer problem survives.
-
-## Next target — Jet-to-Sheath Transfer Gate (JSTG)
-
-The highest-value next calculation is to connect the recurrent core constraint
+cannot be closed at infinitesimal radius because the nodal `|W|^2` measure is quartically thin.
+However, compactness and uniform regularity prevent the positive nodal signal from remaining measure-zero forever:
 
 \[
 \boxed{
-\Delta G=\kappa_0G,
-\qquad
-\langle\kappa_0\rangle_{nodal}=\frac32
+W=0
+\to
+G=\nabla W\neq0
+\to
+|W|\gtrsim |z|
+\to
+Q_+\ge Q_*>0
+\to
+Q_-\ge P+Q_*.
 }
 \]
 
-to a nonzero-radius consequence before the structure can disappear into measure zero.
+Thus the infinitesimal sign-contradiction route is pruned, while the pure measure-zero escape is also pruned on the uniformly regular recurrent subbranch.
+The problem has become a finite-radius payer/zero-crossing/hysteresis classification problem.
 
-The target alternatives are
+## Next target — non-axisymmetric constitutive hysteresis gate
+
+The highest-value next calculation is to combine the M17 recurrent core/sheath constraints
 
 \[
 \boxed{
-\text{finite-radius negative payer}
+\langle\kappa_0\rangle_{nodal}=\frac32,
+\qquad
+Q_-\ge Q_*>0
+}
+\]
+
+with the M5-685 zero-crossing constitutive law
+
+\[
+\boxed{
+h
+=L_\rho\kappa+L_\rho\sigma+\mathcal R_{geom}
+\qquad(\kappa=0),
+}
+\]
+
+and determine whether a recurrent **non-axisymmetric** great-circle field can generate the required negative flux-weighted crossing bias
+
+\[
+\overline G_0(0)=0,
+\qquad
+\overline G_\Phi(0)<0
+\]
+
+without
+
+\[
+\boxed{
+\text{rank loss}
 \ \lor\ 
-\kappa=0\text{ sheet}
+\text{finite-jet turnover}
 \ \lor\ 
-\text{rank loss / finite-jet turnover}
-\ \lor\ 
-\text{axisymmetric-type regular escape}
-\ \lor\ 
-\text{non-axisymmetric recurrent survivor}.
+\text{axisymmetric/no-swirl reduction}.
 }
 \]
 
