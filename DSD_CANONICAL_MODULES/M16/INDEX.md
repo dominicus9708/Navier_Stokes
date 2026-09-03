@@ -1,13 +1,13 @@
 # M16 — Kappa-space conveyor, hysteresis audit, and PDE constitutive closure
 
 Legacy source range: `M5-677~688`
-Canonical IDs: `M16-001~012`
-Continuation: canonical `M16-013+`
+Canonical legacy-derived IDs: `M16-001~012`
+Canonical continuation: `M16-013+`
 
 ## Independent question
 Can the mandatory CE-H curvature/replacement cycle sustain an infinite nested recharge/retirement cascade once the material `kappa` current is constrained by the actual Navier–Stokes constitutive law?
 
-## Canonical crosswalk for current frontier
+## Canonical crosswalk for legacy-derived frontier
 - M16-001 = Legacy M5-677 — zero-curvature branch linearizes NS; uniform curvature floor.
 - M16-002 = Legacy M5-678 — late curvature-label amplification gate.
 - M16-003 = Legacy M5-679 — physical-variable audit of curvature/flux cocycle.
@@ -21,15 +21,22 @@ Can the mandatory CE-H curvature/replacement cycle sustain an infinite nested re
 - M16-011 = Legacy M5-687 — uniform nonzero `grad kappa` diffusion charge.
 - M16-012 = Legacy M5-688 — exponential-`kappa` ledger and quantitative PDE payer dichotomy.
 
-## Current frontier after M16-012
-The kinematic hysteresis itself is no longer treated as a contradiction. A nonzero compact CE-H survivor has a uniform positive `kappa`-gradient diffusion charge. The exponential `kappa` ledger therefore forces at least one quantitative PDE payer:
+## Canonical-native continuation
+- **M16-013** — exact integration-by-parts collapse of the CE-H geometric remainder. The explicit curl-vorticity/amplitude-gradient term cancels via `div Sigma = -(1/2) curl W`, leaving strain/derivative-Gram, `grad kappa`–`grad rho`, and amplitude-transition terms.
+- **M16-014** — quantitative consolidation: the M16-012 payer floor forces one of five coherent finite-core charges: `grad sigma`, strain residence, amplitude transition, strain/derivative-Gram overlap, or `grad rho`.
 
-1. aligned-strain gradient;
-2. aligned-strain residence;
-3. amplitude-cutoff/threshold transition;
-4. explicit CE-H geometric remainder.
+## Current frontier after M16-014
+The last PDE closure problem is no longer an abstract `kappa`-space hysteresis problem and no longer contains an opaque geometric remainder.
 
-The next canonical calculation is **M16-013**.
+A nonzero compact CE-H survivor must recurrently realize at least one positive-density coherent event family:
+
+1. aligned-strain-gradient packet;
+2. signed strain-residence packet;
+3. amplitude-transition packet;
+4. strain / vorticity-derivative overlap packet;
+5. magnitude-gradient packet.
+
+The next target is to determine which of these can persist on the same finite material/vorticity source network without entering the already audited M13–M15 replacement, sheet-crossing, or sheath-turnover mechanisms.
 
 \[
 \boxed{\text{GLOBAL REGULARITY REMAINS UNPROVED.}}
