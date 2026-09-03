@@ -1,0 +1,439 @@
+# DSD M5-623 — Strain-eigenvalue Hellmann–Feynman identity and transverse eigen-gap split
+
+Date: 2026-09-03
+
+Status: **INTERNAL DIFFERENTIAL RIGIDITY STEP / DIFFERENTIATING THE CE-H STRAIN EIGENLINE `Sigma xi = sigma xi` GIVES THE EXACT HELLMANN–FEYNMAN IDENTITY `partial_v sigma = xi·(partial_v Sigma)xi` AND THE TRANSVERSE EIGENVECTOR EQUATION `(Sigma_perp-sigma I) partial_v xi = -P(partial_v Sigma)xi` / HENCE THE M5-622 FORCED MAGNITUDE CHANNEL `P nabla sigma` IS A TRUE TRANSVERSE STRAIN-DERIVATIVE CHARGE, WHILE DIRECTION VARIATION IS COUPLED TO THE GAP BETWEEN THE AXIAL STRAIN EIGENVALUE AND THE TWO TRANSVERSE EIGENVALUES / THE BRANCH SPLITS INTO SIMPLE-GAP STRAIN-DERIVATIVE ACTIVITY OR NEAR/EXACT STRAIN-EIGENVALUE COLLISION / GLOBAL REGULARITY REMAINS UNPROVED.**
+
+---
+
+## 1. CE-H strain eigenline
+
+On the global CE-H branch,
+
+\[
+\boxed{\Sigma\xi=\sigma\xi,}
+\qquad |\xi|=1,
+\]
+
+with `Sigma` symmetric and trace free.
+
+Let `v` be any fixed spatial direction and write
+
+\[
+\partial_v:=v\cdot\nabla.
+\]
+
+Differentiate the eigenline equation:
+
+\[
+(\partial_v\Sigma)\xi
++\Sigma(\partial_v\xi)
+=(\partial_v\sigma)\xi
++\sigma(\partial_v\xi).
+\]
+
+---
+
+## 2. Exact Hellmann–Feynman identity
+
+Take the inner product with `xi`.
+
+Because
+
+\[
+\xi\cdot\partial_v\xi=0
+\]
+
+and `Sigma` is symmetric,
+
+\[
+\xi\cdot\Sigma(\partial_v\xi)
+=(\Sigma\xi)\cdot\partial_v\xi
+=\sigma\xi\cdot\partial_v\xi=0.
+\]
+
+Therefore
+
+\[
+\boxed{
+\partial_v\sigma
+=\xi\cdot(\partial_v\Sigma)\xi.
+}
+\]
+
+Equivalently, componentwise,
+
+\[
+\boxed{
+\partial_j\sigma
+=\xi_i(\partial_j\Sigma_{ik})\xi_k.
+}
+\]
+
+Thus
+
+\[
+\boxed{
+\nabla\sigma
+=\big(\xi\cdot(\partial_j\Sigma)\xi\big)_{j=1}^3.
+}
+\]
+
+The M5-622 forcing term `P nabla sigma` is therefore not an independent scalar-gradient ansatz; it is the transverse derivative of the strain tensor sampled in the vorticity eigenline.
+
+---
+
+## 3. Transverse eigenvector derivative equation
+
+Let
+
+\[
+P:=I-\xi\otimes\xi.
+\]
+
+Project the differentiated eigenline equation onto the plane perpendicular to `xi`:
+
+\[
+P(\partial_v\Sigma)\xi
++P(\Sigma-\sigma I)(\partial_v\xi)=0.
+\]
+
+Since
+
+\[
+\partial_v\xi\perp\xi,
+\]
+
+and the transverse plane is invariant under the symmetric matrix `Sigma`, define
+
+\[
+\Sigma_\perp:=P\Sigma P|_{\xi^\perp}.
+\]
+
+Then
+
+\[
+\boxed{
+(\Sigma_\perp-\sigma I)\partial_v\xi
+=-P(\partial_v\Sigma)\xi.
+}
+\]
+
+This is the exact eigenframe derivative equation.
+
+---
+
+## 4. Eigenvalue-gap form
+
+Let the two transverse eigenvalues be
+
+\[
+\lambda_2=-\frac\sigma2+\delta,
+\qquad
+\lambda_3=-\frac\sigma2-\delta.
+\]
+
+Define the axial-to-transverse spectral gap
+
+\[
+\boxed{
+ g:=\min\{|\lambda_2-\sigma|,|\lambda_3-\sigma|\}.
+}
+\]
+
+Since
+
+\[
+\lambda_2-\sigma=-\frac{3\sigma}{2}+\delta,
+\]
+
+and
+
+\[
+\lambda_3-\sigma=-\frac{3\sigma}{2}-\delta,
+\]
+
+we have
+
+\[
+\boxed{
+ g=\min\left\{\left|\delta-\frac{3\sigma}{2}\right|,
+\left|\delta+\frac{3\sigma}{2}\right|\right\}.
+}
+\]
+
+---
+
+## 5. Simple-gap estimate
+
+On a region where
+
+\[
+g\ge g_0>0,
+\]
+
+the transverse operator `Sigma_perp-sigma I` is invertible and
+
+\[
+\| (\Sigma_\perp-\sigma I)^{-1}\|
+\le g_0^{-1}.
+\]
+
+Hence
+
+\[
+\boxed{
+|\partial_v\xi|
+\le
+\frac1{g_0}|P(\partial_v\Sigma)\xi|.
+}
+\]
+
+Conversely, using the uniform strain cap
+
+\[
+\|\Sigma\|_\infty\le S_*,
+\]
+
+we have
+
+\[
+|P(\partial_v\Sigma)\xi|
+\le C(S_*)|\partial_v\xi|
+\]
+
+only after the exact equation is used; more precisely,
+
+\[
+\boxed{
+|P(\partial_v\Sigma)\xi|
+=| (\Sigma_\perp-\sigma I)\partial_v\xi|
+\le 2S_*|\partial_v\xi|.
+}
+\]
+
+Thus, away from eigenvalue collision, direction gradients and off-diagonal strain derivatives are quantitatively equivalent up to the spectral gap.
+
+---
+
+## 6. Relation to the M5-622 forcing term
+
+M5-622 introduced
+
+\[
+F_\gamma=P\nabla(\sigma+\kappa).
+\]
+
+The strain part is
+
+\[
+F_\sigma:=P\nabla\sigma.
+\]
+
+The Hellmann–Feynman identity gives
+
+\[
+\boxed{
+F_\sigma
+=P\left(\xi\cdot(\nabla\Sigma)\xi\right).
+}
+\]
+
+Therefore a quantitative forced branch
+
+\[
+|F_\sigma|\ge f_*>0
+\]
+
+is a genuine fixed transverse `nabla Sigma` charge.
+
+Since `nabla Sigma` is an order-zero Calderón–Zygmund transform of `nabla W`, it cannot be supplied by a perfectly derivative-free vorticity field.
+
+However the transform is nonlocal, so no pointwise source localization is claimed here.
+
+---
+
+## 7. Remote-source audit
+
+The compact hard hull has all-order Sobolev tail tightness and the earlier Biot–Savart derivative-decoupling estimates.
+
+For a fixed active core ball, split
+
+\[
+\nabla\Sigma
+=(\nabla\Sigma)_{core}
++(\nabla\Sigma)_{far}.
+\]
+
+The derivative of the strain kernel gains one further spatial power, so the remote contribution obeys a bound of schematic form
+
+\[
+\boxed{
+\| (\nabla\Sigma)_{far}\|_{L^\infty(B_L)}
+\le
+\varepsilon_{\nabla\Sigma}(R),
+\qquad
+\varepsilon_{\nabla\Sigma}(R)\to0.
+}
+\]
+
+Thus an order-one `F_sigma` event in the finite active core cannot be paid by the endpoint spectator tail.
+
+It must be generated by finite-core derivative structure.
+
+---
+
+## 8. Pointwise gap dichotomy
+
+Fix a small threshold `g0>0`.
+
+Every point with a quantitative strain-gradient event satisfies one of
+
+\[
+\boxed{g\ge g_0}
+\]
+
+or
+
+\[
+\boxed{g<g_0.}
+\]
+
+Accordingly the forced strain branch splits into
+
+### SG — simple-gap strain-derivative branch
+
+\[
+\boxed{
+|F_\sigma|\ge f_*\quad\text{and}\quad g\ge g_0.
+}
+\]
+
+Here the strain eigenframe is quantitatively rigid and all direction variation is controlled by `nabla Sigma` through the gap equation.
+
+### EC — near-eigenvalue-collision branch
+
+\[
+\boxed{
+|F_\sigma|\ge f_*\quad\text{and}\quad g<g_0.
+}
+\]
+
+Here the axial strain eigenvalue approaches one transverse eigenvalue and the eigenvector derivative estimate loses coercivity.
+
+This branch must be retained explicitly.
+
+---
+
+## 9. Exact collision geometry
+
+At exact collision,
+
+\[
+g=0.
+\]
+
+Then one transverse eigenvalue equals the axial eigenvalue `sigma`.
+
+Because `tr Sigma=0`, the strain spectrum is necessarily
+
+\[
+\boxed{
+\{\sigma,\sigma,-2\sigma\}.
+}
+\]
+
+In the parameterization
+
+\[
+\lambda_{2,3}=-\frac\sigma2\pm\delta,
+\]
+
+exact collision means
+
+\[
+\boxed{|\delta|=\frac32|\sigma|.}
+\]
+
+The transverse determinant from M5-609 becomes
+
+\[
+D_\perp
+=\frac{\sigma^2+\rho^2}{4}-\delta^2
+=\frac{\rho^2-8\sigma^2}{4}.
+\]
+
+Therefore the M5-608 cubic identity reduces on an exact-collision state to the specialized relation
+
+\[
+\boxed{
+\int \sigma(\rho^2-8\sigma^2)\,dy=0.
+}
+\]
+
+This is a strong algebraic constraint but not a contradiction.
+
+---
+
+## 10. Collision cannot be silently treated as axisymmetry
+
+A repeated strain eigenvalue creates a two-dimensional eigenspace but does not by itself imply rotational symmetry, axisymmetry, or no-swirl structure.
+
+No such classification theorem has been established in the current audit.
+
+Thus the implication
+
+\[
+\text{strain eigenvalue multiplicity two}
+\Longrightarrow
+\text{axisymmetric no-swirl}
+\]
+
+is forbidden.
+
+The exact collision branch remains a genuine PDE branch.
+
+---
+
+## 11. Updated forced-magnitude frontier
+
+Combining M5-622 and this note,
+
+\[
+\boxed{
+F_{\nabla(\sigma+\kappa)}
+\Longrightarrow
+F_{\nabla\kappa}
+\lor
+SG_{\nabla\Sigma}^{gap}
+\lor
+EC_{strain\ collision}.
+}
+\]
+
+The first branch is already tied to the generalized `kappa`-force dipole of M5-615--617.
+
+The second is a finite-core strain-derivative source branch with a quantitative spectral gap.
+
+The third is a near/repeated strain-eigenvalue branch.
+
+---
+
+## 12. Highest-value next target
+
+The next calculation should use the material strain-evolution equation to determine whether the repeated-eigenvalue condition can persist under CE-H recurrence.
+
+In particular, differentiating the similarity velocity equation gives an exact equation for `Sigma`; projecting it between the repeated eigenspace and the simple eigendirection will expose the pressure-Hessian / viscous-strain terms required to preserve multiplicity.
+
+If multiplicity is not dynamically invariant, repeated near-collisions must continually cross the simple-gap branch and pay `nabla Sigma` activity.
+
+---
+
+## 13. Firewall
+
+This note derives exact differential identities but does not infer local vorticity packets directly from a pointwise Calderón–Zygmund strain derivative.
+
+Remote-tail decoupling only shows the payer is finite-core; source localization remains a separate step.
+
+\[
+\boxed{\text{GLOBAL REGULARITY REMAINS UNPROVED.}}
