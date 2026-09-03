@@ -26,6 +26,9 @@ The provisional M16 source files are retained for provenance and are superseded 
 - **M17-012** — compact hard-hull bounds upgrade the recurrent nodal mean to a positive-density set of strongly positive `kappa_0` phases. Uniform Jacobian nondegeneracy plus derivative bounds produce a fixed finite-radius positive-`kappa` sheath with `∫ kappa|W|^2 >= Q_* > 0`; the global signed identity then forces a fixed-size negative-`kappa` payer. The pure measure-zero escape is therefore closed on the uniformly regular recurrent-filament branch, linking M17 directly to the M5 zero-level/sheath-turnover and flux-hysteresis mechanisms.
 - **M17-013** — the semilinear great-circle system closes the material dynamics of `(q,x_3)` as `q'=H`, `x_3'=G+x_3/2`, with `H_q=kappa-G_3-1/2`. Hence the reduced label-flow divergence is exactly `kappa`, and its area Jacobian equals the M5 amplification factor `a=exp∫kappa`. At a regular `kappa=0` root, `h=F_qq V_rel`; M5-685 hysteresis is therefore label-area hysteresis, not an arbitrary oscillator. Scalar hysteresis alone does not distinguish axisymmetric from non-axisymmetric geometry.
 - **M17-014** — the M17-010 law `D_B G_h=(kappa-3/2)G_h` freezes the normalized nodal-Jacobian shape. The winding sign, singular-value ratio, determinant-normalized shape tensor, and anisotropy index are material invariants. A regular axisymmetric no-swirl axis has positive winding and equal singular values. Therefore a negative-index or anisotropic positive-index regular filament cannot enter the axisymmetric firewall without nodal rank loss/degeneration.
+- **M17-015** — on a vertical genuinely non-axisymmetric regular core, the matrix compatibility law `(G_q-1)Q=lambda_3 I` holds. Every non-scalar critical Hessian `Q` therefore forces `G_q=1` and `partial_3 lambda=0` at the core, adding an exact vertical-velocity and strain constraint to the non-axisymmetric branch.
+- **M17-016** — for a vertical filament centered on the candidate symmetry axis, the angular defect `chi=(x_1 partial_2-x_2 partial_1)q` satisfies the same real-potential equation `Delta chi=kappa chi`. Within the retained finite-energy/decay class, `chi≡0` is equivalent to the axisymmetric no-swirl firewall. A conformal positive first-order core with `chi!=0` must expose non-axisymmetry at a finite higher angular jet; compactness gives a finite-order/jet-floor dichotomy on branches uniformly separated from the firewall.
+- **M17-017** — with `psi=L phi`, the angular defect satisfies the exact coupled material-elliptic system `D_B chi=(kappa-partial_3U_3-1/2)chi-grad_h psi·grad_h q`, `partial_3 psi=(G_q-1)chi`, `Delta_h psi=-partial_3(G_q chi)`, together with `Delta chi=kappa chi`. On vertical non-scalar cores `G_q=1`, so the axial potential-defect source vanishes at the core. This is the first direct PDE coupling between the M17-013 hysteresis channel and non-axisymmetric shape.
 
 ## Current frontier
 
@@ -70,7 +73,7 @@ J_L=a,
 
 so the M5-685 flux-weighted `kappa=0` hysteresis is exactly an expansion/contraction hysteresis of the reduced material label area.
 
-### Rank one — nodal shape channel
+### Rank one — first-order nodal shape channel
 For every uniformly regular recurrent winding filament,
 
 \[
@@ -109,108 +112,170 @@ G_{index-}^{core}.
 }
 \]
 
-- `G_conf+^core`: positive-index conformal first-order core (`A=1`), locally compatible with the axisymmetric firewall but not sufficient for global axisymmetry.
+- `G_conf+^core`: positive-index conformal first-order core (`A=1`).
 - `G_aniso+^core`: positive winding but `A>1`; cannot become axisymmetric while regular.
 - `G_index-^core`: negative-index simple zero; cannot become the positive-index axisymmetric core while regular.
 
-For `G_aniso+^core` and `G_index-^core`, an axisymmetric/no-swirl escape requires rank loss or finite-jet nodal degeneration first.
-
-## DSD audit conclusion through M17-014
-
-Two formerly conflated channels are now separated:
+### Vertical non-axisymmetric compatibility
+For the latter two classes on a vertical filament,
 
 \[
 \boxed{
-\text{scalar amplification/hysteresis}
-\quad\neq\quad
-\text{horizontal nodal shape}.
+G_q=1,
+\qquad
+\partial_3\lambda=0.
 }
 \]
 
-The scalar channel is described by
+Thus their reduced label flow must sustain the required hysteresis with the exact unit q-sensitivity
 
 \[
-(\kappa,h,a)
+K_q=1
 \]
 
-and reduces to the two-dimensional label flow.
-The geometric channel is described by
+at the core.
 
-\[
-(\operatorname{sgn}\det G_h,\widehat C).
-\]
-
-A proof attempt that tracks only `kappa` can reproduce the known regular axisymmetric firewall and a genuinely non-axisymmetric core with identical scalar history, so it cannot close the branch by itself.
-
-## Current rank-one chain
-
-On the uniformly regular recurrent subbranch,
+### Higher-jet angular defect
+Define
 
 \[
 \boxed{
-R_{nodal}^{uniform}
-\Longrightarrow
-P_{tube}^{+}
-\Longrightarrow
-N_{bulk}^{-}
-\Longrightarrow
-H_{label}
-\quad+
-A_{nodal}.
+\chi=\mathcal Lq,
+\qquad
+\mathcal L=x_1\partial_2-x_2\partial_1.
 }
 \]
 
-Here
-
-- `H_label` is the M17-013/M5-685 area-Jacobian hysteresis requirement;
-- `A_nodal` is the M17-014 fixed nodal-shape class.
-
-The remaining exits are
+Then
 
 \[
 \boxed{
-\text{rank loss / finite-jet turnover}
-\ \lor\ 
-G_{conf+}^{core}\text{ higher-jet axisymmetry test}
-\ \lor\ 
-G_{aniso+}^{core}\text{ recurrent survivor}
-\ \lor\ 
-G_{index-}^{core}\text{ recurrent survivor}.
+\Delta\chi=\kappa\chi.
 }
 \]
 
-## Next target — Nodal Shape–Hysteresis Compatibility Gate (NSHCG)
-
-The highest-value next calculation is to combine
-
-\[
-\Delta q=F(q,x_3,\theta)
-\]
-
-with the materially fixed non-axisymmetric Hessian shape at the critical filament and the reduced label-area hysteresis.
-
-The target descriptors are
-
-1. third/fourth jets of `q` at the nondegenerate critical filament;
-2. curvature and enclosed area of nearby q-level contours;
-3. their material transport under `q'=H`, `x_3'=K`;
-4. compatibility with the M17-012 finite-radius positive sheath / negative payer cycle.
-
-The desired classification is
+Within the centered vertical finite-energy branch,
 
 \[
 \boxed{
-\text{persistent non-axisymmetric shape+hysteresis}
-\Longrightarrow
-\text{finite-jet degeneration}
-\ \lor\ 
-\text{regular higher-jet model}
-\ \lor\ 
-\text{new signed incompatibility}.
+\chi\equiv0
+\iff
+G_{axis/no\text{-}swirl}.
 }
 \]
 
-The rank-two director-area branch remains separately open and must be closed before any full proof claim.
+Thus a conformal positive core splits further:
+
+\[
+\boxed{
+G_{conf+}^{core}
+\Longrightarrow
+G_{axis/no\text{-}swirl}
+\ \lor\ 
+A_{high\text{-}jet}^{nonaxis}.
+}
+\]
+
+On a compact branch uniformly separated from the firewall, `A_high-jet^nonaxis` has a uniformly finite angular-defect order and nonzero jet floor.
+
+### Exact shape-hysteresis PDE coupling
+With
+
+\[
+\psi=\mathcal L\phi,
+\]
+
+we now have
+
+\[
+\boxed{
+\begin{aligned}
+\Delta\chi
+&=\kappa\chi,\\
+D_B\chi
+&=\left(\kappa-\partial_3U_3-\frac12\right)\chi
+-\nabla_h\psi\cdot\nabla_hq,\\
+\partial_3\psi
+&=(G_q-1)\chi,\\
+\Delta_h\psi
+&=-\partial_3(G_q\chi).
+\end{aligned}
+}
+\]
+
+The scalar hysteresis and geometric non-axisymmetry channels are therefore no longer merely compared; they are coupled by an exact PDE system.
+
+## DSD audit conclusion through M17-017
+
+The rank-one branch has passed through three descriptor levels:
+
+\[
+\boxed{
+\text{scalar }(\kappa,h,a)
+\to
+\text{first nodal shape }G_h
+\to
+\text{higher angular defect }(\chi,\psi).
+}
+\]
+
+At each level a shortcut was removed:
+
+- scalar hysteresis does not distinguish axisymmetry;
+- conformal first-order shape does not prove axisymmetry;
+- pointwise `chi=0` on the axis does not prove symmetry because the information lies in jets.
+
+The exact firewall is now `chi≡0`, while the genuinely non-axisymmetric branch is a finite-order nonzero defect governed by the coupled system above.
+
+## Current rank-one hard classes
+
+After preserving the known regular firewall, the genuinely non-axisymmetric regular classes are
+
+\[
+\boxed{
+G_{index-}^{core},
+\qquad
+G_{aniso+}^{core},
+\qquad
+A_{high\text{-}jet}^{nonaxis}.
+}
+\]
+
+Each must satisfy simultaneously
+
+\[
+\boxed{
+\langle\kappa_0\rangle=\frac32,
+\qquad
+Q_+\ge Q_*>0,
+\qquad
+Q_-\ge P+Q_*,
+\qquad
+\overline G_\Phi(0)<0,
+}
+\]
+
+plus the angular-defect PDE system.
+
+## Next target — Signed Angular-Defect Transfer Gate (SADTG)
+
+The next calculation is to seek a signed integral or q-level-set identity for
+
+\[
+\nabla_h\psi\cdot\nabla_hq
+\]
+
+using
+
+\[
+\Delta_h\psi=-\partial_3(G_q\chi),
+\qquad
+\Delta q=F(q,x_3,\theta).
+\]
+
+The aim is to decide whether the nonzero angular defect is forced into the same negative-`kappa` payer required by M17-012, or whether a closed regular shape-hysteresis cycle remains possible.
+
+A second independent branch remains open throughout: `R_2^{director-area}`.
 
 \[
 \boxed{\text{GLOBAL REGULARITY REMAINS UNPROVED.}}
