@@ -1,0 +1,286 @@
+# DSD M5-685 — The conserved base-flux measure has zero mean kappa-current; the survivor requires flux-weighted hysteresis
+
+Date: 2026-09-03
+
+Status: **INTERNAL PHASE-STRUCTURE REDUCTION / PUSHING THE FIXED BASE TRANSVERSE-FLUX MEASURE THROUGH MATERIAL KAPPA DYNAMICS GIVES THE SOURCE-FREE CONTINUITY EQUATION `partial_theta F0 + partial_k G0 = 0`, SO ITS RECURRENT MEAN CURRENT VANISHES IDENTICALLY / THE CURRENT-FLUX MEASURE OF M5-681 DIFFERS BY THE MATERIAL AMPLIFICATION FACTOR `a_lambda=exp(int kappa)` AND HAS `Gbar_Phi(0)<0`; HENCE AT KAPPA ZERO CROSSINGS `h=D_B kappa` MUST HAVE ZERO UNWEIGHTED MEAN BUT STRICTLY NEGATIVE FLUX-WEIGHTED MEAN / SINCE `a'=kappa a`, AT `kappa=0` ONE HAS `a''=h a`, SO DOWNWARD CROSSINGS ARE SYSTEMATICALLY FLUX-HEAVY LOCAL MAXIMA AND UPWARD CROSSINGS FLUX-LIGHT LOCAL MINIMA / THE LAST NESTED CONVEYOR IS THEREFORE A PDE-SUSTAINED HYSTERESIS CYCLE, NOT AN ARBITRARY STATIONARY CURRENT / GLOBAL REGULARITY REMAINS UNPROVED.**
+
+---
+
+## 1. Fixed base transversal measure
+
+Choose the fixed base time and finite transverse atlas of M5-647.
+After a measurable first-chart assignment, let
+
+\[
+\boxed{d\mu_0(\lambda)}
+\]
+
+be the fixed positive base flux measure on material vortex-line labels.
+
+This measure is used only as a label reference; it is not updated by the later viscous change of current vorticity flux.
+
+Let
+
+\[
+\kappa_\lambda(\theta)
+\]
+
+be the multiplier on the material label and
+
+\[
+\boxed{h_\lambda=D_B\kappa_\lambda.}
+\]
+
+---
+
+## 2. Push the fixed label measure to kappa-space
+
+Define
+
+\[
+\boxed{
+F_0(k,\theta)
+:=
+\int\delta(k-\kappa_\lambda(\theta))d\mu_0(\lambda),
+}
+\]
+
+and
+
+\[
+\boxed{
+G_0(k,\theta)
+:=
+\int h_\lambda(\theta)
+\delta(k-\kappa_\lambda(\theta))d\mu_0(\lambda).
+}
+\]
+
+For a smooth test function `psi`,
+
+\[
+\frac d{d\theta}
+\int\psi(\kappa_\lambda)d\mu_0
+=
+\int\psi'(\kappa_\lambda)h_\lambda d\mu_0.
+\]
+
+Therefore
+
+\[
+\boxed{
+\partial_\theta F_0
++\partial_kG_0
+=0.
+}
+\]
+
+There is no source term because the base label measure itself is fixed.
+
+---
+
+## 3. Recurrent mean base current vanishes
+
+On the retained population `kappa` lies in a fixed compact interval after restricting to the high-amplitude core.
+Take a recurrent/invariant long-time average.
+Then
+
+\[
+\partial_k\overline G_0=0.
+\]
+
+Outside the compact support there is no kappa current, so the constant is zero:
+
+\[
+\boxed{
+\overline G_0(k)\equiv0.
+}
+\]
+
+In particular,
+
+\[
+\boxed{
+\overline G_0(0)=0.
+}
+\]
+
+Thus there is no net **label-number/base-flux** current through the zero multiplier level.
+Upward and downward material crossings balance in the fixed label measure.
+
+---
+
+## 4. Current material-flux weight
+
+The current flux of one label is
+
+\[
+d\mu_\theta(\lambda)
+=a_\lambda(\theta)d\mu_0(\lambda),
+\]
+
+where
+
+\[
+\boxed{
+a_\lambda(\theta)
+:=
+\exp\left[
+\int_{\theta_0}^{\theta}\kappa_\lambda(\tau)d\tau
+\right].
+}
+\]
+
+Then
+
+\[
+\boxed{a_\lambda'=\kappa_\lambda a_\lambda.}
+\]
+
+The M5-681 current is
+
+\[
+\boxed{
+G_\Phi(k,\theta)
+=
+\int h_\lambda a_\lambda
+\delta(k-\kappa_\lambda)d\mu_0.
+}
+\]
+
+M5-681 forces, on the nontrivial recharge/negative-payer survivor,
+
+\[
+\boxed{
+\overline G_\Phi(0)<0.
+}
+\]
+
+---
+
+## 5. Exact zero-crossing phase bias
+
+Compare the two currents at `k=0`:
+
+\[
+\overline{
+\int h_\lambda
+\delta(\kappa_\lambda)d\mu_0
+}=0,
+\]
+
+while
+
+\[
+\overline{
+\int h_\lambda a_\lambda
+\delta(\kappa_\lambda)d\mu_0
+}<0.
+\]
+
+Thus the survivor requires a strict negative correlation between material kappa-crossing velocity and current flux amplification at the zero level.
+Symbolically,
+
+\[
+\boxed{
+\operatorname{Cov}_{\kappa=0}(h,a)<0.
+}
+\]
+
+More explicitly, downward crossings `h<0` must on average carry larger current flux weight than upward crossings `h>0`.
+
+---
+
+## 6. Flux extrema occur exactly at zero crossings
+
+Differentiate the amplification factor twice:
+
+\[
+a''
+=h a+\kappa a'
+=(h+\kappa^2)a.
+\]
+
+At a zero crossing,
+
+\[
+\boxed{
+a'=0,
+\qquad
+a''=ha.
+}
+\]
+
+Therefore
+
+- if `h<0`, the crossing is a local maximum of current material flux;
+- if `h>0`, the crossing is a local minimum of current material flux.
+
+The strict mean current
+
+\[
+\overline G_\Phi(0)<0
+\]
+
+means precisely that the downward-crossing maxima dominate the upward-crossing minima in flux weight.
+
+---
+
+## 7. Relation to M5-653 and M5-680
+
+The M5-653 sinusoidal oscillator realizes exactly this type of hysteresis:
+its flux is largest in one crossing phase and smallest in the opposite crossing phase.
+
+M5-680 can also assign such a recharge/retirement phase bias generation by generation.
+
+Therefore the phase condition is not a contradiction by itself.
+Its value is that a real CE-H survivor must produce this hysteresis using the constitutive PDE formula of M5-682 rather than an arbitrary prescribed `h`.
+
+---
+
+## 8. Combine with the constitutive law at kappa=0
+
+M5-682 gives at a zero crossing
+
+\[
+\boxed{
+h
+=L_\rho\kappa
++L_\rho\sigma
++\mathcal R_{geom},
+\qquad(\kappa=0).
+}
+\]
+
+Thus the required sign-changing extrema of `a` must be generated by the balance of
+
+1. weighted spatial curvature of `kappa`;
+2. weighted spatial curvature of the aligned strain eigenvalue `sigma`;
+3. the explicit CE-H geometric remainder.
+
+The final problem is therefore now a constitutive hysteresis problem.
+
+---
+
+## 9. Updated frontier
+
+The nested replacement cascade survives only if the CE-H spatial PDE can sustain, recurrently,
+
+\[
+\boxed{
+\begin{aligned}
+&\text{equal base-measure rates of upward/downward kappa crossings},\\
+&\text{but systematically larger current flux at downward crossings},\\
+&h=L_\rho\kappa+L_\rho\sigma+\mathcal R_{geom}
+\quad\text{on those crossings}.
+\end{aligned}
+}
+\]
+
+The next target is to test whether the weighted diffusion part of `h` admits such a persistent hysteresis after integrating over a full crossing cycle, or whether the strain/geometric terms must pay a nonzero cycle work.
+
+---
+
+\[
+\boxed{\text{GLOBAL REGULARITY REMAINS UNPROVED.}}
+\]
