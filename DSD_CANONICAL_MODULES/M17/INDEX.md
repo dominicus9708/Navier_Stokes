@@ -24,10 +24,12 @@ The provisional M16 source files are retained for provenance and are superseded 
 - **M17-010** — a regular winding core forces transverse strain isotropy `spec Sigma = {lambda,lambda,-2lambda}`. The nodal Jacobian obeys exact multiplier laws; recurrent regular horizontal Jacobian forces `⟨kappa⟩_nodal = 3/2`, while a persistent slanted derivative additionally forces `⟨lambda⟩_nodal = 0`.
 - **M17-011** — the regular nodal skeleton is enstrophy-measure-thin: `∫_{D_r} kappa|W|^2 = O(r^4)` per unit filament length, while transverse gradient energy and radial boundary flux are both `O(r^2)` with the same leading coefficient. Hence the positive nodal mean does not force an infinitesimal sign contradiction. Differentiating `Delta W = kappa W` at the zero gives the exact third-jet law `Delta G = kappa_0 G` for `G=∇W`, and the recurrent nodal constraint becomes a normalized Jacobian-curvature mean of `3/2`.
 - **M17-012** — compact hard-hull bounds upgrade the recurrent nodal mean to a positive-density set of strongly positive `kappa_0` phases. Uniform Jacobian nondegeneracy plus derivative bounds produce a fixed finite-radius positive-`kappa` sheath with `∫ kappa|W|^2 >= Q_* > 0`; the global signed identity then forces a fixed-size negative-`kappa` payer. The pure measure-zero escape is therefore closed on the uniformly regular recurrent-filament branch, linking M17 directly to the M5 zero-level/sheath-turnover and flux-hysteresis mechanisms.
+- **M17-013** — the semilinear great-circle system closes the material dynamics of `(q,x_3)` as `q'=H`, `x_3'=G+x_3/2`, with `H_q=kappa-G_3-1/2`. Hence the reduced label-flow divergence is exactly `kappa`, and its area Jacobian equals the M5 amplification factor `a=exp∫kappa`. At a regular `kappa=0` root, `h=F_qq V_rel`; M5-685 hysteresis is therefore label-area hysteresis, not an arbitrary oscillator. Scalar hysteresis alone does not distinguish axisymmetric from non-axisymmetric geometry.
+- **M17-014** — the M17-010 law `D_B G_h=(kappa-3/2)G_h` freezes the normalized nodal-Jacobian shape. The winding sign, singular-value ratio, determinant-normalized shape tensor, and anisotropy index are material invariants. A regular axisymmetric no-swirl axis has positive winding and equal singular values. Therefore a negative-index or anisotropic positive-index regular filament cannot enter the axisymmetric firewall without nodal rank loss/degeneration.
 
 ## Current frontier
 
-The director branch has split into rank two and rank one:
+The director branch remains
 
 \[
 \boxed{
@@ -42,8 +44,107 @@ R_1^{great-circle/winding}.
 ### Rank two
 `R_2` carries a nonzero pullback of the `S^2` area 2-form. In material coordinates the director-area charge is exactly conserved. This is not yet a contradiction; the remaining question is its compatibility with finite transverse vorticity flux and recurrent material cross-sections.
 
-### Rank one
-The uniformly regular recurrent great-circle branch is now
+### Rank one — scalar label dynamics
+On every regular great-circle region,
+
+\[
+\boxed{
+\begin{aligned}
+q'&=H(q,x_3,\theta),\\
+x_3'&=K(q,x_3,\theta),\\
+K&=G+\frac12x_3,\\
+\partial_qH+\partial_3K&=\kappa.
+\end{aligned}
+}
+\]
+
+Thus
+
+\[
+\boxed{
+J_L'=\kappa J_L,
+\qquad
+J_L=a,
+}
+\]
+
+so the M5-685 flux-weighted `kappa=0` hysteresis is exactly an expansion/contraction hysteresis of the reduced material label area.
+
+### Rank one — nodal shape channel
+For every uniformly regular recurrent winding filament,
+
+\[
+\boxed{
+D_BG_h
+=\left(\kappa-\frac32\right)G_h.
+}
+\]
+
+Therefore
+
+\[
+\boxed{
+\operatorname{sgn}\det G_h,
+\quad
+\widehat C=
+\frac{G_h^TG_h}{|\det G_h|},
+\quad
+\mathcal A=\frac12\operatorname{tr}\widehat C
+}
+\]
+
+are material invariants.
+
+The regular nodal core splits into
+
+\[
+\boxed{
+R_{nodal}^{uniform}
+\Longrightarrow
+G_{conf+}^{core}
+\ \lor\ 
+G_{aniso+}^{core}
+\ \lor\ 
+G_{index-}^{core}.
+}
+\]
+
+- `G_conf+^core`: positive-index conformal first-order core (`A=1`), locally compatible with the axisymmetric firewall but not sufficient for global axisymmetry.
+- `G_aniso+^core`: positive winding but `A>1`; cannot become axisymmetric while regular.
+- `G_index-^core`: negative-index simple zero; cannot become the positive-index axisymmetric core while regular.
+
+For `G_aniso+^core` and `G_index-^core`, an axisymmetric/no-swirl escape requires rank loss or finite-jet nodal degeneration first.
+
+## DSD audit conclusion through M17-014
+
+Two formerly conflated channels are now separated:
+
+\[
+\boxed{
+\text{scalar amplification/hysteresis}
+\quad\neq\quad
+\text{horizontal nodal shape}.
+}
+\]
+
+The scalar channel is described by
+
+\[
+(\kappa,h,a)
+\]
+
+and reduces to the two-dimensional label flow.
+The geometric channel is described by
+
+\[
+(\operatorname{sgn}\det G_h,\widehat C).
+\]
+
+A proof attempt that tracks only `kappa` can reproduce the known regular axisymmetric firewall and a genuinely non-axisymmetric core with identical scalar history, so it cannot close the branch by itself.
+
+## Current rank-one chain
+
+On the uniformly regular recurrent subbranch,
 
 \[
 \boxed{
@@ -53,96 +154,63 @@ P_{tube}^{+}
 \Longrightarrow
 N_{bulk}^{-}
 \Longrightarrow
-Z_\kappa
-\ \lor\ 
-D_\kappa^{sing}
-\ \lor\ 
-G_{axis/no\text{-}swirl}
-\ \lor\ 
-H_{CE-H}^{nonaxis}.
+H_{label}
+\quad+
+A_{nodal}.
 }
 \]
 
-- `P_tube^+`: positive-density finite-radius positive-`kappa` sheath forced by `⟨kappa_0⟩=3/2`, compactness, and the nodal Jacobian lower bound.
-- `N_bulk^-`: compensating negative weighted payer with fixed lower bound on every strongly positive nodal phase.
-- `Z_kappa`: regular zero-level/sheath-turnover channel, linking to M5-638.
-- `D_kappa^{sing}`: singular or critical zero-level geometry, rank loss, or finite-jet nodal turnover.
-- `G_axis/no-swirl`: known regular axisymmetric no-swirl firewall model.
-- `H_CE-H^{nonaxis}`: genuinely non-axisymmetric recurrent constitutive hysteresis branch, linking to M5-685.
+Here
 
-The broader rank-one branch still contains `T_nodal^{finite-jet}` and non-uniform regularity exits outside the M17-010 bounded-Jacobian hypothesis.
+- `H_label` is the M17-013/M5-685 area-Jacobian hysteresis requirement;
+- `A_nodal` is the M17-014 fixed nodal-shape class.
 
-## DSD audit conclusion through M17-012
-
-The former apparent sign conflict
-
-\[
-\langle\kappa\rangle_{nodal}=\frac32
-\quad\text{versus}\quad
-\int\kappa|W|^2=-P<0
-\]
-
-cannot be closed at infinitesimal radius because the nodal `|W|^2` measure is quartically thin.
-However, compactness and uniform regularity prevent the positive nodal signal from remaining measure-zero forever:
+The remaining exits are
 
 \[
 \boxed{
-W=0
-\to
-G=\nabla W\neq0
-\to
-|W|\gtrsim |z|
-\to
-Q_+\ge Q_*>0
-\to
-Q_-\ge P+Q_*.
-}
-\]
-
-Thus the infinitesimal sign-contradiction route is pruned, while the pure measure-zero escape is also pruned on the uniformly regular recurrent subbranch.
-The problem has become a finite-radius payer/zero-crossing/hysteresis classification problem.
-
-## Next target — non-axisymmetric constitutive hysteresis gate
-
-The highest-value next calculation is to combine the M17 recurrent core/sheath constraints
-
-\[
-\boxed{
-\langle\kappa_0\rangle_{nodal}=\frac32,
-\qquad
-Q_-\ge Q_*>0
-}
-\]
-
-with the M5-685 zero-crossing constitutive law
-
-\[
-\boxed{
-h
-=L_\rho\kappa+L_\rho\sigma+\mathcal R_{geom}
-\qquad(\kappa=0),
-}
-\]
-
-and determine whether a recurrent **non-axisymmetric** great-circle field can generate the required negative flux-weighted crossing bias
-
-\[
-\overline G_0(0)=0,
-\qquad
-\overline G_\Phi(0)<0
-\]
-
-without
-
-\[
-\boxed{
-\text{rank loss}
+\text{rank loss / finite-jet turnover}
 \ \lor\ 
-\text{finite-jet turnover}
+G_{conf+}^{core}\text{ higher-jet axisymmetry test}
 \ \lor\ 
-\text{axisymmetric/no-swirl reduction}.
+G_{aniso+}^{core}\text{ recurrent survivor}
+\ \lor\ 
+G_{index-}^{core}\text{ recurrent survivor}.
 }
 \]
+
+## Next target — Nodal Shape–Hysteresis Compatibility Gate (NSHCG)
+
+The highest-value next calculation is to combine
+
+\[
+\Delta q=F(q,x_3,\theta)
+\]
+
+with the materially fixed non-axisymmetric Hessian shape at the critical filament and the reduced label-area hysteresis.
+
+The target descriptors are
+
+1. third/fourth jets of `q` at the nondegenerate critical filament;
+2. curvature and enclosed area of nearby q-level contours;
+3. their material transport under `q'=H`, `x_3'=K`;
+4. compatibility with the M17-012 finite-radius positive sheath / negative payer cycle.
+
+The desired classification is
+
+\[
+\boxed{
+\text{persistent non-axisymmetric shape+hysteresis}
+\Longrightarrow
+\text{finite-jet degeneration}
+\ \lor\ 
+\text{regular higher-jet model}
+\ \lor\ 
+\text{new signed incompatibility}.
+}
+\]
+
+The rank-two director-area branch remains separately open and must be closed before any full proof claim.
 
 \[
 \boxed{\text{GLOBAL REGULARITY REMAINS UNPROVED.}}
