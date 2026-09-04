@@ -36,35 +36,35 @@ The provisional M16 source files are retained for provenance and superseded by t
 - **M17-018** — every nonzero finite-energy angular defect obeys `int kappa chi^2=-int|grad chi|^2<0`; each defect lobe uses a negative-kappa payer.
 - **M17-019** — the leading angular-defect jet is a harmonic multipole; every positive-core lobe contains a same-lobe kappa sign reversal.
 - **M17-020** — a bounded recurrent `chi` lobe requires strict signed boundary material turnover.
-- **M17-021** — transverse `chi=kappa=0` intersections are dynamically compatible; tangency requires `h=-lambda T`.
+- **M17-021** — transverse `chi=kappa=0` intersections are dynamically compatible; tangency requires an exact compatibility law.
 - **M17-022** — every bounded defect lobe has a spectral-gap negative payer in the `chi^2` measure.
 - **M17-023** — simple kappa-zero components are q-level contours; double zeros are radial extrema and tangency is a degenerate radial-extremum event.
 - **M17-024** — slanted nodal slope obeys `D_Bp=3lambda p`; azimuth is frozen and recurrent nonzero slant gives `mean lambda=0`.
-- **M17-025** — slanted nonconformal core requires `TF[(p dot grad_h)H_phi]=-(G_q-1)Q_0` and `partial_3 H_phi=(G_q-1)Q`.
+- **M17-025** — slanted nonconformal core requires `TF[(p dot grad_h)H_phi]=-(G_q-1)Q_0` and `partial_3H_phi=(G_q-1)Q`.
 - **M17-026** — rank two has a divergence-free director-area current `J_xi`; `J_xi` and rescaled vorticity `W/a` obey the same Cauchy transport law.
 - **M17-027** — `Delta rho=(kappa+|grad xi|^2)rho` and `|grad xi|^2>=2|J_xi|`; rank-two amplitude maxima are strictly negative-kappa payers.
-- **M17-028** — rank-two obliquity has a material invariant decomposition; recurrent obliquity with recurrent area gives a mean strain constraint.
+- **M17-028** — rank-two obliquity has a material-invariant decomposition and recurrent mean-strain constraint.
 - **M17-029** — parallel rank two is a straight-line congruence with Riccati focusing law.
 - **M17-030** — the complete persistent parallel rank-two branch is excluded in the retained finite-energy/decay class.
-- **M17-031** — vortex-direction curvature `b=(xi dot grad)xi` obeys `D_Bb=-(sigma+1/2)b`; area-curvature product has exact decay.
+- **M17-031** — vortex-direction curvature obeys an exact material decay law and area-curvature product law.
 - **M17-032** — recurrent curved oblique rank two with recurrent nonzero transverse area is excluded by incompatible mean-kappa laws.
-- **M17-033** — exceptional `j_xi=0` full-rank-two geometry reduces to two scalar director-jet multipliers and a resonant mean strain frame.
+- **M17-033** — exceptional `j_xi=0` full-rank-two geometry reduces to two frozen director-jet directions and the resonant mean frame `(-1/2,1,-1/2)`.
 - **M17-034** — area-curvature density has a source-free Eulerian continuity law and exact turnover ledger.
-- **M17-035** — weighted-harmonic kernel projection becomes geometric; conformal pure-kernel geometry forces linewise constant amplitude.
+- **M17-035** — weighted-harmonic kernel projection is geometric; conformal pure-kernel geometry forces linewise constant amplitude.
 - **M17-036** — Euclidean flatness closes the complete conformal pure-kernel branch by Riccati blowup.
 - **M17-037** — pure-kernel anisotropy splits into frozen target angle and strain-driven stretch ratio.
 - **M17-038** — orthogonal stretch has diagonal weighted stress and exact `D_xi d=-E D_xi log rho`.
-- **M17-039** — large monotone amplitude drops force anisotropy sign change, conformal approach, or another exit.
-- **M17-040** — linewise amplitude/stretch extrema have exact relative velocity and cross-aligned jet frame.
+- **M17-039** — large monotone amplitude drops force stretch sign change, conformal approach, or another exit.
+- **M17-040** — linewise amplitude/stretch extrema have exact relative velocity and an orthogonal critical cross-aligned jet frame.
 - **M17-041** — frozen-angle pure-kernel rank two carries irreducible weighted-harmonic shear locked to director area.
 - **M17-042** — the shear surface charge is exact but not independent of director-area flux.
 - **M17-043** — persistent slanted Rank-1 alignment requires next-jet material collinearity.
 - **M17-044** — direct similarity Navier--Stokes differentiation reduces slanted persistence to local viscous/pressure higher-jet collinearity.
 - **M17-045** — pressure Poisson is `-Delta P=|Sigma|^2-rho^2/2`; DSAIG sees far harmonic pressure only from degree three upward.
-- **M17-046** — the instantaneous far cubic pressure tensor has an exact source-production / shell-turnover / relative-transport law.
-- **M17-047** — flatness at a cross-aligned unequal-stretch line extremum gives an instantaneous super-Riccati law at maxima.
-- **M17-048** — a complete `n`-tangent maximum critical sheet is excluded.
-- **M17-049** — maximum-surface tilt has an exact material law; its multiplier is the same strain difference driving stretch anisotropy.
+- **M17-046** — the far cubic pressure tensor has an exact source-production / shell-turnover / relative-transport law.
+- **M17-047** — flatness at an orthogonal cross-aligned unequal-stretch line extremum gives `D_nq=2q^2-D_xi g`; maxima are instantaneous super-Riccati events.
+- **M17-048** — a complete `n`-tangent maximum critical sheet is excluded by reciprocal Riccati comparison.
+- **M17-049** — maximum-surface tilt has an exact material law; **audit corrected 2026-09-04** to distinguish transverse strain shear `beta_Sigma=n·Sigma k` from the unrelated M17-047 frame-connection coefficient. The main tilt law survives; the old coefficient substitution was removed.
 - **M17-050** — global enstrophy bounds the remote DSAIG pressure third jet by `O(R^-4)`.
 - **M17-051** — local cubic pressure splits into an explicit source-gradient particular tensor plus harmonic cubic data.
 - **M17-052** — the harmonic cubic is a seven-component whole-space `l=3` pressure-source moment with exact radial formula and `O(R^-4)` tail.
@@ -72,16 +72,25 @@ The provisional M16 source files are retained for provenance and superseded by t
 - **M17-054** — normalized harmonic mismatch obeys `D_Bm_3=Pi_3^prod+Pi_3^rel`; recurrent slant forces zero mean projected production plus transport.
 - **M17-055** — scalar negative-kappa payer is an `l=0` ledger and cannot replace the `l=3` pressure-locking ledger.
 - **M17-056** — the leading positive nodal sheath is even and `l=3`-neutral; the first payer octupole appears at cubic order.
-- **M17-057** — the first local payer octupole is an explicit STF rank-three tensor in `grad kappa`, `grad W`, and `grad^2 W`.
-- **M17-058** — OJRG reduces `grad kappa` to the axial scalar `kappa_3`, gives `A=JQL_p`, and splits principal versus oblique slant. The normalized kappa-gradient octupole coupling is proportional to `sin 2vartheta`.
+- **M17-057** — the first local payer octupole is an explicit STF rank-three tensor in `grad kappa`, `grad W`, and `grad^2W`.
+- **M17-058** — OJRG reduces `grad kappa` to axial `kappa_3` and splits principal versus oblique slant; normalized gradient-octupole coupling is proportional to `sin2vartheta`.
 - **M17-059** — on principal slant the curvature octupole collapses to two scalar modes `X_-`, `X_+` with exact homogeneous-rate splitting `6lambda`.
-- **M17-060** — principal slant alignment forces `phi_112=phi_123=phi_233=0`, annihilating both additive curvature-mode sources and producing an exact octupole mode-ratio invariant.
-- **M17-061** — in the nodal gauge `G_3=-2lambda`; both unforced principal curvature modes have recurrent mean exponent `-1/2`, so every uniformly recurrent principal survivor must satisfy `X_-=X_+=0` and hence zero local payer-octupole mismatch.
-- **M17-062** — on that recurrent principal survivor, the local pressure-source-gradient forbidden component also vanishes; full DSAIG reduces exactly to one scalar lock `v_*=m_3`, with `v_*=epsilon sqrt2 partial_1 Delta Sigma_12` local and `m_3` the global STF `l=3` pressure scalar.
-- **M17-063** — material persistence of the lower principal alignment reproduces exactly `v_*=m_3`; it is not a second constraint and does not force viscous silence. Blind higher differentiation is audited out without a new vanishing-order input.
-- **M17-064** — on oblique slant, `kappa_3` obeys `D_Bkappa_3=partial_3h+(2lambda-1/2)kappa_3`; recurrent nonzero `kappa_3` forces `mean[(partial_3h)/kappa_3]=1/2`. Under synchronized `h=f(kappa,theta)`, this becomes `mean f_kappa=1/2` along the nodal orbit.
-- **M17-065** — the full oblique local payer octupole reduces to one scalar `o_loc=epsilon sqrt2/15 [kappa Xi_vartheta+kappa_3 |p||Q|_F^2 sin2vartheta]`, where `Xi_vartheta` is one explicit curvature projection of the seven allowed third-q jets.
-- **M17-066** — `Xi_vartheta` splits into two forced modes with the same negative-mean homogeneous rates as the principal modes; genuine obliquity activates a mixed-label source and leaves two horizontal third-phi source degrees. Persistence of local-octupole silence requires an exact four-channel balance among `h`, `partial_3h`, strain mode splitting, and CE-H third-jet sources.
+- **M17-060** — principal alignment annihilates both additive curvature-mode sources and creates an exact mode-ratio invariant.
+- **M17-061** — nodal gauge `G_3=-2lambda` gives both principal modes recurrent mean exponent `-1/2`; recurrent nonzero modes are excluded, so local payer-octupole mismatch vanishes.
+- **M17-062** — recurrent principal DSAIG reduces exactly to one scalar lock `v_*=m_3`; the local pressure-source-gradient forbidden component vanishes.
+- **M17-063** — first material persistence of the principal lower alignment reproduces `v_*=m_3`; it is not a second independent constraint.
+- **M17-064** — oblique `kappa_3` obeys `D_Bkappa_3=partial_3h+(2lambda-1/2)kappa_3`; recurrent nonzero `kappa_3` requires `mean[(partial_3h)/kappa_3]=1/2`.
+- **M17-065** — full oblique local payer octupole reduces to `o_loc=epsilon sqrt2/15 [kappa Xi_vartheta+kappa_3 |p||Q|_F^2 sin2vartheta]`.
+- **M17-066** — `Xi_vartheta` is a forced two-mode system; genuine obliquity activates mixed-label and residual velocity-third-jet recharge. Persistent local silence requires an exact four-channel `h/partial_3h` compatibility.
+- **M17-067** — a spatially regular genuine-oblique `kappa=0` event has `kappa_3!=0` and is necessarily local-octupole active. Local silence at zero forces `grad kappa=0`; the M5-638 regular material-zero branch lies in the active class.
+- **M17-068** — oblique DSAIG reduces exactly to `v_vartheta-n_vartheta=m_3`, with explicit local Poisson tax `n_vartheta=-epsilon_E(3sqrt2/5)lambda G_q |p| tr(Q) sin2vartheta`.
+- **M17-069** — lifting `m_3` into kappa space gives `partial_theta F_3+partial_kG_3=kF_3+S_3`; bridging M5-685 scalar hysteresis to the global `l=3` current requires the joint crossing covariance `Cov_nu0(m_3,sgn h)`.
+- **M17-070** — on each frozen nonzero-`kappa_3` orientation class, the normalized local zero-crossing octupole orientation factors from the M5 current and inherits its hysteresis direction. No sign-preserving identity to global `m_3` is known, so Rank-1 reaches a local-to-global covariance firewall.
+- **M17-071** — on an orthogonal tilted maximum, the true critical-surface tangent `T=n+Theta xi` obeys `D_Tq=2q^2-C+Theta D_xi q`; sub-Riccati escape requires the sharp payment `A D_xi q<-C^2`.
+- **M17-072** — orthogonal tilt-compensation strength `R_comp=-A(D_xi q)/C^2` shares the stretch multiplier `sigma-sigma_n`; the independent ratio `Lambda=|D_xi q/D_xi g|` is strain free.
+- **M17-073** — flatness gives exact `n`-transport of `Lambda`; weighted harmonicity converts the compensation condition into the stretch-Hessian inequality `E(D_xi q)(D_nD_xi d)>(D_xi^2d)^2`. An amplitude maximum is a strict linewise minimum of `d`.
+- **M17-074** — frozen-angle maximum flatness, after full derivative audit, reduces to `D_nq=2q^2-C-p chi_k`, where `chi_k=D_k log|m/|a|^2|`. The apparent separate `D_kg` channel cancels. A tilted maximum needs `p chi_k-Theta D_xi q>|C|` to become sub-Riccati.
+- **M17-075** — normalized shear `s=m/|a|^2` obeys `D_B log|s|=sigma_n-sigma`; its kernel gradient satisfies `D_B chi_k=D_k(sigma_n-sigma)-(sigma_k+1/2)chi_k`. Uniform recurrent nonzero `chi_k` requires `mean[D_k(sigma_n-sigma)/chi_k]=3/2`.
 
 ---
 
@@ -97,109 +106,58 @@ R_1^{great-circle/winding}.
 }
 \]
 
-**GLOBAL REGULARITY REMAINS UNPROVED.**
+\[
+\boxed{\text{GLOBAL REGULARITY REMAINS UNPROVED.}}
+\]
 
 ---
 
 ## Rank one — current hard structure
 
-The regular non-axisymmetric great-circle branch carries
-
-\[
-\boxed{
-\operatorname{div}_{(q,x_3)}(\mathscr H,K)=\kappa,
-\qquad
-D_BQ=(\kappa-3/2)Q,
-\qquad
-D_Bp=3\lambda p,
-\qquad
-\Delta\chi=\kappa\chi.
-}
-\]
-
-Uniformly recurrent regular winding has
+The recurrent nonaxisymmetric great-circle branch carries
 
 \[
 \boxed{
 \langle\kappa\rangle=\frac32,
 \qquad
 \langle\lambda\rangle=0
-\quad\text{for nonzero recurrent slant}.
+\quad\text{for recurrent nonzero slant},
 }
 \]
 
-The branch also carries a finite positive-kappa sheath, a compensating negative payer, angular-defect spectral payer/turnover, and the M5 flux-weighted kappa-hysteresis obligation.
+plus positive-sheath/negative-payer, angular-lobe turnover, and M5 amplification-weighted kappa-hysteresis obligations.
 
-### Slant split
+### Principal slant
 
-Let `vartheta` be the frozen angle between slant azimuth and the principal axes of the nonconformal nodal Hessian.
+Principal recurrence forces
 
 \[
 \boxed{
-R_1^{slant,nonconf}
-\Longrightarrow
-R_{principal}
-\ \lor\
-R_{oblique}
-\ \lor\
-T_{nodal/rank/interface}.
+X_-=X_+=0,
+\qquad
+\mathfrak o_{loc}=0.
 }
 \]
 
-### Principal recurrent branch
-
-For `sin 2vartheta=0`, the kappa-gradient local payer-octupole projection vanishes identically.
-Principal alignment then annihilates the curvature-mode sources, and recurrence forces
+The entire perpendicular DSAIG balance is the single local/global scalar cocycle
 
 \[
-\boxed{X_-=X_+=0.}
+\boxed{v_*=m_3,}
 \]
-
-Hence
-
-\[
-\boxed{\mathfrak o_{loc}=0.}
-\]
-
-The local Poisson source-gradient forbidden pressure component also vanishes.
-The complete perpendicular DSAIG condition is therefore one scalar equality
 
 \[
 \boxed{
-v_*=m_3,
-}
-\]
-
-with
-
-\[
-\boxed{
-v_*=\varepsilon_E\sqrt2\,\partial_1\Delta\Sigma_{12}
-}
-\]
-
-and
-
-\[
-\boxed{
-D_Bv_*=\Pi_3^{prod}+\Pi_3^{rel},
+D_Bm_3=\Pi_3^{prod}+\Pi_3^{rel},
 \qquad
 \langle\Pi_3^{prod}+\Pi_3^{rel}\rangle=0.
 }
 \]
 
-M17-063 shows that first material persistence of the lower alignment gives the same equation and no extra zero.
-Thus the principal branch is now a single genuine local-viscous/global-pressure scalar cocycle, not an open tensor hierarchy.
+Blind higher differentiation is audited out unless a new vanishing-order or sign input is found.
 
-### Oblique recurrent branch
+### Genuine oblique slant
 
-For
-
-\[
-\sin2\vartheta\ne0,
-\]
-
-the local payer-octupole is
+The local payer octupole is
 
 \[
 \boxed{
@@ -212,60 +170,85 @@ the local payer-octupole is
 }
 \]
 
-The axial multiplier gradient obeys
+The same-marker axial recharge law is
 
 \[
 \boxed{
 D_B\kappa_3
 =\partial_3h+(2\lambda-1/2)\kappa_3,
-\qquad h=D_B\kappa.
+\qquad
+\left\langle\frac{\partial_3h}{\kappa_3}\right\rangle=\frac12
 }
 \]
 
-A uniformly recurrent nonzero-gradient subbranch therefore requires
+on the uniformly nonzero recurrent subbranch.
+
+At a spatially regular `kappa=0` event,
+
+\[
+\boxed{\kappa_3\ne0\Longrightarrow\mathfrak o_{loc}\ne0.}
+\]
+
+The full oblique DSAIG pressure lock is
 
 \[
 \boxed{
-\left\langle\frac{\partial_3h}{\kappa_3}\right\rangle
-=\frac12.
+\mathfrak v_\vartheta-\mathfrak n_\vartheta=m_3,
 }
 \]
 
-The curvature scalar is a driven two-mode system. Genuine obliquity activates
+with
 
 \[
 \boxed{
-\mathcal S_{+,label}
-=P|Q|_F^2\sin2\vartheta\,\mathscr H_{q3}
+\mathfrak n_\vartheta
+=-\varepsilon_E\frac{3\sqrt2}{5}
+\lambda G_qP(\operatorname{tr}Q)\sin2\vartheta.
 }
 \]
 
-and two residual horizontal third-phi source degrees, so the principal source-annihilation closure does not extend to oblique slant.
-
-If the local payer octupole is additionally silent, its material invariance requires
+Its kappa-space lift is
 
 \[
 \boxed{
-0
-=h\Xi_\vartheta
--6\lambda\kappa X_-^\vartheta
-+\kappa(\mathcal S_-^\vartheta+\mathcal S_+^\vartheta)
-+P|Q|_F^2\sin2\vartheta\,\partial_3h.
+\partial_\theta F_3+\partial_kG_3=kF_3+S_3.
 }
 \]
 
-Thus the hard oblique survivor is now an explicit driven local-octupole / global-pressure / h-hysteresis compatibility problem.
+M5-685 fixes the scalar crossing-current sign but not the `l=3` current because the latter contains `m_3`. The exact remaining bridge is
+
+\[
+\boxed{
+\operatorname{Cov}_{\nu_0}(m_3,\operatorname{sgn}h).
+}
+\]
+
+Thus Rank-1 has reached
+
+\[
+\boxed{
+R_1
+\Longrightarrow
+R_{principal}^{scalar-lock}
+\ \lor\
+R_{oblique}^{local/global-covariance}
+\ \lor\
+T_{gradient/rank/interface}.
+}
+\]
+
+The normalized local oblique octupole orientation does inherit the M5 hysteresis direction on each frozen orientation class, but no exact local-to-global sign map to `m_3` has been proved.
 
 ---
 
 ## Rank two — current hard structure
 
-Closed subbranches remain:
+Closed subbranches:
 
 1. complete persistent parallel Rank-2 — M17-030;
 2. same-marker recurrent curved oblique Rank-2 with nonzero transverse area — M17-032;
 3. complete conformal pure-kernel Rank-2 — M17-036;
-4. complete `n`-tangent maximum critical sheet — M17-048.
+4. complete `n`-tangent maximum sheet without sufficient compensation — M17-048/M17-071.
 
 The intrinsic survivor is concentrated on
 
@@ -277,64 +260,191 @@ j_\xi=0,
 }
 \]
 
-with frozen-angle and orthogonal-stretch anisotropic classes plus interface/turnover exits.
-The orthogonal-stretch oscillatory survivor has a tilted moving maximum network; its tilt multiplier is tied to the same strain difference controlling stretch anisotropy.
+with two anisotropic classes.
+
+### Orthogonal stretch class
+
+Define
+
+\[
+d=\frac{|b|^2-|a|^2}{2},
+\qquad
+E=|a|^2+|b|^2,
+\qquad
+g=D_\xi\log\rho.
+\]
+
+Weighted harmonicity gives
+
+\[
+\boxed{D_\xi d=-Eg.}
+\]
+
+At a nondegenerate amplitude maximum,
+
+\[
+\boxed{g=0,\qquad C=D_\xi g<0,}
+\]
+
+which is simultaneously
+
+\[
+\boxed{D_\xi d=0,\qquad D_\xi^2d>0.}
+\]
+
+The true tilted-surface escape requires
+
+\[
+\boxed{
+E(D_\xi q)(D_nD_\xi d)
+>(D_\xi^2d)^2.
+}
+\]
+
+The associated strain-free gradient ratio
+
+\[
+\boxed{\Lambda=|D_\xi q/D_\xi g|}
+\]
+
+has exact material and spatial recharge laws but no fixed sign/monotonicity yet.
+
+### Frozen-angle class
+
+Let
+
+\[
+m=a\cdot b\ne0,
+\qquad
+s:=\frac{m}{|a|^2},
+\qquad
+\chi_k:=D_k\log|s|.
+\]
+
+The normalized shear is the signed inverse stretch ratio times the frozen target angle:
+
+\[
+\boxed{D_B\log|s|=\sigma_n-\sigma.}
+\]
+
+The kernel gradient obeys
+
+\[
+\boxed{
+D_B\chi_k
+=D_k(\sigma_n-\sigma)
+-\left(\sigma_k+\frac12\right)\chi_k.
+}
+\]
+
+On a uniformly recurrent nonzero-gradient material subbranch,
+
+\[
+\boxed{
+\left\langle
+\frac{D_k(\sigma_n-\sigma)}{\chi_k}
+\right\rangle
+=\frac32.
+}
+\]
+
+At a maximum, frozen-angle flatness is
+
+\[
+\boxed{
+D_nq
+=2q^2+|C|-p\chi_k.
+}
+\]
+
+For a tilted critical surface,
+
+\[
+\boxed{
+D_Tq
+=2q^2+|C|-p\chi_k+\Theta D_\xi q.
+}
+\]
+
+Hence sub-Riccati survival requires
+
+\[
+\boxed{
+p\chi_k-\Theta D_\xi q>|C|.}
+\]
+
+Thus frozen-angle survival now requires both a spatial Riccati-compensation payment and an explicit material `3/2` strain-gradient recharge.
 
 ---
 
-## DSD audit conclusion through M17-066
+## DSD audit conclusion through M17-075
 
-Important closed/rejected shortcuts include:
+Important closed or rejected shortcuts:
 
 1. nodal-positive/global-negative kappa sign contradiction — rejected by measure mismatch;
-2. winding as singularity — rejected by axisymmetric no-swirl firewall;
-3. transverse double-zero current incompatibility — rejected;
-4. complete persistent parallel Rank-2 — closed;
-5. recurrent curved oblique Rank-2 with recurrent nonzero transverse area — closed under the audited same-marker hypotheses;
-6. complete conformal pure-kernel Rank-2 — closed;
-7. complete n-tangent maximum sheet — closed;
-8. arbitrary remote pressure screening — reduced to `O(R^-4)`;
-9. odd/global pressure moment as arbitrary gauge — rejected;
-10. local scalar payer as a substitute for l=3 pressure moment — rejected;
-11. recurrent nonzero principal local-octupole modes — closed by strict negative mean exponent;
-12. local Poisson trace screening on recurrent principal slant — silent in the forbidden direction;
-13. first material differentiation of principal lower alignment as an independent extra condition — rejected as descriptor duplication;
-14. importing principal source annihilation into oblique slant — rejected; obliquity activates explicit label and velocity recharge channels.
+2. winding as singularity — rejected by the axisymmetric no-swirl firewall;
+3. complete persistent parallel Rank-2 — closed;
+4. recurrent curved oblique Rank-2 with recurrent nonzero transverse area — closed under the audited same-marker hypotheses;
+5. complete conformal pure-kernel Rank-2 — closed;
+6. complete uncompensated `n`-tangent maximum sheet — closed by Riccati comparison;
+7. arbitrary remote pressure screening — reduced to `O(R^-4)`;
+8. local scalar payer as a substitute for global `l=3` pressure moment — rejected;
+9. recurrent nonzero principal local-octupole modes — closed by strict negative mean exponent;
+10. first material differentiation of principal lower alignment as an independent extra condition — rejected as descriptor duplication;
+11. importing principal source annihilation into oblique slant — rejected;
+12. applying M5-685 scalar crossing sign directly to the global `l=3` pressure current — rejected; exact missing covariance identified;
+13. confusing temporal `h!=0` crossing with M5-638 material zero `f(0)=0` — rejected;
+14. confusing M17-049 transverse strain shear `beta_Sigma` with M17-047 frame connection — corrected;
+15. treating nonzero tilted maximum angle as automatic Riccati escape — rejected; sharp mixed-gradient compensation is required;
+16. differentiating the pointwise frozen-angle identity `p/r=m/|a|^2` off the critical set — corrected; full derivative cancels the apparent `D_kg` channel;
+17. treating nonzero frozen shear `m` itself as the Riccati compensation — rejected; only `chi_k=D_k log|m/|a|^2|` enters.
 
 ---
 
 ## Highest-value next calculations
 
-### 1. Rank one — Oblique Global Lock–Hysteresis Gate (OGLHG)
-Combine the driven oblique local system
+### 1. Rank two — moving frozen-angle maximum recharge gate
+Combine
 
 \[
-(X_-^\vartheta,X_+^\vartheta,\kappa_3)
+D_B\chi_k
+=D_k(\sigma_n-\sigma)-(\sigma_k+1/2)\chi_k
 \]
 
-with
+with the moving maximum derivative
 
 \[
-D_Bm_3=\Pi_3^{prod}+\Pi_3^{rel}
+D_{max}=D_B+v_{rel}D_\xi
 \]
 
-and the M5 flux-weighted crossing bias in `h=D_Bkappa`.
-The key question is whether the simultaneous obligations on `h`, `partial_3h`, global l=3 production/transport, and third-phi recharge can be recurrently satisfied without rank loss or finite-jet turnover.
-
-### 2. Rank one — principal scalar lock
-The principal survivor is already reduced to
+and the required inequality
 
 \[
-\boxed{v_*=m_3.}
+p\chi_k-\Theta D_\xi q>|C|.
 \]
 
-Further progress requires a genuinely new sign, vanishing-order, or global-moment argument; blind jet differentiation is not useful.
+The goal is to determine whether a recurrent maximum network can keep this strict compensation while repeatedly servicing the `3/2` material recharge, or whether it reaches a higher-jet transport firewall.
 
-### 3. Rank two — tilted anisotropic critical network
-Continue the material law for the tilted maximum surface and its explicit second-jet forcing, testing whether repeated tilt can avoid the closed n-tangent Riccati class without rank/interface turnover.
+### 2. Rank two — orthogonal compensated-network recurrence
+Audit whether alternating maximum/minimum critical networks can repeatedly satisfy
+
+\[
+E(D_\xi q)(D_nD_\xi d)>(D_\xi^2d)^2
+\]
+
+without forcing `D_xi^2d=0`, rank loss, or conformal/interface turnover.
+
+### 3. Rank one — new conservation law only
+Rank-1 OGLHG is already at the explicit covariance firewall
+
+\[
+\operatorname{Cov}_{\nu_0}(m_3,\operatorname{sgn}h).
+\]
+
+Further progress should require a genuinely new local-to-global STF `l=3` conservation/monotonicity law rather than more differentiation of the existing scalar locks.
 
 ### 4. Final assembly
-After Rank-1 and Rank-2 hard survivors are closed or identified as known regular classes, re-audit exhaustiveness of the full M5--M17 branch decomposition before any global-regularity claim.
+After the remaining Rank-2 anisotropic critical networks are closed or reduced to an equally explicit firewall, re-audit exhaustiveness of the full M5--M17 branch decomposition before any global-regularity claim.
 
 \[
 \boxed{\text{GLOBAL REGULARITY REMAINS UNPROVED.}}
