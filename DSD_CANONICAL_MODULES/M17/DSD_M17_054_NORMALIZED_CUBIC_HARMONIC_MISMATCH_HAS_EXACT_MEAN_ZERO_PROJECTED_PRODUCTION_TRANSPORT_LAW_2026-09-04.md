@@ -1,0 +1,390 @@
+# DSD M17-054 — The normalized cubic harmonic mismatch has an exact mean-zero projected production/transport law
+
+Date: 2026-09-04
+Canonical ID: **M17-054**
+
+Status: **INTERNAL SCALAR l=3 LOCKING LAW / LET `E_Q` BE THE UNIT HORIZONTAL TRACE-FREE TENSOR DIRECTION ORTHOGONAL TO THE MATERIAL-INVARIANT NODAL ANISOTROPY `Q_0`, AND LET `M_3=E_Q:N_harm`. M17-053 GIVES `D_B N_harm=3 lambda N_harm+TF_h[p contraction (P^(3)+R^(3))]`, WHILE THE SLANT MAGNITUDE SATISFIES `D_B|p|=3 lambda|p|`. THEREFORE THE NORMALIZED MISMATCH `m_3=M_3/|p|` OBEYS THE EXACT STRAIN-FREE LAW `D_Bm_3=E_Q:TF_h[phat contraction (P^(3)+R^(3))]`. ON A UNIFORMLY RECURRENT NONZERO-SLANT COMPACT BRANCH, THE LONG-TIME MEAN OF THE RIGHT-HAND SIDE MUST VANISH. THUS RECURRENT CUBIC PRESSURE LOCKING REQUIRES AN EXACT SIGNED CANCELLATION BETWEEN THE l=3 PROJECTION OF PRESSURE-SOURCE PRODUCTION AND RELATIVE SOURCE TRANSPORT. NO SIGN OF EITHER CHANNEL IS FIXED, SO THIS IS A NEW RECURRENCE OBLIGATION RATHER THAN A CONTRADICTION. GLOBAL REGULARITY REMAINS UNPROVED.**
+
+---
+
+## 1. Fixed tensor directions on the regular slanted branch
+
+M17-014/M17-043 give
+
+\[
+D_BQ_0
+=\left(\kappa-\frac32\right)Q_0.
+\]
+
+Hence the normalized horizontal trace-free direction
+
+\[
+\widehat Q_0
+:=\frac{Q_0}{|Q_0|}
+\]
+
+is materially fixed.
+
+The real vector space
+
+\[
+Sym_0(2)
+\]
+
+is two-dimensional.
+Choose the unit tensor `E_Q` orthogonal to `Q_0` in Frobenius inner product:
+
+\[
+\boxed{
+E_Q:\widehat Q_0=0,
+\qquad
+|E_Q|=1.
+}
+\]
+
+Because the direction of `Q_0` is materially fixed,
+
+\[
+\boxed{D_BE_Q=0}
+\]
+
+in the fixed great-circle frame.
+
+M17-024 gives
+
+\[
+D_Bp=3\lambda p.
+\]
+
+Therefore
+
+\[
+\boxed{
+D_B\widehat p=0,
+\qquad
+D_B|p|=3\lambda|p|.
+}
+\]
+
+---
+
+## 2. Harmonic cubic DSAIG tensor
+
+M17-053 defines the global STF cubic pressure tensor
+
+\[
+\mathcal H=STF_3(\nabla^3P)
+\]
+
+and the DSAIG-visible contraction
+
+\[
+\boxed{
+N_{harm}
+=TF_h[p\lrcorner\mathcal H].
+}
+\]
+
+Its material-core evolution is
+
+\[
+\boxed{
+D_BN_{harm}
+=3\lambda N_{harm}
++TF_h[p\lrcorner\mathscr P^{(3)}]
++TF_h[p\lrcorner\mathscr R^{(3)}].
+}
+\]
+
+Here
+
+\[
+\mathscr P^{(3)}
+\]
+
+is the STF cubic pressure-source production tensor and
+
+\[
+\mathscr R^{(3)}
+\]
+
+is the STF relative source-transport tensor.
+
+---
+
+## 3. Perpendicular cubic mismatch scalar
+
+Define
+
+\[
+\boxed{
+M_3
+:=E_Q:N_{harm}.
+}
+\]
+
+Since `D_BE_Q=0`,
+
+\[
+\boxed{
+D_BM_3
+=3\lambda M_3
++E_Q:TF_h[p\lrcorner(\mathscr P^{(3)}+\mathscr R^{(3)})].
+}
+\]
+
+This is the exact scalar perpendicular cubic-pressure equation.
+
+---
+
+## 4. Normalize by the slant magnitude
+
+Define
+
+\[
+\boxed{
+m_3:=\frac{M_3}{|p|}.}
+\]
+
+Because
+
+\[
+D_B|p|=3\lambda|p|,
+\]
+
+we obtain
+
+\[
+\begin{aligned}
+D_Bm_3
+&=\frac{D_BM_3}{|p|}
+-\frac{M_3}{|p|^2}D_B|p|\\
+&=\frac1{|p|}
+E_Q:TF_h[p\lrcorner(\mathscr P^{(3)}+\mathscr R^{(3)})].
+\end{aligned}
+\]
+
+Since
+
+\[
+p=|p|\widehat p,
+\]
+
+this simplifies to
+
+\[
+\boxed{
+D_Bm_3
+=E_Q:TF_h[\widehat p\lrcorner(\mathscr P^{(3)}+\mathscr R^{(3)})].
+}
+\]
+
+All explicit `lambda` dependence has cancelled.
+
+---
+
+## 5. Define the two signed scalar channels
+
+Set
+
+\[
+\boxed{
+\Pi_3^{prod}
+:=E_Q:TF_h[\widehat p\lrcorner\mathscr P^{(3)}],
+}
+\]
+
+and
+
+\[
+\boxed{
+\Pi_3^{rel}
+:=E_Q:TF_h[\widehat p\lrcorner\mathscr R^{(3)}].
+}
+\]
+
+Then
+
+\[
+\boxed{
+D_Bm_3
+=\Pi_3^{prod}+\Pi_3^{rel}.
+}
+\]
+
+This is the canonical scalar `l=3` locking law.
+
+---
+
+## 6. Recurrent mean-zero condition
+
+Assume the marked slanted core remains on a compact recurrent regular branch with
+
+\[
+0<c_p\le|p|\le C_p<\infty
+\]
+
+and bounded pressure third jets.
+
+Then `m_3` remains bounded and recurrent.
+For any sequence of recurrence intervals whose endpoints return to the same compact state,
+
+\[
+\frac{m_3(T)-m_3(0)}{T}\to0.
+\]
+
+Hence
+
+\[
+\boxed{
+\left\langle
+\Pi_3^{prod}+\Pi_3^{rel}
+\right\rangle
+=0.
+}
+\]
+
+Equivalently,
+
+\[
+\boxed{
+\langle\Pi_3^{prod}\rangle
+=-\langle\Pi_3^{rel}\rangle.
+}
+\]
+
+Thus recurrent cubic locking requires exact long-time signed compensation between source production and relative transport in the forbidden tensor direction.
+
+---
+
+## 7. What production contains
+
+M17-053 gives
+
+\[
+\mathscr P^{(3)}
+=\left\langle
+D_BS_P+\frac32S_P,
+\mathcal K
+\right\rangle,
+\]
+
+with
+
+\[
+\begin{aligned}
+D_BS_P+\frac32S_P
+={}&2\Sigma:\Delta\Sigma
+-\frac12|\Sigma|^2
+-2\operatorname{tr}(\Sigma^3)
+-2\Sigma:\Omega^2\\
+&-2\Sigma:\nabla^2P
+-\left(\sigma+\kappa-\frac14\right)\rho^2.
+\end{aligned}
+\]
+
+Therefore `Pi_3^prod` is a definite angular moment of viscous strain curvature, cubic strain, vorticity rotation, pressure Hessian and the same `sigma+kappa` multiplier structure appearing throughout M5/M17.
+
+No universal sign follows from this decomposition.
+
+---
+
+## 8. What relative transport contains
+
+The second tensor is
+
+\[
+\mathscr R^{(3)}
+=\left\langle
+S_P,
+(B(y)-B(Y))\cdot\nabla_y\mathcal K(Y-y)
+\right\rangle.
+\]
+
+Hence `Pi_3^rel` measures the forbidden-direction angular moment generated by motion/deformation of the pressure-source architecture relative to the material nodal core.
+
+It is a genuine source-transport channel, not the artificial shell bookkeeping term removed in M17-053.
+
+---
+
+## 9. Relation to the full DSAIG alignment
+
+The full perpendicular alignment is
+
+\[
+P_{Q_0}^{\perp}
+\left[
+V_p-N_{part}-N_{harm}-N_{higher}
+\right]=0.
+\]
+
+Thus `M_3` is not required to vanish by itself.
+It is the harmonic cubic share of the total perpendicular cancellation.
+
+The mean-zero law of Section 6 therefore does **not** state
+
+\[
+\langle M_3\rangle=0.
+\]
+
+It states that the normalized harmonic share cannot drift indefinitely; its projected production and transport must balance over recurrence.
+
+---
+
+## 10. DSD audit
+
+### Audit A — forgetting slant amplification
+Avoided by normalizing with `|p|`; the exact `3 lambda` multiplier cancels.
+
+### Audit B — treating M_3=0 as DSAIG
+Rejected. DSAIG constrains the sum of viscous, local particular, harmonic, and higher pressure channels.
+
+### Audit C — interpreting mean-zero forcing as pointwise zero
+Rejected. Only recurrent long-time compensation is obtained.
+
+### Audit D — assigning a sign to source production
+Rejected; the source-production density is signed and multi-channel.
+
+### Audit E — proof status
+The cubic locking cycle now has an exact scalar recurrence law but is not excluded.
+
+---
+
+## 11. Updated Rank-1 hard gate
+
+The nonvertical nonconformal survivor must simultaneously realize
+
+\[
+\boxed{
+\begin{array}{l}
+\text{nodal mean }\langle\kappa\rangle=3/2,\\
+\text{positive sheath + negative payer},\\
+\text{angular-defect lobe turnover},\\
+\text{M5 flux-weighted kappa hysteresis},\\
+\text{static and dynamic slanted tensor alignment},\\
+\text{and }\langle\Pi_3^{prod}+\Pi_3^{rel}\rangle=0.
+\end{array}
+}
+\]
+
+The pressure cubic is therefore no longer an unconstrained escape coefficient. It has a closed signed production/transport recurrence ledger.
+
+---
+
+## 12. Next target — bridge to the kappa/hysteresis payer ledger
+
+The highest-value continuation is to isolate the `rho^2(sigma+kappa-1/4)` contribution inside `Pi_3^prod` and compare its `l=3` angular moment with
+
+\[
+\int\kappa|W|^2<0,
+\]
+
+M17-012's positive-sheath/negative-payer split, and M5-685's flux-weighted crossing bias.
+
+If the remaining strain/pressure terms cannot absorb the required projected moment on a recurrent compact branch, the Rank-1 pressure-locking escape may close. If they can, the surviving cancellation must be recorded as an explicit coupled moment-hysteresis branch rather than a contradiction.
+
+---
+
+\[
+\boxed{\text{GLOBAL REGULARITY REMAINS UNPROVED.}}
+\]
