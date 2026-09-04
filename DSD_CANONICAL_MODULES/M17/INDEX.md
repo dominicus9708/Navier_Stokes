@@ -2,7 +2,7 @@
 
 Canonical continuation split from M16 after M16-023.
 
-Recompressed at **M17-105**. Detailed derivations, assumptions, and DSD audits remain in the individual canonical modules.
+Recompressed at **M17-120**. Detailed derivations, assumptions, and DSD audits remain in the individual canonical modules.
 
 ## Independent question
 
@@ -12,7 +12,7 @@ Can the CE-H material director field sustain recurrent nontrivial spatial geomet
 D_B\xi=0
 \]
 
-and the weighted harmonic-director equation after the preceding kappa/residence audit has forced same-tube strain heterogeneity?
+and the weighted harmonic-director equation, once the previous kappa/residence audit has forced same-tube strain heterogeneity and the director geometry is resolved by material rank?
 
 ---
 
@@ -63,7 +63,7 @@ The provisional M16 files remain for provenance and are superseded by these M17 
 - **M17-031** — vortex curvature and director-area curvature product have exact material laws.
 - **M17-032** — same-marker recurrent curved oblique Rank-2 with recurrent transverse area is excluded.
 - **M17-033** — pure-transverse-kernel Rank-2 reduces to two frozen director jets and resonant mean strain `(-1/2,1,-1/2)`.
-- **M17-034** — area-curvature density has source-free continuity and exact turnover ledger.
+- **M17-034** — area-curvature density has source-free continuity and exact turnover ledger on the `j_xi!=0` oblique branch only.
 - **M17-035** — weighted-harmonic kernel projection is geometric; conformal branch forces linewise amplitude rigidity.
 - **M17-036** — complete persistent conformal pure-kernel Rank-2 is excluded by flatness/Riccati blowup.
 - **M17-037** — anisotropy splits into frozen target angle and strain-driven stretch ratio.
@@ -108,16 +108,47 @@ The provisional M16 files remain for provenance and are superseded by these M17 
 - **M17-097** — where `D_k g!=0`, a peak sheet inherits the canonical director-area tube flux `dPhi_J`; no arbitrary peak weight is needed.
 - **M17-098** — clean critical-type switches are internal redistributions of the same director-area flux, not charge loss.
 - **M17-099** — `D_k g=0` is kernel/vortex-curvature resonance; generic quadratic tangency is a `0<->2` fold with zero net signed flux cost.
-- **M17-100** — algebraic peak-intersection number on a tube is the endpoint degree
-  \[
-  I_\lambda=\frac{\operatorname{sgn}g(s_+)-\operatorname{sgn}g(s_-)}2,
-  \]
-  so all regular interior tangencies are signed-flux neutral.
-- **M17-101** — finite `grad g=0` peak degeneracy regularizes on the top-jet sheet `Psi_nu=D_xi^(nu-1)g`; inherited director-area flux is recovered there.
+- **M17-100** — algebraic peak-intersection number is endpoint degree, so regular interior tangencies are signed-flux neutral.
+- **M17-101** — finite `grad g=0` degeneracy regularizes on the top-jet sheet `Psi_nu=D_xi^(nu-1)g`; inherited director-area flux is recovered there.
 - **M17-102** — adjacent finite critical-type top-jet sheets are charts over one common tube-flux measure; clean type boundaries are chart changes.
-- **M17-103** — pointwise peak genealogy is unnecessary for signed carrier flux; endpoint degree survives arbitrary interior multiple-zero branching.
+- **M17-103** — pointwise peak genealogy is unnecessary for signed carrier flux; endpoint degree survives arbitrary finite interior multiple-zero branching.
 - **M17-104** — nonzero `J_xi` cannot vanish on a regular material trajectory in finite similarity time.
 - **M17-105** — positive vorticity amplitude `rho>0` cannot reach the nodal set on a regular CE-H material trajectory in finite similarity time.
+
+## M17-106 — M17-120: pure-kernel carrier turnover, folds, critical ribbons, and scale genealogy
+
+- **M17-106** — corrects the M17-034 scope: on the `j_xi=0`, `J_xi!=0` pure-kernel branch the exact carrier is the frozen director-area 2-form `beta_xi=i_{J_xi}dV`, not the oblique scalar `Q=|j_xi||b|`.
+- **M17-107** — integrates the positive Riccati-compensation margin against the inherited tube-flux measure and obtains a `3/2` recharge law for clean transverse peak populations.
+- **M17-108** — inserts a fixed physical similarity-coordinate core and derives an exact margin-weighted boundary import/export ledger using the peak velocity `V_*=B+alpha_J k`.
+- **M17-109** — generic `J_xi`-tangency folds are signed-flux neutral but carry a margin-weighted birth/death source `2 epsilon_F N_F dPhi_J`.
+- **M17-110** — tangency flatness reduces the fold margin to a finite connection-jet expression; margin sign and fold birth/death orientation remain distinct channels.
+- **M17-111** — `J_xi=0` and `J_xi!=0` are separate material invariant strata; likewise `rho=0` and `rho>0`. Rank-1 and Rank-2 carrier charges therefore cannot be directly exchanged on a regular interval.
+- **M17-112** — global turnover must be assembled as block-diagonal carrier ledgers with only genuine nonlocal PDE coupling through pressure/strain/kappa; carrier measures may not be merged.
+- **M17-113** — the positive director-area weighted peak measure is
+  \[
+  d\mu_{peak}^J=\delta(g)|J_\xi\cdot\nabla g|dV,
+  \]
+  the total variation of the signed divergence measure `delta(g) J_xi·grad g = div(H(g)J_xi)`.
+- **M17-114** — compact analytic tube families satisfy a dichotomy: uniformly finite kernel-zero count, or an analytic critical-ribbon limit `g identically 0`; the latter has constant-curvature planar kernel fibers.
+- **M17-115** — a persistent complete critical ribbon must satisfy `D_xi(sigma+kappa)=0` and the material connection compatibility
+  \[
+  D_k\Omega+p\Omega+(\sigma-\sigma_k)q=0.
+  \]
+- **M17-116** — on a material closed kernel loop,
+  \[
+  \mathscr V_J=\oint \frac{ds}{|J_\xi|},
+  \qquad
+  D_B\log\mathscr V_J=\frac32.
+  \]
+  Hence same-material compact recurrent complete critical ribbons are excluded.
+- **M17-117** — compact nondegenerate ribbon bounds give a uniform finite residence-time bound and show that one aged loop cannot re-enter the same compact ribbon class indefinitely.
+- **M17-118** — physical rescaling cancels the similarity `3/2` growth: `ds_phys/|J_phys|=r^3 ds_sim/|J_sim|`; physical per-flux volume is conserved, so fresh-carrier turnover is not by itself a volume contradiction.
+- **M17-119** — compact ribbon flux gives a direct M17-to-M5 amplitude bridge
+  \[
+  \rho_k\int_{\mathcal T_k}|\nabla u|^2dx\ge c_*K_k\Phi_k.
+  \]
+  Thus `J_k lesssim K_k Phi_k` would supply the M5 amplitude-retention/comparability input.
+- **M17-120** — compact ribbon bounds imply a uniform finite first-hitting-stage multiplicity for any one material loop; sufficiently remote recurrent ribbon stages cannot be carried by the same material loop.
 
 ---
 
@@ -153,84 +184,41 @@ T_{nodal/chart/rank}.
 }
 \]
 
-## Vertical nonaxis branch
-
-Finite-order vertical nonaxis cores obey
-
-\[
-\boxed{G_q=1,\qquad \partial_3\lambda=0.}
-\]
-
-The global axial pressure channel is
+The vertical branch retains the exact local crossing bias
 
 \[
 \boxed{
-V_V=\Delta(\partial_3\lambda_h)
-=-\frac12\mathcal H_{333}.
+\overline{\int a\frac{r_VO_V}{|Q|_F^2}\delta(\kappa)\,d\mu_0}>0
 }
 \]
 
-At regular vertical `kappa=0` crossings,
+while the global axial pressure channel is
 
 \[
 \boxed{
-O_V=-\frac15|Q|_F^2\kappa_3,
+V_V=-\frac12\mathcal H_{333},
 \qquad
-h=-\frac{5r_V}{|Q|_F^2}O_V.
-}
-\]
-
-M5-685 yields
-
-\[
-\boxed{
-\overline{
-\int a\frac{r_VO_V}{|Q|_F^2}\delta(\kappa)\,d\mu_0
-}>0.
-}
-\]
-
-But the global pressure moment uses a sign-changing spatial kernel:
-
-\[
-\boxed{
 \mathcal H_{333}=\langle S_P,\mathcal K_{333}\rangle.
 }
 \]
 
-Therefore the vertical hard gate remains
+The kernel is sign changing. Therefore the current Rank-1 hard gate is still
 
 \[
 \boxed{
 \text{local label-crossing bias}
 \;\leftrightarrow?\;
-\text{global axial STF pressure architecture}.
+\text{global }l=3\text{ STF pressure architecture}.
 }
 \]
 
-## Slanted Rank-1 branch
-
-The surviving non-interface classes remain
-
-\[
-\boxed{
-R_{1,S}
-\Longrightarrow
-R_{principal}^{l=3\ scalar\ lock}
-\ \lor\
-R_{oblique}^{l=3\ covariance}
-\ \lor\
-T_{1,S}.
-}
-\]
-
-No current identity closes the local-to-global `l=3` covariance firewall.
+No current identity closes this covariance firewall.
 
 ---
 
 # Rank two — current hard structure
 
-The intrinsic hard geometry is concentrated on the pure-transverse-kernel class
+The intrinsic hard geometry is concentrated on the regular pure-transverse-kernel class
 
 \[
 \boxed{
@@ -242,18 +230,9 @@ D_k\xi=0.
 }
 \]
 
-## Peak coverage and finite type
+Rank-2 carriers live on a material stratum disjoint from Rank-1 carrier conversion during every finite regular interval.
 
-For two-ended decaying connected components, at least one finite line peak exists.
-On the compact analytic hard hull,
-
-\[
-\boxed{
-\nu\in\{1,3,5,\ldots,\nu_*\},
-\qquad
-\nu_*<\infty.
-}
-\]
+## Transverse peak population
 
 Regular maxima must maintain
 
@@ -263,103 +242,61 @@ Regular maxima must maintain
 }
 \]
 
-to evade the Riccati obstruction.
-Fixed-order degenerate maxima must maintain the corresponding higher-jet margin
+or the corresponding finite higher-jet margin.
+Against the inherited tube measure,
 
 \[
 \boxed{
-\mathcal M_{deg}^{(\nu)}
-=rD_ks-\Theta_\nu D_\xi q>0.
+\frac d{d\theta}\mathscr N_J
+=-\frac32\mathscr N_J+\mathscr P_J+\mathscr S_J+\mathscr B_J.
 }
 \]
 
-These positive-margin conditions remain an actual dynamical burden; the carrier genealogy audit does not remove them.
+A recurrent positive population therefore requires exact `3/2` recharge from smooth higher jets, spatial turnover, and/or margin-weighted fold hysteresis.
+The unweighted signed director-area flux is neutral at interior folds and cannot by itself pay this positive margin.
 
-## Director-area carrier measure
+## Critical-ribbon population
 
-A regular tube label carries a frozen flux element
-
-\[
-\boxed{d\Phi_J(\lambda).}
-\]
-
-When a peak/top-jet sheet is transverse to `J_xi`, its physical sheet measure is only a cross-section representation of this same tube measure.
-
-Clean type switches, finite degeneracies, regular tangencies, and nonunique pointwise peak branching therefore satisfy
+If the kernel-zero count is not uniformly finite, analyticity forces the exceptional critical-ribbon limit.
+On a complete material ribbon loop,
 
 \[
 \boxed{
-E_{interior\ peak/type/tangency}^{finite}
-\Longrightarrow
-\text{signed director-area-flux neutral}.
+\mathscr V_J=\oint\frac{ds}{|J_\xi|},
+\qquad
+\mathscr V_J'=\frac32\mathscr V_J.
 }
 \]
 
-The robust carrier-level invariant is
+Hence compact same-material ribbon recurrence is excluded.
+But physical scaling gives conservation of the corresponding physical per-flux volume, so an Eulerian recurrent ribbon may still be serviced by a cascade of fresh material loops at shrinking physical scales.
+
+The M17-to-M5 amplitude bridge is
 
 \[
 \boxed{
-\mathcal Q_{peak}^{alg}
-=\int_\Lambda
-\frac{\operatorname{sgn}g(s_+)-\operatorname{sgn}g(s_-)}2
-\,d\Phi_J.
+\rho_k\int_{\mathcal T_k}|\nabla u|^2dx
+\ge c_*K_k\Phi_k.
 }
 \]
 
-It does not require unique pointwise peak tracks.
-
-## Finite-time material nonvanishing
-
-The exact Cauchy law
-
-\[
-D_BJ_\xi
-=(\nabla B-\tfrac32I)J_\xi
-\]
-
-implies
+Thus the remaining ribbon closure is reduced to two separate requirements:
 
 \[
 \boxed{
-J_\xi(\theta_0)\neq0
-\Longrightarrow
-J_\xi(\theta)\neq0
+J_k\lesssim K_k\Phi_k
 }
 \]
 
-for every finite regular material time.
-
-The CE-H amplitude law
-
-\[
-D_B\rho=(\sigma+\kappa-1)\rho
-\]
-
-likewise implies
+on a subset carrying the relevant annular mass, and the already isolated M5 physical return-density lower bound
 
 \[
 \boxed{
-\rho(\theta_0)>0
-\Longrightarrow
-\rho(\theta)>0
+\mathfrak R_k\gtrsim J_k^{1/2}.
 }
 \]
 
-for finite regular material time.
-
-Thus a regular active Rank-2 material carrier cannot die internally by finite-time `J_xi=0` rank loss or `rho=0` nodal crossing.
-
-The remaining Rank-2 exits are therefore not ordinary internal genealogy events. They are
-
-\[
-\boxed{
-E_{spatial\ endpoint/domain/interface}
-\ \lor\
-E_{asymptotic}
-\ \lor\
-E_{loss\ of\ regularity}.
-}
-\]
+The first is a flux-capture problem; the second is a temporal genealogy problem.
 
 ---
 
@@ -371,54 +308,49 @@ The current audit explicitly rejects the following shortcuts:
 2. nodal positive-kappa and bulk negative-kappa measures are not interchangeable;
 3. M5 base-label measure cannot be replaced by current spatial/coarea measure without a pushforward theorem;
 4. scalar kappa payer cannot replace global `l=3` pressure architecture;
-5. local octupole sign does not determine the sign-changing global STF kernel;
-6. moving maxima are not material markers;
-7. critical-type labels are internal states of a director-area carrier, not independent charges;
-8. unsigned peak counts are not conserved at tangencies;
-9. signed algebraic tube-intersection flux is conserved through arbitrary finite interior branching with fixed endpoints;
-10. finite `grad g=0` degeneracy is a descriptor-resolution event and lifts to a regular top-jet chart;
-11. a regular nonzero material `J_xi` carrier cannot vanish in finite time;
-12. a regular positive CE-H material amplitude cannot cross to `rho=0` in finite time;
-13. spatial/domain/interface exits are transport events until a nonrecyclable boundary cost is proved;
-14. global regularity is not established by any of the preceding branch reductions.
+5. moving maxima are not material markers;
+6. critical-type labels are internal states of one director-area carrier, not independent charges;
+7. unsigned peak counts are not conserved at tangencies;
+8. signed peak flux and positive peak total variation are different descriptors;
+9. M17-034's scalar `Q=|j_xi||b|` law must not be reused on the `j_xi=0` pure-kernel survivor;
+10. Rank-1 and Rank-2 carrier populations cannot be merged into one exchangeable measure on a regular interval;
+11. compact hard hull means state/jet compactness and is not automatically a physical spatial boundary;
+12. same-material ribbon recurrence is excluded, but fresh-carrier Eulerian ribbon turnover remains possible;
+13. similarity `3/2` aging is exactly canceled in physical per-flux volume and is not a physical-volume contradiction;
+14. current-epoch similarity residence does not give remote-age parabolic dwell; the M5 `K_k^{-2}` loss remains;
+15. global regularity is not established by any current branch reduction.
 
 ---
 
 # Highest-value next gates
 
-## A. Rank-2 spatial carrier-flux boundary gate
+## A. Rank-2 ribbon flux-capture gate
 
-The local peak genealogy problem is no longer the primary obstacle.
-The next Rank-2 question is whether persistent active director-area tubes can repeatedly leave and re-enter the compact hard-hull region through spatial/domain/interface boundaries while maintaining
-
-\[
-\mathcal M^{(\nu)}>0
-\]
-
-and the established director-area / area-curvature transport budgets.
-
-The required calculation must be a boundary flux balance, not a peak-count argument.
-
-## B. Vertical Rank-1 genealogy/pushforward gate
-
-Relate, if possible,
+Determine whether a Rank-2 ribbon bundle carrying a definite fraction of the age-`k` annular enstrophy necessarily satisfies
 
 \[
-\mathcal C_V
-=\int a\frac{r_VO_V}{|Q|_F^2}\delta(\kappa)\,d\mu_0
+\boxed{J_k\lesssim K_k\Phi_k.}
 \]
 
-to the current spatial source architecture producing
+The calculation must distinguish vorticity amplitude from director-area Jacobian and cannot infer a lower flux bound from `rho>0` alone.
+
+## B. Rank-2 physical return-density gate
+
+If A succeeds, combine the flux-capture bridge with physical genealogy to test
 
 \[
-\mathcal H_{333}.
+\boxed{\mathfrak R_k\gtrsim J_k^{1/2}}
 \]
 
-Any bridge must explicitly preserve the label/spatial measure distinction.
+on a subset still carrying divergent cubic annular mass.
 
-## C. Global turnover assembly
+## C. Rank-1 local/global pressure covariance gate
 
-If A and B remain sign-indefinite, assemble the Rank-1 lobe/pressure turnover and Rank-2 spatial carrier boundary transport with the M5 residence/flux ledgers and test whether one common recurrent conveyor can service all required positive margins and signed payer budgets.
+Relate the amplification-weighted local `kappa=0` crossing bias to the global sign-changing `l=3` pressure architecture without replacing label measure by spatial measure.
+
+## D. Block-diagonal global assembly
+
+Only after A–C are sharpened should Rank-1 and Rank-2 be assembled. Their carrier ledgers remain disjoint; only genuine nonlocal PDE couplings through pressure/strain/kappa may appear off diagonal.
 
 ---
 
