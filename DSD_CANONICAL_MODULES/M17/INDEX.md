@@ -2,7 +2,7 @@
 
 Canonical continuation split from M16 after M16-023.
 
-This index is intentionally compact. Detailed derivations, assumptions, and DSD audits remain in the individual canonical modules.
+Recompressed at **M17-105**. Detailed derivations, assumptions, and DSD audits remain in the individual canonical modules.
 
 ## Independent question
 
@@ -30,111 +30,94 @@ The provisional M16 files remain for provenance and are superseded by these M17 
 
 # Native continuation catalog
 
-## M17-006 — M17-023: rank-one winding and angular-defect geometry
+## M17-006 — M17-023: Rank-1 winding / angular-defect geometry
 
-- **M17-006** — great-circle winding is a real-potential complex Schrödinger nodal-defect problem.
-- **M17-007** — regular winding zeros have analytic kappa extension and are material nodal filaments.
+- **M17-006** — winding becomes a real-potential complex Schrödinger nodal-defect problem.
+- **M17-007** — regular winding zeros are material nodal filaments with analytic kappa extension.
 - **M17-008** — axisymmetric no-swirl is an exact known-regular firewall.
-- **M17-009** — nodal topology changes have uniformly finite analytic jet order on the compact hard hull.
-- **M17-010** — regular winding cores force transverse strain isotropy and nodal-Jacobian multiplier laws; recurrent regular core gives `mean kappa=3/2`.
-- **M17-011** — the nodal skeleton is amplitude-measure thin but forces third-jet curvature.
+- **M17-009** — topology-change nodal events have finite analytic jet order on the compact hard hull.
+- **M17-010** — regular winding cores force transverse strain isotropy and nodal-Jacobian multiplier laws.
+- **M17-011** — nodal skeleton is amplitude-measure thin but forces third-jet curvature.
 - **M17-012** — recurrent positive nodal phases force a finite positive-kappa sheath and fixed negative-kappa payer.
-- **M17-013** — rank one has a closed `(q,x_3)` label-plane flow with divergence `kappa`; label area Jacobian equals the M5 amplification factor.
-- **M17-014** — normalized nodal Jacobian shape, winding sign, and singular-value ratio are material invariants.
-- **M17-015** — vertical nonconformal regular core forces `G_q=1` and `partial_3 lambda=0`.
-- **M17-016** — angular defect `chi=Lq` obeys `Delta chi=kappa chi`; `chi=0` is the axisymmetric no-swirl firewall in the retained decay class.
-- **M17-017** — `(chi,psi=Lphi)` obey an exact coupled material-elliptic defect system.
-- **M17-018** — every finite-energy nonzero angular defect obeys `int kappa chi^2=-int|grad chi|^2<0`.
-- **M17-019** — the leading angular-defect jet is harmonic; each positive-core lobe reaches a same-lobe negative-kappa payer.
-- **M17-020** — bounded recurrent defect lobes require strict signed material boundary turnover.
-- **M17-021** — transverse `chi=kappa=0` crossings are dynamically compatible; tangency has an exact compatibility law.
-- **M17-022** — bounded defect lobes have a spectral-gap negative payer in the `chi^2` measure.
-- **M17-023** — simple kappa-zero components are q-level contours; double zeros are radial extrema and tangencies are degenerate radial-extremum events.
+- **M17-013** — Rank-1 has a closed `(q,x_3)` label-plane flow with divergence `kappa`; label Jacobian equals M5 amplification.
+- **M17-014** — normalized nodal shape and winding sign are material invariants.
+- **M17-015** — vertical nonconformal core forces `G_q=1`, `partial_3 lambda=0`.
+- **M17-016** — angular defect `chi=Lq` obeys `Delta chi=kappa chi`; zero defect is the axisymmetric/no-swirl firewall.
+- **M17-017** — `(chi,psi)` obey an exact material-elliptic defect system.
+- **M17-018** — nonzero finite-energy angular defect forces a negative-kappa payer in `chi^2` measure.
+- **M17-019** — leading angular defect jet is harmonic and each positive-core lobe reaches negative kappa.
+- **M17-020** — recurrent bounded defect lobes require signed boundary turnover.
+- **M17-021** — transverse `chi=kappa=0` crossings are dynamically compatible; tangency has an exact law.
+- **M17-022** — bounded angular-defect lobes carry a spectral-gap negative payer.
+- **M17-023** — simple kappa-zero components are q-level contours; double zeros are radial-extremum events.
 
-## M17-024 — M17-042: slant geometry and Rank-2 director-area reduction
+## M17-024 — M17-042: slant geometry / Rank-2 director area
 
-- **M17-024** — slanted nodal slope obeys `D_B p=3 lambda p`; slant azimuth is frozen; `p=0` is a separate vertical chart.
-- **M17-025** — slanted nonconformal core requires exact tensor alignment compensating `G_q-1`.
-- **M17-026** — Rank-2 has divergence-free director-area current `J_xi`; `J_xi` and `W/a` share a Cauchy transport law.
-- **M17-027** — `Delta rho=(kappa+|grad xi|^2)rho` and `|grad xi|^2>=2|J_xi|`; full spatial Rank-2 maxima are strict negative-kappa payers.
-- **M17-028** — Rank-2 obliquity has a material-invariant decomposition and recurrent mean-strain constraints.
+- **M17-024** — slanted nodal slope has exact strain law; vertical chart is separate.
+- **M17-025** — slanted nonconformal core requires exact tensor alignment.
+- **M17-026** — Rank-2 director-area current `J_xi` is divergence free and obeys a frozen Cauchy law.
+- **M17-027** — Rank-2 full spatial maxima are strict negative-kappa payers.
+- **M17-028** — Rank-2 obliquity has a material-invariant decomposition and mean-strain constraints.
 - **M17-029** — parallel Rank-2 is a straight-line congruence with Riccati focusing.
 - **M17-030** — complete persistent parallel Rank-2 is excluded in the retained finite-energy/decay class.
-- **M17-031** — vortex-direction curvature and director-area curvature product have exact material laws.
-- **M17-032** — same-marker recurrent curved oblique Rank-2 with recurrent nonzero transverse area is excluded; turnover and `j_xi->0` remain exits.
-- **M17-033** — `j_xi=0` full-rank-two geometry reduces to two frozen director jets and resonant mean strain frame `(-1/2,1,-1/2)`.
-- **M17-034** — area-curvature density has source-free Eulerian continuity and an exact turnover ledger.
-- **M17-035** — weighted-harmonic kernel projection is geometric; conformal pure-kernel geometry forces linewise constant amplitude.
-- **M17-036** — complete persistent conformal pure-kernel branch is excluded by Euclidean-flatness Riccati blowup.
-- **M17-037** — pure-kernel anisotropy splits into frozen target angle and strain-driven stretch ratio.
-- **M17-038** — orthogonal stretch obeys `D_xi d=-E D_xi log rho`.
-- **M17-039** — large monotone amplitude drops force sign/conformal/rank exits; negative stretch can approach conformality at a decaying end.
-- **M17-040** — linewise amplitude/stretch extrema have exact relative velocity and critical cross-alignment.
-- **M17-041** — frozen-angle pure-kernel Rank-2 carries irreducible weighted-harmonic shear locked to director area.
-- **M17-042** — the shear surface charge is exact but is not independent of director-area flux.
+- **M17-031** — vortex curvature and director-area curvature product have exact material laws.
+- **M17-032** — same-marker recurrent curved oblique Rank-2 with recurrent transverse area is excluded.
+- **M17-033** — pure-transverse-kernel Rank-2 reduces to two frozen director jets and resonant mean strain `(-1/2,1,-1/2)`.
+- **M17-034** — area-curvature density has source-free continuity and exact turnover ledger.
+- **M17-035** — weighted-harmonic kernel projection is geometric; conformal branch forces linewise amplitude rigidity.
+- **M17-036** — complete persistent conformal pure-kernel Rank-2 is excluded by flatness/Riccati blowup.
+- **M17-037** — anisotropy splits into frozen target angle and strain-driven stretch ratio.
+- **M17-038** — orthogonal stretch obeys an exact amplitude/stretch derivative law.
+- **M17-039** — large amplitude drops force sign/conformal/rank exits or asymptotic approach.
+- **M17-040** — line extrema have exact material-relative velocity and a cross-aligned critical frame.
+- **M17-041** — frozen-angle branch carries irreducible weighted-harmonic shear locked to director area.
+- **M17-042** — shear surface charge is exact but not independent of director-area flux.
 
-## M17-043 — M17-070: Rank-1 higher-jet pressure and octupole gates
+## M17-043 — M17-070: Rank-1 pressure / octupole gates
 
-- **M17-043** — persistent slanted alignment requires next-jet material collinearity.
-- **M17-044** — direct Navier--Stokes differentiation reduces slanted persistence to viscous-pressure higher-jet collinearity.
-- **M17-045** — pressure Poisson is `-Delta P=|Sigma|^2-rho^2/2`; DSAIG first sees far harmonic pressure at degree three.
-- **M17-046** — far cubic pressure has source-production, shell-turnover, and relative-transport decomposition.
-- **M17-047** — orthogonal cross-aligned line maxima are instantaneous super-Riccati events unless compensated.
-- **M17-048** — complete uncompensated `n`-tangent orthogonal maximum sheet is excluded.
-- **M17-049** — maximum-surface tilt law derived; strain-shear/frame-connection notation audited and corrected.
-- **M17-050** — global enstrophy bounds remote pressure third jets by `O(R^-4)`.
-- **M17-051** — local cubic pressure splits into source-gradient particular tensor plus harmonic cubic.
-- **M17-052** — harmonic cubic is a seven-component whole-space `l=3` source moment.
-- **M17-053** — global STF cubic pressure has only source-production and relative-transport channels after near/far recombination.
-- **M17-054** — normalized cubic harmonic mismatch has exact mean-zero projected production/transport recurrence law.
-- **M17-055** — scalar negative-kappa payer is an `l=0` ledger and cannot replace the `l=3` pressure ledger.
-- **M17-056** — leading positive nodal sheath is `l=3` neutral; local octupole begins at cubic order.
-- **M17-057** — local kappa-payer octupole is an explicit STF tensor in `grad kappa`, `grad W`, `grad^2 W`.
-- **M17-058** — octupole-jet reduction makes `grad kappa` axial and splits principal versus oblique slant.
-- **M17-059** — principal-slant curvature octupole collapses to two scalar modes with `6 lambda` rate splitting.
-- **M17-060** — principal alignment annihilates both additive curvature-mode sources.
-- **M17-061** — recurrent nonzero principal local-octupole modes are excluded; the whole principal branch is not closed.
-- **M17-062** — recurrent principal DSAIG reduces to one local-viscous/global-`l=3` scalar lock.
-- **M17-063** — first material persistence of the principal lower alignment reproduces the same scalar lock; it is not independent.
-- **M17-064** — oblique `kappa_3` has exact `partial_3 h` recharge and a half-slope recurrence condition.
-- **M17-065** — full oblique local payer octupole reduces to one curvature/recharge scalar.
-- **M17-066** — oblique curvature modes form a driven two-mode system; persistent silence requires a four-channel compatibility.
-- **M17-067** — regular genuine-oblique `kappa=0` crossing is necessarily local-octupole active; silence forces critical `grad kappa`.
-- **M17-068** — oblique DSAIG reduces to a normalized local-viscous/Poisson/global-`l=3` scalar lock.
-- **M17-069** — global `l=3` locking has a kappa-space lift; bridge to M5 requires joint crossing covariance.
-- **M17-070** — local oblique crossing orientation inherits M5 hysteresis direction, but global pressure locking remains a covariance firewall.
+- **M17-043–044** — slanted persistence reduces to higher-jet viscous-pressure collinearity.
+- **M17-045–054** — pressure Poisson and global cubic STF (`l=3`) architecture are derived and transported.
+- **M17-055–058** — scalar kappa payer is separated from the `l=3` ledger; local payer octupole is made explicit.
+- **M17-059–063** — principal-slant octupole collapses to two modes, then to one local-viscous/global-pressure scalar lock.
+- **M17-064–070** — oblique crossing has exact recharge and local-octupole dynamics, but the global `l=3` sign remains a covariance firewall.
 
-## M17-071 — M17-081: unified Rank-2 maximum compensation and exhaustiveness audit
+## M17-071 — M17-081: unified Rank-2 maximum compensation
 
-- **M17-071** — tilted orthogonal maximum has exact tangent Riccati law and quadratic tilt payment.
-- **M17-072** — tilt compensation shares stretch multiplier and exposes a strain-free gradient ratio.
-- **M17-073** — orthogonal compensation becomes a mixed stretch-Hessian inequality.
-- **M17-074** — frozen-angle maximum compensation reduces to a normalized shear-gradient channel after derivative audit.
-- **M17-075** — normalized shear gradient has exact material recharge and `3/2` recurrence condition.
-- **M17-076** — area-weighted shear gradient obeys division-free constant `3/2` damping plus recharge.
-- **M17-077** — frozen-angle Riccati compensation margin has constant `3/2` damping and moving recharge.
-- **M17-078** — same material marker cannot remain a recurrent full spatial pure-kernel maximum; recurrent full maxima require moving-location turnover.
-- **M17-079** — orthogonal and frozen-angle maximum escapes unify into one division-free margin `M_R2=C+rD_k s-Theta D_xi q`.
-- **M17-080** — weighted unified margin has constant `3/2` base damping plus higher-jet/moving recharge.
-- **M17-081** — exhaustiveness audit restores the vertical Rank-1 chart and Rank-2 endpoint/peak coverage gap.
+- **M17-071–073** — tilted orthogonal maxima require explicit compensation against Riccati focusing.
+- **M17-074–077** — frozen-angle compensation reduces to normalized-shear-gradient recharge with `3/2` recurrence.
+- **M17-078** — a full spatial Rank-2 maximum cannot recur on the same material marker.
+- **M17-079** — regular pure-kernel maxima unify under
+  \[
+  \mathcal M_{R2}=C+rD_ks-\Theta D_\xi q.
+  \]
+- **M17-080** — the weighted margin has constant `3/2` base damping plus explicit higher-jet/moving recharge.
+- **M17-081** — exhaustiveness audit restores vertical Rank-1 and endpoint/peak coverage gaps.
 
-## M17-082 — M17-096: vertical global lock and finite Rank-2 critical-type system
+## M17-082 — M17-096: vertical Rank-1 lock / finite Rank-2 critical types
 
-- **M17-082** — vertical nonaxis persistence gives axial global pressure lock `Delta(partial_3 lambda_h)=-(1/2)H_333` and mean-zero two-channel recurrence.
-- **M17-083** — preliminary conformal high-angular-jet material multiplier and signed transfer law.
-- **M17-084** — full strain eigenline kills the leading potential defect, forces `G_q=1`, `partial_3 lambda=0`; recurrent conformal high-jet nonaxisymmetry has `mean lambda=-1/2` and cannot use same-marker axial recurrence.
-- **M17-085** — a connected pure-kernel component with two decaying/zero ends must contain a finite line peak; asymptotic tail is endpoint geometry, not an independent survivor.
-- **M17-086** — finite-order degenerate peak with nonzero transverse `grad g` is a limit of nearby regular maxima.
-- **M17-087** — fixed-order degenerate maximum sheet has a higher-jet tilt hierarchy and Riccati compensation margin.
-- **M17-088** — compact analytic two-ended decaying Rank-2 peak hull has uniformly finite critical order, absent endpoint/rank/chart degeneration.
-- **M17-089** — vertical `K_333` pressure kernel changes sign; scalar kappa payer cannot fix the global axial STF sign.
-- **M17-090** — vertical local payer octupole collapses to `O_V=-(1/5) partial_3(kappa |Q|_F^2)` and at zero to `-(1/5)|Q|_F^2 kappa_3`; `h` factorizes through zero-surface relative velocity.
-- **M17-091** — spatial zero-surface relative velocity is exactly the semilinear label-root relative flow divided by the label-root spatial slope.
-- **M17-092** — top critical line jet `H_nu` has exact material recharge and moving-type transport law.
-- **M17-093** — curvature-normalized critical jet `Z_nu=H_nu/|b|^(nu+1)` is strain free; type turnover is `Z_nu -> 0` while `b!=0`.
-- **M17-094** — a tracked finite type-`nu` peak population has a conditional scalar continuity ledger; births/deaths/type switches enter an explicit source `B_nu`; no canonical peak counting measure is claimed.
-- **M17-095** — M5 hysteresis, kept in the original label measure, forces a positive amplification-weighted mean bias of vertical `r_V O_V` at kappa-zero crossings.
-- **M17-096** — vertical Rank-1 is reduced to an explicit local label-crossing bias versus global spatial axial-STF covariance/turnover firewall.
+- **M17-082–084** — vertical nonaxis branches acquire axial global-pressure locks and conformal high-jet recurrence restrictions.
+- **M17-085–088** — two-ended decaying Rank-2 components must contain finite-order peaks; compact hard hull gives uniform finite critical order.
+- **M17-089–091** — vertical pressure kernel is sign changing; local payer octupole and zero-surface relative speed are scalarized.
+- **M17-092–093** — top critical jet and strain-free normalized type descriptor `Z_nu` have exact moving laws.
+- **M17-094** — finite type populations admit only a conditional bookkeeping continuity ledger without inherited weight.
+- **M17-095** — M5 hysteresis forces an amplification-weighted vertical `r_V O_V` crossing bias in the original label measure.
+- **M17-096** — vertical Rank-1 reaches a local label-crossing versus global axial-STF covariance firewall.
+
+## M17-097 — M17-105: inherited Rank-2 carrier measure and genealogy audit
+
+- **M17-097** — where `D_k g!=0`, a peak sheet inherits the canonical director-area tube flux `dPhi_J`; no arbitrary peak weight is needed.
+- **M17-098** — clean critical-type switches are internal redistributions of the same director-area flux, not charge loss.
+- **M17-099** — `D_k g=0` is kernel/vortex-curvature resonance; generic quadratic tangency is a `0<->2` fold with zero net signed flux cost.
+- **M17-100** — algebraic peak-intersection number on a tube is the endpoint degree
+  \[
+  I_\lambda=\frac{\operatorname{sgn}g(s_+)-\operatorname{sgn}g(s_-)}2,
+  \]
+  so all regular interior tangencies are signed-flux neutral.
+- **M17-101** — finite `grad g=0` peak degeneracy regularizes on the top-jet sheet `Psi_nu=D_xi^(nu-1)g`; inherited director-area flux is recovered there.
+- **M17-102** — adjacent finite critical-type top-jet sheets are charts over one common tube-flux measure; clean type boundaries are chart changes.
+- **M17-103** — pointwise peak genealogy is unnecessary for signed carrier flux; endpoint degree survives arbitrary interior multiple-zero branching.
+- **M17-104** — nonzero `J_xi` cannot vanish on a regular material trajectory in finite similarity time.
+- **M17-105** — positive vorticity amplitude `rho>0` cannot reach the nodal set on a regular CE-H material trajectory in finite similarity time.
 
 ---
 
@@ -156,15 +139,15 @@ The axisymmetric no-swirl class remains an explicit known-regular Rank-1 firewal
 
 # Rank one — current hard structure
 
-A regular nonaxis nodal filament separates by tangent chart:
+A regular nonaxis nodal filament separates into vertical and slanted charts:
 
 \[
 \boxed{
 R_1^{regular,nonaxis}
 \Longrightarrow
-R_{1,V}^{p=0}
+R_{1,V}
 \ \lor\
-R_{1,S}^{p\neq0}
+R_{1,S}
 \ \lor\
 T_{nodal/chart/rank}.
 }
@@ -172,104 +155,66 @@ T_{nodal/chart/rank}.
 
 ## Vertical nonaxis branch
 
-Every finite-order vertical nonaxis core now obeys
+Finite-order vertical nonaxis cores obey
+
+\[
+\boxed{G_q=1,\qquad \partial_3\lambda=0.}
+\]
+
+The global axial pressure channel is
 
 \[
 \boxed{
-G_q=1,
-\qquad
-\partial_3\lambda=0.
+V_V=\Delta(\partial_3\lambda_h)
+=-\frac12\mathcal H_{333}.
 }
 \]
 
-Its global axial pressure lock is
-
-\[
-\boxed{
-V_V:=\Delta(\partial_3\lambda_h)
-=-\frac12\mathcal H_{333},
-}
-\]
-
-with
-
-\[
-\boxed{
-D_BV_V=-\frac12(\Pi_V^{prod}+\Pi_V^{rel}),
-\qquad
-\left\langle\Pi_V^{prod}+\Pi_V^{rel}\right\rangle=0.
-}
-\]
-
-At a spatially regular vertical `kappa=0` crossing,
+At regular vertical `kappa=0` crossings,
 
 \[
 \boxed{
 O_V=-\frac15|Q|_F^2\kappa_3,
 \qquad
-h=-\frac{5r_V}{|Q|_F^2}O_V,
-\qquad
-r_V=B_3-v_0.
+h=-\frac{5r_V}{|Q|_F^2}O_V.
 }
 \]
 
-M5-685, without any coarea substitution, gives
+M5-685 yields
 
 \[
 \boxed{
 \overline{
-\int
- a\frac{r_VO_V}{|Q|_F^2}
-\delta(\kappa)\,d\mu_0
+\int a\frac{r_VO_V}{|Q|_F^2}\delta(\kappa)\,d\mu_0
 }>0.
 }
 \]
 
-But
+But the global pressure moment uses a sign-changing spatial kernel:
 
 \[
 \boxed{
-\mathcal H_{333}=\langle S_P,\mathcal K_{333}\rangle,
-\qquad
-S_P=|\Sigma|^2-\frac12\rho^2,
+\mathcal H_{333}=\langle S_P,\mathcal K_{333}\rangle.
 }
 \]
 
-uses a sign-changing spatial kernel. Therefore the remaining vertical hard gate is
+Therefore the vertical hard gate remains
 
 \[
 \boxed{
-R_{1,V}^{nonaxis}
-\to
 \text{local label-crossing bias}
 \;\leftrightarrow?\;
 \text{global axial STF pressure architecture}.
 }
 \]
 
-This is the **vertical axial-STF covariance/turnover firewall** of M17-096.
-
-For conformal high-jet nonaxisymmetry, M17-084 also forces
-
-\[
-\boxed{\langle\lambda\rangle=-\frac12,}
-\]
-
-so same-marker axial recurrence is unavailable; Eulerian recurrence must use stretch/marker turnover, angular-order change, or firewall approach.
-
 ## Slanted Rank-1 branch
 
-For `p!=0`, slant azimuth is materially frozen and recurrent nonzero slant gives
-
-\[
-\boxed{\langle\lambda\rangle=0.}
-\]
-
-The remaining non-interface classes are
+The surviving non-interface classes remain
 
 \[
 \boxed{
-R_{1,S}^{p\neq0}
+R_{1,S}
 \Longrightarrow
 R_{principal}^{l=3\ scalar\ lock}
 \ \lor\
@@ -279,47 +224,28 @@ T_{1,S}.
 }
 \]
 
-Principal slant has zero recurrent local payer-octupole modes but retains one local-viscous/global-pressure scalar lock.
-Genuine oblique slant retains an explicitly driven local system, a half-slope recharge law, and a local-to-global `l=3` covariance firewall.
+No current identity closes the local-to-global `l=3` covariance firewall.
 
 ---
 
 # Rank two — current hard structure
 
-The following are already closed under their stated hypotheses:
-
-1. complete persistent parallel Rank-2;
-2. same-marker recurrent curved oblique Rank-2 with recurrent nonzero transverse area;
-3. complete persistent conformal pure-kernel Rank-2;
-4. complete uncompensated regular maximum sheets;
-5. same-marker recurrent full spatial pure-kernel maxima.
-
-Material turnover, rank loss, director-curvature loss, chart/interface changes, and endpoint changes remain exits rather than contradictions.
-
 The intrinsic hard geometry is concentrated on the pure-transverse-kernel class
 
 \[
 \boxed{
-j_\xi=0,
+\rho>0,
 \qquad
-(k\cdot\nabla)\xi=0,
+J_\xi=|J_\xi|k\neq0,
 \qquad
-b=(\xi\cdot\nabla)\xi\neq0.
+D_k\xi=0.
 }
 \]
 
-## Peak coverage
+## Peak coverage and finite type
 
-For a connected nonzero vortex-line component with
-
-\[
-\rho\to0
-\]
-
-at both ends, M17-085 forces at least one finite line peak. Thus a decaying asymptotic tail is not an independent noncritical survivor in this two-ended class.
-
-A peak is either regular or finite-order degenerate.
-On the compact analytic two-ended decaying hard hull,
+For two-ended decaying connected components, at least one finite line peak exists.
+On the compact analytic hard hull,
 
 \[
 \boxed{
@@ -329,18 +255,16 @@ On the compact analytic two-ended decaying hard hull,
 }
 \]
 
-## Regular and degenerate Riccati compensation
-
-Regular maxima use the unified margin
+Regular maxima must maintain
 
 \[
 \boxed{
-\mathcal M_{R2}
-=C+rD_ks-\Theta D_\xi q>0.
+\mathcal M_{R2}=C+rD_ks-\Theta D_\xi q>0
 }
 \]
 
-Fixed-order degenerate maxima use
+to evade the Riccati obstruction.
+Fixed-order degenerate maxima must maintain the corresponding higher-jet margin
 
 \[
 \boxed{
@@ -349,68 +273,93 @@ Fixed-order degenerate maxima use
 }
 \]
 
-Failure of the positive margin returns the corresponding critical sheet to the Riccati obstruction.
+These positive-margin conditions remain an actual dynamical burden; the carrier genealogy audit does not remove them.
 
-## Strain-free critical-type descriptor
+## Director-area carrier measure
 
-For each retained type,
+A regular tube label carries a frozen flux element
+
+\[
+\boxed{d\Phi_J(\lambda).}
+\]
+
+When a peak/top-jet sheet is transverse to `J_xi`, its physical sheet measure is only a cross-section representation of this same tube measure.
+
+Clean type switches, finite degeneracies, regular tangencies, and nonunique pointwise peak branching therefore satisfy
 
 \[
 \boxed{
-Z_\nu
-:=\frac{H_\nu}{|b|^{\nu+1}}<0,
-}
-\]
-
-and
-
-\[
-\boxed{
-D_*Z_\nu
-=S_\nu^{crit}
-+V_{rel}^{max}\cdot\nabla Z_\nu.
-}
-\]
-
-Critical-order turnover is
-
-\[
-\boxed{Z_\nu\to0}
-\]
-
-while `b!=0`; `b->0` is a separate director-curvature degeneration.
-
-For an explicitly tracked type-`nu` peak population,
-
-\[
-\boxed{
-\partial_\theta F_\nu
-+\partial_zG_\nu
-=\mathcal B_\nu,
-}
-\]
-
-where `B_nu=0` only on intervals with no births/deaths/type switches/branch exits.
-This is a conditional bookkeeping ledger, not a newly discovered conserved physical charge.
-
-Thus the current Rank-2 hard gate is
-
-\[
-\boxed{
-R_{2,pure-kernel}^{two-end\ decay}
+E_{interior\ peak/type/tangency}^{finite}
 \Longrightarrow
-\bigcup_{\nu\le\nu_*}
-\left\{
-Z_\nu<0,
-\mathcal M^{(\nu)}>0,
-\text{recharge/relative transport}
-\right\}
-\ \lor\
-T_{2}.
+\text{signed director-area-flux neutral}.
 }
 \]
 
-Separate nondecaying endpoints, finite endpoints, rank loss, `b->0`, and interface/chart exits are not silently absorbed into this statement.
+The robust carrier-level invariant is
+
+\[
+\boxed{
+\mathcal Q_{peak}^{alg}
+=\int_\Lambda
+\frac{\operatorname{sgn}g(s_+)-\operatorname{sgn}g(s_-)}2
+\,d\Phi_J.
+}
+\]
+
+It does not require unique pointwise peak tracks.
+
+## Finite-time material nonvanishing
+
+The exact Cauchy law
+
+\[
+D_BJ_\xi
+=(\nabla B-\tfrac32I)J_\xi
+\]
+
+implies
+
+\[
+\boxed{
+J_\xi(\theta_0)\neq0
+\Longrightarrow
+J_\xi(\theta)\neq0
+}
+\]
+
+for every finite regular material time.
+
+The CE-H amplitude law
+
+\[
+D_B\rho=(\sigma+\kappa-1)\rho
+\]
+
+likewise implies
+
+\[
+\boxed{
+\rho(\theta_0)>0
+\Longrightarrow
+\rho(\theta)>0
+}
+\]
+
+for finite regular material time.
+
+Thus a regular active Rank-2 material carrier cannot die internally by finite-time `J_xi=0` rank loss or `rho=0` nodal crossing.
+
+The remaining Rank-2 exits are therefore not ordinary internal genealogy events. They are
+
+\[
+\boxed{
+E_{spatial\ endpoint/domain/interface}
+\ \lor\
+E_{asymptotic}
+\ \lor\
+E_{loss\ of\ regularity}.
+}
+\]
 
 ---
 
@@ -418,43 +367,41 @@ Separate nondecaying endpoints, finite endpoints, rank loss, `b->0`, and interfa
 
 The current audit explicitly rejects the following shortcuts:
 
-1. treating winding itself as singular — axisymmetric no-swirl is a regular firewall;
-2. identifying nodal positive-kappa and bulk negative-kappa measures;
-3. converting M5 base-label measure into current spatial/coarea measure without a pushforward theorem;
-4. identifying local kappa-payer octupole with global pressure STF moment;
-5. assigning a sign to `H_333` from scalar payer mass despite the sign-changing kernel;
-6. treating moving maxima as material markers;
-7. treating births/deaths/type switches as conservation in the peak population;
-8. treating a two-ended decaying Rank-2 tail as an independent peak-free survivor;
-9. allowing unbounded analytic critical order on a compact peak-floor hull;
-10. claiming Rank-1 slanted covariance gates cover the vertical `p=0` chart;
-11. promoting interface/turnover exits to contradictions without a nonrecyclable cost theorem.
+1. winding itself is not singular — axisymmetric no-swirl is a regular firewall;
+2. nodal positive-kappa and bulk negative-kappa measures are not interchangeable;
+3. M5 base-label measure cannot be replaced by current spatial/coarea measure without a pushforward theorem;
+4. scalar kappa payer cannot replace global `l=3` pressure architecture;
+5. local octupole sign does not determine the sign-changing global STF kernel;
+6. moving maxima are not material markers;
+7. critical-type labels are internal states of a director-area carrier, not independent charges;
+8. unsigned peak counts are not conserved at tangencies;
+9. signed algebraic tube-intersection flux is conserved through arbitrary finite interior branching with fixed endpoints;
+10. finite `grad g=0` degeneracy is a descriptor-resolution event and lifts to a regular top-jet chart;
+11. a regular nonzero material `J_xi` carrier cannot vanish in finite time;
+12. a regular positive CE-H material amplitude cannot cross to `rho=0` in finite time;
+13. spatial/domain/interface exits are transport events until a nonrecyclable boundary cost is proved;
+14. global regularity is not established by any of the preceding branch reductions.
 
 ---
 
 # Highest-value next gates
 
-## A. Rank-2 inherited peak weight / dual-ledger gate
+## A. Rank-2 spatial carrier-flux boundary gate
 
-Search for a geometrically inherited weight for the finite `Z_nu` peak population from an already established Rank-2 current such as director-area or area-curvature transport.
-
-The weight must be derived, not invented.
-The goal is to determine whether
-
-\[
-Z_\nu\to0
-\]
-
-type turnover and
+The local peak genealogy problem is no longer the primary obstacle.
+The next Rank-2 question is whether persistent active director-area tubes can repeatedly leave and re-enter the compact hard-hull region through spatial/domain/interface boundaries while maintaining
 
 \[
 \mathcal M^{(\nu)}>0
 \]
-Riccati compensation can be serviced recurrently without a nonrecyclable flux cost.
+
+and the established director-area / area-curvature transport budgets.
+
+The required calculation must be a boundary flux balance, not a peak-count argument.
 
 ## B. Vertical Rank-1 genealogy/pushforward gate
 
-Relate, if possible, the M5 label-space crossing functional
+Relate, if possible,
 
 \[
 \mathcal C_V
@@ -467,11 +414,11 @@ to the current spatial source architecture producing
 \mathcal H_{333}.
 \]
 
-Any bridge must explicitly track the label-to-spatial pushforward or derive an independent PDE covariance estimate.
+Any bridge must explicitly preserve the label/spatial measure distinction.
 
-## C. Turnover assembly
+## C. Global turnover assembly
 
-If neither A nor B supplies a sign contradiction, assemble the remaining Rank-1 lobe turnover, Rank-1 axial-STF turnover, Rank-2 peak/type turnover, director-area/area-curvature transport, and M5 residence/flux ledgers and test whether they admit a common recurrent conveyor.
+If A and B remain sign-indefinite, assemble the Rank-1 lobe/pressure turnover and Rank-2 spatial carrier boundary transport with the M5 residence/flux ledgers and test whether one common recurrent conveyor can service all required positive margins and signed payer budgets.
 
 ---
 
