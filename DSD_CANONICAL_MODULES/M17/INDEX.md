@@ -48,13 +48,20 @@ The provisional M16 source files are retained for provenance and are superseded 
 - **M17-036** — Euclidean flatness closes the complete conformal pure-kernel branch through `D_n lambda=2lambda^2` and finite-distance Riccati blowup.
 - **M17-037** — pure-kernel anisotropy splits into a frozen target angle `c=ahat dot bhat` and dynamic stretch ratio `r=|a|/|b|`; `c!=0` gives a strict conformal-defect floor.
 - **M17-038** — on the orthogonal stretch class, weighted harmonic stress is diagonal and gives `D_xi d=-E D_xi log rho`, with `d=(|b|^2-|a|^2)/2` and `E=|a|^2+|b|^2`.
-- **M17-039** — along large monotone amplitude drops, positive `d` grows at least like `rho^{-2}` while negative `d` is driven toward zero at least like `rho^2`; complete decaying tails therefore require sign/conformal crossings, interfaces, or oscillatory tails.
+- **M17-039** — along large monotone amplitude drops, positive `d` grows at least like `rho^{-2}` while negative `d` is driven toward zero at least like `rho^2`; complete decaying tails require sign/conformal crossings, interfaces, or oscillatory tails.
 - **M17-040** — linewise amplitude and stretch extrema coincide. A nondegenerate extremum has relative material speed `v_rel=-D_xi(sigma+kappa)/(D_xi^2 log rho)` and a cross-aligned director-jet frame `a parallel k`, `b parallel n`.
-- **M17-041** — frozen-angle pure-kernel rank two carries irreducible off-diagonal weighted-harmonic shear `rho^2 m`, `m=a dot b`; `m/|J_xi|` is a material invariant and the shear cannot relax to conformality while rank persists.
-- **M17-042** — `m dA_k` is an exact material surface charge, but it is only a fixed multiple of director-area flux `|J_xi|dA_k`; shear is not an independent second conserved ledger.
-- **M17-043** — persistent slanted Rank-1 alignment requires next-jet material collinearity: `P^perp_{Q_0}(D_BC_p)=0`, while `D_BQ_0=(kappa-3/2)Q_0`.
-- **M17-044** — direct similarity Navier--Stokes differentiation gives `D_BC_p=-(3/2)C_p+F_p`, `F_p=TF[(p dot grad_h)(Delta Sigma_h-nabla_h^2P)]`; persistent slant therefore requires `F_p=-[D_B(G_q-1)+kappa(G_q-1)]Q_0` and `P^perp_{Q_0}F_p=0`.
-- **M17-045** — pressure Poisson is `-Delta P=|Sigma|^2-rho^2/2`. In the DSAIG forcing the far harmonic pressure enters only from degree three upward; persistent slant requires exact cancellation between local viscous fourth-jet forcing, near pressure, and far cubic-and-higher pressure jets.
+- **M17-041** — frozen-angle pure-kernel rank two carries irreducible off-diagonal weighted-harmonic shear `rho^2 m`, `m=a dot b`; `m/|J_xi|` is a material invariant.
+- **M17-042** — `m dA_k` is an exact material surface charge but only a fixed multiple of director-area flux; shear is not an independent second conserved ledger.
+- **M17-043** — persistent slanted Rank-1 alignment requires next-jet material collinearity `P^perp_{Q_0}(D_BC_p)=0`.
+- **M17-044** — direct similarity Navier--Stokes differentiation gives `D_BC_p=-(3/2)C_p+F_p`, with `F_p=TF[(p dot grad_h)(Delta Sigma_h-nabla_h^2P)]`; persistent slant requires `P^perp_{Q_0}F_p=0` and fixes its parallel coefficient.
+- **M17-045** — `-Delta P=|Sigma|^2-rho^2/2`; DSAIG sees far harmonic pressure only from degree three upward.
+- **M17-046** — the instantaneous far cubic pressure tensor at a material core has an exact source-production / moving-shell-turnover / relative-transport law. It is not the same descriptor as the terminal odd pressure resonances of M5-142--144.
+- **M17-047** — retaining the full unequal-stretch jet before imposing criticality, Euclidean flatness gives at every cross-aligned line extremum `D_n q=2q^2-D_xi^2 log rho`; maxima are instantaneous super-Riccati events `D_nq>2q^2`.
+- **M17-048** — a complete `n`-tangent maximum critical sheet is excluded: if an `n`-curve stays inside the maximum surface then `dq/ds>2q^2`, so `1/q` reaches zero at finite signed distance. Surviving maxima must tilt, terminate, lose rank, or degenerate.
+- **M17-049** — maximum-surface tilt `Theta=(D_ng)/(-D_xig)` has an exact material law. Its multiplicative drift is `sigma-sigma_n`, the same strain difference driving stretch anisotropy; only explicit second-jet forcing is genuinely new. Vorticity-induced transverse frame rotation cancels.
+- **M17-050** — global enstrophy gives `||S_P||_1<=Z_*`; therefore `|nabla^3P_far(Y)|<=CZ_*R^-4` and bounded slant gives `|N_p^far|<=CP_*Z_*R^-4`. Arbitrary order-one remote pressure screening is eliminated; the hard alignment is local/mesoscopic.
+- **M17-051** — the local cubic pressure splits exactly as `P_3=H_3-(1/10)|x|^2(s dot x)`, `s=grad S_P(0)`. The DSAIG-visible particular tensor is `-(1/5)TF_h[p tensor s_h+s_h tensor p]`; at the nodal core `s_h=-6lambda grad_h Sigma_33`. The remaining cubic orientation is the harmonic cubic `H_3`.
+- **M17-052** — projecting pressure Poisson onto spherical degree three gives `(r^8 A'_{3m})'=-r^5s_{3m}` and the exact whole-space moment formula `A_{3m}(0)=(1/7)int_0^infty r^-2s_{3m}(r)dr`. The tail outside radius `R` is `O(Z_*R^-4)`. Harmonic cubic screening is therefore a seven-component global `l=3` pressure-source moment ledger, not arbitrary gauge freedom.
 
 ---
 
@@ -70,13 +77,13 @@ R_1^{great-circle/winding}.
 }
 \]
 
-Global regularity remains unproved. M17 now reduces both branches to explicit local/nonlocal compatibility systems rather than qualitative geometry.
+Global regularity remains unproved. M17 has reduced both branches to explicit signed payer, turnover, flatness and pressure-moment compatibility systems.
 
 ---
 
 ## Rank one — current hard structure
 
-The regular non-axisymmetric great-circle branch carries
+The regular non-axisymmetric great-circle branch simultaneously carries
 
 \[
 \boxed{
@@ -90,30 +97,27 @@ D_Bp=3\lambda p,
 }
 \]
 
-Every nontrivial bounded angular-defect lobe has a strict negative-`kappa` payer and recurrent bounded lobes require signed boundary turnover.
+Every nontrivial bounded angular-defect lobe has a strict negative-`kappa` payer and recurrent bounded lobes require signed boundary turnover. Positive recurrent winding-core phases force same-lobe `kappa>0 -> 0 -> <0` transitions.
 
-For a nonvertical nonconformal nodal core, define
+For a nonvertical nonconformal nodal core,
 
 \[
 Q_0=TF(\nabla_h^2q),
 \qquad
-C_p=TF[(p\cdot\nabla_h)\Sigma_h].
+C_p=TF[(p\cdot\nabla_h)\Sigma_h],
 \]
 
-The static and dynamic alignment conditions are now
+with
+
+\[
+\boxed{C_p=-(G_q-1)Q_0}
+\]
+
+and the dynamic condition
 
 \[
 \boxed{
-C_p=-(G_q-1)Q_0
-}
-\]
-
-and
-
-\[
-\boxed{
-F_p
-:=TF[(p\cdot\nabla_h)(\Delta\Sigma_h-\nabla_h^2P)]
+F_p:=TF[(p\cdot\nabla_h)(\Delta\Sigma_h-\nabla_h^2P)]
 =-[D_B(G_q-1)+\kappa(G_q-1)]Q_0.
 }
 \]
@@ -124,25 +128,76 @@ Hence
 \boxed{P_{Q_0}^{\perp}F_p=0.}
 \]
 
+### Pressure localization
+
 The pressure source is
 
 \[
-\boxed{-\Delta P=|\Sigma|^2-\rho^2/2.}
+\boxed{S_P=|\Sigma|^2-\rho^2/2,\qquad -\Delta P=S_P.}
 \]
 
-After near/far splitting, far pressure contributes to DSAIG only through harmonic degree `>=3`.
+Global enstrophy gives
 
-Thus the leading unresolved Rank-1 branch is now a recurrent **local viscous fourth-jet / nonlocal pressure third-jet collinearity problem**, coupled to the already mandatory lobe payer and M5 flux-hysteresis network.
+\[
+\boxed{\|S_P\|_1\le Z_*}
+\]
 
-The axisymmetric no-swirl subbranch remains a known regular firewall.
+and hence every remote pressure derivative has a quantitative tail bound; in particular
+
+\[
+\boxed{|N_p^{far}|\lesssim |p|Z_*R^{-4}.}
+\]
+
+The local cubic pressure has
+
+\[
+\boxed{
+P_3=H_3-\frac1{10}|x|^2(s\cdot x),
+\qquad
+s=\nabla S_P(0),
+}
+\]
+
+with
+
+\[
+\boxed{s_h=-6\lambda\nabla_h\Sigma_{33}.}
+\]
+
+Thus the explicit local pressure contribution is
+
+\[
+\boxed{
+N_{part}
+=\frac{6\lambda}{5}
+TF_h[p\otimes\nabla_h\Sigma_{33}+\nabla_h\Sigma_{33}\otimes p].
+}
+\]
+
+The harmonic cubic coefficients are not free: for `l=3` source coefficients `s_{3m}(r)`,
+
+\[
+\boxed{
+A_{3m}(0)=\frac17\int_0^\infty r^{-2}s_{3m}(r)dr.
+}
+\]
+
+Their remote portion is `O(Z_*R^-4)`.
+
+Therefore the unresolved Rank-1 pressure branch is now a recurrent **local viscous/source-gradient tensor + finite-dimensional l=3 pressure-source moment lock** to the frozen material tensor line `span(Q_0)`, coupled to the M5 flux-hysteresis and lobe-turnover network.
+
+The axisymmetric no-swirl branch remains a known regular firewall.
 
 ---
 
 ## Rank two — current hard structure
 
-The complete persistent parallel branch is closed by M17-030.
-The same-marker recurrent curved oblique branch with nonzero transverse director area is closed by M17-032.
-The complete conformal pure-kernel branch is closed by M17-036.
+Closed subbranches:
+
+1. complete persistent parallel Rank-2 — closed by M17-030;
+2. same-marker recurrent curved oblique Rank-2 with nonzero transverse area — closed by M17-032;
+3. complete conformal pure-kernel Rank-2 — closed by M17-036;
+4. complete `n`-tangent maximum critical sheet in the orthogonal pure-kernel branch — closed by M17-048.
 
 The intrinsic survivor is concentrated on
 
@@ -156,19 +211,7 @@ with two independent jets
 \boxed{b=(\xi\cdot\nabla)\xi,\qquad a=(n\cdot\nabla)\xi.}
 \]
 
-It splits into
-
-\[
-\boxed{
-R_{2,j=0}^{pure-kernel}
-\Longrightarrow
-R_{angle}^{frozen}
-\ \lor\ 
-R_{stretch}^{orthogonal}
-\ \lor\ 
-I_2^{turnover/interface}.
-}
-\]
+It splits into frozen-angle and orthogonal-stretch anisotropy plus turnover/interfaces.
 
 ### Frozen-angle class
 
@@ -178,91 +221,102 @@ For
 c=\widehat a\cdot\widehat b\ne0,
 \]
 
-the angle is a material invariant and
-
-\[
-\frac{m}{|J_\xi|}
-=\frac{c}{\sqrt{1-c^2}},
-\qquad m=a\cdot b.
-\]
-
-Thus the off-diagonal weighted-harmonic shear is irreducible while rank persists. Its material surface charge is not independent of director-area flux, so a second-charge contradiction is unavailable.
+the target angle is materially frozen and the irreducible shear is locked to director-area flux. No independent second-charge contradiction exists.
 
 ### Orthogonal-stretch class
 
-For
-
-\[
-a\cdot b=0,
-\qquad
-d=(|b|^2-|a|^2)/2,
-\]
+For `a dot b=0`,
 
 \[
 \boxed{D_\xi d=-E D_\xi\log\rho.}
 \]
 
-Large monotone amplitude drops cannot carry a uniformly positive `d`; negative `d` is driven toward asymptotic conformality, while a survivor may instead use sign crossings or an oscillatory tail.
-
-At every nondegenerate linewise amplitude/stretch extremum,
+At a nondegenerate line extremum define
 
 \[
-\boxed{a\parallel k,\qquad b\parallel n}
+g=D_\xi\log\rho.
 \]
 
-and
+Then
+
+\[
+\boxed{a=rk,\qquad b=qn}
+\]
+
+at the critical point and Euclidean flatness gives
+
+\[
+\boxed{D_nq=2q^2-D_\xi g.}
+\]
+
+Thus maxima have `D_nq>2q^2`; if `n` remains tangent to a complete maximum sheet, finite-distance super-Riccati focusing excludes that subbranch.
+
+The surviving maximum network must have nonzero tilt
+
+\[
+\Theta=\frac{D_ng}{-D_\xi g}
+\]
+
+or terminate/degenerate. Its material law is
 
 \[
 \boxed{
- v_{rel}
-=-\frac{D_\xi(\sigma+\kappa)}{D_\xi^2\log\rho}.
+D_B\log|\Theta|
+=(\sigma-\sigma_n)+\mathcal F_{crit}^{(2)},
 }
 \]
 
-Thus the oscillatory-tail survivor is a moving cross-aligned critical network rather than arbitrary scalar oscillation.
+while
+
+\[
+\boxed{D_B\log(|a|/|b|)=\sigma-\sigma_n.}
+\]
+
+Hence tilt and stretch anisotropy share the same multiplicative strain channel; the genuinely new Rank-2 variable is the second-jet forcing `mathcal F_crit^(2)` plus the moving-critical-point correction.
 
 ---
 
-## DSD audit conclusion through M17-045
+## DSD audit conclusion through M17-052
 
-Closed or rejected shortcut routes now include:
+Major rejected shortcuts:
 
-1. direct nodal-positive/global-negative `kappa` sign contradiction — rejected by measure mismatch;
-2. winding-as-singularity — rejected by the axisymmetric no-swirl firewall;
-3. double-zero current incompatibility under transverse intersection — rejected;
-4. codimension alone as contradiction — rejected;
-5. complete persistent parallel Rank-2 — closed;
-6. same-marker recurrent curved oblique Rank-2 with nonzero transverse area — closed;
-7. complete conformal pure-kernel Rank-2 — closed;
-8. shear as an independent second director-area charge — rejected as redundant;
-9. automatic conformal relaxation of anisotropy — rejected; only stretch can change, target angle is frozen;
-10. orthogonal-stretch monotonic relaxation — rejected; only sign-selective line-end inequalities are available;
-11. static slanted alignment as sufficient — rejected; direct viscous-pressure higher-jet alignment is also required;
-12. far pressure quadrupole as DSAIG forcing — rejected; DSAIG starts at cubic far-pressure multipoles.
+1. nodal-positive versus global-negative `kappa` as direct contradiction — measure mismatch;
+2. winding as singularity — axisymmetric no-swirl firewall;
+3. transverse double-zero currents as incompatible — false;
+4. tensor codimension alone as contradiction — false;
+5. director shear as an independent second conserved charge — redundant;
+6. pointwise super-Riccati slope as an interval blowup theorem — false unless critical-surface tangency persists;
+7. cubic far pressure as a frozen terminal odd multipole — descriptor substitution;
+8. distance alone as pressure silence — insufficient without the global `L1` source bound;
+9. local pressure Poisson as fixing the whole cubic tensor — false; a harmonic cubic remains;
+10. harmonic cubic as arbitrary gauge — false under whole-space pressure selection; it is an exact weighted `l=3` source moment.
+
+Genuine closures now include the four Rank-2 subbranches listed above, while Rank-1 has been reduced from qualitative non-axisymmetry to a finite-dimensional pressure-moment locking problem plus the already mandatory signed payer/turnover network.
 
 ---
 
 ## Highest-value next calculations
 
-### Rank one — pressure-moment dynamics
-Derive the material evolution of the far cubic pressure tensor and test whether its trace-free orientation can remain recurrently locked to the frozen pair `(Q_0,p)`. If not, persistent slanted alignment must reduce to stronger near-field symmetry or a finite-jet degeneration/turnover.
-
-### Rank two — unequal-stretch critical flatness
-At the cross-aligned critical network
+### Rank one — l=3 moment locking dynamics
+Differentiate
 
 \[
-D_k\xi=0,
-\qquad
-D_\xi\xi=q n,
-\qquad
-D_n\xi=r k,
-\qquad
-|q|\ne|r|,
+A_{3m}(0,\theta)
+=\frac17\int_0^\infty r^{-2}s_{3m}(r,\theta)dr
 \]
 
-apply Euclidean flatness without assuming a full conformal neighborhood and determine whether recurrent unequal stretch can persist, or whether the network is driven to conformal/rank-loss/degenerate-critical events.
+along the moving nodal core, and reconcile the result with M17-046's source-production / shell-turnover / relative-transport cubic tensor law. Determine whether recurrent DSAIG locking is an independent viable cycle or another representation of the existing source-turnover/hysteresis ledger.
 
-The overall proof cannot be completed until the surviving Rank-1 pressure-alignment branch and Rank-2 anisotropic pure-kernel branch are either excluded or reduced to known regular classes.
+### Rank two — tilted critical forcing
+Audit
+
+\[
+\mathcal F_{crit}^{(2)}
+\]
+
+and the moving-maximum derivative to decide whether a bounded recurrent tilted maximum network can remain separated from the closed `Theta=0` class without reaching finite-jet critical degeneration or rank/interface turnover.
+
+The overall proof cannot be completed until the surviving Rank-1 pressure-moment branch and Rank-2 tilted/frozen-angle anisotropic branches are either excluded or reduced to known regular classes.
 
 \[
 \boxed{\text{GLOBAL REGULARITY REMAINS UNPROVED.}}
