@@ -3,7 +3,7 @@
 Date: 2026-09-04
 Canonical ID: **M17-049**
 
-Status: **INTERNAL TILTED-MAXIMUM DYNAMICS / FOR `g=D_xi log rho`, DEFINE AT A NONDEGENERATE MAXIMUM `A=D_n g` AND `C=D_xi g<0`. USING THE EXACT PURE-KERNEL FRAME ROTATION FROM M17-033 AND THE M17-040 LAW `D_B g=D_xi(sigma+kappa)-(sigma+1/2)g`, THE MATERIAL DERIVATIVES ARE `D_B A=D_nD_xi(sigma+kappa)-2 beta D_k g+(sigma_k-1)A` AND `D_B C=D_xi^2(sigma+kappa)-2(sigma+1/2)C`. THE VORTICITY-INDUCED TRANSVERSE FRAME ROTATION CANCELS EXACTLY. FOR NONZERO TILT `Theta=A/(-C)`, THE MULTIPLICATIVE PART OF `D_B log|Theta|` IS `sigma-sigma_n`, THE SAME STRAIN DIFFERENCE THAT DRIVES THE ORTHOGONAL STRETCH RATIO, PLUS EXPLICIT SECOND-JET FORCING FROM `sigma+kappa` AND THE CRITICAL-SURFACE SHEAR TERM `beta D_k g`. THUS TILT IS NOT A FREE ESCAPE; IT IS COUPLED TO THE EXISTING ANISOTROPY CHANNEL. BECAUSE CRITICAL POINTS MOVE RELATIVE TO MATERIAL LABELS, THE FULL CRITICAL-POINT EVOLUTION ALSO CONTAINS THE KNOWN `v_rel D_xi` CORRECTION AND IS NOT YET CLOSED. GLOBAL REGULARITY REMAINS UNPROVED.**
+Status: **INTERNAL TILTED-MAXIMUM DYNAMICS / FOR `g=D_xi log rho`, DEFINE AT A NONDEGENERATE MAXIMUM `A=D_n g` AND `C=D_xi g<0`. USING THE EXACT PURE-KERNEL MATERIAL FRAME ROTATION FROM M17-033 AND THE M17-040 LAW `D_B g=D_xi(sigma+kappa)-(sigma+1/2)g`, THE MATERIAL DERIVATIVES ARE `D_B A=D_nD_xi(sigma+kappa)-2 beta_Sigma D_k g+(sigma_k-1)A` AND `D_B C=D_xi^2(sigma+kappa)-2(sigma+1/2)C`, WHERE `beta_Sigma:=n·Sigma k` IS THE TRANSVERSE STRAIN SHEAR. THE VORTICITY-INDUCED TRANSVERSE FRAME ROTATION CANCELS EXACTLY. FOR NONZERO TILT `Theta=A/(-C)`, THE MULTIPLICATIVE PART OF `D_B log|Theta|` IS `sigma-sigma_n`, THE SAME STRAIN DIFFERENCE THAT DRIVES THE ORTHOGONAL STRETCH RATIO, PLUS EXPLICIT SECOND-JET FORCING FROM `sigma+kappa` AND THE STRAIN-SHEAR TERM `beta_Sigma D_k g`. AUDIT CORRECTION: AN EARLIER VERSION INCORRECTLY IDENTIFIED THIS `beta_Sigma` WITH THE UNRELATED FRAME-CONNECTION COEFFICIENT CALLED `beta` IN M17-047; THAT SUBSTITUTION IS REMOVED. THE MAIN TILT LAW IS UNAFFECTED. BECAUSE CRITICAL POINTS MOVE RELATIVE TO MATERIAL LABELS, THE FULL CRITICAL-POINT EVOLUTION ALSO CONTAINS THE KNOWN `v_rel D_xi` CORRECTION AND IS NOT YET CLOSED. GLOBAL REGULARITY REMAINS UNPROVED.**
 
 ---
 
@@ -68,31 +68,34 @@ The moving maximum therefore has relative line velocity
 
 ---
 
-## 3. Input: pure-kernel frame rotation
+## 3. Input: pure-kernel material frame rotation
 
 M17-033 gives
 
 \[
-D_B\xi=0,
+D_B\xi=0.
 \]
 
-and, with
+Define the **transverse strain shear**
 
 \[
-\beta:=n\cdot\Sigma k,
+\boxed{
+\beta_\Sigma:=n\cdot\Sigma k.
+}
 \]
 
-and signed transverse vorticity rotation `r_W`,
+Let `r_W` be the signed transverse rotation coefficient of the antisymmetric velocity-gradient part about `xi`.
+Then
 
 \[
-\boxed{D_Bn=-(\beta+r_W)k.}
+\boxed{D_Bn=-(\beta_\Sigma+r_W)k.}
 \]
 
 Also
 
 \[
 (\nabla B)n
-=(\beta-r_W)k
+=(\beta_\Sigma-r_W)k
 +\left(\sigma_n+\frac12\right)n.
 \]
 
@@ -104,6 +107,8 @@ For the vortex direction,
 =\left(\sigma+\frac12\right)\xi.
 }
 \]
+
+The notation `beta_Sigma` is deliberately distinguished from the unrelated connection coefficient used in M17-047.
 
 ---
 
@@ -117,23 +122,22 @@ D_B(D_ef)
 +\left[D_Be-(\nabla B)e\right]\cdot\nabla f.
 \]
 
-For `e=n`, Sections 2--3 give
+For `e=n`, Section 3 gives
 
 \[
 D_Bn-(\nabla B)n
-=-2\beta k
+=-2\beta_\Sigma k
 -\left(\sigma_n+\frac12\right)n.
 \]
 
 The antisymmetric rotation `r_W` cancels exactly.
-
 Hence
 
 \[
 \boxed{
 D_B(D_nf)
 =D_n(D_Bf)
--2\beta D_kf
+-2\beta_\Sigma D_kf
 -\left(\sigma_n+\frac12\right)D_nf.
 }
 \]
@@ -157,7 +161,7 @@ Set `f=g` in the `n` commutator:
 \[
 D_BA
 =D_n(D_Bg)
--2\beta D_kg
+-2\beta_\Sigma D_kg
 -\left(\sigma_n+\frac12\right)A.
 \]
 
@@ -183,7 +187,7 @@ Therefore
 \boxed{
 D_BA
 =D_nD_\xi(\sigma+\kappa)
--2\beta D_kg
+-2\beta_\Sigma D_kg
 -(\sigma+\sigma_n+1)A.
 }
 \]
@@ -200,7 +204,7 @@ so equivalently
 \boxed{
 D_BA
 =D_nD_\xi(\sigma+\kappa)
--2\beta D_kg
+-2\beta_\Sigma D_kg
 +(\sigma_k-1)A.
 }
 \]
@@ -261,7 +265,7 @@ Insert Sections 5--6:
 \begin{aligned}
 D_B\log|\Theta|
 ={}&(\sigma-\sigma_n)\\
-&+\frac{D_nD_\xi(\sigma+\kappa)-2\beta D_kg}{A}\\
+&+\frac{D_nD_\xi(\sigma+\kappa)-2\beta_\Sigma D_kg}{A}\\
 &-\frac{D_\xi^2(\sigma+\kappa)}{C}.
 \end{aligned}
 }
@@ -278,6 +282,27 @@ The scalar identity
 
 produces the first term.
 
+Define
+
+\[
+\boxed{
+\mathcal F_{crit}^{(2)}
+:=
+\frac{D_nD_\xi(\sigma+\kappa)-2\beta_\Sigma D_kg}{A}
+-
+\frac{D_\xi^2(\sigma+\kappa)}{C}.
+}
+\]
+
+Then
+
+\[
+\boxed{
+D_B\log|\Theta|
+=(\sigma-\sigma_n)+\mathcal F_{crit}^{(2)}.
+}
+\]
+
 ---
 
 ## 8. Connection to stretch anisotropy
@@ -292,45 +317,72 @@ D_B\log\frac{|a|}{|b|}
 \]
 
 The **same** strain difference is the multiplicative drift of the maximum-surface tilt.
-
 Thus
 
 \[
 \boxed{
-\text{stretch anisotropy drift}
-\quad\text{and}\quad
-\text{critical-surface tilt drift}
+D_B\log
+\left(
+\frac{|\Theta|}{|a|/|b|}
+\right)
+=\mathcal F_{crit}^{(2)}.
 }
 \]
 
-share one material strain channel.
-
-Tilt is therefore not an independent geometric escape variable.
-Its additional freedom lies only in the explicit second-jet forcing terms involving `sigma+kappa` and `D_k g`.
+Tilt is therefore not an independent multiplicative escape variable.
+Its additional freedom lies in the explicit second-jet forcing `F_crit^(2)`.
 
 ---
 
-## 9. Critical flatness substitution for beta
+## 9. Audit correction — the strain shear is not the M17-047 connection beta
 
-M17-047 gives at a cross-aligned critical point
+An earlier version of this module stated that M17-047 allowed the substitution
+
+\[
+\beta=q+\frac{D_kg}{r}
+\]
+
+inside the shear term of Section 7.
+That statement conflated two different coefficients which happened to use the same symbol `beta`.
+
+Here
 
 \[
 \boxed{
-\beta=q+\frac{D_kg}{r}.
+\beta_\Sigma=n\cdot\Sigma k
 }
 \]
 
-Hence the shear forcing may be written
+is a **strain tensor component** controlling material frame rotation.
+
+By contrast, M17-047 used a connection coefficient, here renamed
 
 \[
 \boxed{
--2\beta D_kg
-=-2qD_kg
--\frac{2(D_kg)^2}{r}.
+\beta_{conn}:=n\cdot D_k k,
 }
 \]
 
-This term has no universal sign because `r` is signed, but it is fully local critical-jet data rather than an unspecified frame rotation.
+and flatness gave
+
+\[
+\boxed{
+\beta_{conn}=q+\frac{D_kg}{r}
+}
+\]
+
+at a cross-aligned critical point.
+
+No identity
+
+\[
+\beta_\Sigma=\beta_{conn}
+\]
+
+has been proved.
+Therefore the substitution is invalid and is removed.
+
+This correction does **not** alter Sections 1--8, whose derivation used only `beta_Sigma` from M17-033.
 
 ---
 
@@ -364,7 +416,6 @@ D_{max}\log|\Theta|
 
 The final term contains the next spatial jet of the critical geometry.
 It is not controlled by the present identities.
-
 Hence tilted maximum recurrence is a higher-jet problem, not a closed scalar ODE.
 
 ---
@@ -383,7 +434,10 @@ Separated explicitly by the `v_rel D_xi` correction.
 ### Audit D — claiming sigma-sigma_n alone controls tilt
 Rejected. It is only the multiplicative part; second-jet forcing remains.
 
-### Audit E — proof status
+### Audit E — identifying strain shear beta_Sigma with a frame-connection coefficient
+Rejected and corrected. M17-047's `beta_conn` is geometrically different.
+
+### Audit F — proof status
 Tilt is coupled to the existing stretch channel but remains an open recurrent escape.
 
 ---
@@ -393,9 +447,8 @@ Tilt is coupled to the existing stretch channel but remains an open recurrent es
 A recurrent tilted maximum must maintain
 
 \[
-\boxed{
-\Theta\ne0,
-}
+\boxed{\Theta\ne0}
+\]
 
 while satisfying simultaneously
 
@@ -409,19 +462,7 @@ and
 \[
 \boxed{
 D_B\log|\Theta|
-=(\sigma-\sigma_n)+\mathcal F_{crit}^{(2)},
-}
-\]
-
-where
-
-\[
-\boxed{
-\mathcal F_{crit}^{(2)}
-:=
-\frac{D_nD_\xi(\sigma+\kappa)-2\beta D_kg}{A}
--
-\frac{D_\xi^2(\sigma+\kappa)}{C}.
+=(\sigma-\sigma_n)+\mathcal F_{crit}^{(2)}.
 }
 \]
 
@@ -437,13 +478,11 @@ D_B\log
 }
 \]
 
-This isolates the genuinely new critical-surface forcing from the already known stretch anisotropy.
-
 ---
 
 ## 13. Next target
 
-The new independent Rank-2 descriptor is not the tilt itself but
+The independent Rank-2 descriptor is
 
 \[
 \boxed{
@@ -451,9 +490,14 @@ The new independent Rank-2 descriptor is not the tilt itself but
 }
 \]
 
-The next useful audit is to determine whether its recurrence can be linked to the amplitude multiplier `kappa`, the negative-`kappa` ridge cost of M17-027, or a finite-jet critical degeneration.
+M17-071 additionally shows that nonzero tilt is useful only when the tangent-Riccati compensation descriptor
 
-In parallel, M17-046 leaves the Rank-1 cubic far-pressure locking problem as a source-production / shell-turnover / relative-transport balance.
+\[
+\mathcal K_{tilt}=C^2+A D_\xi q
+\]
+
+is sufficiently negative.
+The next useful audit is to derive the material/moving-critical evolution of that compensation descriptor with the corrected distinction between `beta_Sigma` and all frame-connection coefficients.
 
 ---
 
