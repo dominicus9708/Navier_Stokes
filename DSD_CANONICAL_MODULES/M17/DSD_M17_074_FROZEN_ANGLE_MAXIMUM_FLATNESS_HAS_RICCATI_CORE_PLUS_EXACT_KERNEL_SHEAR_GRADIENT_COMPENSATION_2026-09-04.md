@@ -1,9 +1,9 @@
-# DSD M17-074 — Frozen-angle maximum flatness has a Riccati core plus exact kernel shear-gradient compensation
+# DSD M17-074 — Frozen-angle maximum flatness has a Riccati core plus exact normalized-shear gradient compensation
 
 Date: 2026-09-04
 Canonical ID: **M17-074**
 
-Status: **INTERNAL FROZEN-ANGLE RANK-TWO FLATNESS GATE / ON THE `c != 0` PURE-KERNEL BRANCH, A LINEWISE AMPLITUDE CRITICAL POINT STILL HAS `g=D_xi log rho=0`, HENCE `t=div xi=0` AND `a=r k`, BUT NONORTHOGONALITY LEAVES `b=p k+q n` WITH `p != 0`; THE PRODUCT `pr` IS THE IRREDUCIBLE SHEAR `m`. RECOMPUTING EUCLIDEAN FLATNESS WITHOUT IMPORTING THE ORTHOGONAL RELATION GIVES THE EXACT CRITICAL LAW `D_n q = 2 q^2 - C + (q/r)D_k g - r D_k(p/r)`, WHERE `C=D_xi g`. THUS THE UNIVERSAL RICCATI CORE `2q^2-C` SURVIVES, WHILE FROZEN-ANGLE SHEAR CONTRIBUTES ONE KERNEL-DIRECTION COMPENSATION `H_k=(q/r)D_k g-rD_k(p/r)`. ON A MAXIMUM `C<0`, AN n-TANGENT COMPLETE CRITICAL CURVE CAN AVOID THE M17-048 RICCATI OBSTRUCTION ONLY IF `H_k<C`, I.E. THE SHEAR/KERNEL GRADIENT MUST BE NEGATIVE ENOUGH TO OVERCOME THE POSITIVE AMPLITUDE-CURVATURE EXCESS `-C`. FOR A TILTED MAXIMUM SURFACE THE TRUE TANGENT `T=n+Theta xi` ADDS THE SAME `Theta D_xi q` CHANNEL AS M17-071, SO THE FULL ESCAPE COST IS `-C+H_k+Theta D_xi q<0`. FROZEN ANGLE IS THEREFORE NOT A FREE GEOMETRIC FIREWALL; IT MUST PAY AN EXPLICIT KERNEL-SHEAR GRADIENT COST OR EXIT THROUGH INTERFACE/DEGENERATION. NO SIGN THEOREM YET FORCES THAT COST TO FAIL / GLOBAL REGULARITY REMAINS UNPROVED.**
+Status: **INTERNAL FROZEN-ANGLE RANK-TWO FLATNESS GATE / ON THE `c != 0` PURE-KERNEL BRANCH, A LINEWISE AMPLITUDE CRITICAL POINT HAS `g=D_xi log rho=0`, HENCE `t=div xi=0` AND `a=r k`, WHILE NONORTHOGONALITY LEAVES `b=p k+q n` WITH `p != 0`. DIRECT EUCLIDEAN-FLATNESS CALCULATION FIRST GIVES `D_n q=2q^2-C+(q/r)D_k g-rD_k(p/r)`, `C=D_xi g`. A CRITICAL AUDIT THEN DIFFERENTIATES THE FULL NORMALIZED SHEAR `s:=m/|a|^2=(pr+tq)/(r^2+t^2)` BEFORE SETTING `t=0`; SINCE `D_k t=-D_k g`, THE APPARENT `(q/r)D_k g` TERM CANCELS EXACTLY. THE TRUE CRITICAL LAW IS `D_n q=2q^2-C-rD_k s`. AT THE CRITICAL POINT `rs=p`, SO EQUIVALENTLY `D_n q=2q^2-C-pD_k log|s|`. THUS FROZEN ANGLE DOES NOT SUPPLY A FREE RICCATI ESCAPE: IT MUST PAY THROUGH THE KERNEL GRADIENT OF ONE NORMALIZED SHEAR SCALAR. ON A MAXIMUM `C<0`, AN N-TANGENT SUB-RICCATI ESCAPE REQUIRES `p D_k log|s|>|C|`; ON A TILTED MAXIMUM THE TRUE SURFACE TANGENT ADDS `Theta D_xi q`, AND SURVIVAL REQUIRES `p D_k log|s|-Theta D_xi q>|C|`. THIS CORRECTION STRENGTHENS THE BRANCH REDUCTION AND REMOVES A FALSE INDEPENDENT `D_k g` CHANNEL / GLOBAL REGULARITY REMAINS UNPROVED.**
 
 ---
 
@@ -20,22 +20,20 @@ D_k\xi=0.
 Write
 
 \[
-\boxed{
-b:=D_\xi\xi=p\,k+q\,n,}
+\boxed{b:=D_\xi\xi=p\,k+q\,n,}
 \]
 
 \[
-\boxed{
-a:=D_n\xi=r\,k+t\,n.}
+\boxed{a:=D_n\xi=r\,k+t\,n.}
 \]
 
-The frozen-angle branch has
+The frozen-angle branch has nonzero signed target shear
 
 \[
 \boxed{m:=a\cdot b=pr+tq\neq0.}
 \]
 
-Define as before
+Define
 
 \[
 \boxed{g:=D_\xi\log\rho=-\nabla\cdot\xi.}
@@ -44,7 +42,7 @@ Define as before
 M17-041 gives
 
 \[
-\nabla\cdot\xi=t,
+t=\nabla\cdot\xi,
 \]
 
 so
@@ -62,9 +60,7 @@ At a linewise amplitude critical point,
 hence
 
 \[
-\boxed{t=0,
-\qquad
-a=rk.}
+\boxed{t=0,\qquad a=rk.}
 \]
 
 Full rank two requires
@@ -75,17 +71,21 @@ r\neq0,
 q\neq0.
 \]
 
-Since `m=pr` at the critical point and the frozen-angle branch has `m != 0`,
+Since at the critical point
+
+\[
+m=pr
+\]
+
+and the frozen-angle class has `m != 0`,
 
 \[
 \boxed{p\neq0.}
 \]
 
-Thus the critical frame is not cross aligned: the `k` component of `b` is the irreducible angular shear.
-
 ---
 
-## 2. General orthonormal connection at the critical point
+## 2. General orthonormal connection
 
 Use distinct connection notation
 
@@ -111,43 +111,17 @@ D_n k=-r\xi+\delta n,
 D_n n=-t\xi-\delta k.
 \]
 
-At the critical point `t=0`, but derivatives of `t` are not set to zero.
-
-The corresponding commutators are
-
-\[
-[\xi,k]
-=-p\xi+\alpha n,
-\]
-
-\[
-[\xi,n]
-=-q\xi-(\alpha+r)k,
-\]
-
-and
-
-\[
-[k,n]
-=r\xi-\gamma_k k-\delta n.
-\]
+At the critical point `t=0`, but directional derivatives of `t` are retained.
 
 ---
 
 ## 3. Flatness R(xi,k)xi = 0
 
-Compute the Euclidean curvature component
-
-\[
-R(\xi,k)\xi=0.
-\]
-
-At `t=0`, its `k` and `n` projections give
+Euclidean flatness gives at `t=0`
 
 \[
 \boxed{
-D_kp
-=q\gamma_k+p^2-\alpha r,
+D_kp=q\gamma_k+p^2-\alpha r,
 }
 \]
 
@@ -155,19 +129,17 @@ and
 
 \[
 \boxed{
-D_kq
-=p(q-\gamma_k).
+D_kq=p(q-\gamma_k).
 }
 \]
 
-Unlike the orthogonal critical branch, the second relation does not yet say `D_kq=0`, because `p != 0`.
+These are derived without imposing any orthogonal-stretch relation.
 
 ---
 
 ## 4. Flatness R(k,n)xi = 0
 
-Retain the derivative `D_k t` before setting `t=0`.
-The two projections give
+The two target components give
 
 \[
 \boxed{
@@ -183,7 +155,7 @@ D_kt+r(\gamma_k-q)=0.
 }
 \]
 
-Since
+Because
 
 \[
 t=-g,
@@ -199,229 +171,215 @@ Therefore
 
 \[
 \boxed{
-\gamma_k
-=q+\frac{D_kg}{r}.
+\gamma_k=q+\frac{D_kg}{r},
 }
 \]
 
-Also
+and
 
 \[
 \boxed{
-\delta
-=p-\frac{D_kr}{r}.
+\delta=p-\frac{D_kr}{r}.
 }
 \]
 
-These are frame-connection identities; neither coefficient is the strain shear `beta_Sigma` of M17-049/M17-072.
+Consequently
+
+\[
+\boxed{
+D_kq=-\frac prD_kg.
+}
+\]
 
 ---
 
-## 5. Consequences for D_k q and alpha
+## 5. Flatness R(xi,n)xi = 0
 
-Substitute the `gamma_k` law into Section 3:
-
-\[
-D_kq
-=p\left(q-q-\frac{D_kg}{r}\right).
-\]
-
-Hence
+The `n` component of flatness gives
 
 \[
 \boxed{
-D_kq
-=-\frac prD_kg.
+D_nq=r\alpha+D_\xi t-p\delta+q^2.
 }
 \]
 
-The first Section-3 identity gives
+Let
 
 \[
-\alpha r
-=q\gamma_k+p^2-D_kp.
+\boxed{C:=D_\xi g.}
+\]
+
+Since `t=-g`,
+
+\[
+D_\xi t=-C.
+\]
+
+Using the previous flatness identities and eliminating `alpha`, `gamma_k`, and `delta` gives
+
+\[
+\boxed{
+D_nq
+=2q^2-C
++\frac qrD_kg
+-rD_k\left(\frac pr\right).
+}
+\]
+
+This is the correct first flatness reduction.
+
+---
+
+## 6. Define the globally meaningful normalized shear
+
+The pointwise critical identity
+
+\[
+\frac pr=\frac{m}{|a|^2}
+\]
+
+must not be differentiated as though it held in a neighborhood.
+
+Instead define the full scalar field
+
+\[
+\boxed{
+s:=\frac{m}{|a|^2}
+=\frac{pr+tq}{r^2+t^2}.
+}
+\]
+
+At the critical point `t=0`,
+
+\[
+\boxed{s=\frac pr.}
+\]
+
+But its `k` derivative must be computed from the full expression before setting `t=0`.
+
+---
+
+## 7. Exact derivative relation and cancellation
+
+Differentiate
+
+\[
+s=\frac{pr+tq}{r^2+t^2}
+\]
+
+along `k` and then set `t=0`.
+
+The numerator derivative is
+
+\[
+D_k(pr+tq)
+=rD_kp+pD_kr+qD_kt.
+\]
+
+The denominator derivative is
+
+\[
+D_k(r^2+t^2)=2rD_kr.
 \]
 
 Therefore
 
 \[
-\boxed{
-\alpha
-=\frac{q\gamma_k+p^2-D_kp}{r}.
-}
-
-No orthogonal relation between `p` and `g` has been used.
-
----
-
-## 6. Flatness R(xi,n)xi = 0
-
-At `t=0`, the `n` projection of
-
-\[
-R(\xi,n)\xi=0
-\]
-
-gives
-
-\[
-\boxed{
-D_nq
-=r\alpha+D_\xi t-p\delta+q^2.
-}
+\begin{aligned}
+D_ks
+&=\frac1{r^2}
+\left(
+ rD_kp+pD_kr+qD_kt
+\right)
+-rac{pr}{r^4}(2rD_kr)\\
+&=D_k\left(\frac pr\right)
++\frac q{r^2}D_kt.
+\end{aligned}
 \]
 
 Since
 
 \[
-D_\xi t=-D_\xi g=-C,
+D_kt=-D_kg,
 \]
 
-we have
+we obtain
 
 \[
 \boxed{
-D_nq
-=r\alpha-p\delta+q^2-C.
+D_ks
+=D_k\left(\frac pr\right)
+-\frac q{r^2}D_kg.
 }
 \]
 
-Insert Sections 4--5:
+Equivalently,
+
+\[
+\boxed{
+D_k\left(\frac pr\right)
+=D_ks+\frac q{r^2}D_kg.
+}
+\]
+
+Substitute this into Section 5:
 
 \[
 \begin{aligned}
-D_nq
-={}&q\gamma_k+p^2-D_kp\\
-&-p\left(p-\frac{D_kr}{r}\right)
-+q^2-C.
+\frac qrD_kg
+-rD_k\left(\frac pr\right)
+&=\frac qrD_kg-rD_ks-\frac qrD_kg\\
+&=-rD_ks.
 \end{aligned}
 \]
 
-The `p^2` terms cancel:
-
-\[
-\boxed{
-D_nq
-=q\gamma_k+q^2-C
--D_kp+\frac prD_kr.
-}
-\]
-
-Now use
-
-\[
-\gamma_k=q+\frac{D_kg}{r}.
-\]
-
-Thus
-
-\[
-\boxed{
-D_nq
-=2q^2-C
-+\frac qrD_kg
--D_kp+\frac prD_kr.
-}
-\]
-
-Finally,
-
-\[
-D_kp-\frac prD_kr
-=rD_k\left(\frac pr\right).
-\]
-
-Therefore the canonical frozen-angle critical flatness law is
-
-\[
-\boxed{
-D_nq
-=2q^2-C
-+\frac qrD_kg
--rD_k\left(\frac pr\right).
-}
-\]
+Thus the apparent `D_k g` channel cancels exactly.
 
 ---
 
-## 7. Define the kernel-shear compensation channel
+## 8. Canonical frozen-angle critical flatness law
 
-Set
-
-\[
-\boxed{
-\mathcal H_k
-:=
-\frac qrD_kg
--rD_k\left(\frac pr\right).
-}
-\]
-
-Then
+The exact critical law is therefore
 
 \[
 \boxed{
 D_nq
-=2q^2-C+\mathcal H_k.
+=2q^2-C-rD_ks.
 }
 \]
-
-The first two terms are exactly the orthogonal critical Riccati core.
-All new frozen-angle freedom has collapsed to one scalar kernel-direction correction `H_k`.
-
----
-
-## 8. H_k is an irreducible shear-gradient descriptor
 
 At the critical point,
 
 \[
-a=rk,
+s=\frac pr,
 \]
 
 so
 
 \[
-|a|^2=r^2.
+rs=p.
 \]
 
-Also
+Because `s != 0` on the frozen-angle branch,
 
 \[
-m=pr.
+D_ks=sD_k\log|s|.
 \]
 
 Hence
 
 \[
 \boxed{
-\frac pr
-=\frac{m}{r^2}
-=\frac{m}{|a|^2}.
+D_nq
+=2q^2-C-pD_k\log|s|.
 }
 \]
 
-Therefore
-
-\[
-\boxed{
-\mathcal H_k
-=
-\frac qrD_kg
--rD_k\left(\frac{m}{|a|^2}\right).
-}
-\]
-
-The second term is explicitly the kernel gradient of normalized frozen-angle shear.
-
-Thus the nonorthogonal branch can alter the Riccati slope only through
-
-1. kernel variation of the amplitude-criticality scalar `g`;
-2. kernel variation of the normalized irreducible shear.
+This is the final **frozen-angle normalized-shear Riccati law**.
 
 ---
 
-## 9. Maximum event: required shear compensation
+## 9. Maximum event and the exact compensation cost
 
 At a nondegenerate linewise amplitude maximum,
 
@@ -429,90 +387,91 @@ At a nondegenerate linewise amplitude maximum,
 \boxed{C=D_\xi g<0.}
 \]
 
-Hence
+Therefore
 
 \[
 D_nq
-=2q^2+|C|+\mathcal H_k.
+=2q^2+|C|-pD_k\log|s|.
 \]
 
-Therefore
-
-### super-Riccati n-slope
+Define
 
 \[
 \boxed{
-\mathcal H_k>-|C|
+\chi_k:=D_k\log|s|.
+}
+\]
+
+Then
+
+\[
+\boxed{
+D_nq=2q^2+|C|-p\chi_k.
+}
+\]
+
+The three exact regimes are:
+
+### super-Riccati
+
+\[
+\boxed{p\chi_k<|C|
 \Longrightarrow
-D_nq>2q^2;
-}
+D_nq>2q^2;}
 \]
 
-### exact Riccati n-slope
+### exact Riccati
 
 \[
-\boxed{
-\mathcal H_k=-|C|
+\boxed{p\chi_k=|C|
 \Longrightarrow
-D_nq=2q^2;
-}
+D_nq=2q^2;}
 \]
 
-### sub-Riccati n-slope
+### sub-Riccati
 
 \[
-\boxed{
-\mathcal H_k<-|C|
+\boxed{p\chi_k>|C|
 \Longrightarrow
-D_nq<2q^2.
-}
+D_nq<2q^2.}
 \]
 
-Equivalently, since `C=-|C|`, the sub-Riccati condition is
-
-\[
-\boxed{
-\mathcal H_k<C.
-}
-\]
-
-Thus frozen-angle shear must pay a finite signed kernel-gradient cost at every maximum if it is to weaken the Riccati core.
+Thus nonzero frozen-angle shear alone does not weaken Riccati focusing.
+Its **kernel logarithmic gradient** must have the correct sign and sufficient magnitude.
 
 ---
 
-## 10. n-tangent maximum sheet
+## 10. Complete n-tangent maximum component
 
-If additionally
+If
 
 \[
 D_ng=0,
 \]
 
-then `n` is tangent to the regular critical surface as in M17-048.
+then `n` is tangent to the maximum critical surface.
 
-If along a complete `n`-integral curve the maximum condition persists and
+Along a complete `n`-integral curve remaining in the maximum component, if
 
 \[
-\mathcal H_k\ge C,
+p\chi_k\le|C|
 \]
 
-then
+through the relevant interval, then
 
 \[
 D_nq\ge2q^2.
 \]
 
-The reciprocal comparison gives the same finite-parameter obstruction as M17-048.
+The reciprocal comparison of M17-048 gives a finite signed-distance obstruction.
 
-Therefore a complete n-tangent frozen-angle maximum survivor must enter
+Therefore any complete n-tangent frozen-angle maximum survivor must enter
 
 \[
-\boxed{
-\mathcal H_k<C
-}
+\boxed{p\chi_k>|C|}
 \]
 
-before the Riccati focal distance, or exit through finite interface/rank/critical degeneration.
+before the Riccati focal distance, or exit by critical/rank/interface degeneration.
 
 ---
 
@@ -526,183 +485,176 @@ A:=D_ng,
 \Theta:=\frac{A}{-C}.
 \]
 
-As in M17-071, the true in-surface direction is
+The true in-surface tangent direction is
 
 \[
 \boxed{T=n+\Theta\xi.}
 \]
 
-Hence
+Therefore
 
 \[
 D_Tq
 =D_nq+\Theta D_\xi q.
 \]
 
-Using Section 7,
+Using Section 8,
 
 \[
 \boxed{
 D_Tq
-=2q^2-C
-+\mathcal H_k
-+\Theta D_\xi q.
+=2q^2-C-p\chi_k+\Theta D_\xi q.
 }
 \]
 
-Define the total frozen-angle tangent excess
+On a maximum, `-C=|C|`, so the tangent excess over Riccati is
 
 \[
 \boxed{
 \mathcal K_{FA}
-:=-C+\mathcal H_k+\Theta D_\xi q.
+:=|C|-p\chi_k+\Theta D_\xi q.
 }
+\]
+
+A genuinely sub-Riccati tangent maximum requires
+
+\[
+\boxed{
+\mathcal K_{FA}<0,
+}
+
+or equivalently
+
+\[
+\boxed{
+p\chi_k-\Theta D_\xi q>|C|.}
+\]
+
+This is the complete local frozen-angle maximum compensation law.
+
+---
+
+## 12. Orthogonal limit cross-audit
+
+On the orthogonal branch
+
+\[
+m=0,
+\]
+
+so the normalized shear field `s` is absent and the present frozen-angle reduction is not divided through `s`.
+
+Instead the orthogonal flatness calculation of M17-047 applies directly and gives
+
+\[
+D_nq=2q^2-C.
+\]
+
+Thus the `c != 0` formula should not be naively continued through `s=0` by taking `log|s|`.
+The branches meet only through the corresponding rank/angle-interface analysis.
+
+---
+
+## 13. DSD analysis
+
+The original frozen-angle maximum appeared to possess two additional spatial channels,
+
+\[
+D_kg
+\quad\text{and}\quad
+D_k(p/r).
+\]
+
+The full derivative audit shows that these are not independent.
+They recombine into the single descriptor
+
+\[
+\boxed{
+\chi_k
+=D_k\log\left|\frac{m}{|a|^2}\right|.
+}
+\]
+
+Hence the local maximum geometry is
+
+\[
+\boxed{
+\text{Riccati core}
++
+\text{one normalized-shear gradient}
++
+\text{surface tilt}.
+}
+\]
+
+This is a substantial dimensional reduction of the frozen-angle escape.
+
+---
+
+## 14. DSD audit
+
+### Audit A — differentiating the critical identity p/r = m/|a|^2 off the critical set
+Corrected. The full fields `m=pr+tq` and `|a|^2=r^2+t^2` are differentiated before setting `t=0`.
+
+### Audit B — counting D_k g as a second independent compensation channel
+Rejected. It cancels exactly after the full normalized-shear derivative is used.
+
+### Audit C — importing the orthogonal relation into c != 0
+Rejected. The frozen-angle flatness system is independently derived.
+
+### Audit D — confusing connection coefficients with strain shear
+Avoided by distinct notation.
+
+### Audit E — claiming nonzero shear itself weakens the Riccati slope
+Rejected. Only `D_k log|s|` enters.
+
+### Audit F — proof status
+The frozen-angle maximum branch is sharply reduced but remains open through normalized-shear-gradient recharge and tilt/interface exits.
+
+---
+
+## 15. Updated frozen-angle maximum frontier
+
+Let
+
+\[
+\boxed{s:=m/|a|^2,\qquad \chi_k:=D_k\log|s|.}
 \]
 
 Then
 
 \[
 \boxed{
-D_Tq=2q^2+\mathcal K_{FA}.
-}
-\]
-
-A genuinely sub-Riccati tangent maximum therefore requires
-
-\[
-\boxed{
-\mathcal K_{FA}<0.
-}
-\]
-
----
-
-## 12. Orthogonal limit cross-audit
-
-In the orthogonal branch `m=0` and at a critical point M17-047 gives the additional relation
-
-\[
-p=\frac{gq}{r}.
-\]
-
-Thus at `g=0`,
-
-\[
-p=0
-\]
-
-and
-
-\[
-D_kp=\frac qrD_kg.
-\]
-
-Therefore the two terms in `H_k` cancel:
-
-\[
-\boxed{\mathcal H_k=0.}
-\]
-
-The frozen-angle flatness law reduces exactly to
-
-\[
-D_nq=2q^2-C,
-\]
-
-which is M17-047.
-
-Likewise the tilted tangent law reduces exactly to M17-071.
-
-This is an internal cross-audit of the generalization.
-
----
-
-## 13. DSD analysis
-
-The frozen-angle branch does not erase the universal flatness structure.
-Instead it adds exactly one new descriptor:
-
-\[
-\boxed{
-\mathcal H_k
-=
-\text{kernel amplitude-criticality gradient}
--
-\text{kernel normalized-shear gradient}.
-}
-\]
-
-The local maximum branch is therefore
-
-\[
-\boxed{
-\text{Riccati core}
-+
-\text{kernel shear compensation}
-+
-\text{surface tilt compensation}.
-}
-\]
-
-This is the nonorthogonal analogue of the M17-071--073 hierarchy.
-
----
-
-## 14. DSD audit
-
-### Audit A — importing the orthogonal p=gq/r relation into c != 0
-Rejected. The flatness system is recomputed from the general nonorthogonal frame.
-
-### Audit B — setting derivatives of t=0 to zero
-Avoided. `D_k t` and `D_xi t` are retained before evaluating the critical point.
-
-### Audit C — confusing frame connection gamma_k with strain shear beta_Sigma
-Avoided by distinct notation.
-
-### Audit D — claiming frozen shear automatically compensates Riccati focusing
-Rejected. Only the signed gradient `H_k`, not nonzero `m` itself, enters the compensation.
-
-### Audit E — claiming H_k<C is impossible
-Rejected. It is a sharp surviving compatibility condition.
-
-### Audit F — proof status
-The frozen-angle branch now has an explicit local flatness payment but remains open.
-
----
-
-## 15. Updated frozen-angle maximum frontier
-
-\[
-\boxed{
 R_{max}^{frozen-angle}
 \Longrightarrow
-R_{max}^{\mathcal K_{FA}<0}
+R_{max}^{p\chi_k-\Theta D_\xi q>|C|}
 \ \lor\
-T_{crit/rank/interface}
+T_{crit/rank/interface}.
 }
 \]
 
-for a complete maximum network after excluding persistent nonnegative tangent excess under the same completeness/bounded-tangent assumptions used in M17-071.
-
-The new hard local quantity is
-
-\[
-\boxed{
-\mathcal H_k
-=
-\frac qrD_kg-rD_k(m/|a|^2).
-}
-\]
+The remaining local frozen-angle escape is one normalized-shear-gradient scalar plus the already identified surface-tilt channel.
 
 ---
 
-## 16. Next target
+## 16. Next target — normalized-shear material recharge
 
-The next useful frozen-angle calculation is to combine `H_k` with the M17-041 weighted-harmonic stress balances and determine whether the same normalized shear derivative already appears there with a constrained coefficient.
+M17-041 already gives material multiplier laws for `m` and `|a|`.
+Therefore the next calculation can derive an exact material law for
 
-If it does, the kernel-shear compensation may reduce to amplitude/anisotropy gradients rather than remain an independent flatness escape.
+\[
+s=m/|a|^2
+\]
 
-This is the **Frozen-Angle Stress–Flatness Merge Gate (FASFMG)**.
+and for its kernel derivative
+
+\[
+\chi_k=D_k\log|s|.
+\]
+
+This will determine whether recurrent Riccati compensation requires a fixed mean recharge, analogous to M17-064's oblique `kappa_3` half-slope law.
+
+This is the **Normalized Shear Recharge Gate (NSRG)**.
 
 ---
 
