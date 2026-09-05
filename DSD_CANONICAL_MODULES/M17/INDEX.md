@@ -2,7 +2,7 @@
 
 Canonical continuation split from M16 after M16-023.
 
-Recompressed at **M17-134**. Detailed derivations, provenance, corrections, and DSD audits remain in the individual modules.
+Recompressed at **M17-144**. Detailed derivations, provenance, corrections, and DSD audits remain in the individual modules.
 
 ---
 
@@ -72,7 +72,16 @@ The positive margin has an exact `3/2` damping/recharge law. Vertical Rank-1 sim
 
 ## M17-097 — M17-105: inherited carrier measure
 
-Regular peak sheets inherit the canonical director-area tube flux `dPhi_J`. Clean type switches and finite multiple-zero tangencies are chart changes/branchings of this same carrier.
+Regular peak sheets inherit the canonical director-area tube flux `dPhi_J`.
+Where
+
+\[
+D_kg\neq0,
+\qquad
+ g=D_\xi\log\rho,
+\]
+
+the peak/tube intersection has a canonical frozen-flux label.
 
 Material invariance:
 
@@ -86,30 +95,48 @@ cannot reach their zero sets on one finite regular CE-H trajectory.
 
 ## M17-106 — M17-120: pure-kernel turnover / folds / critical ribbons
 
-The correct pure-kernel carrier is the frozen director-area 2-form. Signed carrier flux is neutral at generic interior folds while the positive compensation margin can have nontrivial birth/death hysteresis.
+The correct pure-kernel carrier is the frozen director-area 2-form.
+Signed carrier flux is neutral at a generic interior fold while the positive peak/margin population can undergo pair birth/death.
 
-Rank-1 and Rank-2 are separate material strata over every finite regular interval.
-
-Compact analytic kernel geometry obeys a finite-zero-count versus critical-ribbon dichotomy. On a complete material critical-ribbon loop,
+Tangency is the curvature resonance
 
 \[
 \boxed{
-\mathscr V_J
-=\oint\frac{ds}{|J_\xi|},
-\qquad
-D_B\log\mathscr V_J=\frac32.
+D_kg=0
+\iff
+\gamma_k=q.
 }
 \]
 
-Hence same-material compact complete-ribbon recurrence is excluded. Physical rescaling exactly cancels this similarity aging, so fresh-carrier Eulerian turnover remains possible.
+A generic fold has local normal form
+
+\[
+\boxed{
+ g=A_T\tau+\frac12C_k\eta^2+\cdots,
+\qquad
+A_T=D_\xi(\sigma+\kappa),
+\qquad
+C_k=D_k^2g.
+}
+\]
+
+Compact analytic kernel geometry obeys a finite-zero-count versus critical-ribbon dichotomy.
+On a persistent complete ribbon,
+
+\[
+ g\equiv0,
+\qquad
+D_\xi(\sigma+\kappa)=0,
+\]
+
+and the kernel fiber is a material plane circle.
+Same-material compact complete-ribbon recurrence is excluded by its exact similarity aging, but physical rescaling cancels that aging, so fresh-carrier Eulerian turnover remains possible.
 
 ---
 
 # M17-121 — M17-134: ancient critical tail and CE-H ribbon realization
 
 ## M17-121 — dyadic Biot–Savart/Herz bridge
-
-For dyadic shells,
 
 \[
 \boxed{
@@ -119,9 +146,9 @@ For dyadic shells,
 }
 \]
 
-Therefore the M5 non-`L^3` Dirichlet obstruction is equivalently a vorticity critical stack.
+The M5 non-`L^3` Dirichlet obstruction is equivalently a vorticity critical stack.
 
-## M17-122 — exact ribbon flux disintegration
+## M17-122 — ribbon flux disintegration
 
 \[
 \boxed{
@@ -140,12 +167,6 @@ E_T^\omega
 }
 \]
 
-Uniform complete-ribbon nondegeneracy gives
-
-\[
-J_{k,rib}^\omega\asymp K_k\Phi_k.
-\]
-
 ## M17-123 — scale-invariant area ratio
 
 \[
@@ -156,23 +177,17 @@ D_B\log\eta_J=\sigma_k-\sigma-\kappa.
 }
 \]
 
-Finite regular residence cannot manufacture arbitrarily severe `eta_J` collapse from uniformly nondegenerate incoming carriers. Persistent area degeneration therefore arrives through fresh carriers already approaching the Rank-1/rank-deficient boundary.
-
 ## M17-124 — bounded-core ribbon curvature floor
 
-If a complete critical circle lies wholly in a fixed bounded spatial core `Omega`,
+If a complete critical circle lies wholly in a fixed bounded core,
 
 \[
-\boxed{
-|q|\ge2/\operatorname{diam}(\Omega).
-}
+\boxed{|q|\ge2/\operatorname{diam}(\Omega).}
 \]
 
-Thus internal `q->0` flattening becomes a boundary/ribbon-cover exit.
+## M17-125 — audit correction
 
-## M17-125 — AUDIT CORRECTED
-
-The retained exact current-stage statement is only
+The retained current-stage remote-age statement is only
 
 \[
 \boxed{
@@ -181,133 +196,46 @@ The retained exact current-stage statement is only
 }
 \]
 
-The earlier `K_k^2` historical turnover-count / throughput inference was invalid and is explicitly retracted.
+The earlier `K_k^2` historical-turnover inference is retracted.
 
-The actual ancestor similarity interval has length
+## M17-126 — M17-128: same-material genealogy
 
-\[
-2\log K_k,
-\]
-
-so a uniform per-carrier similarity residence gives only a conditional `O(log K_k)` sequential count under gap-free historical ribbon coverage.
-
-## M17-126 — same-material ancestor-scale spatial localization
-
-Under bounded similarity velocity, a carrier observed in a remote `O(K_k)` similarity annulus at stage `j` tracks backward to a comparable physical annulus of scale `r_{j-k}`.
-
-This upgrades ancestor-radius matching to conditional same-material spatial localization.
-
-## M17-127 — exact CE-H amplitude genealogy
-
-Because
-
-\[
-\Delta W=\kappa W,
-\]
-
-the general additive diffusion-exposure branch disappears inside CE-H:
+Under bounded similarity velocity, ancestor-scale material carriers remain conditionally spatially localized to the corresponding physical annulus.
+Inside CE-H,
 
 \[
 \boxed{
-D_B\rho=(\sigma+\kappa-1)\rho,
+D_B\rho=(\sigma+\kappa-1)\rho.
 }
 \]
+
+Quiet reverse genealogy still loses
 
 \[
-\boxed{
-\log\frac{\rho_j}{\rho_{j-k}}
-=
-\int_{\theta_{j-k}}^{\theta_j}
-(\sigma+\kappa-1)d\theta.
-}
+\boxed{K_k^{-4}}
 \]
 
-## M17-128 — quiet genealogy K^-4 firewall
-
-Even bounded similarity-amplitude exposure gives only
-
-\[
-\boxed{
-J_{j-k}^{\omega,mat}
-\asymp_L
-K_k^{-4}J_{j,k}^{\omega,mat}
-}
-\]
-
-for the same material carrier in physical weighted enstrophy.
-Thus quiet reverse genealogy does not close the M5 tail.
+in backward physical weighted enstrophy.
 
 ## M17-129 — weighted director-flux critical stack
 
-On a nondegenerate ribbon subset carrying cubic-divergent vorticity mass,
-
 \[
 \boxed{
-\sum_k(K_k\Phi_k)^{3/2}=\infty.
+\sum_k(K_k\Phi_k)^{3/2}=\infty
 }
 \]
 
-Without further PDE rigidity, the sharp sequence model is
+on a nondegenerate ribbon subset carrying the cubic-divergent vorticity mass.
 
-\[
-\Phi_k\sim K_k^{-1},
-\]
+## M17-130 — M17-132: conservation-law firewalls
 
-which has summable unweighted flux.
+Signed radial flux, degree, and ordinary palinstrophy do not control the required positive weighted ribbon-flux stack.
+The realization question must use the coupled CE-H/material system.
 
-## M17-130 — signed radial flux / degree firewall
+## M17-133 — CE-H elliptic localization
 
-Radial divergence identities and sphere degree control only signed closed-surface director-area flux. Closed ribbon loops can carry positive internal tube flux while remaining invisible to these signed totals.
-
-Hence signed radial moments and degree alone do not control the positive weighted ribbon-flux stack.
-
-## M17-131 — positive palinstrophy cost
-
-\[
-\boxed{
-2\rho^2|J_\xi|
-\le
-|\nabla W|^2.
-}
-\]
-
-Director flux is not energetically free, but the unweighted palinstrophy cost of the naive `Phi_k~K_k^-1` model is still geometrically summable.
-
-## M17-132 — realization frontier recompression
-
-The ribbon tail is no longer an elementary conservation-law problem. The central question becomes whether the full CE-H material/weighted-harmonic system can realize the critical weighted flux cascade.
-
-## M17-133 — CE-H elliptic localization removes the K^-1 fixed-fraction realization
-
-If
-
-\[
-\|\kappa\|_\infty\le K_0
-\]
-
-uniformly on fixed-size remote local cores, the elliptic equation
-
-\[
-\Delta W=\kappa W
-\]
-
-gives a uniform local estimate
-
-\[
-\|W\|_{L^\infty(B_{1/2})}^2
-\le C(K_0)\int_{B_1}|W|^2.
-\]
-
-For a uniformly nondegenerate complete ribbon carrying a fixed shell-enstrophy fraction,
-
-\[
-\boxed{
-\Phi_k\ge c_\Phi>0.
-}
-\]
-
-Thus the naive `Phi_k~K_k^-1` model cannot be realized on this fixed-fraction bounded-potential branch.
-The survivor becomes a low-amplitude / order-one-director-flux skeleton:
+With bounded local `kappa`, fixed-fraction nondegenerate ribbon realization forces an order-one director-flux floor.
+The surviving branch becomes
 
 \[
 \boxed{
@@ -319,71 +247,200 @@ The survivor becomes a low-amplitude / order-one-director-flux skeleton:
 }
 \]
 
-Explicit exits are:
-
-\[
-J_\xi\to0,
-\quad
-L_{loop}\to\infty,
-\quad
-\|\kappa\|_\infty\to\infty,
-\quad
-E_{ribbon}/E_{shell}\to0.
-\]
-
 ## M17-134 — long resonant inter-stage means
 
-For a pure-kernel carrier tracked over
-
-\[
-\Delta\theta=2\log K_k,
-\]
-
-order-one endpoint director area forces
+Under comparable endpoint jets and normalized amplitude,
 
 \[
 \boxed{
-\langle\sigma_k\rangle
-=1+O((\log K_k)^{-1}).
-}
-\]
-
-If both independent director jets also have comparable endpoint magnitudes,
-
-\[
-\boxed{
-\langle\sigma\rangle
-=-\frac12+O((\log K_k)^{-1}),
-}
-\]
-
-\[
-\boxed{
-\langle\sigma_n\rangle
-=-\frac12+O((\log K_k)^{-1}).
-}
-\]
-
-If the endpoint similarity-amplitude ratio is also bounded,
-
-\[
-\boxed{
-\langle\kappa\rangle
-=rac32+O((\log K_k)^{-1}).
-}
-\]
-
-Thus the surviving nondegenerate low-amplitude skeleton must approach the long material mean frame
-
-\[
-\boxed{
-(\sigma,\sigma_k,\sigma_n;\kappa)
-\to
-(-1/2,1,-1/2;3/2).
+(\langle\sigma\rangle,\langle\sigma_k\rangle,
+\langle\sigma_n\rangle;\langle\kappa\rangle)
+\to(-1/2,1,-1/2;3/2).
 }
 \]
 
 This is rigid but not contradictory because the skeleton has vanishing `rho^2` weight.
+
+---
+
+# M17-135 — M17-144: remote quiet-ribbon transition frontier
+
+## M17-135 — same-carrier resonance audit
+
+The long resonant mean frame does not itself persist as one recurrent same-material compact ribbon.
+The survivor must be supplied by fresh low-amplitude director-flux carriers.
+
+## M17-136 — M17-137: shell-scale velocity reservoir and solenoidal localization
+
+The fresh ribbon stack is coupled back to the M5 non-`H` shell-scale velocity reservoir.
+The solenoidal localization step closes the corresponding local `L^3` measure gap without removing the critical tail.
+
+## M17-138 — remote drift / throughput
+
+A material carrier crosses one dyadic remote shell in asymptotic similarity time
+
+\[
+2\log2+o(1).
+\]
+
+This gives a bounded-log-radius genealogy corridor for fresh director-flux throughput.
+
+## M17-139 — pointwise quiet-ribbon strain decay under jet compactness
+
+If
+
+\[
+R\int_{C_R}|\nabla U|^2\le J_*
+\]
+
+and one strain derivative is uniformly bounded near the ribbon, then
+
+\[
+\boxed{\sup_{\mathcal T_R}|\Sigma|=O(R^{-1/5})\to0.}
+\]
+
+Hence
+
+\[
+D_B\log|J_\xi|=-1+o(1)
+\]
+
+locally: order-one director area must be imported rather than maintained by local strain.
+
+## M17-140 — population form
+
+The pointwise recharge argument is replaced by a ribbon-population statement: only a small subset can carry large kernel strain on a quiet remote shell.
+
+## M17-141 — bounded-shell recharge-or-exit dichotomy
+
+A compact order-one-`J_xi` carrier followed across a sufficiently long fixed inward dyadic block must either accumulate positive kernel-strain action or leave the compact ribbon class.
+
+## M17-142 — spacetime `L^2` ledger closes positive-fraction strain recharge
+
+On a fixed quiet critical spacetime block, a positive fraction of the order-one ribbon population cannot all pay the required order-one strain action because the entire remote block has only
+
+\[
+O(R^{-1})
+\]
+
+spacetime strain budget.
+
+Therefore
+
+\[
+\boxed{
+R_{2,\rm ribbon}^{remote}
+\Longrightarrow
+H_{1,crit}^{spacetime}
+\ \lor
+G_{\rm frequent}^{almost\ all\ flux}.
+}
+\]
+
+On the quiet branch, asymptotically almost all dominant director-flux carriers must undergo a geometry/type exit within uniformly bounded log-radius distance.
+
+## M17-143 — audit of the proposed `D_B(D_k g)` transition cost
+
+The exact kernel commutator gives
+
+\[
+\boxed{
+D_B(D_kg)
+=
+D_kD_\xi(\sigma+\kappa)
+-(D_k\sigma)g
+-(\sigma+\sigma_k+1)D_kg.
+}
+\]
+
+At tangency,
+
+\[
+\boxed{
+D_B(D_kg)=D_kD_\xi(\sigma+\kappa).
+}
+\]
+
+However this is **not** the generic-fold unfolding coefficient.
+The normal form
+
+\[
+g=\tau+\eta^2
+\]
+
+has a genuine fold with `D_B(D_k g)=0` at contact.
+Therefore a positive `L^2` transition cost based on `D_B(D_k g)` is invalid.
+
+The true first time-unfolding coefficient remains
+
+\[
+\boxed{A_T=D_\xi(\sigma+\kappa).}
+\]
+
+## M17-144 — quiet generic fold reduces to `kappa`-gradient recharge
+
+Under additional explicit strain-jet compactness,
+
+\[
+\|\nabla^m\Sigma\|_\infty
+=O(R^{-1/(2m+5)}).
+\]
+
+Hence
+
+\[
+D_\xi\sigma=O(R^{-1/7}),
+\qquad
+D_kD_\xi\sigma=O(R^{-1/9}),
+\]
+
+and therefore
+
+\[
+\boxed{
+A_T
+=D_\xi\kappa+O(R^{-1/7}).
+}
+\]
+
+At tangency,
+
+\[
+\boxed{
+D_B(D_kg)
+=D_kD_\xi\kappa+O(R^{-1/9}).
+}
+\]
+
+The exact CE-H identity
+
+\[
+\boxed{
+\kappa
+=
+\Delta\log\rho
++|\nabla\log\rho|^2
+-|\nabla\xi|^2
+}
+\]
+
+shows that `kappa` and its normalized spatial jets are amplitude-invariant under constant `rho` rescaling at the fixed-time CE-H/director level.
+This is **not** a symmetry of the full nonlinear Navier--Stokes system.
+
+On the same quiet high-jet branch:
+
+\[
+\boxed{
+\begin{aligned}
+&\text{uniformly nondegenerate generic fold}
+&&\Rightarrow |D_\xi\kappa|\gtrsim1,\\
+&\text{persistent critical ribbon}
+&&\Rightarrow D_\xi\kappa\to0.
+\end{aligned}
+}
+\]
+
+Thus the dominant transition firewall is now a scale-free multiplier-gradient problem.
 
 ---
 
@@ -405,45 +462,58 @@ No current sign theorem closes this covariance firewall.
 
 # Current Rank-2 hard gates
 
-## A. Transverse peak population
+## A. Quiet remote ribbon transition
+
+The strongest current implication is
 
 \[
 \boxed{
-\frac d{d\theta}\mathscr N_J
-=-\frac32\mathscr N_J
-+\mathscr P_J+\mathscr S_J+\mathscr B_J.
+R_{2,\rm ribbon}^{remote}
+\Longrightarrow
+H_{1,crit}^{spacetime}
+\lor
+G_{\kappa\text{-fold}}
+\lor
+G_{\rm persistent\ ribbon}
+\lor
+G_{\rm higher\ jet}
+\lor
+G_{\rm rank/end/interface}
+\lor
+G_{\rm high\ strain\ jet}.
 }
 \]
 
-The positive compensation margin requires recharge, while signed carrier flux alone is fold-neutral.
+The ordinary positive-fraction strain-recharge mechanism is closed on a quiet critical spacetime block.
 
-## B. Fixed-fraction nondegenerate complete-ribbon tail
+## B. Generic fold firewall
 
-The strongest current survivor is
+A generic fold is signed-flux neutral and can be driven asymptotically by
 
 \[
-\boxed{
-\rho_k\to0,
-\qquad
-|J_\xi|\gtrsim1,
-\qquad
-\Phi_k\gtrsim1,
-}
+\boxed{D_\xi\kappa}
 \]
 
-with long inter-stage material means approaching
+without contradicting the existing quadratic low-amplitude shell ledger.
+No current flux-weighted spacetime budget controls these multiplier-gradient events.
+
+## C. Persistent ribbon firewall
+
+A persistent ribbon forces
 
 \[
-\boxed{
-(-1/2,1,-1/2;3/2)
-}
+D_\xi(\sigma+\kappa)=0,
 \]
 
-when endpoint director jets and normalized amplitude remain comparable.
+and hence, under quiet high-jet strain decay,
 
-This is a low-amplitude but geometrically strong director skeleton.
+\[
+\boxed{D_\xi\kappa\to0.}
+\]
 
-## C. Explicit exits
+It remains geometrically resonant and must be separated from the generic-fold population.
+
+## D. Explicit exits
 
 \[
 \boxed{
@@ -456,8 +526,8 @@ This is a low-amplitude but geometrically strong director skeleton.
 &&\text{loss of compact CE-H potential control},\\
 &E_{ribbon}/E_{shell}\to0
 &&\text{ribbon becomes asymptotically negligible},\\
-&\text{endpoint jet/amplitude ratios fail}
-&&\text{large material exposure / degeneration branch}.
+&\text{strain/director high-jet bounds fail}
+&&\text{loss-of-compactness branch}.
 \end{aligned}
 }
 \]
@@ -482,49 +552,58 @@ The following shortcuts are explicitly rejected:
 12. the M5 `K_k^-2` current-stage remote-age loss remains;
 13. the earlier `K_k^2` historical-turnover inference is retracted;
 14. quiet same-carrier spatial/amplitude tracking still loses `K_k^-4` in backward physical weighted enstrophy;
-15. unweighted director flux, degree, signed radial moments, and ordinary palinstrophy are all too weak for the pre-elliptic critical flux sequence;
+15. unweighted director flux, degree, signed radial moments, and ordinary palinstrophy are too weak for the pre-elliptic critical flux sequence;
 16. M17-133 removes `Phi_k~K_k^-1` only under bounded-potential, fixed-fraction, nondegenerate complete-ribbon hypotheses;
 17. material-time resonant means must not be substituted for global spatial `rho^2`-weighted means;
-18. global regularity remains unproved.
+18. a physical discriminant such as `D_k g=0` does not automatically carry positive energy cost;
+19. `D_B(D_k g)` is not the generic-fold unfolding coefficient;
+20. higher strain-derivative decay requires explicit higher strain-jet compactness;
+21. fixed-time CE-H amplitude homogeneity is not a full Navier--Stokes scaling symmetry;
+22. global regularity remains unproved.
 
 ---
 
 # Highest-value next gates
 
-## 1. Low-amplitude strong-director skeleton
+## 1. Flux-weighted `kappa`-gradient fold budget
 
-Test the branch
+Determine whether asymptotically full order-one director-flux measure can encounter
 
 \[
-\boxed{
-\rho\to0,
-\quad
-|J_\xi|\gtrsim1,
-\quad
-\Phi\gtrsim1,
-\quad
-\langle\sigma,\sigma_k,\sigma_n,\kappa\rangle
-\to(-1/2,1,-1/2,3/2).
-}
+\boxed{|D_\xi\kappa|\gtrsim1}
 \]
 
-The next calculation must use the **full coupled velocity/material system**, because the fixed-time elliptic equation and weighted-harmonic director equation are homogeneous in the amplitude and do not by themselves force director geometry to vanish with `rho`.
+at uniformly bounded log-radius spacing while
 
-## 2. Fresh-carrier Rank-1 accumulation
+\[
+\int|\nabla U|^2=O(R^{-1}),
+\qquad
+\int|\nabla W|^2=O(R^{-1}).
+\]
+
+The desired new input is either a positive flux-weighted spacetime budget for `D_xi kappa` or an exact material evolution law that forces repeated multiplier-gradient folds into higher-order degeneracy/rank loss/critical-shell bursts.
+
+## 2. Persistent-ribbon multiplier flatness
+
+Exploit
+
+\[
+D_\xi\kappa\to0
+\]
+
+on the quiet persistent-ribbon branch together with the circular-kernel compatibility equations and full coupled velocity/material system.
+
+## 3. Fresh-carrier Rank-1 accumulation
 
 Pass `J_xi->0`, `rho not->0` compact limits into the existing Rank-1 angular-defect / pressure firewalls without mislabeling sequential accumulation as finite-time material conversion.
 
-## 3. Boundary/ribbon-cover branch
+## 4. Boundary/ribbon-cover branch
 
 Analyze decompactifying loops using positive throughput/transversality rather than signed radial flux.
 
-## 4. Rank-1 local/global pressure covariance
+## 5. Rank-1 local/global pressure covariance
 
 Continue the independent `l=3` pressure gate.
-
-## 5. Liouville / tail decoupling
-
-If the low-amplitude strong-director skeleton survives the coupled material audit, return the remote tail to a local/quotient Liouville or tail-decoupling theorem rather than repeating unweighted Hardy/moment arguments already shown to be critical-scale compatible.
 
 ---
 
