@@ -2,7 +2,7 @@
 
 Canonical continuation split from M16 after M16-023.
 
-Recompressed at **M17-154**. Detailed derivations, corrections, provenance, and DSD audits remain in the individual canonical modules.
+Recompressed at **M17-157**. Detailed derivations, corrections, provenance, and DSD audits remain in the individual modules.
 
 ---
 
@@ -26,7 +26,7 @@ Canonical reassignment:
 - **M17-004** = provisional M16-027
 - **M17-005** = provisional M16-028
 
-The axisymmetric no-swirl class remains an explicit known-regular Rank-1 firewall. Winding alone is never treated as singularity.
+The axisymmetric no-swirl class remains an explicit known-regular Rank-1 firewall.
 
 ---
 
@@ -34,7 +34,7 @@ The axisymmetric no-swirl class remains an explicit known-regular Rank-1 firewal
 
 ## M17-006 — M17-023: Rank-1 winding / nodal geometry
 
-Derived material nodal filaments, finite analytic nodal order, nodal-Jacobian multiplier laws, positive-`kappa` sheath / negative-`kappa` payer separation, the closed `(q,x_3)` label flow, and the angular-defect system
+Material nodal filaments, finite analytic nodal order, nodal-Jacobian multiplier laws, positive-`kappa` sheath / negative-`kappa` payer separation, closed `(q,x_3)` label flow, and the angular-defect system
 
 \[
 \chi=\mathcal Lq,
@@ -44,15 +44,15 @@ Derived material nodal filaments, finite analytic nodal order, nodal-Jacobian mu
 
 ## M17-024 — M17-042: Rank-2 director-area / pure-kernel geometry
 
-Derived the director-area current `J_xi`, the oblique/parallel/pure-kernel split, and the exceptional full-rank pure-transverse-kernel frame
+Director-area current and the full-rank pure-transverse-kernel frame
 
 \[
 J_\xi=|J_\xi|k,
 \qquad
-D_k\xi=0.
+D_k\xi=0,
 \]
 
-Two nonzero director jets are
+with two nonzero director jets
 
 \[
 b=D_\xi\xi,
@@ -60,14 +60,14 @@ b=D_\xi\xi,
 a=D_n\xi.
 \]
 
-On same-marker recurrent comparable states the resonant material means are
+Same-marker comparable recurrence forces the resonant mean frame
 
 \[
 (\langle\sigma\rangle,\langle\sigma_k\rangle,\langle\sigma_n\rangle)
 =(-1/2,1,-1/2),
 \]
 
-and with comparable normalized amplitude,
+and, with comparable normalized amplitude,
 
 \[
 \langle\kappa\rangle=3/2.
@@ -75,76 +75,51 @@ and with comparable normalized amplitude,
 
 ## M17-043 — M17-070: Rank-1 pressure / cubic STF architecture
 
-The Rank-1 hard branch is reduced to local amplification-weighted `kappa` crossing / payer-octupole information versus a global sign-changing `l=3` STF pressure architecture.
+Rank-1 is reduced to local amplification-weighted `kappa` crossing / payer-octupole information versus global sign-changing `l=3` STF pressure architecture.
 
-The recurrent principal-slant local octupole modes are closed, but the remaining perpendicular local/global scalar lock and the oblique driven cocycle do not yet give a sign contradiction.
+The principal local octupole subbranch is substantially closed, but the local/global pressure covariance firewall remains.
 
 ## M17-071 — M17-096: Rank-2 compensation / finite critical types
 
-Regular pure-kernel maxima require a positive compensation margin and admit exact Riccati/focusing versus signed compensation splits.
-
-Orthogonal tilted maxima can evade the local Riccati mechanism only through a strong cross-gradient payment; frozen-angle maxima require an exact normalized-shear-gradient payment.
-
-Finite analytic critical-type/top-jet architecture is developed here.
+Regular pure-kernel maxima require positive Riccati compensation. Orthogonal tilted and frozen-angle maxima are reduced to explicit signed cross-gradient / normalized-shear-gradient payments. Finite critical-type and top-jet architecture is developed here.
 
 ## M17-097 — M17-120: inherited director-flux carrier / folds / critical ribbons
 
-Regular transverse peak sheets inherit the frozen director-area tube measure
+Peak sheets inherit
 
 \[
 d\Phi_J=J_\xi\cdot n_S\,dA.
 \]
 
-For
+With
 
 \[
-g:=D_\xi\log\rho,
+g=D_\xi\log\rho,
 \]
 
-transversality is
-
-\[
-D_kg\neq0.
-\]
-
-Tangency is the curvature resonance
+transversality is `D_k g != 0`, while tangency is
 
 \[
 \boxed{D_kg=0\iff\gamma_k=q.}
 \]
 
-A generic fold has local normal form
+A generic fold has
 
 \[
-\boxed{
-g=A_T\tau+\frac12C_k\eta^2+\cdots,}
+g=A_T\tau+\frac12C_k\eta^2+\cdots,
 \]
 
-with
-
 \[
-\boxed{
 A_T=D_\xi(\sigma+\kappa),
 \qquad
 C_k=D_k^2g.
-}
 \]
 
-Signed director flux is neutral at generic pair birth/death.
+Signed director flux is neutral at generic fold birth/death. A persistent critical ribbon has `g identically 0` along the kernel fiber and a complete fiber is a material plane circle. Same-material compact-ribbon recurrence is excluded; fresh-carrier Eulerian recurrence is not.
 
-A persistent critical ribbon has
+## M17-121 — M17-142: ancient critical tail / low-amplitude strong-director skeleton
 
-\[
-g\equiv0,
-\qquad
-D_\xi(\sigma+\kappa)=0,
-\]
-
-and a complete kernel fiber is a material plane circle. Same-material compact-ribbon recurrence is excluded, but fresh-carrier Eulerian recurrence remains possible.
-
-## M17-121 — M17-134: ancient critical tail / CE-H ribbon realization
-
-Key reductions:
+Key reductions include
 
 \[
 \sum_k(R_ke_k^\nabla)^{3/2}<\infty
@@ -156,13 +131,13 @@ Key reductions:
 dV=\frac{d\Phi_J\,ds}{|J_\xi|},
 \]
 
+and
+
 \[
 D_B\rho=(\sigma+\kappa-1)\rho.
 \]
 
-Signed radial flux, degree, unweighted director flux, and ordinary palinstrophy are too weak at the critical scale.
-
-Under bounded local `kappa`, fixed-fraction nondegenerate ribbon realization forces the low-amplitude strong-director skeleton
+Under bounded local `kappa` and fixed-fraction nondegenerate ribbon realization, the hard survivor becomes
 
 \[
 \boxed{
@@ -174,468 +149,273 @@ Under bounded local `kappa`, fixed-fraction nondegenerate ribbon realization for
 }
 \]
 
-With comparable endpoints its long material means approach
-
-\[
-\boxed{
-(\sigma,\sigma_k,\sigma_n;\kappa)
-\to(-1/2,1,-1/2;3/2)
-}
-\]
-
-in the material-average sense only.
-
-## M17-135 — M17-142: quiet remote ribbon population / forced transition
-
-M17-139: under the quiet shell bound
-
-\[
-R\int_{C_R}|\nabla U|^2\le J_*
-\]
-
-and one bounded strain derivative,
-
-\[
-\boxed{
-\sup_{\mathcal T_R}|\Sigma|=O(R^{-1/5})\to0.
-}
-\]
-
-Hence local order-one director area is not maintained by ordinary strain.
-
-M17-142 upgrades this to the spacetime population statement
-
-\[
-\boxed{
-R_{2,\rm ribbon}^{remote}
-\Longrightarrow
-H_{1,crit}^{spacetime}
-\lor
-G_{\rm frequent}^{almost\ all\ flux}.
-}
-\]
-
-On a quiet fixed spacetime block, positive-fraction strain recharge is excluded; asymptotically almost all dominant ribbon carriers must undergo geometry/type transition within bounded log-radius distance.
+M17-142 shows that on a quiet critical spacetime block positive-fraction strain recharge is impossible. Almost all dominant ribbon carriers must undergo geometry/type exit within bounded log-radius distance unless the critical shell bound fails.
 
 ---
 
-# 3. M17-143 — M17-154: transition-cost audit and normalized fold-jet frontier
+# 3. M17-143 — M17-154: fold-driver audit and normalized high-jet frontier
 
-## M17-143 — generic fold is not charged by `D_B(D_k g)`
+## M17-143 — true fold driver
 
-Exact law:
-
-\[
-\boxed{
-D_B(D_kg)
-=D_kD_\xi(\sigma+\kappa)
--(D_k\sigma)g
--(\sigma+\sigma_k+1)D_kg.
-}
-\]
-
-At tangency,
-
-\[
-D_B(D_kg)=D_kD_\xi(\sigma+\kappa).
-\]
-
-But the normal form
-
-\[
-g=\tau+\eta^2
-\]
-
-is a genuine fold with `D_B(D_k g)=0` at contact. Therefore no positive transition cost based only on that derivative is valid.
-
-The true time-unfolding scalar is
+`D_B(D_k g)` is not a generic positive fold cost. The true temporal unfolding scalar is
 
 \[
 \boxed{A_T=D_\xi(\sigma+\kappa).}
 \]
 
-## M17-144 — quiet generic fold becomes a `kappa`-gradient event
+## M17-144 — quiet fold becomes a `kappa`-gradient event
 
-With explicit higher strain-jet compactness,
-
-\[
-\|\nabla^m\Sigma\|_\infty
-=O(R^{-1/(2m+5)}).
-\]
-
-Hence
+Under explicit higher strain-jet compactness,
 
 \[
-D_\xi\sigma=O(R^{-1/7})
+A_T=D_\xi\kappa+o(1).
 \]
 
-and
+Thus a nondegenerate quiet fold requires `|D_xi kappa|` order one, whereas persistent ribbon requires `D_xi kappa -> 0`.
+
+## M17-145 — M17-147 — full `grad kappa` parabolic lift
+
+The scalar fold driver belongs to a full-gradient system. On the quiet low-amplitude branch,
 
 \[
 \boxed{
-A_T=D_\xi\kappa+O(R^{-1/7}).
+D_B\nabla\kappa
+=
+L_\rho\nabla\kappa
++
+\left(2\nabla^2\log\rho-\frac32I\right)\nabla\kappa
++o(1).
 }
 \]
 
-A uniformly nondegenerate quiet fold therefore requires
-
-\[
-|D_\xi\kappa|\gtrsim1.
-\]
-
-A persistent ribbon instead satisfies
-
-\[
-D_\xi\kappa\to0.
-\]
-
-Exact normalized CE-H identity:
-
-\[
-\boxed{
-\kappa
-=\Delta\log\rho
-+|\nabla\log\rho|^2
--|\nabla\xi|^2.
-}
-\]
-
-This identity is amplitude-homogeneous at fixed time; it is not a full Navier--Stokes scaling symmetry.
-
-## M17-145 — exact material PDE for the fold driver
-
-Let
-
-\[
-K_\xi:=D_\xi\kappa.
-\]
-
-Then
-
-\[
-\boxed{
-D_BK_\xi
-=L_\rho K_\xi
--(\sigma+3/2)K_\xi
-+\mathcal F_\xi,
-}
-\]
-
-with explicit finite-jet forcing.
-
-The natural quadratic energy is weighted by `rho^2`; on the low-amplitude strong-director skeleton an order-one normalized fold event costs only `O(R^-1)` per unit director flux, which is dyadically summable. Thus the natural PDE energy does not close the fold population.
-
-## M17-146 — scalar commutator reduction
-
-On the quiet low-amplitude hard hull, ordinary strain/amplitude forcing vanishes and
-
-\[
-D_BK_\xi
-=L_\rho K_\xi-rac32K_\xi+[D_\xi,L_\rho]\kappa+o(1).
-\]
-
-The remaining scalar commutator is finite-order and scale-free.
-
-## M17-147 — full-gradient lift removes the apparent independent commutator source
-
-Let
-
-\[
-G:=\nabla\kappa,
-\qquad
-\psi:=\log\rho.
-\]
-
-Exact full-gradient structure:
-
-\[
-D_BG
-=L_\rho G+\left[2\nabla^2\psi-(\nabla B)^T-I\right]G+\mathcal F_G.
-\]
-
-On the quiet low-amplitude high-jet branch,
-
-\[
-\boxed{
-D_BG
-=L_\rho G+\left(2\nabla^2\psi-\frac32I\right)G+o(1).
-}
-\]
-
-Thus `[D_xi,L_rho]kappa` is a component/projection effect, not an independent full-gradient creation term.
-
-At an interior maximum of `|G|`, recurrent regeneration requires the log-amplitude convexity gate
+Interior recurrent regeneration requires
 
 \[
 \boxed{
 \lambda_{max}(\nabla^2\log\rho)
-\ge\frac34-o(1)
+\ge\frac34-o(1).
 }
 \]
 
-unless gradient is imported through a boundary/hard exit.
+## M17-148 — M17-150 — convexity payers and axial closure
 
-## M17-148 — peak tangency splits the `3/4` gate into three payers
+At peak tangency `H_{xi k}=0`, so the `3/4` threshold must be paid by axial, mixed, or transverse log-amplitude convexity.
 
-At a peak use
-
-\[
-D_\xi\xi=pk+qn,
-\qquad
-D_n\xi=rk,
-\qquad
-D_k\xi=0,
-\]
-
-and
+On the orthogonal branch the axial payer forces a strong lower bound on
 
 \[
-\nabla\psi=u k+v n.
+R_n=D_n\log|r|.
 \]
 
-Exact Hessian identities:
-
-\[
-H_{\xi\xi}=D_\xi g-pu-qv,
-\]
-
-\[
-\boxed{H_{\xi k}=D_kg,}
-\]
-
-\[
-H_{\xi n}=D_ng-r u.
-\]
-
-At tangency,
-
-\[
-\boxed{H_{\xi k}=0.}
-\]
-
-Therefore the `3/4` threshold must be paid by at least one of
-
-\[
-\boxed{
-G_{axial}
-\lor
-G_{mix}
-\lor
-G_{trans}.
-}
-\]
-
-## M17-149 — orthogonal fold converts axial/mixed payers into director-jet gradients
-
-On the orthogonal critical branch
-
-\[
-D_\xi\xi=q n,
-\qquad
-D_n\xi=r k.
-\]
-
-The normalized CE-H director equation plus flatness gives
-
-\[
-\boxed{D_ng=D_\xi q-D_k r,}
-\]
-
-hence
-
-\[
-\boxed{
-H_{\xi n}
-=D_\xi q-D_k r-rD_k\log\rho.
-}
-\]
-
-Also
-
-\[
-\boxed{
-H_{\xi\xi}
-=C_\xi\left(1+\frac{q^2}{2r^2}\right)
--q^2-\frac{q^4}{2r^2}
-+\frac{q}{2r}D_n r,
-}
-\]
-
-where `C_xi=D_xi g<0`.
-
-Positive axial convexity therefore forces a strong positive lower bound on
-
-\[
-\frac qrD_n r=qD_n\log|r|.
-\]
-
-## M17-150 — recurrent quiet axial payer CLOSED
-
-Define
-
-\[
-R_n:=D_n\log|r|.
-\]
-
-Using the exact material law for the director jet `a=D_n xi` and the exact `n` scalar commutator gives
-
-\[
-D_BR_n
-=-(\sigma_n+1/2)R_n
--D_n\sigma_n
--2\beta_\Sigma D_k\log|r|
-+D_n\left(\frac tr\Omega\right).
-\]
-
-On the quiet low-amplitude high-jet hard hull,
+Its quiet material law is
 
 \[
 \boxed{D_BR_n=-\frac12R_n+o(1).}
 \]
 
-One dyadic shell therefore halves `R_n` forward and doubles it backward.
-Because an axial fold requires `|R_n|>=r_*>0`, backward genealogy exceeds the compact hard-hull upper bound after a fixed number of shells.
-
-Hence
-
-\[
-\boxed{
-G_{axial}^{recurrent,quiet,compact}
-\text{ is closed.}
-}
-\]
-
-## M17-151 — mixed/transverse payers require `Hess kappa`
-
-Exact log-amplitude Hessian equation:
-
-\[
-D_BH_\psi
-=\nabla^2(\sigma+\kappa)
--(\nabla B)^TH_\psi-H_\psi\nabla B
--\mathcal Q_B(\nabla\psi).
-\]
-
-Quiet reduction:
-
-\[
-\boxed{
-D_BH_\psi
-=\nabla^2\kappa-H_\psi+o(1).
-}
-\]
-
-Thus the mixed and transverse convexity payers can be directly recharged by order-one normalized `Hess kappa` and cannot be closed by the M17-150 half-damping argument.
-
-## M17-152 — `Hess kappa` is recharged by the third log-amplitude jet
-
-Let
-
-\[
-K:=\nabla^2\kappa,
-\qquad
-H:=\nabla^2\psi,
-\qquad
-T:=\nabla^3\psi.
-\]
-
-Quiet leading equation:
-
-\[
-\boxed{
-D_BK
-=L_\rho K
-+2(HK+KH)
--2K
-+2T[\nabla\kappa]
-+o(1).
-}
-\]
-
-So second multiplier jets have an additive third-log-amplitude recharge.
-
-## M17-153 — rank-3 trace/STF decomposition
-
-The differentiated scalar CE-H identity fixes the trace vector
-
-\[
-\boxed{
-t:=T_{iik}
-=\nabla\kappa-2H\nabla\psi+\nabla|\nabla\xi|^2.
-}
-\]
-
-In three dimensions
-
-\[
-\boxed{
-T=T^0+\frac15\operatorname{Sym}(\delta\otimes t),
-\qquad
-T^0=STF_3(T),
-\qquad
-\dim T^0=7.
-}
-\]
-
-The genuinely new M17-152 source is
-
-\[
-\boxed{T^0[\nabla\kappa].}
-\]
-
-For nonzero `grad kappa`, this contraction has a five-dimensional `STF_2` image and a two-dimensional kernel.
-
-At peak tangency, generic fold curvature directly reads the STF jet:
-
-\[
-\boxed{
-C_k:=D_k^2g
-=T^0_{kk\xi}+\frac15t_\xi+qH_{\xi n}.
-}
-\]
-
-Thus the residual rank-3 firewall is a precise seven-component normalized tensor, not an unspecified high derivative.
-
-## M17-154 — blind derivative ladder STOPPED
-
-The exact third-gradient material commutator applied to
-
-\[
-D_B\psi=\sigma+\kappa-1
-\]
-
-gives on the quiet hard hull
-
-\[
-\boxed{
-D_BT^0
-=STF_3(\nabla^3\kappa)
--\frac32T^0
-+o(1).
-}
-\]
-
-Differentiating the `kappa` law one more time introduces fourth log-amplitude jets; repeating this produces the same `m -> m+1` shift.
+Hence backward dyadic genealogy doubles `R_n`; repeated quiet compact axial payment leaves the hard hull in finitely many shells.
 
 Therefore
 
 \[
-\boxed{
-\text{blind derivative-by-derivative escalation is a non-closing route without a new principle.}
-}
+\boxed{G_{axial}^{recurrent,quiet,compact}\text{ is closed}.}
 \]
 
-The next step must control the normalized hierarchy as a unit or use a genuinely different global/local rigidity input.
+## M17-151 — M17-154 — mixed/transverse normalized-jet firewall
 
----
+Mixed/transverse convexity is recharged by `Hess kappa`; `Hess kappa` is recharged by the third log-amplitude jet. The third jet splits into a determined trace vector plus a seven-dimensional STF tensor.
 
-# 4. Current Rank-1 hard gate
-
-The vertical/slanted nonaxis Rank-1 branch still reduces to
+Differentiating again introduces the next `kappa` / log-amplitude derivative. Thus
 
 \[
 \boxed{
-\text{local amplification-weighted `kappa` crossing bias}
+\text{repeated blind differentiation does not close the branch.}
+}
+\]
+
+A new principle is required.
+
+---
+
+# 4. M17-155 — M17-157: whole-packet OU/Liouville reduction
+
+## M17-155 — relative-thick packet gives an OU limit
+
+Absolute analyticity cannot control `log rho` or normalized `kappa` jets merely because `rho -> 0`. The correct split is
+
+\[
+\boxed{
+\text{relative-thick packet}
+\ \lor\ 
+\text{thin/nodal/multiplicity exit}.
+}
+\]
+
+For a compact bounded-flux ribbon carrying a fixed shell-enstrophy fraction, choose a point with
+
+\[
+|W(p_R)|^2\gtrsim E_R,
+\qquad
+E_R=\int_{C_R}|W|^2.
+\]
+
+If `||kappa||_infty` is uniformly bounded on fixed local cores, `Delta W=kappa W` gives amplitude-relative local compactness.
+
+Translate by the material center and divide by the small local amplitude. On a quiet remote spacetime corridor,
+
+\[
+U\to0,
+\qquad
+\Sigma\to0\text{ in }L^2_{loc},
+\]
+
+and every normalized packet limit satisfies
+
+\[
+\boxed{
+\partial_\tau V
++\frac12z\cdot\nabla V
+=
+\Delta V-V,
+}
+\]
+
+with
+
+\[
+\nabla\cdot V=0,
+\qquad
+|V(0,0)|=1.
+\]
+
+## M17-156 — OU critical-envelope branch CLOSED
+
+Assume the packet mass has the two-sided critical envelope on expanding windows
+
+\[
+E_j(\tau)
+\le
+C_Qe^{-\tau/2}E_j(0),
+\qquad
+|\tau|\le T_j,
+\qquad
+T_j\to\infty.
+\]
+
+Then the normalized limit is eternal and
+
+\[
+\|V(\tau)\|_2^2\le Ce^{-\tau/2}.
+\]
+
+For the OU equation,
+
+\[
+\widehat V(\xi,\tau)
+=
+ e^{(\tau-s)/2}
+ e^{-|\xi|^2(e^{\tau-s}-1)}
+ \widehat V(\xi e^{(\tau-s)/2},s).
+\]
+
+Taking `tau=0`, `s=-T` gives
+
+\[
+\|V(-T)\|_2^2
+=
+ e^{T/2}
+\int
+ e^{2(e^T-1)|\xi|^2}
+|\widehat V(\xi,0)|^2d\xi.
+\]
+
+The critical envelope forces the weighted integral to remain uniformly bounded for every `T`; monotone convergence therefore implies `V(0)=0`, contradicting `|V(0,0)|=1`.
+
+Thus
+
+\[
+\boxed{
+R_{2,ribbon}^{relative-thick,quiet,bounded-\kappa,critical-envelope}
+\Longrightarrow\bot.
+}
+\]
+
+## M17-157 — exact mass-envelope failure ledger
+
+For a material packet `D(theta)`, define
+
+\[
+E_D=\int_D|W|^2,
+\qquad
+\mathcal D_D=\int_D|\nabla W|^2,
+\qquad
+\mathcal P_D=\int_DW\cdot\Sigma W,
+\]
+
+and
+
+\[
+\mathcal F_D
+=\int_{\partial D}W\cdot\partial_nW\,dA.
+\]
+
+Exact identity:
+
+\[
+\boxed{
+E_D'
+=-2\mathcal D_D
++2\mathcal P_D
+-\frac12E_D
++2\mathcal F_D.
+}
+\]
+
+With the OU critical weight
+
+\[
+Q_D=e^{\theta/2}E_D,
+\]
+
+\[
+\boxed{
+Q_D'
+=2e^{\theta/2}
+(\mathcal P_D-\mathcal D_D+\mathcal F_D).
+}
+\]
+
+On a relative-thick quiet remote packet,
+
+\[
+\frac{|\mathcal P_D|}{E_D}=o(1).
+\]
+
+Therefore `G_mass` is refined to
+
+\[
+\boxed{
+G_{mass}
+\Longrightarrow
+G_{diffusive\ import}
+\lor
+G_{forget/export}
+\lor
+H_{1,crit}^{spacetime}
+\lor
+G_{thin/nodal/boundary}.
+}
+\]
+
+The next target is the signed diffusive packet-boundary flux / forgetting ledger, not another pointwise jet derivative.
+
+---
+
+# 5. Current Rank-1 hard gate
+
+\[
+\boxed{
+\text{local amplification-weighted `kappa` crossing}
 \;\leftrightarrow?\;
 \text{global sign-changing }l=3\text{ STF pressure architecture}.
 }
@@ -645,154 +425,85 @@ No current sign theorem closes this covariance firewall.
 
 ---
 
-# 5. Current Rank-2 hard gates
+# 6. Current Rank-2 hard gates
 
-## A. Quiet remote transition gate
+The strongest current split is
 
 \[
 \boxed{
-R_{2,\rm ribbon}^{remote}
+R_{2,ribbon}^{remote}
 \Longrightarrow
 H_{1,crit}^{spacetime}
 \lor
-G_{\rm frequent}^{almost\ all\ flux}.
+G_{thin/nodal/multiplicity}
+\lor
+G_{\kappa,\infty}
+\lor
+G_{diffusive\ import}
+\lor
+G_{forget/export}
+\lor
+G_{persistent\ ribbon/interface}.
 }
 \]
 
-Ordinary positive-fraction strain recharge is closed on the quiet critical spacetime block.
-
-## B. Generic-fold branch after M17-154
-
-The indefinitely recurrent axial convexity payer is closed.
-
-The remaining quiet generic-fold route is
-
-\[
-\boxed{
-G_{mix/trans}
-\longrightarrow
-\nabla^2\kappa
-\longrightarrow
-STF_3(\nabla^3\log\rho)
-\longleftrightarrow
-STF_3(\nabla^3\kappa)
-}
-\]
-
-inside the normalized analytic jet hierarchy.
-
-Blindly differentiating further is not counted as progress.
-
-## C. Persistent-ribbon branch
-
-Persistent quiet ribbon geometry satisfies
-
-\[
-D_\xi\kappa\to0
-\]
-
-and the earlier circular-kernel compatibility laws. It remains separate from the generic-fold branch.
-
-## D. Explicit exits
-
-\[
-\boxed{
-\begin{aligned}
-&J_\xi\to0
-&&\text{Rank-1/rank-loss accumulation},\\
-&L_{loop}\to\infty
-&&\text{boundary/ribbon-cover exit},\\
-&\|\kappa\|_\infty\to\infty
-&&\text{loss of bounded CE-H potential},\\
-&E_{ribbon}/E_{shell}\to0
-&&\text{ribbon becomes negligible},\\
-&\text{normalized/strain jet compactness fails}
-&&\text{high-jet/loss-of-compactness exit},\\
-&H_{1,crit}^{spacetime}
-&&\text{critical-shell burst}.
-\end{aligned}
-}
-\]
+The relative-thick quiet bounded-`kappa` branch with a critical packet-mass envelope is closed by M17-156.
 
 ---
 
-# 6. DSD audit state
+# 7. DSD audit state
 
 The following shortcuts are explicitly rejected:
 
-1. winding is itself singular;
-2. local positive-`kappa` and bulk negative-`kappa` measures are interchangeable;
-3. M5 label measure can be silently replaced by coarea/spatial/director-flux measure;
-4. scalar `kappa` payer can replace global `l=3` pressure architecture;
-5. moving maxima are material markers;
-6. signed carrier flux equals positive total variation;
-7. Rank-1 and Rank-2 material charges can cross over a finite regular interval;
-8. same-material ribbon recurrence and fresh-carrier Eulerian recurrence are the same;
-9. the earlier `K_k^2` historical-turnover inference is valid — it remains retracted;
-10. quiet same-carrier genealogy avoids the `K_k^-4` backward weighted-enstrophy loss;
-11. ordinary palinstrophy/degree/signed radial flux control the positive weighted ribbon stack;
-12. material-time means can be substituted for spatial `rho^2`-weighted means;
-13. a physical discriminant such as `D_k g=0` automatically has positive energy cost;
-14. `D_B(D_k g)` is the generic-fold unfolding coefficient;
-15. shell `L^2` strain smallness alone gives higher strain-derivative decay;
-16. fixed-time CE-H amplitude homogeneity is a full Navier--Stokes scaling symmetry;
-17. the scalar commutator `[D_xi,L_rho]kappa` is an independent full-gradient source;
-18. the `3/4` Hessian threshold is already a singularity criterion;
-19. line maximality makes the full Euclidean Hessian negative;
-20. axial convexity can recur indefinitely inside one quiet compact pure-kernel genealogy;
-21. mixed/transverse Hessian payers have homogeneous damping with no `Hess kappa` recharge;
-22. the third log-amplitude jet has ten free components — only seven STF components remain after CE-H trace reduction;
-23. analyticity by itself supplies the missing uniform material analytic-radius estimate;
-24. continuing the jet derivative ladder without new coercivity is progress;
-25. global regularity has been proved.
+1. winding is not itself singular;
+2. scalar `kappa` payer cannot replace global `l=3` pressure architecture;
+3. label, spatial, coarea, and director-flux measures are not interchangeable;
+4. moving maxima are not material markers;
+5. signed director flux and positive total variation are distinct;
+6. Rank-1 and Rank-2 material carrier strata do not convert on a finite regular interval;
+7. same-material compact ribbon recurrence is excluded, fresh-carrier Eulerian recurrence is not;
+8. the earlier `K^2` historical turnover-count inference is retracted;
+9. absolute analyticity does not give amplitude-relative `log rho`/`kappa` whole-jet bounds near `rho=0`;
+10. generic folds are not charged by `D_B(D_k g)`;
+11. the recurrent quiet axial convexity payer is closed;
+12. mixed/transverse payers cannot be closed by blind higher differentiation;
+13. the OU Liouville closure requires a two-sided critical mass envelope on expanding time windows;
+14. failure of that envelope is routed to an exact material packet boundary-flux / forgetting ledger rather than called a contradiction;
+15. global regularity remains unproved.
 
 ---
 
-# 7. Highest-value next gates
+# 8. Highest-value next gates
 
-## 1. Whole normalized-jet / analytic-radius control
+## 1. Diffusive packet-boundary flux / forgetting
 
-Instead of differentiating once more, seek a material estimate for an analytic/Gevrey generating norm schematically of the form
-
-\[
-\mathcal A_\ell
-=\sum_{m\ge0}\frac{\ell^m}{m!}
-\left(
-\|\nabla^m\log\rho\|
-+\|\nabla^m\kappa\|
-+\|\nabla^m\xi\|
-\right).
-\]
-
-The key question is whether the analytic radius `ell` and the whole normalized hierarchy can remain uniformly compact along the repeated remote fold genealogy.
-
-## 2. Flux-weighted normalized coercivity
-
-Seek a bound measured directly against
+Estimate
 
 \[
-d\Phi_J
+\boxed{
+\int e^{\theta/2}|\mathcal F_D|d\theta,
+\qquad
+\mathcal F_D=\int_{\partial D}W\cdot\partial_nW\,dA,
+}
 \]
 
-rather than the degenerating `rho^2 dV` weight, so that order-one normalized multiplier/director jets become costly on the actual carrier population.
+for the relative-thick ribbon packet and connect it to the existing M5 amplitude-sensitive turnover/localization ledger.
 
-## 3. Unique continuation / Liouville / tail decoupling
+## 2. Thin/nodal/multiplicity branch
 
-Use the coupled CE-H elliptic/material system to rule out the low-amplitude strong-normalized-geometry ancient remote skeleton as a whole, rather than order by order.
+If relative thickness fails, classify the low-amplitude normalized limit near analytic vorticity zeros instead of treating it as arbitrary high-jet blowup.
 
-## 4. Persistent-ribbon multiplier-flatness branch
+## 3. Unbounded-`kappa` branch
 
-Exploit
+Route loss of bounded CE-H potential into the M5 scalar constitutive law
 
 \[
-D_\xi\kappa\to0
+h=L_\rho\kappa+L_\rho\sigma-\kappa+\mathcal R_{geom}.
 \]
 
-together with circular-kernel compatibility and the full coupled velocity/material system.
+## 4. Rank-1 local/global pressure covariance
 
-## 5. Independent Rank-1 pressure covariance gate
-
-Continue the local `kappa`-crossing versus global `l=3` pressure architecture separately.
+Continue independently after the Rank-2 packet-flux gate is exhausted.
 
 ---
 
