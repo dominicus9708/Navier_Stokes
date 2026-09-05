@@ -2,7 +2,7 @@
 
 Canonical continuation split from M16 after M16-023.
 
-Recompressed at **M17-193**. Detailed derivations, corrections, provenance, and DSD audits remain in the individual canonical modules.
+Recompressed at **M17-208**. Detailed derivations, corrections, provenance, and DSD audits remain in the individual canonical modules.
 
 ---
 
@@ -18,7 +18,7 @@ The axisymmetric no-swirl class remains an explicit known-regular Rank-1 firewal
 
 ---
 
-# 2. Foundational systems — M17-006 through M17-096
+# 2. Foundational Rank-1 / Rank-2 geometry — M17-006 through M17-096
 
 ## Rank-1 great-circle system
 
@@ -50,37 +50,33 @@ Same-marker comparable recurrence forces
 (\langle\sigma\rangle,\langle\sigma_k\rangle,\langle\sigma_n\rangle)=(-1/2,1,-1/2),
 \]
 
-and, with comparable normalized amplitude,
+and with comparable normalized amplitude
 
 \[
 \langle\kappa\rangle=3/2.
 \]
 
-## Vertical Rank-1 nodal pressure block
-
-\[
-G_q=1,\qquad \partial_3\lambda=0,
-\]
+## Vertical nodal pressure block
 
 \[
 V_V=-\frac12H_V,\qquad H_V=\mathcal H_{333},
 \]
 
 \[
-D_BH_V=\Pi_V^{prod}+\Pi_V^{rel}.
+D_BH_V=\Pi_V^{prod}+\Pi_V^{rel},
 \]
 
-At the nodal filament
+and at the vertical nodal filament
 
 \[
 \boxed{O_V=-\frac15|Q|_F^2\kappa_3.}
 \]
 
-These nodal identities remain valid, but direct same-material substitution into the M5 positive-vorticity flux ensemble is retracted below.
+These nodal identities remain valid, but direct same-material substitution into the M5 positive-vorticity flux ensemble is retracted by M17-178--183.
 
 ---
 
-# 3. Rank-2 carrier/ribbon frontier — M17-097 through M17-163
+# 3. Rank-2 ribbon / OU frontier — M17-097 through M17-163
 
 Peak/tangency/type changes are mostly signed-director-flux recyclable. Same-material compact critical-ribbon recurrence is excluded, but fresh-carrier Eulerian recurrence survives.
 
@@ -90,27 +86,27 @@ Remote critical tails reduce to
 \rho\to0,\qquad |J_\xi|\gtrsim1,\qquad \Phi_J\gtrsim1.
 \]
 
-Relative-thick bounded-\(\kappa\) packets on quiet remote corridors have the OU limit
+Relative-thick, quiet, bounded-\(\kappa\) packets have the amplitude-normalized OU limit
 
 \[
-\partial_\tau V+\frac12z\cdot\nabla V=\Delta V-V,
+\partial_\tau V+\frac12z\cdot\nabla V=\Delta V-V.
 \]
 
-and nonzero eternal finite-lag packets are excluded. Remaining Rank-2 exits are thin/nodal, unbounded-\(\kappa\), ancestor concentration, critical multiplicity/occupancy, or interface/domain exits.
+M17-158 shows that an eternal \(L^2\) OU packet with bounded CE-H potential must vanish. The former escape was fixed-lag normalized mass explosion, split by M17-162 into concentration or diffuse multiplicity. M17-163 showed raw volume packing alone is too weak.
 
 ---
 
 # 4. Valid nodal local/global pressure architecture — M17-164 through M17-171
 
-These results are independent of any M5 flux-label bridge.
+These results do not use an M5 flux-label bridge.
 
-For a radial small-core cutoff,
+Small-core pressure production reproduces the nodal octupole:
 
 \[
-\boxed{\Pi_{V,\kappa}^{core}(R)=\frac67m_\chi R^2O_V+O(R^3),}
+\boxed{\Pi_{V,\kappa}^{core}(R)=\frac67m_\chi R^2O_V+O(R^3).}
 \]
 
-and for a sharp ball the coefficient is \(3R^2O_V/7\).
+For a sharp ball the coefficient is \(3R^2O_V/7\).
 
 CE-H gives
 
@@ -118,21 +114,21 @@ CE-H gives
 \kappa\rho^2=\frac12\Delta\rho^2-|\nabla W|^2,
 \]
 
-so at the vertical nodal filament the global \(\kappa\)-production is the axial \(l=3\) angular moment of positive palinstrophy density.
+so the global \(\kappa\)-production is an axial \(l=3\) moment of positive palinstrophy density.
 
 In nodal semilinear gauge,
 
 \[
-H_V=F_{33},\qquad O_V=-\frac15|Q|_F^2F_{q3}.
+H_V=F_{33},\qquad O_V=-\frac15|Q|_F^2F_{q3},
 \]
 
-The current
+and
 
 \[
-\mathbf J_F=(F_{33},-F_{q3})=\nabla^\perp F_3
+\mathbf J_F=(F_{33},-F_{q3})=\nabla^\perp F_3.
 \]
 
-is divergence free. Its closed-loop flux identity is the periodicity of \(F_3\), not an independent conserved charge.
+The closed-loop flux identity is periodicity of \(F_3\), not an independent conserved charge.
 
 ---
 
@@ -150,15 +146,15 @@ has Jacobian
 J_\Xi=F_{qq}H_V-25O_V^2/|Q|_F^4.
 \]
 
-Uniform hodograph nondegeneracy is kinematically compatible with M5-type hysteresis. Any pressure-variance/higher-jet conclusion from M17-172--177 remains **conditional** on an additional regular-flux-to-nodal Eulerian localization theorem.
+Uniform hodograph nondegeneracy is kinematically compatible with M5-type hysteresis. Any M5-forced pressure-variance/higher-jet statement in this branch is **conditional** on an additional regular-flux-to-nodal Eulerian localization theorem.
 
-The exact moving-zero-loop variance law is signed and noncoercive; pressure variance is not a new monotone dissipation budget.
+The exact moving-zero-loop pressure-variance law is signed and noncoercive.
 
 ---
 
 # 6. Corrective Rank-1 support/measure audit — M17-178 through M17-183
 
-M5 transverse-flux labels live on regular \(W\neq0\) vortex-line flow boxes, while \(O_V\) lives on \(W=0\). Because
+M5 transverse-flux labels live on regular \(W\neq0\) vortex-line flow boxes, while \(O_V\) lives on \(W=0\). Since
 
 \[
 D_B\rho=(\sigma+\kappa-1)\rho,
@@ -166,7 +162,7 @@ D_B\rho=(\sigma+\kappa-1)\rho,
 
 \(\rho>0\) and \(\rho=0\) are disjoint material strata on finite regular intervals. Thus M17-095's same-material M5-to-nodal identification is retracted.
 
-On regular great-circle charts, however, the flux measure is exact:
+On regular great-circle charts the flux measure is exact:
 
 \[
 \boxed{|d\Phi_W|=dq\,dx_3,\qquad a\,d\mu_0=dq\,dx_3.}
@@ -178,225 +174,294 @@ Hence
 \boxed{G_\Phi(0)=\int_{\Gamma_0^{reg}}\frac{h}{|\nabla_{(q,x_3)}\kappa|}\,ds.}
 \]
 
-An explicit reduced-label firewall shows the global sign of this current does not determine a nodal boundary trace.
+The global M5 zero-current sign does not determine a nodal boundary trace.
 
-At a regular positive-vorticity \(\kappa=0\) crossing, the local \(l=3\) tensor is
+At a regular positive-vorticity \(\kappa=0\) crossing,
 
 \[
-\mathcal O_{reg}^{(3)}=-STF_3\!\left[\frac16\operatorname{sym}(\nabla\kappa\otimes\nabla^2\rho^2+\nabla\rho^2\otimes\nabla^2\kappa)+\frac{\rho^2}{6}\nabla^3\kappa\right].
+\mathcal O_{reg}^{(3)}=-STF_3\!\left[\frac16\operatorname{sym}(\nabla\kappa\otimes\nabla^2\rho^2+\nabla\rho^2\otimes\nabla^2\kappa)+\frac{\rho^2}{6}\nabla^3\kappa\right],
 \]
 
-Thus the scalar crossing rate \(h\) does not determine regular local \(l=3\) orientation.
+so the scalar crossing velocity \(h\) does not determine the local regular \(l=3\) orientation.
 
 ---
 
-# 7. Exact regular flux/enstrophy joint kinetics — M17-184
+# 7. Regular M5 flux/enstrophy kinetics — M17-184 through M17-193
 
 For a regular closed winding loop,
 
 \[
-\boxed{L_\rho=\oint\rho\,ds=\oint|\nabla_hq|ds.}
+L_\rho=\oint\rho\,ds=\oint|\nabla_hq|ds,
 \]
-
-Its material law is
 
 \[
 L_\rho'=\left(\kappa-\frac12+2\bar\sigma_\rho\right)L_\rho.
 \]
 
-With joint distribution
+The joint \((\kappa,L_\rho)\) distribution obeys
 
 \[
-P(k,\ell,\theta)=\int\delta(k-\kappa)\delta(\ell-L_\rho)d\Phi,
+\boxed{\partial_\theta P+\partial_kG_k+\partial_\ell G_\ell=kP,}
 \]
 
-one has
-
-\[
-\boxed{\partial_\theta P+\partial_kG_k+\partial_\ell G_\ell=kP.}
-\]
-
-The first \(L_\rho\)-moment is
+and the first \(L_\rho\)-moment gives
 
 \[
 \boxed{\partial_\theta F_E+\partial_kG_E=(2k-\tfrac12)F_E+2S_\rho.}
 \]
 
-Thus the M5 flux/enstrophy measure mismatch is an explicit line-strain residence channel.
+The exact quarter-strain balance is
+
+\[
+\boxed{\int\kappa L_\rho d\Phi=-\int|\nabla W|^2dy,}
+\]
+
+\[
+\boxed{\int(\bar\sigma_\rho-\tfrac14)L_\rho d\Phi=\int|\nabla W|^2dy+\tfrac12E'.}
+\]
+
+On recurrent mean, the quarter-strain excess equals palinstrophy.
+
+M17-191 closes the unweighted cutoff-sign escape. M17-192 shows an exponentially positive cutoff payer requires upward amplitude replenishment concentrated in high \(\kappa\). M17-193 sends connected quarter-strain phase segregation back to strain-gradient occupancy; disconnected component/interface segregation remains explicit.
 
 ---
 
-# 8. Quarter-strain / regular payer structure — M17-185 through M17-193
+# 8. Geometric-remainder and payer collapse — M17-194 through M17-200
 
-## M17-185 — exact \(1/4\)-strain balance
+## M17-194 — exact weighted cancellation
+
+For weight \(w=\chi e^{2\kappa}\rho^2\), integration by parts and
+
+\[
+\nabla\cdot\Sigma=-\frac12\nabla\times W
+\]
+
+cancel the amplitude-Hessian-generated curl term against the explicit curl term in \(\mathcal R_{geom}\).
+
+The integrated remainder reduces to amplitude-gradient/strain, \(\kappa\)-amplitude mixed gradient, threshold collar, and director-gradient/strain channels.
+
+## M17-195 / 196 — quantitative domination
 
 With
 
 \[
-E=\int\rho^2dy=\int L_\rho d\Phi,\qquad D=\int|\nabla W|^2dy,
+D_\rho=\int\chi e^{2\kappa}|\nabla\rho|^2,
+\qquad
+P_\xi=\int\chi e^{2\kappa}\rho^2|\nabla\xi|^2,
 \]
 
-CE-H gives
+and threshold charges \(B_\rho,B_\kappa,B_\sigma\),
 
 \[
-\boxed{\int\kappa L_\rho d\Phi=-D<0,}
+|\mathcal R^{(2)}|
+\lesssim
+D_\rho+B_\rho+P_\xi
++\sqrt{D_\kappa D_\rho}
++\sqrt{B_\rho B_\kappa}
++\sqrt{B_\rho B_\sigma}.
 \]
 
-and
+Thus no independent geometric-remainder payer survives.
+
+## M17-197 / 198 — bulk payer compression and double-counting firewall
+
+For the simple strain eigenvalue,
 
 \[
-\boxed{\int(\bar\sigma_\rho-\tfrac14)L_\rho d\Phi=D+\tfrac12E'.}
+|\nabla\sigma|^2\le|\nabla\Sigma|^2,
 \]
 
-Hence on a recurrent mean
+and globally
 
 \[
-\boxed{\overline{\int(\bar\sigma_\rho-\tfrac14)L_\rho d\Phi}=\overline D>0.}
+\boxed{\|\nabla\Sigma\|_2^2=\frac12\|\nabla W\|_2^2.}
 \]
 
-## M17-186 — M5-688 cycle-work in quarter-strain form
-
-The exponential payer identity becomes
+Together with
 
 \[
-\boxed{D_\kappa+X_{\kappa\sigma}=\frac12Q_\sigma^{(2)}+\frac14\mathcal C+\frac12\mathcal R,}
+|\nabla W|^2=|\nabla\rho|^2+\rho^2|\nabla\xi|^2,
 \]
 
-where
+bulk fixed-order payers collapse to palinstrophy occupancy. Palinstrophy and unweighted quarter-strain excess are one enstrophy cycle and must not be counted as independent payments.
+
+## M17-199 — amplitude/kappa joint state
+
+For \(r=\rho,k=\kappa\),
 
 \[
-Q_\sigma^{(2)}=\int e^{2k}(\bar S_\sigma-\tfrac14\bar F)dk.
+\boxed{\partial_\theta\mathcal P+\partial_r\mathcal J_r+\partial_k\mathcal J_k=\frac32\mathcal P.}
 \]
 
-## M17-187 — exponential phase segregation
+M5-668 threshold turnover is the \(r\)-current; the M5 constitutive multiplier transport is the \(k\)-current. The exponentially tilted cutoff payer is only a \(\kappa\)-weighted moment of the same amplitude current.
 
-Although the unweighted quarter-strain excess is positive, the \(e^{2\kappa}\)-tilted excess can be small only by placing a definite amount of quarter-strain deficit in an opposing \(\kappa\)-phase.
+## M17-200 — threshold multiplier-gradient descent
 
-## M17-188 / 190 — recurrent closed-loop covariance forces strain-gradient occupancy
-
-If a same-material compact high-amplitude closed winding loop recurrently restores its length, enstrophy line weight, and flux, then
+If a child cutoff's threshold charge is
 
 \[
-\langle\bar\sigma_{ds}\rangle=-\frac12,\qquad \langle\bar\sigma_\rho\rangle=\frac14,
+B_\kappa[\chi]=\int\chi'e^{2\kappa}\rho^3|\nabla\kappa|^2,
 \]
 
-so the \(\rho\)-weighted and arclength-weighted strain averages differ by \(3/4\). This forces positive strain/amplitude line covariance and, under compact derivative bounds and positive flux mass,
+choose a lower-amplitude parent cutoff \(\tilde\chi=1\) on \(\operatorname{supp}\chi'\). Then
 
 \[
-\boxed{D_\sigma>0.}
+\boxed{B_\kappa[\chi]\le C D_\kappa[\tilde\chi].}
 \]
 
-## M17-189 — high-amplitude ledger has a nodal-label gap
-
-Near a nondegenerate definite winding node,
-
-\[
-\rho\asymp |q|^{1/2},\qquad L_\rho(q)\asymp |q|.
-\]
-
-Thus a fixed cutoff \(\rho\ge a_0\) enforces
-
-\[
-\boxed{|q|\ge c_*a_0^2.}
-\]
-
-The high-amplitude M5-683/688 ledger does not approach the nodal trace.
-
-## M17-191 — unweighted cutoff-transition escape is closed
-
-For monotone high-amplitude cutoff \(\chi'\ge0\), M5-668 gives
-
-\[
-\boxed{\overline{C_\chi^{tot}}=-\frac32\int\chi'(a)a^2\overline{V_a}\,da\le0.}
-\]
-
-Therefore
-
-\[
-\boxed{Q_\sigma^{(0)}=\overline{D_\chi+B_\chi}+\frac34\int\chi'(a)a^2\overline{V_a}\,da>0}
-\]
-
-on the nontrivial retained branch.
-
-## M17-192 — exponentially positive cutoff payer requires replenishment phase segregation
-
-If the \(e^{2\kappa}\)-weighted cutoff term is nonnegative despite the negative unweighted threshold turnover, then a fixed positive amount of upward/replenishing threshold turnover must be concentrated in sufficiently high-\(\kappa\) phases.
-
-## M17-193 — connected phase segregation returns to \(D_\sigma\)
-
-On a connected high-amplitude component with uniform weighted Poincare constant, simultaneous positive and negative masses of
-
-\[
-f=\sigma-\frac14
-\]
-
-force
-
-\[
-\boxed{\int\chi\rho^2|\nabla\sigma|^2dy\ge c>0.}
-\]
-
-Thus quarter-strain phase segregation is not an independent escape on connected compact components; it returns to the strain-gradient payer. A genuinely distinct escape requires component/interface segregation.
+Thus threshold \(\nabla\kappa\) payment is the same multiplier-diffusion charge in a lower amplitude layer and descends toward bulk/replenishment/interface or low-amplitude/nodal exits.
 
 ---
 
-# 9. Current corrected Rank-1 payer frontier
+# 9. High-kappa replenishment / return current — M17-201 through M17-204
 
-M5-687 already gives a uniform positive multiplier-diffusion charge
-
-\[
-\boxed{D_\kappa\ge d_\kappa>0.}
-\]
-
-The regular Rank-1 conveyor must pay it through
+For the stationary joint \((\rho,\kappa)\) state and quadrant \(\{r>a,k>k_0\}\),
 
 \[
 \boxed{
-D_\sigma
-\ \lor\
-Q_\sigma^{(2)}\text{ phase architecture}
-\ \lor\
-\text{high-}\kappa\text{ threshold replenishment}
-\ \lor\
-\mathcal R_{geom}
-\ \lor\
-\text{component/interface segregation}.
+\int_{k>k_0}\bar{\mathcal J}_r(a,k)dk
++\int_{r>a}\bar{\mathcal J}_k(r,k_0)dr
+=-\frac32M_{a,k_0}.
 }
 \]
 
-M17-191 closes the unweighted cutoff-sign escape; M17-193 folds connected quarter-strain phase segregation back into \(D_\sigma\).
+Thus high-\(\kappa\) upward amplitude replenishment forces a stronger downward multiplier return current.
 
-The highest-value next calculation is therefore to decompose the explicit CE-H geometric remainder \(\mathcal R_{geom}\) under the same \(e^{2\kappa}\chi\rho^2\) weight and determine whether it is genuinely independent or collapses into the already exposed gradient/threshold/director charges.
+On a retained amplitude band \(a\le\rho\le M_0\), a negative volume return current \(-A\) either transfers a fixed negative fraction to the enstrophy measure or forces quantitative positive \(h\) counterflow. On a connected regular \(\kappa\)-level, counterflow forces
+
+\[
+\boxed{\int|\nabla_T h|^2d\nu\ge cA^2.}
+\]
+
+At \(k_0=0\), the negative return direction is coherent with the existing M5-686 zero-current conveyor; it is not a new sign contradiction. The regular Rank-1 frontier is therefore recyclability/budget, not further local sign chasing.
 
 ---
 
-# 10. Current Rank-2 frontier
+# 10. Rank-2 global multiplicity closure — M17-205 through M17-208
+
+## M17-205 — fixed-lag material shell transfer
+
+For any material set,
 
 \[
 \boxed{
-R_{2,ribbon}^{remote}
+\int_{\Phi_T(A_-)}\rho_+^2dy
+=\int_{A_-}\rho_-^2
+\exp\int(2\sigma+2\kappa-\tfrac12)d\tau\,dy.
+}
+\]
+
+On compact bounded-\(\kappa\) corridors, fixed-lag material enstrophy is uniformly comparable. Remote Type-I velocity gives
+
+\[
+|y(\theta)|^2=e^T|y(\theta-T)|^2+O_T(1),
+\]
+
+so one ancestor dyadic shell maps into finitely many current dyadic neighbors. Hence
+
+\[
+\boxed{E_j(-T)\le C_T\sum_{|m|\le M_T}E_{j+s_T+m}(0).}
+\]
+
+## M17-206 / 207 — good and globally tempered shell extraction
+
+For the bounded critical sequence \(b_k=R_kE_k\), cubic divergence survives on a globally tempered subfamily. Choose \(A>1\), \(A^{3/2}>3\), and define
+
+\[
+\boxed{b_{k+m}\le A^{|m|}b_k\qquad\forall m.}
+\]
+
+Then
+
+\[
+\boxed{
+\sum_kb_k^{3/2}\le C_A\sum_{k\in G_{temp}}b_k^{3/2}.
+}
+\]
+
+Thus the nonsummable M5-526 defect cannot avoid shells that control **every fixed finite neighborhood simultaneously**.
+
+## M17-208 — tempered Rank-2 multiplicity lane closed
+
+On a tempered shell remaining in the M17-155 relative-thick, quiet, bounded-\(\kappa\) Rank-2 lane,
+
+\[
+a_j^2\ge c_*E_{k_j}(0).
+\]
+
+M17-205 plus global temperedness gives, for every fixed \(T\),
+
+\[
+\boxed{\sup_{|\tau|\le T}\frac{E_j(\tau)}{a_j^2}\le C_T.}
+\]
+
+M17-158 therefore produces a nonzero eternal \(L^2\) OU packet with bounded CE-H potential, which is impossible.
+
+Hence
+
+\[
+\boxed{
+R_{2,ribbon}^{relative\text{-}thick,\ quiet,\ bounded\text{-}\kappa,\ tempered}
+\Longrightarrow\bot.
+}
+\]
+
+The previous diffuse multiplicity escape is not terminal on this lane. If the M17-207 charging lands on shells where the Rank-2 hypotheses fail, that is explicit rank reassignment / thin / unbounded-\(\kappa\) / nonquiet / interface exit.
+
+---
+
+# 11. Current corrected frontiers
+
+## Regular Rank-1
+
+\[
+\boxed{
+R_1^{regular}
 \Longrightarrow
-H_{1,crit}^{spacetime}
-\lor G_{thin/nodal}
-\lor G_{\kappa,\infty}
-\lor G_{ancestor\ concentration}
-\lor G_{critical\ multiplicity/occupancy}
-\lor G_{interface/domain}.
+G_{M5\text{-}688\ enstrophy/palinstrophy\ cycle}
+\lor
+G_{\nabla_T h}
+\lor
+G_{component/interface}
+\lor
+G_{low\ amplitude/nodal}.
 }
 \]
 
-The relative-thick bounded-\(\kappa\) quiet packet lane is closed by the OU/Liouville reduction; the critical multiplicity/occupancy lane remains a major global firewall.
+The catch-all geometric remainder has been removed as an independent payer. The hard issue is nonrecyclable cumulative control, not another scalar sign.
+
+## Rank-2 hard tail
+
+\[
+\boxed{
+R_2^{hard}
+\Longrightarrow
+G_{relative\text{-}thin/nodal}
+\lor
+G_{\kappa,\infty}
+\lor
+H_{1,crit}^{spacetime}
+\lor
+G_{rank\ reassignment/concentration}
+\lor
+G_{component/interface/domain}.
+}
+\]
+
+The relative-thick quiet bounded-\(\kappa\) diffuse-multiplicity lane is closed on the globally tempered hard-shell subfamily.
 
 ---
 
-# 11. DSD audit status
+# 12. DSD audit status
 
-1. Local and global descriptors are not equated without an explicit kernel/localization theorem.
+1. Local/global descriptors are not equated without explicit localization/kernel control.
 2. Regular positive-vorticity flux labels and nodal \(W=0\) filaments are distinct material strata.
 3. M5's negative zero-crossing current is kinematic source-balance data, not an independent PDE burden.
 4. High-amplitude regular great-circle flux measure is exactly \(dq\,dx_3\).
-5. Signed occupancy is not called irreversible dissipation without a separate monotone budget.
-6. Known regular firewalls, including axisymmetric no-swirl, remain explicit.
+5. Palinstrophy and quarter-strain excess are one enstrophy cycle and are not double counted.
+6. Geometric-remainder and threshold-gradient payers are reduced to explicit fixed-order/nested-layer charges.
+7. Rank-2 multiplicity is closed only on the stated tempered relative-thick quiet bounded-\(\kappa\) lane; rank reassignment and other hard exits remain.
+8. Known regular firewalls, including axisymmetric no-swirl, remain explicit.
 
 ---
 
