@@ -2,121 +2,200 @@
 
 Date: 2026-09-06
 Source: JiaHong Zhang, *Global Smooth Solutions to the 3D Incompressible Navier-Stokes Equations: Weakly Regular Framework and Multi-Scenario Adaptation*, Preprints 202601.0992.v1, Jan 2026.
-Audit status: **HIGH-ORDER UNIFORMITY GATE OPEN / WEAK-COMPACTNESS DOES NOT IMPLY GLOBAL SMOOTHNESS**
+Source DOI: 10.20944/preprints202601.0992.v1
+Audit status: **FAIL_ROOT AT HIGH-ORDER SMOOTHNESS UPGRADE; ENERGY/WEAK-COMPACTNESS PART SURVIVES**
 
 ## 1. Public claim
 
-The abstract claims global smoothness and uniqueness for initial data ranging from high Sobolev regularity down to merely `L^2` and locally weakly singular data, using:
+The manuscript claims global smoothness and uniqueness for initial data ranging from high Sobolev regularity down to merely `L^2`, using compactly supported mollification, Galerkin approximation, uniform double-limit energy estimates, and a high-order bootstrap.
 
-- compactly supported mollifier regularization;
-- “uniform double-limit energy estimates”;
-- Galerkin iteration;
-- instantaneous smoothing for `t>0`.
-
-## 2. What standard approximation theory already gives
-
-For regularized or Galerkin systems, fixed approximation parameters yield smooth finite-dimensional/regularized solutions.
-
-The classical Leray program provides approximation-uniform energy bounds such as
+The approximation-level energy/compactness argument is conceptually standard and is not the open problem. The decisive issue is the transition from the Leray-level limit
 
 \[
-\sup_{t\le T}\|u_n(t)\|_2^2
-+
-2\nu\int_0^T\|\nabla u_n\|_2^2dt
-\le \|u_0\|_2^2+\cdots.
+u\in L^\infty_tL^2_x\cap L^2_tH^1_x
 \]
 
-Aubin–Lions/weak compactness then yields a global Leray–Hopf weak solution.
+to global `H^\infty` regularity.
 
-This part is not the open problem.
+## 2. What the manuscript actually establishes before the smoothness step
 
-## 3. Missing upgrade obligation
-
-To conclude
+Section 3.2 gives approximation-uniform energy estimates of the form
 
 \[
-u\in C^\infty((0,\infty);H^\infty)
-\]
-
-for arbitrary large 3D data, one needs approximation-independent estimates in norms strong enough to prevent concentration.
-
-For example one would need, on every `[\tau,T]` with `\tau>0`, a hierarchy such as
-
-\[
-\sup_n\sup_{t\in[\tau,T]}\|u_n(t)\|_{H^m}\le C_{m,\tau,T}
-\]
-
-for all `m`, with constants independent of both Galerkin dimension and mollifier scale.
-
-If the constants behave like
-
-\[
-C_{m,\tau,T}(\varepsilon)\to\infty
-\quad\text{as }\varepsilon\to0,
-\]
-
-the smoothness disappears in the double limit.
-
-## 4. Instantaneous smoothing audit
-
-The Stokes/heat semigroup smooths linear equations instantly. For the nonlinear 3D NSE, mild solutions are smooth for a short time while the strong solution exists. Linear heat smoothing does **not** by itself prevent later nonlinear blow-up.
-
-Thus the implication
-
-\[
-\text{mollified initial singularity disappears for }t>0
-\Rightarrow
-\text{solution remains smooth for all later time}
-\]
-
-requires a global nonlinear a priori bound.
-
-## 5. Double-limit order audit
-
-Two approximation parameters may be involved, e.g. mollification `ε` and Galerkin dimension `N`. Statements of the form
-
-\[
-\lim_{\varepsilon\to0}\lim_{N\to\infty}u_{N,\varepsilon}
+\sup_{N,\varepsilon}\sup_{t\in[0,T]}\|u_{N,\varepsilon}(t)\|_2^2<\infty,
 \]
 
 and
 
 \[
-\lim_{N\to\infty}\lim_{\varepsilon\to0}u_{N,\varepsilon}
+\sup_{N,\varepsilon}\int_0^T\|\nabla u_{N,\varepsilon}(t)\|_2^2dt<\infty.
 \]
 
-need not have the same strong regularity. A “uniform double limit” must specify:
-
-- the norm;
-- the constants;
-- the order or joint convergence;
-- nonlinear-term convergence;
-- preservation of the high-order estimate.
-
-Energy-level uniformity alone is insufficient.
-
-## 6. Uniqueness audit
-
-Global uniqueness is known in a strong class but not for arbitrary Leray weak solutions. Therefore a uniqueness conclusion after the limit cannot be obtained merely because every approximate Galerkin system is unique.
+Section 3.3 then invokes Aubin-Lions and obtains a limit in the standard weak-energy class
 
 \[
-\forall n:\text{ unique approximate solution}
-\not\Rightarrow
-\text{unique weak limit}.
+ u\in L^\infty([0,\infty);L^2)\cap L^2_{loc}([0,\infty);H^1).
 \]
 
-One must first prove the limit lies in a strong/weak–strong uniqueness class.
+This is a legitimate weak-compactness level, subject to the usual approximation details. It does not itself imply regularity.
 
-## 7. Current verdict
+## 3. Root gap A — the high-order induction does not have its stated base case
 
-The public abstract does not expose the detailed higher-order estimates needed to decide whether the paper actually proves the required parameter-uniform bounds. Therefore the fair classification is not an immediate falsehood verdict but:
+Section 4.1.1 claims to prove
+
+\[
+\partial_t^m\nabla^k u\in L^\infty([\delta,T];L^2)
+\]
+
+for all `m,k` by double induction.
+
+The manuscript lists as basis cases:
+
+- `m=0,k=0`: `L^2` boundedness;
+- `m=0,k=1`: previously established `L^2_loc`-integral boundedness.
+
+But the induction statement requires for `k=1`
+
+\[
+\nabla u\in L^\infty([\delta,T];L^2),
+\]
+
+whereas the earlier energy estimate gives only
+
+\[
+\nabla u\in L^2([0,T];L^2).
+\]
+
+These are different assertions:
 
 \[
 \boxed{
-\text{OPEN DEEP AUDIT — uniform higher-Sobolev double-limit closure is the decisive gate.}
+L^2_tH^1_x\not\Rightarrow L^\infty_tH^1_x.
 }
 \]
 
-If only standard energy estimates are uniform, the argument reaches global weak existence rather than global smoothness.
+Thus the stated induction begins with a base property that has not been established.
 
-Global regularity remains unproved.
+This is not a cosmetic omission: obtaining uniform-in-time `H^1` control for arbitrary large 3D data is already a regularity-level estimate.
+
+## 4. Root gap B — differentiating an `L^2` forcing term
+
+The weak-regularity setup assumes only
+
+\[
+f\in L^2([0,\infty);L^2(\mathbb R^3)).
+\]
+
+But in the inductive step Section 4.1.1 says to apply
+
+\[
+\partial_t^M\nabla^K
+\]
+
+to both sides of the Navier-Stokes equation and then states that the external-force term is directly controlled by the `L^2` assumption.
+
+For `M+K>0`, this operation produces derivatives such as
+
+\[
+\partial_t^M\nabla^K f,
+\]
+
+which are not defined or controlled under the stated `L^2_tL^2_x` hypothesis.
+
+Therefore the claimed high-order induction does not close under the paper's own weak-force assumptions:
+
+\[
+\boxed{
+f\in L^2_tL^2_x
+\not\Rightarrow
+\partial_t^M\nabla^K f\in L^2.
+}
+\]
+
+For the unforced Clay problem `f=0`, this particular obstruction disappears, but Root gap A remains.
+
+## 5. Root gap C — commutator uniformity is asserted after the missing regularity
+
+Section 4.3 states
+
+\[
+\sup_{N,\varepsilon}
+\|\operatorname{Comm}_k(u_{N,\varepsilon},u_{N,\varepsilon})\|_2
+\le C_k.
+\]
+
+The stated Moser/Gagliardo-Nirenberg control consumes quantities such as `||grad u||_infinity` and higher Sobolev norms. Those are precisely the quantities the preceding induction is supposed to establish.
+
+A bound independent of `N,epsilon` must be derived from already-available uniform norms; it cannot be declared after assuming the strong norms needed to estimate the commutator.
+
+Thus the manuscript needs an independent, noncircular estimate that upgrades the Leray-level bounds to a continuation norm.
+
+## 6. Finite-dimensional ODE boundedness does not repair the continuum gap
+
+Section 4.4 correctly uses the energy cancellation of the Galerkin convective term to show a fixed finite-dimensional coefficient vector has bounded `L^2` energy and the approximate ODE extends globally.
+
+However
+
+\[
+\boxed{
+\text{global finite-dimensional Galerkin trajectory}
+\not\Rightarrow
+\text{uniform high-Sobolev bound as }N\to\infty.
+}
+\]
+
+This is exactly why Galerkin approximations already yield global Leray weak solutions without resolving 3D regularity.
+
+## 7. Additional notation/embedding issue
+
+The manuscript writes an embedding in the form `H^s(R^3) subset C^infty(R^3)` for `s>3/2`. A fixed finite Sobolev exponent above `3/2` gives continuity/Hölder-type control appropriate to the precise exponent, not `C^infty`. Smoothness follows only if one has all sufficiently high Sobolev norms, which is again the missing induction conclusion.
+
+This issue is secondary to the two root gaps above but points in the same direction: finite Sobolev regularity is being promoted too quickly to arbitrary smoothness.
+
+## 8. DSD inheritance audit
+
+The valid chain reaches
+
+\[
+\text{regularized/Galerkin smooth approximants}
+\to
+\text{uniform }L^2_tH^1_x\text{ energy control}
+\to
+\text{weak-energy limit}.
+\]
+
+The manuscript then attempts
+
+\[
+\text{weak-energy limit}
+\to
+L^\infty_tH^1_x
+\to
+H^k\ \forall k
+\to
+C^\infty.
+\]
+
+The first arrow is not established, and the later differentiated-force argument exceeds the stated hypotheses.
+
+## 9. Verdict
+
+The global smoothness claim in this version does not follow from the displayed proof.
+
+\[
+\boxed{
+\text{FAIL_ROOT: high-order regularity bootstrap consumes an unproved }L^\infty_tH^1_x\text{ base and unavailable force derivatives.}
+}
+\]
+
+Surviving portion:
+
+\[
+\boxed{
+\text{mollifier/Galerkin energy compactness remains a weak-solution construction framework.}
+}
+\]
+
+This verdict is version-specific and does not judge the author. A revised proof would need a genuinely approximation-uniform critical/higher-order estimate that supplies the missing `L^\infty_tH^1_x` base without assuming regularity.
+
+GLOBAL 3D NAVIER--STOKES REGULARITY REMAINS UNPROVED.
