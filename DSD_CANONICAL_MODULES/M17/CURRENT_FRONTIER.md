@@ -1,7 +1,7 @@
 # M17 Current Frontier
 
 Date: 2026-09-08  
-Current tip: **M17-356**  
+Current tip: **M17-368**  
 Status: **AUTHORITATIVE M17 NAVIGATION / CORRECTION INDEX**
 
 \[
@@ -10,28 +10,25 @@ Status: **AUTHORITATIVE M17 NAVIGATION / CORRECTION INDEX**
 
 This file takes precedence over historical M17 companion indexes when status labels conflict. Historical modules remain preserved for provenance.
 
-> Before reusing M17-144--147, read `CORRECTION_NOTICE_M17_144_147_DIVERGENCE_FREE_CEH_2026-09-08.md`.
-
 ## 1. Permanent correction firewalls
 
-- M17-302: no unsupported uniform `H3` inference.
-- M17-304: **SUPERSEDED** by M17-306.
-- M17-306--307: first- and second-generation ancient solutions are distinct; certified ancestral palinstrophy carries the inverse record-scale weight.
-- M17-313: exact CE-H gives
+- M17-304 is **SUPERSEDED** by M17-306.
+- M17-306--307 separate first- and second-generation ancient solutions and retain only the inverse-record-scale ancestral palinstrophy ledger.
+- M17-313 gives exact CE-H line constancy:
   \[
   D_\xi\kappa=0,\qquad \nabla\kappa\perp W.
   \]
-  Longitudinal nonzero `D_xi kappa` recharge readings of M17-144--146 are superseded.
-- M17-330, M17-336, M17-337: **QUARANTINED for cross-generation use** by M17-338.
-- M17-331--335 remain valid only as fixed-similarity-generation statements.
+- Nonzero longitudinal `D_xi kappa` recharge readings of M17-144--146 are superseded.
+- M17-330, M17-336, M17-337 are **QUARANTINED for cross-generation use** by M17-338.
+- M17-331--335 remain fixed-similarity-generation statements only.
 
-## 2. DSD-theory role
+## 2. DSD-theory scope
 
-From M17-322 onward, DSD theory is used only as a heuristic selector for channel separation, representation audits, transition variables, failure typing, and candidate invariant descriptors. It is **not** a Navier--Stokes/PDE hypothesis. Every active canonical statement must be rederived by standard mathematics.
+DSD theory is used only as a heuristic selector for variables, representation audits, failure typing, and candidate invariant descriptors. It is not a Navier--Stokes/PDE hypothesis. Every active canonical statement must be independently derived by standard mathematics.
 
-## 3. Certified ancestral resource
+## 3. Certified cross-generation resource
 
-For physical record blow-down
+For
 
 \[
 \Omega_R(y,s)=R^2\Omega(Ry,R^2s),
@@ -52,9 +49,9 @@ In particular
 }
 \]
 
-is the certified cross-generation palinstrophy ledger. Do not restore M17-304's unweighted descendant budget.
+is the certified ancestral palinstrophy ledger. Fixed normalized descendant palinstrophy payments do not contradict this ledger because `sum R_m^{-1}<infinity` on geometric records.
 
-## 4. Negative-kappa and zero-level current
+## 4. Zero-level critical current branch
 
 M17-310 gives
 
@@ -62,66 +59,46 @@ M17-310 gives
 \|\kappa_-\|_{L^{3/2}}\ge S_3>0.
 \]
 
-M17-311 splits this into high-amplitude capture or critical nodal concentration. On the high-amplitude bounded-capture branch M17-314 gives
+On the high-amplitude bounded-capture branch M17-314 gives
 
 \[
-\boxed{\overline G_\Phi(0)\le-d_{flux}<0.}
+\overline G_\Phi(0)\le-d_{flux}<0.
 \]
 
-M17-323/326 replace the signed current by the nonnegative downward zero-crossing currency
+M17-323/326 convert this into the nonnegative downward zero-level crossing currency
 
 \[
-\mathcal C_{\Phi,-}^{0}(I)
+\mathcal C_{\Phi,-}^{0}
 =
-\int_I\!\int (D_t\kappa)_-\delta(\kappa)d\Phi dt,
+\int (D_t\kappa)_-\delta(\kappa)d\Phi dt.
 \]
 
-with positive long-time density on the retained branch.
-
-## 5. Physical/similarity dictionary
-
-M17-338 makes the representation dictionary mandatory:
+M17-338 gives the mandatory physical/similarity dictionary
 
 \[
 \kappa^{sim}=(-t)\kappa^{ph},
+\qquad
+h^{sim}=-\kappa^{sim}+(-t)^2h^{ph},
 \]
 
+and shows that the zero level is exactly representation compatible.
+
+M17-339 gives the physical CE-H coefficient equation
+
 \[
- h^{sim}=-\kappa^{sim}+(-t)^2h^{ph}.
+D_t\kappa=L_\rho\kappa+L_\rho\sigma+\mathcal R_{geom}.
 \]
 
-At zero level the offset vanishes and
+## 5. Critical spatialization
+
+M17-340 defines the scale-critical spatial currency
 
 \[
-(h^{sim})_-\delta(\kappa^{sim})d\Phi d\theta
-=
-(h^{ph})_-\delta(\kappa^{ph})d\Phi dt.
-\]
-
-Thus the zero-level currency is representation compatible and scale critical. Fixed nonzero similarity thresholds are not homogeneous physical thresholds.
-
-M17-339 gives the physical CE-H coefficient law
-
-\[
-\boxed{
-D_t\kappa
-=L_\rho\kappa+L_\rho\sigma+\mathcal R_{geom}.
-}
-\]
-
-## 6. Critical spatialization and k-thickness
-
-M17-340 defines
-
-\[
-\boxed{
 \mathcal Q_0
 =
-\int (D_t\kappa)_-\delta(\kappa)\rho^2|\nabla\kappa|^{-1/3}dxdt,
-}
+\int(D_t\kappa)_-\delta(\kappa)
+\rho^2|\nabla\kappa|^{-1/3}dxdt.
 \]
-
-which is exactly parabolic scale critical.
 
 For a vortex-line segment
 
@@ -132,15 +109,7 @@ For a vortex-line segment
 L_\rho^{7/6}D_{\Gamma,\kappa}^{-1/6}.
 \]
 
-M17-343 closes the spatial regular-tube thickening branch. M17-344 closes the material-time transversal thickening branch under finite zero-trace mass and compact material jets. M17-345--346 show that on a fixed compact nondegenerate material-segment family
-
-\[
-L_\rho\ge L_{min}>0,
-\qquad
-D_{\Gamma,\kappa}\le D_{max}<\infty,
-\]
-
-hence
+M17-343--346 show that regular spatial or material-time crossings thicken into the M5-688 coefficient-diffusion ledger and, on a fixed compact nondegenerate segment family,
 
 \[
 \boxed{
@@ -148,92 +117,216 @@ hence
 }
 \]
 
-M17-348 closes the shortcut of paying this critical charge by first-generation palinstrophy accumulation alone: it recovers only the summable `R_m^{-1}` floor.
+M17-348 proves that finite first-generation palinstrophy alone still cannot close this critical charge because it returns to the summable `R_m^{-1}` floor.
 
-## 7. Tail reduction: M17-349--354
+## 6. Harmonic/unbounded-line tail closure: M17-349--354
 
-M17-349 uses `D_xi kappa=0`: on an unbounded vortex line entering an exterior where the physical coefficient tends to zero, line constancy forces `kappa=0` on that exterior line, hence the vorticity is harmonic there.
+M17-349 uses `D_xi kappa=0` to show that an unbounded vortex line entering an exterior with `kappa->0` has `kappa=0` on that exterior line, hence harmonic vorticity there.
 
-M17-350 reduces an `L2` harmonic exterior vorticity to a possible leading toroidal dipole
-
-\[
-\Omega_a(x)=\frac{a\times x}{|x|^3}
-\]
-
-plus faster-decaying terms. M17-351 shows the coefficient `a` is time-independent and scale invariant; M17-352 identifies it as exactly the low-frequency obstruction to strong `L3` velocity.
-
-M17-353 computes the leading vorticity balance. For
+M17-350--352 reduce the only weak-critical harmonic obstruction to the toroidal dipole
 
 \[
-V_a=\frac12\left(\frac a{|x|}+\frac{(a\cdot x)x}{|x|^3}\right),
+\Omega_a=\frac{a\times x}{|x|^3}.
 \]
+
+M17-353 computes its leading vorticity balance and obtains
 
 \[
 (V_a\cdot\nabla)\Omega_a-(\Omega_a\cdot\nabla)V_a
-=-3\frac{(a\cdot x)(a\times x)}{|x|^6}.
+=-3\frac{(a\cdot x)(a\times x)}{|x|^6},
 \]
 
-Therefore the harmonic dipole coefficient must vanish:
+forcing
 
 \[
 \boxed{a=0.}
 \]
 
-M17-354 then obtains a uniformly bounded backward record sequence in `L3`, provided the harmonic exterior onset remains uniformly bounded in record-normalized coordinates. The strong-`L3` ancient Liouville theorem then contradicts the nonzero M5-474 ancient mark. Thus the **uniform-onset harmonic/unbounded-line branch is closed**. Remaining exits include harmonic-onset/coefficient decompactification or failure of unbounded-line coverage.
+M17-354 then obtains a uniformly bounded backward record sequence in strong `L3`, provided harmonic onset remains uniformly bounded in record-normalized coordinates. The ancient strong-`L3` Liouville theorem contradicts the nonzero M5-474 ancient mark. Therefore the uniform-onset harmonic/unbounded-line branch is closed.
 
-## 8. Bounded/winding tail: M17-355--356
+Remaining tail exits include harmonic-onset/coefficient decompactification and failure of unbounded-line coverage.
 
-M17-355 splits the non-harmonic bounded/winding tail into
+## 7. Bounded/winding geometry: M17-355--361
 
-\[
-H_{same\ material\ closed\ loop}
-\lor
-G_{loop\ replacement/interface/genealogy}
-\lor
-G_{winding/length\ decompactification}.
-\]
+M17-355 initially splits the bounded/winding tail into compact closed-loop recurrence, replacement/genealogy, or winding-length decompactification.
 
-The same-material compact recurrent loop returns to the M17-188 `3/4` strain--amplitude covariance and gradient payer.
-
-M17-356 uses the exact vortex-flux Jacobian
+M17-356 gives the flux-coordinate packing estimate
 
 \[
-dy=\frac{d\Phi\,ds}{\rho}
+dy=\frac{d\Phi\,ds}{\rho}.
 \]
 
-to show that a positive-flux tube of growing normalized length must produce flux fragmentation, spatial-reuse multiplicity, or field/tube decompactification. If total positive flux stays fixed while individual tube flux tends to zero, the number of tube bands must diverge.
+M17-357 corrects the `unbounded exact spatial reuse` escape. Since regular vortex lines solve
 
-## 9. Current narrow frontier
+\[
+\gamma'=\xi(\gamma),
+\]
 
-The late compact CE-H tail is now reduced to
+ODE uniqueness implies exact self-return is a periodic orbit and distinct vortex lines cannot intersect. After passage to fundamental vortex-line coordinates, exact spatial reuse is not an independent physical multiplicity.
+
+M17-358 shows that flux fragmentation is neutral for the flux-linear quantities `C_{Phi,-}^0`, `Q_0`, `F`, and `G`. Fragmentation can matter only by destroying uniform per-label geometry, amplitude, or genealogy.
+
+M17-359 proves that exact CE-H material flow preserves regular vortex-line identity. True internal line replacement is therefore routed to nodal, cutoff/interface, CE-H/rank, or flow/domain loss.
+
+M17-360 shows that a compact nondegenerate closed-loop orbit contains a recurrent minimal subsystem, so mere nonrecurrence is not a terminal escape. The recurrent limit returns to the M17-188 `3/4` strain--amplitude covariance payer.
+
+M17-361 integrates that payer over a positive-flux recurrent loop family and proves
+
+\[
+\boxed{
+\left\langle\|\nabla W\|_2^2\right\rangle\ge p_*>0.
+}
+\]
+
+The exact CE-H eigenvalue identity used is
+
+\[
+\partial_j\sigma=\xi\cdot(\partial_j\Sigma)\xi,
+\qquad
+|\nabla\sigma|\le|\nabla\Sigma|,
+\]
+
+with
+
+\[
+\|\nabla\Sigma\|_2^2=\frac12\|\nabla W\|_2^2.
+\]
+
+This physicalizes the loop payer but again returns to the M17-307 inverse-record-scale firewall.
+
+## 8. Critical nodal branch: M17-362--366
+
+M17-362 uses `D_xi kappa=0` to show that negative `kappa` is line-saturated: a negative coefficient cannot occupy only a local subsegment of one connected regular vortex line. The nodal branch therefore becomes whole-line low-amplitude segregation, flux thinning, capture collapse, or nodal/interface/rank/domain loss.
+
+M17-363 proves conditionally that fixed negative-line flux plus bounded transversal area forces a positive-flux high-amplitude capture fraction.
+
+M17-364 removes negative-line flux thinning as an independent compact escape. Since
+
+\[
+\int\kappa_-^{3/2}dx
+=
+\int\frac{\kappa_-^{3/2}}{\rho}ds\,d\Phi,
+\]
+
+fixed critical mass plus vanishing flux forces amplitude collapse, coefficient growth, line-length/tube-geometry decompactification, or allocation/interface loss.
+
+M17-365 gives the local critical Sobolev absorption gate. If
+
+\[
+\|\kappa_-\|_{L^{3/2}(B_{2r})}<\theta S,
+\]
+
+then
+
+\[
+\int_{B_r}|\nabla W|^2
+\le
+C_\theta r^{-2}\int_{B_{2r}}|W|^2.
+\]
+
+Hence one fixed locally `L3/2` coefficient state cannot support an infinite autonomous critical nodal descent at one point.
+
+M17-366 organizes moving-center/state nodal concentration through the critical measures
+
+\[
+d\mu_j=\kappa_{j,-}^{3/2}dx
+\]
+
+into compact local mass, strict-subscale concentration, spatial escape, diffuse multiplicity, or coefficient `L3/2` decompactification.
+
+## 9. Amplitude firewall and valid flux bridge: M17-367--368
+
+M17-367 proves the exact no-go
+
+\[
+W\mapsto\varepsilon W
+\quad\Rightarrow\quad
+\kappa\text{ unchanged},
+\]
+
+while
+
+\[
+E,H_{raw\ H2}\mapsto\varepsilon^2(E,H).
+\]
+
+Therefore no `kappa`-only positive lower bound on raw `H2` can exist. A direct M17-366 to M17-298 bridge is forbidden without an independent amplitude/flux datum.
+
+M17-368 supplies such a datum. For a regular tube band with flux `phi`, cross-sectional area `A_*`, retained length `ell_*`, and coefficient floor `kappa_*`,
+
+\[
+\boxed{
+E_T\ge\frac{\phi^2}{A_*}\ell_*,
+}
+\]
+
+and
+
+\[
+\boxed{
+H_T\ge\kappa_*^2\frac{\phi^2}{A_*}\ell_*.
+}
+\]
+
+For an intrinsic scale `r` with
+
+\[
+A_*\lesssim r^2,
+\qquad
+\ell_*\gtrsim r,
+\qquad
+\kappa_*\gtrsim r^{-2},
+\]
+
+this gives
+
+\[
+E_T\gtrsim\phi^2r^{-1},
+\qquad
+H_T\gtrsim\phi^2r^{-5},
+\qquad
+r^4H_T/E_T\gtrsim1.
+\]
+
+Thus a flux-bearing critical coefficient tube is an actual scale-comparable raw-`H2` packet. Under finite enstrophy, strict subscale tubes must thin their flux at least like
+
+\[
+\phi=O(r^{1/2}).
+\]
+
+M17-368 does not solve M17-298; it identifies exactly which coefficient clusters are eligible to enter the raw-`H2` allocation tree.
+
+## 10. Current narrow frontier
+
+The strongest late-CE-H reduction is now
 
 \[
 \boxed{
 \begin{aligned}
 H_{late\ CEH}
 \Longrightarrow{}&
-G_{critical\ nodal\ kappa_-}\\
-&\lor G_{harmonic\ onset/coefficient\ decompactification}\\
-&\lor H_{closed\ loop\ gradient/zero\text{-}level\ payer}\\
-&\lor G_{loop\ replacement/interface/genealogy}\\
-&\lor G_{flux\ fragmentation}\\
-&\lor G_{unbounded\ spatial\ reuse}\\
-&\lor G_{field/tube\ decompactification}.
+G_{harmonic\ onset/coefficient\ decompactification}\\
+&\lor H_{closed\ loop\ normalized\ palinstrophy\ payer}\
+&\lor G_{nodal\ amplitude/coefficient/geometry\ degeneration}\\
+&\lor G_{strict\ subscale\ coefficient\ concentration}\\
+&\lor G_{diffuse\ coefficient\ multiplicity/escape}\\
+&\lor H_{flux\text{-}bearing\ critical\ tube\to raw\ H2}\\
+&\lor G_{cutoff/interface/rank/domain\ loss}.
 \end{aligned}
 }
 \]
 
-The immediate target after M17-356 is to audit whether `unbounded spatial reuse` is a genuine geometric possibility for a regular vortex-line flow or merely a repeated parameterization / closed-orbit phenomenon, and then to route any genuine near-reuse into curvature, separation-collapse, or genealogy/interface structure.
+The next highest-value task is to combine the M17-368 flux-thinning law with the M17-366 strict-subscale/diffuse multiplicity alternatives and determine whether finite total enstrophy plus total material-flux allocation forces a quantitative multiplicity law strong enough to feed M17-298, or whether flux can fragment fast enough to remain below the raw-`H2` allocation threshold.
 
-## 10. Separate inherited OPEN dependencies
+## 11. Separate inherited OPEN dependencies
 
-The chain still inherits:
+The proof attempt still inherits:
 
 - M17-298 cross-scale raw-`H2` allocation;
 - parent-to-M17 logarithmic scale-map/domain/genealogy persistence;
-- the critical nodal negative-`kappa` branch;
-- M5-598 branch completeness outside CE-H;
-- replacement/interface control for fragmented or changing vortex-line families.
+- full branch completeness outside CE-H from M5-598 (`CP-E`, `CP-S`, `CE-T`, `Migration`);
+- strict-subscale/diffuse coefficient concentration with vanishing flux;
+- interface/rank/domain exits not yet paid by a certified critical global resource.
 
 \[
 \boxed{\text{GLOBAL 3D NAVIER--STOKES REGULARITY REMAINS UNPROVED.}}
