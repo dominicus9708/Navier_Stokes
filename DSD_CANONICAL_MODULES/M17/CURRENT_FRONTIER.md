@@ -10,6 +10,8 @@ Status: **AUTHORITATIVE M17 NAVIGATION / CORRECTION INDEX**
 
 This file supplements, and when status labels conflict takes precedence over, historical M17 companion indexes. Historical modules remain preserved for provenance.
 
+> **Correction notice:** before reusing M17-144--147, read `CORRECTION_NOTICE_M17_144_147_DIVERGENCE_FREE_CEH_2026-09-08.md`.
+
 ## 1. Active correction chain
 
 The current late-M17 line must be read with the following corrections active:
