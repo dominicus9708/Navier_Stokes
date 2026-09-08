@@ -1,7 +1,7 @@
 # M17 Current Frontier
 
 Date: 2026-09-08  
-Current tip: **M17-385**  
+Current tip: **M17-388**  
 Status: **AUTHORITATIVE M17 NAVIGATION / CORRECTION INDEX**
 
 \[
@@ -132,7 +132,7 @@ M17-380 gives the multiscale coefficient-flux packing inequality
 }
 \]
 
-Its unresolved obstruction is temporal/cross-generation raw-`H2` allocation.
+Its unresolved obstruction is temporal/cross-generation use of the raw-`H2` payer and representation-safe linkage to later physical ledgers.
 
 ## 7. Snapshot raw-H2 allocation and spatial realization: M17-381--382
 
@@ -209,7 +209,7 @@ Along the material flow `X`,
 
 Hence the nodal set is transported by the flow and pointwise vanishing order is invariant under smooth same-material CE-H evolution.
 
-Finite-radius doubling satisfies the transport inequality
+Finite-radius doubling satisfies
 
 \[
 \boxed{
@@ -217,24 +217,21 @@ Finite-radius doubling satisfies the transport inequality
 \le
 \mathfrak D_{\theta e^{-2K}}
 (a_0,e^KR,t_0)
-+2\mathcal O_\lambda,
++2\mathcal O_\lambda.
 }
 \]
 
-where `K` is material strain distortion and `O_lambda` is accumulated spatial oscillation of `lambda=sigma+nu kappa`.
-
 Thus high pointwise vanishing order is inherited rather than dynamically generated inside smooth exact CE-H.
 
-## 10. Flow-distortion raw-H2 payer: M17-385
+## 10. General raw-H2 deformation fallback: M17-385
 
-The strain-oscillation term is not independent because
+M17-385 removes strain oscillation as an independent payer because
 
 \[
-\operatorname{osc}\sigma
-\le2\|\Sigma\|_\infty.
+\operatorname{osc}\sigma\le2\|\Sigma\|_\infty.
 \]
 
-Global order-zero strain/vorticity control plus the three-dimensional Gagliardo--Nirenberg inequality gives
+It gives the general bound
 
 \[
 \boxed{
@@ -242,17 +239,11 @@ Global order-zero strain/vorticity control plus the three-dimensional Gagliardo-
 \lesssim
 \|\Omega\|_2^{1/4}
 \|\Delta\Omega\|_2^{3/4}
-=E^{1/8}H^{3/8}.
+=E^{1/8}H^{3/8}
 }
 \]
 
-Therefore, for
-
-\[
-K_I:=\int_I\|\Sigma\|_\infty dt,
-\qquad
-E_*:=\sup_I\|\Omega\|_2^2,
-\]
+and hence
 
 \[
 \boxed{
@@ -265,43 +256,148 @@ E_*^{1/8}|I|^{5/8}
 }
 \]
 
-Equivalently, order-one finite-scale distortion on a short interval forces a quantitative raw-vorticity-`H2` spacetime cost unless enstrophy itself decompactifies.
+This remains the valid fallback when a persistent enlarged own-scale CE-H cell is not available.
 
-Hence the M17-383/384 frequency exit compresses to
+## 11. Exact spacetime ownership and temporal Carleson packing: M17-386
 
-\[
-\boxed{
-\text{inherited high doubling}
-\lor
-\text{enstrophy decompactification}
-\lor
-\text{raw-`H2` spacetime concentration}
-\lor
-\text{branch/genealogy loss}.
-}
-\]
-
-## 11. Current narrow frontier
-
-The highest-value late-CE-H target is now a **scale-time raw-`H2` allocation theorem**.
-
-M17-381 solves snapshot coefficient-scale ownership, while M17-385 shows time-dependent failure of mass thickness pays through raw-`H2` spacetime concentration when enstrophy remains controlled.
-
-The next question is whether the same raw-`H2` charge can pay infinitely many nested descendant distortions, or whether a coefficient-scale/time decomposition yields a bounded-multiplicity or Carleson-type estimate compatible with the M17-307 record scaling.
-
-Schematically,
+The M17-381 coefficient-scale measure decomposition extends exactly to time:
 
 \[
 \boxed{
-\text{snapshot coefficient-scale ownership}
-+
-\text{distortion-time cost}
-\stackrel{?}{\Longrightarrow}
-\text{scale-time Carleson allocation}.
+\sum_m\int_IH_m(t)dt
+=
+\int_IH(t)dt.
 }
 \]
 
-## 12. Separate inherited OPEN dependencies
+Thus raw-`H2` spacetime coefficient-scale ownership itself is no longer open.
+
+For one bounded-overlap material genealogy with dyadic own-scales `r_m=2^{-m}R`, M17-386 proves
+
+\[
+\boxed{
+\sum_{m,j}r_m^3\int_{I_{m,j}}H(t)dt
+\lesssim
+R^3\int_{I_R^*}H(t)dt.
+}
+\]
+
+The `r^3` weight is the parabolically scale-invariant raw-`H2` spacetime weight.
+
+The remaining issue after this theorem is not raw-measure ownership but localization/quotienting of the nonlocal strain payer across simultaneously active spatial cells.
+
+## 12. Persistent-cell near/far strain reduction: M17-387
+
+Assume an enlarged moving own-scale ball `B_{8R}(x_t)` remains inside one exact CE-H region throughout an own-scale interval, with
+
+\[
+|\kappa|\lesssim R^{-2}.
+\]
+
+Interior elliptic estimates give
+
+\[
+\|D^2\Omega\|_{L^2(B_{6R})}
+\lesssim
+R^{-2}\|\Omega\|_{L^2(B_{8R})}.
+\]
+
+A near/far decomposition of the strain singular integral then yields
+
+\[
+\boxed{
+\|\Sigma(t)\|_{L^\infty(B_R(x_t))}
+\lesssim
+R^{-3/2}\|\Omega(t)\|_2.
+}
+\]
+
+Hence over an own-scale parabolic interval
+
+\[
+|I_R|\lesssim R^2/\nu,
+\]
+
+\[
+\boxed{
+K_{I_R}
+\lesssim
+C(\nu)(RE_*)^{1/2}.
+}
+\]
+
+Therefore, on the persistent-cell branch, finite-scale doubling decompactification reduces to inherited high frequency, critical enstrophy-density decompactification, coefficient-gradient decompactification, or CE-H/interface/domain/genealogy loss.
+
+The separate raw-`H2` spacetime payer is no longer terminal on this stronger branch.
+
+## 13. Standard-energy deformation ledger: M17-388
+
+Using the M17-387 strain bound and Cauchy--Schwarz in time,
+
+\[
+K_{I_R}
+\lesssim
+R^{-1/2}\nu^{-1/2}
+\left(
+\int_{I_R}E(t)dt
+\right)^{1/2}.
+\]
+
+Therefore
+
+\[
+\boxed{
+\int_{I_R}E(t)dt
+\gtrsim
+c(\nu)R K_{I_R}^2.
+}
+\]
+
+For a bounded-overlap persistent genealogy, the standard Navier--Stokes energy inequality gives the certified global ledger
+
+\[
+\boxed{
+\sum_jR_jK_j^2<\infty.
+}
+\]
+
+After removing a uniformly bounded inherited doubling contribution, define newly generated excess `X_j`. Then
+
+\[
+\boxed{
+\sum_jR_j\mathfrak X_j^2<\infty.
+}
+\]
+
+Thus the dynamically generated finite-scale frequency branch is not an untyped PDE escape. It has a standard-energy currency with an exact geometric-scale firewall.
+
+On geometric scales `R_j=2^{-j}R_0`, order-one or logarithmic growth can still remain summable because
+
+\[
+\sum_jR_j<\infty.
+\]
+
+A contradiction therefore requires a non-summable enhancement of deformation, duration, or multiplicity rather than merely infinitely many episodes.
+
+## 14. Current narrow frontier
+
+The highest-value late-CE-H target is now to combine the existing flux, recurrence, and strict-subscale branches with the M17-388 weighted energy ledger.
+
+The decisive question is whether those branches force
+
+\[
+\boxed{
+\sum_jR_j\mathfrak X_j^2=\infty
+}
+\]
+
+or an equivalent non-summable duration/multiplicity law.
+
+If they force only order-one or logarithmic deformation at geometric scales, the standard energy budget can still absorb the sequence.
+
+M17-372/379 logarithmic negative-`kappa` exposure remains a fixed-similarity-representation statement and must pass through the M17-338 physical/similarity dictionary before being combined with the physical M17-388 energy ledger.
+
+## 15. Separate inherited OPEN dependencies
 
 The proof attempt still inherits:
 
@@ -309,9 +405,10 @@ The proof attempt still inherits:
 - full branch completeness outside CE-H from M5-598 (`CP-E`, `CP-S`, `CE-T`, `Migration`);
 - parent-to-M17 logarithmic scale-map/domain/genealogy persistence;
 - ancestral/inherited high-doubling genealogy across descendant records;
-- enstrophy decompactification alternatives;
-- spacetime/cross-generation raw-`H2` allocation;
-- coefficient-gradient, interface, rank, and domain exits not yet paid by a certified critical global resource.
+- coefficient-gradient decompactification;
+- persistent-cell failure / interface / rank / domain exits;
+- whether flux/recurrence/strict-subscale dynamics force a non-summable lower bound against the M17-388 `R`-weighted energy firewall;
+- representation-safe linkage of fixed-similarity exposure modules to physical energy ledgers.
 
 \[
 \boxed{\text{GLOBAL 3D NAVIER--STOKES REGULARITY REMAINS UNPROVED.}}
