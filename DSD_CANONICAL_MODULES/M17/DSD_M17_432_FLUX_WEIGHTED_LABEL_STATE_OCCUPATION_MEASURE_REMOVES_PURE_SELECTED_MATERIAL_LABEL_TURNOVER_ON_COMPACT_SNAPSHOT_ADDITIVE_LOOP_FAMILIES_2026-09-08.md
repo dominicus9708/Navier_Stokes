@@ -1,25 +1,35 @@
-# DSD M17-432 — Flux-weighted label-state occupation measure removes pure selected-material-label turnover on compact snapshot-additive loop families
+# DSD M17-432 — Flux-weighted label-state occupation removes pure selected-label turnover only for flux-linear snapshot payers
 
 Date: 2026-09-08  
 Canonical ID: **M17-432**
 
-Status: **ACTIVE LABEL-TURNOVER REDUCTION / FLUX-WEIGHTED OCCUPATION-MEASURE EXTENSION OF M17-358 AND M17-420**
+Status: **ACTIVE LABEL-TURNOVER REDUCTION WITH QUADRATIC-PAYER FIREWALL / CORRECTED SCOPE**
 
 \[
 \boxed{\text{GLOBAL 3D NAVIER--STOKES REGULARITY REMAINS UNPROVED.}}
 \]
 
-## 1. Problem
+## 1. Correction notice
 
-M17-359 preserves true material vortex-line genealogy on regular exact CE-H.
+The first version of M17-432 correctly constructed a flux-weighted occupation measure, but it overextended the conclusion to the M17-413--420 raw-`H2` packet mechanism.
 
-M17-358 proves that snapshot fragmentation of a coherent material-flux family does not change flux-linear additive currencies.
+That extension is not valid without an additional anti-fragmentation hypothesis because the M17-413 segment payer is quadratic in flux:
 
-M17-420 proves that time turnover among finite-jet states on one compact loop orbit cannot evade a snapshot raw-`H2` payer: an occupation measure forces one fixed finite-jet class to carry positive asymptotic time mass.
+\[
+h_{seg}^{norm}\gtrsim c\phi^2.
+\]
 
-After M17-424--431, one remaining apparent escape is that the proof-selected active loop/tube label changes with time, so no single material label has positive time density.
+For fragmented label bands,
 
-The present module shows that **pure label turnover is not an independent escape** when the whole positive-flux label-state bundle remains compact and the payer is snapshot-additive in flux.
+\[
+\sum_i\phi_i^2
+\neq
+\left(\sum_i\phi_i\right)^2
+\]
+
+and may become arbitrarily small relative to the square of total retained flux.
+
+Therefore the occupation theorem below is retained exactly for **flux-linear snapshot-additive currencies**. Its raw-`H2` application is quarantined unless quadratic flux concentration is separately controlled.
 
 ## 2. Material label space and positive flux measure
 
@@ -31,9 +41,7 @@ At similarity time `theta`, let
 d\Phi_\theta(\lambda)\ge0
 \]
 
-be the oriented positive flux measure on the retained label family.
-
-Assume
+be the oriented positive flux measure on the retained label family, with
 
 \[
 \boxed{
@@ -42,21 +50,17 @@ Assume
 \Phi_{tot}(\theta)
 :=
 \int_\Lambda d\Phi_\theta
-<\infty
+<\infty.
 }
 \]
 
-on the retained interval.
-
-The measure need not be materially conserved; viscosity may change `dPhi_theta` through the exact CE-H flux law. Only positivity, finite total mass, and the retained lower total flux are used.
-
-Normalize it at each time:
+Normalize
 
 \[
 \boxed{
-dp_\theta(\lambda)
-:=
-\frac{d\Phi_\theta(\lambda)}{\Phi_{tot}(\theta)}.
+dp_\theta
+=
+\frac{d\Phi_\theta}{\Phi_{tot}(\theta)}.
 }
 \]
 
@@ -70,49 +74,37 @@ Let
 Z_\lambda(\theta)
 \]
 
-denote the represented loop/tube state of material label `lambda`.
-
-Assume the retained label-state pairs
+be the represented state of label `lambda` and assume
 
 \[
 (\lambda,Z_\lambda(\theta))
 \]
 
-remain in a compact metric space `K`.
+remains in a compact metric state bundle `K`.
 
-This compactness includes whichever geometric, amplitude, coefficient-jet, tubular-chart, and domain bounds are required by the snapshot payer under consideration.
-
-If this compactness fails, the module does not hide the loss; it returns the corresponding decompactification/interface/domain exit.
+If compactness fails, retain the corresponding amplitude, geometry, coefficient-scale, interface, genealogy, or domain decompactification exit.
 
 ## 4. Flux-weighted spacetime occupation probability
 
-Define the empirical probability measure on the compact label-state space by
+Define
 
 \[
 \boxed{
 \mu_T
-:=
+=
 \frac1T
 \int_0^T
 (\lambda,Z_\lambda(\theta))_\#p_\theta\,d\theta.
 }
 \]
 
-For a Borel set `A subset K`,
+Every `mu_T` is a probability measure on compact `K`. Hence along a sequence
 
 \[
-\mu_T(A)
-=
-\frac1T
-\int_0^T
-\int_\Lambda
-\mathbf 1_A(\lambda,Z_\lambda(\theta))
-\,dp_\theta(\lambda)d\theta.
+T_j\to\infty
 \]
 
-Each `mu_T` is a probability measure.
-
-By compactness of `K`, a sequence `T_j -> infinity` has
+we have
 
 \[
 \boxed{
@@ -120,29 +112,19 @@ By compactness of `K`, a sequence `T_j -> infinity` has
 }
 \]
 
-for some probability measure `mu` on `K`.
+for a probability measure `mu`.
 
-## 5. Countable robust payer classes
+## 5. Countable robust classes
 
-Suppose the retained regular compact state bundle is covered by countably many open robust classes
-
-\[
-\boxed{
-K=\bigcup_{n\ge1}\mathcal G_n.
-}
-\]
-
-For the M17-416--419 application, the classes may be chosen from finite coefficient-jet order and fixed nondegeneracy thresholds, with the analytic infinite-flat state removed by M17-419.
-
-Assume every state in `G_n` carries a uniform nonnegative snapshot payer
+Suppose
 
 \[
-q(Z)\ge q_n>0
+K=\bigcup_{n\ge1}\mathcal G_n
 \]
 
-in a currency that is additive under the material flux measure.
+where each `G_n` is open and robust.
 
-Because `mu(K)=1`, countable subadditivity implies that at least one fixed class `G_n*` has
+Because `mu(K)=1`, some fixed class satisfies
 
 \[
 \boxed{
@@ -150,31 +132,45 @@ Because `mu(K)=1`, countable subadditivity implies that at least one fixed class
 }
 \]
 
-Since `G_n*` is open, Portmanteau gives
+Portmanteau gives
 
 \[
 \boxed{
 \liminf_{j\to\infty}
 \mu_{T_j}(\mathcal G_{n_*})
-\ge\beta_*>0.
+\ge\beta_*.
 }
 \]
 
-Thus a fixed robust payer class has positive **flux-weighted time-label occupation**, even if every individual label has zero asymptotic time density.
+Therefore a fixed state class has positive flux-weighted time-label occupation even when every individual material label has zero asymptotic time density.
 
-## 6. Return to the unnormalized positive flux
+## 6. Exact theorem for flux-linear snapshot payers
 
-By definition,
+Let a nonnegative snapshot payer have the form
 
 \[
-\int_\Lambda
-\mathbf1_{\mathcal G_{n_*}}
-\,d\Phi_\theta
+Q(\theta)
 =
-\Phi_{tot}(\theta)
+\int_\Lambda q(\lambda,Z_\lambda(\theta))\,d\Phi_\theta(\lambda)
+\]
+
+with
+
+\[
+q\ge q_{n_*}>0
+\]
+
+on `G_n*`.
+
+Then
+
+\[
+Q(\theta)
+\ge
+q_{n_*}
 \int_\Lambda
 \mathbf1_{\mathcal G_{n_*}}
-\,dp_\theta.
+\,d\Phi_\theta.
 \]
 
 Since
@@ -189,80 +185,96 @@ we obtain
 \boxed{
 \liminf_{j\to\infty}
 \frac1{T_j}
-\int_0^{T_j}
-\int_\Lambda
-\mathbf1_{\mathcal G_{n_*}}
-\,d\Phi_\theta d\theta
-\ge
-\Phi_*\beta_*.
-}
-\]
-
-Therefore the class carries a fixed positive amount of unnormalized flux-time occupation.
-
-## 7. Additive snapshot payer survives arbitrary label turnover
-
-If the snapshot payer is flux-linear/additive, then on `G_n*`
-
-\[
-Q(\theta)
-\ge
-q_{n_*}
-\int_\Lambda
-\mathbf1_{\mathcal G_{n_*}}
-\,d\Phi_\theta.
-\]
-
-Hence
-
-\[
-\boxed{
-\liminf_{j\to\infty}
-\frac1{T_j}
 \int_0^{T_j}Q(\theta)d\theta
 \ge
 q_{n_*}\Phi_*\beta_*>0.
 }
 \]
 
-No single material label recurrence is required.
+Thus **pure selected-label turnover cannot erase a flux-linear snapshot-additive payer** on a compact positive-flux label-state bundle.
 
-The active label may change at every time.
+This applies directly to the flux-linear zero-crossing/current currencies of M17-323/326/340/346/358 when their uniform per-label hypotheses hold.
 
-What matters is compactness of the whole label-state bundle, positive total retained flux, and pointwise flux-additivity of the payer.
+## 7. Quadratic raw-H2 firewall
 
-## 8. Application to the M17-420 finite-jet raw-H2 mechanism
+The M17-413 loop raw-`H2` packet is not flux-linear.
 
-M17-416--419 supply countable robust finite-jet classes on the retained analytic regular loop branch.
-
-M17-420 converts positive time occupation of one such class into a pointwise-in-time raw-`H2` packet lower bound and then uses the M17-413--414 spatial/time packet factorization.
-
-The present module extends the occupation step from one loop orbit to a compact positive-flux family of material labels.
-
-Therefore
+For disjoint flux bands with fluxes `phi_i`, the normalized segment payments add as
 
 \[
 \boxed{
-G_{pure\ selected\ label\ turnover}
+H^{norm}_{packet}
+\gtrsim
+c\sum_i\phi_i^2.
 }
+\]
 
-is not an independent way to remove the M17-420 snapshot-additive finite-jet payer as long as the label-state bundle stays compact and the flux measure stays retained.
+Define the effective flux participation number
 
-The label identity may rotate; the integrated payer does not disappear.
+\[
+\boxed{
+N_{eff}
+:=
+\frac{\left(\sum_i\phi_i\right)^2}
+{\sum_i\phi_i^2}
+\ge1.
+}
+\]
 
-## 9. Important scope firewall: history-dependent payers
+Then
 
-This theorem applies to **snapshot-additive** payer classes.
+\[
+\boxed{
+\sum_i\phi_i^2
+=
+\frac{\Phi_{tot}^2}{N_{eff}}.
+}
+\]
 
-It does not automatically apply to a history-dependent one-label quantity such as the M17-188 recurrent covariance identity, because that identity compares logarithmic changes along the same material history.
+Therefore fixed total positive flux does **not** give a uniform quadratic raw-`H2` lower bound unless `N_eff` is controlled.
 
-Thus M17-429--431 remain necessary for the decompactifying covariance branch.
+As `N_eff -> infinity`, the raw-`H2` packet may be diluted by arbitrarily fine flux fragmentation even though the flux-linear occupation measure remains nondegenerate.
 
-The present theorem may be used directly for snapshot raw-`H2`, zero-corridor, or other nonnegative flux-linear pointwise currencies whose uniform lower bounds are already certified.
+## 8. Corrected application to M17-420
 
-## 10. Exact surviving exits
+M17-420 remains valid for its stated retained single-loop positive-flux branch.
 
-Pure label turnover is reduced to failures of the hypotheses above:
+The present M17-432 does **not** automatically extend that raw-`H2` contradiction to an arbitrarily fragmented positive-flux family.
+
+Such an extension requires at least one additional hypothesis, for example:
+
+\[
+\boxed{N_{eff}\le N_*<\infty,}
+\]
+
+or an equivalent lower bound on quadratic flux concentration, or a fixed positive-flux band carrying positive occupation.
+
+Without such an input, `selected-label turnover + flux fragmentation` remains a genuine quadratic-payer escape even though pure turnover for linear currencies is closed.
+
+## 9. History-dependent payer firewall
+
+The occupation theorem also does not automatically apply to a history-dependent one-label identity such as M17-188 covariance.
+
+M17-429--431 remain the correct treatment of that branch.
+
+Thus there are now three distinct cases:
+
+\[
+\boxed{
+\begin{aligned}
+\text{flux-linear snapshot payer}
+&\Rightarrow \text{turnover neutral},\\
+\text{flux-quadratic snapshot payer}
+&\Rightarrow N_{eff}\text{ dilution possible},\\
+\text{history-dependent payer}
+&\Rightarrow \text{same-label history required}.
+\end{aligned}
+}
+\]
+
+## 10. Corrected surviving exits
+
+The selected-label branch is therefore
 
 \[
 \boxed{
@@ -271,34 +283,35 @@ G_{selected\ label\ turnover}
 \Longrightarrow{}&
 G_{label/state\ noncompactness}\\
 &\lor G_{positive\ total\ flux\ thinning/loss}\\
-&\lor G_{payer\ class\ nonuniformity/scale\ mismatch}\\
-&\lor G_{flux\ measure\ nonadditivity/sign\ cancellation}\\
+&\lor G_{quadratic\ flux\ dilution}\;(N_{eff}\to\infty)\\
+&\lor G_{payer\ class/scale\ mismatch}\\
+&\lor G_{history\ coherence\ loss}\\
 &\lor G_{material\ genealogy/interface/CEH/domain\ loss}.
 \end{aligned}
 }
 \]
 
-On the retained positive-flux compact regular snapshot-additive branch, turnover alone is bookkeeping rather than a PDE escape.
+Pure turnover alone is neutral only in the flux-linear snapshot case.
 
 ## 11. Relation to parent-to-record closure
 
-This module is a second-generation/late-CE-H occupation theorem.
+This module remains a second-generation occupation theorem.
 
-To generate a first-generation contradiction from its positive flux-time payer, one still needs the representation-safe parent-to-record map, bounded overlap, and the appropriate M17-307 or M17-405 ancestral scaling.
+Any first-generation contradiction still requires a representation-safe parent-to-record map, bounded overlap, and the appropriate M17-307 or M17-405 ancestry weight.
 
-Those upstream scale/genealogy dependencies remain OPEN.
+Those dependencies remain OPEN.
 
 ## 12. DSD role
 
-DSD is used only to distinguish `which label is selected` from `how much additive positive measure is present`.
+DSD is used only to separate linear measure additivity from quadratic concentration and from history-dependent lineage information.
 
-The proof is ordinary normalization of finite positive measures, weak-* compactness of probability measures, Portmanteau, and countable additivity.
+The mathematics is ordinary measure normalization, weak-* compactness, Portmanteau, and the elementary identity defining `N_eff`.
 
 ## 13. Audit verdict
 
-**PASS as a pure selected-label-turnover reduction for compact snapshot-additive positive-flux families.**
+**PASS after scope correction.**
 
-Individual-label recurrence is not necessary for an additive payer; a joint flux-weighted label-state occupation measure is sufficient.
+The flux-weighted occupation theorem is valid for flux-linear snapshot-additive currencies. The raw-`H2` extension requires a separate quadratic flux-concentration theorem and is not claimed here.
 
 \[
 \boxed{\text{GLOBAL 3D NAVIER--STOKES REGULARITY REMAINS UNPROVED.}}
