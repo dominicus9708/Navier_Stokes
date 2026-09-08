@@ -1,7 +1,7 @@
 # M17 Current Frontier
 
 Date: 2026-09-08  
-Current tip: **M17-388**  
+Current tip: **M17-389**  
 Status: **AUTHORITATIVE M17 NAVIGATION / CORRECTION INDEX**
 
 \[
@@ -379,25 +379,91 @@ On geometric scales `R_j=2^{-j}R_0`, order-one or logarithmic growth can still r
 
 A contradiction therefore requires a non-summable enhancement of deformation, duration, or multiplicity rather than merely infinitely many episodes.
 
-## 14. Current narrow frontier
+## 14. Flux exposure representation bridge and no-go: M17-389
 
-The highest-value late-CE-H target is now to combine the existing flux, recurrence, and strict-subscale branches with the M17-388 weighted energy ledger.
+M17-372 is a fixed-similarity-representation flux-exposure theorem. M17-338 gives
 
-The decisive question is whether those branches force
+\[
+\kappa^{sim}=(-t)\kappa^{ph},
+\qquad
+d\theta=\frac{dt}{-t}.
+\]
+
+Therefore the signed exposure integral is representation safe:
 
 \[
 \boxed{
-\sum_jR_j\mathfrak X_j^2=\infty
+(\kappa^{sim})_-d\theta
+=
+(\kappa^{ph})_-dt.
 }
 \]
 
-or an equivalent non-summable duration/multiplicity law.
+However on physical exact CE-H,
 
-If they force only order-one or logarithmic deformation at geometric scales, the standard energy budget can still absorb the sequence.
+\[
+D_t\log\rho=\sigma+\nu\kappa,
+\qquad
+D_t\log A=-\sigma,
+\]
 
-M17-372/379 logarithmic negative-`kappa` exposure remains a fixed-similarity-representation statement and must pass through the M17-338 physical/similarity dictionary before being combined with the physical M17-388 energy ledger.
+so material vorticity flux satisfies
 
-## 15. Separate inherited OPEN dependencies
+\[
+\boxed{
+D_t\log\Phi=\nu\kappa.
+}
+\]
+
+The strain term cancels exactly. Hence logarithmic negative-`kappa` exposure by itself does **not** force a large M17-388 deformation payer `K`.
+
+If an independent amplitude or cross-sectional-area retention hypothesis is added, one obtains conditionally
+
+\[
+K\gtrsim\log(1/R)
+\]
+
+after the physical scale map is identified. But then
+
+\[
+R K^2
+\gtrsim
+R\log^2(1/R),
+\]
+
+which is still summable on geometric scales.
+
+Thus M17-372 exposure alone, and even its strongest elementary amplitude-retained logarithmic conversion, does not defeat the M17-388 energy firewall.
+
+## 15. Current narrow frontier
+
+The highest-value late-CE-H target is now the recurrence/closed-loop and strict-subscale multiplicity structure.
+
+The decisive question is whether those branches force one of:
+
+\[
+\boxed{
+\begin{aligned}
+&\text{super-logarithmic deformation growth},\\
+&\text{non-summable same-scale multiplicity},\\
+&\text{sufficiently long physical own-scale residence},\\
+&\text{non-geometric scale packing},\\
+&\text{or another certified payer without the }R\text{ discount},
+\end{aligned}
+}
+\]
+
+strong enough that
+
+\[
+\boxed{
+\sum_jR_j\mathfrak X_j^2=\infty.
+}
+\]
+
+Order-one or logarithmic deformation alone is insufficient on geometric scales.
+
+## 16. Separate inherited OPEN dependencies
 
 The proof attempt still inherits:
 
@@ -407,8 +473,8 @@ The proof attempt still inherits:
 - ancestral/inherited high-doubling genealogy across descendant records;
 - coefficient-gradient decompactification;
 - persistent-cell failure / interface / rank / domain exits;
-- whether flux/recurrence/strict-subscale dynamics force a non-summable lower bound against the M17-388 `R`-weighted energy firewall;
-- representation-safe linkage of fixed-similarity exposure modules to physical energy ledgers.
+- whether recurrence/closed-loop or strict-subscale multiplicity forces a non-summable lower bound against the M17-388 `R`-weighted energy firewall;
+- a representation-safe physical scale map for fixed-similarity exposure events when they are used cross-generation.
 
 \[
 \boxed{\text{GLOBAL 3D NAVIER--STOKES REGULARITY REMAINS UNPROVED.}}
