@@ -1,7 +1,7 @@
 # M17 Current Frontier
 
 Date: 2026-09-08  
-Current tip: **M17-402**  
+Current tip: **M17-409**  
 Status: **AUTHORITATIVE M17 NAVIGATION / CORRECTION INDEX**
 
 \[
@@ -13,8 +13,8 @@ This file takes precedence over historical M17 companion indexes when status lab
 ## 1. Permanent correction firewalls
 
 - M17-304 is **SUPERSEDED** by M17-306.
-- M17-306--307 separate first- and second-generation ancient solutions and retain only the exact inverse-record-scale ancestral palinstrophy ledger.
-- M17-313 gives exact CE-H line constancy:
+- M17-306--307 separate first- and second-generation ancient solutions.
+- M17-313 gives exact CE-H line constancy
   \[
   D_\xi\kappa=0,
   \qquad
@@ -22,20 +22,22 @@ This file takes precedence over historical M17 companion indexes when status lab
   \]
 - Nonzero longitudinal `D_xi kappa` recharge readings of M17-144--146 are superseded.
 - M17-330, M17-336, and M17-337 are **QUARANTINED for cross-generation use** by M17-338.
-- M17-331--335 remain fixed-similarity-generation statements only.
-- M17-367 forbids any `kappa`-only positive lower bound on raw `H2`: amplitude rescaling leaves `kappa` unchanged while scaling `E` and raw `H2` quadratically.
-- M17-383 forbids replacing coefficient spatial thickness by solution-mass thickness without an additional doubling/frequency input.
-- M17-396 corrects the interpretation of the M17-395 physical `Phi^2/R` log-diffusion lower bound: after exact parabolic normalization it is a **critical order-one charge**, not a supercritical divergence.
+- M17-331--335 remain fixed-generation statements only.
+- M17-367 forbids any `kappa`-only positive lower bound on raw `H2` because amplitude rescaling leaves `kappa` unchanged while scaling `E` and raw `H2` quadratically.
+- M17-383 forbids replacing coefficient spatial thickness by solution-mass thickness without a doubling/frequency input.
+- M17-396 corrects the M17-395 `Phi^2/R` physical log-diffusion lower bound: after exact parabolic normalization it is an order-one critical charge, not a supercritical divergence.
+- **M17-404--406 supersede the old M17-400/402 interpretation that no finite first-generation raw-`H2` total is known.** The local reductions in M17-400/402 remain valid; only the budget-status interpretation changes.
+- M17-408 permanently separates regular zero-corridor dynamics from `log|kappa|` coordinates: truncated log-diffusion diverges like `1/epsilon` at a regular active zero level.
 
 ## 2. DSD-theory scope
 
-DSD theory is used only as a heuristic selector for variables, representation audits, payer-equivalence checks, failure typing, and candidate invariant descriptors.
+DSD theory is used only as a heuristic selector for variables, representation audits, failure typing, payer-equivalence checks, and candidate invariant descriptors.
 
 It is **not** a Navier--Stokes/PDE hypothesis. Every active canonical statement must be independently derived by standard mathematics.
 
 ## 3. Global proof-tree status
 
-The full proof attempt still begins schematically as
+The full attempt still has the upstream structure
 
 \[
 \text{hypothetical singularity}
@@ -45,7 +47,7 @@ The full proof attempt still begins schematically as
 \text{canonical recurrent/critical survivor}.
 \]
 
-At M5-598 the survivor splits into
+M5-598 then splits the survivor into
 
 \[
 CP\!-\!E
@@ -59,15 +61,17 @@ Migration
 CE\!-\!H.
 \]
 
-The long M12--M17 calculation line is conditional on the `CE-H` branch. The four non-CE-H roots remain independent OPEN roots.
+The long M12--M17 calculation line is conditional on `CE-H`. The other four roots remain independent OPEN roots.
 
-## 4. Certified cross-generation resource
+## 4. Certified first-generation resources and exact record weights
 
-For
+For the record blow-down
 
 \[
 \Omega_R(y,s)=R^2\Omega(Ry,R^2s),
 \]
+
+the exact derivative scaling is
 
 \[
 \int_I\|D^k\Omega_R\|_p^qds
@@ -76,7 +80,9 @@ R^{q(2+k-3/p)-2}
 \int_{R^2I}\|D^k\Omega\|_p^qdt.
 \]
 
-M17-307 proves the finite ancestral palinstrophy ledger
+### 4.1 Palinstrophy — M17-307
+
+M5-477 gives finite first-generation palinstrophy and M17-307 gives
 
 \[
 \boxed{
@@ -86,83 +92,99 @@ M17-307 proves the finite ancestral palinstrophy ledger
 }
 \]
 
-Here `R_m` is the **growing record blow-down factor**. It is not the shrinking physical own-scale radius used later in M17-388--396.
-
-Fixed normalized descendant palinstrophy payments remain compatible with the ancestor because the exact ancestry weight is `R_m^{-1}`. If record cell `m` contains `N_m` disjoint order-one normalized palinstrophy payments, only
+Thus order-one normalized palinstrophy payments require essentially record-linear multiplicity to contradict the ancestor:
 
 \[
-\sum_m\frac{N_m}{R_m}<\infty
+\sum_m\frac{N_m}{R_m}=\infty.
 \]
 
-is forced. Essentially record-linear multiplicity or another nonsummable enhancement is required for contradiction.
+### 4.2 Raw-`H2` — M17-403--405
 
-## 5. Zero-level and physical CE-H constitutive structure: M17-310--348
+M17-403 computes
+
+\[
+\boxed{
+\int_I\|\Delta\Omega_m\|_2^2ds
+=
+R_m^3
+\int_{R_m^2I}\|\Delta\Omega\|_2^2dt.
+}
+\]
+
+M17-404 upgrades M5-475/477 by viewing the ancient vorticity equation as a forced heat equation. The Type-I bounds
+
+\[
+\|V(t)\|_\infty\lesssim(-t)^{-1/2},
+\qquad
+\|\Omega(t)\|_\infty\lesssim(-t)^{-1},
+\qquad
+\|\Omega(t)\|_2^2\lesssim(-t)^{-1/2}
+\]
+
+and the quantitative palinstrophy tail imply on dyadic backward annuli
+
+\[
+\int_{-2T}^{-T}\|\Delta\Omega(t)\|_2^2dt
+\lesssim T^{-3/2}.
+\]
+
+Hence
+
+\[
+\boxed{
+\mathscr H_{anc}
+:=
+\int_{-\infty}^{0}\|\Delta\Omega(t)\|_2^2dt
+<\infty.
+}
+\]
+
+M17-405 therefore gives the genuine cross-generation finite ledger
+
+\[
+\boxed{
+\sum_mR_m^{-3}
+\int_I\|\Delta\Omega_m\|_2^2ds
+<\infty.
+}
+\]
+
+For pairwise disjoint order-one normalized raw-`H2` events,
+
+\[
+\boxed{
+\sum_m\frac{N_m}{R_m^3}<\infty.
+}
+\]
+
+A contradiction through this resource requires essentially **record-cubic multiplicity** or another nonsummable enhancement.
+
+### 4.3 Away-zero log-`kappa` diffusion — M17-403/406
+
+Whenever the same sign-preserving CE-H multiplier is defined on both sides of a scaling map,
+
+\[
+\boxed{
+\mathscr D_{\log\kappa,R}(I)
+=
+R\,
+\mathscr D_{\log\kappa}^{anc}(R^2I),
+}
+\]
+
+so the formal record weight is `R^{-1}`.
+
+However this is **representation/genealogy conditional** in the current proof tree. A late descendant CE-H multiplier cannot be silently pulled back through a first-generation record cell unless parent-to-record CE-H/domain/genealogy persistence is separately certified.
+
+There is no global all-sign finite log-`kappa` target because M17-408 proves regular zero levels make the logarithmic coordinate singular.
+
+## 5. Exact CE-H coefficient-scale ownership: M17-381--386
 
 On exact CE-H,
 
 \[
 \Delta W=\kappa W,
 \qquad
-\nabla\cdot W=0,
-\]
-
-and M17-313 yields
-
-\[
-D_\xi\kappa=0.
-\]
-
-M17-338 gives the mandatory representation dictionary
-
-\[
-\kappa^{sim}=(-t)\kappa^{ph},
-\qquad
-h^{sim}+\kappa^{sim}=(-t)^2h^{ph}.
-\]
-
-M17-339 gives the physical constitutive law
-
-\[
-\boxed{
-D_t\kappa
-=
-L_\rho\kappa
-+L_\rho\sigma
-+\mathcal R_{geom},
-}
-\]
-
-with no intrinsic physical `-kappa` relaxation term.
-
-M17-323/326/338--346 retain the zero-level crossing/spatialization architecture. Zero crossing must remain separate from all `log |kappa|` coordinates used later.
-
-## 6. Geometry, nodal flux, and the pre-allocation frontier: M17-349--380
-
-- M17-349--354 close the uniform-onset harmonic/unbounded-line branch under their stated compactness hypotheses.
-- M17-355--361 reduce bounded/winding exact spatial reuse to periodic/recurrent loop geometry or explicit genealogy/geometry exits.
-- M17-361 identifies recurrent positive-flux loop palinstrophy, but that payment returns to the M17-307 inverse-record-scale firewall.
-- M17-362--366 organize negative-`kappa` nodal concentration into flux thinning, amplitude/coefficient decompactification, strict-subscale concentration, spatial escape, diffuse multiplicity, or interface/rank/domain loss.
-- M17-368 gives the valid flux-bearing bridge
-  \[
-  E_T\gtrsim\phi^2r^{-1},
-  \qquad
-  H_T\gtrsim\phi^2r^{-5},
-  \qquad
-  r^4H_T/E_T\gtrsim1.
-  \]
-- M17-379 corrects the exposure cascade to the true own-scale ledger
-  \[
-  \sum_m\tau_m^{own}\gtrsim\log(1/r).
-  \]
-- M17-380 gives the coefficient-flux multiscale packing inequality but does not supply a finite raw-`H2` spacetime budget.
-
-## 7. Exact scale ownership and localization: M17-381--389
-
-### M17-381--382
-
-Exact CE-H gives
-
-\[
 |\Delta W|^2=\kappa^2|W|^2.
 \]
 
@@ -172,25 +194,33 @@ With intrinsic coefficient scale
 r_\kappa=|\kappa|^{-1/2},
 \]
 
-M17-381 gives exact nonoverlapping coefficient-scale raw-`H2` ownership:
+M17-381 gives exact nonoverlapping coefficient-bin ownership and
 
 \[
-\boxed{
-\sum_mH_m=H_{raw},
-\qquad
-r_m^4H_m\asymp E_m.
-}
+r^4H_r\asymp E_r.
 \]
 
-M17-382 upgrades the coefficient scale to a genuine spatial own-scale cell when
+M17-382 upgrades coefficient bins to true own-scale spatial cells under
 
 \[
 r^3|\nabla\kappa|\le G_*.
 \]
 
-### M17-383--384
+M17-386 extends raw-`H2` ownership exactly through time:
 
-M17-383 introduces the local doubling deficit
+\[
+\boxed{
+\sum_m\int_IH_m(t)dt
+=
+\int_IH(t)dt.
+}
+\]
+
+Thus raw-`H2` scale/time double counting is closed. After M17-404--405 it also has a true first-generation finite weighted budget.
+
+## 6. Local doubling/frequency and standard-energy deformation: M17-383--389
+
+M17-383 defines
 
 \[
 \mathfrak D_\theta(x,R)
@@ -198,117 +228,49 @@ M17-383 introduces the local doubling deficit
 \log\frac{E(B_R(x))}{E(B_{\theta R}(x))}
 \]
 
-and shows bounded doubling gives the required mass-retaining packet, while coefficient regularity alone does not bound solution vanishing order.
+and proves bounded local doubling gives a mass-retaining own-scale packet. A divergence-free constant-coefficient Helmholtz family proves coefficient regularity alone does not bound vanishing order.
 
 In physical exact CE-H,
 
 \[
-\boxed{
-D_t\Omega=(\sigma+\nu\kappa)\Omega.
-}
+D_t\Omega=(\sigma+\nu\kappa)\Omega,
 \]
 
-M17-384 therefore proves that pointwise nodal order is materially inherited during smooth same-material CE-H evolution. Only finite-radius doubling is dynamically deformable.
+so M17-384 shows pointwise nodal order is inherited along the smooth material flow.
 
-### M17-385--386
-
-M17-385 gives the general fallback
+M17-387 gives on a persistent enlarged own-scale CE-H cell
 
 \[
-\|\Sigma\|_\infty
+\|\Sigma\|_{L^\infty(B_R)}
 \lesssim
-E^{1/8}H^{3/8}
+R^{-3/2}\|\Omega\|_2.
 \]
 
-and converts finite-scale deformation into a raw-`H2` spacetime payer.
-
-M17-386 proves exact spacetime coefficient-scale ownership
+M17-388 converts this to the standard-energy ledgers
 
 \[
 \boxed{
-\sum_m\int_IH_m(t)dt
-=
-\int_IH(t)dt
+\sum_jR_jK_j^2<\infty,
+\qquad
+\sum_jR_j\mathfrak X_j^2<\infty,
 }
 \]
 
-and a bounded-overlap scale-time Carleson packing. Raw-`H2` scale ownership itself is therefore closed; the remaining issue is budget/localization of the dynamic payer.
+where `X_j` is newly generated finite-scale doubling excess after removing a bounded inherited contribution.
 
-### M17-387--389
-
-On a persistent enlarged own-scale CE-H cell,
-
-\[
-\boxed{
-\|\Sigma(t)\|_{L^\infty(B_R)}
-\lesssim
-R^{-3/2}\|\Omega(t)\|_2.
-}
-\]
-
-M17-388 converts this into the certified standard-energy deformation ledger
-
-\[
-\boxed{
-\sum_jR_jK_j^2<\infty
-}
-\]
-
-and for newly generated finite-scale doubling excess
-
-\[
-\boxed{
-\sum_jR_j\mathfrak X_j^2<\infty.
-}
-\]
-
-M17-389 shows the M17-372 signed coefficient exposure is representation safe, but material flux satisfies
+M17-389 shows signed negative-`kappa` exposure is representation safe but
 
 \[
 D_t\log\Phi=\nu\kappa
 \]
 
-because strain cancels exactly. Logarithmic `kappa` exposure alone therefore does not force the M17-388 strain-deformation payer.
+on a material tube, so strain cancels exactly from the flux law. Logarithmic coefficient exposure alone does not generate a stronger deformation payer.
 
-## 8. Recurrence, retained flux, and turnover standard-energy ledgers: M17-390--392
+## 7. Recurrence, flux, and turnover: M17-390--392
 
-M17-390 combines the exact loop-length law
+M17-390 shows compact same-loop recurrence produces at most logarithmic physical deformation across geometric similarity descent and is compatible with finite physical energy.
 
-\[
-\frac d{d\theta}\log\ell_\Gamma
-=
-\bar\sigma_{ds}^{sim}+\frac12
-\]
-
-with the physical/similarity strain dictionary.
-
-Compact persistence of the same material loop gives only logarithmic physical deformation across geometric similarity descent. The exact physical energy weight is
-
-\[
-\boxed{
-\|\Omega(t)\|_2^2dt
-=
-e^{-\theta/2}\|W(\theta)\|_2^2d\theta.
-}
-\]
-
-Hence even infinite normalized recurrence/residence is compatible with finite physical energy. The natural geometric thresholds are
-
-\[
-K_j\sim R_j^{-1/2},
-\qquad
-M_j\sim R_j^{-1}
-\]
-
-for deformation and genuinely disjoint normalized multiplicity, respectively.
-
-M17-391 gives, for a persistent physical own-scale tube,
-
-\[
-E_T(t)\gtrsim\frac{\Phi(t)^2}{R},
-\]
-
-and therefore the standard-energy flux ledger
+M17-391 gives the retained-flux standard-energy ledger
 
 \[
 \boxed{
@@ -316,9 +278,7 @@ and therefore the standard-energy flux ledger
 }
 \]
 
-Fixed positive flux at infinitely many geometric scales is still summable.
-
-M17-392 physicalizes flux turnover. Under an own-scale coefficient ceiling,
+M17-392 gives the flux-turnover ledger
 
 \[
 \boxed{
@@ -326,227 +286,190 @@ M17-392 physicalizes flux turnover. Under an own-scale coefficient ceiling,
 }
 \]
 
-A full order-one flux-cycle count needs growth comparable to `R_j^{-1}` to beat the geometric weight. Deep monotone evacuation merely telescopes in `Phi^2`; its logarithmic coefficient exposure does not produce a logarithmically amplified standard-energy cost.
+Therefore order-one recurrence, fixed flux, or logarithmic deformation remain too weak against geometric-scale summability.
 
-## 9. Intrinsic coefficient-scale migration and log-diffusion: M17-393--396
+## 8. Coefficient migration and M5-688 payer classification: M17-393--402
 
-M17-393 removes `|kappa|R^2 >> 1` as an untyped terminal spike. It means
+M17-393 reclassifies `|kappa|R^2 >> 1` as descent to a smaller intrinsic coefficient scale unless normalized gradient/interface/domain compactness fails.
 
-\[
-r_\kappa=|\kappa|^{-1/2}\ll R,
-\]
-
-so the point must be reassigned to a smaller intrinsic coefficient scale unless normalized gradient/interface/domain loss occurs.
-
-On a sign-preserving material interval,
+On sign-preserving intervals,
 
 \[
-\boxed{
 D_t\log r_\kappa
-=-\frac12\frac{D_t\kappa}{\kappa}
-}
+=-\frac12\frac{D_t\kappa}{\kappa}.
 \]
 
-and logarithmic scale travel is measured by
+M17-394 gives
 
 \[
-\mathcal A_{mig}
-=
-\int\frac{|D_t\kappa|}{|\kappa|}dt.
-\]
-
-M17-394 gives the exact sign-preserving log-coefficient identity
-
-\[
-\boxed{
 D_t\log|\kappa|
 =
 L_\rho\log|\kappa|
 +|\nabla\log|\kappa||^2
 +\frac{L_\rho\sigma+\mathcal R_{geom}}{\kappa}.
-}
 \]
 
-Thus migration returns to weighted log-coefficient diffusion plus normalized strain/geometric sources, with zero crossing kept separate.
+M17-395--396 identify positive-flux intrinsic coefficient diffusion as a fixed positive **normalized critical** log-diffusion payment, not a supercritical one.
 
-On an intrinsic scale `R`, this diffusion is the scale-normalized M17-235 multiplier-gradient channel.
+M17-397 shows M5-688 contains the same away-zero coefficient/log-diffusion architecture but is a recurrent cycle-work **balance**, not a finite ancestral budget.
 
-M17-395 shows that retained positive flux removes the low-amplitude packet-mass firewall on the M17-235 subbranch and gives the physical lower bound
-
-\[
-\nu\int_{I_R}\int
-\rho^2|\nabla\log|\kappa||^2dxdt
-\gtrsim
-\frac{\Phi_*^2}{R}.
-\]
-
-M17-396 performs the required scaling audit:
-
-\[
-\boxed{
-\mathscr D_{\log\kappa}^{norm}
-=
-R\mathscr D_{\log\kappa}^{ph}.
-}
-\]
-
-Therefore the M17-395 lower bound is exactly a fixed positive **parabolically critical normalized charge**,
-
-\[
-\nu\mathscr D_{\log\kappa}^{norm}
-\gtrsim
-\Phi_*^2,
-\]
-
-not a supercritical contradiction.
-
-## 10. M5-687/688 budget audit and complete payer-resource classification: M17-397--402
-
-### M17-397 — balance is not budget
-
-Away from `kappa=0`, the M5-688 multiplier diffusion and M17-394/396 log-diffusion are quantitatively equivalent on any fixed compact coefficient corridor.
-
-However M5-688 is a recurrent stationary **cycle-work balance**. It identifies who pays the positive multiplier diffusion but does not yield
-
-\[
-\sum_jD_{\kappa,j}^{norm}<\infty
-\]
-
-or any finite ancestral total for normalized log-diffusion.
-
-Thus `payer identification` and `number of payable generations` are distinct proof obligations.
-
-### M17-398 — bulk-gradient payer return
-
-Using M17-196 and the exact strain/vorticity identities,
-
-\[
-D_\sigma,
-\quad
-P_W^{(2)},
-\quad
-B_\rho,
-\quad
-B_\sigma
-\]
-
-all force normalized vorticity palinstrophy and therefore return to the M17-307 inverse-record-scale firewall.
-
-### M17-399--400 — strain-residence phase tilt
-
-The exponentially tilted quarter-strain payer splits exactly into
-
-\[
-Q_\sigma^{(2)}
-=
-Q_\sigma^{(0)}
-+
-\mathcal P_{\kappa\sigma}^{tilt}.
-\]
-
-The unweighted part is already palinstrophy/cutoff residence. The genuinely new term is the `kappa`-phase-tilt strain correlation.
-
-M17-400 proves on the compact CE-H hull
-
-\[
-\boxed{
-|\mathcal P_{\kappa\sigma}^{tilt}|
-\lesssim
-\langle E\rangle^{1/2}
-\langle H_{raw}\rangle^{1/2}.
-}
-\]
-
-Hence fixed phase tilt under bounded enstrophy forces fixed normalized raw-`H2` occupancy and returns to the existing raw-`H2` spacetime-budget firewall.
-
-### M17-401 — threshold coefficient gradient
-
-The threshold-collar charge
-
-\[
-B_\kappa
-=
-\int\chi'e^{2\kappa}\rho^3|\nabla\kappa|^2dy
-\]
-
-has an automatic positive amplitude floor because `chi'` is supported on a fixed positive-amplitude collar.
-
-Away from zero it is the same log-`kappa` diffusion critical channel. Near zero it routes to the zero-corridor/crossing architecture. It is therefore not a distinct unclassified gradient resource.
-
-### M17-402 — cutoff replenishment
-
-M17-191 gives the unweighted recurrent cutoff source
-
-\[
-\mathcal C_0=-A_0<0.
-\]
-
-A nonnegative exponential cutoff payer must therefore be supplied by a coefficient-phase-tilted threshold-turnover term. M17-402 proves that this phase tilt satisfies a bound of the form
-
-\[
-|\mathcal P_{cut}^{tilt}|
-\lesssim
-H_{raw}^{1/2}(E+H_{raw})^{1/2}.
-\]
-
-Thus a fixed positive cutoff/replenishment payer under bounded enstrophy forces fixed normalized raw-`H2` occupancy and also returns to the raw-`H2` firewall.
-
-Consequently the non-topological M5-688 payer tree is now fully classified at the resource level:
+M17-398--402 classify every non-topological M5-688 payer by resource:
 
 \[
 \boxed{
 \begin{aligned}
 D_\sigma,P_W,B_\rho,B_\sigma
-&\to \text{M17-307 palinstrophy firewall},\\
+&\to\text{palinstrophy},\\
 \mathcal P_{\kappa\sigma}^{tilt}
-&\to \text{raw-`H2` firewall},\\
+&\to\text{raw-`H2`},\\
 B_\kappa^{away}
-&\to \text{log-`kappa` diffusion critical firewall},\\
+&\to\text{away-zero log-`kappa` diffusion},\\
 B_\kappa^{near}
-&\to \text{zero-corridor architecture},\\
+&\to\text{zero corridor},\\
 \mathcal C_2^{positive}
-&\to \text{raw-`H2` firewall}.
+&\to\text{raw-`H2`}.
 \end{aligned}
 }
 \]
 
-No broad analytic M5-688 payer remains untyped.
+M17-404--406 update the interpretation of the raw-`H2` entries: they now return to the finite `R_m^{-3}` ancestral ledger rather than to an unbudgeted resource.
 
-## 11. Current narrow frontier after M17-402
+## 9. Zero-corridor correction and resource return: M17-408--409
 
-The late compact analytic CE-H problem is no longer primarily a local-payer-identification problem.
+M17-408 defines the truncated zero-corridor log-diffusion
 
-The remaining proof obligation is a **cross-generation budget/rigidity theorem** for already identified resources.
+\[
+D_{\log\kappa}^{\varepsilon,\delta}
+=
+\int_{\varepsilon\le|k|\le\delta}
+ k^{-2}A_{\kappa\kappa}(k)dk.
+\]
 
-A successful closure must establish at least one of:
+Using M17-343 regular level-set thickening,
+
+\[
+A_{\kappa\kappa}(k)
+\ge e^{-C|k|}A_{\kappa\kappa}(0),
+\]
+
+so
 
 \[
 \boxed{
-\begin{aligned}
-&\text{a finite ancestral total for normalized log/coefficient diffusion},\\
-&\text{a finite or nonsummably weighted ancestral raw-`H2` ledger},\\
-&\text{recurrence/source-return rigidity preventing repeated normalized payment},\\
-&\text{record-scale multiplicity strong enough to defeat the M17-307 }R_m^{-1}\text{ weight},\\
-&\text{or a forced exit through zero/interface/rank/domain/genealogy loss}.
-\end{aligned}
+D_{\log\kappa}^{\varepsilon,\delta}
+\gtrsim
+A_{\kappa\kappa}(0)
+\left(\frac1\varepsilon-\frac1\delta\right).
 }
 \]
 
-Known order-one or logarithmic recurrence, deformation, flux, residence, and turnover costs remain below the certified geometric-scale firewalls.
+Thus the log coordinate is intrinsically singular at a regular active zero level. This divergence is not a physical contradiction; it is a coordinate singularity carrying real zero-level diffusion.
+
+M17-409 then uses coarea and the compact gradient ceiling to show
+
+\[
+\boxed{
+H_{0,\delta}
+:=
+\int_{|\kappa|\le\delta}
+\chi|\Delta W|^2dy
+\ge
+c_{0H}
+A_{\kappa\kappa}(0).
+}
+\]
+
+Hence a uniform regular compact zero corridor carries fixed normalized raw-`H2` occupancy and returns to the finite `R_m^{-3}` ancestral ledger.
+
+The remaining genuinely distinct zero exits are therefore
+
+\[
+G_{zero\text{-}level\ criticality}
+\lor
+G_{coefficient\ gradient\ decompactification}
+\lor
+G_{amplitude/interface}
+\lor
+G_{component/tube/genealogy\ loss}.
+\]
+
+## 10. Low-frequency ancient firewall: M17-407
+
+M17-404 does **not** imply a global strong-`L3` velocity theorem.
+
+M5-476 gives `L2 cap L3 cap L6` only for a compactly localized rotational velocity, not for the full ancient velocity. In Fourier variables, raw-`H2` controls high frequency while velocity `L2/L3` has an independent zero-frequency obstruction.
+
+Therefore no strong-`L3` Liouville shortcut is claimed.
+
+## 11. Current narrow CE-H frontier
+
+The compact analytic CE-H branch is now much narrower.
+
+### Route A — raw-`H2` paid branches
+
+Phase-tilt strain work, positive cutoff replenishment, and a uniform regular zero corridor all return to
+
+\[
+\boxed{
+\sum_mR_m^{-3}
+\int_I\|\Delta\Omega_m\|_2^2ds<\infty.
+}
+\]
+
+To contradict the first-generation ancestor, mapped descendant events must force
+
+\[
+\boxed{
+\sum_mR_m^{-3}\sum_jh_{m,j}=\infty.
+}
+\]
+
+For order-one events this is essentially a record-cubic multiplicity/duration requirement.
+
+### Route B — sign-preserving away-zero log-`kappa`
+
+This route has the milder formal `R_m^{-1}` scaling, but it still requires a representation-safe parent-to-record CE-H/domain/genealogy theorem and a finite/rigid sign-preserving source architecture.
+
+It cannot pass through regular zero crossings because M17-408 shows the log coordinate diverges there.
+
+### Route C — explicit degenerations
+
+The remaining non-resource exits are coefficient-gradient decompactification, zero-level criticality, amplitude-threshold/interface loss, rank/domain loss, spatial/genealogy replacement, and failure of persistent own-scale cells.
 
 ## 12. Separate inherited OPEN dependencies
 
 The proof attempt still inherits:
 
-- `ROOT-CERT` upstream recertification of the precanonical root reduction;
-- full branch completeness outside CE-H from M5-598 (`CP-E`, `CP-S`, `CE-T`, `Migration`);
-- parent-to-M17 logarithmic scale-map/domain/genealogy persistence;
-- ancestral/inherited high-doubling genealogy across descendant records;
-- the absence of a finite ancestral raw-`H2` spacetime budget;
-- the absence of a finite ancestral normalized log/coefficient-diffusion budget;
-- near-zero coefficient approach/crossing completeness;
-- explicit interface, rank, domain, component, and genealogy exits;
-- a transfer/rigidity theorem preventing recurrent reuse of normalized M5-688 source architecture across record generations.
+- `ROOT-CERT` recertification of the early root reduction;
+- the four non-CE-H M5-598 roots `CP-E`, `CP-S`, `CE-T`, `Migration`;
+- parent-to-M17 scale-map/domain/genealogy persistence;
+- representation-safe mapping of descendant CE-H coefficient structures back to actual record cells;
+- whether recurrence/strict-subscale dynamics can force record-linear palinstrophy multiplicity or record-cubic raw-`H2` multiplicity;
+- whether the sign-preserving away-zero log-`kappa` branch admits a genuine finite ancestral budget or recurrence rigidity;
+- explicit zero/interface/rank/domain/genealogy degenerations.
+
+## 13. Current verdict
+
+The most important new fact since M17-402 is
+
+\[
+\boxed{
+\int_{-\infty}^{0}\|\Delta\Omega(t)\|_2^2dt<\infty
+}
+\]
+
+for the first-generation ancient element, together with the exact record ledger
+
+\[
+\boxed{
+\sum_mR_m^{-3}
+\int_I\|\Delta\Omega_m\|_2^2ds<\infty.
+}
+\]
+
+Thus raw-`H2` is now a certified ancestral resource, but geometric record blow-down discounts normalized descendant payments by `R_m^{-3}`.
+
+The proof has therefore not reached a contradiction. The main remaining quantitative problem is to force enough mapped duration/multiplicity to defeat the exact ancestry discounts, or to establish a genuinely scale-critical rigidity/budget on the sign-preserving coefficient branch.
 
 \[
 \boxed{\text{GLOBAL 3D NAVIER--STOKES REGULARITY REMAINS UNPROVED.}}
