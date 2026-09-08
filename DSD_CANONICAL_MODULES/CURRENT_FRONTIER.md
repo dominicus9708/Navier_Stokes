@@ -1,9 +1,10 @@
 # Current Canonical Frontier
 
 Date: 2026-09-08  
+Current late-CE-H tip: **M17-420**  
 Status: **AUTHORITATIVE NAVIGATION / STATUS INDEX**
 
-This file is the primary entry point for the current DSD Navier–Stokes proof-attempt state. Historical modules and indexes are retained for provenance and are not deleted or silently rewritten.
+This file is the repository-wide entry point. For detailed late-CE-H corrections and formulas, `DSD_CANONICAL_MODULES/M17/CURRENT_FRONTIER.md` is authoritative.
 
 \[
 \boxed{\text{GLOBAL 3D NAVIER--STOKES REGULARITY REMAINS UNPROVED.}}
@@ -14,177 +15,281 @@ This file is the primary entry point for the current DSD Navier–Stokes proof-a
 \[
 \text{hypothetical singularity}
 \to
-\underbrace{\text{precanonical root reduction}}_{\text{ROOT-CERT open}}
+\underbrace{\text{precanonical root reduction}}_{\text{ROOT-CERT OPEN}}
 \to
-\text{canonical recurrent/critical survivor}
+\text{canonical survivor}
 \]
 
-followed by the M5-598 branch split
+followed by M5-598:
 
 \[
 \boxed{
-CP\!-\!E\lor CP\!-\!S\lor CE\!-\!T\lor Migration\lor CE\!-\!H.
+CP\!-\!E
+\lor
+CP\!-\!S
+\lor
+CE\!-\!T
+\lor
+Migration
+\lor
+CE\!-\!H.
 }
 \]
 
-Only `CE-H` currently owns the long M12--M17 descendant chain. The four other M5-598 branches remain independent mathematical OPEN roots and must not be silently identified with CE-H.
+Only `CE-H` currently owns the long M12--M17 descendant chain. `CP-E`, `CP-S`, `CE-T`, and `Migration` remain independent OPEN roots.
 
-## 2. Root certification status
-
-The legacy `M5-001~480` reduction has not yet been recertified to the same standard as the canonical M05--M17 chain.
-
-Therefore the canonical proof attempt carries an explicit
-
-\[
-\boxed{ROOT\text{-}CERT\ OPEN}
-\]
-
-debt between an arbitrary hypothetical breakdown and the canonical starting survivor. See `DSD_INTERNAL_AUDITS/AUDIT_DEBT_CLOSURE_AND_OPEN_ROOT_REGISTRY_2026-09-07.md`.
-
-## 3. Correction precedence
+## 2. Correction precedence
 
 When historical documents conflict, use the newest applicable correction in this order:
 
-1. `DSD_INTERNAL_AUDITS/FULL_CANONICAL_CHAIN_ANALYSIS_AND_AUDIT_2026-09-07.md` — whole-chain canonical audit;
-2. M17-302 — removes the unsupported `M17-272 => uniform H3` inference;
-3. M17-306/307 — separates first- and second-generation ancient solutions and restores exact record-scaling weights;
-4. M17-313 — enforces divergence-free CE-H and proves `D_xi kappa = 0`;
-5. the M17 current-frontier file `DSD_CANONICAL_MODULES/M17/CURRENT_FRONTIER.md`;
-6. this file for repository-wide navigation and status.
+1. whole-chain internal audit;
+2. M17-306/307 first- versus second-generation scaling correction;
+3. M17-313 exact divergence-free CE-H line constancy;
+4. M17-338 physical/similarity dictionary;
+5. M17-404--406 raw-`H2` finite-budget correction;
+6. M17-408 zero/log-coordinate firewall;
+7. M17-420 compact-loop occupation-measure closure;
+8. `DSD_CANONICAL_MODULES/M17/CURRENT_FRONTIER.md` for the detailed current M17 state;
+9. this file for repository-wide navigation.
 
-## 4. Superseded / scope-corrected statements
+## 3. Permanent exact CE-H structure
 
-### M17-304
-
-`M17-304` is historical and **SUPERSEDED by M17-306**. Its claimed finite unweighted second-generation global ledgers must not be used.
-
-### M17-144--146 longitudinal `kappa` recharge
-
-On exact CE-H,
+On the retained CE-H branch,
 
 \[
 \Delta W=\kappa W,
 \qquad
-\nabla\cdot W=0
+\nabla\cdot W=0,
 \]
 
-imply
-
-\[
-0=\nabla\cdot(\kappa W)=W\cdot\nabla\kappa,
-\qquad
-\boxed{D_\xi\kappa=0}.
-\]
-
-Therefore any exact-CE-H use of a nonzero `D_xi kappa` as a quiet generic-fold recharge is superseded by M17-313.
-
-M17-143's exact identity survives but specializes to
-
-\[
-A_T=D_\xi(\sigma+\kappa)=D_\xi\sigma.
-\]
-
-Under the quiet high-jet decay used by M17-144, `A_T -> 0`, so a uniformly nondegenerate generic fold does not survive that branch.
-
-### M17-147
-
-The full gradient equation for
-
-\[
-G=\nabla\kappa
-\]
-
-survives, but its interpretation is transverse because
-
-\[
-G\perp W.
-\]
-
-Use M17-315/316 for the current transverse interpretation.
-
-## 5. Current late CE-H tip
-
-The current canonical tip is **M17-318**.
-
-Key surviving structure:
-
-\[
-\|\kappa_-\|_{L^{3/2}}\ge S_3>0
-\]
-
-on the regular global CE-H coefficient branch, followed by
-
-\[
-H_{critical\ \kappa_-}
-\Rightarrow
-H_{uniform\ high\text{-}amplitude\ capture}
-\lor
-G_{\kappa_-\text{-}nodal}^{crit}.
-\]
-
-On the bounded-capture high-amplitude material-flux branch,
-
-\[
-\int_{k<0}(-k)F(k,\theta)\,dk\ge d_{flux}>0
-\]
-
-and hence the stationary material current satisfies
-
-\[
-\overline G(0)\le-d_{flux}<0.
-\]
-
-The pure flux and enstrophy-weighted currents differ by the vortex-line weight. In mollified zero-level form,
-
-\[
-J_E^\delta
-=
-\bar w_\delta J_\Phi^\delta
-+
-\operatorname{Cov}_\delta(w,h).
-\]
-
-M17-318 closes the bookkeeping by introducing the joint `(kappa, log L_rho)` transport law.
-
-## 6. Current narrow target
-
-The highest-value late CE-H target is
+so
 
 \[
 \boxed{
-\operatorname{Cov}_{\kappa\approx0}(h,L_\rho)
+D_\xi\kappa=0,
+\qquad
+\nabla\kappa\perp W.
 }
 \]
 
-and whether it must pay through one of:
+Historical exact-CE-H interpretations using a generic nonzero longitudinal `D_xi kappa` recharge are superseded.
 
-- transverse strain work;
-- amplitude-threshold flux;
-- line replacement / genealogy exit;
-- another already typed coefficient or nodal exit.
+M17-367 also remains a permanent amplitude firewall: `kappa` alone cannot give a positive lower bound on raw `H2`.
 
-## 7. Major mathematical OPEN items
+## 4. Certified ancestral ledgers
 
-The following are audited OPEN items, not hidden assumptions:
+### Palinstrophy
 
-- `ROOT-CERT`: recertify the legacy M5-001~480 root reduction;
-- M5-598 parallel roots: `CP-E`, `CP-S`, `CE-T`, `Migration`;
-- M17-298 cross-scale raw-`H2` allocation / bounded-multiplicity theorem;
-- parent-to-M17 logarithmic scale-map/domain/genealogy persistence;
-- critical nodal negative-`kappa` concentration branch;
-- M17-318 line-weight / strain-residence covariance closure.
-
-## 8. Reading rule
-
-Historical files remain part of the research provenance. A historical conclusion is not automatically an active proof step.
-
-Before importing any old statement into the current proof line, check:
-
-1. whether a later correction supersedes it;
-2. whether its hypotheses match the current branch;
-3. whether scale/generation variables refer to the same ancient solution;
-4. whether the result is `VALID`, `CONDITIONAL`, `OPEN`, or `SUPERSEDED` in the current indexes.
+M17-307:
 
 \[
-\boxed{\text{GLOBAL REGULARITY REMAINS UNPROVED.}}
+\boxed{
+\sum_mR_m^{-1}
+\int_I\|\nabla\Omega_m\|_2^2ds
+<\infty.
+}
+\]
+
+Order-one descendant palinstrophy therefore needs a nonsummable record-linear multiplicity enhancement for contradiction.
+
+### Raw-H2
+
+M17-404 proves
+
+\[
+\boxed{
+\int_{-\infty}^{0}
+\|\Delta\Omega(t)\|_2^2dt
+<\infty.
+}
+\]
+
+M17-405 then gives
+
+\[
+\boxed{
+\sum_mR_m^{-3}
+\int_I\|\Delta\Omega_m(s)\|_2^2ds
+<\infty.
+}
+\]
+
+This supersedes the earlier interpretation that first-generation raw-`H2` has no finite spacetime budget.
+
+The exact contradiction criterion for order-one normalized raw-`H2` packets is
+
+\[
+\boxed{
+\sum_m\frac{N_m^{H2}}{R_m^3}=\infty.
+}
+\]
+
+## 5. Zero-level and coefficient-scale status
+
+M17-340 gives a scale-critical physical zero-level currency using
+
+\[
+r_{\nabla\kappa}=|\nabla\kappa|^{-1/3}.
+\]
+
+M17-408 proves all-sign `log|kappa|` diffusion is singular at a regular zero and must remain separated from the zero corridor.
+
+M17-409 returns a uniform regular zero corridor to the finite raw-`H2` ledger.
+
+Away from zero, sign-preserving log-`kappa` diffusion has formal ancestry exponent `R_m^{-1}`, but its parent-to-record use remains conditional on same-CE-H/domain/genealogy persistence.
+
+## 6. Late localization and energy ledgers
+
+M17-381/386 give exact snapshot and spacetime coefficient-scale raw-`H2` ownership; cross-scale double counting is closed on exact CE-H.
+
+M17-383--384 separate coefficient thickness from solution mass and preserve pointwise vanishing order under material exact CE-H transport.
+
+M17-387--388 give the persistent-cell deformation ledger
+
+\[
+\boxed{
+\sum_jR_jK_j^2<\infty,
+\qquad
+\sum_jR_j\mathfrak X_j^2<\infty.
+}
+\]
+
+M17-389--392 show logarithmic exposure, compact recurrence, retained flux, and order-one turnover do not by themselves defeat this geometric energy weight.
+
+## 7. M5-688 payer classification
+
+M17-397--402 classify the non-topological payer architecture:
+
+\[
+\begin{aligned}
+D_\sigma,P_W,B_\rho,B_\sigma
+&\to \text{palinstrophy},\\
+\kappa\text{-phase strain/cutoff tilt}
+&\to \text{raw-`H2`},\\
+B_\kappa^{away}
+&\to \text{away-zero log-`kappa` diffusion},\\
+B_\kappa^{near}
+&\to \text{zero corridor}.
+\end{aligned}
+\]
+
+After M17-404--406, raw-`H2` payer branches terminate at the genuine `R_m^{-3}` finite ancestral firewall.
+
+## 8. Raw-H2 multiplicity geometry: M17-410--414
+
+M17-410 shows the M17-379 logarithmic own-scale residence
+
+\[
+\sum_j\tau_j^{own}\gtrsim\log R_m
+\]
+
+is far below the cubic raw-`H2` ancestry threshold.
+
+M17-411 shows `R_m^3` is also the maximum three-dimensional packing order of descendant own-scale balls in one fixed parent cell. Thus a pure spatial closure needs near-saturation of 3D packing.
+
+M17-412 shows one parent parabolic interval contains at most `O(R_m^2)` descendant own-time units, so duration alone remains one power short.
+
+For a parent-length positive-flux loop, M17-413--414 factor the cubic threshold as
+
+\[
+\boxed{
+R_m^3
+=R_m^{1}\times R_m^{2}
+}
+\]
+
+from loop length and parent-time measure. If `alpha_m` is the usable good-loop time fraction,
+
+\[
+\boxed{
+R_m^{-3}H_m^{norm}
+\gtrsim c\Phi_*^2\alpha_m.
+}
+\]
+
+Thus the exact occupancy criterion is
+
+\[
+\boxed{
+\sum_m\alpha_m=\infty.
+}
+\]
+
+## 9. Compact closed-loop closure: M17-415--420
+
+M17-415--419 first close the minimal-full-omega-limit subbranch through:
+
+- syndetic good-state returns;
+- away-zero coefficient closure;
+- regular zero-gradient closure;
+- every finite higher transverse jet using
+  \[
+  r_p=|D_\perp^p\kappa|^{-1/(p+2)};
+  \]
+- analytic infinite flatness, which forces `Delta Omega=0` on an open set, hence globally by analyticity, and then `Omega=0` by `L2` Fourier rigidity.
+
+M17-420 removes the minimality requirement entirely.
+
+For the original compact loop orbit, empirical time measures have a weak-* limit `mu`. The retained analytic loop-state space is covered by the countable finite-jet classes
+
+\[
+\mathcal K
+=
+\bigcup_{p\ge0,n\ge1}
+\{M_p>1/n\},
+\qquad
+M_p=\max_\Gamma|D^p\kappa|.
+\]
+
+One fixed finite-jet class must have positive `mu` mass, so the original orbit spends positive total asymptotic time in that class. The corresponding fixed parent-length arc gives linear spatial multiplicity and a pointwise-in-time raw-`H2` lower bound. Therefore
+
+\[
+\sum_m\alpha_m=\infty,
+\]
+
+contradicting M17-405.
+
+Hence, under the retained compact geometry and representation-safe record map,
+
+\[
+\boxed{
+\text{a precompact positive-flux exact CE-H closed-loop orbit cannot persist.}
+}
+\]
+
+## 10. Current narrow CE-H exits after M17-420
+
+The compact recurrent/minimal/nonminimal loop dynamics are no longer the active mystery. The surviving loop-related exits are explicit losses of the retained hypotheses:
+
+\[
+\boxed{
+\begin{aligned}
+&G_{loop\ state\ decompactification},\\
+&G_{positive\ flux\ thinning/loss},\\
+&G_{nodal/amplitude\ loss},\\
+&G_{tubular\ reach/self\text{-}clustering},\\
+&G_{jet\text{-}scale/record\text{-}scale\ mismatch},\\
+&G_{parent\text{-}to\text{-}record\ scale\text{-}map/genealogy\ failure},\\
+&G_{interface/rank/domain\ loss}.
+\end{aligned}
+}
+\]
+
+The next high-value calculations should attack these explicit exits, especially tubular self-clustering, coefficient jet-scale mismatch/migration, positive-flux thinning across the same genealogy, and parent-to-M17 record persistence.
+
+## 11. Repository-wide OPEN dependencies
+
+Still OPEN and not solved by M17-420:
+
+- `ROOT-CERT` recertification of the legacy root reduction;
+- `CP-E`, `CP-S`, `CE-T`, `Migration`;
+- parent-to-M17 scale-map/domain/genealogy persistence;
+- coefficient-gradient / jet-scale decompactification;
+- tubular reach / self-clustering;
+- positive-flux thinning / amplitude loss;
+- interface / rank / domain exits;
+- completeness of the path from an arbitrary hypothetical singularity into the retained CE-H scenarios used by the late modules.
+
+\[
+\boxed{\text{GLOBAL 3D NAVIER--STOKES REGULARITY REMAINS UNPROVED.}}
 \]
