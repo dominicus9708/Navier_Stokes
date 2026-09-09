@@ -1,7 +1,7 @@
 # M17 Current Frontier
 
 Date: 2026-09-09  
-Current tip: **M17-439**  
+Current tip: **M17-442**  
 Status: **AUTHORITATIVE M17 NAVIGATION / CORRECTION INDEX**
 
 \[
@@ -20,22 +20,22 @@ This file is the authoritative late-CE-H status index. Historical modules remain
 - M17-338 is the mandatory physical/similarity dictionary.
 - M17-339 gives the physical coefficient law with no physical `-kappa` relaxation.
 - M17-367 forbids a `kappa`-only positive lower bound on raw `H2`.
-- M17-383 forbids coefficient-thickness => solution-mass-thickness without doubling/frequency input.
-- M17-396 corrects the physical `Phi^2/R` log-diffusion cost to a scale-critical normalized charge.
-- M17-404--406 establish finite first-generation raw-`H2` spacetime budget and the exact `R_m^{-3}` ancestry firewall.
-- M17-408 permanently separates all-sign `log|kappa|` coordinates from the regular zero corridor.
-- M17-420 removes the minimal omega-limit requirement on the retained compact positive-flux single-loop branch.
+- M17-383 forbids coefficient thickness => solution-mass thickness without doubling/frequency input.
+- M17-396 corrects physical `Phi^2/R` log-diffusion to a scale-critical normalized charge.
+- M17-404--406 establish finite first-generation raw-`H2` and the exact `R_m^{-3}` ancestry firewall.
+- M17-408 permanently separates all-sign `log|kappa|` from the regular zero corridor.
+- M17-420 closes the retained compact positive-flux single-loop branch without minimality.
 - M17-421 forbids `reach collapse => palinstrophy` without scale-thickening.
 - M17-424 separates incompressible material volume from viscous vortex-flux evolution.
 - M17-425--427 establish the cubic material-label/volume firewall.
 - M17-428 blocks `negative kappa own scale => uniform local palinstrophy` without boundary/doubling control.
-- M17-429--431 reinterpret the M17-188/361 covariance payer under decompactification: the recurrent `3/4` covariance is an effective-volume/amplitude-inhomogeneity defect, not a free palinstrophy payer.
-- **M17-432 corrected scope:** flux-weighted label-state occupation removes pure selected-label turnover only for flux-linear snapshot-additive currencies; it does not automatically remove flux-quadratic raw-`H2` dilution.
-- M17-433 gives a valid `N_eff` formula only after a geometrically fixed partition is chosen.
-- M17-434--436 convert long sign-preserving coefficient residence into forced zero transitions and retype rapid transition speed as normalized coefficient/strain/amplitude/direction high-jet decompactification.
-- M17-437 upgrades every fixed finite spatial coefficient jet to a fixed-own-time spacetime jet under normalized finite-jet compactness.
-- M17-438 closes all finite-order regular zero transitions on a compact analytic transition bundle by a finite subcover and the `1/log R_m` harmonic-divergence mechanism.
-- **M17-439 correction:** arbitrary `N_eff` is partition-dependent and is not a canonical PDE descriptor. The canonical quadratic flux currency is area-weighted cross-sectional enstrophy.
+- M17-429--431 reinterpret the old recurrent `3/4` covariance as an effective-volume/amplitude-inhomogeneity defect rather than a free palinstrophy payer.
+- **M17-432 corrected scope:** flux-weighted label-state occupation applies to flux-linear snapshot-additive currencies; it does not automatically remove flux-quadratic raw-`H2` dilution.
+- M17-434--438 close regular finite-order zero-transition fragmentation under retained normalized finite-jet compactness and representation-safe genealogy.
+- **M17-439 correction:** arbitrary `N_eff` is partition-dependent and not canonical. The primary quadratic flux currency is area-weighted cross-sectional enstrophy.
+- **M17-440 refinement:** the quadratic currency factors exactly as total positive flux times flux-weighted normalized amplitude.
+- **M17-441 threshold:** retained positive-flux geometric records force the flux-weighted normalized amplitude sequence to be summable.
+- **M17-442 dynamics:** flux-weighted amplitude collapse is driven exactly by strain and coefficient-weight redistribution; there is no separate area-source term.
 
 ## 2. DSD scope
 
@@ -51,7 +51,7 @@ DSD is used only for variable selection, representation audits, payer-equivalenc
 \text{canonical survivor}
 \]
 
-followed by M5-598:
+followed by
 
 \[
 CP\!-\!E\lor CP\!-\!S\lor CE\!-\!T\lor Migration\lor CE\!-\!H.
@@ -83,7 +83,17 @@ Raw-`H2`:
 }
 \]
 
-Thus order-one palinstrophy needs record-linear nonsummable multiplicity, while order-one raw-`H2` needs record-cubic nonsummable multiplicity.
+Persistent-cell deformation:
+
+\[
+\boxed{
+\sum_jr_jK_j^2<\infty,
+\qquad
+\sum_jr_j\mathfrak X_j^2<\infty.
+}
+\]
+
+Here `R_m` denotes growing record blow-down factor while `r_j` denotes shrinking physical own-scale radius.
 
 ## 5. Exact CE-H structure
 
@@ -91,15 +101,11 @@ Thus order-one palinstrophy needs record-linear nonsummable multiplicity, while 
 \Delta W=\kappa W,\qquad \nabla\cdot W=0,\qquad D_\xi\kappa=0.
 \]
 
-Physical coefficient equation:
-
 \[
 \boxed{
 D_t\kappa=L_\rho\kappa+L_\rho\sigma+\mathcal R_{geom}.
 }
 \]
-
-Material vorticity multiplier transport:
 
 \[
 \boxed{
@@ -111,13 +117,13 @@ Regular vortex-line material genealogy persists until nodal/interface/CE-H/domai
 
 ## 6. Compact-loop and zero-transition closures
 
-M17-410--414 factor one retained parent-length positive-flux loop into a linear spatial factor and quadratic own-time factor. For good-time fraction `alpha_m`,
+M17-410--414 give the cubic loop packet mechanism. For one retained parent-length positive-flux loop with good-time fraction `alpha_m`,
 
 \[
 R_m^{-3}H_m^{norm}\gtrsim c\Phi_*^2\alpha_m.
 \]
 
-M17-415--420 close all finite spatial coefficient-jet orders and analytic infinite-flatness on the compact single-loop branch; empirical occupation measures remove minimality.
+M17-415--420 close all finite spatial coefficient-jet orders plus analytic infinite-flatness on the compact single-loop branch using occupation measures.
 
 M17-434 gives the sign-preserving own-scale residence threshold
 
@@ -125,75 +131,77 @@ M17-434 gives the sign-preserving own-scale residence threshold
 \tau_{crit}\asymp R^{-2}\log R.
 \]
 
-Under bounded normalized transition speed, M17-435 forces at least
+M17-435--438 convert the resulting forced zero transitions into
 
 \[
-N_{cross}\gtrsim \frac{R^2}{\log R}
+R^{-3}H_{R,tr}^{norm}\gtrsim \frac{c}{\log R},
 \]
 
-regular zero transitions. The parent-length loop supplies `O(R)` spatial segments, hence
+and geometric records satisfy `sum 1/log R_m = infinity`. Thus higher-order regular zero transition is no longer an independent OPEN branch under compact normalized analytic/high-jet hypotheses.
 
-\[
-R^{-3}H_{R,zero}^{norm}\gtrsim \frac{c}{\log R}.
-\]
-
-For geometric records `log R_m\asymp m`, `sum 1/log R_m` diverges.
-
-M17-436 shows bounded normalized coefficient/strain/amplitude/direction jets imply bounded normalized transition speed. M17-437 proves a fixed `p`-jet persists for a fixed own-time fraction. M17-438 uses compactness plus analyticity to obtain a uniform finite jet-order cover, so the higher-order regular zero-transition branch also closes under retained normalized finite-jet compactness and representation-safe genealogy.
-
-## 7. Geometry/material-label decompactification
+## 7. Geometry/material-label branch
 
 M17-421--423 split reach loss into curvature/C2 decompactification or nonlocal self-approach and show ribbonization costs only logarithmic strain.
 
-M17-424: one fixed positive-volume material tube has
+M17-424: one fixed positive-volume material tube satisfies
 
 \[
 |\mathcal T_{sim}(\theta)|=V_0e^{3\theta/2},
 \]
 
-so it must spatially decompactify in similarity variables.
+so it must decompactify in similarity space.
 
-M17-425--427: record-dependent selected bands can cost only `O(R_m^{-3})` physical/material-label volume and may converge to a zero-volume material core. Spatial analyticity does not upgrade an Eulerian own-scale packet to fixed positive material-label volume.
+M17-425--427: record-dependent selected bands can cost only cubic physical/material-label volume and may converge to a zero-volume material core; Eulerian analyticity does not create fixed positive material-label thickness.
 
-## 8. Covariance/effective-volume branch
+## 8. Correct partition-free quadratic flux currency
 
-M17-429 gives
+At own scale `r`, let
+
+\[
+\widetilde\rho=r^2\rho,
+\qquad
+d\widetilde A=r^{-2}dA.
+\]
+
+Then
+
+\[
+\Phi=\int\widetilde\rho\,d\widetilde A,
+\]
+
+and M17-439 defines
 
 \[
 \boxed{
-\bar\sigma_\rho-\bar\sigma_{ds}
-=\frac34+
-\frac12\frac d{d\theta}
-\log\frac{L_\rho}{\Phi\ell^2}.
+\mathfrak Q_\Phi
+:=\int\widetilde\rho^2d\widetilde A,
+\qquad
+\mathfrak A:=|\widetilde A|=A_{tot}/r^2.
 }
 \]
 
-After material-volume cancellation, the effective amplitude-inhomogeneity descriptor satisfies
+Cauchy--Schwarz gives
 
 \[
-2(\bar\sigma_\rho-\bar\sigma_{ds})
-=\frac d{d\theta}\log\mathfrak D_\rho.
+\mathfrak Q_\Phi\ge\frac{\Phi^2}{\mathfrak A}.
 \]
 
-A persistent `3/4` covariance produces `\mathfrak D_\rho\gtrsim R^3`, forcing amplitude contrast/nodal loss unless an amplitude ceiling also decompactifies. Direct conversion to tangential strain-gradient occupancy yields only logarithmic palinstrophy and does not defeat the `R_m^{-1}` ledger.
+Arbitrary label subdivision cannot reduce `mathfrak Q_Phi`; `N_eff` is only a corollary after fixing a geometrically canonical partition.
 
-## 9. Correct quadratic flux currency after M17-439
+## 9. M17-440 — exact flux × amplitude factorization
 
-For a physical retained transverse region `A`,
+Define the positive flux probability
 
 \[
-\Phi=\int_A\rho\,dA,
-\qquad
-\Phi^2\le A_{tot}\int_A\rho^2dA.
+dp_\Phi=\frac{\widetilde\rho\,d\widetilde A}{\Phi}
 \]
 
-At own scale `r`, define
+and flux-weighted normalized amplitude
 
 \[
 \boxed{
-\mathfrak Q_\Phi(A):=r^2\int_A\rho^2dA,
-\qquad
-\mathfrak A:=\frac{A_{tot}}{r^2}.
+\mathfrak a_\Phi
+:=\int\widetilde\rho\,dp_\Phi.
 }
 \]
 
@@ -201,57 +209,148 @@ Then
 
 \[
 \boxed{
-\mathfrak Q_\Phi\ge\frac{\Phi^2}{\mathfrak A}.
+\mathfrak Q_\Phi=\Phi\mathfrak a_\Phi.
 }
 \]
 
-This is partition-free. Artificially splitting a tube label cannot reduce `\mathfrak Q_\Phi`.
+Hence quadratic payer dilution has the exact primary split
 
-For the M17-413 parent-length loop packet,
+\[
+\Phi\to0
+\quad\text{or}\quad
+\mathfrak a_\Phi\to0.
+\]
+
+For every fixed threshold `a>0`, if a positive fraction `eta_a` of flux remains on `widetilde rho >= a`, then
+
+\[
+\mathfrak Q_\Phi\ge a\eta_a\Phi.
+\]
+
+Conversely `mathfrak a_Phi -> 0` forces every fixed-amplitude flux fraction to vanish.
+
+Also
 
 \[
 \boxed{
-R_m^{-3}H_m^{norm}\gtrsim c\alpha_m\mathfrak Q_{\Phi,m}
-\gtrsim c\alpha_m\frac{\Phi_m^2}{\mathfrak A_m}.
+\mathfrak A\ge\frac{\Phi}{\mathfrak a_\Phi}.
 }
 \]
 
-Therefore the canonical quadratic closure criterion is
+Thus area participation growth is a geometric consequence of positive-flux amplitude collapse, not the most primitive quadratic escape.
+
+## 10. M17-441 — exact survivor summability threshold
+
+For representation-safe geometric records with
+
+\[
+\alpha_m\ge\alpha_*>0,
+\qquad
+\Phi_m\ge\Phi_*>0,
+\]
+
+M17-405 and M17-440 give
 
 \[
 \boxed{
-\sum_m\alpha_m\mathfrak Q_{\Phi,m}=\infty,
+\sum_m\mathfrak a_{\Phi,m}<\infty.
 }
 \]
 
-or sufficiently
+For `R_m\asymp q^m`, a power model
+
+\[
+\mathfrak a_{\Phi,m}\sim m^{-p}
+\]
+
+survives only for
+
+\[
+\boxed{p>1.}
+\]
+
+Equivalently the harmonic scale borderline is roughly
+
+\[
+\mathfrak a_\Phi\sim1/\log R.
+\]
+
+Thus retained positive flux requires **summable flux-weighted normalized amplitude collapse**. The associated area lower bound is super-logarithmic at the power threshold, but the deformation cost is only double-logarithmic and remains compatible with the standard-energy ledger.
+
+## 11. M17-442 — exact dynamics of the amplitude-collapse survivor
+
+On one coherent positive material-flux family in fixed own-scale normalization, set
+
+\[
+q=r^2\rho,
+\qquad
+Q=\int q\,d\Phi=\mathfrak Q_\Phi,
+\qquad
+\mathfrak a_\Phi=Q/\Phi.
+\]
+
+Exact CE-H gives
+
+\[
+D_tq=(\sigma+\nu\kappa)q,
+\qquad
+\partial_t(d\Phi)=\nu\kappa\,d\Phi.
+\]
+
+Let
+
+\[
+dp=\frac{d\Phi}{\Phi},
+\qquad
+d\widehat p=\frac{q\,d\Phi}{Q}.
+\]
+
+Then
 
 \[
 \boxed{
-\sum_m\alpha_m\frac{\Phi_m^2}{\mathfrak A_m}=\infty.
+\frac d{dt}\log\mathfrak a_\Phi
+=
+\langle\sigma\rangle_{\widehat p}
++\nu\left(
+2\langle\kappa\rangle_{\widehat p}
+-\langle\kappa\rangle_p
+\right).
 }
 \]
 
-`N_eff` remains only a corollary for a fixed geometrically canonical own-scale partition. True quadratic dilution means actual cross-sectional area/geometric participation decompactification, not relabeling.
-
-In a bounded parent 3D region, ambient capacity gives at most
+Equivalently,
 
 \[
-\mathfrak A_m\lesssim C R_m^2,
+\boxed{
+\frac d{dt}\log\mathfrak a_\Phi
+=
+\langle\sigma\rangle_{\widehat p}
++\nu\langle\kappa\rangle_{\widehat p}
++\nu\frac{\operatorname{Cov}_p(q,\kappa)}{\mathfrak a_\Phi}.
+}
 \]
 
-which is still large enough to evade contradiction on geometric records.
+For one material label the coefficient cancels in the ratio:
 
-## 10. Current narrow late-CE-H frontier after M17-439
+\[
+\frac d{dt}\log\frac{q}{\phi}=\sigma.
+\]
+
+Therefore the aggregate coefficient term is entirely due to coefficient/amplitude flux-weight redistribution across labels.
+
+If normalized `r^2|sigma|` and `r^2|kappa|` stay bounded, one own-time changes `mathfrak a_Phi` by only a bounded multiplicative factor. Abrupt collapse is therefore a normalized strain/coefficient decompactification or genealogy/representation loss. The remaining survivor is gradual summable collapse accumulated across many own-times through strain action and coefficient/flux-measure redistribution.
+
+## 12. Current narrow late-CE-H frontier after M17-442
 
 \[
 \boxed{
 \begin{aligned}
 &G_{positive\ flux\ thinning},\\
-&G_{cross\text{-}sectional\ area/geometric\ participation\ decompactification},\\
+&G_{summable\ flux\text{-}weighted\ normalized\ amplitude\ collapse},\\
+&G_{coefficient/amplitude\ flux\text{-}measure\ redistribution},\\
 &G_{good\text{-}time\ occupation\ thinning},\\
-&G_{amplitude/nodal\ loss},\\
-&G_{coefficient/strain/amplitude/direction\ normalized\ high\text{-}jet\ decompactification},\\
+&G_{normalized\ strain/coefficient/amplitude/direction\ high\text{-}jet\ decompactification},\\
 &G_{jet\text{-}scale/record\text{-}scale\ mismatch},\\
 &G_{normal\ chart/topology\ loss},\\
 &G_{parent\text{-}to\text{-}record\ scale\text{-}map/genealogy\ failure},\\
@@ -260,11 +359,9 @@ which is still large enough to evade contradiction on geometric records.
 }
 \]
 
-Higher-order regular zero transition is no longer an independent OPEN branch under compact normalized analytic/high-jet hypotheses.
+The next narrow target is the ensemble redistribution term: determine whether persistent flux reweighting among labels with different `kappa` can be converted into a spatial coefficient-gradient/zero-corridor payer without losing the summable amplitude factor.
 
-The next narrow target is to determine whether the physical area participation `\mathfrak A_m` can grow fast enough to dilute the quadratic payer while retaining parent-length loop geometry, material-volume constraints, positive flux, coefficient-scale coherence, and record genealogy.
-
-## 11. Separate inherited OPEN dependencies
+## 13. Separate inherited OPEN dependencies
 
 Still OPEN:
 
@@ -272,8 +369,7 @@ Still OPEN:
 - non-CE-H roots `CP-E`, `CP-S`, `CE-T`, `Migration`;
 - parent-to-M17 scale-map/domain/genealogy persistence;
 - positive-flux thinning;
-- transverse area/geometric participation decompactification;
-- amplitude/nodal loss;
+- summable flux-weighted amplitude collapse and coefficient/amplitude redistribution;
 - normalized high-jet and jet-scale/record-scale decompactification;
 - normal-chart/topology/interface/rank/domain exits;
 - completeness of the path from an arbitrary hypothetical singularity into the retained CE-H scenarios.
