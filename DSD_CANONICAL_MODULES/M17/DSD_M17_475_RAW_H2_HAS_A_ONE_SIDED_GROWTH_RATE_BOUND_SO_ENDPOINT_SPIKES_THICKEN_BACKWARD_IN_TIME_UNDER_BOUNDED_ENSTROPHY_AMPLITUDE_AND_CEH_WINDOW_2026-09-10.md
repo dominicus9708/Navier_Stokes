@@ -64,11 +64,25 @@ Expand
 \[
 \Delta(u\cdot\nabla\Omega)
 =
-u\cdot\nabla\Delta\Omega
+u_{\rm adv}
 +2\partial_i u\cdot\partial_i\nabla\Omega
 +\Delta u\cdot\nabla\Omega,
 \]
-where the first term is \(u\cdot\nabla\Delta\Omega\) (the displayed leading character should be read as \(u\), not viscosity; no viscosity is present in this algebraic expansion).
+where, to avoid any notational confusion with viscosity, we have defined the advective top-order term explicitly by
+\[
+\boxed{
+\nu_{\rm adv}:=u\cdot\nabla\Delta\Omega.
+}
+\]
+This symbol is only a temporary label for the advective term and is unrelated to the viscosity \(\nu\). Equivalently, the expansion may be read directly as
+\[
+\boxed{
+\Delta(u\cdot\nabla\Omega)
+=u\cdot\nabla\Delta\Omega
++2\partial_i u\cdot\partial_i\nabla\Omega
++\Delta u\cdot\nabla\Omega.
+}
+\]
 
 Similarly,
 \[
@@ -99,7 +113,7 @@ Thus
 \boxed{
 \frac12H'
 +
-u\|\nabla\Delta\Omega\|_2^2
+\nu\|\nabla\Delta\Omega\|_2^2
 \le
 C(\|\nabla u\|_\infty+\|\Omega\|_\infty)H
 +C\|\nabla\Omega\|_4^2H^{1/2}.
@@ -144,9 +158,9 @@ E^{1/8}H^{11/8}.
 
 For the velocity gradient,
 \[
-\nabla u=\Sigma+A,
+\nabla u=\Sigma+A_{\rm skew},
 \]
-where the antisymmetric part \(A\) is pointwise controlled by \(|\Omega|\). M17-385 supplies
+where the antisymmetric part \(A_{\rm skew}\) is pointwise controlled by \(|\Omega|\). M17-385 supplies
 \[
 \|\Sigma\|_\infty
 \lesssim E^{1/8}H^{3/8}.
@@ -167,7 +181,7 @@ Substitution yields
 \boxed{
 \frac12H'
 +
-u\|\nabla\Delta\Omega\|_2^2
+\nu\|\nabla\Delta\Omega\|_2^2
 \le
 C M_\rho H
 +C E^{1/8}H^{11/8}.
