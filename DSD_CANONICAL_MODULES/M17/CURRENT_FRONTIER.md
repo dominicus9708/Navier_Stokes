@@ -1,38 +1,42 @@
 # M17 Current Frontier
 
 Date: 2026-09-09  
-Current tip: **M17-448**  
+Current tip: **M17-455**  
 Status: **AUTHORITATIVE M17 NAVIGATION / CORRECTION INDEX**
 
 \[
 \boxed{\text{GLOBAL 3D NAVIER--STOKES REGULARITY REMAINS UNPROVED.}}
 \]
 
-This file is the authoritative late-CE-H status index. Historical modules remain preserved for provenance; the newest applicable correction below takes precedence when interpretations conflict.
+This file is the authoritative late-CE-H status index. Historical modules remain preserved for provenance; later corrections below take precedence over earlier interpretations when they conflict.
 
 ## 1. Permanent correction firewalls
 
 - M17-306--307 restore exact first-/second-generation record scaling.
-- M17-313: `D_xi kappa = 0`, hence `nabla kappa` is transverse to the vortex direction.
-- M17-338 is the mandatory physical/similarity dictionary; M17-339 gives the physical coefficient equation with no physical `-kappa` relaxation.
-- M17-367 forbids `kappa`-only raw-`H2` lower bounds; M17-383 forbids coefficient-thickness => solution-mass-thickness without frequency/doubling control.
-- M17-404--405 establish finite first-generation raw-`H2` and the exact `R_m^{-3}` ancestry ledger.
+- M17-313 gives `D_xi kappa=0` and `nabla kappa perp W`.
+- M17-338 is the mandatory physical/similarity dictionary; M17-339 gives the physical coefficient law with no physical `-kappa` relaxation.
+- M17-367 forbids `kappa`-only raw-`H2` lower bounds.
+- M17-383 forbids coefficient thickness => solution-mass thickness without doubling/frequency input.
+- M17-404--405 establish finite first-generation raw-`H2` and exact `R_m^-3` ancestry.
 - M17-408 separates regular zero geometry from singular all-sign `log|kappa|` coordinates.
 - M17-420 closes the retained compact positive-flux single-loop branch without minimality.
 - M17-421--428 separate reach/material-volume/selected-label/negative-`kappa` geometry firewalls.
-- M17-429--431 reinterpret the recurrent `3/4` covariance as an effective-volume/amplitude-inhomogeneity defect; direct palinstrophy recovery is only logarithmic.
+- M17-429--431 reinterpret recurrent covariance as effective-volume/amplitude-inhomogeneity rather than a free palinstrophy payer.
 - M17-432 applies only to flux-linear snapshot-additive currencies.
 - M17-434--438 close regular finite-order zero-transition fragmentation under retained normalized finite-jet compactness and representation-safe genealogy.
-- M17-439: arbitrary `N_eff` is partition-dependent and not canonical.
-- M17-440: `mathfrak Q_Phi = Phi mathfrak a_Phi` exactly.
-- M17-441: retained positive-flux geometric records force summable flux-weighted normalized amplitude collapse.
-- M17-442: amplitude-collapse dynamics are exactly strain plus coefficient/amplitude flux-weight redistribution.
-- M17-443: positive-flux label redistribution is exact replicator/Gibbs reweighting; there is no sign-definite entropy budget.
-- M17-444: first-generation `D3 Omega` spacetime is finite with `T^{-5/2}` backward tail and exact `R_m^{-5}` ancestry scaling.
-- M17-445: a genuine `R_m^{-5}` weighted coefficient-gradient ancestral ledger exists on compact exact CE-H record cells.
-- M17-446: that weighted gradient ledger does not control pairwise label coefficient-action across low-amplitude bottlenecks; the obstruction is the `p` versus `p-hat` measure mismatch.
-- M17-447: a robust finite-thickness low-amplitude separator in a uniformly Poincare cross-section returns to the favorable `R_m^{-1}` palinstrophy ledger.
-- M17-448: failure of the M17-447 bridge is transverse Poincare/spectral-gap geometry decompactification; persistent bottlenecks need roughly record-linear spectral-gap degeneration to survive palinstrophy, but that costs only logarithmic material strain and is not closed by standard energy.
+- M17-439 removes arbitrary `N_eff` from the canonical invariant list.
+- M17-440 factors the canonical quadratic currency as `mathfrak Q_Phi = Phi mathfrak a_Phi`.
+- M17-441 gives summable flux-weighted normalized amplitude on retained positive-flux geometric records.
+- M17-442--443 identify exact strain/coefficient redistribution dynamics and rule out a monotone entropy shortcut.
+- M17-444 proves finite first-generation `D3 Omega` spacetime with exact `R_m^-5` ancestry.
+- M17-445 converts that into a genuine `R_m^-5` coefficient-gradient ledger on compact exact-CE-H record cells.
+- M17-446 identifies the `p` versus `p-hat` low-amplitude measure mismatch.
+- M17-447 sends robust finite-thickness amplitude bottlenecks back to the favorable `R_m^-1` palinstrophy ledger.
+- **M17-449 corrects M17-448 interpretation:** dimensional Poincare growth must be split into transverse size and scale-free shape degeneration.
+- M17-450--452 identify the bounded-enstrophy diffuse-flux baseline: harmonic-mean area `~R`, transverse radius `~R^(1/2)`, flux-weighted amplitude `~R^-1`.
+- M17-453 shows that this diffuse baseline evades the `R^-3` and `R^-5` ledgers but cannot tolerate persistent own-scale palinstrophy coercivity.
+- M17-454 shows mesoscopically thick negative-`kappa` enstrophy cores restore palinstrophy coercivity by wide cutoffs.
+- M17-455 gives the exact global CE-H sign-balance compensation `K_- >= K_+` and couples baseline positive-`kappa` carriers to negative weighted enstrophy elsewhere.
 
 ## 2. DSD scope
 
@@ -54,7 +58,7 @@ followed by
 CP\!-\!E\lor CP\!-\!S\lor CE\!-\!T\lor Migration\lor CE\!-\!H.
 \]
 
-Only `CE-H` owns the long M12--M17 descendant chain. The four non-CE-H roots remain OPEN.
+Only `CE-H` owns the long M12--M17 descendant chain. `CP-E`, `CP-S`, `CE-T`, and `Migration` remain independent OPEN roots.
 
 ## 4. Certified ancestral resources
 
@@ -80,7 +84,7 @@ Raw-`H2`:
 }
 \]
 
-M17-444 higher derivative:
+Higher vorticity derivative:
 
 \[
 \boxed{
@@ -94,28 +98,27 @@ with
 \int_{-\infty}^{-T}\|D^3\Omega\|_2^2dt\lesssim T^{-5/2}
 \]
 
-and record scaling
+and exact record ancestry weight `R_m^-5`.
+
+On compact exact-CE-H record cells with a normalized coefficient ceiling,
 
 \[
 \boxed{
-\int_I\|D^3\Omega_m\|_2^2ds
-=R_m^5\int_{R_m^2I}\|D^3\Omega\|_2^2dt.
+\sum_mR_m^{-5}
+\int_I\int_{U_m}
+\rho_m^2|\nabla\kappa_m|^2dyds<\infty.
 }
 \]
 
-Thus the exact ancestry weight is `R_m^{-5}`.
-
-Persistent physical deformation:
+Persistent-cell deformation also obeys
 
 \[
 \sum_jr_jK_j^2<\infty,
 \qquad
-\sum_jr_j\mathfrak X_j^2<\infty,
+\sum_jr_j\mathfrak X_j^2<\infty.
 \]
 
-where `r_j` is a shrinking physical own-scale radius and `R_m` above is a growing record blow-down factor.
-
-## 5. Exact CE-H constitutive structure
+## 5. Exact CE-H structure
 
 \[
 \Delta W=\kappa W,
@@ -137,47 +140,54 @@ D_t\Omega=(\sigma+\nu\kappa)\Omega.
 }
 \]
 
-Regular vortex-line material genealogy persists until nodal/interface/CE-H/domain loss.
+On the whole-space exact CE-H branch,
 
-## 6. Compact-loop and regular zero-transition status
+\[
+\boxed{
+\|\nabla\Omega\|_2^2
+=-\int\kappa|\Omega|^2dx.
+}
+\]
+
+## 6. Compact-loop and zero-transition status
 
 M17-410--420 close the retained compact positive-flux single-loop branch under the stated geometry and record-map hypotheses.
 
-M17-434--438 give the sign-phase/zero-transition mechanism. Long own-scale sign phases are limited to `O(R^{-2} log R)` parent time; compact finite-jet zero transitions force
+M17-434--438 limit long sign phases and turn compact finite-order zero transitions into
 
 \[
-R^{-3}H_{R,tr}^{norm}\gtrsim c/\log R,
+R^{-3}H_{R,tr}^{norm}\gtrsim c/\log R.
 \]
 
-and geometric records satisfy
+Geometric records satisfy
 
 \[
-\sum_m1/\log R_m=\infty.
+\sum_m1/\log R_m=\infty,
 \]
 
-Therefore regular finite-order zero transitions are not an independent OPEN branch under retained normalized analytic/high-jet compactness.
+so regular finite-order zero-transition fragmentation is not an independent OPEN branch under retained normalized analytic/high-jet compactness.
 
-## 7. Partition-free quadratic flux and amplitude collapse
+## 7. Partition-free flux currency and diffuse-amplitude baseline
 
-At own scale `r`, with `q=r^2 rho` and normalized transverse area,
+At one normalized cross-section,
 
 \[
-\Phi=\int q\,d\widetilde A,
+\Phi=\int\rho\,dA,
 \qquad
-\mathfrak Q_\Phi=\int q^2d\widetilde A.
+\mathfrak Q_\Phi=\int\rho^2dA.
 \]
 
 Define
 
 \[
-dp_\Phi=\frac{q\,d\widetilde A}{\Phi},
+dp_\Phi=\frac{\rho\,dA}{\Phi},
 \qquad
 \boxed{
-\mathfrak a_\Phi:=\int q\,dp_\Phi.
+\mathfrak a_\Phi:=\int\rho\,dp_\Phi.
 }
 \]
 
-M17-440 gives
+Then
 
 \[
 \boxed{
@@ -185,273 +195,348 @@ M17-440 gives
 }
 \]
 
-For a retained parent-length loop record,
+For a retained parent-length record,
 
 \[
-\boxed{
 R_m^{-3}H_m^{norm}
 \gtrsim
 c\alpha_m\Phi_m\mathfrak a_{\Phi,m}.
-}
 \]
 
-If `alpha_m >= alpha_*` and `Phi_m >= Phi_*`, M17-441 gives
+If `alpha_m` and `Phi_m` have positive lower bounds,
 
 \[
-\boxed{
 \sum_m\mathfrak a_{\Phi,m}<\infty.
-}
 \]
 
-Thus a retained positive-flux survivor must push essentially all flux into lower and lower normalized amplitude classes at a summable record rate. The power-model harmonic borderline is approximately `1/log R_m`.
+## 8. M17-449 size/shape correction
 
-## 8. Exact ensemble redistribution dynamics: M17-442--443
-
-On a coherent material flux family let
+The transverse Poincare constant has length-squared scaling. In two dimensions,
 
 \[
-q=r^2\rho,
+C_P(\lambda A)=\lambda^2C_P(A),
 \qquad
-Q=\int q\,d\Phi,
-\qquad
-\mathfrak a_\Phi=Q/\Phi.
+|\lambda A|=\lambda^2|A|.
 \]
 
-With
-
-\[
-dp=d\Phi/\Phi,
-\qquad
-d\widehat p=q\,d\Phi/Q,
-\]
-
-M17-442 gives
+Define the scale-free shape factor
 
 \[
 \boxed{
-\frac d{dt}\log\mathfrak a_\Phi
-=
-\langle\sigma\rangle_{\widehat p}
-+
-\nu\left(2\langle\kappa\rangle_{\widehat p}-\langle\kappa\rangle_p\right).
+\Pi(A):=\frac{C_P(A)}{|A|}.
 }
 \]
 
-One own-time cannot create an unbounded collapse factor while normalized `sigma,kappa` remain compact.
-
-M17-443 gives the exact normalized flux-label replicator equation
+With normalized area `mathfrak A_m`,
 
 \[
 \boxed{
-\partial_tp_t
-=
-\nu(\kappa-\langle\kappa\rangle_{p_t})p_t
+C_{P,m}=\mathfrak A_m\Pi_m.
 }
 \]
 
-and Gibbs formula
+Define
 
 \[
 \boxed{
-p_t(\lambda)
-=
-\frac{p_0(\lambda)e^{\nu\int_0^t\kappa(\lambda,s)ds}}
-{\int p_0(\eta)e^{\nu\int_0^t\kappa(\eta,s)ds}d\mu(\eta)}.
+S_m:=\frac{\mathfrak A_m}{R_m}.
 }
 \]
 
-Pairwise weight change is exactly cumulative coefficient-action contrast:
-
-\[
-\boxed{
-\log\frac{p_t(\lambda)}{p_t(\eta)}
-=
-\log\frac{p_0(\lambda)}{p_0(\eta)}
-+
-u\int_0^t(\kappa_\lambda-\kappa_\eta)ds.
-}
-\]
-
-Relative/Shannon entropy derivatives have no fixed sign, so no entropy-budget shortcut is allowed.
-
-## 9. M17-444--445 higher resource and coefficient-gradient ledger
-
-Exact CE-H differentiated gives
-
-\[
-\boxed{
-\nabla\Delta\Omega
-=(\nabla\kappa)\otimes\Omega+
-\kappa\nabla\Omega.
-}
-\]
-
-Hence
-
-\[
-\boxed{
-\rho^2|\nabla\kappa|^2
-\lesssim
-|D^3\Omega|^2+\kappa^2|\nabla\Omega|^2.
-}
-\]
-
-On descendant exact CE-H record cells with uniform normalized coefficient ceiling `|kappa_m| <= K_*`, M17-445 yields
-
-\[
-\boxed{
-\sum_mR_m^{-5}
-\int_I\int_{U_m(s)}
-\rho_m^2|\nabla\kappa_m|^2dyds
-<\infty.
-}
-\]
-
-This is a genuine new finite ancestral coefficient-gradient resource.
-
-Its order-one packet firewall is quintic:
-
-\[
-\boxed{
-\sum_m\frac{N_m^{G}}{R_m^5}<\infty.
-}
-\]
-
-The exponent `5` matches full 3D parabolic space-time packing dimension `3+2`, so pure packet counting must essentially saturate all own-scale space-time cells to defeat it.
-
-## 10. M17-446 measure-mismatch firewall
-
-The M17-443 replicator evolves
-
-\[
-dp=q\,dA/\Phi,
-\]
-
-while the M17-445 gradient resource is weighted by `q^2dA`. Equivalently
-
-\[
-\boxed{
-\frac{d\widehat p}{dp}
-=\frac{q}{\mathfrak a_\Phi}.
-}
-\]
-
-In the M17-441 survivor this density degenerates.
-
-A functional no-go shows one can keep an order-one pairwise coefficient contrast while placing the coefficient transition in a region with amplitude `q=epsilon`, so
-
-\[
-\int q^2|\nabla\kappa|^2\to0.
-\]
-
-Thus
-
-\[
-\boxed{
-\text{large pairwise coefficient action}
-\not\Rightarrow
-\text{fixed M17-445 payment}
-}
-\]
-
-without amplitude-connected geometry, a weighted spectral gap, stronger Morrey control, or a regular separating level-set theorem.
-
-## 11. M17-447 robust low-amplitude bottleneck return to palinstrophy
-
-If a connected normalized cross-section has a uniform Poincare constant and contains positive-measure high- and low-amplitude sets with a fixed amplitude gap, then
-
-\[
-\operatorname{Var}(q)\ge v_*>0
-\]
-
-and therefore
-
-\[
-\boxed{
-\int_A|\nabla_\perp q|^2dA
-\ge c_*>0.
-}
-\]
-
-Since `|nabla|W|| <= |nabla W|`, a robust longitudinal/time-thickening gives an order-one normalized palinstrophy packet.
-
-If `beta_m` is the parent-time fraction occupied by such a bottleneck, M17-307 forces
-
-\[
-\boxed{
-\sum_m\beta_mR_m<\infty.
-}
-\]
-
-Thus persistent finite-thickness low-amplitude separators are very expensive: survival requires time occupancy much thinner than the record-linear threshold, transverse geometry degeneration, loss of substantial high-amplitude flux, or chart/genealogy loss.
-
-## 12. M17-448 transverse spectral-gap frontier
-
-Let `C_{P,m}` be the transverse Poincare constant.
-
-Under a bi-Lipschitz map `F:A_0 -> A_m` with singular values `m <= s_i <= M`,
-
-\[
-C_P(A_m)
-\le
-C_{P,0}\frac{M^4}{m^2}.
-\]
-
-For a material cross-section transported with deformation
-
-\[
-K_I=\int_I\|\Sigma\|_\infty dt,
-\]
-
-one may take `M <= e^{K_I}`, `m >= e^{-K_I}`, hence
-
-\[
-\boxed{
-C_P(A_m)
-\le
-C_{P,0}e^{6K_I}.
-}
-\]
-
-Thus Poincare-gap collapse is genuine bi-Lipschitz/neck/topology geometry decompactification.
-
-M17-447 refined with `C_{P,m}` gives ancestry cost
+Then the M17-447/448 bottleneck ancestry becomes
 
 \[
 \boxed{
 \mathcal P_{anc,m}
 \gtrsim
-\beta_m\frac{R_m}{C_{P,m}}.
+\frac{\beta_m}{S_m\Pi_m}.
 }
 \]
 
-For uniform positive bottleneck time fraction, surviving geometric records requires roughly
+Thus a persistent separator survives only through extra transverse size growth `S_m`, scale-free shape/spectral degeneration `Pi_m`, separator-time thinning, high-amplitude flux loss, or chart/topology/genealogy loss.
+
+Record-linear `C_P` growth alone is not a neck theorem.
+
+## 9. M17-450 bounded enstrophy forces baseline transverse broadening
+
+For
 
 \[
-\boxed{C_{P,m}\gtrsim R_m}
+\Omega_R(y,s)=R^2\Omega(Ry,R^2s),
 \]
 
-up to borderline corrections.
-
-But this record-linear spectral-gap degeneration only forces
+M5-475 gives, on every fixed compact normalized time window,
 
 \[
-K_m\gtrsim c\log R_m,
+\boxed{
+\|\Omega_R(s)\|_2^2\le E_I
+}
 \]
 
-which is compatible with the standard-energy geometric weight. Hence it is an explicit geometry frontier, not a contradiction.
+uniformly in large `R`.
 
-## 13. Current narrow late-CE-H frontier after M17-448
+For a coherent loop with
+
+\[
+\ell_R\ge c_\ell R,
+\qquad
+\Phi_R\ge\Phi_*>0,
+\]
+
+Cauchy--Schwarz gives
+
+\[
+\Phi_R^2\le\mathfrak A_R(z)Q_R(z),
+\qquad
+Q_R(z)=\int_{A_z}\rho_R^2dA.
+\]
+
+Define harmonic-mean area
+
+\[
+\mathfrak A_{H,R}
+:=
+\left(
+\frac1{\ell_R}\int_{\Gamma_R}\mathfrak A_R(z)^{-1}dz
+\right)^{-1}.
+\]
+
+Then
+
+\[
+\boxed{
+\mathfrak A_{H,R}\gtrsim cR.
+}
+\]
+
+Hence the natural transverse participation radius is
+
+\[
+\boxed{
+\Lambda_{\perp,H}\gtrsim R^{1/2}.
+}
+\]
+
+So `C_P ~ R` with bounded `Pi` can be ordinary enstrophy-forced isotropic broadening.
+
+## 10. M17-451--452 fixed-amplitude sparsity and flux-arclength probability
+
+For fixed amplitude threshold `a>0`, let
+
+\[
+\eta_a(z)
+=
+\frac1{\Phi_R}
+\int_{A_z\cap\{\rho_R\ge a\}}\rho_RdA.
+\]
+
+Then
+
+\[
+\boxed{
+\int_{\Gamma_R}\eta_a(z)dz
+\lesssim
+\frac{E_I}{a\Phi_*}.
+}
+\]
+
+Thus fixed-amplitude positive-flux good arclength is `O(1)` while the whole loop is `O(R)`.
+
+Define the tube flux-arclength probability
+
+\[
+\boxed{
+d\mu_R
+:=
+\frac{\rho_R\,dA\,dz}{\ell_R\Phi_R}.
+}
+\]
+
+Then
+
+\[
+\boxed{
+\mathbb E_{\mu_R}[\rho_R]
+\lesssim
+\frac{C}{R}.
+}
+\]
+
+Therefore
+
+\[
+\boxed{
+\mu_R\!\left(\rho_R\ge\frac{L}{R}\right)
+\le\frac{C}{L}.
+}
+\]
+
+The minimal diffuse-flux scaling is consequently
+
+\[
+\boxed{
+\ell_R\sim R,
+\qquad
+\mathfrak A_R\sim R,
+\qquad
+\rho_{flux}\sim R^{-1},
+\qquad
+\Lambda_\perp\sim R^{1/2}.
+}
+\]
+
+This is mesoscopic between own scale and parent scale.
+
+## 11. M17-453 resource priority on the diffuse baseline
+
+For the minimal diffuse scaling,
+
+\[
+E_R^{snap}\sim1.
+\]
+
+If `|kappa_R|~1`, then snapshot raw-`H2` is also `O(1)`. Persistence for `O(R^2)` own-time units costs
+
+\[
+R^{-3}\cdot R^2=R^{-1},
+\]
+
+which is summable on geometric records.
+
+The `R^-5` coefficient-gradient ledger is even less restrictive.
+
+But if own-scale palinstrophy coercivity captures a fixed active fraction, then
+
+\[
+R^{-1}\cdot R^2=R,
+\]
+
+which is impossible across growing records.
+
+Therefore the diffuse survivor must avoid own-scale palinstrophy coercivity on almost all active spacetime, returning the frontier to the M17-383/428 frequency/boundary firewall.
+
+## 12. M17-454 wide-cutoff negative-kappa coercivity
+
+Suppose a negative coefficient sub-tube satisfies
+
+\[
+\kappa_R\le-\kappa_*<0
+\]
+
+on a region with core enstrophy
+
+\[
+\int_{U_R^{core}}\rho_R^2dx\ge e_*>0
+\]
+
+and transverse separation from the sign-region boundary
+
+\[
+L_R\to\infty.
+\]
+
+Choose a cutoff with
+
+\[
+|\nabla\eta_R|\lesssim L_R^{-1}.
+\]
+
+Then exact CE-H integration by parts gives
+
+\[
+\boxed{
+\int\eta_R^2|\nabla\Omega_R|^2dx
+\ge
+\frac23\kappa_*e_*
+-
+CE_IL_R^{-2}.
+}
+\]
+
+Hence for large `R`,
+
+\[
+\boxed{P_R\ge c_*>0.}
+\]
+
+If this state persists for parent-time fraction `beta_R`, M17-307 gives
+
+\[
+\boxed{
+\mathcal P_{anc,R}
+\gtrsim
+c_*\beta_RR.
+}
+\]
+
+Thus a mesoscopically thick negative-`kappa` enstrophy core cannot persist with positive time density.
+
+## 13. M17-455 exact global sign compensation
+
+On whole-space exact CE-H define
+
+\[
+K_-:=\int\kappa_-\rho^2dx,
+\qquad
+K_+:=\int\kappa_+\rho^2dx.
+\]
+
+The global identity gives
+
+\[
+\boxed{
+P=K_--K_+,
+\qquad
+K_-\ge K_+.
+}
+\]
+
+Consider a diffuse positive-flux carrier with
+
+\[
+\kappa\ge\kappa_*>0
+\]
+
+and area upper bound
+
+\[
+\mathfrak A_R\lesssim RS_R.
+\]
+
+Flux and length give
+
+\[
+E_{carrier,R}\gtrsim c/S_R,
+\]
+
+so
+
+\[
+\boxed{
+K_+\gtrsim c/S_R,
+\qquad
+K_-\gtrsim c/S_R.
+}
+\]
+
+For baseline size `S_R=O(1)`, every positive-`kappa` diffuse carrier therefore forces a fixed compensating negative-`kappa` weighted enstrophy mass somewhere in the whole profile.
+
+If that negative mass is mesoscopically thick, M17-454 closes it. Survival pushes the compensation toward thin/localized/fragmented regions, near-zero coefficient, time thinning, high-jet/interface loss, or forces extra transverse size dilution `S_R->infinity`.
+
+## 14. Current narrow late-CE-H frontier after M17-455
+
+The late retained CE-H survivor has been compressed to a **diffuse mesoscopic positive-flux carrier** plus explicit exits:
 
 \[
 \boxed{
 \begin{aligned}
 &G_{positive\ flux\ thinning},\\
-&G_{summable\ flux\text{-}weighted\ normalized\ amplitude\ collapse},\\
-&G_{cumulative\ coefficient\text{-}action\ redistribution},\\
-&G_{low\text{-}amplitude\ separator\ time\ thinning},\\
-&G_{record\text{-}linear\ transverse\ spectral\text{-}gap/neck\ degeneration},\\
-&G_{high\text{-}amplitude\ flux\ participation\ loss},\\
+&G_{extra\ transverse\ size\ dilution}\;(S_R\to\infty),\\
+&G_{scale\text{-}free\ transverse\ shape/spectral\ degeneration}\;(\Pi_R\to\infty),\\
+&G_{coefficient\text{-}action/flux\text{-}measure\ redistribution},\\
+&G_{negative\text{-}kappa\ weighted\ mass\ confined\ to\ thin/localized\ structures},\\
+&G_{near\text{-}zero/rapid\ sign\ fragmentation},\\
+&G_{separator/good\text{-}time\ thinning},\\
 &G_{normalized\ high\text{-}jet/scale\ mismatch},\\
 &G_{normal\ chart/topology\ loss},\\
 &G_{parent\text{-}to\text{-}record\ scale\text{-}map/genealogy\ failure},\\
@@ -460,9 +545,9 @@ which is compatible with the standard-energy geometric weight. Hence it is an ex
 }
 \]
 
-The next narrow target is to test whether record-linear spectral-gap degeneration can coexist with the positive-flux, material-volume, parent-length and analytic coefficient-scale constraints without forcing either amplitude/nodal loss or a separately budgeted topology/curvature event.
+The highest-value next target is the compensating negative mass: determine whether fixed weighted negative enstrophy can remain confined to own-scale/thin structures across a mesoscopic diffuse carrier without forcing coefficient-gradient, zero-corridor, or local-frequency payments on a nonsummable set.
 
-## 14. Separate inherited OPEN dependencies
+## 15. Separate inherited OPEN dependencies
 
 Still OPEN:
 
@@ -470,11 +555,11 @@ Still OPEN:
 - non-CE-H roots `CP-E`, `CP-S`, `CE-T`, `Migration`;
 - parent-to-M17 scale-map/domain/genealogy persistence;
 - positive-flux thinning;
-- summable flux-weighted amplitude collapse and cumulative coefficient-action redistribution;
-- record-linear transverse spectral-gap/neck degeneration and sparse bottleneck time occupancy;
+- extra transverse size dilution and scale-free spectral-shape degeneration;
+- thin/localized negative compensation and near-zero/sign fragmentation;
 - normalized high-jet and jet-scale/record-scale decompactification;
 - normal-chart/topology/interface/rank/domain exits;
-- completeness of the path from an arbitrary hypothetical singularity into retained CE-H scenarios.
+- completeness of the route from an arbitrary hypothetical singularity into the retained CE-H scenarios.
 
 \[
 \boxed{\text{GLOBAL 3D NAVIER--STOKES REGULARITY REMAINS UNPROVED.}}
