@@ -1,7 +1,7 @@
 # Current Canonical Frontier
 
 Date: 2026-09-10  
-Current late-CE-H tip: **M17-469**  
+Current late-CE-H tip: **M17-482**  
 Status: **AUTHORITATIVE REPOSITORY NAVIGATION / STATUS INDEX**
 
 For detailed late-CE-H formulas, corrections, and module-by-module provenance, `DSD_CANONICAL_MODULES/M17/CURRENT_FRONTIER.md` is authoritative.
@@ -73,41 +73,22 @@ D_t\kappa=L_\rho\kappa+L_\rho\sigma+\mathcal R_{\rm geom},
 D_t\Omega=(\sigma+\nu\kappa)\Omega.
 \]
 
-Whole-space exact CE-H also gives
+Whole-space exact CE-H gives
 \[
-\boxed{
-P:=\|\nabla\Omega\|_2^2
+P=\|\nabla\Omega\|_2^2
 =-\int\kappa|\Omega|^2dx
 =K_--K_+\ge0.
-}
 \]
 
-## 4. Diffuse-carrier and sign-compensation reduction through M17-458
+## 4. Diffuse-carrier and sign-compensation status
 
-M17-449 separates transverse size from scale-free shape/spectral degeneration:
+M17-449 separates transverse size from scale-free shape:
 \[
 C_P=\mathfrak A\Pi.
 \]
+M17-450--458 reduce the retained diffuse positive-flux branch to sign compensation, palinstrophy/raw-H2 ledgers, transverse dilution/shape degeneration, remote or thin negative compensation, good-time thinning, and genealogy/interface exits.
 
-M17-450--452 identify the baseline diffuse positive-flux carrier
-\[
-\ell_R\sim R,
-\qquad
-\mathfrak A_R\gtrsim R,
-\qquad
-r_{\perp,R}\gtrsim R^{1/2},
-\qquad
-\rho_{\rm flux}=O(R^{-1}).
-\]
-
-M17-455 forces global negative weighted compensation for positive-\(\kappa\) mass. M17-456 keeps remote compensation as an explicit OPEN exit; M17-457 classifies bounded-width moderate-negative interfaces by palinstrophy versus coefficient-gradient cost. M17-458 shows that retained good record windows require increasingly accurate
-\[
-K_-\approx K_+,
-\qquad
-P\ll1.
-\]
-
-## 5. Exact sign-moment architecture: M17-459--465
+## 5. Exact sign-moment architecture and common-mode reconstruction
 
 Define
 \[
@@ -117,134 +98,207 @@ Q_\pm=\int\kappa_\pm^2\rho^2dx,
 \qquad
 H_{\rm raw}=Q_++Q_-.
 \]
-
-The regular zero current is
+The zero current is
 \[
-\boxed{
-J_0=\int\rho^2\delta(\kappa)|\nabla\kappa|^2dx
-=\int_{\{\kappa=0\}}\rho^2|\nabla\kappa|dS\ge0.
-}
+J_0=\int_{\{\kappa=0\}}\rho^2|\nabla\kappa|dS.
 \]
-
-M17-459 fixes the Kato sign and gives
+M17-459--466 give
 \[
-\boxed{
-\dot A+2J_0=-2C_{0\sigma}+G_A+2S_A+2\Delta Q,
-}
+\dot A+2J_0
+=-2C_{0\sigma}+2G_{\rm cm}+2S_A+2\Delta Q,
 \]
-\[
-\boxed{
-\dot P+2H_{\rm raw}=G_D+2S_D.
-}
-\]
-
-M17-460 keeps the zero-level strain trace behind a trace/high-jet firewall unless finite-jet thickening is available. M17-461 interprets \(\Delta Q\) as sign-dependent coefficient-scale separation. M17-462 sends persistent strain-weighted first moment to raw-\(H^2\). M17-463 forbids guessing the termwise formula of \(\mathcal R_{\rm geom}\). M17-464 classifies the sign-odd geometry channel by endpoint palinstrophy plus raw-\(H^2\). M17-465 isolates the sign-even common mode \(G_{\rm cm}\).
-
-## 6. Common-mode collapse: M17-466--469
-
-M17-466 reconstructs the common mode exactly from the balance:
 \[
 \boxed{
 2G_{\rm cm}
 =\dot A+2J_0+2C_{0\sigma}-2S_A-2\Delta Q.
 }
 \]
-Thus \(G_{\rm cm}\) is not an independent interval-integrated terminal payer, even though its termwise provenance remains unverified.
+Thus interval-integrated common-mode source return is reconstructible from already typed terms, even though M17-463 keeps the termwise formula of \(\mathcal R_{\rm geom}\) behind a provenance firewall.
 
-M17-467 audits the certified rescaling
+## 6. Ancestry threshold firewall
+
+M17-467 gives cubic scaling for the full \(A\)-balance spacetime terms. M17-468 gives
 \[
-\Omega_R(y,s)=R^2\Omega(Ry,R^2s),
-\qquad
-\kappa_R=R^2\kappa.
+|\Delta Q|\le H_{\rm raw}.
 \]
-It gives
-\[
-A_R=R^3A
-\]
-and every instantaneous source/sink in the \(A\)-balance scales as \(R^5\). Hence all spacetime terms have cubic ancestry:
+M17-473 fixes the exact non-reusable divergence tests:
 \[
 \boxed{
-\mathcal L_R^{\rm normalized}=R^3\mathcal L^{\rm parent}.
+\sum_mR_m^{-3}Q_m=\infty
+\quad\text{for raw-}H^2,
 }
 \]
-A fixed normalized payment therefore corresponds to \(R^{-3}\) in the parent and remains summable on geometric record scales.
-
-M17-468 observes the exact domination
 \[
 \boxed{
-|\Delta Q|\le Q_++Q_-=H_{\rm raw}.
+\sum_mR_m^{-1}Q_m=\infty
+\quad\text{for palinstrophy}.
 }
 \]
-Thus sign-scale dispersion remains a structural diagnostic but not an independent absolute payer or a dynamic migration theorem.
+For geometric records, fixed normalized cost and logarithmic/polynomial-in-record-index multiplicity remain summable.
+
+## 7. Endpoint and enstrophy temporal thickening
 
 M17-469 gives
 \[
+A^2\le EH_{\rm raw}.
+\]
+M17-475 proves the one-sided raw-H2 growth bound
+\[
+H'\le C_1M_\rho H+C_2E^{1/8}H^{11/8},
+\]
+which converts endpoint \(H\)-spikes into positive spacetime raw-H2 thickness under bounded enstrophy/amplitude and a backward same-branch window.
+
+M17-477 gives the recordwise endpoint payment
+\[
 \boxed{
-A^2\le E\,H_{\rm raw},
-\qquad
-E=\int|\Omega|^2dx.
+q_m^H
+\gtrsim
+\frac{a_m^2}{E_m^*}
+\min\left\{
+\tau_m,
+\frac{1}{M_m^*+a_m^{3/4}(E_m^*)^{-1/4}}
+\right\}.
 }
 \]
-Therefore endpoint \(A\)-growth under bounded enstrophy is an instantaneous raw-\(H^2\) spike. Converting that snapshot spike into a spacetime charge requires an additional temporal-thickening/high-jet theorem.
 
-## 7. Current narrow late-CE-H frontier
+M17-479 proves the lower-derivative enstrophy growth bound
+\[
+E'\le CE^{9/8}H^{3/8},
+\]
+and hence an \(e/2\to e\) crossing over duration \(\delta\) satisfies
+\[
+\boxed{
+\int Hdt\gtrsim e^{-1/3}\delta^{-5/3}.
+}
+\]
+High enstrophy therefore splits into persistent occupation, raw-H2 time concentration, or loss of backward persistence/genealogy.
 
-The common-mode source-return branch now reduces to
+## 8. Low-frequency firewall
+
+M17-478 identifies the exact missing low-frequency norm:
+\[
+\boxed{
+\|u\|_2^2=\|\Omega\|_{\dot H^{-1}}^2=:B_{-1},
+\qquad
+E^2\le B_{-1}P.
+}
+\]
+If genealogy independently certifies
+\[
+B_{-1,m}\lesssim R_m^{-1},
+\]
+then M17-307 yields the conditional unweighted record ledger
+\[
+\boxed{
+\sum_m\int E_m(s)^2ds<\infty.
+}
+\]
+This cannot be imported automatically into the first-generation ancient family: high-frequency vorticity bounds do not control the low-frequency velocity tail.
+
+## 9. Compact common-mode collapse
+
+M17-470--476 absorb regular zero current, zero-level strain trace, sign-scale dispersion, strain-weighted first moment, and endpoint first moment into existing raw-H2/palinstrophy ledgers under record-uniform compactness and persistence.
+
+Hence
+\[
+\boxed{
+G_{\rm cm}^{\rm compact,persistent}
+\Longrightarrow
+G_{\rm raw-H^2}^{\rm fixed\ spacetime}
+\lor
+G_P^{\rm fixed\ spacetime}.
+}
+\]
+This closes the compact **classification**, not the ancestry contradiction; fixed normalized charges remain \(R^{-3}\) or \(R^{-1}\) summable.
+
+## 10. Zero-level transport and partition firewall
+
+M17-480--482 use the regular level-set transport
+\[
+V=\frac{\nabla\kappa}{|\nabla\kappa|^2}
+\]
+to control
+\[
+F(s)=\int_{\{\kappa=s\}}\rho^2|\nabla\kappa|dS.
+\]
+The exact variation simplifies to
+\[
+\boxed{
+F'(s)
+=
+\int_{\Sigma_s}
+\left[
+2\rho\partial_n\rho
++\rho^2\frac{\Delta\kappa}{|\nabla\kappa|}
+\right]dS.
+}
+\]
+Under weighted relative normal-variation control,
+\[
+|F'|\le L_wF,
+\]
+so
+\[
+\boxed{
+e^{-L_w|s|}J_0\le F(s)\le e^{L_w|s|}J_0.}
+\]
+With \(|\nabla\kappa|\le G_*\),
+\[
+\boxed{
+H_{0,\delta}
+\ge
+\frac23G_*^{-2}e^{-L_w\delta}\delta^3J_0.
+}
+\]
+Arbitrary patch/chart fragmentation is therefore not a canonical payer. Mean curvature is not an independent variation term inside an existing regular tube.
+
+## 11. Current narrow late-CE-H frontier
+
+The surviving common-mode exits are now
 \[
 \boxed{
 \begin{aligned}
-G_{\rm cm}^{\rm interval}
+G_{\rm cm}
 \Longrightarrow{}&
-G_{J_0}\\
-&\lor G_{\rm zero\text{-}trace/high\text{-}jet}\\
-&\lor G_{\rm raw\text{-}H^2}^{\rm cubic\ ancestry\ summable}\\
-&\lor G_{E\text{-decompactification}}\\
-&\lor G_{\rm endpoint\ raw\text{-}H^2\ spike\ without\ temporal\ thickening}.
+G_{\rm raw-H^2}^{R^{-3}}\\
+&\lor G_P^{R^{-1}}\\
+&\lor G_{E\text{ persistent/time-concentrated/low-frequency}}\\
+&\lor G_{\rho_\infty\text{-decompactification}}\\
+&\lor G_{\partial_n\rho\text{ relative-jet/nodal}}\\
+&\lor G_{\Delta\kappa/|\nabla\kappa|^2\text{-decompactification}}\\
+&\lor G_{|\nabla\kappa|\to0\text{ or }\infty}\\
+&\lor G_{\rm tube/reach/interface/domain/genealogy\ loss}.
 \end{aligned}
 }
 \]
 
-The wider diffuse CE-H survivor still retains the explicit exits:
+The wider diffuse CE-H survivor still retains positive-flux thinning, extra transverse size dilution, scale-free spectral/shape degeneration, remote/thin negative compensation, good-time thinning, jet-scale/record-scale mismatch, normal-chart/topology loss, and all parent-to-record/interface/rank/domain exits not closed by prior modules.
 
-- positive-flux thinning;
-- extra transverse size dilution;
-- scale-free transverse shape/spectral degeneration;
-- remote negative compensation;
-- thin/localized moderate-negative interface;
-- coefficient-gradient quintic firewall;
-- good-time thinning;
-- normalized high-jet/scale mismatch;
-- normal-chart/topology loss;
-- parent-to-record scale-map/genealogy failure;
-- interface/rank/domain loss.
+## 12. Immediate target
 
-## 8. Immediate target
-
-The narrowest algebraically independent common-mode object is now
+The nearest clean target is the amplitude-normal term
 \[
-J_0=\int_{\{\kappa=0\}}\rho^2|\nabla\kappa|dS.
+2\rho\partial_n\rho=\partial_n(\rho^2).
 \]
+The next audit should test whether existing derivative ledgers control it in the **weighted partition-safe form required by M17-481**, or whether the ratio near \(\rho=0\) leaves a genuine nodal/amplitude-relative-jet decompactification branch.
 
-The next audit is to determine whether regular zero-current can be thickened into a near-zero coefficient slab under an explicit record-uniform finite-jet hypothesis, while distinguishing bulk palinstrophy/raw-\(H^2\), coefficient-gradient/high-jet payment, zero-tube geometry loss, and mere cubic ancestry summability.
+Recovery of the verified termwise M17-339 formula for \(\mathcal R_{\rm geom}\) remains a separate provenance task; M17-463 forbids guessing it.
 
-Recovery of the verified termwise M17-339 formula for \(\mathcal R_{\rm geom}\) remains a separate provenance task. No termwise formula is to be guessed.
-
-## 9. DSD scope
+## 13. DSD scope
 
 DSD is used only for representation audits, variable selection, payer-equivalence checks, failure typing, and branch compression. It is not a Navier--Stokes hypothesis or a substitute for PDE estimates.
 
-## 10. Repository-wide OPEN dependencies
+## 14. Repository-wide OPEN dependencies
 
 Still OPEN:
 
 - ROOT-CERT recertification;
 - CP-E, CP-S, CE-T, Migration;
 - parent-to-M17 scale-map/domain/genealogy persistence;
-- positive-flux thinning and diffuse-carrier exits;
-- remote/thin negative compensation;
-- zero-current/trace/high-jet and temporal-thickening debts;
-- normalized jet-scale/record-scale decompactification;
-- normal-chart/topology/interface/rank/domain exits;
+- low-frequency \(\dot H^{-1}\) genealogy/tightness;
+- amplitude-relative and coefficient-jet/critical-level exits;
+- positive-flux thinning and diffuse-carrier geometry exits;
+- normal-chart/topology/interface/rank/domain loss;
 - completeness of the path from an arbitrary hypothetical singularity into retained CE-H scenarios.
 
 \[
