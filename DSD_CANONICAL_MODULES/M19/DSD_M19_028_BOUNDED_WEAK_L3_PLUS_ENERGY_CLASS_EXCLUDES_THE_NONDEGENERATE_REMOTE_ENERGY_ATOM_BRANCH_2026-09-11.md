@@ -21,11 +21,7 @@ The present module asks whether this is compatible with the bounded weak-\(L^3\)
 
 ## 2. Assume bounded weak-L3 near the first singular time
 
-Suppose that on a terminal interval
-
-\[
-[t_0,T_*),
-\]
+Suppose that on a terminal interval \([t_0,T_*)\),
 
 \[
 \boxed{
@@ -42,26 +38,23 @@ Navier--Stokes scaling preserves the weak-\(L^3\) norm, so this is exactly the p
 The finite-energy identity gives
 
 \[
-\int_{t_0}^{T_*}
-\|\nabla u(t)\|_2^2dt<\infty.
+\int_{t_0}^{T_*}\|\nabla u(t)\|_2^2dt<\infty.
 \]
 
 Sobolev gives
 
 \[
-\|u(t)\|_6
-\lesssim
-\|\nabla u(t)\|_2.
+\|u(t)\|_6\lesssim\|\nabla u(t)\|_2.
 \]
 
 Therefore
 
 \[
 \boxed{
-u_placeholder}
+u_in_L2L6}
 \]
 
-where the placeholder is to be read as
+with the notation meaning simply
 
 \[
 \boxed{u\in L^2(t_0,T_*;L^6(\mathbb R^3)).}
@@ -75,9 +68,7 @@ The standard Lorentz interpolation inequality gives
 \boxed{
 \|f\|_4
 \le
-C
-\|f\|_{L^{3,\infty}}^{1/2}
-\|f\|_6^{1/2}.
+C\|f\|_{L^{3,\infty}}^{1/2}\|f\|_6^{1/2}.
 }
 \]
 
@@ -101,36 +92,33 @@ This is strictly inside the classical energy-equality regime.
 
 For Leray--Hopf solutions, the classical Lions--Shinbrot energy-equality criterion applies to the \(L^4_tL^4_x\) class. Thus the kinetic-energy balance has no anomalous loss at \(T_*\).
 
-Equivalently, if
+If
 
 \[
-u_placeholder_2
+u_weak_to_terminal}
 \]
 
-where the placeholder is to be read as
+is read as
 
 \[
-u(t)\rightharpoonup u(T_*)
-\]
+u(t)\rightharpoonup u(T_*)\]
 
-with the leading symbol interpreted as \(u(t)\), then weak convergence in \(L^2\) and energy equality give
+with the leading field symbol equal to \(u(t)\), then energy equality yields
 
 \[
 \boxed{
-\|u(t)\|_2
-\to
-\|u(T_*)\|_2
+\|u(t)\|_2\to\|u(T_*)\|_2
 \qquad(t\uparrow T_*).
 }
 \]
 
-Weak convergence plus convergence of the Hilbert norm gives
+Weak convergence plus convergence of the Hilbert norm therefore gives
 
 \[
 \boxed{u(t)\to u(T_*)\quad\text{strongly in }L^2.}
 \]
 
-Thus the terminal kinetic-energy measure is absolutely continuous:
+Thus
 
 \[
 |u(t)|^2dx
@@ -138,7 +126,7 @@ Thus the terminal kinetic-energy measure is absolutely continuous:
 |u(T_*)|^2dx,
 \]
 
-and has no atom.
+and the terminal kinetic-energy measure has no atom.
 
 This is also consistent with the peer-reviewed energy-measure results of Leslie--Shvydkoy, which exclude atomic concentration under suitable strict \(L^q_tL^p_x\) conditions.
 
@@ -185,9 +173,7 @@ Hence the nondegenerate Type-II remote branch is removed from the bounded-W1 cor
 The genuinely independent remote survivor is now forced toward
 
 \[
-\boxed{
-\Lambda_j\to0
-}
+\boxed{\Lambda_j\to0}
 \]
 
 or toward an already typed weak-\(L^3\)/critical-tail compactness loss.
@@ -196,17 +182,11 @@ This is stronger than M19-025 alone: under W1 compactness, the terminal energy a
 
 ## 8. Scope firewall
 
-This module does **not** prove a global bound on
-
-\[
-\|u(t)\|_{L^{3,\infty}}
-\]
-
-for an arbitrary hypothetical singular solution.
+This module does **not** prove a global bound on \(\|u(t)\|_{L^{3,\infty}}\) for an arbitrary hypothetical singular solution.
 
 Therefore it does not close the full remote root.
 
-It proves the conditional implication
+It proves only
 
 \[
 \boxed{
