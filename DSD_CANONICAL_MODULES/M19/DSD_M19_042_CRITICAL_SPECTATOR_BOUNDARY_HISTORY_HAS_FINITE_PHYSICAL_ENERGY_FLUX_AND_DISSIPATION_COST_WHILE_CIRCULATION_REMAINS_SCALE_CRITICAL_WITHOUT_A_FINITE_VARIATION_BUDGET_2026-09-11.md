@@ -83,7 +83,7 @@ The physical boundary area satisfies
 
 ## 3. Kinetic energy in a fixed similarity annulus vanishes
 
-Take a fixed similarity annulus \(R_0<|y|<2R_0\).  Its physical volume is
+Take a fixed similarity annulus \(R_0<|y|<2R_0\). Its physical volume is
 
 \[
 \sim \tau^{3/2}R_0^3.
@@ -109,7 +109,7 @@ Persistent order-one similarity amplitude does not create a fixed physical-energ
 
 ## 4. Convective and pressure energy flux are time integrable
 
-The convective kinetic-energy flux density scales as \(|u|^3\).  Through the spectator sphere,
+The convective kinetic-energy flux density scales as \(|u|^3\). Through the spectator sphere,
 
 \[
 \Phi_{conv}(t)
