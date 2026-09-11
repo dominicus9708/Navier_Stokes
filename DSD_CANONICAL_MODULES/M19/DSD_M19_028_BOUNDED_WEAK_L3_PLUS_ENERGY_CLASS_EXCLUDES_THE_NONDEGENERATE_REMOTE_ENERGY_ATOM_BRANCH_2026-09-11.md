@@ -50,13 +50,6 @@ Sobolev gives
 Therefore
 
 \[
-\boxed{
-u_in_L2L6}
-\]
-
-with the notation meaning simply
-
-\[
 \boxed{u\in L^2(t_0,T_*;L^6(\mathbb R^3)).}
 \]
 
@@ -95,15 +88,10 @@ For Leray--Hopf solutions, the classical Lions--Shinbrot energy-equality criteri
 If
 
 \[
-u_weak_to_terminal}
+u(t)\rightharpoonup u(T_*)
 \]
 
-is read as
-
-\[
-u(t)\rightharpoonup u(T_*)\]
-
-with the leading field symbol equal to \(u(t)\), then energy equality yields
+is read with the leading field symbol equal to \(u(t)\), then energy equality yields
 
 \[
 \boxed{
