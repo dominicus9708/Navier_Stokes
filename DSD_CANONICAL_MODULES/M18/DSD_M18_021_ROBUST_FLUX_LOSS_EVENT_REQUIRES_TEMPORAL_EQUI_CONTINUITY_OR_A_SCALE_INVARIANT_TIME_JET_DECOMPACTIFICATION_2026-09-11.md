@@ -94,7 +94,7 @@ F(s,t)\le\theta_+J(t)
 At every \(t\in\mathcal A_{\theta_+}\), continuity in the coefficient level and
 
 \[
-F(0,t)=J(t)>	heta_+J(t)
+F(0,t)=J(t)>\theta_+J(t)
 \]
 
 give a first level \(\ell(t)\) satisfying
@@ -347,10 +347,10 @@ is refined to
 \begin{aligned}
 G_{\rm active\text{-}time\ thinning}
 \Longrightarrow{}&
-G_{\rm temporal\ flux\text{-}shape\ jet}\
-&\lor G_{\rm margin\ loss/tangency}\
-&\lor G_{J\text{-}floor\ loss}\
-&\lor G_{\rm tube/regular\ level\ loss}\
+G_{\rm temporal\ flux\text{-}shape\ jet}\\
+&\lor G_{\rm margin\ loss/tangency}\\
+&\lor G_{J\text{-}floor\ loss}\\
+&\lor G_{\rm tube/regular\ level\ loss}\\
 &\lor G_{\rm same\text{-}branch/genealogy\ window\ loss}.
 \end{aligned}
 }
@@ -374,19 +374,9 @@ A fixed coefficient level \(\Sigma_s(t)\) is transported by
 \[
 \boxed{
 w
-:=
-u
--\frac{h}{g^2}\nabla\kappa
-=
-u-rac hg n,
+=u-\frac{h}{g^2}\nabla\kappa
+=u-\frac hg n.
 }
-\]
-
-where here \(\nu\) in the displayed velocity symbol is **not viscosity**; to avoid ambiguity, immediately rename the physical velocity field as \(u\):
-
-\[
-\boxed{
-w=u-\frac hg n.}
 \]
 
 Indeed,
@@ -412,7 +402,7 @@ On exact CE-H,
 D_t\rho=(\sigma+\nu\kappa)\rho,
 \]
 
-where \(\nu>0\) is now the viscosity.
+where \(\nu>0\) is the viscosity.
 
 Also
 
