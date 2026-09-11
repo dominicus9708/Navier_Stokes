@@ -137,8 +137,7 @@ This common-node requirement is essential: allowing a different `potential of i`
 By linearity, decompose
 
 \[
-\boxed{
-u=u^{const}+u^{mode}+u^{src}.}
+\boxed{u=u^{const}+u^{mode}+u^{src}.}
 \]
 
 The constant component is the homogeneous connector solution with constant endpoint data:
