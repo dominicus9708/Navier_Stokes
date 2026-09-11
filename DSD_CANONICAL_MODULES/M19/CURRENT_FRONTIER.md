@@ -1,6 +1,7 @@
 # M19 Current Frontier
 
 **Date:** 2026-09-11  
+**Current tip:** **M19-004**  
 **Status:** ACTIVE CALCULATION / CLOSURE LINE
 
 \[
@@ -15,102 +16,176 @@ M19 is the active calculation family.
 
 M19 may use M18 results only at the certification level actually established there.
 
-The standing workflow is
-
 \[
 \boxed{
 \text{M18 certified analysis}
 \Longrightarrow
 \text{M19 calculation}
 \Longrightarrow
-\text{closure or a precisely exposed new defect}.
+\text{closure or a precisely exposed defect}.
 }
 \]
 
-## 2. First calculation complex
+## 2. M19-001--004: finite CE-H population-current calculation
 
-The first M19 calculation complex is the compact CE-H finite-population redistribution problem.
+For the material-population amplitude potential
 
-M18 provides, for a material population interface \(S_{ij}\),
+\[
+u_p=\rho^p/p,
+\]
+
+M18 gives the interface current
 
 \[
  e_{ij}^{(p)}
  =
- \int_{S_{ij}}
- \rho^{p-1}\partial_{n_i}\rho\,dS
- =
- \int_{S_{ij}}
- \partial_{n_i}u_p\,dS,
+ \int_{S_{ij}}\partial_{n_i}u_p\,dS,
  \qquad
- u_p:=\frac{\rho^p}{p}.
-\]
-
-It also provides antisymmetry
-
-\[
  e_{ij}^{(p)}=-e_{ji}^{(p)}.
 \]
 
-The continuum mechanism is gradient diffusion, but the finite lineage graph can carry a cycle-space current after coarse graining.
-
-The immediate task is to calculate exactly what part of the coarse current is a symmetric conductance gradient and what part requires unresolved boundary modes, bulk forcing, or geometry loss.
-
-## 3. M19-001 target
-
-On a controlled connector collar between two persistent populations, construct the Laplace/Poisson Dirichlet-to-Neumann decomposition
+M19-001 performs the connector Dirichlet-to-Neumann reduction:
 
 \[
 \boxed{
- j_{ij}
- =
- G_{ij}(V_i-V_j)
- +r_{ij}^{mode}
- +r_{ij}^{src},
+\bar j
+=
+\bar G B^T\bar V
++r^{pump}
++\bar r^{mode}
++\bar r^{src}.
 }
+\]
+
+A fixed symmetric conductance gradient cannot alone support a nonzero conservative cycle.
+
+M19-002 applies the weighted graph Hodge projection. On
+
+\[
+B\bar j=0,
+\]
+
+\[
+\boxed{
+\|\bar j\|_{\bar G^{-1}}
+\le
+\|r^{pump}+\bar r^{mode}+\bar r^{src}\|_{\bar G^{-1}}.
+}
+\]
+
+Thus every fixed nonzero cycle has a fixed non-gradient defect.
+
+M19-003 descends two defects:
+
+\[
+G_{boundary\ mode}
+\to
+G_{palinstrophy/interface},
+\]
+
+and, using CE-H,
+
+\[
+\boxed{
+\Delta u_p
+=
+\rho^p(\kappa+G_p),
+\qquad
+G_p=(p-1)|\nabla\log\rho|^2+|\nabla\xi|^2.
+}
+\]
+
+Hence the bulk-source branch returns to coefficient + normalized diffusion structure.
+
+M19-004 differentiates the connector capacity. On the fixed material pullback,
+
+\[
+G'
+=
+\int_C\nabla h\cdot A'\nabla h,
 \]
 
 with
 
 \[
-G_{ij}=G_{ji}>0.
+A=JF^{-1}F^{-T},
 \]
 
-Then prove that a divergence-free finite-network current cannot be supported solely by the conductance-gradient part.
-
-## 4. M19-002 target
-
-Use weighted discrete Hodge orthogonality to prove a quantitative defect floor:
+and
 
 \[
 \boxed{
-\|j_{cycle}\|_{G^{-1}}
-\le
-\|r\|_{G^{-1}}.
+A'
+=JF^{-1}\left(\frac12I-2\Sigma\right)F^{-T}.
 }
 \]
 
-Thus any fixed nonzero conservative cycle forces a fixed non-gradient defect.
+Thus conductance pumping is strain/geometry modulation, not an independent graph currency.
 
-## 5. Later calculation complexes
-
-After the CE-H current-cycle calculation, M19 must return to the three M18 upstream roots:
+Therefore the finite-network cycle recompresses to
 
 \[
-\mathcal R_{remote},
-\qquad
-\mathcal R_{critical},
-\qquad
-\mathcal R_{AC}.
+\boxed{
+\text{CE-H conservative population cycle}
+\Longrightarrow
+\begin{cases}
+G_{strain/geometry},\\
+G_{palinstrophy/interface},\\
+G_{coefficient+normalized\ diffusion},\\
+G_{geometry/topology\ loss}.
+\end{cases}
+}
 \]
 
-The downstream CE-H calculation is not a substitute for those root closures.
+The independent graph-current branch is closed.
+
+## 3. Next active calculation complex: R-AC
+
+The next M19 target is
+
+\[
+\boxed{\mathcal R_{AC}}
+\]
+
+from the M18 upstream root decomposition.
+
+M18 already establishes that currently available unsigned additive resources suffer a scaling mismatch: no known payer simultaneously has a finite original-parent total and a nonsummable first-hitting ancestry weight.
+
+Therefore M19 should **not** repeat the failed unsigned summation route.
+
+The next calculation should instead test, in order:
+
+1. signed fixed-parent coboundary conversion;
+2. exact parent-embedded flux/material observable with bounded total variation or finite defect budget;
+3. whether recurrent strain/interface/coefficient cycles create a fixed-parent signed imbalance;
+4. only if those fail, a sharper return-weight theorem.
+
+## 4. Remaining upstream roots after R-AC
+
+Even if R-AC is closed, two independent upstream complexes remain:
+
+\[
+\boxed{\mathcal R_{critical}}
+\]
+
+and
+
+\[
+\boxed{\mathcal R_{remote}}.
+\]
+
+R-critical contains critical-tail / low-frequency / W1 realization defects.
+
+R-remote contains remote / Type-II / Euler-scale ancient behavior.
+
+## 5. Final integration requirement
+
+After the three root complexes are closed, the repository still requires a final arbitrary-singularity entry and historical completeness synthesis before any global-regularity claim could be considered.
 
 ## 6. Permanent firewalls
 
-M19 inherits all M18 firewalls, in particular:
-
 \[
-\boxed{\text{CE-H internal closure}\neq\text{global NS closure}},
+\boxed{\text{CE-H closure}\neq\text{global NS closure}},
 \]
 
 \[
@@ -118,11 +193,15 @@ M19 inherits all M18 firewalls, in particular:
 \]
 
 \[
-\boxed{\text{rerecording}\neq\text{multiplicity}}.
+\boxed{\text{rerecording}\neq\text{multiplicity}},
+\]
+
+\[
+\boxed{\text{high-frequency control}\neq\text{low-frequency tightness}}.
 \]
 
 ---
 
 \[
-\boxed{\text{M19 ACTIVE CALCULATION LINE STARTED.}}
+\boxed{\text{M19 ACTIVE TIP = M19-004; NEXT = R-AC CALCULATION.}}
 \]
