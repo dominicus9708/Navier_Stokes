@@ -1,8 +1,8 @@
 # M19 Current Frontier
 
 **Date:** 2026-09-11  
-**Current tip:** **M19-043**  
-**Status:** ACTIVE CALCULATION / TWO-THEOREM FRONTIER + FINAL REPRESENTATION CLEANUP
+**Current tip:** **M19-054**  
+**Status:** ACTIVE CALCULATION / ONE DOMINANT ANALYTIC FRONTIER + FINAL ROOT/PROOF CERTIFICATION
 
 \[
 \boxed{\text{GLOBAL 3D NAVIER--STOKES REGULARITY REMAINS UNPROVED.}}
@@ -24,80 +24,116 @@ M19 may use M18 statements only at the certification level actually established 
 }
 \]
 
-## 2. CE-H finite population-current branch — M19-001--004
+## 2. Earlier M19 reductions retained
 
-The conservative material-population current reduces by Dirichlet-to-Neumann decomposition and weighted graph Hodge projection to already known continuum resources:
+### CE-H finite population current — M19-001--004
 
-- conductance pump \(\to\) strain/geometry;
-- boundary mode \(\to\) palinstrophy/interface gradient;
-- bulk source \(\to\) CE-H coefficient + normalized diffusion.
+The conservative population graph current is not an independent currency. Its gradient/pump/boundary/source pieces descend to strain/geometry, palinstrophy/interface gradients, and CE-H coefficient/diffusion terms.
 
-Thus no independent finite graph-current currency remains.
-
-## 3. R-AC before the latest reduction — M19-005--012, 033--034
-
-The exact clock coboundary is
+### First-hitting clock — M19-005
 
 \[
 L_j=\Theta_j-q^{-1}\Theta_{j+1},
 \qquad
-\sum_jq^{-j}L_j=\Theta_0,
+\sum_jq^{-j}L_j=\Theta_0.
 \]
 
-so signed clock bookkeeping does not remove ancestry discount.
+Thus stage-normalized time divergence cannot be converted into an undiscounted fixed-parent signed contradiction.
 
-For age ratio \(K\), one raw child-time return occupies only \(K^{-2}\) of the ancestor natural time.  Spatial off-center occupancy contributes \(K^{-1}\), and the same-event product is
+### R-critical scattering normal form — M19-013--019, 035, 041--043
+
+On the passive critical spectator branch,
 
 \[
-\boxed{K^{-3}.}
+U(y,\theta)
+=
+\frac1rA(q,\omega)+O(r^{-3}),
+\qquad
+q=\log r-\theta/2,
 \]
 
-Therefore marginal spatial and temporal ledgers cannot be multiplied into a stronger ancestry contradiction.
-
-## 4. R-AC Hodge/population/radial reduction — M19-036--039
-
-### 4.1 Finite labels alone do not force alignment
-
-M19-036 gives an explicit two-lineage anti-phase model showing that finite-lineage pigeonhole and positive marginal densities do not force
+with exact covariance
 
 \[
-\sum_iJ_{k,i}R_{k,i}>0.
+A_{\sigma_tY}(q,\omega)=A_Y(q-t/2,\omega).
 \]
 
-However, if a genuinely material population mark changes its dominant lineage, the exact population balance forces order-one source/exchange total variation.  Repeated quiet anti-phase switching is therefore impossible **once the ancestry charge is realized by a population state variable**.
-
-### 4.2 Exact shell Hodge split
-
-The cubic annular charge is
+Write
 
 \[
-J_A=R\int_A|\nabla u|^2dx.
+A=A_r\omega+A_T,
 \]
-
-For divergence-free velocity,
 
 \[
-|\nabla u|^2-|\omega|^2
-=\nabla\cdot((u\cdot\nabla)u),
+A_T=\nabla_{S^2}\phi+\omega\times\nabla_{S^2}\psi,
 \]
 
-so
+then
 
 \[
 \boxed{
-J_A
-=
-R\int_A|\omega|^2dx
-+
-R\int_{\partial A}n\cdot(u\cdot\nabla)u\,dS.
+\Delta_{S^2}\phi=-(\partial_q+1)A_r,
+\qquad
+\int_{S^2}A_r=0.
 }
 \]
 
-Thus the ancestry charge is either bulk localized enstrophy, which is population-like at \(p=2\), or a shell-boundary/harmonic transport defect.
+Hence the leading datum is parameterized by two scalar channels \((A_r,\psi)\).
 
-### 4.3 Exact shell-localized material balance
+The toroidal leading-order anti-model
 
-For one material population \(P_i(t)\) and radial cutoff \(\chi_R\),
+\[
+A(q,\omega)
+=
+\left(\sin q+\frac12\sin(\sqrt2q)\right)
+\omega\times\nabla_{S^2}Y_{\ell m}
+\]
+
+shows that all currently certified leading-order constraints allow smooth bounded nonperiodic recurrent data. This is not an exact Navier--Stokes solution.
+
+Ordinary physical energy flux/dissipation is time-integrable on a fixed spectator sphere, and Kelvin circulation has no finite-total-variation bound. Thus these elementary budgets do not close the aperiodic weak-critical branch.
+
+## 3. Residual remote root eliminated as an independent quiet class — M19-044
+
+For the infinite weak remote/shell-H recursion, restore one physical frame:
+
+\[
+r_{m+1}=r_m\ell_m,
+\qquad
+\delta_m:=|x_{m+1}-x_m|,
+\qquad
+K_m=D_m/\ell_m\to\infty,
+\]
+
+with the exact identity
+
+\[
+\boxed{\delta_m=K_mr_{m+1}.}
+\]
+
+The common-frame alternatives are exhausted by:
+
+- unbounded physical centers \(\to\) typed export/tail;
+- bounded centers + terminal alignment + sufficient common-center occupancy \(\to\) R-critical;
+- historical misalignment or sparse off-center incidence \(\to\) the existing ancestry-conversion representation problem.
+
+Therefore
+
+\[
+\boxed{
+\mathcal R_{remote}^{quiet}
+\Longrightarrow
+\mathcal R_{critical}
+\lor
+\mathcal R_{AC}.
+}
+\]
+
+There is no third independent quiet remote event class.
+
+## 4. Natural-time return counting sharpened and then retired — M19-039--046
+
+For one shell-localized material population,
 
 \[
 M_{i,R}
@@ -105,261 +141,363 @@ M_{i,R}
 \int_{P_i(t)}\chi_R|\omega|^2dx
 \]
 
-satisfies
+obeys
 
 \[
 \boxed{
 M_{i,R}'
-=
-C_{rad,i}+S_i+D_{bulk,i}+C_{diff,R,i}+E_{pop,i}.
+=C_{rad,i}+S_i+D_{bulk,i}+C_{diff,R,i}+E_{pop,i}.
 }
 \]
 
-The terms are respectively radial material shell crossing, stretching/source, bulk diffusion, diffusive shell crossing, and material-population exchange.
-
-Therefore on the fully quiet branch the only new return-deficiency mechanism is the relative radial current.
-
-### 4.4 Bounded weak-L3 upgrades one contact to full ancestor natural time
-
-Under shell-amplitude comparability,
+Under bounded weak-\(L^3\), shell-amplitude comparability and controlled center drift, one genuine quiet contact has ancestor-natural-time thickness
 
 \[
-\int_{E_R}|\omega|^2dx\gtrsim \frac JR,
-\qquad
-\|\omega\|_{L^\infty(E_R)}\lesssim\frac{\sqrt J}{R^2},
+\boxed{\tau_{contact}\gtrsim c\rho_k^2.}
 \]
 
-bounded weak-\(L^3\), and controlled center drift,
+This initially reduces the old sufficient return condition to
+
+\[
+N_k^{dist}\rho_k\gtrsim J_k^{1/2}.
+\]
+
+M19-045 rewrites this as a scale-growing historical-span demand.
+
+M19-046 then shows the target is too strong on the main cubic-divergent Type-I corridor. Bulk shell mass forces
+
+\[
+\|\omega\|_\infty
+\gtrsim
+\frac{J_k^{1/2}}{\rho_k^2}.
+\]
+
+The Type-I first-hitting clock leaves at most
+
+\[
+T_*-t_{n(k)}
+\lesssim
+\frac{\rho_k^2}{J_k^{1/2}}
+\]
+
+of physical history after that amplitude becomes available. Since every distinct quiet contact needs \(c\rho_k^2\),
 
 \[
 \boxed{
-\frac{\int |u|\,|\omega|^2}{\int|\omega|^2}
-\lesssim\frac{1}{R}.
+N_k^{dist}\lesssim J_k^{-1/2}.
+}
+\]
+
+Combining with the old lower target would require
+
+\[
+J_k\lesssim\rho_k.
+\]
+
+On a geometric shrinking-radius family this sector carries only finite cubic mass. Hence the cubic-divergent mass is concentrated on
+
+\[
+\boxed{
+J_k/\rho_k\to\infty
+}
+\]
+
+in cubic-mass density, precisely where the old return-count target is incompatible with Type-I time capacity.
+
+Thus \(\mathcal T_{count}^{dist}\) remains a sufficient condition but is retired as the expected primary closure mechanism.
+
+## 5. Sharp cubic sector: kinetic Morrey or derivative decompactification — M19-047--048
+
+For a shell cell \(E\) of radius \(\rho\), with
+
+\[
+m:=\int_E|\omega|^2dx
+\gtrsim J/\rho,
+\]
+
+a cutoff curl integration-by-parts gives the local dichotomy
+
+\[
+\boxed{
+K_{loc}
+\ge
+\varepsilon\rho^2m
+\quad\lor\quad
+P_{loc}
+\ge
+c\varepsilon^{-1}m/\rho^2.
 }
 \]
 
 Hence
 
 \[
-|C_{rad}|\lesssim R^{-2}M_{i,R},
-\]
-
-and one genuine contact persists for
-
-\[
-\boxed{\tau_{contact}\gtrsim cR^2.}
-\]
-
-This removes the old \(K^{-2}\) dwell-duration defect for one actual contact.
-
-## 5. Exact R-AC frontier after M19-040
-
-M18-055 remains valid: a fixed annular record cell contains only order-one independent fixed-thickness events.  M19-039 makes each true contact longer; it does not create more nonreused contacts.
-
-Let \(N_k^{dist}\) count genuinely distinct physical historical returns. Then
-
-\[
-\mathfrak R_k\gtrsim N_k^{dist}\rho_k,
-\]
-
-and the sufficient cubic ancestry threshold is exactly
-
-\[
 \boxed{
-\mathcal T_{count}^{dist}:
-N_k^{dist}\rho_k
-\gtrsim
-J_k^{1/2}
+\frac{K_{loc}}\rho\gtrsim J
+\quad\lor\quad
+P_{loc}\gtrsim J/\rho^3.
 }
 \]
 
-on a subset carrying
+In relative-frequency form,
 
 \[
-\sum J_k^{3/2}=\infty.
+\Lambda_{rel}^2
+:=
+\rho^2P_{loc}/m.
 \]
 
-Rerecording one long contact does not increase \(N_k^{dist}\).  Repeated exit/re-entry forces radial/source/diffusion/exchange total variation, but no finite upper budget is presently known for the radial total variation.
+If kinetic realization degenerates, then \(\Lambda_{rel}\to\infty\).
 
-Thus
+M19-048 shows that \(\Lambda_{rel}\to\infty\) cannot remain inside a fixed-shell locally smooth compact canonical family. It is a local-compactness, derivative-tail, frequency/localization, or remote/critical exit rather than a new quiet R-AC currency.
+
+Therefore the retained quiet compact branch carries
 
 \[
-\boxed{R\text{-AC}\longrightarrow\mathcal T_{count}^{dist}}
+\boxed{
+\mathcal M_k^{own}
+:=
+\rho_k^{-1}
+\inf_c\int_{E_k^+}|u-c|^2dx
+\gtrsim J_k,
+}
 \]
 
-modulo already typed exits.
-
-## 6. R-critical scattering normal form — M19-013--019, 035, 041
-
-The passive critical tail is
+and
 
 \[
-U(y,\theta)
-=
-\frac1rA(q,\omega)+O(r^{-3}),
+\sum_k(\mathcal M_k^{own})^{3/2}=\infty.
+\]
+
+## 6. Terminal-time alignment is automatic; spatial coherence carries the loss — M19-049--050
+
+The cubic-dominant amplitude
+
+\[
+A_k=J_k^{1/2}/\rho_k^2
+\to\infty.
+\]
+
+Hence the corresponding first-hitting stages satisfy \(n(k)\to\infty\), and the Type-I clock gives
+
+\[
+\boxed{t_k\uparrow T_*}.
+\]
+
+Thus temporal placement is no longer the active representation defect on this branch.
+
+For bounded physical centers choose
+
+\[
+x_k\to x_\infty,
 \qquad
-q=\log r-\theta/2.
+\eta_k:=|x_k-x_\infty|/\rho_k.
 \]
 
-The \(r^{-1}\) sector is the unique similarity-transport resonance; \(r^{-3}\) corrections do not impose a generic solvability condition on \(A\).
-
-Write
+Then the common-center Morrey charge satisfies
 
 \[
-A=A_r\omega+A_T.
+\boxed{
+\mathcal M_k^{com}
+\gtrsim
+\frac{J_k}{\eta_k+C}.
+}
 \]
 
-Spherical Hodge decomposition gives
+On the first-hitting center-proximity branch, no-remote center nesting gives
 
 \[
-A_T
-=
-\nabla_{S^2}\phi
-+
-\omega\times\nabla_{S^2}\psi,
+|X_*-X_n|\lesssim r_n.
 \]
 
-and divergence-free implies
+Since the amplitude-natural first-hitting scale is
 
 \[
-\Delta_{S^2}\phi
-=-(\partial_q+1)A_r.
+r_{n(k)}\asymp\rho_kJ_k^{-1/4},
 \]
 
-Hence the leading datum is parameterized by two scalar channels:
+one obtains only
 
 \[
-\boxed{(A_r,\psi),\qquad \int_{S^2}A_r=0.}
+\boxed{
+\eta_k\lesssim J_k^{-1/4}
+}
 \]
 
-The toroidal sector \(A_r=0\) permits bounded smooth aperiodic recurrent leading data.  For example
+and therefore
 
 \[
-b(q)=\sin q+\frac12\sin(\sqrt2q),
+\boxed{
+\mathcal M_k^{com}\gtrsim J_k^{5/4}.
+}
 \]
+
+This loses the original cubic exponent:
+
+\[
+\sum J_k^{3/2}=\infty
+\not\Rightarrow
+\sum J_k^{15/8}=\infty.
+\]
+
+Thus amplitude-natural center nesting is insufficient for common-center critical closure on the weakest cubic-divergent sequences.
+
+## 7. Static filling and extra derivative estimates cannot repair the positional loss — M19-051--053
+
+A smooth divergence-free sub-natural packet of radius \(\rho\) and vorticity amplitude \(J^{1/2}/\rho^2\) can realize
+
+\[
+\|\omega\|_2^2\asymp J/\rho,
+\]
+
+\[
+\|\nabla\omega\|_2^2\asymp J/\rho^3,
+\]
+
+\[
+\rho^{-1}\|u\|_2^2\asymp J,
+\]
+
+and
+
+\[
+\|u\|_{L^{3,\infty}}\asymp J^{1/2}.
+\]
+
+Its amplitude-natural radius is
+
+\[
+r_A\asymp\rho J^{-1/4},
+\]
+
+so the geometric filling fraction is only \(J^{3/4}\). No packet multiplicity follows from available volume.
+
+Separately, local enstrophy in a \(\rho^3\) cell forces the whole-space Sobolev lower bound
+
+\[
+\boxed{
+P(t)=\|\nabla\omega(t)\|_2^2
+\gtrsim
+J/\rho^3.
+}
+\]
+
+This is a real scale-matched derivative exposure but not by itself a finite-budget contradiction.
+
+Most importantly, translation of the packet leaves kinetic, enstrophy, palinstrophy and weak-\(L^3\) magnitudes unchanged while degrading common-center Morrey charge. Translating it by
+
+\[
+d\asymp r_A
+\]
+
+produces
+
+\[
+\mathcal M^{com}\asymp J^{5/4}.
+\]
+
+Therefore the missing \(J^{1/4}\) is **positional**, not recoverable by another unweighted derivative interpolation.
+
+## 8. Cubic R-AC survivor remerges with R-critical — M19-054
+
+The cubic R-AC family originates from the bounded-\(Z\), recurrent, non-\(L^3\) ancient-tail criterion
+
+\[
+\boxed{
+\sum_kJ_k^{3/2}=\infty.
+}
+\]
+
+R-AC was an attempted conversion of this already critical ancient tail into a finite physical-parent return/dissipation contradiction.
+
+M19-046 shows that the main direct return-count mechanism is structurally mismatched on the cubic-dominant Type-I sector.
+
+On the controlled passive spectator branch the same ancient survivor already has the scattering datum
 
 \[
 A(q,\omega)
-=b(q)\,\omega\times\nabla_{S^2}Y_{\ell m}(\omega)
 \]
 
-satisfies all currently certified **leading-order** passive-tail constraints while remaining nonperiodic and non-\(L^3_q\).  This is a leading-order firewall, not an exact Navier--Stokes solution.
+with nontrivial recurrent weak-critical translation dynamics. If passive scattering realization fails, the failure is a typed derivative/remote/localization/export decompactification.
 
-## 7. Elementary critical budgets do not close the toroidal branch — M19-042--043
-
-On a fixed spectator sphere near \(T_*\), a critical tail has physical energy-flux and dissipation scales
-
-\[
-O((T_*-t)^{-1/2}),
-\]
-
-which are time integrable.
-
-Thus persistent aperiodic critical boundary history does not force infinite physical energy, dissipation, or ordinary energy flux.
-
-Circulation is scale critical, but for a material loop the exact viscous Kelvin identity is
+Thus for the active cubic R-AC corridor,
 
 \[
 \boxed{
-\frac d{dt}\oint_{\Gamma_t}u\cdot dx
-=
-\nu\oint_{\Gamma_t}\Delta u\cdot dx.
+\mathcal R_{AC}^{cubic}
+\Longrightarrow
+\mathcal R_{critical}^{weak\text{-}scatt}
+\lor
+G_{typed\ derivative/remote/localization/export}.
 }
 \]
 
-On the critical spectator scale,
+On the fully quiet controlled spectator branch,
 
 \[
-\left|\frac{d\Gamma}{dt}\right|
-\lesssim
-C\nu(T_*-t)^{-1}R_0^{-2},
+\boxed{
+\mathcal R_{AC}^{cubic,quiet}
+\subset
+\mathcal R_{critical}^{weak\text{-}scatt}.
+}
 \]
 
-whose absolute time integral is logarithmically nonintegrable.  Thus Kelvin circulation supplies bounded similarity-time speed, not a finite-total-variation budget.
+This is a solution-class inclusion, not a proof that the scattering class is empty.
 
-Moreover one material loop does not compare distinct historical scattering labels \(q\).
+Historical alignment/nonreuse obligations elsewhere in the proof tree remain certification issues and are not erased by this merger.
 
-Therefore the surviving critical theorem is genuinely global:
+## 9. Dominant analytic frontier after M19-054
+
+The current major analytic theorem is now concentrated in
 
 \[
 \boxed{
 \mathcal T_{critical}^{global}:
-\text{exclude globally realizable nonzero aperiodic radial--toroidal scattering cocycles over the recurrent hull}.
+\text{exclude or rigidly classify a globally realizable nonzero recurrent weak-critical scattering datum}
+\ A(q,\omega).
 }
 \]
 
-Local asymptotic corrections, unsigned energy budgets, and bare Kelvin circulation are all insufficient.
-
-## 8. R-remote status
-
-Strong remote/Type-II throughput already satisfies
+The leading datum already obeys
 
 \[
-\boxed{
-H_{remote}^{strong}
-\Longrightarrow
-G_{weak-L^3\ escalation},
-}
-
-so it is not a quiet bounded-W1 root.
-
-For weak remote recursion in one common physical frame,
-
-\[
-|x_{m+1}-x_m|=K_mr_{m+1}.
+A_{\sigma_tY}(q)=A_Y(q-t/2),
 \]
 
-Bounded-eccentricity nested cascades produce R-critical Morrey activity.  Highly off-center cascades require order-distance/scale packet multiplicity for a critical shell; sparse incidence is an R-AC genealogy defect.
-
-Hence the remaining remote work is primarily a representation cleanup:
-
 \[
-\boxed{
-\mathcal B_{remote\to AC/critical}:
-\text{every quiet weak remote/historical survivor is represented in }
-\mathcal T_{count}^{dist}
-\text{ or }
-\mathcal T_{critical}^{global}
-\text{, modulo typed exits}.}
+\Delta_{S^2}\phi=-(\partial_q+1)A_r,
 \]
 
-## 9. Current mathematical frontier
+and is parameterized by \((A_r,\psi)\).
 
-At the present tip, the major new theorem-level work is concentrated in two objects:
+Local asymptotic expansion, ordinary energy/dissipation budgets, bare Kelvin circulation, return multiplicity, static filling, and unweighted higher-derivative interpolation have all been audited and found insufficient.
 
-\[
-\boxed{
-\mathcal T_{count}^{dist}
-}
-\]
+Therefore the remaining analytic problem is genuinely **global/dynamical realization**, not another local scaling estimate.
 
-for distinct historical ancestry returns, and
+Promising classes of constraints are:
 
-\[
-\boxed{
-\mathcal T_{critical}^{global}
-}
-\]
+- exact finite-radius boundary-history compatibility;
+- centered positional/nonlocal pressure coupling between core and tail;
+- a genuinely scale-critical signed quantity with fixed-parent finite variation;
+- compactness/unique-continuation linking the complete interior trajectory to the entire \(q\)-translation datum.
 
-for global aperiodic critical scattering rigidity.
+## 10. Final proof-chain certification remains substantial
 
-A smaller but still necessary representation bridge remains:
-
-\[
-\boxed{
-\mathcal B_{remote\to AC/critical}.
-}
-\]
-
-## 10. Final certification after mathematical closure
-
-Even if the displayed frontiers are closed, the repository still requires:
+Even if \(\mathcal T_{critical}^{global}\) is closed, global regularity would still require:
 
 1. arbitrary-singularity entry certification;
-2. historical branch-completeness audit;
-3. full beginning-to-end independent verification of the combined proof chain.
+2. historical branch completeness and all remaining conditional alignment/nonreuse checks;
+3. full beginning-to-end independent audit of the assembled proof chain.
 
-No global-regularity conclusion is currently justified.
+Hence
+
+\[
+\boxed{
+\text{one dominant analytic frontier}
+\neq
+\text{global proof completed}.
+}
+\]
 
 ## 11. Permanent firewalls
 
@@ -372,23 +510,27 @@ No global-regularity conclusion is currently justified.
 \]
 
 \[
-\boxed{\text{rerecording}\neq\text{distinct historical return}},
+\boxed{\text{rerecording}\neq\text{distinct physical multiplicity}},
 \]
 
 \[
-\boxed{\text{vortex-line spatial residence}\neq\text{material temporal residence}},
+\boxed{\text{high-frequency control}\neq\text{low-frequency tightness}},
 \]
 
 \[
-\boxed{\text{bounded critical speed}\neq\text{finite total variation}},
+\boxed{\text{local magnitude resources}\neq\text{center-position control}},
 \]
 
 \[
-\boxed{\text{leading-order scattering anti-model}\neq\text{exact Navier--Stokes solution}.}
+\boxed{\text{leading-order scattering anti-model}\neq\text{exact Navier--Stokes solution}},
+\]
+
+\[
+\boxed{\text{root-class merger}\neq\text{analytic closure}}.
 \]
 
 ---
 
 \[
-\boxed{\text{M19 ACTIVE TIP = M19-043.}}
+\boxed{\text{M19 ACTIVE TIP = M19-054.}}
 \]
