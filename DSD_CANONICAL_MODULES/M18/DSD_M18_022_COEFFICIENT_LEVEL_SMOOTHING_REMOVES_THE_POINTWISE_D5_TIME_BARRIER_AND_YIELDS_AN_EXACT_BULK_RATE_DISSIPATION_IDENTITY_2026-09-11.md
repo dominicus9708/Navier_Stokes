@@ -9,49 +9,43 @@
 
 ## 1. Purpose
 
-M18-021 derived the exact time derivative of the codimension-one level flux
+M18-021 showed that differentiating a single level flux
 
 \[
 F(s,t)=\int_{\{\kappa=s\}}\rho^2|\nabla\kappa|\,dS
 \]
 
-and found a term
+introduces
 
 \[
 \rho^2\partial_n h,
-\qquad
-h:=D_t\kappa.
+\qquad h:=D_t\kappa,
 \]
 
-Since
+which naturally reaches a third coefficient jet and therefore a D5-type vorticity derivative if controlled pointwise.
 
-\[
-h=L_\rho\kappa+L_\rho\sigma+\mathcal R_{\rm geom},
-\]
+This module tests whether that escalation is intrinsic.
 
-a direct pointwise level estimate of \(\partial_nh\) naturally reaches a third coefficient jet and therefore a D5-type vorticity derivative barrier.
-
-The present audit asks whether that derivative escalation is intrinsic or whether it is caused by differentiating a codimension-one observable before using its coefficient-level neighborhood.
-
-The answer is important:
+The result is:
 
 \[
 \boxed{
-\text{after smoothing across coefficient levels, the }\nabla h\text{ term can be removed exactly by bulk integration by parts.}
+\text{smooth across coefficient levels first, then differentiate in time; }\nabla h
+\text{ disappears by bulk integration by parts.}
 }
 \]
 
-Thus the pointwise D5 barrier of M18-021 is **not universal**. It remains relevant for genuinely collapsing level-width events, but it is avoidable on a macroscopic coefficient-width branch.
+Thus the pointwise D5 barrier is not universal on a macroscopic coefficient-width branch.
 
-## 2. Fixed record-scale coefficient cutoff
+## 2. Smoothed coefficient-level observable
 
-Fix one physical record and one reference coefficient width
+Fix one physical record and a time-independent reference coefficient width
 
 \[
 \delta_0>0.
 \]
 
-Let
+Choose
 
 \[
 \psi\in C_c^1((-1,1)),
@@ -65,9 +59,7 @@ and set
 \phi(s):=\psi\!\left(\frac{s}{\delta_0}\right).
 \]
 
-The reference width \(\delta_0\) is fixed in time on the local window. This avoids introducing a \(\dot\delta\) term. Across record scaling, \(\delta_0\) is scaled as a physical coefficient level.
-
-Define the coefficient-level-smoothed first-jet charge
+Define
 
 \[
 \boxed{
@@ -82,18 +74,15 @@ By coarea,
 
 \[
 \boxed{
-B_\phi(t)
-=
-\int_{\mathbb R}
-\phi(s)F(s,t)\,ds.
+B_\phi(t)=\int_{\mathbb R}\phi(s)F(s,t)\,ds.
 }
 \]
 
-Thus \(B_\phi\) is literally a smooth coefficient-level average of the level flux used in M18-016--021.
+Hence \(B_\phi\) is a smooth coefficient-level average of the M18-016--021 flux.
 
 ## 3. Scaling audit
 
-Under physical Navier--Stokes scaling,
+Under the physical record scaling,
 
 \[
 \rho_R=R^2\rho,
@@ -103,57 +92,39 @@ Under physical Navier--Stokes scaling,
 \nabla\kappa_R=R^3\nabla\kappa,
 \]
 
-and
+with
 
 \[
-dy=R^{-3}dx.
-\]
-
-With the scaled cutoff width
-
-\[
-\delta_{0,R}=R^2\delta_0,
-\]
-
-the cutoff is representation matched:
-
-\[
-\phi_R(\kappa_R)=\phi(\kappa).
+\delta_{0,R}=R^2\delta_0.
 \]
 
 Therefore
 
 \[
-\boxed{
-B_{\phi,R}=R^7B_\phi.
-}
+\boxed{B_{\phi,R}=R^7B_\phi}
 \]
 
-Its time derivative scales as
+and
 
 \[
-\boxed{
-\partial_sB_{\phi,R}=R^9\partial_tB_\phi.
-}
+\boxed{\partial_sB_{\phi,R}=R^9\partial_tB_\phi.}
 \]
 
-After time integration, \(B_\phi\) belongs to the same \(R^{-5}\) ancestry class as the M17-445 first-coefficient-jet/D3 resource.
+After time integration, \(B_\phi\) is in the same \(R^{-5}\) ancestry class as the M17-445 first-coefficient-jet/D3 resource.
 
-## 4. Material derivative before integration by parts
+## 4. Material derivative
 
 Write
 
 \[
 g:=|\nabla\kappa|,
 \qquad
+n:=\frac{\nabla\kappa}{g},
+\qquad
 h:=D_t\kappa,
 \qquad
-a_n:=n\cdot(\nabla u)n,
-\qquad
-n:=\frac{\nabla\kappa}{g}.
+a_n:=n\cdot(\nabla u)n.
 \]
-
-For incompressible flow, the whole-space material derivative has no volume-Jacobian contribution.
 
 On exact CE-H,
 
@@ -164,36 +135,32 @@ D_t\rho=(\sigma+\nu\kappa)\rho,
 and
 
 \[
-D_tg
-=\partial_nh-ga_n.
+D_tg=\partial_nh-ga_n.
 \]
 
-Also
+Since
 
 \[
-D_t\phi(\kappa)=\phi'(\kappa)h.
+D_t\phi(\kappa)=\phi'(\kappa)h,
 \]
 
-Hence
+incompressibility gives
 
 \[
 \begin{aligned}
 \dot B_\phi
 ={}&
-\int
-\phi' h\rho^2g^2dx\\
-&+2\int
-\phi(\sigma+\nu\kappa-a_n)\rho^2g^2dx\\
-&+2\int
-\phi\rho^2\nabla\kappa\cdot\nabla h\,dx.
+\int \phi' h\rho^2g^2dx\\
+&+2\int \phi(\sigma+\nu\kappa-a_n)\rho^2g^2dx\\
+&+2\int \phi\rho^2\nabla\kappa\cdot\nabla h\,dx.
 \end{aligned}
 \]
 
-At this stage the last term appears to contain the same high temporal coefficient derivative that produced the M18-021 pointwise barrier.
+The last term is the apparent high-jet obstruction.
 
-## 5. Bulk integration by parts removes \(\nabla h\)
+## 5. Exact removal of \(\nabla h\)
 
-Because \(\phi\) is compactly supported in coefficient space and the spatial fields are taken in the certified smooth whole-space class, integrate the last term by parts:
+Integrate the last term by parts:
 
 \[
 2\int
@@ -203,20 +170,23 @@ Because \(\phi\) is compactly supported in coefficient space and the spatial fie
 h\,\nabla\cdot(\phi\rho^2\nabla\kappa)\,dx.
 \]
 
-Expand
+The divergence is
 
 \[
+\boxed{
 \nabla\cdot(\phi\rho^2\nabla\kappa)
 =
 \phi'\rho^2g^2
 +
 \phi\left(
 2\rho\nabla\rho\cdot\nabla\kappa
-+ho^2\Delta\kappa
++
+\rho^2\Delta\kappa
 \right).
+}
 \]
 
-Therefore
+Hence
 
 \[
 \begin{aligned}
@@ -226,7 +196,7 @@ Therefore
 \phi(\sigma+\nu\kappa-a_n)\rho^2g^2dx\\
 &-
 \int
-\phi' h\rho^2g^2dx\\
+\phi'h\rho^2g^2dx\\
 &-
 4\int
 \phi\rho h\nabla\rho\cdot\nabla\kappa\,dx\\
@@ -236,15 +206,11 @@ Therefore
 \end{aligned}
 \]
 
-No derivative of \(h\) remains.
-
-This is the first key descent:
+Thus
 
 \[
 \boxed{
-\partial_nh\text{ / }\nabla h
-\quad\longrightarrow\quad
-h\text{ after coefficient-level bulk smoothing.}
+\nabla h\quad\text{has disappeared completely.}
 }
 \]
 
@@ -261,25 +227,26 @@ L_\rho\kappa
 +2\nabla\log\rho\cdot\nabla\kappa.
 \]
 
-Hence
+Therefore
 
 \[
+\boxed{
 2\rho\nabla\rho\cdot\nabla\kappa
-+ho^2\Delta\kappa
++
+\rho^2\Delta\kappa
 =
 \rho^2L_\rho\kappa.
+}
 \]
 
-The last two terms in Section 5 combine exactly:
+The last two terms combine to
 
 \[
--4\phi\rho h\nabla\rho\cdot\nabla\kappa
--2\phi\rho^2h\Delta\kappa
-=
--2\phi\rho^2hL_\rho\kappa.
+-2\int
+\phi\rho^2hL_\rho\kappa\,dx.
 \]
 
-Therefore
+Thus
 
 \[
 \boxed{
@@ -296,23 +263,23 @@ Therefore
 }
 \]
 
-This is already a lower-derivative exact identity than the pointwise level-flux time derivative.
-
 ## 7. Exact rate-dissipation identity
 
-Use the physical coefficient law from M17-339:
+M17-339 gives
 
 \[
 \boxed{
-h=A+C,}
+h=L_\rho\kappa+L_\rho\sigma+\mathcal R_{\rm geom}.}
 \]
 
-where
+Set
 
 \[
 A:=L_\rho\kappa,
 \qquad
-C:=L_\rho\sigma+\mathcal R_{\rm geom}.
+C:=L_\rho\sigma+\mathcal R_{\rm geom},
+\qquad
+h=A+C.
 \]
 
 The algebraic identity
@@ -321,9 +288,9 @@ The algebraic identity
 2hA=A^2+h^2-C^2
 \]
 
-is exact because \(h=A+C\).
+is exact.
 
-Substituting into Section 6 gives
+Therefore
 
 \[
 \boxed{
@@ -332,14 +299,14 @@ Substituting into Section 6 gives
 &+
 \int\phi\rho^2
 \left(
-|L_\rho\kappa|^2+|h|^2
+|L_\rho\kappa|^2+|D_t\kappa|^2
 \right)dx\\
 ={}&
 2\int
-\phi(\sigma+\nu\kappa-a_n)\rho^2g^2dx\\
+\phi(\sigma+\nu\kappa-a_n)\rho^2|\nabla\kappa|^2dx\\
 &-
 \int
-\phi'h\rho^2g^2dx\\
+\phi'(\kappa)(D_t\kappa)\rho^2|\nabla\kappa|^2dx\\
 &+
 \int
 \phi\rho^2
@@ -350,47 +317,44 @@ Substituting into Section 6 gives
 
 This is the main M18-022 identity.
 
-It reveals two nonnegative rate/diffusion channels on the left:
+The left-hand side contains two nonnegative bulk channels:
 
 \[
 \boxed{
-\int\phi\rho^2|L_\rho\kappa|^2dx,
+\rho^2|L_\rho\kappa|^2,
 \qquad
-\int\phi\rho^2|D_t\kappa|^2dx.
+\rho^2|D_t\kappa|^2.
 }
 \]
 
-The pointwise third coefficient jet has disappeared.
+No third coefficient jet appears.
 
-## 8. Interpretation of the three right-hand channels
+## 8. Remaining channels
 
-The identity leaves three source/transport channels.
+The right-hand side contains only three typed channels.
 
-### A. Strain/normal-stretch channel
+### A. Strain / normal-stretch channel
 
 \[
-\boxed{
 \mathcal S_\phi
 :=
 2\int
-\phi(\sigma+\nu\kappa-a_n)\rho^2g^2dx.
-}
+\phi(\sigma+\nu\kappa-a_n)\rho^2|\nabla\kappa|^2dx.
 \]
 
-If the normalized strain, normal strain, and coefficient remain uniformly bounded, this channel is controlled by \(B_\phi\), whose spacetime ancestry is already in the M17-445 \(R^{-5}\) class.
+If \(|\sigma|+|a_n|+|\kappa|\) is uniformly bounded, this is controlled by \(B_\phi\), whose spacetime resource is already in the \(R^{-5}\) first-coefficient-jet class.
 
 ### B. Coefficient-cutoff current
 
 \[
 \boxed{
 \mathcal C_\phi
-:=-\int\phi'h\rho^2g^2dx.
+:=-\int
+\phi'(\kappa)(D_t\kappa)\rho^2|\nabla\kappa|^2dx.
 }
 \]
 
-This term is supported only where the coefficient cutoff changes. It is not automatically absorbed by the existing first-jet ledger because it couples the coefficient rate \(h\) to \(g^2\).
-
-It can be treated as a genuine coefficient-boundary/current channel or estimated conditionally at the price of a stronger weighted gradient moment.
+This is supported only in the coefficient collars where the cutoff varies. It is not automatically absorbed by the existing first-jet ledger.
 
 ### C. Strain/geometry source square
 
@@ -398,25 +362,24 @@ It can be treated as a genuine coefficient-boundary/current channel or estimated
 \boxed{
 \mathcal R_\phi
 :=
-\int\phi\rho^2
+\int
+\phi\rho^2
 |L_\rho\sigma+\mathcal R_{\rm geom}|^2dx.
 }
 \]
 
-No existing M17/M18 ledger has yet been certified for this full squared source combination.
+No existing M17/M18 ancestry ledger has yet been certified for this full squared source.
 
-It must remain explicit until a termwise estimate is proved.
+## 9. Conditional consequence
 
-## 9. Conditional compact-source consequence
+If on a retained macroscopic-width exact CE-H family:
 
-Suppose on a retained macroscopic-width exact CE-H family:
+1. strain, normal strain, and coefficient are uniformly compact;
+2. the cutoff current is spacetime integrable;
+3. the squared strain/geometry source is spacetime integrable;
+4. the endpoint values of \(B_\phi\) are controlled;
 
-1. \(|\sigma|+|a_n|+|\kappa|\le C_*\);
-2. the cutoff-current term has an integrable record-uniform bound;
-3. the source square \(\mathcal R_\phi\) has an integrable record-uniform bound;
-4. \(B_\phi\) is controlled at the interval endpoints.
-
-Then time integration of the exact identity gives finite control of
+then the identity gives finite spacetime control of
 
 \[
 \boxed{
@@ -434,78 +397,41 @@ and
 }
 \]
 
-This would supply a direct temporal coefficient-rate resource without introducing D5 derivatives.
+This is conditional; items 2--3 remain open.
 
-The statement is conditional because items 2--3 are not yet certified from the existing ancestral ledgers.
+## 10. Relation to level-width collapse
 
-## 10. Why level-width matters
+The bulk smoothing requires a nontrivial coefficient band.
 
-The smoothing argument requires a nontrivial physical coefficient band on which a fixed cutoff can be placed.
-
-If the useful coefficient-level width collapses to zero from record to record, M18-019 already gives the representation-safe alternative
+If the useful level width \(\ell\) collapses, M18-019 already gives, up to the explicit compactness exits,
 
 \[
 P_\ell\gtrsim\frac{J}{\ell}
 \qquad\text{or}\qquad
-\Lambda_{\kappa,\delta}\gtrsim\frac{\delta}{\ell},
+\Lambda_{\kappa,\delta}\gtrsim\frac{\delta}{\ell}.
 \]
 
-up to the explicit compactness exits.
-
-Therefore the current analysis naturally splits:
+Thus
 
 \[
 \boxed{
-\begin{aligned}
-G_{\rm temporal\ flux\text{-}shape}
-\Longrightarrow{}&
-G_{\rm collapsing\ level\ width}\
-&\lor G_{\rm bulk\ smoothed\ rate\ identity}.
-\end{aligned}
+G_{\rm temporal\ flux\ shape}
+\Longrightarrow
+G_{\rm level\text{-}width\ collapse}
+\lor
+G_{\rm bulk\ smoothed\ rate\ identity}.
 }
 \]
 
-The first branch is already owned by M18-019. The second avoids the pointwise D5 escalation.
+The first branch is already owned by M18-019; the second avoids the pointwise D5 escalation.
 
-## 11. Representation and derivative-order audit
+## 11. Derivative-order and representation verdict
 
-Every term in the main identity scales as \(R^9\) instantaneously.
+Every term in the main identity scales as \(R^9\) instantaneously, so the descent is dimensionally consistent.
 
-Indeed:
+M18-022 does **not** claim a D4 or D5 ancestry ledger for \(D_t\kappa\). It only shows that the third coefficient jet is absent from the correct bulk-smoothed temporal identity.
 
-\[
-\dot B_{\phi,R}=R^9\dot B_\phi,
-\]
-
-\[
-\rho_R^2|h_R|^2dy
-\sim R^9,
-\]
-
-and
-
-\[
-\rho_R^2|L_{\rho_R}\kappa_R|^2dy
-\sim R^9.
-\]
-
-The cutoff derivative scales as
-
-\[
-\phi_R'=R^{-2}\phi',
-\]
-
-so the cutoff current also scales as \(R^9\).
-
-Thus no dimensional mismatch is hidden in the descent.
-
-Most importantly, M18-022 does **not** assert a D4 or D5 ancestry ledger for \(h\). It identifies an exact energy-type identity in which the dangerous third coefficient jet is absent.
-
-## 12. Relation to the M17-463 firewall
-
-M17-339 now supplies the exact physical expression for \(\mathcal R_{\rm geom}\), correcting the historical premise in M17-463 that the formula had not yet been recovered during that audit pass.
-
-However, the substantive M17-463 firewall remains valid:
+M17-339 supplies the exact physical source formula, but the substantive M17-463 rule remains:
 
 \[
 \boxed{
@@ -513,84 +439,44 @@ However, the substantive M17-463 firewall remains valid:
 }
 \]
 
-Accordingly, the source square
+Therefore the source square remains open rather than being assigned to a lower ledger by analogy.
 
-\[
-|L_\rho\sigma+\mathcal R_{\rm geom}|^2
-\]
+## 12. Updated temporal branch
 
-is not assigned to palinstrophy, raw-H2, or D3 by analogy.
-
-## 13. Updated temporal branch
-
-M18-021 gave
-
-\[
-G_{\rm active\text{-}time\ thinning}
-\Longrightarrow
-G_{\rm temporal\ flux\text{-}shape\ jet}
-\lor\text{explicit compactness losses}.
-\]
-
-M18-022 refines the temporal jet branch to
+The M18-021 temporal-flux branch is refined to
 
 \[
 \boxed{
 \begin{aligned}
-G_{\rm temporal\ flux\text{-}shape\ jet}
+G_{\rm temporal\ flux\text{-}shape}
 \Longrightarrow{}&
-G_{\rm level\text{-}width\ collapse}\
-&\lor G_{\rm coefficient\ cutoff\ current}\
-&\lor G_{\rm strain/geometry\ source\ square}\
-&\lor G_{\rm strain/normal\text{-}stretch\ decompactification}\
+G_{\rm level\text{-}width\ collapse}\\
+&\lor G_{\rm coefficient\ cutoff\ current}\\
+&\lor G_{\rm strain/geometry\ source\ square}\\
+&\lor G_{\rm strain/normal\text{-}stretch\ decompactification}\\
 &\lor G_{\rm controlled\ bulk\ coefficient\ rate}.
 \end{aligned}
 }
 \]
 
-The previous direct D5 branch is therefore demoted from a universal temporal obstruction to a **pointwise-level formulation hazard**. A genuine higher-jet branch may still reappear through the unresolved source/current terms, but it must be proved there rather than assumed.
+The direct D5 branch is therefore demoted from a universal obstruction to a pointwise-level formulation hazard.
 
-## 14. DSD audit verdict
+## 13. Audit verdict
 
-### Certified here
+**Certified:** coefficient-level smoothing removes \(\nabla D_t\kappa\) exactly and produces a genuine bulk rate-dissipation identity with positive \(|D_t\kappa|^2\) and \(|L_\rho\kappa|^2\) channels.
 
-1. Coefficient-level smoothing converts the codimension-one flux family into the bulk charge \(B_\phi\).
-2. The material derivative of \(B_\phi\) initially contains \(\nabla h\), but bulk integration by parts removes it exactly.
-3. The remaining amplitude/coefficient terms combine into \(-2\rho^2hL_\rho\kappa\).
-4. The constitutive law produces the exact positive pair
-   \[
-   \rho^2|D_t\kappa|^2+\rho^2|L_\rho\kappa|^2.
-   \]
-5. The pointwise D5 temporal barrier is not intrinsic on a macroscopic coefficient-width branch.
-6. The remaining unresolved channels are explicitly typed rather than hidden in a generic high-jet exit.
+**Not certified:** a finite ancestry ledger for these new rate channels, control of the cutoff current, control of the squared strain/geometry source, an ancestry contradiction, or global regularity.
 
-### Not certified here
+## 14. Next target
 
-1. A finite ancestry ledger for \(D_t\kappa\).
-2. Control of the coefficient-cutoff current by existing resources.
-3. Control of the full squared strain/geometry source.
-4. An ancestry contradiction.
-5. Global 3D Navier--Stokes regularity.
-
-## 15. Next analysis target
-
-The best next target is the coefficient-cutoff current
+M18-023 should audit
 
 \[
 \mathcal C_\phi
-=-\int\phi'h\rho^2g^2dx.
+=-\int
+\phi'(\kappa)(D_t\kappa)\rho^2|\nabla\kappa|^2dx
 \]
 
-It is localized to the two transition collars of the coefficient cutoff and is structurally simpler than the full geometry-source square.
+using adapted cutoffs, collar decomposition, and weighted inequalities.
 
-The next audit should determine whether an adapted cutoff, a collar decomposition, or a weighted Cauchy estimate can send \(\mathcal C_\phi\) into
-
-\[
-\rho^2|h|^2,
-\qquad
-\rho^2|\nabla\kappa|^2,
-\]
-
-plus an explicit higher-gradient collar exit, without destroying the favorable \(R^{-5}\) ancestry class.
-
-That is the appropriate M18-023 target.
+The goal is to absorb it into the favorable \(\rho^2|D_t\kappa|^2\) rate term plus the existing first-coefficient-jet resource, or else isolate an explicit higher-gradient collar exit without silently moving to D5.
