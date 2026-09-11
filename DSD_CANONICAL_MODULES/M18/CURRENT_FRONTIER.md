@@ -1,7 +1,7 @@
 # M18 Current Frontier
 
 **Date:** 2026-09-11  
-**Current tip:** **M18-025**  
+**Current tip:** **M18-026**  
 **Status:** AUTHORITATIVE DSD ANALYSIS FRONTIER
 
 \[
@@ -25,7 +25,7 @@ D_t\kappa
 }
 \]
 
-The M17-339 / M18-022 / M18-023 formulas without the factor \(\nu\) in front of \(L_\rho\kappa\) are to be read as \(\nu=1\) specializations. M18-024 is authoritative for the repository-wide general-\(\nu\) setting.
+The M17-339 / M18-022 / M18-023 formulas without the factor \(\nu\) in front of \(L_\rho\kappa\) are \(\nu=1\) specializations. M18-024 is authoritative for the repository-wide general-\(\nu\) setting.
 
 ## 3. Migrated frontier
 
@@ -33,50 +33,34 @@ M18-001--019 are the canonical aliases of the historical post-M17-469 analysis m
 
 ## 4. New M18 results
 
-### M18-020
+### M18-020--021: event time thickness
 
-Positive time measure of a zero-tube flux-loss event can be partitioned directly into spacetime payer sets without differentiating the individual payer currencies. The payer ancestry classes remain
-
-\[
-R^{-1}\quad\text{(palinstrophy)},
-\qquad
-R^{-5}\quad\text{(first coefficient jet/D3)},
-\qquad
-R^{-7}\quad\text{(second coefficient jet/D4)}.
-\]
-
-### M18-021
-
-A robust two-threshold flux-loss event plus uniform equicontinuity in coefficient time
+Positive active-time measure converts the zero-tube flux-loss event directly into spacetime payer sets. A robust two-threshold event plus equicontinuity in coefficient time
 
 \[
 \vartheta=\int\delta(t)dt
 \]
 
-forces positive active duration. Temporal thinning therefore implies a scale-invariant temporal flux-shape jet or an explicit margin/J/tube/window/genealogy loss.
+prevents arbitrary active-time thinning. Otherwise a scale-invariant temporal flux-shape jet or an explicit margin/J/tube/window/genealogy loss occurs.
 
-### M18-022
+### M18-022--023: bulk smoothing and cutoff absorption
 
-Coefficient-level smoothing before time differentiation removes the pointwise \(\partial_nD_t\kappa\) / D5 hazard. Bulk integration by parts yields a rate-dissipation identity. For general \(\nu\), use the corrected M18-024 form below.
-
-### M18-023
-
-For an adapted squared cutoff \(\phi=\chi^2\), the coefficient-cutoff current is absorbed into the favorable coefficient-rate term plus a collar-gradient remainder. The scale-invariant collar parameter is
+Coefficient-level smoothing removes the pointwise \(\partial_nD_t\kappa\)/D5 hazard. An adapted squared cutoff \(\phi=\chi^2\) absorbs the coefficient-cutoff current into the favorable coefficient-rate term plus the scale-invariant collar-gradient parameter
 
 \[
 \boxed{
 \Gamma_{\mathcal K}
-:=
+=
 \operatorname*{ess\,sup}_{\mathcal K}
 \frac{|\nabla\kappa|^2}{\delta_0^3}.
 }
 \]
 
-If \(\Gamma_{\mathcal K}\) is bounded on a fixed fractional collar, the cutoff current is not an independent local branch.
+Thus the cutoff current is not an independent local branch when \(\Gamma_{\mathcal K}\) is bounded on a fixed fractional collar.
 
-### M18-024
+### M18-024: viscosity correction and source-square descent
 
-The viscosity audit restores the exact general-\(\nu\) coefficient law and gives the corrected bulk identity
+The corrected general-\(\nu\) bulk identity is
 
 \[
 \boxed{
@@ -84,22 +68,14 @@ The viscosity audit restores the exact general-\(\nu\) coefficient law and gives
 \dot B_\phi
 &+\nu\int\phi\rho^2|L_\rho\kappa|^2dx
 +\nu^{-1}\int\phi\rho^2|D_t\kappa|^2dx\\
-={}&
-2\int\phi(\sigma+\nu\kappa-a_n)\rho^2|\nabla\kappa|^2dx\\
-&-\int\phi'(D_t\kappa)\rho^2|\nabla\kappa|^2dx\\
+={}&2\int\phi(\sigma+\nu\kappa-a_n)\rho^2|\nabla\kappa|^2dx\\
+&-\int\phi'(\kappa)(D_t\kappa)\rho^2|\nabla\kappa|^2dx\\
 &+\nu^{-1}R_\phi.
 \end{aligned}
 }
 \]
 
-The combined source
-
-\[
-R_\phi
-=\int\phi\rho^2|L_\rho\sigma+\mathcal R_{\rm geom}|^2dx
-\]
-
-has an exact material-Laplacian commutator representation and satisfies
+The combined source has an exact material-Laplacian commutator representation and satisfies
 
 \[
 \boxed{
@@ -117,11 +93,11 @@ P=\|\nabla\Omega\|_2^2,
 J_3=\|D^3\Omega\|_2^2.
 \]
 
-Thus, on finite normalized intervals with a uniform snapshot palinstrophy ceiling, the opaque strain/geometry source-square branch is controlled by the existing D3 spacetime resource.
+Thus the opaque strain/geometry-source-square branch is reduced to the existing D3 spacetime resource plus snapshot palinstrophy decompactification.
 
-### M18-025
+### M18-025: palinstrophy temporal thickening
 
-Whole-space Navier--Stokes gives the scale-correct one-sided palinstrophy growth inequality
+Whole-space Navier--Stokes gives
 
 \[
 \boxed{
@@ -129,47 +105,90 @@ P'(t)\le C\nu^{-1/3}P(t)^{5/3}.
 }
 \]
 
-A crossing from \(p/2\) to \(p\) therefore requires
+A crossing from \(p/2\) to \(p\) requires
 
 \[
 \boxed{
 \Delta t\gtrsim\nu^{1/3}p^{-2/3},
-}
-\]
-
-and pays
-
-\[
-\boxed{
+\qquad
 \int Pdt\gtrsim\nu^{1/3}p^{1/3}.
 }
 \]
 
-For endpoint height \(p_m\) and backward same-branch window \(\tau_m\),
+For endpoint height \(p_m\) and backward window \(\tau_m\),
 
 \[
 \boxed{
 q_m^P
 \gtrsim
-\min\left\{p_m\tau_m,\nu^{1/3}p_m^{1/3}\right\}.
+\min\{p_m\tau_m,\nu^{1/3}p_m^{1/3}\}.
 }
 \]
 
-The exact ancestry contradiction test is therefore
+The corresponding ancestry contradiction requires
+
+\[
+\sum_mR_m^{-1}q_m^P=\infty,
+\]
+
+which is not yet established.
+
+### M18-026: anisotropic collar-gradient packet classification
+
+For a high-gradient collar point with
+
+\[
+G=|\nabla\kappa|,
+\qquad
+\Gamma=G^2/\delta_0^3,
+\]
+
+the natural transverse and normal scales are
 
 \[
 \boxed{
-\sum_mR_m^{-1}
-\min\left\{p_m\tau_m,\nu^{1/3}p_m^{1/3}\right\}
-=\infty.
+L_0=\delta_0^{-1/2},
+\qquad
+\ell_n=\delta_0/G=L_0\Gamma^{-1/2}.
 }
 \]
 
-No such divergence is claimed yet.
+Define the scale-invariant full-Hessian shape parameter
+
+\[
+\mathfrak H_2
+:=
+\delta_0^{-2}\operatorname*{ess\,sup}_{\mathcal C}|D^2\kappa|
+\]
+
+and weighted packet-mass parameter
+
+\[
+\boxed{
+\mathfrak M_\rho
+:=
+\sqrt\Gamma\,\delta_0^{-1/2}
+\int_{\mathcal C}\rho^2dx.
+}
+\]
+
+If the anisotropic packet survives, \(\mathfrak H_2\lesssim\sqrt\Gamma\), and \(\mathfrak M_\rho\gtrsim1\), then the packet first-coefficient-jet charge satisfies
+
+\[
+\boxed{
+B_{\mathcal C}
+\gtrsim
+\delta_0^{7/2}\sqrt\Gamma.
+}
+\]
+
+Hence normalized collar-gradient concentration must produce first-jet packet growth or escape through full second-coefficient-jet concentration, weighted packet-mass depletion, or transverse/tube/domain loss.
+
+Full-Hessian concentration is not automatically Laplacian concentration: its trace-free part corresponds to level-shape/normal-field geometry and must remain separately audited.
 
 ## 5. Current unresolved local channels
 
-The compact regular-tube robust-flux-loss branch is currently reduced to
+The compact regular-tube robust-flux-loss branch is reduced to
 
 \[
 \boxed{
@@ -179,7 +198,9 @@ G_{\rm robust\ flux\ loss}
 G_{\rm spacetime\ palinstrophy}^{R^{-1}}\\
 &\lor G_{\rm first\ coefficient\ jet/D3}^{R^{-5}}\\
 &\lor G_{\rm second\ coefficient\ jet/D4}^{R^{-7}}\\
-&\lor G_{\rm normalized\ collar\ gradient\ concentration}\\
+&\lor G_{\rm first\text{-}jet\ packet\ growth}\\
+&\lor G_{\rm weighted\ packet\ mass\ depletion}\\
+&\lor G_{\rm trace\text{-}free\ Hessian/level\text{-}geometry\ decompactification}\\
 &\lor G_{\rm high\ snapshot\ palinstrophy/time\ concentration}\\
 &\lor G_{\rm strain/normal\text{-}stretch\ decompactification}\\
 &\lor G_{\rm level\text{-}width/critical/tube/domain/genealogy\ loss}.
@@ -187,20 +208,18 @@ G_{\rm spacetime\ palinstrophy}^{R^{-1}}\\
 }
 \]
 
-The independent cutoff-current and opaque strain/geometry-source-square branches have been removed under the explicit M18-023--024 hypotheses.
-
 ## 6. Next target
 
-M18-026 should audit
+M18-027 should audit the weighted packet-mass depletion branch
 
 \[
 \boxed{
-\Gamma_{\mathcal K}
+\mathfrak M_\rho
 =
-\operatorname*{ess\,sup}_{\mathcal K}
-\frac{|\nabla\kappa|^2}{\delta_0^3}
-\to\infty.
+\sqrt\Gamma\,\delta_0^{-1/2}
+\int_{\mathcal C}\rho^2dx
+\to0.
 }
 \]
 
-The first question is whether normalized collar-gradient concentration can be thickened spatially into the existing weighted first-coefficient-jet ledger, or whether rapid concentration necessarily returns to the M18-018--019 critical-level / second-coefficient-jet branch.
+The target is to determine whether such depletion can coexist with the retained robust level-flux witness, or whether it necessarily forces transverse-area concentration, nodal migration/amplitude depletion, or a palinstrophy/raw-H2 payment.
