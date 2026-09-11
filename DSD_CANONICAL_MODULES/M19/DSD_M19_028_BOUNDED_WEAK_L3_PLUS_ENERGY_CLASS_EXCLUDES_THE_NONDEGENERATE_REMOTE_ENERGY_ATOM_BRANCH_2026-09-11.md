@@ -65,13 +65,7 @@ Therefore
 
 The classical Lions--Shinbrot energy-equality criterion applies to \(L^4_tL^4_x\). Thus there is no anomalous kinetic-energy loss at \(T_*\).
 
-For the Leray--Hopf weak continuation,
-
-\[
-u(t)\rightharpoonup u(T_*)
-\]
-
-should be read simply as the usual weak convergence of the velocity field \(u(t)\) to \(u(T_*)\). Energy equality gives
+For the Leray--Hopf weak continuation, the velocity field converges weakly in \(L^2\) to its terminal value as time approaches \(T_*\) from the left. Energy equality also gives
 
 \[
 \|u(t)\|_2\to\|u(T_*)\|_2.
