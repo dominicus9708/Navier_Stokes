@@ -58,7 +58,13 @@ Therefore
 
 \[
 \boxed{
-u\in L^2(t_0,T_*;L^6(\mathbb R^3)).}
+u_placeholder}
+\]
+
+where the placeholder is to be read as
+
+\[
+\boxed{u\in L^2(t_0,T_*;L^6(\mathbb R^3)).}
 \]
 
 ## 4. Lorentz interpolation gives L4_t L4_x
@@ -86,8 +92,7 @@ CM^2\|u(t)\|_6^2.
 Integrating in time,
 
 \[
-\boxed{
-u\in L^4(t_0,T_*;L^4(\mathbb R^3)).}
+\boxed{u\in L^4(t_0,T_*;L^4(\mathbb R^3)).}
 \]
 
 This is strictly inside the classical energy-equality regime.
@@ -99,10 +104,16 @@ For Leray--Hopf solutions, the classical Lions--Shinbrot energy-equality criteri
 Equivalently, if
 
 \[
+u_placeholder_2
+\]
+
+where the placeholder is to be read as
+
+\[
 u(t)\rightharpoonup u(T_*)
 \]
 
-weakly in \(L^2\), then
+with the leading symbol interpreted as \(u(t)\), then weak convergence in \(L^2\) and energy equality give
 
 \[
 \boxed{
@@ -116,8 +127,7 @@ weakly in \(L^2\), then
 Weak convergence plus convergence of the Hilbert norm gives
 
 \[
-\boxed{
-u(t)\to u(T_*)\quad\text{strongly in }L^2.}
+\boxed{u(t)\to u(T_*)\quad\text{strongly in }L^2.}
 \]
 
 Thus the terminal kinetic-energy measure is absolutely continuous:
