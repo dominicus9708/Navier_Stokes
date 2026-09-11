@@ -1,7 +1,7 @@
 # M18 Current Frontier
 
 **Date:** 2026-09-11  
-**Current tip:** **M18-022**  
+**Current tip:** **M18-023**  
 **Status:** AUTHORITATIVE DSD ANALYSIS FRONTIER
 
 \[
@@ -52,17 +52,14 @@ Thus temporal thinning forces temporal flux-shape decompactification or an expli
 
 The pointwise time derivative of one level flux contains \(\partial_nD_t\kappa\) and therefore appears to reach a third coefficient jet / D5-type vorticity derivative.
 
-However, coefficient-level smoothing gives
+Coefficient-level smoothing instead gives
 
 \[
 B_\phi
-=\int\phi(\kappa)\rho^2|\nabla\kappa|^2dx
-=\int\phi(s)F(s,t)ds,
+=\int\phi(\kappa)\rho^2|\nabla\kappa|^2dx,
 \]
 
-and bulk integration by parts removes \(\nabla D_t\kappa\) exactly.
-
-Writing
+and bulk integration by parts removes \(\nabla D_t\kappa\) exactly. Writing
 
 \[
 h=D_t\kappa,
@@ -70,7 +67,7 @@ h=D_t\kappa,
 h=L_\rho\kappa+L_\rho\sigma+\mathcal R_{\rm geom},
 \]
 
-the exact bulk identity is
+the exact identity is
 
 \[
 \begin{aligned}
@@ -84,9 +81,46 @@ the exact bulk identity is
 
 Therefore the pointwise D5 temporal barrier is not universal on macroscopic coefficient-width branches.
 
+### M18-023
+
+Choose an adapted squared cutoff
+
+\[
+\phi=\chi^2,
+\]
+
+with a fixed fractional transition collar inside the retained coefficient tube. Then the coefficient-cutoff current satisfies
+
+\[
+\boxed{
+|\mathcal C_\phi|
+\le
+\varepsilon\int\phi\rho^2|D_t\kappa|^2dx
++
+C_{\chi,\varepsilon}\Gamma_{\mathcal K}\delta_0B_{\widetilde\phi},
+}
+\]
+
+where
+
+\[
+\boxed{
+\Gamma_{\mathcal K}
+:=
+\operatorname*{ess\,sup}_{\mathcal K}
+\frac{|\nabla\kappa|^2}{\delta_0^3}
+}
+\]
+
+is scale invariant and \(B_{\widetilde\phi}\) is a slightly larger first-coefficient-jet observable.
+
+Thus, under normalized collar-gradient compactness and a fixed fractional collar, the cutoff current is absorbed into the favorable bulk rate term plus the inherited first-coefficient-jet resource. It is not an independent local branch.
+
+Failure is typed as normalized collar-gradient concentration, which is a representation-safe refinement of the existing coefficient-gradient decompactification branch. Pointwise concentration still requires a thickness theorem before it becomes an integrated payer.
+
 ## 4. Current unresolved local channels
 
-The compact regular-tube zero-flux branch is currently reduced to:
+The compact regular-tube robust-flux-loss branch is currently reduced to
 
 \[
 \boxed{
@@ -96,20 +130,27 @@ G_{\rm robust\ flux\ loss}
 G_{\rm spacetime\ palinstrophy}^{R^{-1}}\\
 &\lor G_{\rm first\ coefficient\ jet/D3}^{R^{-5}}\\
 &\lor G_{\rm second\ coefficient\ jet/D4}^{R^{-7}}\\
-&\lor G_{\rm coefficient\ cutoff\ current}\\
+&\lor G_{\rm normalized\ collar\ gradient\ concentration}\\
 &\lor G_{\rm strain/geometry\ source\ square}\\
+&\lor G_{\rm strain/normal\text{-}stretch\ decompactification}\\
 &\lor G_{\rm level\text{-}width/critical/tube/domain/genealogy\ loss}.
 \end{aligned}
 }
 \]
 
+The coefficient-cutoff-current branch has been removed under the explicit M18-023 adapted-cutoff compactness hypotheses.
+
 ## 5. Next target
 
-M18-023 should audit the coefficient-cutoff current
+M18-024 should audit the remaining source square
 
 \[
-\mathcal C_\phi
-=-\int\phi'(\kappa)(D_t\kappa)\rho^2|\nabla\kappa|^2dx
+\boxed{
+R_\phi
+=
+\int\phi\rho^2
+|L_\rho\sigma+\mathcal R_{\rm geom}|^2dx.
+}
 \]
 
-using adapted cutoffs, collar decomposition, and weighted inequalities. The goal is to absorb it into the favorable bulk rate term and the existing first-coefficient-jet resource, or isolate an explicit higher-gradient collar exit.
+The first step must preserve the M17-463 provenance firewall: test whether the **combined source** has an exact lower-order cancellation, divergence, or projection identity before estimating its individual terms. If no such structure exists, only then split it into separately typed strain and geometry channels.
