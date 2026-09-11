@@ -1,8 +1,8 @@
 # M19 Current Frontier
 
 **Date:** 2026-09-11  
-**Current tip:** **M19-035**  
-**Status:** ACTIVE CALCULATION / ROOT RECOMPRESSION / EXPLICIT THEOREM FRONTIERS
+**Current tip:** **M19-043**  
+**Status:** ACTIVE CALCULATION / TWO-THEOREM FRONTIER + FINAL REPRESENTATION CLEANUP
 
 \[
 \boxed{\text{GLOBAL 3D NAVIER--STOKES REGULARITY REMAINS UNPROVED.}}
@@ -11,7 +11,7 @@
 ## 1. Phase policy
 
 M18 is frozen as the analysis/audit family.
-M19 is the active calculation family.
+M19 is the active calculation/closure family.
 M19 may use M18 statements only at the certification level actually established there.
 
 \[
@@ -24,30 +24,19 @@ M19 may use M18 statements only at the certification level actually established 
 }
 \]
 
-## 2. M19-001--004 — CE-H finite population current
+## 2. CE-H finite population-current branch — M19-001--004
 
-The finite material-population current was decomposed as
+The conservative material-population current reduces by Dirichlet-to-Neumann decomposition and weighted graph Hodge projection to already known continuum resources:
 
-\[
-\bar j
-=
-\bar G B^T\bar V
-+r^{pump}+\bar r^{mode}+\bar r^{src}.
-\]
-
-Weighted graph Hodge projection shows that a nonzero conservative cycle cannot be supported by the symmetric conductance gradient alone.
-
-The residuals descend to known continuum structures:
-
-- pump \(\to\) strain/connector geometry;
-- boundary mode \(\to\) palinstrophy/interface gradients;
+- conductance pump \(\to\) strain/geometry;
+- boundary mode \(\to\) palinstrophy/interface gradient;
 - bulk source \(\to\) CE-H coefficient + normalized diffusion.
 
-Thus the graph current is not an independent CE-H currency.
+Thus no independent finite graph-current currency remains.
 
-## 3. M19-005--012 and M19-034 — R-AC
+## 3. R-AC before the latest reduction — M19-005--012, 033--034
 
-The clock has the exact discounted coboundary
+The exact clock coboundary is
 
 \[
 L_j=\Theta_j-q^{-1}\Theta_{j+1},
@@ -55,309 +44,324 @@ L_j=\Theta_j-q^{-1}\Theta_{j+1},
 \sum_jq^{-j}L_j=\Theta_0,
 \]
 
-so signed clock bookkeeping does not erase ancestry discount.
+so signed clock bookkeeping does not remove ancestry discount.
 
-For age ratio
-
-\[
-K=q^{k/2},
-\]
-
-one natural return episode carries the ancestor-time fraction
+For age ratio \(K\), one raw child-time return occupies only \(K^{-2}\) of the ancestor natural time.  Spatial off-center occupancy contributes \(K^{-1}\), and the same-event product is
 
 \[
-K^{-2}.
+\boxed{K^{-3}.}
 \]
 
-A sufficient temporal-return threshold requires order
+Therefore marginal spatial and temporal ledgers cannot be multiplied into a stronger ancestry contradiction.
+
+## 4. R-AC Hodge/population/radial reduction — M19-036--039
+
+### 4.1 Finite labels alone do not force alignment
+
+M19-036 gives an explicit two-lineage anti-phase model showing that finite-lineage pigeonhole and positive marginal densities do not force
 
 \[
-K^2J_k^{1/2}
+\sum_iJ_{k,i}R_{k,i}>0.
 \]
 
-effective episodes unless residence is enhanced.
+However, if a genuinely material population mark changes its dominant lineage, the exact population balance forces order-one source/exchange total variation.  Repeated quiet anti-phase switching is therefore impossible **once the ancestry charge is realized by a population state variable**.
 
-M19-033 adds the spatial eccentricity threshold: a shell at distance \(d=Kr\) needs order
+### 4.2 Exact shell Hodge split
+
+The cubic annular charge is
 
 \[
-K
+J_A=R\int_A|\nabla u|^2dx.
 \]
 
-comparable first-hitting packets to form an order-one critical Morrey shell.
-
-M19-034 shows that the same child event has joint parent space-time fraction
+For divergence-free velocity,
 
 \[
-\boxed{K^{-1}K^{-2}=K^{-3}.}
+|\nabla u|^2-|\omega|^2
+=\nabla\cdot((u\cdot\nabla)u),
 \]
 
-Hence spatial and temporal marginal ledgers cannot be naively multiplied into a stronger ancestry payer.
-
-The exposed R-AC theorem is now explicitly a same-event correlation theorem:
+so
 
 \[
 \boxed{
-\mathcal T_{AC}^{corr}:
-\text{cubic-mass-bearing lineage}
-\Rightarrow
-\text{jointly aligned shell occupancy + ancestral return}
-\lor
-\text{typed replacement/export/deformation exit}.
-}
-\]
-
-No further unsigned scaling rearrangement currently improves this frontier.
-
-## 4. M19-013--019 and M19-035 — R-critical
-
-The critical velocity tail is represented by the parent kinetic Morrey density
-
-\[
-\mathcal M_u(x,r,t)
-=\frac1r\int_{B_r(x)}|u|^2dx.
-\]
-
-On the passive spectator branch,
-
-\[
-U_Y(y,\theta)
+J_A
 =
-\frac1{|y|}
-A_Y\left(\log|y|-\frac\theta2,\frac y{|y|}\right)
-+O(|y|^{-3}),
-\]
-
-with translation covariance
-
-\[
-A_{\sigma_tY}(q)=A_Y(q-t/2).
-\]
-
-A nontrivial translation-invariant recurrent factor cannot be supported on finite global \(L^p(\mathbb R_q\times S^2)\) scattering data; in particular it is genuinely weak-critical rather than strong \(L^3\).
-
-M19-035 calculates why one more local asymptotic order does not close this branch. For
-
-\[
-U_0=r^{-1}A(q,\omega),
-\qquad
-q=\log r-\theta/2,
-\]
-
-the similarity transport operator satisfies
-
-\[
-\mathcal L_{sim}U_0=0
-\]
-
-for arbitrary sufficiently regular \(A\).
-
-The first Navier--Stokes residual is \(O(r^{-3})\), while
-
-\[
-\mathcal L_{sim}[r^{-3}B]=-r^{-3}B.
-\]
-
-Thus the first residual is generically absorbed by the \(r^{-3}\) correction rather than imposing a solvability condition on \(A\).
-
-The unique resonant sector is the leading \(r^{-1}\) datum itself.
-
-Therefore the general R-critical frontier remains
-
-\[
-\boxed{
-\mathcal T_{critical}:
-\text{global }q\text{-translation/cocycle rigidity for the resonant weak-critical datum}.
+R\int_A|\omega|^2dx
++
+R\int_{\partial A}n\cdot(u\cdot\nabla)u\,dS.
 }
 \]
 
-## 5. M19-020--029 — strong remote / Type-II source
+Thus the ancestry charge is either bulk localized enstrophy, which is population-like at \(p=2\), or a shell-boundary/harmonic transport defect.
 
-For remote source ratio \(K_j\),
+### 4.3 Exact shell-localized material balance
 
-\[
-R_j=K_jr_j,
-\qquad
-U_j^E=\frac{\nu K_j}{r_j},
-\qquad
-\varepsilon_j=K_j^{-2}.
-\]
-
-Define
+For one material population \(P_i(t)\) and radial cutoff \(\chi_R\),
 
 \[
-\Lambda_j:=K_j^5r_j.
+M_{i,R}
+=
+\int_{P_i(t)}\chi_R|\omega|^2dx
 \]
 
-Finite physical energy gives
-
-\[
-K_j^5r_j\lesssim1,
-\qquad
-R_j\lesssim r_j^{4/5}\to0.
-\]
-
-On \(\Lambda_j\ge\Lambda_->0\), the original inertial frame supplies global source-scale \(L^2\) control. Together with the Euler-scaled vorticity cap, pressure-free weak formulation, and Aubin--Lions, this yields a nontrivial finite-energy ancient Euler limit.
-
-The same branch forces fixed physical kinetic energy into balls of radius \(R_j\to0\), hence a terminal energy-measure atom unless the strong left \(L^2\) trace fails.
-
-More directly, M19-029 uses the M5-443 source oscillation floor and finite-measure Lorentz embedding to obtain
+satisfies
 
 \[
 \boxed{
-\|u(t_j)\|_{L^{3,\infty}}
+M_{i,R}'
+=
+C_{rad,i}+S_i+D_{bulk,i}+C_{diff,R,i}+E_{pop,i}.
+}
+\]
+
+The terms are respectively radial material shell crossing, stretching/source, bulk diffusion, diffusive shell crossing, and material-population exchange.
+
+Therefore on the fully quiet branch the only new return-deficiency mechanism is the relative radial current.
+
+### 4.4 Bounded weak-L3 upgrades one contact to full ancestor natural time
+
+Under shell-amplitude comparability,
+
+\[
+\int_{E_R}|\omega|^2dx\gtrsim \frac JR,
+\qquad
+\|\omega\|_{L^\infty(E_R)}\lesssim\frac{\sqrt J}{R^2},
+\]
+
+bounded weak-\(L^3\), and controlled center drift,
+
+\[
+\boxed{
+\frac{\int |u|\,|\omega|^2}{\int|\omega|^2}
+\lesssim\frac{1}{R}.
+}
+\]
+
+Hence
+
+\[
+|C_{rad}|\lesssim R^{-2}M_{i,R},
+\]
+
+and one genuine contact persists for
+
+\[
+\boxed{\tau_{contact}\gtrsim cR^2.}
+\]
+
+This removes the old \(K^{-2}\) dwell-duration defect for one actual contact.
+
+## 5. Exact R-AC frontier after M19-040
+
+M18-055 remains valid: a fixed annular record cell contains only order-one independent fixed-thickness events.  M19-039 makes each true contact longer; it does not create more nonreused contacts.
+
+Let \(N_k^{dist}\) count genuinely distinct physical historical returns. Then
+
+\[
+\mathfrak R_k\gtrsim N_k^{dist}\rho_k,
+\]
+
+and the sufficient cubic ancestry threshold is exactly
+
+\[
+\boxed{
+\mathcal T_{count}^{dist}:
+N_k^{dist}\rho_k
 \gtrsim
-\nu K_j^2.
+J_k^{1/2}
 }
 \]
 
-Therefore
+on a subset carrying
+
+\[
+\sum J_k^{3/2}=\infty.
+\]
+
+Rerecording one long contact does not increase \(N_k^{dist}\).  Repeated exit/re-entry forces radial/source/diffusion/exchange total variation, but no finite upper budget is presently known for the radial total variation.
+
+Thus
+
+\[
+\boxed{R\text{-AC}\longrightarrow\mathcal T_{count}^{dist}}
+\]
+
+modulo already typed exits.
+
+## 6. R-critical scattering normal form — M19-013--019, 035, 041
+
+The passive critical tail is
+
+\[
+U(y,\theta)
+=
+\frac1rA(q,\omega)+O(r^{-3}),
+\qquad
+q=\log r-\theta/2.
+\]
+
+The \(r^{-1}\) sector is the unique similarity-transport resonance; \(r^{-3}\) corrections do not impose a generic solvability condition on \(A\).
+
+Write
+
+\[
+A=A_r\omega+A_T.
+\]
+
+Spherical Hodge decomposition gives
+
+\[
+A_T
+=
+\nabla_{S^2}\phi
++
+\omega\times\nabla_{S^2}\psi,
+\]
+
+and divergence-free implies
+
+\[
+\Delta_{S^2}\phi
+=-(\partial_q+1)A_r.
+\]
+
+Hence the leading datum is parameterized by two scalar channels:
+
+\[
+\boxed{(A_r,\psi),\qquad \int_{S^2}A_r=0.}
+\]
+
+The toroidal sector \(A_r=0\) permits bounded smooth aperiodic recurrent leading data.  For example
+
+\[
+b(q)=\sin q+\frac12\sin(\sqrt2q),
+\]
+
+\[
+A(q,\omega)
+=b(q)\,\omega\times\nabla_{S^2}Y_{\ell m}(\omega)
+\]
+
+satisfies all currently certified **leading-order** passive-tail constraints while remaining nonperiodic and non-\(L^3_q\).  This is a leading-order firewall, not an exact Navier--Stokes solution.
+
+## 7. Elementary critical budgets do not close the toroidal branch — M19-042--043
+
+On a fixed spectator sphere near \(T_*\), a critical tail has physical energy-flux and dissipation scales
+
+\[
+O((T_*-t)^{-1/2}),
+\]
+
+which are time integrable.
+
+Thus persistent aperiodic critical boundary history does not force infinite physical energy, dissipation, or ordinary energy flux.
+
+Circulation is scale critical, but for a material loop the exact viscous Kelvin identity is
+
+\[
+\boxed{
+\frac d{dt}\oint_{\Gamma_t}u\cdot dx
+=
+\nu\oint_{\Gamma_t}\Delta u\cdot dx.
+}
+\]
+
+On the critical spectator scale,
+
+\[
+\left|\frac{d\Gamma}{dt}\right|
+\lesssim
+C\nu(T_*-t)^{-1}R_0^{-2},
+\]
+
+whose absolute time integral is logarithmically nonintegrable.  Thus Kelvin circulation supplies bounded similarity-time speed, not a finite-total-variation budget.
+
+Moreover one material loop does not compare distinct historical scattering labels \(q\).
+
+Therefore the surviving critical theorem is genuinely global:
+
+\[
+\boxed{
+\mathcal T_{critical}^{global}:
+\text{exclude globally realizable nonzero aperiodic radial--toroidal scattering cocycles over the recurrent hull}.
+}
+\]
+
+Local asymptotic corrections, unsigned energy budgets, and bare Kelvin circulation are all insufficient.
+
+## 8. R-remote status
+
+Strong remote/Type-II throughput already satisfies
 
 \[
 \boxed{
 H_{remote}^{strong}
 \Longrightarrow
-G_{weak-L^3\ escalation}.
+G_{weak-L^3\ escalation},
 }
-\]
 
-Strong remote/Type-II throughput is not an independent quiet root inside bounded W1.
+so it is not a quiet bounded-W1 root.
 
-## 6. M19-026--027 — dilute harmonic-strain halo
-
-On \(\Lambda_j\to0\), bounded Euler-scaled vorticity implies that any local velocity-variance divergence is carried by a curl-free harmonic strain component.
-
-A Biot--Savart shell split gives the logarithmic ceiling
+For weak remote recursion in one common physical frame,
 
 \[
-\boxed{
-|S_{harm,j}|
-\lesssim
-C(1+q|\log\Lambda_j|),
-}
-\]
-
-and
-
-\[
-E_j^E(D)
-\lesssim
-C(1+|\log\Lambda_j|^2).
-\]
-
-Thus the physical energy of the main dilute source tends to zero and the noncompactness is an intermediate-scale logarithmic halo rather than a fixed-energy source atom.
-
-## 7. M19-030--033 — residual weak remote recursion
-
-M5-402 and M5-405 combined with M19-029 show that, under bounded weak-\(L^3\), a remote branch cannot terminate quietly:
-
-\[
-\boxed{
-\text{remote activity + no typed exit}
-\Longrightarrow
-\text{infinite weak remote/shell-H recursion}.
-}
-\]
-
-Restore one common physical frame. If
-
-\[
-r_{m+1}=r_m\ell_m,
-\qquad
-|x_{m+1}-x_m|=r_mD_m,
-\qquad
-K_m=D_m/\ell_m,
-\]
-
-then
-
-\[
-\boxed{
 |x_{m+1}-x_m|=K_mr_{m+1}.
-}
 \]
 
-Hence bounded physical jumps force physical scale descent; no scale descent forces large physical export.
+Bounded-eccentricity nested cascades produce R-critical Morrey activity.  Highly off-center cascades require order-distance/scale packet multiplicity for a critical shell; sparse incidence is an R-AC genealogy defect.
 
-If the centers converge to \(x_\infty\), define eccentricity
-
-\[
-\eta_m=\frac{|x_m-x_\infty|}{r_m}.
-\]
-
-A first-hitting velocity-variance floor yields
-
-\[
-\frac1{\rho_m}
-\inf_c\int_{B_{\rho_m}(x_\infty)}|u-c|^2dx
-\gtrsim
-\frac{\nu^2}{\eta_m+C},
-\qquad
-\rho_m=r_m(\eta_m+C).
-\]
-
-Thus bounded eccentricity produces R-critical Morrey activity.
-
-For off-center packets with \(\eta=d/r\gg1\), one packet contributes only order \(\eta^{-1}\) of the common-center critical shell scale. Order \(\eta\) comparable packets are needed for a critical shell.
-
-Therefore
+Hence the remaining remote work is primarily a representation cleanup:
 
 \[
 \boxed{
-G_{off-center\ remote}
-\Longrightarrow
-\mathcal R_{critical}
-\lor
-\mathcal R_{AC}
-\lor
-G_{typed\ common-mode/export}.
-}
+\mathcal B_{remote\to AC/critical}:
+\text{every quiet weak remote/historical survivor is represented in }
+\mathcal T_{count}^{dist}
+\text{ or }
+\mathcal T_{critical}^{global}
+\text{, modulo typed exits}.}
 \]
 
-The independent R-remote root has consequently been reduced to a narrow representation bridge between common-frame nested/wandering events and the already exposed R-AC/R-critical event classes.
+## 9. Current mathematical frontier
 
-## 8. Current root picture
-
-The active calculation now exposes essentially two major new mathematical theorem frontiers plus one representation bridge:
+At the present tip, the major new theorem-level work is concentrated in two objects:
 
 \[
 \boxed{
-\mathcal T_{AC}^{corr}
+\mathcal T_{count}^{dist}
 }
 \]
 
-for same-lineage space-time ancestry correlation,
+for distinct historical ancestry returns, and
 
 \[
 \boxed{
-\mathcal T_{critical}
+\mathcal T_{critical}^{global}
 }
 \]
 
-for aperiodic weak-critical scattering rigidity,
+for global aperiodic critical scattering rigidity.
 
-and
+A smaller but still necessary representation bridge remains:
 
 \[
 \boxed{
-\mathcal B_{remote\to AC/critical}
+\mathcal B_{remote\to AC/critical}.
 }
 \]
 
-for final event-class identification of the residual weak remote recursion.
+## 10. Final certification after mathematical closure
 
-Strong remote throughput itself has been routed to weak-\(L^3\) escalation and is no longer an independent quiet root.
-
-## 9. Final integration still required
-
-Even if the three displayed frontiers are closed, the repository still requires:
+Even if the displayed frontiers are closed, the repository still requires:
 
 1. arbitrary-singularity entry certification;
-2. historical branch completeness beyond active indexes;
-3. a full beginning-to-end independent audit of the combined proof chain.
+2. historical branch-completeness audit;
+3. full beginning-to-end independent verification of the combined proof chain.
 
 No global-regularity conclusion is currently justified.
 
-## 10. Permanent firewalls
+## 11. Permanent firewalls
 
 \[
 \boxed{\text{CE-H internal closure}\neq\text{global NS closure}},
@@ -368,19 +372,23 @@ No global-regularity conclusion is currently justified.
 \]
 
 \[
-\boxed{\text{rerecording}\neq\text{multiplicity}},
+\boxed{\text{rerecording}\neq\text{distinct historical return}},
 \]
 
 \[
-\boxed{\text{high-frequency control}\neq\text{low-frequency tightness}},
+\boxed{\text{vortex-line spatial residence}\neq\text{material temporal residence}},
 \]
 
 \[
-\boxed{\text{marginal spatial and temporal occupancy}\neq\text{joint same-event incidence}}.
+\boxed{\text{bounded critical speed}\neq\text{finite total variation}},
+\]
+
+\[
+\boxed{\text{leading-order scattering anti-model}\neq\text{exact Navier--Stokes solution}.}
 \]
 
 ---
 
 \[
-\boxed{\text{M19 ACTIVE TIP = M19-035.}}
+\boxed{\text{M19 ACTIVE TIP = M19-043.}}
 \]
