@@ -1,7 +1,7 @@
 # M18 Current Frontier
 
 **Date:** 2026-09-11  
-**Current tip:** **M18-023**  
+**Current tip:** **M18-025**  
 **Status:** AUTHORITATIVE DSD ANALYSIS FRONTIER
 
 \[
@@ -12,11 +12,26 @@
 
 M17 is retained as the calculation/derivation chain through M17-469. M18 is the subsequent DSD analysis/audit line. Historical M17-470--485 remain legacy aliases according to `M18_TRANSITION_AND_RENUMBERING_MAP.md`.
 
-## 2. Migrated frontier
+## 2. General-viscosity correction firewall
+
+The repository problem setting keeps \(\nu>0\). Therefore the exact CE-H coefficient law used from M18-024 onward is
+
+\[
+\boxed{
+D_t\kappa
+=\nu L_\rho\kappa
++L_\rho\sigma
++\mathcal R_{\rm geom}.
+}
+\]
+
+The M17-339 / M18-022 / M18-023 formulas without the factor \(\nu\) in front of \(L_\rho\kappa\) are to be read as \(\nu=1\) specializations. M18-024 is authoritative for the repository-wide general-\(\nu\) setting.
+
+## 3. Migrated frontier
 
 M18-001--019 are the canonical aliases of the historical post-M17-469 analysis modules through legacy M17-485.
 
-## 3. New M18 results
+## 4. New M18 results
 
 ### M18-020
 
@@ -32,93 +47,127 @@ R^{-7}\quad\text{(second coefficient jet/D4)}.
 
 ### M18-021
 
-The exact-equality active set used operationally in M18-020 is not robust enough to generate positive time measure. A two-threshold inequality event is required.
-
-With a strict margin and uniform equicontinuity in the invariant coefficient-time coordinate
+A robust two-threshold flux-loss event plus uniform equicontinuity in coefficient time
 
 \[
-\vartheta=\int\delta(t)dt,
+\vartheta=\int\delta(t)dt
 \]
 
-active-time thinning is impossible. The scale-invariant differentiable temporal-shape parameter is
-
-\[
-\Theta=\delta^{-1}\left|\partial_t(F/J)\right|.
-\]
-
-Thus temporal thinning forces temporal flux-shape decompactification or an explicit margin/J/tube/window/genealogy loss.
+forces positive active duration. Temporal thinning therefore implies a scale-invariant temporal flux-shape jet or an explicit margin/J/tube/window/genealogy loss.
 
 ### M18-022
 
-The pointwise time derivative of one level flux contains \(\partial_nD_t\kappa\) and therefore appears to reach a third coefficient jet / D5-type vorticity derivative.
-
-Coefficient-level smoothing instead gives
-
-\[
-B_\phi
-=\int\phi(\kappa)\rho^2|\nabla\kappa|^2dx,
-\]
-
-and bulk integration by parts removes \(\nabla D_t\kappa\) exactly. Writing
-
-\[
-h=D_t\kappa,
-\qquad
-h=L_\rho\kappa+L_\rho\sigma+\mathcal R_{\rm geom},
-\]
-
-the exact identity is
-
-\[
-\begin{aligned}
-\dot B_\phi
-&+\int\phi\rho^2\left(|L_\rho\kappa|^2+|h|^2\right)dx\\
-={}&2\int\phi(\sigma+\nu\kappa-a_n)\rho^2|\nabla\kappa|^2dx\\
-&-\int\phi'h\rho^2|\nabla\kappa|^2dx\\
-&+\int\phi\rho^2|L_\rho\sigma+\mathcal R_{\rm geom}|^2dx.
-\end{aligned}
-\]
-
-Therefore the pointwise D5 temporal barrier is not universal on macroscopic coefficient-width branches.
+Coefficient-level smoothing before time differentiation removes the pointwise \(\partial_nD_t\kappa\) / D5 hazard. Bulk integration by parts yields a rate-dissipation identity. For general \(\nu\), use the corrected M18-024 form below.
 
 ### M18-023
 
-Choose an adapted squared cutoff
-
-\[
-\phi=\chi^2,
-\]
-
-with a fixed fractional transition collar inside the retained coefficient tube. Then the coefficient-cutoff current satisfies
-
-\[
-\boxed{
-|\mathcal C_\phi|
-\le
-\varepsilon\int\phi\rho^2|D_t\kappa|^2dx
-+
-C_{\chi,\varepsilon}\Gamma_{\mathcal K}\delta_0B_{\widetilde\phi},
-}
-\]
-
-where
+For an adapted squared cutoff \(\phi=\chi^2\), the coefficient-cutoff current is absorbed into the favorable coefficient-rate term plus a collar-gradient remainder. The scale-invariant collar parameter is
 
 \[
 \boxed{
 \Gamma_{\mathcal K}
 :=
 \operatorname*{ess\,sup}_{\mathcal K}
-\frac{|\nabla\kappa|^2}{\delta_0^3}
+\frac{|\nabla\kappa|^2}{\delta_0^3}.
 }
 \]
 
-is scale invariant and \(B_{\widetilde\phi}\) is a slightly larger first-coefficient-jet observable.
+If \(\Gamma_{\mathcal K}\) is bounded on a fixed fractional collar, the cutoff current is not an independent local branch.
 
-Thus, under normalized collar-gradient compactness and a fixed fractional collar, the cutoff current is absorbed into the favorable bulk rate term plus the inherited first-coefficient-jet resource. It is not an independent local branch.
+### M18-024
 
-Failure is typed as normalized collar-gradient concentration, which is a representation-safe refinement of the existing coefficient-gradient decompactification branch. Pointwise concentration still requires a thickness theorem before it becomes an integrated payer.
+The viscosity audit restores the exact general-\(\nu\) coefficient law and gives the corrected bulk identity
 
-## 4. Current unresolved local channels
+\[
+\boxed{
+\begin{aligned}
+\dot B_\phi
+&+\nu\int\phi\rho^2|L_\rho\kappa|^2dx
++\nu^{-1}\int\phi\rho^2|D_t\kappa|^2dx\\
+={}&
+2\int\phi(\sigma+\nu\kappa-a_n)\rho^2|\nabla\kappa|^2dx\\
+&-\int\phi'(D_t\kappa)\rho^2|\nabla\kappa|^2dx\\
+&+\nu^{-1}R_\phi.
+\end{aligned}
+}
+\]
+
+The combined source
+
+\[
+R_\phi
+=\int\phi\rho^2|L_\rho\sigma+\mathcal R_{\rm geom}|^2dx
+\]
+
+has an exact material-Laplacian commutator representation and satisfies
+
+\[
+\boxed{
+R_\phi
+\lesssim
+P^{5/4}J_3^{3/4},
+}
+\]
+
+where
+
+\[
+P=\|\nabla\Omega\|_2^2,
+\qquad
+J_3=\|D^3\Omega\|_2^2.
+\]
+
+Thus, on finite normalized intervals with a uniform snapshot palinstrophy ceiling, the opaque strain/geometry source-square branch is controlled by the existing D3 spacetime resource.
+
+### M18-025
+
+Whole-space Navier--Stokes gives the scale-correct one-sided palinstrophy growth inequality
+
+\[
+\boxed{
+P'(t)\le C\nu^{-1/3}P(t)^{5/3}.
+}
+\]
+
+A crossing from \(p/2\) to \(p\) therefore requires
+
+\[
+\boxed{
+\Delta t\gtrsim\nu^{1/3}p^{-2/3},
+}
+\]
+
+and pays
+
+\[
+\boxed{
+\int Pdt\gtrsim\nu^{1/3}p^{1/3}.
+}
+\]
+
+For endpoint height \(p_m\) and backward same-branch window \(\tau_m\),
+
+\[
+\boxed{
+q_m^P
+\gtrsim
+\min\left\{p_m\tau_m,\nu^{1/3}p_m^{1/3}\right\}.
+}
+\]
+
+The exact ancestry contradiction test is therefore
+
+\[
+\boxed{
+\sum_mR_m^{-1}
+\min\left\{p_m\tau_m,\nu^{1/3}p_m^{1/3}\right\}
+=\infty.
+}
+\]
+
+No such divergence is claimed yet.
+
+## 5. Current unresolved local channels
 
 The compact regular-tube robust-flux-loss branch is currently reduced to
 
@@ -131,26 +180,27 @@ G_{\rm spacetime\ palinstrophy}^{R^{-1}}\\
 &\lor G_{\rm first\ coefficient\ jet/D3}^{R^{-5}}\\
 &\lor G_{\rm second\ coefficient\ jet/D4}^{R^{-7}}\\
 &\lor G_{\rm normalized\ collar\ gradient\ concentration}\\
-&\lor G_{\rm strain/geometry\ source\ square}\\
+&\lor G_{\rm high\ snapshot\ palinstrophy/time\ concentration}\\
 &\lor G_{\rm strain/normal\text{-}stretch\ decompactification}\\
 &\lor G_{\rm level\text{-}width/critical/tube/domain/genealogy\ loss}.
 \end{aligned}
 }
 \]
 
-The coefficient-cutoff-current branch has been removed under the explicit M18-023 adapted-cutoff compactness hypotheses.
+The independent cutoff-current and opaque strain/geometry-source-square branches have been removed under the explicit M18-023--024 hypotheses.
 
-## 5. Next target
+## 6. Next target
 
-M18-024 should audit the remaining source square
+M18-026 should audit
 
 \[
 \boxed{
-R_\phi
+\Gamma_{\mathcal K}
 =
-\int\phi\rho^2
-|L_\rho\sigma+\mathcal R_{\rm geom}|^2dx.
+\operatorname*{ess\,sup}_{\mathcal K}
+\frac{|\nabla\kappa|^2}{\delta_0^3}
+\to\infty.
 }
 \]
 
-The first step must preserve the M17-463 provenance firewall: test whether the **combined source** has an exact lower-order cancellation, divergence, or projection identity before estimating its individual terms. If no such structure exists, only then split it into separately typed strain and geometry channels.
+The first question is whether normalized collar-gradient concentration can be thickened spatially into the existing weighted first-coefficient-jet ledger, or whether rapid concentration necessarily returns to the M18-018--019 critical-level / second-coefficient-jet branch.
