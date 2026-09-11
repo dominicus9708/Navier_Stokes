@@ -1,8 +1,8 @@
 # M18 Current Frontier
 
 **Date:** 2026-09-11  
-**Current tip:** **M18-026**  
-**Status:** AUTHORITATIVE DSD ANALYSIS FRONTIER
+**Current tip:** **M18-052**  
+**Status:** AUTHORITATIVE DSD ANALYSIS / ROOT-CERT / ANCESTRY FRONTIER
 
 \[
 \boxed{\text{GLOBAL 3D NAVIER--STOKES REGULARITY REMAINS UNPROVED.}}
@@ -10,11 +10,10 @@
 
 ## 1. Phase boundary
 
-M17 is retained as the calculation/derivation chain through M17-469. M18 is the subsequent DSD analysis/audit line. Historical M17-470--485 remain legacy aliases according to `M18_TRANSITION_AND_RENUMBERING_MAP.md`.
+M17 is retained as the calculation/derivation chain through the pre-M18 transition. M18 is the subsequent DSD analysis/audit line.
+Historical post-M17 numbering remains preserved for provenance; later M18 corrections and audits take precedence when interpretations conflict.
 
-## 2. General-viscosity correction firewall
-
-The repository problem setting keeps \(\nu>0\). Therefore the exact CE-H coefficient law used from M18-024 onward is
+The general-viscosity coefficient law used in M18 remains
 
 \[
 \boxed{
@@ -25,201 +24,486 @@ D_t\kappa
 }
 \]
 
-The M17-339 / M18-022 / M18-023 formulas without the factor \(\nu\) in front of \(L_\rho\kappa\) are \(\nu=1\) specializations. M18-024 is authoritative for the repository-wide general-\(\nu\) setting.
+M18-024 is the authoritative general-\(\nu\) correction for the early bulk coefficient-rate identities.
 
-## 3. Migrated frontier
+## 2. M18-020--026: local CE-H rate/gradient analysis
 
-M18-001--019 are the canonical aliases of the historical post-M17-469 analysis modules through legacy M17-485.
+M18-020--021 convert robust zero-tube flux-loss events into spacetime payer sets unless a scale-invariant temporal flux-shape jet or explicit margin/tube/window/genealogy loss occurs.
 
-## 4. New M18 results
+M18-022--024 replace the pointwise high-time-derivative route by coefficient-level smoothing and an exact bulk rate identity. The combined source square descends to palinstrophy and the D3 resource.
 
-### M18-020--021: event time thickness
-
-Positive active-time measure converts the zero-tube flux-loss event directly into spacetime payer sets. A robust two-threshold event plus equicontinuity in coefficient time
+M18-025 proves palinstrophy temporal thickening:
 
 \[
-\vartheta=\int\delta(t)dt
+P'(t)\le C\nu^{-1/3}P(t)^{5/3},
 \]
 
-prevents arbitrary active-time thinning. Otherwise a scale-invariant temporal flux-shape jet or an explicit margin/J/tube/window/genealogy loss occurs.
-
-### M18-022--023: bulk smoothing and cutoff absorption
-
-Coefficient-level smoothing removes the pointwise \(\partial_nD_t\kappa\)/D5 hazard. An adapted squared cutoff \(\phi=\chi^2\) absorbs the coefficient-cutoff current into the favorable coefficient-rate term plus the scale-invariant collar-gradient parameter
+so a \(p/2\to p\) crossing pays
 
 \[
-\boxed{
-\Gamma_{\mathcal K}
-=
-\operatorname*{ess\,sup}_{\mathcal K}
-\frac{|\nabla\kappa|^2}{\delta_0^3}.
-}
-\]
-
-Thus the cutoff current is not an independent local branch when \(\Gamma_{\mathcal K}\) is bounded on a fixed fractional collar.
-
-### M18-024: viscosity correction and source-square descent
-
-The corrected general-\(\nu\) bulk identity is
-
-\[
-\boxed{
-\begin{aligned}
-\dot B_\phi
-&+\nu\int\phi\rho^2|L_\rho\kappa|^2dx
-+\nu^{-1}\int\phi\rho^2|D_t\kappa|^2dx\\
-={}&2\int\phi(\sigma+\nu\kappa-a_n)\rho^2|\nabla\kappa|^2dx\\
-&-\int\phi'(\kappa)(D_t\kappa)\rho^2|\nabla\kappa|^2dx\\
-&+\nu^{-1}R_\phi.
-\end{aligned}
-}
-\]
-
-The combined source has an exact material-Laplacian commutator representation and satisfies
-
-\[
-\boxed{
-R_\phi
-\lesssim
-P^{5/4}J_3^{3/4},
-}
-\]
-
-where
-
-\[
-P=\|\nabla\Omega\|_2^2,
-\qquad
-J_3=\|D^3\Omega\|_2^2.
-\]
-
-Thus the opaque strain/geometry-source-square branch is reduced to the existing D3 spacetime resource plus snapshot palinstrophy decompactification.
-
-### M18-025: palinstrophy temporal thickening
-
-Whole-space Navier--Stokes gives
-
-\[
-\boxed{
-P'(t)\le C\nu^{-1/3}P(t)^{5/3}.
-}
-\]
-
-A crossing from \(p/2\) to \(p\) requires
-
-\[
-\boxed{
 \Delta t\gtrsim\nu^{1/3}p^{-2/3},
 \qquad
 \int Pdt\gtrsim\nu^{1/3}p^{1/3}.
-}
 \]
 
-For endpoint height \(p_m\) and backward window \(\tau_m\),
+M18-026 introduces the anisotropic coefficient-collar packet scales and separates first-jet growth, second-jet/shape growth, weighted mass depletion, and domain/tube loss.
+
+## 3. M18-027--030: local zero-tube endpoint recompression
+
+The packet-mass and cutoff audit removes two false shortcuts.
+
+First,
+
+\[
+\mathfrak M_\rho\to0
+\]
+
+is not by itself a contradiction: a thin layer can carry fixed level flux while its volume-weighted vorticity mass shrinks.
+
+Second, the adapted cutoff does not fundamentally see
+
+\[
+\sup|\nabla\kappa|.
+\]
+
+The relevant object is a weighted coefficient-current/conductance quantity across the collar.
+
+Optimizing over admissible coefficient cutoffs reduces the local problem to a one-dimensional variational conductance problem in coefficient level.
+
+The surviving local CE-H concentration endpoints are therefore better described as:
 
 \[
 \boxed{
-q_m^P
-\gtrsim
-\min\{p_m\tau_m,\nu^{1/3}p_m^{1/3}\}.
+\text{distributed weighted-gradient concentration}
+\lor
+\text{second-jet/level geometry}
+\lor
+\text{strain-weighted first jet}
 }
 \]
 
-The corresponding ancestry contradiction requires
+plus explicit tube/domain/amplitude degenerations.
+
+## 4. M18-031--035: exact ancestry economics
+
+For
 
 \[
-\sum_mR_m^{-1}q_m^P=\infty,
+\Omega_R(y,s)=R^2\Omega(Ry,R^2s),
 \]
 
-which is not yet established.
-
-### M18-026: anisotropic collar-gradient packet classification
-
-For a high-gradient collar point with
-
-\[
-G=|\nabla\kappa|,
-\qquad
-\Gamma=G^2/\delta_0^3,
-\]
-
-the natural transverse and normal scales are
+the spacetime derivative resource satisfies
 
 \[
 \boxed{
-L_0=\delta_0^{-1/2},
-\qquad
-\ell_n=\delta_0/G=L_0\Gamma^{-1/2}.
+q_k^{parent}=R^{1-2k}q_k^{(R)}.
 }
 \]
 
-Define the scale-invariant full-Hessian shape parameter
+Hence
 
 \[
-\mathfrak H_2
-:=
-\delta_0^{-2}\operatorname*{ess\,sup}_{\mathcal C}|D^2\kappa|
+\begin{array}{c|c}
+\text{resource}&\text{parent weight}\\
+\hline
+\Omega\text{ spacetime }L^2&R^{+1}\\
+\nabla\Omega&R^{-1}\\
+D^2\Omega&R^{-3}\\
+D^3\Omega&R^{-5}
+\end{array}
 \]
 
-and weighted packet-mass parameter
+Each extra derivative weakens ancestry by another factor \(R^{-2}\).
+
+One-to-one intrinsic rerecording exactly preserves parent charge; rescaling the same event does not create multiplicity.
+
+The derivative resources can also be factored against the lower-order standard-energy charge through scale-invariant effective internal-frequency ratios. This makes lower-order descent the preferred ancestry strategy.
+
+## 5. M18-036--039: time placement and genealogy
+
+The certified palinstrophy, raw-H2, and D3 ancestry ledgers use fixed backward annuli
+
+\[
+I=[-b,-a]\Subset(-\infty,0),
+\]
+
+so their parent windows have bounded overlap on geometric records.
+
+Endpoint windows touching \(s=0\) do not enjoy this automatically.
+
+The second-generation first-hitting carrier is nontrivial at an interior time such as \(s=-1\), while terminal production events live in a different similarity-time organization.
+
+The resulting LOG-ALIGN / EVENT-ANNULAR firewall is:
 
 \[
 \boxed{
-\mathfrak M_\rho
-:=
-\sqrt\Gamma\,\delta_0^{-1/2}
-\int_{\mathcal C}\rho^2dx.
+\text{terminal positive-density production}
+\not\Rightarrow
+\text{automatic placement in every backward ancestry cell}.
 }
 \]
 
-If the anisotropic packet survives, \(\mathfrak H_2\lesssim\sqrt\Gamma\), and \(\mathfrak M_\rho\gtrsim1\), then the packet first-coefficient-jet charge satisfies
+This issue is later absorbed into the ancestry-conversion root.
 
-\[
-\boxed{
-B_{\mathcal C}
-\gtrsim
-\delta_0^{7/2}\sqrt\Gamma.
-}
-\]
+## 6. M18-040: non-CE-H branches are standard-resource branches
 
-Hence normalized collar-gradient concentration must produce first-jet packet growth or escape through full second-coefficient-jet concentration, weighted packet-mass depletion, or transverse/tube/domain loss.
-
-Full-Hessian concentration is not automatically Laplacian concentration: its trace-free part corresponds to level-shape/normal-field geometry and must remain separately audited.
-
-## 5. Current unresolved local channels
-
-The compact regular-tube robust-flux-loss branch is reduced to
+The four non-CE-H canonical survivors satisfy
 
 \[
 \boxed{
 \begin{aligned}
-G_{\rm robust\ flux\ loss}
-\Longrightarrow{}&
-G_{\rm spacetime\ palinstrophy}^{R^{-1}}\\
-&\lor G_{\rm first\ coefficient\ jet/D3}^{R^{-5}}\\
-&\lor G_{\rm second\ coefficient\ jet/D4}^{R^{-7}}\\
-&\lor G_{\rm first\text{-}jet\ packet\ growth}\\
-&\lor G_{\rm weighted\ packet\ mass\ depletion}\\
-&\lor G_{\rm trace\text{-}free\ Hessian/level\text{-}geometry\ decompactification}\\
-&\lor G_{\rm high\ snapshot\ palinstrophy/time\ concentration}\\
-&\lor G_{\rm strain/normal\text{-}stretch\ decompactification}\\
-&\lor G_{\rm level\text{-}width/critical/tube/domain/genealogy\ loss}.
+CP\!-E&\to P/H,\\
+CP\!-S&\to P\text{ or compactness loss},\\
+CE\!-T&\to H,\\
+Migration&\to P.
 \end{aligned}
 }
 \]
 
-## 6. Next target
+Thus they remain open downstream branches, but they are not independent resource currencies and must not be counted as upstream ROOT-CERT roots.
 
-M18-027 should audit the weighted packet-mass depletion branch
+Their unresolved long-time problem is chiefly ancestry placement, nonreuse, and scale economics.
+
+## 7. M18-041--043: ROOT-CERT decomposition and first upstream compression
+
+M18-041 separates the global route into singularity extraction, W1 entry, ratchet entry, hard-ergodic entry, finite branch selection, and payer-to-contradiction gates.
+
+M18-042 recovers the primitive W1/ratchet corridor conditions and distinguishes derived compactness from genuine case splits.
+
+M18-043 proves:
+
+\[
+G_{center\ turnover}\to\text{nested center}\lor S_{remote},
+\]
+
+\[
+G_{Z\text{-}escalation}\to S_{remote}.
+\]
+
+The Type-II/strong-remote route remains genuinely open through the Euler-scale split
+
+\[
+H_{remote}^{strong}
+\Longrightarrow
+E_{ancient}^{Euler,compact}
+\lor
+H_{Euler\text{-}scale\ noncompact}^{strong}.
+\]
+
+## 8. M18-044: stage-clock degeneration is removed as a primitive root
+
+The lower stage duration follows from first-hitting amplification:
 
 \[
 \boxed{
-\mathfrak M_\rho
-=
-\sqrt\Gamma\,\delta_0^{-1/2}
-\int_{\mathcal C}\rho^2dx
-\to0.
+L_j\ge\frac{\log q}{B_+}.
 }
 \]
 
-The target is to determine whether such depletion can coexist with the retained robust level-flux witness, or whether it necessarily forces transverse-area concentration, nodal migration/amplitude depletion, or a palinstrophy/raw-H2 payment.
+On the pure low-turnover compensated-variance lane, the upper duration is also derived:
+
+\[
+\boxed{
+L_j\le\frac6{\pi^2}\frac{R_Z^2}{\nu}.
+}
+\]
+
+Using the first-hitting vorticity mark and curl \(H^{-1}\) duality gives a fixed velocity-variance floor
+
+\[
+V_{R_Z}\ge v_*>0.
+\]
+
+Either the compensated variance remains above a fixed floor or its loss pays fixed absolute boundary/dissipation action.
+
+Therefore stage-length degeneration is not a quiet independent ROOT-CERT escape.
+
+## 9. M18-045: genealogy loss is reduced to one temporal-weight bridge plus typed exits
+
+Fixed-lag genealogy is exhausted by
+
+\[
+\boxed{contact\lor paid\ exposure\lor replacement.}
+\]
+
+Replacement is a scale-invariant flux event and routes to finitely many typed exits; local multiflux storage has finite memory.
+
+Remote recurrent ribbon geometry need not be the same material loop: sufficiently old recurrence generally requires fresh carriers.
+
+The genuine remaining genealogy theorem is therefore not packet identity but
+
+\[
+\boxed{
+\text{fresh/contact carrier recurrence}
+\stackrel{?}{\Longrightarrow}
+\text{sufficient ancestral physical return weight}.
+}
+\]
+
+A current-epoch \(O(1)\) dwell loses a factor
+
+\[
+K_k^{-2}=q^{-k}
+\]
+
+when interpreted at age \(k\).
+
+## 10. M18-046--047: weak-L3 escalation, high remote frequency, and core vanishing are removed as independent roots
+
+Weak-L3 escalation routes as
+
+\[
+W_2\to T_{Campanato/boundary}\lor S_{remote}.
+\]
+
+High shell frequency produces remote active-satellite scale separation unless a boundary/localization turnover occurs.
+
+Infinite-radius active remote H transmission decays under bounded Campanato, so it cannot remain an independent active core source.
+
+By contrast, the bounded critical tail
+
+\[
+U\sim R^{-1},
+\qquad
+\Omega\sim R^{-2}
+\]
+
+is exactly compatible with physical finite energy at scaling level and remains a genuine critical endpoint.
+
+The recurrent core itself cannot vanish on the compact first-hitting lane because
+
+\[
+|\Omega_j(0,0)|=1
+\]
+
+passes to local smooth limits, and backward checkpoint witnesses remain in one fixed similarity ball under center nesting and the two-sided clock.
+
+Core escape therefore reduces to remote, critical-tail, or already typed compactness failures.
+
+## 11. M18-048: common ancestry-conversion gate
+
+A fixed own-scale payment must not be confused with a fixed-parent ancestry charge.
+
+For a first-hitting event at physical scale \(r_j\), fixed normalized spacetime enstrophy costs only
+
+\[
+q_{E,j}^{phys}=r_jq_{E,j},
+\]
+
+and
+
+\[
+\sum_jr_j<\infty.
+\]
+
+Thus positive stage frequency is not an energy contradiction.
+
+If the same normalized payment is instead certified as a nonreused bounded-overlap large-record event \(R_m\to\infty\) in one fixed parent, the standard-energy ledger is
+
+\[
+\boxed{
+\sum_mR_m\int E_mds<\infty,
+}
+\]
+
+so a fixed positive normalized dissipation payment is impossible.
+
+This motivates the common ancestry-conversion root
+
+\[
+\boxed{
+\mathcal R_{AC}
+:=
+G_{paid\ turnover\ ancestry}
+\lor
+G_{temporal\ return\text{-}weight\ deficiency}.
+}
+\]
+
+Its subgates are exact parent embedding, nonreuse/bounded overlap, and coercion into a resource with finite parent total.
+
+## 12. M18-049: active-index completeness sweep
+
+The active canonical/proof indexes contain no unmatched fourth upstream root.
+
+The current working upstream complexes are
+
+\[
+\boxed{
+\begin{aligned}
+\mathcal R_{remote}&:=\mathcal R_{remote/II/historical},\\
+\mathcal R_{critical}&:=G_{escaping\ critical\ tail/W1\ boundary/realization},\\
+\mathcal R_{AC}&:=\mathcal R_{ancestry\ conversion}.
+\end{aligned}
+}
+\]
+
+Low-frequency
+
+\[
+\|u\|_2^2=\|\Omega\|_{\dot H^{-1}}^2
+\]
+
+is an R-critical / R-AC interface, not a fourth root.
+
+The coefficient/tube/jet/shape exits of M16--M18 remain downstream CE-H internal structure and must not be mixed into ROOT-CERT.
+
+This is an active-index classification result, not yet a universal historical-completeness theorem.
+
+## 13. M18-050--052: W1/ratchet middle bridge is reduced to the same three roots
+
+M18-050 isolates the W1--ratchet--terminal-hull bridge.
+
+M18-051 proves on the no-root corridor that bounded Campanato, bounded frequency, bounded weak-L3, global \(L^p\) tail tightness for \(p>3\), clock locking
+
+\[
+s_j=j\log q+O(1),
+\]
+
+and fixed-ball checkpoint nontriviality produce a nontrivial compact complete two-sided W1 similarity hull by standard omega-limit extraction.
+
+M18-052 repairs the scattering topology requirement.
+
+On the passive spectator branch, M5-563/567 give a fixed-annulus Duhamel limit
+
+\[
+A_Y(q)=\lim_{\tau\to\infty}V_Y^{(q)}(\tau).
+\]
+
+In a separable local scattering space this is a Borel measurable map. Exact covariance
+
+\[
+A_{\sigma_tY}(q)=A_Y(q-t/2)
+\]
+
+makes it a measurable dynamical factor.
+
+Therefore invariant and ergodic hull measures push forward to invariant and ergodic log-radius scattering measures without requiring strong global scattering continuity.
+
+The remaining failures are exactly remote, critical-tail/trace, or ancestry-conversion exits.
+
+## 14. Current upstream proof-tree status
+
+The active-index upstream route is now best written as
+
+\[
+\boxed{
+\text{hypothetical singularity}
+\Longrightarrow
+\mathcal R_{remote}
+\lor
+\mathcal R_{critical}
+\lor
+\mathcal R_{AC}
+\lor
+\text{nontrivial compact hard similarity survivor}.
+}
+\]
+
+The final implication is an audit-level classification of the active route, not yet a theorem-ready historical ROOT-CERT certificate.
+
+Still required:
+
+1. historical completeness beyond active indexes;
+2. exact hypothesis-by-hypothesis certification of the arbitrary-singularity entry chain;
+3. closure of the three root complexes.
+
+## 15. Current downstream canonical status
+
+Once the compact hard production system is reached,
+
+\[
+CP\!-E\lor CP\!-S\lor CE\!-T\lor Migration\lor CE\!-H
+\]
+
+is subsystem-complete.
+
+Four branches are priced by \(P/H\).
+
+CE-H owns the long internal coefficient/tube/jet tree. The local CE-H analysis has narrowed many apparent payers, but generic \(R^{-1},R^{-3},R^{-5}\) ancestry weights remain too summable without a stronger descent, multiplicity, or signed/rigidity mechanism.
+
+Uniform coefficient compactness can upgrade \(P/H\) to the positive-\(R\) standard-energy ledger, but coefficient decompactification and local concentration endpoints remain.
+
+## 16. Current three upstream root complexes
+
+### R-remote
+
+\[
+\boxed{\mathcal R_{remote/II/historical}.}
+\]
+
+Main open subchannels:
+
+- Euler-scale compact Type-II ancient profile;
+- Euler-scale noncompact source;
+- active remote/historical recycling not reduced to a finite parent contradiction.
+
+### R-critical
+
+\[
+\boxed{G_{escaping\ critical\ tail/W1\ boundary/realization}.}
+\]
+
+Main open subchannels:
+
+- controlled versus escaping \(1/R\) critical velocity tail;
+- low-frequency \(\dot H^{-1}\) inheritance;
+- terminal trace/global realization failures;
+- critical W1 boundary defect.
+
+### R-AC
+
+\[
+\boxed{\mathcal R_{ancestry\ conversion}.}
+\]
+
+Main open subchannels:
+
+- fixed-parent event embedding;
+- nonreuse/bounded overlap;
+- boundary-work-only turnover lacking a finite parent budget;
+- ancestral physical dwell/return-density lower bound.
+
+## 17. Permanent firewalls
+
+The following remain mandatory:
+
+\[
+\boxed{\text{pointwise blowup}\neq\text{integrated payer}},
+\]
+
+\[
+\boxed{\text{rerecording}\neq\text{new multiplicity}},
+\]
+
+\[
+\boxed{\text{high-frequency bounds}\neq\text{low-frequency tightness}},
+\]
+
+\[
+\boxed{\text{own-scale cost}\neq\text{fixed-parent ancestry cost}},
+\]
+
+\[
+\boxed{\text{CE-H internal closure}\neq\text{global NS closure}}.
+\]
+
+## 18. Immediate target
+
+The next task should compare the three root complexes by mathematical leverage rather than continue CE-H automatically.
+
+Priority criteria:
+
+1. existing finite parent budget;
+2. guaranteed normalized witness;
+3. favorable or unfavorable ancestry scaling;
+4. available external rigidity results;
+5. reduction to one precise missing inequality.
+
+The root with the strongest existing coercive structure should be attacked first.
+
+---
+
+\[
+\boxed{\text{GLOBAL 3D NAVIER--STOKES REGULARITY REMAINS UNPROVED.}}
+\]
