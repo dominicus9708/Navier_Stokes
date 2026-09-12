@@ -14,31 +14,31 @@ Barker--Prange prove that if a nonzero backward `lambda`-DSS Navier--Stokes solu
 \int_{|x|<R}|u(x,t)|^3dx
 \ge
 c_M\log\left(\frac{R^2}{M^{802}|t|}\right),
+\qquad
+c_M:=\exp\bigl(-\exp(M^{1025})\bigr)>0.
 \]
 
-where
-
-\[
-\boxed{c_M:=\exp\bigl(-\exp(M^{1025})\bigr)>0.}
-\]
-
-This is a quantitative consequence conditional on existence of the nonzero DSS solution, not a general DSS nonexistence theorem.
+This is conditional on existence of the nonzero DSS solution; it is not a general nonexistence theorem.
 
 ---
 
 ## 2. Similarity variables
 
-Use
+Set
 
 \[
 x=\sqrt{-t}\,y,
 \qquad
-u(x,t)=(-t)^{-1/2}U(y,s),
-\qquad
 s=-\log(-t),
 \]
 
-with `u(x,t)` denoting the physical velocity field. The middle relation is the usual similarity relation for `u`; no viscosity symbol is intended.
+and use the physical velocity relation
+
+\[
+u(x,t)=(-t)^{-1/2}U(y,s).
+\]
+
+Here the letter in the last formula denotes the velocity `u`, not viscosity.
 
 Then
 
@@ -48,7 +48,7 @@ dx=(-t)^{3/2}dy,
 |u|^3=(-t)^{-3/2}|U|^3,
 \]
 
-and therefore
+so
 
 \[
 \boxed{
@@ -60,7 +60,7 @@ Y:=\frac{R}{\sqrt{-t}}.
 }
 \]
 
-The quantitative lower bound becomes
+Therefore
 
 \[
 \boxed{
@@ -74,23 +74,17 @@ The quantitative lower bound becomes
 
 ## 3. M5-566 critical tail
 
-An unresolved exact DSS survivor on the passive spectator lane has
+An unresolved exact DSS survivor has
 
 \[
 U(y,s)
 =
 \frac1r a(q,\omega)+O(r^{-3}),
+\qquad
+q=\log r-\frac s2,
 \]
 
 with
-
-\[
-q=\log r-\frac s2,
-\qquad
-\omega=\frac y{|y|},
-\]
-
-and
 
 \[
 \boxed{
@@ -99,18 +93,6 @@ a(q+L,\omega)=a(q,\omega),
 L=\log\lambda=S/2,
 \qquad
 a\not\equiv0.}
-\]
-
----
-
-## 4. Cubic mass slope
-
-At leading order,
-
-\[
-|U|^3dy
-\sim
-|a(q,\omega)|^3\frac{dr}{r}d\omega.
 \]
 
 Define
@@ -123,19 +105,17 @@ Define
 }
 \]
 
-Periodicity gives
+Since `dr/r=dq`, periodicity gives
 
 \[
 \boxed{
 \int_{|y|<Y}|U(y,s)|^3dy
 =
-\frac{\mathcal A_3}{L}\log Y+O(1)
+\frac{\mathcal A_3}{L}\log Y+O(1).
 }
 \]
 
-as `Y -> infinity`.
-
-Comparing logarithmic slopes yields
+Comparison with the quantitative DSS concentration slope yields
 
 \[
 \boxed{
@@ -144,19 +124,17 @@ Comparing logarithmic slopes yields
 \mathcal A_3\ge2c_ML.}
 \]
 
-Thus the nonzero periodic critical tail is quantitatively nontrivial in mean cubic mass.
-
 ---
 
-## 5. Combine with M19-097
+## 4. Combine with M19-097
 
-On the certified Pineau--Vicol one-slice application lane, M19-097 gives
+On the certified Pineau--Vicol one-slice application lane,
 
 \[
 L\ge\frac{v_*}{A_*}.
 \]
 
-Consequently
+Hence
 
 \[
 \boxed{
@@ -165,43 +143,19 @@ Consequently
 2c_M\frac{v_*}{A_*}>0.}
 \]
 
-This is conditional on the combined hypotheses of the external DSS concentration theorem and the M19-096/097 Type-I/pressure gate.
-
----
-
-## 6. No contradiction
-
-A bounded nonzero periodic `1/r` datum naturally produces logarithmic `L3` growth. Hence the quantitative concentration theorem is structurally consistent with M5-566.
-
-Also,
-
-\[
-\boxed{U\in L^q(\mathbb R^3),\ q>3}
-\]
-
-for a `1/r` far field does **not** permit importing a steady self-similar Liouville theorem into the time-periodic DSS equation. General backward DSS nonexistence for arbitrary `lambda` remains open in this class.
-
----
-
-## 7. Refined DSS hard core
-
-On the combined certified lane an unresolved DSS survivor must satisfy
-
-\[
-\boxed{
-\begin{aligned}
-&a(q+L)=a(q),\\
-&L\ge L_*>0,\\
-&a\not\equiv0,\\
-&\frac1L\int_0^L\int_{S^2}|a|^3d\omega dq\ge2c_M.
-\end{aligned}}
-\]
-
 Thus the remaining periodic branch has neither arbitrarily small period nor arbitrarily small mean critical amplitude.
 
 ---
 
-## 8. Reference boundary
+## 5. No contradiction
+
+A bounded nonzero periodic `1/r` datum naturally produces logarithmic `L3` growth, so the external quantitative concentration theorem is consistent with M5-566.
+
+Also a `1/r` far field belongs to `L^q(R3)` for `q>3`, but this does **not** permit importing steady self-similar Liouville theorems into the time-periodic DSS equation. General backward DSS nonexistence for arbitrary `lambda` remains open in this class.
+
+---
+
+## 6. Reference boundary
 
 External quantitative concentration input:
 
