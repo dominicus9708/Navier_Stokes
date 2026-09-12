@@ -8,48 +8,37 @@ Status: **ACTIVE M19 CALCULATION / EXTERNAL QUANTITATIVE DSS CONCENTRATION MATCH
 
 ## 1. External input
 
-A quantitative regularity theorem of Barker--Prange and its DSS corollary show the following qualitative structure.
-
-If a nonzero backward `lambda`-DSS Navier--Stokes solution is smooth on `R3 x (-infinity,0)` and belongs continuously to `L^p(R3)` for some `p>=3`, then it obeys a Type-I bound and there exists a constant `M>1` such that, for sufficiently large radii relative to `sqrt(-t)`,
+Barker--Prange prove that if a nonzero backward `lambda`-DSS Navier--Stokes solution is smooth on `R3 x (-infinity,0)` and belongs continuously to `L^p(R3)` for some `p>=3`, then for a constant `M>1` and sufficiently large radii relative to `sqrt(-t)`,
 
 \[
 \int_{|x|<R}|u(x,t)|^3dx
 \ge
-c_M
-\log\left(\frac{R^2}{M^{802}|t|}\right),
+c_M\log\left(\frac{R^2}{M^{802}|t|}\right),
 \]
 
 where
 
 \[
-\boxed{
-c_M:=\exp\bigl(-\exp(M^{1025})\bigr)>0.
-}
+\boxed{c_M:=\exp\bigl(-\exp(M^{1025})\bigr)>0.}
 \]
 
-The explicit constant is extremely small but positive.
-
-This result is conditional on existence of the nonzero DSS solution; it is not a nonexistence theorem.
+This is a quantitative consequence conditional on existence of the nonzero DSS solution, not a general DSS nonexistence theorem.
 
 ---
 
-## 2. Convert to similarity variables
+## 2. Similarity variables
 
 Use
 
 \[
 x=\sqrt{-t}\,y,
 \qquad
-u(x,t)=(-t)^{-1/2}U(y,s),
+u_{vel}(x,t)=(-t)^{-1/2}U(y,s),
 \qquad
-s=-\log(-t).
+s=-\log(-t),
 \]
 
-Here `u(x,t)` is the velocity field; in ordinary notation the displayed middle relation is
-
-\[
-u(x,t)=(-t)^{-1/2}U(y,s).
-\]
+where `u_vel` denotes the physical velocity `u` and is written this way only to avoid confusion with the viscosity symbol in plain-text rendering.
 
 Then
 
@@ -59,7 +48,7 @@ dx=(-t)^{3/2}dy,
 |u|^3=(-t)^{-3/2}|U|^3,
 \]
 
-so the cubic integral is scale invariant:
+and therefore
 
 \[
 \boxed{
@@ -71,33 +60,29 @@ Y:=\frac{R}{\sqrt{-t}}.
 }
 \]
 
-Therefore the DSS concentration lower bound becomes
+The quantitative lower bound becomes
 
 \[
 \boxed{
 \int_{|y|<Y}|U(y,s)|^3dy
 \ge
-c_M\log\left(\frac{Y^2}{M^{802}}\right)
-=
 2c_M\log Y-O_M(1).
 }
 \]
 
 ---
 
-## 3. Insert the M5-566 critical tail
+## 3. M5-566 critical tail
 
-M5-566 shows that an unresolved exact DSS survivor on the passive spectator lane must have
+An unresolved exact DSS survivor on the passive spectator lane has
 
 \[
 U(y,s)
 =
-\frac1r
- a\left(q,\omega\right)
-+O(r^{-3}),
+\frac1r a(q,\omega)+O(r^{-3}),
 \]
 
-where
+with
 
 \[
 q=\log r-\frac s2,
@@ -111,43 +96,24 @@ and
 \boxed{
 a(q+L,\omega)=a(q,\omega),
 \qquad
-L=\log\lambda=S/2.
-}
+L=\log\lambda=S/2,
+\qquad
+a\not\equiv0.}
 \]
-
-Moreover `a` is nonzero.
 
 ---
 
-## 4. Cubic mass of the critical tail
+## 4. Cubic mass slope
 
 At leading order,
 
 \[
 |U|^3dy
 \sim
-r^{-3}|a(q,\omega)|^3r^2drd\omega.
+|a(q,\omega)|^3\frac{dr}{r}d\omega.
 \]
 
-Since
-
-\[
-\frac{dr}{r}=dq,
-\]
-
-we obtain
-
-\[
-\boxed{
-\int_{1<|y|<Y}|U(y,s)|^3dy
-=
-\int^{\log Y-s/2}
-\int_{S^2}|a(q,\omega)|^3d\omega dq
-+O(1).
-}
-\]
-
-Define the cubic mass per log period
+Define
 
 \[
 \boxed{
@@ -169,95 +135,63 @@ Periodicity gives
 
 as `Y -> infinity`.
 
----
-
-## 5. Compare the slopes
-
-The external lower bound requires
-
-\[
-\liminf_{Y\to\infty}
-\frac1{\log Y}
-\int_{|y|<Y}|U|^3dy
-\ge 2c_M.
-\]
-
-The tail asymptotic gives the left side as
-
-\[
-\frac{\mathcal A_3}{L}.
-\]
-
-Hence
+Comparing the logarithmic slopes yields
 
 \[
 \boxed{
-\frac{\mathcal A_3}{L}
-\ge
-2c_M.
+\frac{\mathcal A_3}{L}\ge2c_M,
 }
 \]
 
-Equivalently,
+or equivalently
+
+\[
+\boxed{
+\mathcal A_3\ge2c_ML.}
+\]
+
+Thus the nonzero periodic critical tail is quantitatively nontrivial in mean cubic mass.
+
+---
+
+## 5. Combine with M19-097
+
+On the certified Pineau--Vicol one-slice application lane, M19-097 gives
+
+\[
+L\ge\frac{v_*}{A_*}.
+\]
+
+Consequently
 
 \[
 \boxed{
 \mathcal A_3
 \ge
-2c_M L.
-}
+2c_M\frac{v_*}{A_*}>0.}
 \]
 
-Thus the nonzero critical amplitude is quantitatively nontrivial in mean cubic mass.
+This is conditional on the combined hypotheses of the external DSS concentration theorem and the M19-096/097 Type-I/pressure gate.
 
 ---
 
-## 6. Combine with M19-097
+## 6. No contradiction
 
-M19-097 gives, on the certified one-slice-Type-I application lane,
+A bounded nonzero periodic `1/r` datum naturally produces logarithmic `L3` growth. Hence the quantitative concentration theorem is structurally consistent with M5-566.
 
-\[
-L=\frac S2\ge \frac{v_*}{A_*}.
-\]
-
-Therefore
+Also,
 
 \[
-\boxed{
-\mathcal A_3
-\ge
-2c_M\frac{v_*}{A_*}>0.
-}
+\boxed{U\in L^q(\mathbb R^3),\ q>3}
 \]
 
-This gives a fixed positive lower bound on cubic amplitude per period, conditional on the combined hypotheses of the external concentration theorem and the M19-096/097 application gate.
+for a `1/r` far field does **not** permit importing a steady self-similar Liouville theorem into the time-periodic DSS equation. General backward DSS nonexistence for arbitrary `lambda` remains open in this class.
 
 ---
 
-## 7. Why this is not a contradiction
+## 7. Refined DSS hard core
 
-A bounded nonzero periodic critical datum naturally produces logarithmic growth of the similarity `L3` mass.
-
-Thus the quantitative concentration theorem is structurally consistent with M5-566.
-
-It sharpens the surviving DSS tail but does not eliminate it.
-
-In particular,
-
-\[
-\boxed{
-U\in L^q(\mathbb R^3),\ q>3,
-}
-
-for a `1/r` far field does not allow one to import a steady self-similar Liouville theorem into the time-periodic DSS equation.
-
-Backward DSS nonexistence for arbitrary `lambda` remains open in this class.
-
----
-
-## 8. New DSS hard-core description
-
-On the combined certified lane, an unresolved DSS survivor must satisfy all of
+On the combined certified lane an unresolved DSS survivor must satisfy
 
 \[
 \boxed{
@@ -265,22 +199,19 @@ On the combined certified lane, an unresolved DSS survivor must satisfy all of
 &a(q+L)=a(q),\\
 &L\ge L_*>0,\\
 &a\not\equiv0,\\
-&\frac1L\int_0^L\int_{S^2}|a|^3\,d\omega dq\ge2c_M.
-\end{aligned}
-}
+&\frac1L\int_0^L\int_{S^2}|a|^3d\omega dq\ge2c_M.
+\end{aligned}}
 \]
 
-Thus the remaining periodic branch has neither an arbitrarily small period nor an arbitrarily small mean critical amplitude.
+Thus the remaining periodic branch has neither arbitrarily small period nor arbitrarily small mean critical amplitude.
 
 ---
 
-## 9. Reference boundary
+## 8. Reference boundary
 
 External quantitative concentration input:
 
-- T. Barker and C. Prange, *Quantitative Regularity for the Navier--Stokes Equations Via Spatial Concentration*, Communications in Mathematical Physics 385 (2021), especially Corollary 1.1.
-
-The paper explicitly treats nonzero backward DSS as a conditional possibility rather than claiming general nonexistence.
+- T. Barker and C. Prange, *Quantitative Regularity for the Navier--Stokes Equations Via Spatial Concentration*, Communications in Mathematical Physics 385 (2021), Corollary 1.1.
 
 ---
 
