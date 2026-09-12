@@ -33,12 +33,12 @@ Use
 \[
 x=\sqrt{-t}\,y,
 \qquad
-u_{phys}(x,t)=(-t)^{-1/2}U(y,s),
+u(x,t)=(-t)^{-1/2}U(y,s),
 \qquad
 s=-\log(-t),
 \]
 
-where the plain-text symbol `u_phys` means the physical velocity field `u`; the notation is only used here to keep it visually separate from viscosity.
+with `u(x,t)` denoting the physical velocity field. The middle relation is the usual similarity relation for `u`; no viscosity symbol is intended.
 
 Then
 
@@ -135,18 +135,12 @@ Periodicity gives
 
 as `Y -> infinity`.
 
-Comparing the logarithmic slopes yields
+Comparing logarithmic slopes yields
 
 \[
 \boxed{
 \frac{\mathcal A_3}{L}\ge2c_M,
-}
-\]
-
-or equivalently
-
-\[
-\boxed{
+\qquad
 \mathcal A_3\ge2c_ML.}
 \]
 
