@@ -1,8 +1,8 @@
 # M19 Current Frontier
 
 **Date:** 2026-09-12  
-**Current tip:** **M19-074**  
-**Status:** ACTIVE CALCULATION / WEAK-CRITICAL SCATTERING REALIZABILITY + RECURRENT CENTER-FACTOR RIGIDITY / FINAL ROOT-PROOF CERTIFICATION STILL OPEN
+**Current tip:** **M19-086**  
+**Status:** ACTIVE CALCULATION / RECURRENT CENTER-FACTOR RIGIDITY + WEAK-CRITICAL SCATTERING REALIZABILITY / FINAL ROOT-PROOF CERTIFICATION STILL OPEN
 
 \[
 \boxed{\text{GLOBAL 3D NAVIER--STOKES REGULARITY REMAINS UNPROVED.}}
@@ -10,9 +10,8 @@
 
 ## 1. Phase policy
 
-M18 is frozen as the analysis/audit family.
+M18 remains frozen as the analysis/audit family.
 M19 is the active calculation/closure family.
-M19 may use M18 statements only at the certification level actually established there.
 
 \[
 \boxed{
@@ -26,33 +25,8 @@ M19 may use M18 statements only at the certification level actually established 
 
 ## 2. Earlier M19 reductions retained
 
-The CE-H finite-population current line M19-001--004 descends conservative graph current to strain/geometry, palinstrophy/interface gradients and coefficient/diffusion terms.
-
-The first-hitting clock M19-005 remains an exact discounted coboundary,
-
-\[
-L_j=\Theta_j-q^{-1}\Theta_{j+1},
-\qquad
-\sum_jq^{-j}L_j=\Theta_0,
-\]
-
-so it cannot remove ancestry discounting.
-
-The residual quiet remote class was merged by M19-044 into the ancestry-conversion or weak-critical scattering complexes,
-
-\[
-\boxed{
-\mathcal R_{remote}^{quiet}
-\Longrightarrow
-\mathcal R_{critical}
-\lor
-\mathcal R_{AC}.
-}
-\]
-
-M19-046 retired distinct-return counting as the expected primary closure on the cubic-dominant Type-I sector.
-M19-047--053 showed that the remaining common-center loss is positional rather than another unweighted derivative deficit.
-M19-054 then remerged the quiet cubic R-AC survivor with weak-critical scattering:
+The historical M19-001--054 reductions remain in force at their certified scope.
+In particular the residual quiet ancestry-conversion survivor was merged into the weak-critical scattering complex,
 
 \[
 \boxed{
@@ -64,9 +38,7 @@ M19-054 then remerged the quiet cubic R-AC survivor with weak-critical scatterin
 
 This is a solution-class inclusion, not analytic closure.
 
-## 3. Weak-critical scattering normal form
-
-On the controlled passive spectator branch,
+The controlled passive spectator branch has
 
 \[
 U(y,\theta)
@@ -76,7 +48,7 @@ U(y,\theta)
 q=\log r-\theta/2,
 \]
 
-with exact covariance
+and exact factor covariance
 
 \[
 \boxed{
@@ -84,97 +56,36 @@ A_{\sigma_tY}(q,\omega)=A_Y(q-t/2,\omega).
 }
 \]
 
-Writing
+The leading-order toroidal anti-model still demonstrates that the currently certified local tail equations permit smooth bounded aperiodic recurrent q-data. It is not an exact Navier--Stokes solution.
 
-\[
-A=A_r\omega+A_T,
-\qquad
-A_T=\nabla_{S^2}\phi+\omega\times\nabla_{S^2}\psi,
-\]
+## 3. Local conservation-law and pressure routes are exhausted at the correction barrier — M19-055--060
 
-gives
+Energy, angular momentum, every fixed-degree polynomial momentum moment, and helicity all first receive genuine Navier--Stokes information at the same order as the invertible \(r^{-3}\) correction.
 
-\[
-\boxed{
-\Delta_{S^2}\phi=-(\partial_q+1)A_r,
-\qquad
-\int_{S^2}A_r\,d\omega=0.
-}
-\]
-
-The leading-order toroidal anti-model shows that the currently certified local leading constraints permit smooth bounded aperiodic recurrent q-data. It is not an exact Navier--Stokes solution.
-
-## 4. Local conservation and moment hierarchy is exhausted at the r^{-3} correction barrier — M19-055--058
-
-M19-055 showed that finite-radius similarity energy balance is tautological at leading order. The first genuine stress information occurs at the same order as the invertible r^{-3} velocity correction.
-
-M19-056 repeated the test with angular momentum. For
-
-\[
-L_R=\int_{\mathcal A_R}y\times U\,dy,
-\]
-
-the critical leading storage is O(R^3), pure similarity transport, while genuine torque and the r^{-3} correction both first occur at O(R).
-
-M19-057 generalized this to every fixed-degree polynomial momentum moment. For a degree-m homogeneous test field,
-
-\[
-\int_{\mathcal A_R}\Phi_m\cdot U_0\,dy=O(R^{m+2}),
-\]
-
-whereas genuine stress and the r^{-3} correction both occur at O(R^m).
-
-M19-058 showed the same pattern for scale-critical helicity: its first genuine Navier--Stokes flux/dissipation and the correction contribution both occur at O(R^{-2}).
-
-Therefore
+Thus
 
 \[
 \boxed{
-\text{energy/angular momentum/fixed polynomial moments/helicity}
-\text{ do not create an independent leading q-solvability obstruction.}
+\text{local moment hierarchy}
+\not\Rightarrow
+\text{independent leading q-solvability obstruction}.
 }
 \]
 
-## 5. Pressure is q-nonlocal but translation-equivariant — M19-059--060
-
-For the critical pressure
-
-\[
-P_0=r^{-2}\Pi(q,\omega),
-\]
-
-M19-059 derives
+Critical pressure satisfies
 
 \[
 \boxed{
--\left(\partial_q^2-3\partial_q+2+\Delta_{S^2}\right)\Pi=F[A].
+-\left(\partial_q^2-3\partial_q+2+\Delta_{S^2}\right)\Pi=F[A],
 }
 \]
 
-On spherical harmonic degree \(\ell\),
+and is translation-equivariant in q away from the known harmonic degeneracy.
+A localized quiet core contributes only an \(r^{-3}\) pressure multipole and therefore does not rigidify the leading \(r^{-2}\) recurrent pressure history.
 
-\[
-\boxed{
-\mathcal L_\ell
-=-(\partial_q-(\ell+2))(\partial_q-(1-\ell)).
-}
-\]
+## 4. Scattering is an equivariant dynamical factor — M19-061
 
-Away from the \(\ell=1\) neutral root this is a translation-equivariant exponential convolution in q. A pure toroidal \(\ell=1\) anti-model can avoid the neutral pressure sector by parity.
-
-A localized quiet core contributes only
-
-\[
-\boxed{
-P_{core}(r\omega)=r^{-3}Q_2(\omega;\theta)+O(r^{-4}),
-}
-\]
-
-where \(Q_2\) is determined by the trace-free core Reynolds-stress quadrupole. Thus a compact bounded core does not automatically rigidify the leading r^{-2} recurrent pressure history.
-
-## 6. Scattering is an equivariant dynamical factor — M19-061
-
-For recurrent hull \(\mathcal H\), similarity flow \(\sigma_t\), and scattering map \(\mathscr S\),
+For recurrent hull \(\mathcal H\),
 
 \[
 \boxed{
@@ -182,9 +93,9 @@ For recurrent hull \(\mathcal H\), similarity flow \(\sigma_t\), and scattering 
 }
 \]
 
-Compact recurrence or injectivity alone does not force the q-history to be constant or periodic. Compact aperiodic recurrent systems, including irrational torus flows, are abstract countermodels.
+Compact recurrence or scattering-map injectivity alone does not exclude an aperiodic translation factor.
 
-Hence the live target is PDE-specific:
+The live target is PDE-specific:
 
 \[
 \boxed{
@@ -193,17 +104,16 @@ Hence the live target is PDE-specific:
 }
 \]
 
-## 7. Pressure-compatible weighted coercivity exists, but ordinary strain smallness does not follow — M19-062--066
+## 5. Pressure-compatible weighted coercivity exists but ordinary strain smallness does not follow — M19-062--066
 
-Gaussian OU weight gives a true linear spectral gap but is not an A2 weight, so the pressure Riesz estimate fails.
-
-M19-063 found a polynomial A2 family
+The polynomial radial A2 family
 
 \[
 w(y)=(1+\kappa|y|^2)^{-a/2}
 \]
 
-for which pressure control and a linear similarity gap coexist. One certified parameter corridor is
+has a corridor in which pressure control and a positive linear similarity gap coexist.
+One certified parameter region is
 
 \[
 \boxed{
@@ -214,7 +124,7 @@ for which pressure control and a linear similarity gap coexist. One certified pa
 }
 \]
 
-M19-064 prices transport, pressure and strain into
+The weighted difference inequality is schematically
 
 \[
 \boxed{
@@ -222,68 +132,38 @@ M19-064 prices transport, pressure and strain into
 }
 \]
 
-where, schematically,
+under an explicit gap-vs-transport/pressure/strain condition.
 
-\[
-\delta_*=c_{gap}
--\frac{L_w}{2}M_U
--2C_{CZ}L_wM_U
--C_1\nu^{-1}M_S^2
--C_2L_wM_S.
-\]
-
-Thus \(\delta_*>0\) is a genuine conditional strict-contraction criterion.
-
-However M19-065 shows the known compact recurrent bounds yield size control, not the required smallness.
-
-Moreover invariant recurrent enstrophy satisfies
+However the recurrent background itself obeys
 
 \[
 \boxed{
 \frac{\left\langle\int\Omega\cdot S\Omega\right\rangle}{\langle Z\rangle}
 =
 \frac14+\nu\frac{\langle P\rangle}{\langle Z\rangle}
-\ge\frac14.
+\ge\frac14,
 }
 \]
 
-The optimal gap in the present polynomial A2 family is only
+while the present A2 family has
 
 \[
-\boxed{
 \sup c_{gap}=\frac15.
-}
 \]
 
-These are different norms and are not a contradiction, but they block the naive strategy that recurrence should make the existing stretching term automatically smaller than the linear gap.
+These are different norms and are not a contradiction, but they block the naive assumption that recurrence automatically makes strain smaller than the linear gap.
 
-## 8. Simple-center target requires an interior theorem — M19-067--071
+## 6. Exact symmetry center is larger than the time tangent — M19-067--076
 
-Time translation gives the exact linearized neutral mode
-
-\[
-Z_t=\partial_\theta U.
-\]
-
-Quotienting by the full time orbit is not legitimate for the desired rigidity theorem because the same quotient erases the log-translation factor to be excluded.
-
-The leading scattering linearization has an infinite-dimensional formal center:
+The formal critical-tail center is infinite-dimensional:
 
 \[
 \delta U_0=r^{-1}B(q,\omega),
 \qquad
-\mathcal L_{sim}\delta U_0=0,
+\mathcal L_{sim}\delta U_0=0.
 \]
 
-with toroidal examples
-
-\[
-B(q,\omega)=c(q)\,a\times\omega
-\]
-
-for arbitrary bounded smooth \(c(q)\).
-
-The outward Duhamel scattering map does not smooth this center. On a strong spectator corridor,
+Outward scattering does not smooth it:
 
 \[
 \boxed{
@@ -291,95 +171,255 @@ D\mathscr S_{R_0}=I+O(R_0^{-2}).
 }
 \]
 
-Thus any reduction of the infinite-dimensional formal boundary center must come from finite-radius/interior realizability, not far-tail propagation.
-
-At zero background the similarity Stokes operator has Gaussian spectrum
-
-\[
--\frac12,-1,-\frac32,\ldots
-\]
-
-and no imaginary-axis modes. Aperiodic recurrent backgrounds instead require analysis of the time-dependent linear cocycle and its Lyapunov/Sacker--Sell center spectrum.
-
-The first exterior-square/two-volume test gains no automatic trace-free strain cancellation, so the second center exponent is not controlled by the current weighted trace estimate.
-
-## 9. Global q-compactness and finite physical-budget shortcuts remain blocked — M19-072--073
-
-Fixed q-windows can be compact under derivative bounds, but globally
-
-\[
-B_n(q,\omega)=B_0(q-n,\omega)
-\]
-
-escapes by log-radius translation. Removing one translation tangent does not remove this global noncompactness.
-
-Also a fixed similarity spectator radius is not a fixed physical scale. With
-
-\[
-\theta=-\log(T_*-t),
-\]
-
-its physical radius is
+The exact interior symmetry audit gives
 
 \[
 \boxed{
-r_{phys}(\theta)\asymp R_{spec}e^{-\theta/2}.
+E^c_{sym}(U)
+=
+\operatorname{span}\{\partial_\theta U\}
+\oplus T_U(SO(3)\cdot U).
 }
 \]
 
-An O(1) similarity-time packet therefore carries a geometrically decaying physical cost. Infinitely many recurrent spectator events can remain compatible with finite physical energy/dissipation.
+Physical spatial translation is a \(+1/2\) similarity gauge mode, Galilean boost is a \(-1/2\) mode, and physical NS scaling is exactly similarity-time translation.
 
-## 10. Almost-periods are not exact periods — M19-074
-
-For a spectator history \(B(\theta)\), recurrence can give
+Because the A2 weight is radial, the rotation generator
 
 \[
-T_n\to\infty,
+\mathcal J_AF=AF-(Ay)\cdot\nabla F
+\]
+
+is skew-adjoint in \(L^2(w)\).
+After a rotation-orbit orthogonality gauge, time-dependent rotation modulation costs exactly zero in the weighted energy identity.
+
+Hence the live center theorem is
+
+\[
+\boxed{
+E^c(U)=E^c_{sym}(U),
+}
+
+or, after the symmetry-safe rotation quotient, that the time tangent is the only remaining bounded zero-growth direction.
+
+## 7. Adjoint and finite-time compactness do not collapse the center — M19-077--078
+
+Primal-adjoint pairing is exactly conserved,
+
+\[
+\frac d{d\theta}\langle W,\Psi\rangle_w=0,
+\]
+
+but the adjoint scattering map is also near identity,
+
+\[
+D\mathscr S^*=I+O(R_{spec}^{-2}).
+\]
+
+Thus duality does not reduce the infinite-dimensional tail center.
+
+Positive-time interior-to-boundary evolution is locally parabolically smoothing and compact on bounded spacetime windows, but the full scattering datum stores the complete boundary history.
+History translation reappears exactly as q-translation, so global-history compactness fails.
+
+Local compactness can only be used to extract a normalized bounded complete linearized witness; it does not prove a finite-dimensional center.
+
+## 8. Every extra center witness must pay a mean neutralization cost — M19-079--080
+
+For a bounded complete rotation-transverse witness,
+
+\[
+\boxed{
+\left\langle
+\nu G_w+\mathcal C_{OU}
+\right\rangle
+=
+\left\langle
+\mathcal W_{tr}+\mathcal W_{pr}+\mathcal W_{str}
+\right\rangle.
+}
+\]
+
+Therefore an extra zero-growth center direction requires persistent mean strain-supported work sufficient to neutralize OU/viscous damping.
+
+The exact time tangent does not create a two-channel obstruction.
+A trace-free 3D strain may have two compressive eigendirections, and global weighted orthogonality does not imply pointwise overlap.
+Hence incompressibility alone does not bound the global center dimension.
+
+The missing input is a PDE-specific common-core observability or delocalization theorem.
+
+## 9. The A2 norm itself is not spatially tight — M19-081
+
+For any divergence-free annular profile \(F\),
+
+\[
+W_R(y)=R^{(a-1)/2}R^{-1}F(y/R)
+\]
+
+satisfies
+
+\[
+\boxed{
+\|W_R\|_{L^2(w)}^2\asymp1,
 \qquad
-\|B(\theta+T_n)-B(\theta)\|_X\to0.
-\]
-
-The scattering map transfers these to approximate q-periods.
-
-But unique continuation only promotes an exact fixed-period identity \(W_T=0\) to global equality. It does not convert a changing sequence \(W_{T_n}\to0\) into some exact period.
-
-Hence
-
-\[
-\boxed{
-\text{recurrence}+\text{unique continuation}
-\not\Rightarrow
-\text{periodicity}.
+\|\nabla W_R\|_{L^2(w)}^2\asymp R^{-2}\to0,
+\qquad
+\|W_R\|_\infty\asymp R^{(a-3)/2}\to0,
 }
 \]
 
-Quasiperiodic analytic functions supply the abstract counterexample pattern.
+while its support escapes to \(R\to\infty\).
 
-## 11. Active theorem frontier after M19-074
-
-The remaining analytic problem has sharpened to the recurrent interior cocycle/factor interface:
+Therefore
 
 \[
 \boxed{
-\mathcal T_{center/factor}:
+\text{weighted }L^2/H^1
+\not\Rightarrow
+\text{common-core observability}.
+}
+\]
+
+## 10. Center concentration-compactness has three safe branches — M19-082
+
+For normalized weighted mass,
+
+\[
+d\mu_\theta
+=\frac{|W|^2w\,dy}{E_w},
+\]
+
+failure of a uniform core floor produces a radial-escape sequence.
+Dyadic shell decomposition then yields
+
+\[
+\boxed{
+\mathcal C_{core}
+\lor
+\mathcal C_{annular}^{critical/high\text{-}freq}
+\lor
+\mathcal C_{log\text{-}diffuse}.
+}
+\]
+
+The scale-matched annular critical branch rejoins the formal scattering center under the controlled spectator residual assumptions.
+The high-frequency annular branch returns to derivative-frequency escalation.
+The log-diffuse branch is genuinely distinct and cannot be silently replaced by one packet.
+
+## 11. Log-radius entropy does not close the diffuse branch — M19-083
+
+A superposition of \(N\) disjoint normalized escaping annular packets can have
+
+\[
+\|W_N\|_{L^2(w)}\asymp1,
+\qquad
+\|\nabla W_N\|_{L^2(w)}\to0,
+\]
+
+while the dyadic shell entropy satisfies
+
+\[
+\boxed{H_N\sim\log N\to\infty.}
+\]
+
+The critical characteristic label
+
+\[
+q=\log r-\theta/2
+\]
+
+is leading-order invariant, so pure dilation transport does not produce order-one entropy dissipation in q.
+
+Thus the log-diffuse escape branch survives the present energy/entropy ledgers.
+
+## 12. Temporal analyticity regularizes but does not rigidify — M19-084--085
+
+Conditional uniform time analyticity at the finite spectator boundary can force decay of high temporal Fourier/Bohr coefficients.
+It does not imply periodicity, finite frequency rank, or absence of quasiperiodic recurrent histories.
+
+At a fixed finite spectator region, persistent high actual temporal frequency forces parabolic graph-norm, derivative, coefficient, or pressure escalation.
+Thus high temporal frequency can be routed back to existing strong exits.
+
+This statement is local to fixed radius; remote q-frequency can hide behind the \(1/r\) derivative scale.
+
+## 13. Critical spectral correction — M19-086
+
+A zero Lyapunov/Sacker--Sell growth exponent is **not** a small temporal frequency.
+A bounded center solution may oscillate at order-one speed while its norm has exactly zero exponential growth.
+
+Therefore
+
+\[
+\boxed{
+\text{zero Lyapunov exponent}
+\neq
+\text{zero temporal frequency}
+\neq
+\text{instantaneous frozen-kernel mode}.
+}
+\]
+
+For normalized projective direction \(e=W/\|W\|_w\), the correct center condition is the averaged symmetric-part balance
+
+\[
+\boxed{
+\left\langle
+\langle e,L_s(\theta)e\rangle_w
+\right\rangle=0.
+}
+\]
+
+The center/factor problem is therefore an averaged/projective coercivity problem, exactly consistent with the strain-supported neutralization condition of M19-079.
+
+## 14. Active theorem frontier after M19-086
+
+The dominant analytic theorem is now:
+
+\[
+\boxed{
+\mathcal T_{projective\ center}:
 \begin{array}{l}
-\text{classify the zero/center Lyapunov directions of the recurrent interior NS cocycle,}\\
-\text{and show that no additional center direction can realize a nontrivial aperiodic}\\
-\text{weak-critical q-translation factor.}
+\text{after fixing the center-position gauge and quotienting rotations,}\\
+\text{every normalized complete projective trajectory independent of }\partial_\theta U\\
+\text{has strictly negative long-time weighted logarithmic growth.}
 \end{array}
 }
 \]
 
-The immediate audit obligations are:
+Equivalently, exclude a second zero-growth rotation-transverse cocycle direction.
 
-1. classify exact symmetry-generated center directions before asserting a one-dimensional center;
-2. determine whether a symmetry-safe quotient leaves a finite-dimensional transverse center;
-3. if not, identify the precise interior observability/realizability estimate that would be needed;
-4. keep this analytic closure separate from final root-entry and branch-completeness certification.
+Failure of this theorem splits geometrically into:
 
-## 12. Final proof-chain certification remains substantial
+\[
+\boxed{
+\mathcal C_{core}
+\lor
+\mathcal C_{annular}^{critical}
+\lor
+\mathcal C_{log\text{-}diffuse}
+}
+\]
 
-Even if \(\mathcal T_{center/factor}\) is closed, global regularity would still require:
+plus already-routed high-frequency/derivative exits.
+
+The annular critical and log-diffuse branches are both manifestations of the unresolved weak-critical scattering realizability problem.
+
+## 15. Immediate next calculation
+
+M19-087 should study the instantaneous weighted Rayleigh quotient
+
+\[
+\mathfrak r(\theta,e)
+:=
+\langle e,L_s(\theta)e\rangle_w
+\]
+
+on the symmetry-transverse projective bundle.
+
+The key test is whether compactness of the recurrent hull plus a **PDE-derived no-escape condition** can turn pointwise/transverse negativity into a uniform negative averaged gap, and exactly how radial escape obstructs this.
+
+## 16. Final proof-chain certification remains substantial
+
+Even if the center/factor theorem is closed, global regularity would still require:
 
 1. arbitrary-singularity entry certification;
 2. historical branch completeness and all remaining conditional alignment/nonreuse checks;
@@ -395,7 +435,7 @@ Therefore
 }
 \]
 
-## 13. Permanent firewalls
+## 17. Permanent firewalls
 
 \[
 \boxed{\text{CE-H internal closure}\neq\text{global NS closure}},
@@ -430,11 +470,15 @@ Therefore
 \]
 
 \[
+\boxed{\text{zero growth}\neq\text{low temporal frequency}},
+\]
+
+\[
 \boxed{\text{root-class merger}\neq\text{analytic closure}}.
 \]
 
 ---
 
 \[
-\boxed{\text{M19 ACTIVE TIP = M19-074.}}
+\boxed{\text{M19 ACTIVE TIP = M19-086.}}
 \]
