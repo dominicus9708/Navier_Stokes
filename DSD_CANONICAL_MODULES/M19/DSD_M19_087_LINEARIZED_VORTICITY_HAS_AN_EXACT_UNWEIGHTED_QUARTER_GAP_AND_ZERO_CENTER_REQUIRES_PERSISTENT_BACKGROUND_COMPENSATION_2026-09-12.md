@@ -1,0 +1,358 @@
+# DSD M19-087 — Linearized vorticity has an exact unweighted quarter-gap and zero center requires persistent background compensation
+
+Date: 2026-09-12
+
+Status: **ACTIVE M19 CALCULATION / EXACT LINEARIZED VORTICITY ENERGY IDENTITY / PRESSURE-FREE QUARTER-GAP / A ZERO-LYAPUNOV CENTER DIRECTION MUST BE CONTINUALLY SUPPORTED BY BACKGROUND COUPLING / THIS DOES NOT YET PROVE CENTER RIGIDITY / GLOBAL REGULARITY REMAINS UNPROVED.**
+
+---
+
+## 1. Purpose
+
+M19-063--086 studied center rigidity primarily in weighted velocity spaces because polynomial `A_2` weights allow pressure control and a linear similarity gap.
+
+There is a second, cleaner structure at the vorticity level.
+
+Let `U(y,theta)` be a controlled recurrent similarity solution and let
+
+\[
+\Omega=\nabla\times U.
+\]
+
+For a linearized velocity perturbation `W`, define
+
+\[
+\eta=\nabla\times W.
+\]
+
+The central point of this module is that the unweighted `L^2` vorticity energy is pressure-free and the bare similarity operator has an exact damping rate `1/4`.
+
+---
+
+## 2. Similarity vorticity equation
+
+The similarity velocity equation is
+
+\[
+\partial_\theta U
++\frac12U
++\frac12(y\cdot\nabla)U
++(U\cdot\nabla)U
+=-\nabla P+\nu\Delta U,
+\qquad \nabla\cdot U=0.
+\]
+
+Taking curl gives
+
+\[
+\partial_\theta\Omega
++\Omega
++\frac12(y\cdot\nabla)\Omega
++(U\cdot\nabla)\Omega
+-(\Omega\cdot\nabla)U
+=\nu\Delta\Omega.
+\]
+
+---
+
+## 3. Linearized vorticity equation
+
+Linearizing at `U` gives
+
+\[
+\boxed{
+\begin{aligned}
+\partial_\theta\eta
+&+\eta
++\frac12(y\cdot\nabla)\eta
++(U\cdot\nabla)\eta
++(W\cdot\nabla)\Omega\\
+&-(\eta\cdot\nabla)U
+-(\Omega\cdot\nabla)W
+=\nu\Delta\eta,
+\end{aligned}
+}
+\]
+
+with
+
+\[
+\nabla\cdot W=\nabla\cdot\eta=0.
+\]
+
+No pressure occurs in this equation.
+
+---
+
+## 4. Exact unweighted enstrophy identity
+
+Take the `L^2(R^3)` inner product with `eta`.
+
+The advection term vanishes:
+
+\[
+\int \eta\cdot(U\cdot\nabla)\eta\,dy=0.
+\]
+
+The similarity drift gives
+
+\[
+\int \eta\cdot\frac12(y\cdot\nabla)\eta\,dy
+=-\frac34\|\eta\|_2^2.
+\]
+
+Therefore the explicit `+eta` term leaves
+
+\[
+1-\frac34=\frac14.
+\]
+
+Writing `S_U=(nabla U+nabla U^T)/2`, we obtain the exact identity
+
+\[
+\boxed{
+\begin{aligned}
+\frac12\frac d{d\theta}\|\eta\|_2^2
++\nu\|\nabla\eta\|_2^2
++\frac14\|\eta\|_2^2
+={}&\int \eta\cdot S_U\eta\,dy\\
+&+\int \eta\cdot(\Omega\cdot\nabla)W\,dy\\
+&-\int \eta\cdot(W\cdot\nabla)\Omega\,dy.
+\end{aligned}
+}
+\]
+
+Define the background compensation functional
+
+\[
+\boxed{
+\mathcal C_U[W]
+:=
+\int \eta\cdot S_U\eta
++\int \eta\cdot(\Omega\cdot\nabla)W
+-\int \eta\cdot(W\cdot\nabla)\Omega.
+}
+\]
+
+Then
+
+\[
+\boxed{
+\frac12(\|\eta\|_2^2)'
++\nu\|\nabla\eta\|_2^2
++\frac14\|\eta\|_2^2
+=\mathcal C_U[W].
+}
+\]
+
+---
+
+## 5. Zero center requires exact long-time compensation
+
+Assume a complete nonzero linearized perturbation has zero vorticity Lyapunov exponent and is normalized projectively so that its logarithmic enstrophy growth has long-time average zero.
+
+After dividing by `||eta||_2^2`, any interval on which `eta != 0` satisfies
+
+\[
+\frac12\frac d{d\theta}\log\|\eta\|_2^2
+=
+-\nu\frac{\|\nabla\eta\|_2^2}{\|\eta\|_2^2}
+-\frac14
++\frac{\mathcal C_U[W]}{\|\eta\|_2^2}.
+\]
+
+Thus a zero exponent requires
+
+\[
+\boxed{
+\left\langle
+\frac{\mathcal C_U[W]}{\|\eta\|_2^2}
+\right\rangle
+=
+\frac14
++\nu
+\left\langle
+\frac{\|\nabla\eta\|_2^2}{\|\eta\|_2^2}
+\right\rangle
+\ge\frac14,
+}
+\]
+
+whenever the indicated long-time averages exist.
+
+This is the vorticity analogue of M19-079, but it has three advantages:
+
+1. no pressure term;
+2. no spatial weight;
+3. an exact bare gap `1/4`.
+
+---
+
+## 6. Critical-tail decay of the coefficients
+
+On the controlled weak-critical spectator branch,
+
+\[
+U(r,\omega,\theta)
+=\frac1rA(q,\omega)+O(r^{-3}),
+\qquad q=\log r-\theta/2.
+\]
+
+Hence, on the retained derivative-controlled spectator corridor,
+
+\[
+|S_U(y,\theta)|\lesssim |y|^{-2},
+\qquad
+|\Omega(y,\theta)|\lesssim |y|^{-2},
+\qquad
+|\nabla\Omega(y,\theta)|\lesssim |y|^{-3}
+\]
+
+uniformly in the relevant recurrent hull.
+
+Therefore the background operator that must compensate the quarter-gap becomes small at large similarity radius.
+
+---
+
+## 7. Escape-to-infinity test
+
+Consider a normalized sequence of perturbations `W_n`, with `eta_n=curl W_n`, such that
+
+\[
+\|\eta_n\|_2=1
+\]
+
+and whose vorticity mass escapes every fixed compact set:
+
+\[
+\int_{|y|\le R}|\eta_n|^2dy\to0
+\quad\text{for each fixed }R.
+\]
+
+For the first compensation term,
+
+\[
+\int \eta_n\cdot S_U\eta_n
+\to0
+\]
+
+because `S_U -> 0` at infinity and the compact-core vorticity mass vanishes.
+
+For the third term, use
+
+\[
+\|W_n\|_6\lesssim\|\nabla W_n\|_2=\|\eta_n\|_2=1
+\]
+
+and the critical-tail fact
+
+\[
+\|\nabla\Omega\|_{L^3(|y|>R)}\to0.
+\]
+
+After splitting into a fixed core plus exterior tail, local weak escape and the tail smallness give
+
+\[
+\int \eta_n\cdot(W_n\cdot\nabla)\Omega\to0.
+\]
+
+The same core/tail decomposition applied to
+
+\[
+\int \eta_n\cdot(\Omega\cdot\nabla)W_n
+\]
+
+uses `Omega -> 0` in the exterior and local decay of the field generated by vorticity that has moved to infinity.
+
+Thus, for a genuine translating/vanishing escape sequence in the controlled spectator topology,
+
+\[
+\boxed{
+\mathcal C_U[W_n]\to0.
+}
+\]
+
+This conclusion is a center-observability mechanism, not yet a fully abstract concentration-compactness theorem for every possible sequence.
+
+---
+
+## 8. Consequence for zero-center escape
+
+If a complete zero-exponent center direction could place asymptotically all of its vorticity mass arbitrarily far from the core while retaining the controlled spectator estimates, then the compensation ratio would satisfy
+
+\[
+\frac{\mathcal C_U[W]}{\|\eta\|_2^2}\to0,
+\]
+
+whereas zero growth requires long-time average at least `1/4`.
+
+Therefore a zero center cannot be supported purely by a passive far-field vorticity escape.
+
+Schematically,
+
+\[
+\boxed{
+\text{zero center}
+\Longrightarrow
+\text{persistent interaction with a fixed interior region}
+\lor
+\text{loss of the controlled critical-tail coefficient bounds}.
+}
+\]
+
+The second alternative is already a typed derivative/pressure/remote exit in the M18/M19 tree.
+
+---
+
+## 9. Relation to M19-081--083
+
+M19-081 produced normalized weighted-velocity packets that can escape to infinity while preserving the polynomial `A_2` norm.
+
+M19-082--083 showed that such weighted mass can escape by annular or log-diffuse mechanisms without being excluded by weighted diffusion or entropy alone.
+
+M19-087 adds a new fact:
+
+\[
+\boxed{
+\text{weighted velocity escape}
+\not\Rightarrow
+\text{admissible zero-center vorticity escape}.
+}
+\]
+
+A genuine zero Lyapunov direction must pay the exact vorticity quarter-gap, and passive infinity cannot provide the required compensation.
+
+---
+
+## 10. New immediate target
+
+The correct next step is to turn the escape test into a uniform quasi-compactness statement for the linearized vorticity cocycle.
+
+The expected structure is
+
+\[
+\boxed{
+\mathcal U(\theta+T,\theta)
+=
+\mathcal S_0(T)
++
+\mathcal K_T(\theta)
++
+\mathcal E_{R,T}(\theta),
+}
+\]
+
+where
+
+- `S_0(T)` is the bare similarity-vorticity semigroup with norm at most `exp(-T/4)`;
+- `K_T` is compact because it is generated by bounded interior coefficients plus parabolic smoothing;
+- `E_{R,T}` has arbitrarily small norm when the spectator radius `R` is large.
+
+If certified, this would place the essential Lyapunov spectrum strictly below zero and force every zero/unstable center bundle to be finite-dimensional.
+
+That would be the first mechanism in M19 that actually reduces the infinite-dimensional formal scattering center to a finite-dimensional interior-realizable center.
+
+---
+
+\[
+\boxed{\text{GLOBAL 3D NAVIER--STOKES REGULARITY REMAINS UNPROVED.}}
+\]
