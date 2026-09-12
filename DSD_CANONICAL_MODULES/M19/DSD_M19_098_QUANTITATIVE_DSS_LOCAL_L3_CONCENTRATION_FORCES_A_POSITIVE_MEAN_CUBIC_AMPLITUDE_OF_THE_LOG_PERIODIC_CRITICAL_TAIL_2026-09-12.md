@@ -33,12 +33,12 @@ Use
 \[
 x=\sqrt{-t}\,y,
 \qquad
-u_{vel}(x,t)=(-t)^{-1/2}U(y,s),
+u_{phys}(x,t)=(-t)^{-1/2}U(y,s),
 \qquad
 s=-\log(-t),
 \]
 
-where `u_vel` denotes the physical velocity `u` and is written this way only to avoid confusion with the viscosity symbol in plain-text rendering.
+where the plain-text symbol `u_phys` means the physical velocity field `u`; the notation is only used here to keep it visually separate from viscosity.
 
 Then
 
