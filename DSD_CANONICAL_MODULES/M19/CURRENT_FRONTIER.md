@@ -1,8 +1,8 @@
 # M19 Current Frontier
 
 **Date:** 2026-09-12  
-**Current tip:** **M19-146**  
-**Status:** ACTIVE CALCULATION / OBSERVABLE FINITE-DIMENSIONAL ZERO-CENTER RIGIDITY + MODERATE RSS/RDSS HARD CORE / FINAL ROOT-PROOF CERTIFICATION STILL OPEN
+**Current tip:** **M19-156**  
+**Status:** ACTIVE CALCULATION / FINITE-DIMENSIONAL UNIT-SPECTRUM RIGIDITY + COMPACT MODERATE RSS/RDSS COMPONENTS / FINAL ROOT-PROOF CERTIFICATION STILL OPEN
 
 \[
 \boxed{\text{GLOBAL 3D NAVIER--STOKES REGULARITY REMAINS UNPROVED.}}
@@ -16,9 +16,9 @@ M18 remains frozen as the analysis/audit family. M19 is the active calculation/c
 \boxed{\text{M18 certified analysis}\Longrightarrow\text{M19 calculation}\Longrightarrow\text{closure or explicit theorem frontier}.}
 \]
 
-## 2. Retained global reduction through M19-141
+## 2. Retained hard-lane structure through M19-146
 
-The quiet CE-H/current, remote and cubic ancestry-conversion survivors have been reduced, at their certified scope, to the recurrent weak-critical scattering complex.
+The quiet remote/ancestry/weak-critical survivors have been reduced, at their certified scope, to the recurrent critical-scattering complex.
 
 The linearized-vorticity equation has the exact quarter-gap
 
@@ -32,31 +32,15 @@ Critical-tail coupling is relatively compact with respect to the bare similarity
 \boxed{\lambda_{ess}\le-1/4<0,\qquad \dim E^{\ge0}<\infty.}
 \]
 
-Uniform observability on the continuous finite hard bundle and exact differentiated scattering covariance imply
+Uniform observability and differentiated scattering covariance remove positive hard exponents:
 
 \[
 \boxed{E_{\perp}^{>0}=0.}
 \]
 
-The remaining recurrent spectral obstruction is zero growth.
+The remaining recurrent spectral problem is unit/zero growth.
 
-M19-141 gives the corrected recurrent-to-relative-periodic reduction: if after rotation quotient
-
-\[
-\boxed{E_q^0=\operatorname{span}\{\partial_sU\}}
-\]
-
-and the transverse Sacker--Sell spectrum is uniformly separated from zero, then transverse contraction locks a recurrent return to a periodic point on the quotient, hence
-
-\[
-\boxed{U(s+S)=Q_*U(s).}
-\]
-
-## 3. External theorem applicability on the present hard lane — M19-142--143
-
-The primitive W1 Type-I bound alone gives only a global-sup velocity estimate. It does not by itself imply the stronger spatial decay required by the one-slice/rotated Type-I criteria.
-
-On the present smooth passive critical-tail lane, however,
+On the present smooth passive critical-tail lane, the physical Type-I decay and fixed-annulus pressure hypotheses used by the current one-slice/RSS/RDSS external results are certified from
 
 \[
 |U(y,s)|\lesssim(1+|y|)^{-1},
@@ -64,140 +48,254 @@ On the present smooth passive critical-tail lane, however,
 |P(y,s)|\lesssim(1+|y|^2)^{-1}.
 \]
 
-Returning to physical variables, with \(\tau=T_*-t\),
+Unique continuation and C1 scattering differentiation are standard on the fixed smooth spectator cylinder used by the hard-mode observability argument.
+
+The time tangent is quantitatively visible in scattering coordinates:
 
 \[
-\boxed{|u(x,t)|\lesssim(\sqrt\tau+|x-x_*|)^{-1}},
+\boxed{D\mathscr S_U(\partial_sU)=-\frac12\partial_qA,}
 \]
 
-and
+with the singular hard lane carrying
 
 \[
-\boxed{|p(x,t)|\lesssim(\tau+|x-x_*|^2)^{-1}.}
+0<v_q\le\|\partial_qA\|_{X_{sc}}\le V_q^*.
 \]
 
-Therefore the required pointwise velocity Type-I form and fixed physical pressure-annulus bound are certified on this late hard lane, conditional on the retained pointwise spectator tail bounds.
+## 3. Authoritative RDSS symmetry-spectrum correction — M19-147
 
-On a fixed finite spectator cylinder the linearized generalized Stokes system has smooth bounded coefficients, so the standard parabolic/Stokes unique-continuation input applies in its usual coefficient regime. The outward Duhamel construction is C1 in the retained strong spectator topology, so the differentiated scattering covariance used below is legitimate on this lane.
-
-These statements do not retroactively certify arbitrary primitive W1 states.
-
-## 4. Exact core--tail rotation observability — M19-144
-
-Rotation equivariance of scattering gives the exact differentiated identity
+For
 
 \[
-\boxed{D\mathscr S_U(\mathcal R_JU)=\mathcal R_{J,\omega}A.}
-\]
-
-Uniform observability on the finite hard bundle therefore yields
-
-\[
-\boxed{c\|\mathcal R_JU\|_H\le\|\mathcal R_{J,\omega}A\|_{X_{sc}}\le C\|\mathcal R_JU\|_H.}
-\]
-
-Thus the earlier possibility of a strongly nonaxisymmetric compact core with an arbitrarily weak leading rotational tail is removed for the exact rotation hard mode.
-
-For RSS the exact spiral law remains
-
-\[
-\partial_qA=-2\alpha\mathcal R_\omega A,
-\]
-
-so the interior rotation--anisotropy compensation band transfers quantitatively to the far critical tail.
-
-## 5. Unit Floquet spectrum splits into kernel and elliptic branches — M19-145
-
-For RDSS/DSS let
-
-\[
-\mathcal M_S^{tw}v=\mu v,
+U(s+S)=Q_*U(s),
 \qquad
+\mathcal M_S^{tw}=Q_*^{-1}\Phi_S,
+\]
+
+the rotation tangent transforms by
+
+\[
+\boxed{
+\mathcal M_S^{tw}(\mathcal R_JU)
+=
+\mathcal R_{\operatorname{Ad}_{Q_*^{-1}}J}U.
+}
+\]
+
+If the principal holonomy angle is `beta`, the exact rotation-symmetry multipliers are
+
+\[
+\boxed{1,e^{i\beta},e^{-i\beta}}
+\]
+
+on the complexified non-isotropic rotation tangent.
+
+Therefore a raw `mu ne 1` unit multiplier is not automatically nonsymmetric. The full time/rotation representation must be quotiented first.
+
+The correct unit-spectrum target is
+
+\[
+\boxed{
+\sigma(\mathcal M_S^{tw}|_{quot})\cap S^1=\varnothing.
+}
+\]
+
+## 4. Kernel and elliptic recompression — M19-148--150
+
+A nonsymmetry `mu=1` mode is a true fixed-moduli Fredholm degeneracy:
+
+\[
+\boxed{
+K_{nsym}
+:=
+\ker(I-\mathcal M_S^{tw})/E_{sym}^{\mu=1}.
+}
+\]
+
+Variations of period or holonomy satisfy an inhomogeneous augmented Jacobi equation and are not the same object.
+
+On the uniformly observable hard bundle, the twisted monodromy is isometric in the scattering pullback metric. Hence unit spectrum is semisimple.
+
+If
+
+\[
 \mu=e^{i\vartheta},
-\qquad |\mu|=1.
-\]
-
-The scattering perturbation \(B=D\mathscr S_Uv\) satisfies
-
-\[
-\boxed{B(q+L)=\mu^{-1}Q_*^{-1}B(q).}
-\]
-
-After principal holonomy untwisting, the logarithmic frequency is
-
-\[
-\boxed{\kappa_{n,m,\vartheta}=\frac{2\pi n-m\beta-\vartheta}{L}.}
-\]
-
-Thus the live zero-growth problem splits into
-
-\[
-\boxed{\mathcal T_{zero}=\mathcal T_{kernel}\cup\mathcal T_{elliptic},}
-\]
-
-where \(\mu=1\) is the homogeneous kernel branch and \(|\mu|=1,\mu\ne1\) is the elliptic neutral Floquet branch.
-
-## 6. Time tangent is quantitatively visible in q — M19-146
-
-Differentiating exact scattering covariance in time gives
-
-\[
-\boxed{D\mathscr S_U(\partial_sU)=-\frac12\partial_qA.}
-\]
-
-On the certified one-slice Type-I application lane, a singular survivor has a positive late-time speed floor. Uniform hard-bundle observability therefore transfers this to
-
-\[
-\boxed{0<v_q\le\|\partial_qA\|_{X_{sc}}\le V_q^*<\infty.}
-\]
-
-Hence a surviving recurrent critical tail cannot become stationary or arbitrarily slowly drifting in log radius.
-
-## 7. RSS/RDSS retained hard structure
-
-RSS scattering is the exact log-radius spiral
-
-\[
-A(q)=e^{-2\alpha q\mathcal R_\omega}A(0).
-\]
-
-RDSS obeys
-
-\[
-A(q+L)=Q_*^{-1}A(q),
 \qquad
+\vartheta/2\pi\in\mathbb Q,
+\]
+
+then a finite iterate has `mu^k=1`, so the rational elliptic branch reduces to a finite-iterate kernel problem. Only irrational nonsymmetry unit phases are genuinely new linear elliptic obstructions.
+
+Every unit multiplier, kernel or elliptic, obeys the exact one-period payment
+
+\[
+\boxed{
+\nu\int_0^S\|\nabla\eta\|_2^2ds
++\frac14\int_0^S\|\eta\|_2^2ds
+=
+\int_0^S\mathcal C_U[W]ds.
+}
+\]
+
+Critical-tail coefficient decay makes the far-field coupling form-small. Therefore a unit mode cannot maintain neutrality by escaping to infinity: every nonsymmetry unit mode carries a uniform compact-core activity floor on a compact hard corridor.
+
+Thus the live unit-spectrum theorem is now a finite-dimensional compact-core sign/index problem, not a compactness or small-divisor problem.
+
+## 5. Authoritative homotopy correction — M19-151--152
+
+M19-151 introduced a formal homotopy multiplying the quadratic term by `tau`.
+M19-152 is authoritative: for `tau>0`,
+
+\[
+V=\tau U,
+\qquad
+\Pi=\tau P
+\]
+
+converts that equation exactly to the original similarity Navier--Stokes equation.
+
+Hence every nonzero original relative-periodic orbit generates
+
+\[
+\boxed{U_\tau=\tau^{-1}V,}
+\]
+
+which escapes to infinite amplitude as `tau->0`.
+
+Therefore the tau-homotopy cannot reduce nonexistence to a kernel event; M19-151 survives only as local continuation bookkeeping.
+
+Permanent firewall:
+
+\[
+\boxed{\text{formal external parameter}\neq\text{genuinely independent deformation direction}.}
+\]
+
+## 6. Moderate RSS compact hard core — M19-153
+
+External small/large-rotation exclusions leave
+
+\[
+0<\alpha_-\le|\alpha|\le\alpha_+<\infty.
+\]
+
+RSS scattering obeys
+
+\[
+\partial_qA=-2\alpha\mathcal R_\omega A.
+\]
+
+The q-speed floor gives
+
+\[
+\boxed{
+\frac{v_q}{2\alpha_+}
+\le
+\|\mathcal R_\omega A\|_{X_{sc}}
+\le
+\frac{V_q^*}{2\alpha_-}.
+}
+\]
+
+Combined with exact rotation observability, the positive cubic/amplitude floor and shell-H1 ceiling, every unresolved moderate RSS lies in a compact finite-dimensional low-mode set separated from
+
+- zero amplitude;
+- axisymmetry;
+- small/large rotation;
+- high-mode escape.
+
+Thus the remaining RSS obstruction is a genuine compact finite-amplitude nonaxisymmetric solution.
+
+## 7. Bounded-period RDSS compactification — M19-154--155
+
+Use intrinsic variables
+
+\[
 S=2\log\lambda,
 \qquad
 \beta=\operatorname{Angle}(Q_*)\in[-\pi,\pi].
 \]
 
-The twisted shell spectrum contains
+On a bounded-period corridor
 
 \[
-1+\frac{(2\pi n-m\beta)^2}{L^2}+c_{ang}\ell(\ell+1).
+S_-\le S\le S_+<\infty,
 \]
 
-On bounded-period corridors, the positive cubic-tail floor plus shell-H1 ceiling leaves a finite nontrivial low-mode tail core. The interior twisted Floquet hard space is likewise finite-dimensional.
+the moduli are compact, the essential Floquet gap is uniform, and shell-H1 plus the cubic-tail floor leaves a uniform finite nonzero low-mode tail core.
 
-Pressure-resonance audits M19-135--140 remain structural only: without an independent log-free asymptotic gate, a nonzero higher resonance produces compatible faster-decaying logarithmic corrections rather than a contradiction.
+The only period-modulus escape is
 
-## 8. Current live analytic problems after M19-146
+\[
+\boxed{S\to\infty,}
+\]
 
-1. **Zero-center kernel rigidity**
+already routed to the invariant-measure/long-period branch.
+
+For a unit Floquet phase `vartheta`, the retained low modes have mismatch
+
+\[
+\delta_{n,m}(\beta,\vartheta)=2\pi n-m\beta-\vartheta.
+\]
+
+Because the low-mode index set is finite, exact resonance occurs on only finitely many curves in `(beta,vartheta)` phase space. Away from those curves there is a uniform positive q-frequency gap. Therefore the bounded-period hard core has no infinite small-divisor cascade.
+
+## 8. Nonlinear moderate RSS/RDSS components feed the kernel problem — M19-156
+
+Write the symmetry-gauged relative-periodic boundary-value problem as
+
+\[
+\mathcal F(U,m)=0,
+\]
+
+where `m` denotes the actual orbit moduli (`alpha` for RSS; local `(S,Q_*)` or `(S,beta)` coordinates for RDSS).
+
+This does not treat the moduli as free PDE parameters. It uses them only as coordinates on the solution set.
+
+If
+
+\[
+D_U\mathcal F(U,m)
+\]
+
+is invertible, the implicit-function theorem makes the local solution set a graph over moduli, so the moduli projection is locally open.
+
+Hence a compact connected nonzero solution component lying strictly inside a smooth moduli stratum cannot remain fixed-moduli nondegenerate everywhere: its projection would be simultaneously open and compact inside a noncompact/interior parameter domain.
+
+Therefore
+
+\[
+\boxed{
+\mathcal R_{rel-per}^{moderate}
+\Longrightarrow
+\mathcal T_{kernel}^{nsym}
+\lor
+\mathcal G_{moduli\ boundary}
+\lor
+\mathcal G_{isotropy/chart}
+\lor
+\mathcal G_{state\ compactness}.
+}
+\]
+
+On the retained compact hard lane most non-kernel escapes are already typed. This substantially merges the moderate nonlinear RSS/RDSS existence problem with uniform fixed-moduli kernel rigidity.
+
+## 9. Current live analytic problems after M19-156
+
+1. **Uniform nonsymmetry kernel rigidity on the compact hard corridor**
    \[
-   \boxed{\ker(I-\mathcal M_S^{tw})\text{ contains only the exact time/rotation symmetry directions after gauge fixing}.}
+   \boxed{
+   \ker D_U\mathcal F(U,m)=E_{sym}^{\mu=1}
+   }
    \]
+   for all controlled moderate relative-periodic states and all finite iterates required by rational elliptic phases.
 
-2. **Elliptic neutral-mode exclusion**
-   \[
-   \boxed{\sigma(\mathcal M_S^{tw})\cap\{|z|=1\}\text{ has no nonsymmetry points }e^{i\vartheta},\ \vartheta\ne0.}
-   \]
+2. **Irrational elliptic neutral-block exclusion** after quotienting the exact rotation representation.
 
-3. **Moderate finite-amplitude RSS/RDSS hard core**: exclude the remaining relative-periodic orbits after the small-step/small-large-rotation exclusions and finite-dimensional Floquet/tail reductions.
+3. **Long-period `S->infinity` invariant-measure rigidity** and closure of the remaining moduli/isotropy/compactness boundary exits.
 
-The separate late-lane external applicability and uniform-observability problems are no longer independent roots; their remaining failure modes are upstream corridor/spectral-bundle degeneration gates.
+The moderate finite-amplitude nonlinear RSS/RDSS hard core is no longer fully independent: compact components force the kernel theorem or a typed boundary.
 
-## 9. Final proof-chain certification remains open
+## 10. Final proof-chain certification remains open
 
 Even if the active analytic problems close, global regularity still requires:
 
@@ -205,26 +303,22 @@ Even if the active analytic problems close, global regularity still requires:
 2. historical branch completeness and remaining alignment/nonreuse checks;
 3. full beginning-to-end independent audit.
 
-## 10. Permanent firewalls
+## 11. Permanent firewalls
 
 \[
-\boxed{\text{symmetry-only center}\neq\text{symmetry-only recurrent dynamics}},
+\boxed{\text{symmetry unit multiplier}\neq\text{nonsymmetry unit multiplier}},
 \]
 
 \[
-\boxed{\text{positive-exponent exclusion}\neq\text{zero-center rigidity}},
+\boxed{\text{period/holonomy tangent}\neq\text{fixed-moduli homogeneous kernel}},
 \]
 
 \[
-\boxed{\text{pointwise injectivity}\neq\text{uniform observability unless the hard bundle is continuous/compact}},
+\boxed{\text{positive-exponent exclusion}\neq\text{unit-spectrum rigidity}},
 \]
 
 \[
-\boxed{\text{pressure resonance}\neq\text{contradiction without a log-free gate}},
-\]
-
-\[
-\boxed{\text{orbit period/group drift}\neq\text{free external PDE parameter}},
+\boxed{\text{rational elliptic phase}\to\text{finite-iterate kernel, not automatic contradiction}},
 \]
 
 \[
@@ -234,5 +328,5 @@ Even if the active analytic problems close, global regularity still requires:
 ---
 
 \[
-\boxed{\text{M19 ACTIVE TIP = M19-146.}}
+\boxed{\text{M19 ACTIVE TIP = M19-156.}}
 \]
