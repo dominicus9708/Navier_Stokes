@@ -1,8 +1,8 @@
 # M19 Current Frontier
 
-**Date:** 2026-09-12  
-**Current tip:** **M19-156**  
-**Status:** ACTIVE CALCULATION / FINITE-DIMENSIONAL UNIT-SPECTRUM RIGIDITY + COMPACT MODERATE RSS/RDSS COMPONENTS / FINAL ROOT-PROOF CERTIFICATION STILL OPEN
+**Date:** 2026-09-13  
+**Current tip:** **M19-177**  
+**Status:** ACTIVE CALCULATION / RECURRENT HARD-DIMENSION THRESHOLD + RELATIVE-PERIODIC HARD CORE / FINAL ROOT-PROOF CERTIFICATION STILL OPEN
 
 \[
 \boxed{\text{GLOBAL 3D NAVIER--STOKES REGULARITY REMAINS UNPROVED.}}
@@ -16,309 +16,338 @@ M18 remains frozen as the analysis/audit family. M19 is the active calculation/c
 \boxed{\text{M18 certified analysis}\Longrightarrow\text{M19 calculation}\Longrightarrow\text{closure or explicit theorem frontier}.}
 \]
 
-## 2. Retained hard-lane structure through M19-146
+## 2. Retained reduction through M19-156
 
 The quiet remote/ancestry/weak-critical survivors have been reduced, at their certified scope, to the recurrent critical-scattering complex.
 
-The linearized-vorticity equation has the exact quarter-gap
+The linearized-vorticity identity is
 
 \[
-\frac12\frac d{ds}\|\eta\|_2^2+\nu\|\nabla\eta\|_2^2+\frac14\|\eta\|_2^2=\mathcal C_U[W].
+\frac12\frac d{ds}\|\eta\|_2^2
++\nu\|\nabla\eta\|_2^2
++\frac14\|\eta\|_2^2
+=\mathcal C_U[W].
 \]
 
-Critical-tail coupling is relatively compact with respect to the bare similarity-vorticity generator, hence
+Critical-tail coupling is relatively compact with respect to the bare similarity-vorticity generator, so
 
 \[
-\boxed{\lambda_{ess}\le-1/4<0,\qquad \dim E^{\ge0}<\infty.}
+\boxed{\lambda_{ess}\le-1/4<0.}
 \]
 
-Uniform observability and differentiated scattering covariance remove positive hard exponents:
+Uniform scattering observability plus differentiated scattering covariance remove positive hard Lyapunov exponents. The remaining complete hard dynamics is finite-dimensional and zero/unit-growth.
+
+The exact time/rotation symmetry representation must be quotiented before classifying unit multipliers. Moderate RSS and bounded-period RDSS are compact finite-amplitude low-mode hard sets; long period `S->infinity` remains a separate invariant-measure escape.
+
+## 3. Kernel becomes a finite compact-core Hermitian problem — M19-157--161
+
+Abstract quasi-compactness and isometry do **not** imply kernel rigidity.
+
+For a hard perturbation define the period/mean damping-minus-compensation form
 
 \[
-\boxed{E_{\perp}^{>0}=0.}
+\overline H
+=\nu\overline D+\frac14\overline G-\overline C.
 \]
 
-The remaining recurrent spectral problem is unit/zero growth.
+Kernel rigidity is a finite-dimensional smallest-eigenvalue/sign problem after symmetry quotient.
 
-On the present smooth passive critical-tail lane, the physical Type-I decay and fixed-annulus pressure hypotheses used by the current one-slice/RSS/RDSS external results are certified from
-
-\[
-|U(y,s)|\lesssim(1+|y|)^{-1},
-\qquad
-|P(y,s)|\lesssim(1+|y|^2)^{-1}.
-\]
-
-Unique continuation and C1 scattering differentiation are standard on the fixed smooth spectator cylinder used by the hard-mode observability argument.
-
-The time tangent is quantitatively visible in scattering coordinates:
-
-\[
-\boxed{D\mathscr S_U(\partial_sU)=-\frac12\partial_qA,}
-\]
-
-with the singular hard lane carrying
-
-\[
-0<v_q\le\|\partial_qA\|_{X_{sc}}\le V_q^*.
-\]
-
-## 3. Authoritative RDSS symmetry-spectrum correction — M19-147
-
-For
-
-\[
-U(s+S)=Q_*U(s),
-\qquad
-\mathcal M_S^{tw}=Q_*^{-1}\Phi_S,
-\]
-
-the rotation tangent transforms by
+Compact hard fibers also give a uniform vorticity Poincare ratio
 
 \[
 \boxed{
-\mathcal M_S^{tw}(\mathcal R_JU)
-=
-\mathcal R_{\operatorname{Ad}_{Q_*^{-1}}J}U.
+\int\|\nabla\eta\|_2^2
+\ge\lambda_P\int\|\eta\|_2^2,
+\qquad\lambda_P>0,
 }
 \]
 
-If the principal holonomy angle is `beta`, the exact rotation-symmetry multipliers are
+raising the neutral compensation threshold to
 
 \[
-\boxed{1,e^{i\beta},e^{-i\beta}}
+\boxed{\Lambda_{hard}=1/4+\nu\lambda_P>1/4.}
 \]
 
-on the complexified non-isotropic rotation tangent.
+For a fixed `mu=1` eigenspace, every extra nonsymmetry kernel direction consumes an additional compact-core compensation eigenchannel above this threshold.
 
-Therefore a raw `mu ne 1` unit multiplier is not automatically nonsymmetric. The full time/rotation representation must be quotiented first.
-
-The correct unit-spectrum target is
+The compensation operator splits into
 
 \[
 \boxed{
-\sigma(\mathcal M_S^{tw}|_{quot})\cap S^1=\varnothing.
+\mathcal C_U[W]
+=\int\eta\cdot S_U\eta
++\mathcal C_{\nabla\Omega}[W].
 }
 \]
 
-## 4. Kernel and elliptic recompression — M19-148--150
+Trace-free strain does not force a one-channel rank bound. Every superthreshold channel is nevertheless localized to a finite compact core; the `r^-2` critical strain tail is unthresholded-CLR borderline but cannot itself sustain a strict superthreshold channel.
 
-A nonsymmetry `mu=1` mode is a true fixed-moduli Fredholm degeneracy:
+## 4. Collective anisotropy tensor and the 5/4 gap — M19-162--167
 
-\[
-\boxed{
-K_{nsym}
-:=
-\ker(I-\mathcal M_S^{tw})/E_{sym}^{\mu=1}.
-}
-\]
-
-Variations of period or holonomy satisfy an inhomogeneous augmented Jacobi equation and are not the same object.
-
-On the uniformly observable hard bundle, the twisted monodromy is isometric in the scattering pullback metric. Hence unit spectrum is semisimple.
-
-If
+For a hard family define
 
 \[
-\mu=e^{i\vartheta},
+\Gamma=\sum_j\eta_j\otimes\eta_j,
 \qquad
-\vartheta/2\pi\in\mathbb Q,
+Q=\Gamma-\frac{\operatorname{tr}\Gamma}{3}I.
 \]
 
-then a finite iterate has `mu^k=1`, so the rational elliptic branch reduces to a finite-iterate kernel problem. Only irrational nonsymmetry unit phases are genuinely new linear elliptic obstructions.
-
-Every unit multiplier, kernel or elliptic, obeys the exact one-period payment
+Incompressibility removes the isotropic strain trace:
 
 \[
 \boxed{
-\nu\int_0^S\|\nabla\eta\|_2^2ds
-+\frac14\int_0^S\|\eta\|_2^2ds
-=
-\int_0^S\mathcal C_U[W]ds.
+\sum_j\int\eta_j\cdot S_U\eta_j
+=\int S_U:Q.
 }
 \]
 
-Critical-tail coefficient decay makes the far-field coupling form-small. Therefore a unit mode cannot maintain neutrality by escaping to infinity: every nonsymmetry unit mode carries a uniform compact-core activity floor on a compact hard corridor.
-
-Thus the live unit-spectrum theorem is now a finite-dimensional compact-core sign/index problem, not a compactness or small-divisor problem.
-
-## 5. Authoritative homotopy correction — M19-151--152
-
-M19-151 introduced a formal homotopy multiplying the quadratic term by `tau`.
-M19-152 is authoritative: for `tau>0`,
-
-\[
-V=\tau U,
-\qquad
-\Pi=\tau P
-\]
-
-converts that equation exactly to the original similarity Navier--Stokes equation.
-
-Hence every nonzero original relative-periodic orbit generates
-
-\[
-\boxed{U_\tau=\tau^{-1}V,}
-\]
-
-which escapes to infinite amplitude as `tau->0`.
-
-Therefore the tau-homotopy cannot reduce nonexistence to a kernel event; M19-151 survives only as local continuation bookkeeping.
-
-Permanent firewall:
-
-\[
-\boxed{\text{formal external parameter}\neq\text{genuinely independent deformation direction}.}
-\]
-
-## 6. Moderate RSS compact hard core — M19-153
-
-External small/large-rotation exclusions leave
-
-\[
-0<\alpha_-\le|\alpha|\le\alpha_+<\infty.
-\]
-
-RSS scattering obeys
-
-\[
-\partial_qA=-2\alpha\mathcal R_\omega A.
-\]
-
-The q-speed floor gives
+The exact traceless tensor evolution has bare damping
 
 \[
 \boxed{
-\frac{v_q}{2\alpha_+}
-\le
-\|\mathcal R_\omega A\|_{X_{sc}}
-\le
-\frac{V_q^*}{2\alpha_-}.
+\frac12\frac d{ds}\|Q\|_2^2
++\nu\|\nabla Q\|_2^2
++\frac54\|Q\|_2^2
+=\text{anisotropy sources},
 }
 \]
 
-Combined with exact rotation observability, the positive cubic/amplitude floor and shell-H1 ceiling, every unresolved moderate RSS lies in a compact finite-dimensional low-mode set separated from
+and the local rotation commutator contributes zero to this energy.
 
-- zero amplitude;
-- axisymmetry;
-- small/large rotation;
-- high-mode escape.
-
-Thus the remaining RSS obstruction is a genuine compact finite-amplitude nonaxisymmetric solution.
-
-## 7. Bounded-period RDSS compactification — M19-154--155
-
-Use intrinsic variables
-
-\[
-S=2\log\lambda,
-\qquad
-\beta=\operatorname{Angle}(Q_*)\in[-\pi,\pi].
-\]
-
-On a bounded-period corridor
-
-\[
-S_-\le S\le S_+<\infty,
-\]
-
-the moduli are compact, the essential Floquet gap is uniform, and shell-H1 plus the cubic-tail floor leaves a uniform finite nonzero low-mode tail core.
-
-The only period-modulus escape is
-
-\[
-\boxed{S\to\infty,}
-\]
-
-already routed to the invariant-measure/long-period branch.
-
-For a unit Floquet phase `vartheta`, the retained low modes have mismatch
-
-\[
-\delta_{n,m}(\beta,\vartheta)=2\pi n-m\beta-\vartheta.
-\]
-
-Because the low-mode index set is finite, exact resonance occurs on only finitely many curves in `(beta,vartheta)` phase space. Away from those curves there is a uniform positive q-frequency gap. Therefore the bounded-period hard core has no infinite small-divisor cascade.
-
-## 8. Nonlinear moderate RSS/RDSS components feed the kernel problem — M19-156
-
-Write the symmetry-gauged relative-periodic boundary-value problem as
-
-\[
-\mathcal F(U,m)=0,
-\]
-
-where `m` denotes the actual orbit moduli (`alpha` for RSS; local `(S,Q_*)` or `(S,beta)` coordinates for RDSS).
-
-This does not treat the moduli as free PDE parameters. It uses them only as coordinates on the solution set.
-
-If
-
-\[
-D_U\mathcal F(U,m)
-\]
-
-is invertible, the implicit-function theorem makes the local solution set a graph over moduli, so the moduli projection is locally open.
-
-Hence a compact connected nonzero solution component lying strictly inside a smooth moduli stratum cannot remain fixed-moduli nondegenerate everywhere: its projection would be simultaneously open and compact inside a noncompact/interior parameter domain.
-
-Therefore
+The forcing tuple is
 
 \[
 \boxed{
-\mathcal R_{rel-per}^{moderate}
+\Sigma_E=(\rho S,\mathcal G^\circ,\mathcal F^\circ).
+}
+\]
+
+Scalar density alone does not determine `Q`. For a fixed full source tuple the tensor response is linear and its homogeneous tensor cocycle is quasi-compact with
+
+\[
+\boxed{\lambda_{ess,Q}\le-5/4.}
+\]
+
+However scattering/fiber orthogonality does not cancel polarized cross-tensor forcing, so the tensor gap is an auxiliary coercive structure rather than a direct kernel proof.
+
+## 5. Real hard monodromy and the dimension-one target — M19-168--174
+
+After exact symmetry quotient, the real hard twisted monodromy is orthogonal in the scattering pullback metric:
+
+\[
+\boxed{\mathcal M_q^{tw}\in O(N).}
+\]
+
+A genuinely irrational elliptic block requires a two-dimensional real invariant plane. Hence
+
+\[
+\boxed{N:=\dim_{\mathbb R}E_q^{hard}\le1}
+\]
+
+eliminates all genuinely irrational elliptic neutral dynamics; the only residual one-dimensional unit behavior is a finite-iterate kernel (`+1` or `-1`).
+
+More importantly, on a one-dimensional-or-smaller quotient center, the local recurrent return is an interval homeomorphism. Orientation-preserving recurrence is fixed and orientation-reversing recurrence has period at most two. Thus
+
+\[
+\boxed{
+N\le1
 \Longrightarrow
-\mathcal T_{kernel}^{nsym}
-\lor
-\mathcal G_{moduli\ boundary}
-\lor
-\mathcal G_{isotropy/chart}
-\lor
-\mathcal G_{state\ compactness}.
+\text{recurrent hard dynamics is relative-periodic after at most two quotient returns}.
 }
 \]
 
-On the retained compact hard lane most non-kernel escapes are already typed. This substantially merges the moderate nonlinear RSS/RDSS existence problem with uniform fixed-moduli kernel rigidity.
+Therefore full kernel rigidity is **not** required before eliminating aperiodic recurrence.
 
-## 9. Current live analytic problems after M19-156
+## 6. Collective trace is sublinear in hard dimension — M19-169--172
 
-1. **Uniform nonsymmetry kernel rigidity on the compact hard corridor**
-   \[
-   \boxed{
-   \ker D_U\mathcal F(U,m)=E_{sym}^{\mu=1}
-   }
-   \]
-   for all controlled moderate relative-periodic states and all finite iterates required by rational elliptic phases.
+For the whole quotient hard family, orthogonal/unitary return gives the exact total compensation trace identity. The local strain trace obeys the Lieb--Thirring estimate
 
-2. **Irrational elliptic neutral-block exclusion** after quotienting the exact rotation representation.
+\[
+\boxed{|T_{strain}|
+\lesssim\|S_U\|_{5/2}P_N^{3/5}.}
+\]
 
-3. **Long-period `S->infinity` invariant-measure rigidity** and closure of the remaining moduli/isotropy/compactness boundary exits.
+The nonlocal gradient-vorticity trace obeys, for `3/2<a<3`,
 
-The moderate finite-amplitude nonlinear RSS/RDSS hard core is no longer fully independent: compact components force the kernel theorem or a typed boundary.
+\[
+\boxed{
+|T_{nl}|
+\lesssim
+\|\nabla\Omega\|_a
+Z_N^{\,11/6-5/(2a)}
+P_N^{\,3/(2a)-1/2},
+}
+\]
 
-## 10. Final proof-chain certification remains open
+with total collective degree
 
-Even if the active analytic problems close, global regularity still requires:
+\[
+\boxed{d(a)=\frac43-\frac1a<1.}
+\]
+
+As `a->3/2+`, `d(a)->2/3`, though the endpoint HLS constant degenerates.
+
+Both local and nonlocal compensation traces are therefore collective-sublinear. This gives a uniform finite hard-dimension ceiling.
+
+## 7. Authoritative recurrent extension — M19-175
+
+The earlier period-based trace formulation must not be used circularly to prove periodicity.
+
+For any compact recurrent hard component, transport a complete hard frame and define
+
+\[
+Z_N(s)=\sum_j\|\eta_j(s)\|_2^2,
+\quad
+P_N(s)=\sum_j\|\nabla\eta_j(s)\|_2^2,
+\quad
+T_N(s)=\sum_j\mathcal C_U[W_j(s)].
+\]
+
+Then
+
+\[
+\frac12Z_N'+\nu P_N+\frac14Z_N=T_N.
+\]
+
+Boundedness kills the long-time boundary term, giving on a general recurrent component
+
+\[
+\boxed{
+\langle T_N\rangle
+=\nu\langle P_N\rangle+\frac14\langle Z_N\rangle.
+}
+\]
+
+Thus the dimension criterion applies **before** relative periodicity is known.
+
+## 8. Cesaro vorticity-mean normalization — M19-176
+
+On a finite recurrent hard fiber define the Cesaro pulled-back vorticity metric
+
+\[
+G_T
+=\frac1T\int_0^T
+\Phi_t^*(\operatorname{curl})^*(\operatorname{curl})\Phi_t\,dt.
+\]
+
+A positive subsequential mean metric `G_infinity` exists on each retained recurrent component. Choosing a `G_infinity`-orthonormal hard basis gives
+
+\[
+\boxed{\langle Z_N\rangle=N.}
+\]
+
+Hence the arbitrary lower normalization constant `g_-` disappears from the two-mode criterion.
+
+The remaining intrinsic frame issue is the mean-to-instantaneous occupation/distortion constant
+
+\[
+\boxed{\kappa_{occ}.}
+\]
+
+## 9. Constant audit — M19-177
+
+Most other constants descend to the already retained smooth background/tail package.
+
+The hard derivative ratio can be bounded by
+
+\[
+\boxed{
+\Lambda_P^+
+\lesssim
+\nu^{-2}Z_+^{1/2}P_+^{1/2}
++
+\nu^{-1}P_+^{1/4}H_+^{1/4}.
+}
+\]
+
+Critical strain satisfies
+
+\[
+\boxed{
+M_{5/2}
+\lesssim
+Z_+^{7/20}P_+^{3/20}.
+}
+\]
+
+For `2<=a<3`, `M_a=\sup\|\nabla\Omega\|_a` descends to `P_+,H_+`; for `3/2<a<2`, a core/tail split gives
+
+\[
+\boxed{
+M_a
+\lesssim
+R^{3(1/a-1/2)}P_+^{1/2}
++
+C_{tail}(3a-3)^{-1/a}R^{3/a-3}.
+}
+\]
+
+Thus the cleanest genuinely new quantitative constant in the `N=2` test is currently `kappa_occ`; the other corridor bounds are known finite but generally not sharply numerical.
+
+## 10. Current live analytic targets after M19-177
+
+### A. Aperiodic branch — dimension-one threshold
+
+The primary target is now
+
+\[
+\boxed{\mathcal T_{dim1}:\dim_{\mathbb R}E_q^{hard}\le1.}
+\]
+
+In the Cesaro normalization the exact sufficient test has the form
+
+\[
+\boxed{
+\widetilde C_{str}2^{-2/5}
++\widetilde C_a2^{d(a)-1}
+<\frac14
+}
+\]
+
+for some `3/2<a<3`.
+
+If this is certified, M19-173 reduces every recurrent hard survivor to RSS/RDSS after at most a two-fold quotient return.
+
+The immediate quantitative obstruction is control of `kappa_occ` and sharpening of the symbolic corridor constants.
+
+### B. Relative-periodic hard core
+
+After the aperiodic reduction, the remaining RSS/RDSS branch is compact finite-amplitude/low-mode except for the already typed long-period `S->infinity` escape.
+
+Fixed-moduli nonsymmetry kernel degeneracy remains the main local Fredholm obstruction for moderate compact components; rational elliptic phases reduce to finite-iterate kernels, while exact rotation-symmetry elliptic multipliers are quotiented.
+
+### C. Long-period branch
+
+`S->infinity` remains an invariant-measure/compactness problem and shares the same recurrent hard-dimension structure on its limiting compact components.
+
+## 11. Final proof-chain certification remains open
+
+Even if the active analytic targets close, global regularity still requires:
 
 1. arbitrary-singularity entry certification;
 2. historical branch completeness and remaining alignment/nonreuse checks;
 3. full beginning-to-end independent audit.
 
-## 11. Permanent firewalls
+## 12. Permanent firewalls
 
 \[
-\boxed{\text{symmetry unit multiplier}\neq\text{nonsymmetry unit multiplier}},
+\boxed{\text{finite hard dimension}\neq\text{dimension one}},
 \]
 
 \[
-\boxed{\text{period/holonomy tangent}\neq\text{fixed-moduli homogeneous kernel}},
+\boxed{\text{finite corridor bounds}\neq\text{constants small enough for }N<2},
 \]
 
 \[
-\boxed{\text{positive-exponent exclusion}\neq\text{unit-spectrum rigidity}},
+\boxed{\text{mean normalization}\neq\text{instantaneous occupation control}},
 \]
 
 \[
-\boxed{\text{rational elliptic phase}\to\text{finite-iterate kernel, not automatic contradiction}},
+\boxed{\text{tensor 5/4 gap}\neq\text{automatic tensor-source smallness}},
+\]
+
+\[
+\boxed{\text{relative periodicity}\neq\text{relative-periodic nonexistence}},
 \]
 
 \[
@@ -328,5 +357,5 @@ Even if the active analytic problems close, global regularity still requires:
 ---
 
 \[
-\boxed{\text{M19 ACTIVE TIP = M19-156.}}
+\boxed{\text{M19 ACTIVE TIP = M19-177.}}
 \]
