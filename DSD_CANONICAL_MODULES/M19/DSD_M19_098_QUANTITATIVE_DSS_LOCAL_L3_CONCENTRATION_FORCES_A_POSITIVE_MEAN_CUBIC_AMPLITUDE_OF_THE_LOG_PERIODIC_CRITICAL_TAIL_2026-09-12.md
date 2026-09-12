@@ -45,6 +45,12 @@ u(x,t)=(-t)^{-1/2}U(y,s),
 s=-\log(-t).
 \]
 
+Here `u(x,t)` is the velocity field; in ordinary notation the displayed middle relation is
+
+\[
+u(x,t)=(-t)^{-1/2}U(y,s).
+\]
+
 Then
 
 \[
