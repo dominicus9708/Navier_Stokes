@@ -1,8 +1,8 @@
 # M19 Current Frontier
 
 **Date:** 2026-09-12  
-**Current tip:** **M19-130**  
-**Status:** ACTIVE CALCULATION / FINITE-DIMENSIONAL TRANSVERSE SPECTRUM + RSS/RDSS TWISTED TAIL + FINITE OBSERVABILITY / FINAL ROOT-PROOF CERTIFICATION STILL OPEN
+**Current tip:** **M19-141**  
+**Status:** ACTIVE CALCULATION / OBSERVABLE FINITE-DIMENSIONAL ZERO-CENTER RIGIDITY + MODERATE RSS/RDSS HARD CORE / FINAL ROOT-PROOF CERTIFICATION STILL OPEN
 
 \[
 \boxed{\text{GLOBAL 3D NAVIER--STOKES REGULARITY REMAINS UNPROVED.}}
@@ -16,175 +16,167 @@ M18 remains frozen as the analysis/audit family. M19 is the active calculation/c
 \boxed{\text{M18 certified analysis}\Longrightarrow\text{M19 calculation}\Longrightarrow\text{closure or explicit theorem frontier}.}
 \]
 
-## 2. Retained reduction through M19-118
+## 2. Retained global reduction
 
-The quiet CE-H/current, remote and cubic ancestry-conversion survivors have been reduced, at their certified scope, to the recurrent weak-critical scattering complex.
+The quiet CE-H/current, remote, and cubic ancestry-conversion survivors have been reduced, at their certified scope, to the weak-critical recurrent scattering complex.
 
-The pressure-free linearized-vorticity identity has the exact quarter-gap
+The linearized-vorticity equation has the exact quarter-gap
 
 \[
 \frac12\frac d{ds}\|\eta\|_2^2+\nu\|\nabla\eta\|_2^2+\frac14\|\eta\|_2^2=\mathcal C_U[W].
 \]
 
-Critical-tail coefficients are relatively compact perturbations of the bare similarity-vorticity generator, hence
+Critical-tail coupling is relatively compact with respect to the bare similarity-vorticity generator. Hence
 
 \[
 \boxed{\lambda_{ess}\le-1/4<0,\qquad \dim E^{\ge0}<\infty.}
 \]
 
-Thus the formal infinite-dimensional scattering center is reduced to a finite-dimensional interior spectral problem.
+## 3. Authoritative recurrent-dynamics correction
 
-For RSS/RDSS, principal intrinsic variables are
-
-\[
-\boxed{S=2\log\lambda,\qquad \beta=\operatorname{Angle}(Q_*)\in[-\pi,\pi].}
-\]
-
-The twisted monodromy
+M19-120 corrected the shortcut
 
 \[
-\mathcal M_S^{tw}=Q_*^{-1}\mathcal U(s+S,s)
+E^c_{extra}=0\not\Rightarrow\text{RSS/RDSS only}
 \]
 
-inherits
+because hyperbolic aperiodic recurrence can have only the flow tangent in the center while carrying unstable directions.
+
+The stronger transverse target was
 
 \[
-\boxed{r_{ess}(\mathcal M_S^{tw})\le e^{-S/4}<1.}
+E_{\perp}^{\ge0}=0.
 \]
 
-## 3. Long-period invariant-measure reduction — M19-119
+M19-132--133 now remove the positive-exponent part on the uniformly observable hard bundle.
 
-For a long-period sequence \(S_n\to\infty\), use the quotient-periodic invariant measures
+## 4. Uniform observability and differentiated scattering — M19-131--133
+
+If the finite hard spectral spaces form a continuous uniformly separated bundle over the compact corridor, pointwise unique-continuation injectivity upgrades by compactness to
 
 \[
-\mu_n=\frac1{S_n}\int_0^{S_n}\delta_{[U_n(s)]}\,ds.
+\boxed{c_{obs}\|v\|\le\|D\mathscr S_Uv\|_{X_{sc}}\le C_{obs}\|v\|.}
 \]
 
-On a compact corridor, subsequential limits are invariant probabilities. Their ergodic components are RSS, finite-period relative-periodic components, genuinely aperiodic recurrent components, or arise only after compactness loss.
-
-## 4. Authoritative dynamical correction — M19-120
-
-The previous shortcut
+Exact differentiated scattering covariance is
 
 \[
-E^c_{extra}=0\Longrightarrow\text{RSS/RDSS only}
+\boxed{D\mathscr S_{\sigma_tU}\Phi_t(U)=T_{-t/2}D\mathscr S_U.}
 \]
 
-is **not valid in general**. A hyperbolic recurrent flow may have one-dimensional center equal to the flow tangent and still possess stable/unstable directions and aperiodic recurrence.
-
-The correct transverse target is stronger:
+In a q-translation-invariant scattering norm this excludes positive hard Lyapunov exponents:
 
 \[
-\boxed{E_{\perp}^{\ge0}=0}
+\boxed{E_{\perp}^{>0}=0.}
 \]
 
-or equivalently
+Moreover the pullback norm
 
 \[
-\boxed{\lambda_{top}^{\perp}<0.}
+\|v\|_{sc,U}:=\|D\mathscr S_Uv\|_{X_{sc}}
 \]
 
-This correction supersedes any use of M19-103 that inferred RSS/RDSS solely from the absence of an extra zero center.
-
-## 5. Transverse Ky-Fan/Morse budget — M19-121--123
-
-For the top \(m\) transverse Lyapunov directions,
+makes the complete observable hard cocycle an exact fiberwise isometry:
 
 \[
-\boxed{
-\sum_{j=1}^m\lambda_j^{\perp}
-\le
--\frac m4
--\nu\left\langle\sum_{j=1}^m\|\nabla\eta_j\|_2^2\right\rangle
-+\left\langle\sum_{j=1}^m\lambda_j^+(s)\right\rangle.
-}
+\boxed{\|\Phi_t(U)v\|_{sc,\sigma_tU}=\|v\|_{sc,U}.}
 \]
 
-Hence any nonnegative transverse spectrum needs compact-core amplification of at least \(m/4\) on average. The immediate spectral problem is to rule out a second quarter-gap-compensating channel after the time/rotation symmetry directions are removed.
+Thus the remaining hard obstruction is zero-growth compact neutral dynamics, not hyperbolic expansion.
 
-Long-period RDSS complexity and aperiodic recurrence therefore share the same transverse-spectral obstruction rather than forming independent roots.
+## 5. Conditional nonlinear torus reduction — M19-134
 
-## 6. RSS torque and exact spiral tail — M19-124--127
+If the observable neutral bundle integrates to a compact finite-dimensional center manifold and nonlinear scattering is a uniformly immersive factor, the pulled-back scattering metric makes the center flow isometric. Its compact closure is a finite-dimensional torus action.
 
-For RSS, similarity-time symmetry plus scattering covariance forces
+Hence the recurrent q-history becomes finite-rank quasiperiodic, conditionally on the center-manifold/immersion gates.
+
+## 6. Pressure-resonance audit — M19-135--140
+
+The leading zero-q pressure resonance occurs at l=1 but cancels identically by the double-divergence structure.
+
+At pressure order n, the zero-q resonance is
 
 \[
-\boxed{\partial_qA=-2\alpha\mathcal R_\omega A,}
+\boxed{l=2n+1.}
 \]
 
-hence
+The first nonautomatic pure-power candidate is n=1,l=3. It is nontrivial on mixed-parity low modes: M19-139 constructs an explicit toroidal l=1+l=2 witness with resonance coefficient
 
 \[
-\boxed{A(q)=e^{-2\alpha q\mathcal R_\omega}A(0).}
+\boxed{-1344\nu/5}
 \]
 
-The radial derivative square contains the exact positive anisotropy cost
+in the retained correction convention.
+
+However M19-140 is authoritative: without an independently certified log-free asymptotic theorem, nonzero resonance produces compatible faster-decaying polyhomogeneous logarithmic corrections rather than a contradiction.
+
+For antipodally odd critical data the entire odd pressure-resonance ladder vanishes by parity.
+
+Thus the pressure hierarchy is currently a structural/mixed-parity filter, not a universal closure mechanism.
+
+## 7. Correct recurrent-to-relative-periodic reduction — M19-141
+
+Because positive hard exponents are removed by scattering observability, the live spectral theorem is now the zero-center rigidity statement after rotation quotient:
 
 \[
-\boxed{\|\partial_qA-A\|_2^2=\|A\|_2^2+4\alpha^2\|\mathcal R_\omega A\|_2^2.}
+\boxed{E_q^0=\operatorname{span}\{\partial_sU\}.}
 \]
 
-Tail rotational anisotropy is observable at a finite spectator annulus because the scattering derivative is near identity, but a quantitative reverse estimate from the compact core to the leading tail remains nontrivial.
-
-## 7. RDSS twisted log-radius spectrum — M19-128--129
-
-RDSS scattering obeys
+If this holds and the transverse Sacker--Sell spectrum is uniformly separated from zero, then
 
 \[
-\boxed{A(q+L)=Q_*^{-1}A(q).}
+\boxed{\|\Phi_t^\perp\|\le Ce^{-\gamma t}.}
 \]
 
-After untwisting by principal holonomy \(\beta\), log-Fourier/angular modes have mismatch
+A sufficiently close recurrent return on a local Poincare section is then a contraction, which forces quotient periodicity. Lifting the rotation quotient yields
 
 \[
-\boxed{\delta_{n,m}(\beta)=2\pi n-m\beta}
+\boxed{U(s+S)=Q_*U(s),}
 \]
 
-and radial frequency
+i.e. RDSS, with RSS/DSS/SS as special cases.
+
+This is the corrected form of the earlier recurrent-to-relative-periodic reduction.
+
+## 8. RSS/RDSS retained hard structure
+
+RSS critical scattering is an exact log-radius spiral:
 
 \[
-\boxed{\frac{2\pi n-m\beta}{L}.}
+\partial_qA=-2\alpha\mathcal R_\omega A.
 \]
 
-Thus the critical shell charge contains a positive term comparable to
+RDSS satisfies twisted log-periodicity
 
 \[
-1+\frac{(2\pi n-m\beta)^2}{L^2}+c_{ang}\ell(\ell+1).
+A(q+L)=Q_*^{-1}A(q),
 \]
 
-On bounded-period corridors with a shell-H1 ceiling and a positive mean cubic-tail floor, high modes cannot carry all critical cubic mass. A nontrivial finite-dimensional low-mode tail core remains.
-
-## 8. Finite-dimensional interior-to-tail observability — M19-130
-
-Let \(E_F\) be the finite-dimensional interior hard Floquet/spectral space. Under the retained parabolic unique-continuation application gate, a mode that vanishes on an open finite spectator spacetime cylinder vanishes identically. Hence the spectator observation is injective on \(E_F\).
-
-Composing with the near-identity scattering derivative preserves injectivity. Because \(E_F\) is finite-dimensional, finitely many scattering observables can be selected so that
+with intrinsic variables
 
 \[
-\boxed{\mathbf O:E_F\to\mathbb C^M}
+S=2\log\lambda,\qquad \beta=\operatorname{Angle}(Q_*)\in[-\pi,\pi].
 \]
 
-has full column rank for a fixed background.
-
-The remaining observability issue is **uniformity over the compact recurrent/periodic corridor**:
+The twisted q-frequency is
 
 \[
-\boxed{\sigma_{min}(\mathbf O)\ge c_{obs}>0.}
+\frac{2\pi n-m\beta}{L}.
 \]
 
-## 9. Current live analytic problems after M19-130
+On bounded-period corridors, shell-H1 ceilings plus the positive cubic-tail floor leave a nontrivial finite-dimensional low-mode tail core. The interior twisted Floquet hard space is likewise finite-dimensional.
 
-1. **Transverse spectral theorem**
+## 9. Current live analytic problems after M19-141
+
+1. **Zero-center rigidity**
    \[
-   \boxed{E_{\perp}^{\ge0}=0}
+   \boxed{E_q^0=\operatorname{span}\{\partial_sU\}}
    \]
-   by excluding a second compact-core quarter-gap compensation channel.
+   on the uniformly observable hard bundle.
 
-2. **Moderate RSS/RDSS nonlinear hard core**: exclude finite-amplitude relative-periodic survivors in the intrinsic \((S,\beta)\) variables, using the spiral/twisted tail structure and finite-dimensional Floquet reduction.
+2. **Moderate finite-amplitude RSS/RDSS hard core**: exclude the remaining relative-periodic orbits after the small-step/small-large-rotation exclusions and finite-dimensional Floquet/tail reductions.
 
-3. **Uniform observability**: upgrade pointwise finite-dimensional injectivity to a corridor-uniform lower singular-value bound, or isolate the exact spectral-bundle degeneration that prevents it.
-
-4. **External theorem applicability**: certify Type-I, pressure-annulus and unique-continuation hypotheses before importing external regularity/Liouville results into the global root chain.
+3. **External theorem applicability**: certify the exact Type-I velocity, physical pressure-annulus, unique-continuation and scattering differentiability hypotheses before importing external one-slice/RSS/RDSS rigidity into the global root chain.
 
 ## 10. Final proof-chain certification remains open
 
@@ -194,22 +186,22 @@ Even if the active analytic problems close, global regularity still requires:
 2. historical branch completeness and remaining alignment/nonreuse checks;
 3. full beginning-to-end independent audit.
 
-## 11. Permanent corrections/firewalls
+## 11. Permanent firewalls
 
 \[
 \boxed{\text{symmetry-only center}\neq\text{symmetry-only recurrent dynamics}},
 \]
 
 \[
+\boxed{\text{positive-exponent exclusion}\neq\text{zero-center rigidity}},
+\]
+
+\[
+\boxed{\text{pressure resonance}\neq\text{contradiction without a log-free gate}},
+\]
+
+\[
 \boxed{\text{orbit period/group drift}\neq\text{free external PDE parameter}},
-\]
-
-\[
-\boxed{\text{augmented nondegeneracy}\neq\text{periodic-orbit nonexistence}},
-\]
-
-\[
-\boxed{\text{pointwise injectivity}\neq\text{uniform observability}},
 \]
 
 \[
@@ -219,5 +211,5 @@ Even if the active analytic problems close, global regularity still requires:
 ---
 
 \[
-\boxed{\text{M19 ACTIVE TIP = M19-130.}}
+\boxed{\text{M19 ACTIVE TIP = M19-141.}}
 \]
