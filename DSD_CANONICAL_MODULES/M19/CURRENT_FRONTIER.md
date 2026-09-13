@@ -1,8 +1,8 @@
 # M19 Current Frontier
 
 **Date:** 2026-09-14  
-**Current tip:** **M19-210**  
-**Status:** ACTIVE CALCULATION / APERIODIC MEAN-ACTIVITY FRONTIER + FINITE-AMPLITUDE RSS/RDSS FREDHOLM FRONTIER / FINAL ROOT-PROOF CERTIFICATION STILL OPEN
+**Current tip:** **M19-212**  
+**Status:** ACTIVE CALCULATION / APERIODIC MEAN-ACTIVITY FRONTIER + FINITE-AMPLITUDE RSS/RDSS ORTHOGONAL-KERNEL FRONTIER / FINAL ROOT-PROOF CERTIFICATION STILL OPEN
 
 \[
 \boxed{\text{GLOBAL 3D NAVIER--STOKES REGULARITY REMAINS UNPROVED.}}
@@ -301,10 +301,74 @@ Therefore the bounded-period frontier is genuinely
 \boxed{
 \mathcal T_{kernel}^{finite\text{-}amp}:
 \text{exclude nonsymmetry unit/Fredholm kernels without a smallness assumption.}
-}
 \]
 
-A signed, index, topological, or profile-specific PDE mechanism is required beyond the current contraction estimates.
+## 12A. Orthogonal parity and crossing-form reduction — M19-211--212
+
+On a certified symmetry-quotient finite hard fiber, exact time/rotation bookkeeping gives an orientation-preserving orthogonal relative return
+
+\[
+P_{rel}\in SO(N).
+\]
+
+Writing \(m_+\) for the multiplicity of the \(+1\) fixed space,
+
+\[
+\boxed{m_+\equiv N\pmod2.}
+\]
+
+Hence odd residual hard dimension forces a \(+1\) kernel. On an even-dimensional quotient, any residual \(+1\) degeneracy has even real multiplicity.
+
+For \(F=I-P_{rel}\),
+
+\[
+\ker F=\ker F^*,
+\qquad
+\det(I-P_{rel})\ge0.
+\]
+
+When a conjugate eigenpair crosses \(+1\), its determinant factor is
+
+\[
+4\sin^2\frac\theta2,
+\]
+
+so the determinant touches zero without changing sign. Therefore a determinant-sign/\(\mathbb Z_2\) degree argument cannot exclude the kernel.
+
+For a \(C^1\) family \(P(\lambda)\in SO(N)\), the infinitesimal generator
+
+\[
+A=P^T\dot P
+\]
+
+is skew. On the kernel \(K=\ker(I-P)\), the first-order crossing form
+
+\[
+\omega_K(v,w)=\langle v,Aw\rangle
+\]
+
+is antisymmetric, while the scalar self-pairing vanishes identically:
+
+\[
+\boxed{\langle v,\dot Fv\rangle=0.}
+\]
+
+For a minimal two-dimensional kernel,
+
+\[
+B_K=
+\begin{pmatrix}0&-\beta\\\beta&0\end{pmatrix}.
+\]
+
+The coefficient \(\beta\ne0\) gives only a transversal isolated crossing, not kernel nonexistence. In the M19-204 resonance representation,
+
+\[
+\boxed{\beta=\frac d{d\lambda}(\kappa L-\phi)}
+\]
+
+up to real-block orientation convention.
+
+Thus scalar activity bounds, determinant sign, and scalar same-vector Melnikov pairing are all insufficient. The next bounded-period mechanism must use a global spectral-angle/winding obstruction, a nontrivial skew crossing two-form coupled to a global argument, or a profile-specific signed PDE identity.
 
 ## 13. Current live analytic theorem complex
 
@@ -329,7 +393,7 @@ Current unsigned scale-discounted ledgers do not close this.
 }
 \]
 
-This is finite-dimensional and finite-resonance but not currently closed.
+This is finite-dimensional and finite-resonance. M19-211--212 show that the complete symmetry quotient must first be parity-correct and that the remaining unit resonances are even-dimensional orthogonal crossings invisible to determinant sign and scalar self-pairing.
 
 ### C. Long period
 
@@ -362,6 +426,14 @@ Even if A and B close, global regularity still requires:
 \]
 
 \[
+\boxed{\text{determinant sign}\neq\text{orthogonal unit-kernel crossing index}},
+\]
+
+\[
+\boxed{\text{transversal/codimension-one resonance}\neq\text{resonance exclusion}},
+\]
+
+\[
 \boxed{\text{relative periodicity}\neq\text{relative-periodic nonexistence}},
 \]
 
@@ -372,5 +444,5 @@ Even if A and B close, global regularity still requires:
 ---
 
 \[
-\boxed{\text{M19 ACTIVE TIP = M19-210.}}
+\boxed{\text{M19 ACTIVE TIP = M19-212.}}
 \]
