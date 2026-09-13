@@ -1,47 +1,20 @@
 # M19 Current Frontier
 
 **Date:** 2026-09-14  
-**Current tip:** **M19-220**  
-**Status:** ACTIVE CALCULATION / APERIODIC SIGNED-INVARIANT FRONTIER + BOUNDED-PERIOD ZERO-Q INVARIANT-SECTION AND FINITE NONZERO-Q RESONANCE FRONTIER / FINAL ROOT-PROOF CERTIFICATION STILL OPEN
+**Current tip:** **M19-223**  
+**Status:** ACTIVE CALCULATION / APERIODIC SIGNED-INVARIANT FRONTIER + BOUNDED-PERIOD ZERO-Q INVARIANT-SECTION/PDE-ADJOINT FRONTIER + FINITE NONZERO-Q RESONANCE FRONTIER / FINAL ROOT-PROOF CERTIFICATION STILL OPEN
 
 \[
 \boxed{\text{GLOBAL 3D NAVIER--STOKES REGULARITY REMAINS UNPROVED.}}
 \]
 
-## 1. Phase policy
+## 1. Current canonical policy
 
-M18 remains frozen as the analysis/audit family. M19 is the active new-analysis/calculation/closure family.
+M18 remains the frozen analysis/audit family. M19 is the active calculation/closure family. Historical modules remain authoritative for detailed derivations; this file records the current theorem obligations and the latest valid reductions.
 
-\[
-\boxed{\text{M18 certified analysis}\Longrightarrow\text{M19 new analysis + calculation}\Longrightarrow\text{closure or explicit theorem frontier}.}
-\]
+## 2. Aperiodic recurrent hard frontier
 
-Historical M19 modules remain authoritative for their detailed calculations and corrections. This file is the current compact canonical entry point.
-
-## 2. Retained recurrent hard-cocycle structure
-
-On the certified smooth passive-spectator critical corridor,
-
-\[
-\frac12\frac d{ds}\|\eta\|_2^2
-+\nu\|\nabla\eta\|_2^2
-+\frac14\|\eta\|_2^2
-=\mathcal C_U[W].
-\]
-
-Critical-tail coupling is relatively compact with respect to the bare similarity-vorticity generator, so
-
-\[
-\lambda_{ess}\le-\frac14<0.
-\]
-
-Differentiated scattering covariance and uniform hard observability identify a complete finite-dimensional hard bundle. Pulling back a translation-invariant scattering norm makes the observable hard cocycle an exact isometry, so the retained hard dynamics has zero/unit growth and no Jordan-polynomial growth.
-
-The exponential-memory metric of M19-179--180 removes the earlier unknown occupation distortion; its connection term has nonpositive long-time mean.
-
-## 3. Aperiodic recurrent hard frontier retained from M19-182--201
-
-Collective hard-channel estimates force genuine aperiodicity to carry a positive mean palinstrophy floor
+The certified hard-channel machinery forces any genuinely aperiodic recurrent hard survivor to satisfy
 
 \[
 \boxed{
@@ -51,25 +24,13 @@ Collective hard-channel estimates force genuine aperiodicity to carry a positive
 }
 \]
 
-Inside the simultaneous final W1 lane,
+Inside the simultaneous W1 lane,
 
 \[
-K=\|\Omega\|_\infty,
-\qquad
-\Gamma=\sup_R\Gamma_R,
-\qquad
-W=\|U\|_{L^{3,\infty}},
+Z\lesssim K^{1/2}(\Gamma W)^{3/2},
 \]
 
-and M19-191--192 give
-
-\[
-\boxed{
-Z\lesssim K^{1/2}(\Gamma W)^{3/2}.
-}
-\]
-
-The recurrent enstrophy balance then yields
+and the recurrent enstrophy balance gives
 
 \[
 \boxed{
@@ -78,55 +39,43 @@ The recurrent enstrophy balance then yields
 }
 \]
 
-M19-196--200 convert this into positive occupation of finite-high W1 channels, but M19-201 shows that the currently certified unsigned raw-H2/palinstrophy/critical-tail ledgers remain compatible with the physical/ancestral scale discounts.
+M19-196--201 show that this yields real positive-occupation activity but not an unsigned global contradiction because the available physical/ancestral ledgers retain critical scale discounts.
 
-Therefore the live aperiodic theorem remains
+Thus
 
 \[
 \boxed{
 \mathcal T_{aper}^{signed}:
-\text{exclude a genuinely aperiodic compact recurrent hard component carrying the positive mean activity floor.}
+\text{exclude a genuinely aperiodic compact recurrent hard component by a new signed/index/invariant mechanism.}
 }
 \]
 
-A new signed/index/invariant mechanism is still required.
+remains OPEN.
 
-## 4. Finite-dimensional scattering and exact resonance structure — M19-202--204
+## 3. Bounded-period finite-dimensional resonance structure
 
-On the finite-dimensional hard scattering space, q-translation is an orthogonal representation
+On the complete uniformly observable hard bundle, q-translation is a finite-dimensional orthogonal representation
 
 \[
 \rho(h)=e^{hA},
-\qquad A^T=-A.
+\qquad A^T=-A,
 \]
 
-Hence every hard scattering signature has exact finite Bohr spectrum
+so every hard scattering signature has finite Bohr form
+
+\[
+B(q,\omega)=\sum_j e^{i\kappa_jq}b_j(\omega).
+\]
+
+For RDSS log-step \(L\), physical holonomy angle \(\alpha\), angular label \(m\in\mathbb Z\), and Floquet phase \(\vartheta\),
 
 \[
 \boxed{
-B(q,\omega)=\sum_{j=1}^Je^{i\kappa_jq}b_j(\omega),
+\kappa L+\vartheta-m\alpha=2\pi n.
 }
 \]
 
-with no Jordan-polynomial factors.
-
-For RDSS log-step \(L\), holonomy \(Q_*\), Floquet phase \(\vartheta\), and holonomy phase \(\phi\), the exact resonance law is
-
-\[
-\boxed{
-\kappa L+\vartheta-\phi=2\pi n,
-\qquad n\in\mathbb Z.
-}
-\]
-
-M19-214 identifies
-
-\[
-e^{i\phi}=e^{im\alpha},
-\qquad m\in\mathbb Z,
-\]
-
-for physical holonomy angle \(\alpha\). Thus a fixed-moduli kernel obeys
+For a kernel \(\vartheta=0\),
 
 \[
 \boxed{
@@ -134,39 +83,22 @@ for physical holonomy angle \(\alpha\). Thus a fixed-moduli kernel obeys
 }
 \]
 
-## 5. Bounded-period Fredholm reductions — M19-205--217
+M19-211--215 show:
 
-M19-205 conditionally absorbs the long-period branch into aperiodicity, bounded-period unit/kernel degeneracy, or compactness loss once the two main analytic frontiers close.
+- the complete relative return lies in \(SO(N)\);
+- \(+1\) kernel multiplicity has the parity of \(N\);
+- determinant sign and scalar same-vector Melnikov pairing are structurally blind to paired orthogonal crossings;
+- Cayley--Pfaffian gives a signed local detector but not global exclusion;
+- quantitative kernel rigidity is exactly a uniform phase gap;
+- boundary kernel-freeness, endpoint sign, and local transversality do not exclude interior resonance sets.
 
-M19-206 records that current literature removes useful parameter-boundary regimes but does not provide the required general moderate finite-amplitude kernel nondegeneracy theorem.
-
-M19-207--210 show that a nonsymmetry kernel requires a lower joint-activity threshold, but this cannot be converted into the upper smallness needed for contraction on the moderate finite-amplitude corridor.
-
-M19-211--212 reduce the relative return to
-
-\[
-P_{rel}\in SO(N),
-\qquad
-m_+\equiv N\pmod2,
-\]
-
-and show that determinant sign and scalar same-vector Melnikov pairing are blind to the relevant orthogonal unit crossings. The correct first-order crossing object is skew.
-
-M19-213--215 introduce the Cayley--Pfaffian local crossing coordinate and identify quantitative kernel rigidity with a uniform phase gap, while explicit countermodels show that boundary kernel-freeness, Pfaffian sign, or local transversality do not exclude interior resonance sets.
-
-M19-216 gives the compact hard q-generator bound
+M19-216 gives a compact q-generator ceiling
 
 \[
-K_q^*:=\sup_{U\in\mathcal K}\|A_U\|<\infty,
+|\kappa_j|\le K_q^*
 \]
 
-hence
-
-\[
-|\kappa_j|\le K_q^*.
-\]
-
-With \(L\le L^*\) and principal \(|\phi_j|\le\pi\), every kernel resonance satisfies
+and the uniform finite resonance box
 
 \[
 \boxed{
@@ -175,29 +107,32 @@ N_{res}:=\left\lfloor\frac{K_q^*L^*+\pi}{2\pi}\right\rfloor.
 }
 \]
 
-Thus the bounded-period theorem splits as
+Hence
 
 \[
 \boxed{
 \mathcal T_{kernel}^{finite\text{-}amp}
 =
-\mathcal T_{q0}^{lin}
+\mathcal T_{q0}
 \cup
 \mathcal T_{q\ne0}^{fin-res}.
 }
 \]
 
-M19-217 establishes the scope firewall
+## 4. Zero-q scope firewall — M19-217
+
+The zero-q object is a **linearized hard tangent**, not a nonlinear stationary Navier--Stokes tail.
+
+Therefore
 
 \[
 \boxed{
-\text{nonlinear realized stationary-tail rigidity}
+\text{nonlinear stationary-tail rigidity}
 \neq
 \text{zero-q linearized tangent rigidity},
 }
-\]
 
-and likewise
+and
 
 \[
 \boxed{
@@ -207,9 +142,9 @@ and likewise
 }
 \]
 
-## 6. Zero-q local asymptotic NO-GO — M19-218
+## 5. Local asymptotics do not close zero-q — M19-218
 
-A zero-q hard label has leading perturbation
+A zero-q label has leading velocity perturbation
 
 \[
 W_0=r^{-1}b(\omega).
@@ -219,28 +154,22 @@ The critical similarity conveyor satisfies
 
 \[
 \mathcal L_{sim}
-\left[r^{-1}C\left(\log r-\frac\theta2,\omega\right)\right]=0
+\left[r^{-1}C\left(\log r-\frac\theta2,\omega\right)\right]=0,
 \]
 
-for every regular amplitude \(C\). Hence
+so \(W_0\) remains in the resonant \(r^{-1}\) sector.
 
-\[
-\boxed{\mathcal L_{sim}W_0=0.}
-\]
-
-Incompressibility gives only
+Incompressibility gives
 
 \[
 \boxed{
-b_r+\operatorname{div}_{S^2}b_T=0,}
+b_r+\operatorname{div}_{S^2}b_T=0.}
 \]
 
-with zero net radial flux.
-
-All viscous, background-transport, background-deformation, and pressure terms generated by \(W_0\) begin at order \(r^{-3}\). The first correction
+All linearized viscous/background/pressure forcing begins at \(r^{-3}\), while the first correction
 
 \[
-W_1=r^{-3}c(q,\omega)
+W_1=r^{-3}c
 \]
 
 has
@@ -249,29 +178,18 @@ has
 \boxed{\mathcal L_{sim}W_1=-r^{-3}c.}
 \]
 
-Therefore the first subleading similarity coefficient is nonresonant and can absorb the projected linearized forcing. The local leading/first-subleading tail expansion supplies no zero-q kernel exclusion.
+Thus the first subleading forcing is absorbed by a nonresonant correction. Local leading/first-subleading tail expansion supplies no zero-q kernel exclusion.
 
-Permanent conclusion:
+## 6. Exact invariant-section reduction — M19-219
 
-\[
-\boxed{
-\text{one-more-order tail asymptotics}
-\neq
-\mathcal T_{q0}^{lin}.
-}
-\]
-
-## 7. Zero-q invariant-section reduction — M19-219
-
-For
+Let
 
 \[
 B=D\mathscr S_Uv,
-\qquad
-\partial_qB=0,
+\qquad \partial_qB=0.
 \]
 
-differentiated scattering covariance gives
+Differentiated scattering covariance gives
 
 \[
 D\mathscr S_{\sigma_tU}\Phi_t(U)v
@@ -279,214 +197,230 @@ D\mathscr S_{\sigma_tU}\Phi_t(U)v
 =B.
 \]
 
-Uniform hard observability makes the hard vector carrying the label \(B\) unique in each retained fiber. On the compact hull, continuity and finite-dimensional compactness therefore extend the orbit vector to a continuous hard section \(s_B\) satisfying
+Uniform hard observability and the retained continuous compact hard bundle make the vector carrying \(B\) unique in every hull fiber. Hence \(B\) defines a continuous section \(s_B\) satisfying
 
 \[
 \boxed{
 D\mathscr S_Ys_B(Y)=B,
-}
-\]
-
-and
-
-\[
-\boxed{
+\qquad
 \Phi_t(Y)s_B(Y)=s_B(\sigma_tY).
 }
 \]
 
-Thus the zero-q theorem is equivalently a parallel-section rigidity theorem:
+Therefore zero-q rigidity is a finite-dimensional **parallel-section rigidity problem**, not classification of arbitrary linearized solutions.
 
-\[
-\boxed{
-\mathcal T_{q0}^{section}:
-\text{every holonomy-compatible invariant hard section with constant scattering label is an exact symmetry section.}
-}
-\]
+An invariant linear section is not automatically a nonlinear commuting symmetry.
 
-After the complete time/rotation quotient this means \(s_B\equiv0\).
+## 7. Angular holonomy normal form — M19-220
 
-An invariant linear section is not automatically a nonlinear commuting symmetry; an additional invariant-manifold/integrability theorem would be required for that upgrade.
-
-## 8. Zero-q angular holonomy classification — M19-220
-
-For \(\kappa=0\), the exact kernel resonance becomes
+For \(\kappa=0\),
 
 \[
 \boxed{m\alpha\in2\pi\mathbb Z.}
 \]
 
-If
+If \(\alpha/2\pi\notin\mathbb Q\), only \(m=0\) survives and the label is fully axisymmetric about the holonomy axis.
+
+If \(\alpha/2\pi=p/k\), then \(m\in k\mathbb Z\) and only cyclic \(C_k\)-invariance is forced. DSS \((\alpha=0)\) receives no angular reduction from holonomy.
+
+With
 
 \[
-\alpha/2\pi\notin\mathbb Q,
+b_T=\nabla_{S^2}f+\omega\times\nabla_{S^2}g,
 \]
 
-then necessarily
-
-\[
-\boxed{m=0,}
-\]
-
-and the continuous zero-q scattering label is axisymmetric about the holonomy axis.
-
-If
-
-\[
-\alpha/2\pi=p/k,
-\qquad\gcd(p,k)=1,
-\]
-
-then
-
-\[
-\boxed{m\in k\mathbb Z,}
-\]
-
-so the fixed sector is only \(C_k\)-invariant. Ordinary DSS \((\alpha=0)\) receives no angular reduction from holonomy.
-
-For
-
-\[
-b=b_r\omega+b_T,
-\]
-
-write the tangential Hodge decomposition
-
-\[
-b_T=\nabla_{S^2}f+\omega\times\nabla_{S^2}g.
-\]
-
-Then incompressibility is exactly
+incompressibility becomes
 
 \[
 \boxed{b_r=-\Delta_{S^2}f.}
 \]
 
-Thus the ambient zero-q holonomy-fixed divergence-free sector contains many nonzero smooth fields, including axisymmetric ones. Consequently
+This Hodge sector contains many nonzero smooth poloidal and toroidal labels, including axisymmetric examples. Hence q-invariance + holonomy + divergence-free kinematics does not imply vanishing.
+
+## 8. Irrational holonomy gives full axial equivariance — M19-221
+
+For irrational \(\alpha/2\pi\),
+
+\[
+\sigma_{nS}U=R_{\mathbf a}(n\alpha)U
+\]
+
+and the integer holonomy iterates are dense in the axial circle. The compact hull therefore contains the full axial orbit
+
+\[
+R_{\mathbf a}(\beta)U.
+\]
+
+Because the zero-q label \(B\) is axisymmetric and scattering is rotation equivariant, uniqueness of the hard vector carrying \(B\) yields
 
 \[
 \boxed{
-q\text{-invariance}
-+
-\text{holonomy invariance}
-+
-\text{divergence-free kinematics}
-\not\Longrightarrow
-b=0.
+s_B(R_{\mathbf a}(\beta)U)
+=R_{\mathbf a}(\beta)s_B(U).
 }
 \]
 
-The actual problem is the finite-dimensional **realized hard intersection** with this Hodge sector.
+Thus the dangerous section is fully axial-equivariant and inherits the base isotropy. Dense holonomy removes angular phase freedom but does not force the section to vanish.
 
-## 9. Current live analytic theorem complex
+## 9. Natural physical signed pairing fails — M19-222
+
+Let
+
+\[
+\Omega=\nabla\times U,
+\qquad
+\eta=\nabla\times W,
+\qquad
+C=\int\eta\cdot\Omega.
+\]
+
+The exact cross-enstrophy identity is
+
+\[
+\boxed{
+\frac{dC}{ds}
++2\nu\int\nabla\eta:\nabla\Omega
++\frac12C
+=
+2\int\Omega^TS_U\eta
++
+\int\Omega^TS_W\Omega.
+}
+\]
+
+This is exactly the first variation of the ordinary unsigned enstrophy balance. The cross-gradient and strain terms have no fixed sign, and period averaging only removes the total derivative.
+
+Hence
+
+\[
+\boxed{
+\text{linearizing an unsigned energy/enstrophy identity}
+\neq
+\text{creating a signed kernel obstruction}.
+}
+\]
+
+## 10. Canonical metric-adjoint pairing also fails — M19-223
+
+In the invariant hard metric \(G_Y\), define the metric-dual covector
+
+\[
+\ell_Y(w)=G_Y(s_B(Y),w).
+\]
+
+Exact cocycle isometry gives
+
+\[
+\boxed{
+\ell_{\sigma_tY}\circ\Phi_t(Y)=\ell_Y.
+}
+\]
+
+Its self-pairing is only the conserved hard norm
+
+\[
+\boxed{
+\ell_Y(s_B(Y))
+=\|s_B(Y)\|_{G_Y}^2
+=\text{constant}.
+}
+\]
+
+For a parameterized orthogonal return this reproduces
+
+\[
+\ell(\dot F s)=0,
+\]
+
+the skew same-vector no-go of M19-212.
+
+Therefore a useful adjoint obstruction, if one exists, must be selected by genuinely new PDE/current structure rather than by the invariant metric itself.
+
+## 11. Current live theorem complex
 
 ### A. Aperiodic recurrent hard core
 
 \[
-\boxed{
-\mathcal T_{aper}^{signed}
-}
+\boxed{\mathcal T_{aper}^{signed}}
 \]
 
-remains OPEN: the positive mean activity floor must be converted into a signed/index/invariant contradiction.
+remains OPEN.
 
 ### B1. Zero-q bounded-period sector
 
-The previous \(\mathcal T_{q0}^{lin}\) has been sharpened to
+The active target is now
 
 \[
 \boxed{
-\mathcal T_{q0}^{section-ang}:
+\mathcal T_{q0}^{PDE-adj}:
 \begin{array}{l}
-\text{exclude nonzero nonsymmetry invariant hard sections with constant scattering label}\\
-\text{in the holonomy-fixed divergence-free angular Hodge sector.}
+\text{exclude nonzero nonsymmetry parallel hard sections carrying constant q-scattering labels}\\
+\text{inside the holonomy-fixed Hodge sector, using a genuinely PDE-selected rigidity/adjoint mechanism.}
 \end{array}
 }
 \]
 
-This is the immediate active bounded-period calculation target.
+For irrational holonomy, the section is additionally fully axial-equivariant.
+
+The following shortcuts are exhausted: nonlinear stationary-tail import, background q-speed import, first local asymptotic correction, kinematic Hodge constraints, dense-holonomy equivariance alone, cross-enstrophy, and the kernel-induced metric adjoint.
 
 ### B2. Nonzero-q bounded-period sector
 
 \[
 \boxed{
 \mathcal T_{q\ne0}^{fin-res}:
-\text{exclude the finitely indexed nonsymmetry resonant blocks with }0<|\kappa_j|\le K_q^*,\ |n|\le N_{res}.
+\text{exclude finitely indexed nonsymmetry resonance blocks with }0<|\kappa_j|\le K_q^*,\ |n|\le N_{res}.
 }
 \]
 
 ### C. Long period
 
-Conditionally merges into A/B or compactness loss by M19-205; it is not counted as an independent final theorem if A and B close.
+Conditionally merges into A/B or compactness loss by M19-205.
 
-## 10. Final proof-chain certification remains open
+## 12. Final proof-chain certification remains open
 
-Even if the active analytic frontiers close, global regularity still requires:
+Even if A and B close, global regularity still requires:
 
 1. arbitrary-singularity entry certification (`ROOT-CERT`);
-2. historical branch completeness, including the non-CE-H roots `CP-E`, `CP-S`, `CE-T`, and `Migration`;
+2. historical branch completeness, including `CP-E`, `CP-S`, `CE-T`, `Migration`;
 3. parent-to-late-branch alignment/nonreuse checks;
 4. full beginning-to-end independent audit.
 
-## 11. Permanent firewalls
+## 13. Permanent firewalls
 
 \[
 \boxed{\text{mean activity floor}\neq\text{finite-energy contradiction}},
 \]
-
-\[
-\boxed{\text{large supremum}\neq\text{positive occupation}},
-\]
-
 \[
 \boxed{\text{lower activity floor}\neq\text{upper smallness for contraction}},
 \]
-
 \[
-\boxed{\text{finite resonance structure}\neq\text{kernel nonexistence}},
+\boxed{\text{finite resonance}\neq\text{kernel nonexistence}},
 \]
-
 \[
-\boxed{\text{determinant sign}\neq\text{orthogonal unit-kernel crossing index}},
+\boxed{\text{determinant/Pfaffian crossing detection}\neq\text{global resonance exclusion}},
 \]
-
 \[
-\boxed{\text{Pfaffian crossing detector}\neq\text{global resonance exclusion}},
+\boxed{\text{nonlinear stationary-tail rigidity}\neq\text{zero-q linearized rigidity}},
 \]
-
 \[
-\boxed{\text{kernel-free parameter boundary}\neq\text{kernel-free parameter interior}},
+\boxed{\text{local tail asymptotic solvability}\neq\text{global hard-mode realizability}},
 \]
-
-\[
-\boxed{\text{transversal/codimension-one resonance}\neq\text{resonance exclusion}},
-\]
-
-\[
-\boxed{\text{nonlinear stationary-tail rigidity}\neq\text{zero-q linearized tangent rigidity}},
-\]
-
-\[
-\boxed{\text{background q-speed floor}\neq\text{tangent q-frequency gap}},
-\]
-
-\[
-\boxed{\text{local tail asymptotic solvability}\neq\text{global zero-q hard-mode realizability}},
-\]
-
 \[
 \boxed{\text{invariant linear section}\neq\text{nonlinear commuting symmetry}},
 \]
-
 \[
-\boxed{\text{axisymmetric zero-q tangent}\neq\text{axisymmetric Navier--Stokes background}},
+\boxed{\text{axisymmetric tangent}\neq\text{axisymmetric background}},
 \]
-
 \[
-\boxed{\text{relative periodicity}\neq\text{relative-periodic nonexistence}},
+\boxed{\text{dense holonomy equivariance}\neq\text{section vanishing}},
 \]
-
+\[
+\boxed{\text{first variation of unsigned balance}\neq\text{signed obstruction}},
+\]
+\[
+\boxed{\text{canonical metric adjoint}\neq\text{kernel-exclusion adjoint}},
+\]
 \[
 \boxed{\text{root-class merger}\neq\text{analytic closure}}.
 \]
@@ -494,5 +428,5 @@ Even if the active analytic frontiers close, global regularity still requires:
 ---
 
 \[
-\boxed{\text{M19 ACTIVE TIP = M19-220.}}
+\boxed{\text{M19 ACTIVE TIP = M19-223.}}
 \]
