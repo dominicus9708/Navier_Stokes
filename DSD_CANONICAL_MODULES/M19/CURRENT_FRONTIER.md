@@ -1,8 +1,8 @@
 # M19 Current Frontier
 
 **Date:** 2026-09-14  
-**Current tip:** **M19-212**  
-**Status:** ACTIVE CALCULATION / APERIODIC MEAN-ACTIVITY FRONTIER + FINITE-AMPLITUDE RSS/RDSS ORTHOGONAL-KERNEL FRONTIER / FINAL ROOT-PROOF CERTIFICATION STILL OPEN
+**Current tip:** **M19-217**  
+**Status:** ACTIVE CALCULATION / APERIODIC MEAN-ACTIVITY FRONTIER + FINITE-AMPLITUDE RSS/RDSS PHASE-GAP AND ZERO-Q LINEARIZED-KERNEL FRONTIER / FINAL ROOT-PROOF CERTIFICATION STILL OPEN
 
 \[
 \boxed{\text{GLOBAL 3D NAVIER--STOKES REGULARITY REMAINS UNPROVED.}}
@@ -368,7 +368,116 @@ The coefficient \(\beta\ne0\) gives only a transversal isolated crossing, not ke
 
 up to real-block orientation convention.
 
-Thus scalar activity bounds, determinant sign, and scalar same-vector Melnikov pairing are all insufficient. The next bounded-period mechanism must use a global spectral-angle/winding obstruction, a nontrivial skew crossing two-form coupled to a global argument, or a profile-specific signed PDE identity.
+Thus scalar activity bounds, determinant sign, and scalar same-vector Melnikov pairing are all insufficient.
+
+## 12B. Cayley–Pfaffian and phase-gap normal form — M19-213--215
+
+On an oriented even-dimensional quotient and in a \(-1\)-free chart define
+
+\[
+\mathcal C(P)=(I-P)(I+P)^{-1}.
+\]
+
+Then \(\mathcal C(P)\) is skew and
+
+\[
+\ker\mathcal C(P)=\ker(I-P).
+\]
+
+The Cayley Pfaffian
+
+\[
+\mathfrak p(P)=\operatorname{Pf}\mathcal C(P)
+\]
+
+satisfies
+
+\[
+\boxed{
+\det(I-P)=\det(I+P)\,\mathfrak p(P)^2.
+}
+\]
+
+Thus the determinant-sign no-go occurs because the determinant squares the signed local crossing coordinate. For a two-dimensional rotation block,
+
+\[
+\mathfrak p=\tan\frac\Theta2.
+\]
+
+M19-214 identifies the RDSS relative phase as
+
+\[
+\Theta=\kappa L-m\alpha
+\]
+
+(up to the fixed representation convention), and a kernel is exactly
+
+\[
+\Theta\in2\pi\mathbb Z.
+\]
+
+The singular value of \(I-R(\Theta)\) is
+
+\[
+2\left|\sin\frac\Theta2\right|,
+\]
+
+so quantitative kernel rigidity is exactly a uniform phase-gap theorem.
+
+However M19-215 gives explicit one- and two-parameter orthogonal countermodels showing that kernel-free parameter boundaries, same endpoint Pfaffian sign, and local transversality do not exclude paired or closed interior resonance sets. The missing ingredient must globally control the phase or zero set, not merely detect crossings.
+
+## 12C. Uniform finite resonance box and zero-q split — M19-216--217
+
+On the compact moderate hard bundle the q-translation generator has a uniform norm ceiling
+
+\[
+K_q^*:=\sup_{U\in\mathcal K}\|A_U\|<\infty,
+\]
+
+so every hard q-frequency satisfies
+
+\[
+|\kappa_j|\le K_q^*.
+\]
+
+With \(L\le L^*\) and principal holonomy phase \(|\phi_j|\le\pi\), a kernel resonance
+
+\[
+\kappa_jL-\phi_j=2\pi n
+\]
+
+must satisfy
+
+\[
+\boxed{
+|n|\le
+N_{res}:=\left\lfloor\frac{K_q^*L^*+\pi}{2\pi}\right\rfloor.
+}
+\]
+
+Thus no surviving bounded-period kernel sequence can escape through arbitrarily high radial resonance index while the compact hard-bundle assumptions remain valid.
+
+The residual theorem obligations split into
+
+\[
+\boxed{
+\mathcal T_{kernel}^{finite\text{-}amp}
+=
+\mathcal T_{q0}^{lin}
+\cup
+\mathcal T_{q\ne0}^{fin-res}.
+}
+\]
+
+Here \(\mathcal T_{q0}^{lin}\) asks whether every nonsymmetry hard tangent whose scattering signature is q-invariant and holonomy-fixed must vanish. M19-217 audits two tempting shortcuts and rejects them: M5-268 closes a **nonlinear realized stationary-tail** branch, not this linearized tangent problem; M19-146 gives a positive q-speed floor for the **background scattering datum**, not for every hard tangent. Therefore the zero-q sector requires a new linearized scattering/unique-continuation/symmetry-rigidity theorem.
+
+The nonzero-q sector consists of finitely indexed resonant blocks with
+
+\[
+0<|\kappa_j|\le K_q^*,
+\qquad
+|n|\le N_{res}.
+\]
 
 ## 13. Current live analytic theorem complex
 
@@ -393,7 +502,22 @@ Current unsigned scale-discounted ledgers do not close this.
 }
 \]
 
-This is finite-dimensional and finite-resonance. M19-211--212 show that the complete symmetry quotient must first be parity-correct and that the remaining unit resonances are even-dimensional orthogonal crossings invisible to determinant sign and scalar self-pairing.
+This has now been reduced to two explicit subtheorems:
+
+\[
+\boxed{
+\mathcal T_{q0}^{lin}:E_{q0}^{nsym}=\{0\},
+}
+\]
+
+and
+
+\[
+\boxed{
+\mathcal T_{q\ne0}^{fin-res}:
+\text{exclude finitely indexed nonzero-q nonsymmetry resonant blocks.}
+}
+\]
 
 ### C. Long period
 
@@ -430,7 +554,23 @@ Even if A and B close, global regularity still requires:
 \]
 
 \[
+\boxed{\text{Pfaffian crossing detector}\neq\text{global resonance exclusion}},
+\]
+
+\[
+\boxed{\text{kernel-free parameter boundary}\neq\text{kernel-free parameter interior}},
+\]
+
+\[
 \boxed{\text{transversal/codimension-one resonance}\neq\text{resonance exclusion}},
+\]
+
+\[
+\boxed{\text{nonlinear stationary-tail rigidity}\neq\text{zero-q linearized tangent rigidity}},
+\]
+
+\[
+\boxed{\text{background q-speed floor}\neq\text{tangent q-frequency gap}},
 \]
 
 \[
@@ -444,5 +584,5 @@ Even if A and B close, global regularity still requires:
 ---
 
 \[
-\boxed{\text{M19 ACTIVE TIP = M19-212.}}
+\boxed{\text{M19 ACTIVE TIP = M19-217.}}
 \]
