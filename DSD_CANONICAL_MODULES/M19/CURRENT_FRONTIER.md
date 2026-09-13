@@ -1,8 +1,8 @@
 # M19 Current Frontier
 
 **Date:** 2026-09-14  
-**Current tip:** **M19-253**  
-**Status:** ACTIVE CALCULATION / WHOLE-SPACE TRANSPARENT MOVING-SPHERE + GALILEAN-CYLINDER FRONTIER / APERIODIC SIGNED FRONTIER OPEN / FINAL ROOT-PROOF CERTIFICATION OPEN
+**Current tip:** **M19-254**  
+**Status:** ACTIVE CALCULATION / WHOLE-SPACE TRANSPARENT MOVING-SPHERE + GALILEAN CRITICAL-PAYER FRONTIER / APERIODIC SIGNED FRONTIER OPEN / FINAL ROOT-PROOF CERTIFICATION OPEN
 
 \[
 \boxed{\text{GLOBAL 3D NAVIER--STOKES REGULARITY REMAINS UNPROVED.}}
@@ -10,29 +10,21 @@
 
 ## 1. Canonical policy
 
-M18 remains the frozen audit/reduction family. M19 is the active calculation/closure family. Detailed derivations remain in the numbered modules. This frontier records only the current theorem obligations, reclassifications, and permanent scope firewalls.
+M18 remains the frozen audit/reduction family. M19 is the active calculation/closure family. Detailed derivations remain in numbered modules; this file records the current obligations and scope firewalls.
 
 ## 2. Global proof tree still open
 
-The repository-wide singularity reduction still requires final certification of
+The repository-wide singularity reduction and `ROOT-CERT` are not finished. Historical non-CE-H branches
 
 \[
-\text{hypothetical singularity}
-\Longrightarrow
-R_{remote}\lor R_{critical}\lor R_{AC}\lor\text{compact hard survivor},
+CP\!-\!E,\quad CP\!-\!S,\quad CE\!-\!T,\quad Migration
 \]
 
-followed by the historical branches
+remain unresolved, as do parent-to-late-branch alignment/nonreuse checks and the final beginning-to-end independent audit.
 
-\[
-CP\!-\!E\lor CP\!-\!S\lor CE\!-\!T\lor Migration\lor CE\!-\!H.
-\]
+## 3. Aperiodic frontier
 
-`ROOT-CERT`, the four non-CE-H roots, genealogy/nonreuse checks, and a beginning-to-end independent audit remain OPEN.
-
-## 3. Aperiodic recurrent hard frontier
-
-The certified recurrent-hard machinery still forces a positive simultaneous W1 severity mean, but M19-196--201 do not convert it into a signed/global contradiction. Therefore
+M19-196--201 force positive simultaneous W1 severity mean on the retained recurrent-hard lane but do not produce a signed/global contradiction. Therefore
 
 \[
 \boxed{\mathcal T_{aper}^{signed}}
@@ -42,34 +34,17 @@ remains OPEN.
 
 ## 4. Historical bounded-period cavity branch — M19-211--252
 
-M19-211--230 reduced finite hard resonance and physical-adjoint realization to a compact finite-cavity Fredholm problem. M19-231--252 then analyzed the no-slip cavity in detail: core/escape, boundary vorticity concentration, shear payer, \(\nu/R\) layer, macroscopic rigidity, Gaussian pressure coupling, passive boundary impedance, sublinear-shell rigidity, and frozen toroidal/poloidal unit-mode gaps.
+M19-211--230 reduced finite hard resonance/adjoint realization to a compact finite-cavity Fredholm problem. M19-231--252 analyzed the imposed no-slip cavity: core/escape, boundary-vorticity localization, shear payer, \(\nu/R\) layer, macroscopic rigidity, Gaussian pressure coupling, passive wall impedance, sublinear shell rigidity, and frozen toroidal/poloidal unit-mode gaps.
 
-### 4.1 Reclassification by M19-253
+M19-253 corrected the whole-space interpretation:
 
-Clay (A) is a whole-space problem on \(\mathbb R^3\). The spectator sphere is not a physical wall. Therefore M19-231--252 are retained as correct auxiliary cavity diagnostics under their stated hypotheses, but the no-slip-specific conclusions are no longer the canonical whole-space frontier.
+\[
+\boxed{\text{no-slip cavity exclusion}\not\Rightarrow\text{whole-space transparent-sphere exclusion}.}
+\]
 
-In particular, the following do **not** transfer directly to a nonmaterial observation sphere:
+The numbered cavity modules are retained as valid auxiliary diagnostics inside their stated boundary hypotheses, but wall-specific payers/gaps are not the canonical Clay-(A) frontier.
 
-- cavity unit-mode core/escape spectral dichotomy as a whole-space theorem;
-- exact cavity normalization currency;
-- wallward vorticity localization;
-- boundary shear payer;
-- \(\nu/R\) no-slip layer;
-- zero-normal-trace H(div) closure;
-- zero-trace radial Hardy use;
-- passive no-slip impedance;
-- pressure-supported shell normal forms tied to the wall;
-- frozen no-slip half-space determinant/high-frequency gap.
-
-The following remain potentially reusable after whole-space/cutoff rederivation:
-
-- bulk scaling/curl ideas from M19-238;
-- operator spectral information from M19-241 after domain audit;
-- weighted energy bookkeeping from M19-242 with exact moving-window fluxes;
-- exact pressure identities from M19-243;
-- critical-background asymptotics from M19-244.
-
-No numbered module is deleted or retracted inside its original assumptions.
+Potentially portable after rederivation are the bulk scaling/curl ideas, weighted energy bookkeeping with the correct fluxes, exact pressure identities, and critical-background asymptotics.
 
 ## 5. M19-253 — transparent moving observation sphere
 
@@ -80,7 +55,7 @@ The active geometric object is
 \qquad S_R(t)=\partial B_R(X(t)),
 \]
 
-with fixed radius \(R\), boundary velocity \(\dot X(t)\), and **no boundary condition** imposed on \(u\).
+with fixed radius \(R\), boundary velocity \(\dot X\), and no wall boundary condition.
 
 For \(e=|u|^2/2\),
 
@@ -94,140 +69,162 @@ For \(e=|u|^2/2\),
 }
 \]
 
-Thus the sphere records real advective, pressure, and viscous exchange. It creates no wall payer.
-
-The net relative volume flux is exactly
+The sphere creates no wall dissipation. It records actual advective, pressure, and viscous exchange. Net relative volume flux is zero,
 
 \[
 \boxed{\int_{S_R(t)}(u-\dot X)\cdot n\,dS=0,}
 \]
 
-while local inward/outward flux generally remains nonzero.
+while local inward/outward flux need not vanish.
 
-For singular-scale work the canonical primitive is a smooth moving cutoff rather than a sharp trace:
+At hypothetical singular scales the canonical primitive is a smooth moving cutoff or a Galilean parabolic cylinder, not a sharp trace.
 
-\[
-\boxed{
-\frac d{dt}\int e\chi_X
-+\nu\int|\nabla u|^2\chi_X
-=
-\int[e(u-\dot X)+pu]\cdot\nabla\chi_X
-+\nu\int e\Delta\chi_X.
-}
-\]
+## 6. M19-253 — exact Galilean epsilon floor
 
-For suitable weak solutions the corresponding local-energy inequality is used.
-
-## 6. Exact Galilean-cylinder reformulation
-
-For a spacetime point \(z_0=(x_0,t_0)\), constant tracking velocity \(V\), and scale \(r\), define
+For constant velocity \(V\), define
 
 \[
 Q_r^V(z_0)=
-\{(x,t):t_0-r^2<t<t_0,
-\ |x-x_0-V(t-t_0)|<r\}.
+\{t_0-r^2<t<t_0,
+\ |x-x_0-V(t-t_0)|<r\},
 \]
-
-Set
 
 \[
 C_V(r)=r^{-2}\int_{Q_r^V}|u-V|^3,
+\qquad
+D_V(r)=r^{-2}\int_{Q_r^V}|p-(p)_{B_r^V(t)}|^{3/2}.
 \]
 
-\[
-D_V(r)=r^{-2}\int_{Q_r^V}
-|p-(p)_{B_r^V(t)}|^{3/2}.
-\]
-
-Constant Galilean transformation maps \(Q_r^V\) to a standard cylinder and preserves the Navier--Stokes system and regular/singular status. Standard one-scale epsilon regularity therefore yields, by contraposition:
+Standard one-scale epsilon regularity plus exact Galilean covariance gives, by contraposition,
 
 \[
 \boxed{
 \mathcal T_{GMS}^{\varepsilon}:
 \quad z_0\text{ singular}
 \Longrightarrow
-C_V(r)+D_V(r)\ge\varepsilon_*
+\forall V,\ \forall r\ll1,
+\quad C_V(r)+D_V(r)\ge\varepsilon_*.
 }
 \]
 
-for every constant \(V\) and every sufficiently small admissible \(r\). Equivalently,
+Equivalently,
 
 \[
-\boxed{
-\inf_{V\in\mathbb R^3}[C_V(r)+D_V(r)]\ge\varepsilon_*.
-}
+\boxed{\inf_{V\in\mathbb R^3}[C_V(r)+D_V(r)]\ge\varepsilon_* .}
 \]
 
 This is an inherited reformulation of standard epsilon regularity, not a new epsilon-regularity theorem.
 
-## 7. New active whole-space gate
+Time-dependent accelerated tracking is separate: \(V(t)=\dot X(t)\) produces the pressure correction \(\dot V(t)\cdot y\).
 
-The required new theorem is
+## 7. M19-254 — exact critical payer and unweighted NO-GO
+
+Finite energy gives the standard whole-space currencies
+
+\[
+u\in L_t^\infty L_x^2\cap L_t^2\dot H_x^1,
+\qquad
+u\in L_{x,t}^{10/3},
+\qquad
+p\in L_{x,t}^{5/3}.
+\]
+
+From the epsilon floor and Hölder, for every fixed constant \(V\),
 
 \[
 \boxed{
-\mathcal T_{GMS}^{select}:
-\text{every hypothetical singularity produces }r_j\downarrow0,\ V_j
-\text{ with }
-C_{V_j}(r_j)+D_{V_j}(r_j)<\varepsilon_*.
+F_V(r):=
+\int_{Q_r^V}
+\left(|u-V|^{10/3}+|p|^{5/3}\right)
+\ge c\varepsilon_*^{10/9}r^{5/3}.
 }
 \]
 
-If proved, it contradicts \(\mathcal T_{GMS}^{\varepsilon}\) immediately.
-
-At present,
+Thus
 
 \[
-\boxed{\mathcal T_{GMS}^{select}\text{ is OPEN}.}
+\boxed{H_V(r):=r^{-5/3}F_V(r)\ge c\varepsilon_*^{10/9}.}
 \]
 
-The next calculation must therefore use genuinely whole-space, scale-critical DSD ledgers to determine whether maintaining
+The physical cost \(r^{5/3}\) is geometrically summable on dyadic scales, and the cylinders are nested. Consequently ordinary unweighted \(L^{10/3}+L^{5/3}\) integrability does not contradict the singularity floor. For invoking the global finite-energy integrability it is enough to take the permitted frame \(V=0\).
+
+This is the M19-254 NO-GO:
 
 \[
-\inf_V(C_V+D_V)\ge\varepsilon_*
+\boxed{
+\text{unweighted finite spacetime integrability}
+\not\Rightarrow
+\mathcal T_{GMS}^{select}.}
 \]
 
-at every small scale forces an incompatible payer.
+## 8. M19-254 — logarithmically divergent critical Morrey payer
 
-## 8. Moving-center acceleration firewall
-
-For time-dependent \(V(t)=\dot X(t)\), the translated velocity
+Because the normalized floor holds at every sufficiently small scale,
 
 \[
-v(y,t)=u(y+X(t),t)-V(t)
+\int_0^{r_0}H_V(r)\frac{dr}{r}=\infty.
 \]
 
-satisfies standard Navier--Stokes only after the pressure correction
+With the backward parabolic distance to the Galilean centerline
 
 \[
-q(y,t)=p(y+X(t),t)+\dot V(t)\cdot y.
+\rho_V(x,t)=
+\max\left(|x-x_0-V(t-t_0)|,\sqrt{t_0-t}\right),
 \]
 
-Therefore constant Galilean cylinders are the rigorous first primitive; accelerated tracking is a separate extension requiring pressure audit.
-
-## 9. Small regular celestial-sphere geometry
-
-If \(\dot X=u(X,t)\) and the solution is smooth,
+Tonelli gives the exact kernel identity
 
 \[
-[u(X+R\omega)-u(X)]\cdot\omega
-=R\,\omega^TS_u(X)\omega+O(R^2).
+\int_0^{r_0}r^{-5/3}F_V(r)\frac{dr}{r}
+=
+\frac35\int_{Q_{r_0}^V}
+\left(|u-V|^{10/3}+|p|^{5/3}\right)
+\left(\rho_V^{-5/3}-r_0^{-5/3}\right)dxdt.
 \]
 
-Moreover,
+Therefore every genuine singular point must satisfy, for every fixed constant \(V\),
 
 \[
-\int_{S^2}\omega^TS_u\omega\,d\omega
-=\frac{4\pi}{3}\operatorname{tr}S_u=0.
+\boxed{
+\mathcal P_{GMS}^{log}:
+\quad
+\int_{Q_{r_0}^V(z_0)}
+\frac{|u-V|^{10/3}+|p|^{5/3}}
+{\rho_V^{5/3}}\,dxdt
+=\infty.
+}
 \]
 
-Thus the leading relative radial flow consists of strain-controlled inward/outward lobes with zero spherical mean. This is kinematic geometry, not a regularity theorem.
+This is scale invariant and is the first explicitly non-summable whole-space payer extracted from the transparent moving-sphere route.
 
-## 10. Permanent firewalls added by M19-253
+## 9. New active theorem target
+
+The previous selection target
 
 \[
-\boxed{\text{no-slip cavity exclusion}\neq\text{whole-space transparent-sphere exclusion}},
+\mathcal T_{GMS}^{select}
 \]
+
+is sharpened to a weighted target:
+
+\[
+\boxed{
+\mathcal T_{GMS}^{weight}:
+\text{existing certified whole-space DSD ledgers force }
+\mathcal P_{GMS}^{log}<\infty
+\text{ for at least one constant }V.
+}
+\]
+
+If this is proved for a hypothetical singular point, it contradicts M19-254 immediately. At present
+
+\[
+\boxed{\mathcal T_{GMS}^{weight}\text{ is OPEN}.}
+\]
+
+The next calculation is to compare the M17/M19 whole-space ancestry weights and dissipation/palinstrophy ledgers directly with the parabolic kernel \(\rho_V^{-5/3}\).
+
+## 10. Permanent firewalls added by M19-253--254
 
 \[
 \boxed{\text{sharp moving-sphere identity}\neq\text{singular-scale validity without trace control}},
@@ -242,17 +239,27 @@ Thus the leading relative radial flow consists of strain-controlled inward/outwa
 \]
 
 \[
-\boxed{\mathcal T_{GMS}^{\varepsilon}\neq\mathcal T_{GMS}^{select}}.
+\boxed{\text{positive scale-invariant epsilon floor}\neq\text{divergent unweighted physical cost}},
 \]
 
-Previous firewalls through M19-252 remain valid inside the hypotheses of the corresponding numbered modules.
+\[
+\boxed{\text{nested-scale lower bounds}\neq\text{disjoint-annulus lower bounds}},
+\]
 
-## 11. Live theorem complex after M19-253
+\[
+\boxed{\text{even natural disjoint }r^{5/3}\text{ payers}\neq\text{contradiction with finite unweighted spacetime norm}},
+\]
+
+\[
+\boxed{\text{unweighted integrability}\neq\text{finiteness of the }\rho_V^{-5/3}\text{ critical weighted integral}}.
+\]
+
+## 11. Live theorem complex
 
 Whole-space moving-observation branch:
 
 \[
-\boxed{\mathcal T_{GMS}^{select}}
+\boxed{\mathcal T_{GMS}^{weight}}
 \]
 
 OPEN.
@@ -265,14 +272,4 @@ Aperiodic branch:
 
 OPEN.
 
-Historical cavity/Fredholm branch remains available as an auxiliary comparison/diagnostic branch, not as an automatic substitute for whole-space transparent matching.
-
-## 12. Next calculation
-
-1. Re-express the certified whole-space ancestry, energy, enstrophy, palinstrophy, and low-frequency ledgers on \(Q_r^V\) or smooth moving cutoffs.
-2. Minimize the critical cost over \(V\) without assuming it becomes small.
-3. If the epsilon floor persists, classify the scale-to-scale payer needed to sustain it.
-4. Test that payer against the previously certified summability/ancestry budgets.
-5. Only if an actual contradiction is obtained promote it toward `ROOT-CERT`; otherwise record the surviving payer as the next OPEN branch.
-
-Global regularity remains unproved.
+Historical cavity/Fredholm branch remains an auxiliary comparison branch. Global regularity remains unproved.
