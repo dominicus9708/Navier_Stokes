@@ -1,8 +1,8 @@
 # M19 Current Frontier
 
-**Date:** 2026-09-13  
-**Current tip:** **M19-193**  
-**Status:** ACTIVE CALCULATION / FINITE-HIGH W1 SEVERITY APERIODIC FRONTIER + RELATIVE-PERIODIC HARD CORE / FINAL ROOT-PROOF CERTIFICATION STILL OPEN
+**Date:** 2026-09-14  
+**Current tip:** **M19-210**  
+**Status:** ACTIVE CALCULATION / APERIODIC MEAN-ACTIVITY FRONTIER + FINITE-AMPLITUDE RSS/RDSS FREDHOLM FRONTIER / FINAL ROOT-PROOF CERTIFICATION STILL OPEN
 
 \[
 \boxed{\text{GLOBAL 3D NAVIER--STOKES REGULARITY REMAINS UNPROVED.}}
@@ -10,15 +10,15 @@
 
 ## 1. Phase policy
 
-M18 remains frozen as the analysis/audit family. M19 is the active calculation/closure family.
+M18 remains frozen as the analysis/audit family. M19 is the active new-analysis/calculation/closure family.
 
 \[
 \boxed{\text{M18 certified analysis}\Longrightarrow\text{M19 new analysis + calculation}\Longrightarrow\text{closure or explicit theorem frontier}.}
 \]
 
-## 2. Retained recurrent hard-cocycle reduction
+## 2. Retained recurrent hard-cocycle structure
 
-On the certified smooth passive-spectator critical corridor, linearized vorticity satisfies
+On the certified smooth passive-spectator critical corridor,
 
 \[
 \frac12\frac d{ds}\|\eta\|_2^2
@@ -27,406 +27,350 @@ On the certified smooth passive-spectator critical corridor, linearized vorticit
 =\mathcal C_U[W].
 \]
 
-The tail coupling is relatively compact with respect to the bare similarity-vorticity generator, so
+Critical-tail coupling is relatively compact with respect to the bare similarity-vorticity generator, so
 
 \[
 \lambda_{ess}\le-\frac14<0.
 \]
 
-Differentiated scattering covariance and uniform hard observability exclude positive hard Lyapunov growth. The remaining complete hard dynamics is finite-dimensional and zero/unit-growth after exact time/rotation symmetry bookkeeping.
+Differentiated scattering covariance and uniform hard observability remove positive hard Lyapunov exponents. The complete hard dynamics is finite-dimensional and zero/unit-growth after exact time/rotation bookkeeping.
 
-For a recurrent hard family,
+The exponential-memory metric of M19-179--180 removes the previous unknown occupation distortion; its connection term has nonpositive long-time mean.
 
-\[
-\langle T_N\rangle
-=\nu\langle P_N\rangle+\frac14\langle Z_N\rangle.
-\]
+## 3. Hard-dimension activity floor retained from M19-182--190
 
-Collective local and nonlocal compensation are sublinear in family dimension.
-
-## 3. Exponential-memory metric removes occupation distortion — M19-180--181
-
-Define
+Collective Lieb--Thirring/HLS estimates make local and nonlocal compensation sublinear in the number of observable hard channels. Genuine aperiodicity requires at least five exact observable channels:
 
 \[
-G_\lambda(s)=\lambda\int_0^\infty e^{-\lambda r}H(s-r)\,dr,
-\qquad
-G_\lambda'=\lambda(H-G_\lambda),
+M\ge2\text{ extra}+2\text{ rotation}+1\text{ time}=5,
 \]
 
-and
+and generically \(M\ge6\).
 
-\[
-X_\lambda=G_\lambda^{-1/2}HG_\lambda^{-1/2}.
-\]
-
-Then
-
-\[
-\frac d{ds}\log\det G_\lambda
-=\lambda(\operatorname{tr}X_\lambda-N),
-\]
-
-so on a recurrent component
-
-\[
-\langle\operatorname{tr}X_\lambda\rangle=N.
-\]
-
-The moving-metric connection term
-
-\[
-R_\lambda=\frac\lambda2\operatorname{tr}(X_\lambda-X_\lambda^2)
-\]
-
-has
-
-\[
-\boxed{\langle R_\lambda\rangle\le0.}
-\]
-
-Therefore the provisional `lambda/8` loss disappears and
-
-\[
-\nu\langle P_\lambda\rangle+\frac14N
-\le\langle T_\lambda\rangle.
-\]
-
-The Bessel distortion is
-
-\[
-\kappa_\lambda=1+\frac{L_+}{\lambda},
-\]
-
-and since there is no positive averaged connection penalty, one may take
-
-\[
-\lambda\to\infty,
-\qquad
-\kappa_\lambda\downarrow1.
-\]
-
-Thus the previous unknown occupation constant is removed.
-
-## 4. Mean-activity dimension criterion — M19-182--183
-
-For `3/2<a<3`, let
-
-\[
-q(a)=\frac{3-a}{2a},
-\qquad
-d(a)=\frac43-\frac1a<1.
-\]
-
-Define recurrent mean coefficients
-
-\[
-\mathfrak A
-=C_{LT}^{3/5}\left\langle\|S_U\|_{5/2}^{5/2}\right\rangle^{2/5},
-\]
-
-\[
-\mathfrak B_a
-=C_a\left\langle
-\|\nabla\Omega\|_a^{1/(1-q(a))}
-\right\rangle^{1-q(a)}.
-\]
-
-For total observable hard-channel count `M`,
+This yields a positive mean-palinstrophy threshold
 
 \[
 \boxed{
-\frac14+\nu x
+\overline P_U:=\left\langle\|\nabla\Omega\|_2^2\right\rangle
+\ge\mathcal P_*>0
+}
+\]
+
+for any genuinely aperiodic recurrent hard survivor.
+
+This invariant mean-activity floor is the primary aperiodic frontier.
+
+## 4. W1 enstrophy redundancy and optimized pointwise ceiling — M19-191--192
+
+Inside the simultaneous final W1 lane define instantaneous
+
+\[
+K(s)=\|\Omega(s)\|_\infty,
+\qquad
+\Gamma(s)=\sup_R\Gamma_R(s),
+\qquad
+W(s)=\|U(s)\|_{L^{3,\infty}}.
+\]
+
+A core/tail split at arbitrary radius \(R_0\) gives
+
+\[
+Z(s)\lesssim K(s)^2R_0^3+\Gamma(s)^2W(s)^2R_0^{-1}.
+\]
+
+Optimizing in \(R_0\),
+
+\[
+\boxed{
+Z(s)\lesssim K(s)^{1/2}[\Gamma(s)W(s)]^{3/2}.
+}
+\]
+
+Therefore bounded normalized enstrophy is internally redundant once Type-I amplitude, shell frequency, and weak-L3 bounds are simultaneously available. This does **not** remove the upstream Z-root because historical routes to those W1 conditions can themselves use bounded-Z information.
+
+## 5. Authoritative correction of finite-high W1 severity — M19-194--195
+
+Finite-high splitting must use intrinsic least ceilings
+
+\[
+K^\sharp=\sup_sK(s),
+\qquad
+\Gamma^\sharp=\sup_s\Gamma(s),
+\qquad
+W^\sharp=\sup_sW(s),
+\]
+
+not arbitrary chosen upper-bound constants.
+
+The coarse supremum severity
+
+\[
+\Xi_{W1}^\sharp
+=\frac{K^\sharp(\Gamma^\sharp W^\sharp)^3}{\nu^3}
+\]
+
+is only a diagnostic corollary. A large supremum can be caused by rare states and does not itself create a persistent payer.
+
+Permanent firewall:
+
+\[
+\boxed{\text{large intrinsic supremum}\neq\text{positive invariant-mean activity}.}
+\]
+
+## 6. Positive mean joint W1 severity and occupation trichotomy — M19-199--200
+
+The recurrent enstrophy balance and the optimized pointwise W1 ceiling give
+
+\[
+\nu\overline P_U
 \le
-\mathfrak A M^{-2/5}x^{3/5}
-+\mathfrak B_aM^{d(a)-1}x^{q(a)}.
-}
+C_0\left\langle[K(s)\Gamma(s)W(s)]^{3/2}\right\rangle.
 \]
 
-The clean choice `a=2` gives
-
-\[
-q=\frac14,
-\qquad d=\frac56,
-\]
-
-with
-
-\[
-\mathfrak A\lesssim Z_+^{7/20}\Pi^{3/20},
-\qquad
-\mathfrak B_2\lesssim\Pi^{1/2},
-\qquad
-\Pi:=\langle P_U\rangle.
-\]
-
-## 5. Recurrent enstrophy bounds mean palinstrophy — M19-184--187
-
-The background identity is
-
-\[
-\frac12Z_U'+\frac14Z_U+\nu P_U
-=\int\Omega\cdot S_U\Omega.
-\]
-
-Using Calderon--Zygmund and interpolation,
-
-\[
-\left|\int\Omega\cdot S_U\Omega\right|
-\le C_EZ_U^{3/4}P_U^{3/4}.
-\]
-
-Hence, under `Z_U<=Z_+`,
+Hence genuine aperiodicity forces
 
 \[
 \boxed{
-\Pi\le C_E^4\nu^{-4}Z_+^3.
-}
-\]
-
-This reduces the aperiodic dimension test to a small-enstrophy criterion of the form
-
-\[
-K_*^{(M)}\frac{Z_+^2}{\nu^3}<\frac14.
-\]
-
-Finite `Z_+` alone does not imply this smallness.
-
-## 6. Genuine aperiodicity pays at least five exact hard channels — M19-185, M19-189--190
-
-A genuinely aperiodic quotient component needs at least two extra quotient directions.
-
-A nonzero smooth decaying divergence-free whole-space state cannot be invariant under all of `SO(3)`, so
-
-\[
-\boxed{\dim(SO(3)\cdot U)\ge2.}
-\]
-
-Off the RSS branch, the exact time tangent `partial_s U` is independent of the rotation tangents. Therefore genuine aperiodicity requires at least
-
-\[
-\boxed{M\ge2\text{ extra}+2\text{ rotation}+1\text{ time}=5}
-\]
-
-observable hard channels.
-
-On the generic discrete-isotropy stratum,
-
-\[
-M\ge6.
-\]
-
-For general `M`, the Young-reduced constants satisfy
-
-\[
-K_1^{(M)}\propto M^{-1},
-\qquad
-K_2^{(M)}\propto M^{-2/9},
-\]
-
-so define
-
-\[
-K_*^{(M)}
-=K_1^{(M)}C_E^{3/2}+K_2^{(M)}C_E^{8/3}.
-\]
-
-The universal five-channel aperiodic exclusion criterion is
-
-\[
-\boxed{
-K_*^{(5)}\frac{Z_+^2}{\nu^3}<\frac14.
-}
-\]
-
-## 7. W1 internal enstrophy redundancy — M19-188, M19-191
-
-M18-042 remains correct for global ROOT-CERT bookkeeping: bounded normalized enstrophy is not certified from arbitrary upstream data.
-
-However, inside the simultaneous final W1 lane, Type-I amplitude, bounded weak-L3, and bounded shell frequency imply bounded normalized enstrophy quantitatively.
-
-Let
-
-\[
-(T_*-t)\|\omega(t)\|_\infty\le K_I,
-\qquad
-W_*:=\sup_s\|U(s)\|_{L^{3,\infty}},
-\qquad
-\Gamma_R\le\Gamma_*.
-\]
-
-For any split radius `R_0>0`,
-
-\[
-\int_{|y|\le R_0}|\Omega|^2dy
-\lesssim K_I^2R_0^3,
-\]
-
-while Lorentz embedding plus the shell-frequency ratio give
-
-\[
-\int_{|y|\ge R_0}|\Omega|^2dy
-\lesssim\Gamma_*^2W_*^2R_0^{-1}.
-\]
-
-Thus bounded `Z` is internally redundant on this simultaneous lane.
-
-This does **not** remove the upstream `Z` root globally because existing routes to `H_F,H_W` can themselves use bounded-enstrophy/Campanato information.
-
-## 8. Optimized W1 severity parameter — M19-192
-
-Optimize
-
-\[
-K_I^2R_0^3+\Gamma_*^2W_*^2R_0^{-1}
-\]
-
-over `R_0`. The minimizer satisfies
-
-\[
-R_0^4=\frac{\Gamma_*^2W_*^2}{3K_I^2},
-\]
-
-and gives
-
-\[
-\boxed{
-Z_+
-\lesssim
-K_I^{1/2}(\Gamma_*W_*)^{3/2}.
-}
-\]
-
-Therefore define the current optimized W1 severity
-
-\[
-\boxed{
-\Xi_{W1}
+\mathfrak S_{W1}
 :=
-\frac{K_I(\Gamma_*W_*)^3}{\nu^3}.
+\left\langle[K\Gamma W]^{3/2}\right\rangle
+\ge c_0\nu\mathcal P_*>0.
 }
 \]
 
-There is an explicit current threshold
+Because W1 least ceilings are finite, this positive mean produces a quantitative positive occupation fraction of the joint severe set. Pigeonhole then gives positive occupation of at least one finite-high channel:
 
 \[
-\Xi_c=(4C_{opt}^2K_*^{(5)})^{-1}
+K\text{-high}
+\quad\lor\quad
+\Gamma\text{-high}
+\quad\lor\quad
+W\text{-high}.
 \]
 
-such that
+The channel audits are:
 
-\[
-\boxed{
-\Xi_{W1}<\Xi_c
-\Longrightarrow
-\text{no genuinely aperiodic recurrent hard component}.
-}
-\]
+- **M19-196:** positive-occupation K-high forces positive mean raw-H2 activity;
+- **M19-197:** Gamma-high splits into active derivative payment or shell-denominator/amplitude degeneration;
+- **M19-198:** weak-L3-high splits into persistent critical-tail amplitude or compact-core level-set activity.
 
-Hence every genuinely aperiodic survivor must satisfy
+## 7. Aperiodic W1 payer NO-GO — M19-201
 
-\[
-\boxed{\Xi_{W1}\ge\Xi_c.}
-\]
+The positive-occupation upgrade is real but does not close the aperiodic branch with current unsigned ledgers.
 
-## 9. Finite-high threshold strata — M19-193
-
-Choose finite positive thresholds `k_0,gamma_0,w_0` satisfying
-
-\[
-k_0(\gamma_0w_0)^3<\nu^3\Xi_c.
-\]
-
-Then genuine aperiodicity implies
-
-\[
-\boxed{
-K_I\ge k_0
-\ \lor\ 
-\Gamma_*\ge\gamma_0
-\ \lor\ 
-W_*\ge w_0.
-}
-\]
-
-These are **finite-high threshold strata**, not the old escalation roots. All three ceilings may remain finite.
+- raw-H2 activity still suffers physical/ancestral scale discount;
+- active Gamma payment returns to the already known mean derivative/palinstrophy activity;
+- persistent weak-L3 tail amplitude is scale-critical and not sign-definite dissipation.
 
 Therefore
 
 \[
 \boxed{
-\text{finite-high threshold stratum}
-\neq
-\text{Type-II / frequency escalation / weak-L3 escalation}.
+\text{positive-occupation finite-high W1 activity}
+\not\Longrightarrow
+\text{global contradiction}
 }
 \]
 
-## 10. Current live analytic branches
+under the currently certified standard ledgers.
 
-### A. Aperiodic W1 hard frontier
+The unresolved aperiodic theorem remains a persistent high-activity compact recurrent-core problem requiring a new signed/index/invariant mechanism.
 
-The primary aperiodic frontier is now
+## 8. Continuous scattering representation sharpens hard unit structure — M19-202--204
 
-\[
-\boxed{\Xi_{W1}\ge\Xi_c.}
-\]
-
-The next target is to determine whether any of the finite-high strata
+On the finite-dimensional scattering-observable hard space, q-translation gives a continuous one-parameter orthogonal representation
 
 \[
-\mathcal H_{K_I}^{high},
-\qquad
-\mathcal H_{\Gamma}^{high},
-\qquad
-\mathcal H_W^{high}
+\rho(t)=e^{tA},
+\qquad A^T=-A.
 \]
 
-has an independent quantitative routing/regularity theorem.
+Thus every nontrivial unit phase, including \(-1\) at a return time, lives in a two-dimensional real rotation block. A one-dimensional hard block is necessarily the trivial \(+1\) representation.
 
-### B. Relative-periodic hard core
+Moreover every hard scattering signature has exact finite Bohr spectrum
 
-Once the aperiodic branch is reduced, moderate finite-amplitude RSS/RDSS remains a finite-dimensional/low-mode problem. Fixed-moduli nonsymmetry kernel degeneracy and irrational elliptic unit blocks remain the principal local Fredholm obstructions; rational elliptic phases reduce to finite-iterate kernels.
+\[
+\boxed{
+B(q,\omega)=\sum_{j=1}^J e^{i\kappa_jq}b_j(\omega),
+}
+\]
 
-### C. Long-period branch
+with no Jordan-polynomial factors.
 
-`S->infinity` remains an invariant-measure/compactness limit problem. Any genuinely aperiodic limiting component is subject to the same five-channel severity threshold above.
+For RDSS log-step \(L\), holonomy \(Q_*\), and Floquet multiplier \(\mu=e^{i\vartheta}\), if
 
-## 11. Final proof-chain certification remains open
+\[
+Q_*^{-1}b=e^{i\phi}b,
+\]
 
-Even if the active analytic branches close, global regularity still requires:
+then the exact resonance law is
+
+\[
+\boxed{
+\kappa L+\vartheta-\phi=2\pi n,
+\qquad n\in\mathbb Z.
+}
+\]
+
+Bounded-period kernel/elliptic degeneracy is therefore a finite exact resonance/Fredholm problem, not an infinite small-divisor cascade.
+
+## 9. Long-period branch conditionally merges — M19-205
+
+Assume bounded-period nonsymmetry unit/kernel modes are removed. Since positive hard exponents are already excluded, every symmetry-quotiented bounded-period RSS/RDSS orbit is then transversely attracting and isolated.
+
+A sequence of relative-periodic orbits with \(S_n\to\infty\) cannot spend asymptotically full time shadowing such isolated attractors and repeatedly leave their attracting neighborhoods.
+
+Therefore
+
+\[
+\boxed{
+S_n\to\infty
+\Longrightarrow
+\text{aperiodic invariant component}
+\lor
+\text{unit/kernel degeneracy}
+\lor
+\text{compactness degeneration}.
+}
+\]
+
+Thus the long-period branch is not an independent final theorem once aperiodic closure and bounded-period kernel rigidity are available.
+
+## 10. External literature audit — M19-206
+
+Current 2026 literature, including Pineau--Vicol arXiv:2607.09619, removes Type-I RSS/RDSS parameter-boundary regimes (small/large rotation and sufficiently small discrete scale step) but does not supply a general moderate finite-amplitude linearized Fredholm/kernel nondegeneracy theorem.
+
+Hence
+
+\[
+\boxed{
+\mathcal T_{kernel}^{finite\text{-}amp}
+}
+\]
+
+is a genuine new analytic frontier.
+
+## 11. Weighted kernel activity floor — M19-207--208
+
+For a nonsymmetry unit mode, the pressure-compatible radial A2 weighted estimate gives
+
+\[
+\frac{\int\Lambda_{NL}E_w}{\int E_w}
+\ge
+c_{gap}
++\frac\nu2\frac{\int G_w}{\int E_w}
+>
+c_{gap}.
+\]
+
+Using Biot--Savart/strain bounds and the optimized W1 enstrophy ceiling,
+
+\[
+M_U,M_S\lesssim(K\Gamma W)^{1/2},
+\]
+
+so a kernel requires an order-one joint W1 product floor
+
+\[
+\boxed{
+\frac{K\Gamma W}{\nu}\ge\chi_*>0.
+}
+\]
+
+This removes low-activity moderate states from the kernel frontier.
+
+## 12. Authoritative directional correction — M19-209--210
+
+The kernel condition above is a **lower activity threshold**. Therefore a tail-to-core **lower** observability estimate cannot exclude kernels; it only supplies another lower floor.
+
+Weighted contraction would need the opposite type of statement:
+
+\[
+\boxed{
+\frac{K\Gamma W}{\nu}<\chi_*
+}
+\]
+
+uniformly on the moderate hard set.
+
+No such upper-smallness theorem is available, and the moderate finite-amplitude corridor is precisely the regime where smallness has already been lost.
+
+Therefore the bounded-period frontier is genuinely
+
+\[
+\boxed{
+\mathcal T_{kernel}^{finite\text{-}amp}:
+\text{exclude nonsymmetry unit/Fredholm kernels without a smallness assumption.}
+}
+\]
+
+A signed, index, topological, or profile-specific PDE mechanism is required beyond the current contraction estimates.
+
+## 13. Current live analytic theorem complex
+
+### A. Aperiodic recurrent hard core
+
+\[
+\boxed{
+\mathcal T_{aper}^{signed}:
+\overline P_U\ge\mathcal P_*
+\text{ and positive mean joint W1 severity cannot support a genuinely aperiodic compact recurrent hard component.}
+}
+\]
+
+Current unsigned scale-discounted ledgers do not close this.
+
+### B. Moderate bounded-period RSS/RDSS kernel rigidity
+
+\[
+\boxed{
+\mathcal T_{kernel}^{finite\text{-}amp}:
+\text{symmetry is the only unit/Fredholm kernel on the compact moderate RSS/RDSS hard set.}
+}
+\]
+
+This is finite-dimensional and finite-resonance but not currently closed.
+
+### C. Long period
+
+Conditionally merges into A/B or compactness loss by M19-205; it is no longer counted as an independent theorem if A and B close.
+
+## 14. Final proof-chain certification remains open
+
+Even if A and B close, global regularity still requires:
 
 1. arbitrary-singularity entry certification;
 2. historical branch completeness and remaining alignment/nonreuse checks;
 3. full beginning-to-end independent audit.
 
-## 12. Permanent firewalls
+## 15. Permanent firewalls
 
 \[
-\boxed{\text{bounded W1 constants}\neq\text{small W1 constants}},
+\boxed{\text{mean activity floor}\neq\text{finite-energy contradiction}},
 \]
 
 \[
-\boxed{\text{internal W1 hypothesis redundancy}\neq\text{global ROOT-CERT closure}},
+\boxed{\text{large supremum}\neq\text{positive occupation}},
 \]
 
 \[
-\boxed{\text{finite-high W1 threshold}\neq\text{escalation to infinity}},
+\boxed{\text{lower activity floor}\neq\text{upper smallness for contraction}},
 \]
 
 \[
-\boxed{\text{positive recurrent palinstrophy floor}\neq\text{finite-energy contradiction}},
+\boxed{\text{finite resonance structure}\neq\text{kernel nonexistence}},
 \]
 
 \[
-\boxed{\text{quotienting symmetry}\neq\text{removing symmetry-channel damping cost}},
+\boxed{\text{relative periodicity}\neq\text{relative-periodic nonexistence}},
 \]
 
 \[
-\boxed{\text{relative periodicity}\neq\text{relative-periodic nonexistence}}.
+\boxed{\text{root-class merger}\neq\text{analytic closure}}.
 \]
 
 ---
 
 \[
-\boxed{\text{M19 ACTIVE TIP = M19-193.}}
+\boxed{\text{M19 ACTIVE TIP = M19-210.}}
 \]
