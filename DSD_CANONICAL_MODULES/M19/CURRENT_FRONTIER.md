@@ -1,8 +1,8 @@
 # M19 Current Frontier
 
 **Date:** 2026-09-14  
-**Current tip:** **M19-230**  
-**Status:** ACTIVE CALCULATION / APERIODIC SIGNED-INVARIANT FRONTIER + BOUNDED-PERIOD FINITE-SPECTATOR CAVITY-FREDHOLM FRONTIER / FINAL ROOT-PROOF CERTIFICATION STILL OPEN
+**Current tip:** **M19-237**  
+**Status:** ACTIVE CALCULATION / APERIODIC SIGNED-INVARIANT FRONTIER + BOUNDED-PERIOD CAVITY CORE-OR-BOUNDARY-LAYER FRONTIER / FINAL ROOT-PROOF CERTIFICATION STILL OPEN
 
 \[
 \boxed{\text{GLOBAL 3D NAVIER--STOKES REGULARITY REMAINS UNPROVED.}}
@@ -10,398 +10,404 @@
 
 ## 1. Canonical policy
 
-M18 remains the frozen analysis/audit family. M19 is the active new-calculation/closure family. Historical M19 modules remain authoritative for their detailed derivations; this file records the latest theorem obligations and scope firewalls.
+M18 remains the frozen audit/reduction family. M19 is the active new-calculation/closure family. Historical modules remain authoritative for detailed derivations; this file records the latest theorem obligations and scope firewalls.
 
 ## 2. Aperiodic recurrent hard frontier
 
-Any genuinely aperiodic recurrent hard survivor satisfies the certified activity floors
+The certified recurrent hard machinery still forces
 
 \[
-\boxed{
-\overline P_U
-:=\left\langle\|\nabla\Omega\|_2^2\right\rangle
-\ge\mathcal P_*>0,
-}
+\overline P_U\ge\mathcal P_*>0
 \]
 
-and, in the simultaneous W1 lane,
+and, on the simultaneous W1 lane,
 
 \[
-\boxed{
 \left\langle(K\Gamma W)^{3/2}\right\rangle
 \ge c_0\nu\mathcal P_*>0.
-}
 \]
 
-M19-196--201 show that this positive-occupation activity still does not yield an unsigned global contradiction because the physical/ancestral ledgers retain critical scale discounts.
+M19-196--201 show that this positive-occupation activity does not yet yield an unsigned global contradiction because the available physical/ancestral ledgers retain critical scale discounts.
 
 Thus
 
 \[
 \boxed{
 \mathcal T_{aper}^{signed}:
-\text{exclude a genuinely aperiodic compact recurrent hard component by a new signed/index/invariant mechanism.}
+\text{exclude a genuinely aperiodic compact recurrent hard component by a new signed/index/invariant mechanism}
 }
 \]
 
 remains OPEN.
 
-## 3. Bounded-period finite-resonance reduction
+## 3. Bounded-period finite hard resonance input
 
-On the complete uniformly observable hard bundle, q-translation is a finite-dimensional orthogonal representation and every hard signature has finite Bohr form
+On the complete uniformly observable hard bundle,
 
 \[
-B(q,\omega)=\sum_j e^{i\kappa_jq}b_j(\omega).
+B(q,\omega)=\sum_j e^{i\kappa_jq}b_j(\omega),
 \]
 
-For RDSS,
+and RDSS resonance satisfies
 
 \[
-\boxed{
-\kappa L+\vartheta-m\alpha=2\pi n,
-}
+\kappa L+\vartheta-m\alpha=2\pi n.
 \]
 
-and for a unit/Fredholm kernel \(\vartheta=0\),
+For a unit/Fredholm kernel \(\vartheta=0\),
 
 \[
-\boxed{
 \kappa L-m\alpha=2\pi n.
-}
 \]
 
-M19-211--215 reduce the orthogonal unit-kernel problem to a phase-gap problem and show that determinant sign, scalar same-vector Melnikov pairing, local Cayley--Pfaffian crossing detection, parameter-boundary kernel-freeness, and generic transversality do not imply global resonance exclusion.
-
-M19-216 gives the compact finite resonance box
+M19-211--215 establish the orthogonal parity/skew-crossing/Cayley--Pfaffian/phase-gap structure and the associated NO-GOs. M19-216 gives the compact finite box
 
 \[
 |\kappa_j|\le K_q^*,
 \qquad
-\boxed{
-|n|\le
-N_{res}:=\left\lfloor\frac{K_q^*L^*+\pi}{2\pi}\right\rfloor.
-}
+|n|\le N_{res}.
 \]
 
-## 4. Zero-q direct-primal reductions — M19-217--223
+Finite resonance remains an input, not kernel nonexistence.
 
-M19-217 fixes the scope: a zero-q candidate is a linearized hard tangent, not a nonlinear stationary tail. M19-218 shows the first subleading tail equation is nonresonant and gives no local solvability obstruction.
+## 4. Zero-q and physical-adjoint reductions — M19-217--228
 
-M19-219 converts every zero-q scattering label B into an exact invariant hard section
+M19-217--223 show that a zero-q candidate is a linearized hard tangent carrying a constant scattering label, hence an exact invariant hard section over the compact hull. Local tail expansion, nonlinear stationary-tail import, dense holonomy, cross-enstrophy, and the kernel-induced metric adjoint do not exclude it.
+
+M19-224 derives the physical formal adjoint critical homogeneity
 
 \[
-\boxed{
-D\mathscr S_Ys_B(Y)=B,
+\boxed{W_{pr}\sim r^{-1}B,
 \qquad
-\Phi_t(Y)s_B(Y)=s_B(\sigma_tY).
-}
+\Psi_{ad}\sim r^{-2}C.}
 \]
 
-M19-220--221 reduce the holonomy geometry; irrational holonomy leaves only the m=0 zero-q angular sector and gives full axial equivariance, but not section vanishing.
-
-M19-222 shows the natural cross-enstrophy pairing is merely the first variation of the unsigned enstrophy balance and is sign-indefinite. M19-223 shows the kernel-induced invariant metric adjoint is parallel and supplies only a conserved norm.
-
-Therefore nonlinear stationary-tail import, background q-speed import, one-more-order tail expansion, kinematic Hodge constraints, dense holonomy, cross-enstrophy, and the canonical metric adjoint are exhausted as direct zero-q shortcuts.
-
-## 5. Physical PDE adjoint critical normal form — M19-224
-
-For the linearized similarity operator
-
-\[
-L_UW
-=
-\nu\Delta W
--\left(\frac y2+U\right)\cdot\nabla W
--\frac12W
--(\nabla U)W,
-\]
-
-its formal unweighted L2 adjoint is
+M19-225 gives the exact critical Green flux
 
 \[
 \boxed{
-L_U^*\Psi
-=
-\nu\Delta\Psi
-+\left(\frac y2+U\right)\cdot\nabla\Psi
-+\Psi
--(\nabla U)^T\Psi
-}
+\mathcal F_\infty=-\frac12\langle B,C\rangle_{S^2}.}
 \]
 
-modulo pressure projection.
+For every nonzero primal datum one can construct an angular adjoint datum with positive pairing.
 
-The unique adjoint critical homogeneity is
+M19-226 records the essential Fredholm-circularity firewall: arbitrary prescribed nonorthogonal adjoint-data solvability cannot be assumed, because that surjectivity already contains the desired kernel exclusion.
+
+M19-227 proves remote transpose-scattering transport is near-identity and invertible. M19-228 extends the nondegenerate critical dual pairing to every finite q resonance, so q=0 and q-not-zero are one critical adjoint/Fredholm boundary-form problem at this level.
+
+## 5. Finite spectator and cavity Fredholm reduction — M19-229--230
+
+At a sufficiently remote finite spectator sphere, physical adjoint realizability is a relative-periodic Calderon/Cauchy-trace range problem, not merely an abstract dual-space problem.
+
+After subtracting a smooth boundary lifting, the interior correction satisfies
+
+\[
+\boxed{(I-\mathcal M_R^{ad})z_0=h_R.}
+\]
+
+The zero-boundary adjoint period map \(\mathcal M_R^{ad}\) is compact by bounded-domain parabolic smoothing, so
+
+\[
+I-\mathcal M_R^{ad}
+\]
+
+is Fredholm of index zero. Solvability reduces to finitely many unit-multiplier compatibility conditions against the primal zero-boundary cavity monodromy.
+
+The elementary Poincare contraction points in the wrong radius direction because \(\lambda_1(B_R)\sim R^{-2}\). Thus
+
+\[
+\boxed{\text{large spectator radius}\neq\text{cavity contraction}.}
+\]
+
+## 6. Expanding-cavity compactness dichotomy — M19-231
+
+Let \(R_j\to\infty\) and let \(w_j\) be normalized primal zero-boundary unit-multiplier cavity modes with
+
+\[
+\int_0^{S_j}\|w_j\|_{L^2(B_{R_j})}^2ds=1.
+\]
+
+Local parabolic compactness gives the dichotomy
 
 \[
 \boxed{
-\Psi_0=r^{-2}C(q,\omega),
-\qquad q=\log r-s/2.
-}
+\text{nonzero whole-space relative-periodic linearized core limit}
+\quad\lor\quad
+\text{one-period }L^2\text{ mass escapes every fixed compact set}.}
 \]
 
-The first adjoint correction r^-4 is nonresonant, and its critical divergence constraint is
+The core limit is not automatically a member of the certified finite hard bundle; a spectral-membership bridge is separately required.
+
+## 7. Escape branch has an exact H1/vorticity currency — M19-232
+
+The cavity velocity energy identity is
+
+\[
+\frac12\frac d{ds}\|w_j\|_2^2
+=-\nu\|\nabla w_j\|_2^2
++\frac14\|w_j\|_2^2
+-\int w_j^TS_{U_j}w_j.
+\]
+
+On the escape branch the strain correction tends to zero, hence
 
 \[
 \boxed{
-\partial_qC_r+\operatorname{div}_{S^2}C_T=0.
-}
+\int_0^{S_j}\|\nabla w_j\|_2^2ds
+\to\frac1{4\nu}.}
 \]
 
-Thus primal r^-1 and adjoint r^-2 are the critical dual homogeneities.
-
-## 6. Exact critical Green pairing — M19-225
-
-For primal and backward-adjoint solutions,
+For divergence-free no-slip fields,
 
 \[
-\partial_s(W\cdot\Psi)=\nabla\cdot\mathfrak J[W,\Psi].
-\]
-
-If
-
-\[
-W=r^{-1}B+O(r^{-3}),
+\|\nabla w_j\|_2^2=\|\eta_j\|_2^2,
 \qquad
-\Psi=r^{-2}C+O(r^{-4}),
+\eta_j=\nabla\times w_j,
 \]
 
-then all remote boundary terms except similarity drift are O(R^-2), while
+so
 
 \[
 \boxed{
-\lim_{R\to\infty}\mathcal F_R
-=-\frac12\langle B,C\rangle_{S^2}.
-}
+\int_0^{S_j}\|\eta_j\|_2^2ds
+\to\frac1{4\nu}.}
 \]
 
-For a relative-periodic primal/adjoint pair, one-period integration forces
+Unsigned velocity energy therefore does not close escape; it fixes a nonzero vorticity currency instead.
+
+## 8. Intermediate-radius escape is impossible — M19-233
+
+The pressure-free weighted linearized-vorticity identity is
+
+\[
+\begin{aligned}
+\frac12\frac d{ds}\int a|\eta|^2
+={}&-\nu\int a|\nabla\eta|^2
+-\frac14\int a|\eta|^2
++\frac\nu2\int(\Delta a)|\eta|^2\\
+&+\frac14\int(y\cdot\nabla a)|\eta|^2
++\frac12\int(U\cdot\nabla a)|\eta|^2
++\text{remote coefficient couplings}.
+\end{aligned}
+\]
+
+Slow logarithmic cutoffs show that if
+
+\[
+a_j\to\infty,
+\qquad
+b_j/R_j\to0,
+\]
+
+then
 
 \[
 \boxed{
-\langle B,C\rangle_{S^2}=0.
-}
+\int_0^{S_j}\int_{a_j\le|y|\le b_j}|\eta_j|^2\to0.}
 \]
 
-At q=0 every nonzero primal Hodge datum admits an explicit adjoint angular dual C_B with
+Thus the fixed vorticity currency cannot live at \(1\ll r\ll R_j\).
+
+## 9. Double-zero weight forces a relative boundary layer — M19-234
+
+Choose
+
+\[
+a_j(y)=\left(1-\frac{|y|^2}{R_j^2}\right)^2.
+\]
+
+Both \(a_j\) and \(\partial_na_j\) vanish at the cavity boundary, while
+
+\[
+-\frac14a_j+rac14y\cdot\nabla a_j
+=-\frac14(1-s_j)(1+3s_j),
+\qquad
+s_j=|y|^2/R_j^2.
+\]
+
+All noncoercive terms vanish on the escape branch. Therefore, for every fixed \(\delta>0\),
 
 \[
 \boxed{
-\langle B,C_B\rangle
-=
-\|B_r\|_2^2+
-\|\nabla_{S^2}\psi\|_2^2>0.
-}
+\int_0^{S_j}\int_{|y|\le(1-\delta)R_j}|\eta_j|^2\to0.}
 \]
 
-Hence a global relative-periodic physical realization of C_B would contradict a nonzero zero-q kernel.
-
-## 7. Fredholm-circularity firewall — M19-226
-
-Arbitrary nonorthogonal adjoint critical-data solvability cannot be assumed independently: the Green identity itself gives the compatibility condition
+Since the total vorticity currency tends to \(1/(4\nu)\),
 
 \[
-\langle B,C\rangle=0
+\boxed{
+|y|/R_j\to1
+\text{ in the normalized vorticity-energy measure}.}
 \]
 
-for every primal kernel B.
+This is relative boundary localization, not yet a quantified physical thickness.
 
-Thus unconditional realization of the deliberately nonorthogonal C_B would already contain the desired kernel-exclusion theorem.
+## 10. Single-zero weight extracts the boundary-shear payer — M19-235
 
-M5-217 Carleman supplies uniqueness/unique continuation for already existing Oseen/linearized solutions, not arbitrary adjoint-data existence. M19-131 finite hard observability gives algebraic hard-dual representation, not a global physical adjoint state.
+With
+
+\[
+a_j=1-|y|^2/R_j^2,
+\]
+
+diffusion produces an exact positive boundary term. M19-234 determines the leading similarity charge, yielding
+
+\[
+\boxed{
+\liminf_{j\to\infty}
+\frac1{R_j}
+\int_0^{S_j}\int_{S_{R_j}}|\eta_j|^2dSds
+\ge\frac1{8\nu^2}.}
+\]
+
+No-slip and incompressibility give
+
+\[
+|\eta_j|=|\partial_nw_j|
+\quad\text{on }S_{R_j},
+\]
+
+so equivalently
+
+\[
+\boxed{
+\liminf_{j\to\infty}
+\frac1{R_j}
+\int_0^{S_j}\int_{S_{R_j}}|\partial_nw_j|^2dSds
+\ge\frac1{8\nu^2}.}
+\]
+
+Thus escape requires a boundary shear payer growing at least linearly in the cavity radius.
+
+## 11. Natural Rellich closure fails — M19-236
+
+Testing the primal equation by the dilation multiplier
+
+\[
+Dw=y\cdot\nabla w
+\]
+
+exposes the boundary shear and cancels pressure exactly. The Rellich identity contains
+
+\[
+\frac{\nu R}{2}\int_{S_R}|\partial_nw|^2
+\]
+
+but also the bulk terms
+
+\[
+\int\partial_sw\cdot Dw
++\frac12\int|Dw|^2.
+\]
+
+Only
+
+\[
+\int_0^S\|Dw\|_2^2ds
+\le R^2\int_0^S\|\nabla w\|_2^2ds
+=O(R^2)
+\]
+
+is automatic, and the time-dilation action is not a period derivative. Therefore the identity permits exactly the M19-235 shear scale
+
+\[
+\int_{S_R}|\partial_nw|^2=O(R).
+\]
+
+Hence
+
+\[
+\boxed{\text{natural Rellich identity}\neq o(R)\text{ shear upper bound}.}
+\]
+
+## 12. Leading no-slip boundary-layer normal form — M19-237
+
+Near \(r=R\), set inward distance \(d=R-r\) and
+
+\[
+\boxed{z=\frac{R}{2\nu}d.}
+\]
+
+Then
+
+\[
+\nu\partial_{rr}
+\sim\frac{R^2}{4\nu}\partial_{zz},
+\qquad
+-\frac r2\partial_r
+\sim\frac{R^2}{4\nu}\partial_z.
+\]
+
+The leading tangential boundary-layer equation is
+
+\[
+\boxed{f_{zz}+f_z=0,}
+\]
+
+with no-slip/bulk matching solution
+
+\[
+\boxed{f(z)=1-e^{-z}.}
+\]
+
+Thus the natural physical thickness is
+
+\[
+\boxed{d_{BL}\asymp\nu/R.}
+\]
+
+For bulk amplitude \(|A_T|\sim R^{-3/2}\), this layer produces
+
+\[
+\int_{S_R}|\partial_nw|^2dS=O(R/\nu^2)
+\]
+
+and bulk layer gradient energy \(O(1/\nu)\), exactly matching M19-232 and M19-235.
+
+Therefore the forced shear scale is locally asymptotically consistent. Local boundary analysis alone cannot close the branch.
 
 Permanent firewall:
 
 \[
-\boxed{
-\text{abstract hard dual or prescribed critical datum}
-\neq
-\text{global relative-periodic physical adjoint realization}.
-}
+\boxed{\text{local }\nu/R\text{ layer consistency}\neq\text{global relative-periodic cavity eigenmode existence}.}
 \]
 
-## 8. Remote dual transport is invertible — M19-227
+## 13. Current bounded-period frontier
 
-M19-069 gives
-
-\[
-D\mathscr S_{R_0}=I+K_{R_0},
-\qquad
-\|K_{R_0}\|=O(R_0^{-2})<1
-\]
-
-at sufficiently remote spectator radius. Therefore
+The M19-230 cavity obstruction is now split and sharpened to
 
 \[
 \boxed{
-(D\mathscr S_{R_0})^*=I+K_{R_0}^*
-}
+\mathcal T_{cav}^{comp}
+\subset
+\mathcal T_{cav}^{core}
+\cup
+\mathcal T_{cav}^{bulk-return}.}
 \]
 
-is also near-identity and invertible.
-
-Hence critical dual functionals move between infinity and a sufficiently remote finite spectator boundary without norm collapse. The remaining obstruction lies at the finite spectator boundary/interior interface.
-
-## 9. All finite q resonances share one critical dual-flux architecture — M19-228
-
-For
-
-\[
-W=r^{-1}e^{i\kappa q}b+O(r^{-3}),
-\qquad
-\Psi=r^{-2}e^{i\kappa q}c+O(r^{-4}),
-\]
-
-use the Hermitian pairing. The q phases cancel.
-
-The primal and adjoint divergence constraints are
-
-\[
-(i\kappa+1)b_r+\operatorname{div}_{S^2}b_T=0,
-\]
-
-\[
-i\kappa c_r+\operatorname{div}_{S^2}c_T=0.
-\]
-
-For every nonzero primal datum b, spherical Hodge decomposition gives an explicit adjoint datum c_b in the same holonomy sector satisfying
+### B1. Core branch
 
 \[
 \boxed{
-\operatorname{Re}\langle b,c_b\rangle
-=
-\sum_{\ell,m}\left(1+\frac{\kappa^2}{\lambda_\ell}\right)|a_{\ell m}|^2
-+
-\|\nabla_{S^2}\psi\|_2^2
->0.
-}
+\mathcal T_{cav}^{core}:
+\text{classify/exclude nonzero whole-space relative-periodic linearized limits produced by core-tight cavity modes}.}
 \]
 
-Thus q=0 and finite q-not-zero branches remain distinct in primal calculations but are one critical adjoint/Fredholm boundary-form problem.
+A separate bridge is required before identifying such a limit with the certified finite hard kernel.
 
-## 10. Finite-spectator Calderon range — M19-229
+### B2. Escape/boundary-layer branch
 
-Fix a sufficiently remote spectator radius R and one relative period S. On B_R x [0,S], define primal and adjoint relative-periodic Cauchy trace sets
-
-\[
-\mathcal C_R^{pr},
-\qquad
-\mathcal C_R^{ad}.
-\]
-
-The one-period Green identity gives the boundary concomitant
+The escape sequence is now forced into a \(\nu/R\)-compatible no-slip layer with a linear boundary-shear payer. The remaining question is not local layer existence but the **global return of the bulk amplitude feeding that layer**:
 
 \[
 \boxed{
-\mathfrak B_R(G,H)=0
-\qquad
-\forall G\in\mathcal C_R^{pr},
-\ \forall H\in\mathcal C_R^{ad}.
-}
+\mathcal T_{cav}^{bulk-return}:
+\text{exclude a nonzero interior bulk mode that matches the remote }\nu/R\text{ no-slip layer and satisfies the exact relative-periodic return}.}
 \]
 
-M19-227 supplies a nondegenerate abstract finite-boundary dual functional, but physical adjoint realization requires representation by an actual adjoint Cauchy trace through the Green concomitant.
+This is the next active bounded-period target.
 
-After subtracting a fixed remote lifting, the missing interior problem is an affine relative-periodic adjoint correction/range problem:
-
-\[
-\boxed{
-\mathcal T_{Cal}^{int}:
-\text{determine the relative-periodic adjoint Calderon range for the affine data induced by the remote critical dual lifting.}
-}
-\]
-
-This is a localization/normal-form reduction, not range surjectivity.
-
-## 11. Compact cavity monodromy reduction — M19-230
-
-After subtracting a smooth finite-boundary lifting, the adjoint correction Z has homogeneous boundary data and solves an inhomogeneous backward parabolic system. After time reversal, its relative-periodic condition becomes
-
-\[
-\boxed{
-(I-\mathcal M_R^{ad})z_0=h_R,
-}
-\]
-
-where \(\mathcal M_R^{ad}\) is the zero-boundary adjoint relative period map and h_R is the explicit affine forcing/return defect produced by the lifting.
-
-Because B_R is bounded and the parabolic evolution smooths for every positive time,
-
-\[
-\boxed{
-\mathcal M_R^{ad}:L^2_\sigma(B_R)\to L^2_\sigma(B_R)
-\text{ is compact}.
-}
-\]
-
-Therefore
-
-\[
-\boxed{
-I-\mathcal M_R^{ad}
-\text{ is Fredholm of index }0.
-}
-\]
-
-The affine correction is solvable iff
-
-\[
-\boxed{
-\langle h_R,\varphi\rangle=0
-\qquad
-\forall\varphi\in\ker(I-(\mathcal M_R^{ad})^*).
-}
-\]
-
-Thus the bounded-period adjoint range obstruction has been reduced from an infinite-dimensional interior problem to finitely many cavity unit-multiplier compatibility conditions.
-
-For the homogeneous forward adjoint correction,
-
-\[
-\frac12\frac d{d\tau}\|z\|_2^2
-=
--\nu\|\nabla z\|_2^2
-+\frac14\|z\|_2^2
--\int z^TS_Uz.
-\]
-
-A sufficient Poincare contraction condition is
-
-\[
-\boxed{
-\nu\lambda_1(R)
->
-\frac14+\sup_s\|S_U(s)\|_{L^\infty(B_R)}.
-}
-\]
-
-But \(\lambda_1(R)=R^{-2}\lambda_1(1)\). Hence increasing the spectator radius weakens, rather than strengthens, this elementary contraction estimate.
-
-Therefore
-
-\[
-\boxed{
-\text{sufficiently remote spectator radius}
-\neq
-\text{zero-boundary cavity contraction}.
-}
-\]
-
-Compactness also does not itself exclude eigenvalue 1.
-
-The refined bounded-period target is
-
-\[
-\boxed{
-\mathcal T_{cav}^{comp}:
-\text{prove the affine compatibility }h_R\perp\ker(I-(\mathcal M_R^{ad})^*)
-\text{ for at least one sufficiently remote }R,
-}
-\]
-
-or otherwise exclude the unit cavity obstruction by a mechanism independent of whole-space kernel-freeness.
-
-## 12. Current live theorem complex
+## 14. Live theorem complex
 
 ### A. Aperiodic recurrent hard core
 
@@ -409,66 +415,51 @@ or otherwise exclude the unit cavity obstruction by a mechanism independent of w
 \boxed{\mathcal T_{aper}^{signed}}
 \]
 
-remains OPEN.
+OPEN.
 
-### B. Bounded-period RSS/RDSS hard kernels
+### B. Bounded-period RSS/RDSS cavity obstruction
 
 \[
-\boxed{\mathcal T_{cav}^{comp}}
+\boxed{
+\mathcal T_{cav}^{core}
+\cup
+\mathcal T_{cav}^{bulk-return}}
 \]
 
-is the current most refined formulation. The obstruction is finite dimensional, but no independent compatibility theorem or unit-gap has yet been proved.
+OPEN.
 
 ### C. Long period
 
 Conditionally merges into A/B or compactness loss by M19-205.
 
-## 13. Final proof-chain certification remains open
+## 15. Final proof-chain certification remains open
 
 Even if A and B close, global regularity still requires:
 
-1. arbitrary-singularity entry certification (ROOT-CERT);
-2. historical branch completeness, including CP-E, CP-S, CE-T, Migration;
+1. arbitrary-singularity entry certification (`ROOT-CERT`);
+2. historical non-CE-H branches `CP-E`, `CP-S`, `CE-T`, `Migration`;
 3. parent-to-late-branch alignment/nonreuse checks;
 4. full beginning-to-end independent audit.
 
-## 14. Permanent firewalls
+## 16. Permanent firewalls added through M19-237
 
 \[
-\boxed{\text{mean activity floor}\neq\text{finite-energy contradiction}},
+\boxed{\text{cavity core limit}\neq\text{certified hard kernel without a spectral-membership bridge}},
 \]
 \[
-\boxed{\text{finite resonance}\neq\text{kernel nonexistence}},
+\boxed{\text{remote background smallness + unsigned energy}\neq\text{escape contradiction}},
 \]
 \[
-\boxed{\text{nonlinear stationary-tail rigidity}\neq\text{linearized hard-tangent rigidity}},
+\boxed{\text{cavity-scale localization}\neq\text{quantified thin boundary layer}},
 \]
 \[
-\boxed{\text{local tail asymptotic solvability}\neq\text{global hard-mode realizability}},
+\boxed{\text{fixed bulk H1 currency}\neq\text{uniform boundary-shear upper bound}},
 \]
 \[
-\boxed{\text{canonical metric adjoint}\neq\text{physical kernel-exclusion adjoint}},
+\boxed{\text{natural Rellich exposure}\neq o(R)\text{ shear control}},
 \]
 \[
-\boxed{\text{abstract hard dual}\neq\text{global physical adjoint realization}},
-\]
-\[
-\boxed{\text{prescribed nonorthogonal adjoint-data solvability}\neq\text{independent Fredholm input}},
-\]
-\[
-\boxed{\text{remote adjoint transport}\neq\text{interior relative-periodic adjoint extension}},
-\]
-\[
-\boxed{\text{Calderon range reformulation}\neq\text{range surjectivity}},
-\]
-\[
-\boxed{\text{compact cavity period map}\neq\text{unit-multiplier exclusion}},
-\]
-\[
-\boxed{\text{large spectator radius}\neq\text{Poincare contraction}},
-\]
-\[
-\boxed{\text{finite-dimensional cavity obstruction}\neq\text{independent kernel exclusion until its }h_R\text{ compatibility is controlled}},
+\boxed{\text{local boundary-layer consistency}\neq\text{global cavity unit multiplier existence}},
 \]
 \[
 \boxed{\text{root-class merger}\neq\text{analytic closure}}.
@@ -477,5 +468,5 @@ Even if A and B close, global regularity still requires:
 ---
 
 \[
-\boxed{\text{M19 ACTIVE TIP = M19-230.}}
+\boxed{\text{M19 ACTIVE TIP = M19-237.}}
 \]
