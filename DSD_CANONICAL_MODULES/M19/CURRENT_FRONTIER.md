@@ -1,8 +1,8 @@
 # M19 Current Frontier
 
-**Date:** 2026-09-14  
-**Current tip:** **M19-256**  
-**Status:** ACTIVE CALCULATION / WHOLE-SPACE TRANSPARENT MOVING-SPHERE + GALILEAN WEIGHTED-PAYER FRONTIER / RAW-H2 PHYSICAL TRANSFER-COHERENCE GATE OPEN / APERIODIC SIGNED FRONTIER OPEN / FINAL ROOT-PROOF CERTIFICATION OPEN
+**Date:** 2026-09-15  
+**Current tip:** **M19-258**  
+**Status:** ACTIVE CALCULATION / WHOLE-SPACE TRANSPARENT MOVING-SPHERE + GALILEAN WEIGHTED-PAYER FRONTIER / RECORD-COVER + REPRESENTATION-COHERENCE GATE OPEN / APERIODIC SIGNED FRONTIER OPEN / FINAL ROOT-PROOF CERTIFICATION OPEN
 
 \[
 \boxed{\text{GLOBAL 3D NAVIER--STOKES REGULARITY REMAINS UNPROVED.}}
@@ -146,7 +146,7 @@ so Hölder gives
 \boxed{D^3u\in L^2\text{ physically}\Longrightarrow\mathcal P_{GMS}^{log}(V)<\infty.}
 \]
 
-Thus low-frequency and pressure are **not independent analytic gates** once the physical raw-H2 transfer is available. The active bottleneck is the transfer itself.
+Thus low-frequency and pressure are not independent analytic gates once the physical raw-H2 transfer is available.
 
 ## 7. M19-256 — exact ancestry scaling match
 
@@ -174,17 +174,6 @@ k=1:r^{-1},\qquad k=2:r^{-3},\qquad k=3:r^{-5}.
 \]
 
 The relevant raw-H2 case is \(k=2\) on vorticity because \(D^2\omega\simeq D^3u\). Hence there is no exponent mismatch between the certified M17 \(r^{-3}\) ledger and the physical derivative level needed by M19-255.
-
-The dimensional part of the bridge is closed. The remaining target is
-
-\[
-\boxed{
-\mathcal T_{GMS}^{coh}:
-\text{physical domain coverage}
-+\text{bounded overlap/nonreuse}
-+\text{same genealogy/representation}
-+\text{center coherence when required}.}
-\]
 
 For moving record centers \(X_m(t)\), define
 
@@ -214,35 +203,83 @@ More generally, transfer failure is typed as
 }
 \]
 
-## 8. Conditional closure obtained
+## 8. M19-257 — explicit record-to-physical transfer contract
 
-If the certified M17 \(r^{-3}\) raw-H2 ancestry ledger covers the shrinking physical GMS neighborhood with the coherence conditions above, exact scaling gives
+Let \(r_j=2^{-j}r_0\) be physical GMS scales and let \(\mathcal M(j)\) be the records assigned to physical shell \(j\). A sufficient algebraic transfer contract is:
 
 \[
-D^3u\in L^2(Q_{r_0}^V),
+\Lambda^{-1}r_j\le R_m\le\Lambda r_j
+\qquad(m\in\mathcal M(j)),
 \]
 
-then M19-255 gives
+physical shell cost domination by the assigned record costs, and uniformly bounded reuse
 
 \[
+\#\{j:m\in\mathcal M(j)\}\le N.
+\]
+
+Then the matching \(R^{-3}\) weight and bounded reuse convert the M17 record ledger into the required physical raw-H2 ledger. Thus exponent matching alone is not enough; scale-comparable coverage and reuse control are the actual combinatorial bridge.
+
+M19-257 also separated the upstream root/genealogy eligibility gate from the analytic transfer itself.
+
+## 9. M19-258 — whole-space field and pressure gates collapse
+
+For an untruncated whole-space divergence-free record field,
+
+\[
+\widehat\omega=i\xi\times\widehat u,
+\qquad \xi\cdot\widehat u=0,
+\]
+
+so
+
+\[
+\boxed{
+\|\omega\|_{\dot H^2}^2
+=\|u\|_{\dot H^3}^2,
+\qquad
+\|\Delta\omega\|_2^2
+=\|(-\Delta)^{3/2}u\|_2^2.
+}
+\]
+
+Therefore, if an assigned M17 record is the same untruncated whole-space rescaled field as the physical GMS record, no separate localized Biot--Savart derivative loss occurs. Once the physical H3 transfer is achieved, M19-255 and Calderón--Zygmund give
+
+\[
+u\in L^6_{x,t},
+\qquad p\in L^3_{x,t},
+\qquad \mathcal P_{GMS}^{log}(V)<\infty.
+\]
+
+Hence, under the same-field whole-space representation, the active transfer complex reduces to
+
+\[
+\boxed{
+\mathcal T_{GMS}^{cover}
++\mathcal T_{GMS}^{repr}
++\mathcal T_{GMS}^{root}.
+}
+\]
+
+If the M17 record variable is actually cutoff/truncated at the relevant step, the local field/interface gate reopens and the conservative M19-257 formulation applies.
+
+## 10. Conditional closure now isolated
+
+If the hypothetical singular point enters an M17-eligible retained genealogy and there is a fixed Galilean frame \(V\) such that sufficiently small physical shells admit comparable-scale, bounded-reuse assignments to the same untruncated whole-space M17 records, then
+
+\[
+\text{M17 }R^{-3}\text{ raw-H2 ledger}
+\Longrightarrow
+D^3u\in L^2
+\Longrightarrow
 \mathcal P_{GMS}^{log}(V)<\infty,
 \]
 
 contradicting M19-254.
 
-Therefore
+Thus the entered branch closes under the record-cover/representation/root contract. This is conditional branch closure, not global regularity.
 
-\[
-\boxed{
-\mathcal T_{GMS}^{coh}
-+\text{certified M17 raw-H2 ledger}
-\Longrightarrow
-\text{closure of this entered whole-space GMS branch}.}
-\]
-
-This is conditional branch closure, not yet global regularity.
-
-## 9. Permanent firewalls through M19-256
+## 11. Permanent firewalls through M19-258
 
 \[
 \boxed{\text{unweighted finite integrability}\not\Rightarrow\text{finite critical GMS payer}},
@@ -254,22 +291,32 @@ This is conditional branch closure, not yet global regularity.
 \boxed{\text{exact scaling-exponent match}\not\Rightarrow\text{domain coverage}},
 \]
 \[
+\boxed{\text{bounded overlap inside record genealogy}\not\Rightarrow\text{bounded physical-shell reuse}},
+\]
+\[
+\boxed{\text{global Fourier velocity-vorticity identity}\not\Rightarrow\text{record-to-physical representation coherence}},
+\]
+\[
 \boxed{\text{scale-wise selectable }V_m\not\Rightarrow\text{one fixed physical GMS neighborhood}},
 \]
 \[
 \boxed{\text{conditional GMS branch closure}\not\Rightarrow\text{ROOT-CERT or non-CE-H closure}}.
 \]
 
-## 10. Immediate next target
+## 12. Immediate next target
 
-Audit the actual M17 record construction against the transfer exits. The decisive question is
+Audit the actual M17 record construction against three remaining gates:
 
 \[
 \boxed{
-\text{Does the certified }r^{-3}\text{ raw-H2 ancestry ledger cover a full shrinking physical neighborhood of the candidate singular point with bounded multiplicity?}
+\mathcal T_{GMS}^{cover},
+\qquad
+\mathcal T_{GMS}^{repr},
+\qquad
+\mathcal T_{GMS}^{root}.
 }
 \]
 
-If yes, M19-254--256 close the entered whole-space branch. If not, the first failed transfer condition becomes the next explicit survivor.
+The decisive local question is whether every sufficiently small physical GMS shell can be assigned a comparable-scale M17 whole-space record of the same genealogy with uniformly bounded reuse. If not, the first failed condition is retained as an explicit survivor: tracking, domain, coverage, overlap, genealogy, representation, or upstream root entry.
 
 Global regularity remains unproved.
