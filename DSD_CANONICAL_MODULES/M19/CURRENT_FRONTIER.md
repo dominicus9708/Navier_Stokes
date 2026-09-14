@@ -1,8 +1,8 @@
 # M19 Current Frontier
 
 **Date:** 2026-09-15  
-**Current tip:** **M19-258**  
-**Status:** ACTIVE CALCULATION / WHOLE-SPACE TRANSPARENT MOVING-SPHERE + GALILEAN WEIGHTED-PAYER FRONTIER / RECORD-COVER + REPRESENTATION-COHERENCE GATE OPEN / APERIODIC SIGNED FRONTIER OPEN / FINAL ROOT-PROOF CERTIFICATION OPEN
+**Current tip:** **M19-259**  
+**Status:** ACTIVE CALCULATION / WHOLE-SPACE TRANSPARENT MOVING-SPHERE + GALILEAN WEIGHTED-PAYER FRONTIER / LOG-SCALE DENSITY + SPACETIME INCIDENCE + REPRESENTATION/ROOT GATES OPEN / APERIODIC SIGNED FRONTIER OPEN / FINAL ROOT-PROOF CERTIFICATION OPEN
 
 \[
 \boxed{\text{GLOBAL 3D NAVIER--STOKES REGULARITY REMAINS UNPROVED.}}
@@ -251,72 +251,122 @@ u\in L^6_{x,t},
 \qquad \mathcal P_{GMS}^{log}(V)<\infty.
 \]
 
-Hence, under the same-field whole-space representation, the active transfer complex reduces to
+If the M17 record variable is actually cutoff/truncated at the relevant step, the local field/interface gate reopens and the conservative M19-257 formulation applies.
+
+## 10. M19-259 — dyadic scale comparability removes bounded reuse as an independent gate
+
+Define
+
+\[
+a_m=-\log_2(R_m/r_0),
+\qquad r_j=2^{-j}r_0.
+\]
+
+Then
+
+\[
+\Lambda^{-1}r_j\le R_m\le\Lambda r_j
+\iff
+|a_m-j|\le\log_2\Lambda.
+\]
+
+For a fixed record \(m\), the number of dyadic shell indices satisfying this is at most
+
+\[
+\boxed{N_\Lambda=2\lceil\log_2\Lambda\rceil+1.}
+\]
+
+Thus uniform scale comparability automatically supplies bounded shell-index reuse.
+
+The actual radius-coverage condition is logarithmic relative density:
+
+\[
+\boxed{
+\mathcal T_{GMS}^{scale-density}:
+\forall j\gg1\quad\exists m:\ |a_m-j|\le L.
+}
+\]
+
+For an ordered cofinal record sequence, a sufficient form is
+
+\[
+\boxed{
+\sup_m\log_2\frac{R_m}{R_{m+1}}<\infty.
+}
+\]
+
+Cofinality \(R_m\to0\) and record-window bounded overlap do not imply this. The abstract sequence \(R_m=2^{-2^m}r_0\) is a counterexample. This does not assert that the actual M17 records are sparse; it identifies what must be checked.
+
+Scale density still does not give space-time/center coverage. Therefore
 
 \[
 \boxed{
 \mathcal T_{GMS}^{cover}
+=
+\mathcal T_{GMS}^{scale-density}
++\mathcal T_{GMS}^{incidence}.
+}
+\]
+
+## 11. Updated conditional closure
+
+Under the same-field whole-space representation, the current entered-branch transfer complex is
+
+\[
+\boxed{
+\mathcal T_{GMS}^{scale-density}
++\mathcal T_{GMS}^{incidence}
 +\mathcal T_{GMS}^{repr}
 +\mathcal T_{GMS}^{root}.
 }
 \]
 
-If the M17 record variable is actually cutoff/truncated at the relevant step, the local field/interface gate reopens and the conservative M19-257 formulation applies.
+If these hold, the M17 \(R^{-3}\) raw-H2 ledger transfers to the physical GMS neighborhood, M19-255/258 give \(\mathcal P_{GMS}^{log}(V)<\infty\), and M19-254 gives a contradiction.
 
-## 10. Conditional closure now isolated
+This is conditional branch closure, not global regularity.
 
-If the hypothetical singular point enters an M17-eligible retained genealogy and there is a fixed Galilean frame \(V\) such that sufficiently small physical shells admit comparable-scale, bounded-reuse assignments to the same untruncated whole-space M17 records, then
-
-\[
-\text{M17 }R^{-3}\text{ raw-H2 ledger}
-\Longrightarrow
-D^3u\in L^2
-\Longrightarrow
-\mathcal P_{GMS}^{log}(V)<\infty,
-\]
-
-contradicting M19-254.
-
-Thus the entered branch closes under the record-cover/representation/root contract. This is conditional branch closure, not global regularity.
-
-## 11. Permanent firewalls through M19-258
+## 12. Permanent firewalls through M19-259
 
 \[
 \boxed{\text{unweighted finite integrability}\not\Rightarrow\text{finite critical GMS payer}},
 \]
 \[
-\boxed{\text{normalized/ancestral raw-H2 finiteness}\not\Rightarrow\text{physical neighborhood }D^3u\in L^2\text{ without transfer}},
+\boxed{\text{exact scaling-exponent match}\not\Rightarrow\text{domain/scale coverage}},
 \]
 \[
-\boxed{\text{exact scaling-exponent match}\not\Rightarrow\text{domain coverage}},
+\boxed{\text{record scales cofinal at }0\not\Rightarrow\text{bounded logarithmic scale gaps}},
 \]
 \[
-\boxed{\text{bounded overlap inside record genealogy}\not\Rightarrow\text{bounded physical-shell reuse}},
+\boxed{\text{bounded record-window overlap}\not\Rightarrow\text{log-scale density}},
+\]
+\[
+\boxed{\text{log-scale density}\not\Rightarrow\text{space-time incidence}},
 \]
 \[
 \boxed{\text{global Fourier velocity-vorticity identity}\not\Rightarrow\text{record-to-physical representation coherence}},
 \]
 \[
-\boxed{\text{scale-wise selectable }V_m\not\Rightarrow\text{one fixed physical GMS neighborhood}},
-\]
-\[
 \boxed{\text{conditional GMS branch closure}\not\Rightarrow\text{ROOT-CERT or non-CE-H closure}}.
 \]
 
-## 12. Immediate next target
+## 13. Immediate next target
 
-Audit the actual M17 record construction against three remaining gates:
+Audit the actual M17 record-selection/first-hitting rule for a bounded logarithmic scale-gap theorem or equivalent relative-density statement.
+
+If scale density is certified, the next gate is
 
 \[
-\boxed{
-\mathcal T_{GMS}^{cover},
-\qquad
-\mathcal T_{GMS}^{repr},
-\qquad
-\mathcal T_{GMS}^{root}.
-}
+\boxed{\mathcal T_{GMS}^{incidence}}
 \]
 
-The decisive local question is whether every sufficiently small physical GMS shell can be assigned a comparable-scale M17 whole-space record of the same genealogy with uniformly bounded reuse. If not, the first failed condition is retained as an explicit survivor: tracking, domain, coverage, overlap, genealogy, representation, or upstream root entry.
+— whether the comparable-scale record windows cover the actual candidate singular point's physical parabolic shells in one fixed Galilean frame.
+
+If no scale-density theorem exists, retain the explicit survivor
+
+\[
+\boxed{\mathcal E_{scale-gap}}
+\]
+
+unless another record-selection mechanism fills the skipped scales.
 
 Global regularity remains unproved.
