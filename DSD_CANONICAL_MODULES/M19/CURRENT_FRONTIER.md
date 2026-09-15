@@ -1,8 +1,8 @@
 # M19 Current Frontier
 
 **Date:** 2026-09-16  
-**Current tip:** **M19-281**  
-**Status:** ACTIVE CALCULATION / GMS BASE-GAIN OPEN / STATIONARY STRESS-TIGHTNESS OR ZERO-FORCE RIGIDITY OPEN / ORDINARY GREAT-CIRCLE WINDING-INDEX ROUTE REDUCED TO EXISTING EXITS / CORE FINITE-LAG NON-COBOUNDARY REMAINDER NOW PRIMARY DYNAMIC TARGET / ROOT-CERT OPEN
+**Current tip:** **M19-302**  
+**Status:** ACTIVE CALCULATION / GMS BASE-GAIN OPEN / STATIONARY STRESS-TIGHTNESS OR ZERO-FORCE RIGIDITY OPEN / DYNAMIC FIXED-LAG BRANCH REDUCED TO CONDITIONED DISSIPATION + q-HYSTERESIS + FINITE z-BOUNDARY BUDGET + SIGNED RADIAL CURRENT / ROOT-CERT OPEN
 
 \[
 \boxed{\text{GLOBAL 3D NAVIER--STOKES REGULARITY REMAINS UNPROVED.}}
@@ -20,98 +20,68 @@ CP\!-\!E,\quad CP\!-\!S,\quad CE\!-\!T,\quad Migration
 
 remain unresolved.
 
-## 2. Whole-space transparent-sphere/GMS endpoint — M19-253--255
+## 2. Whole-space transparent-sphere / GMS route — M19-253--262
 
-M19-253 permanently corrected the historical cavity interpretation: no-slip wall calculations are auxiliary and do not directly close the whole-space Clay setting.
+The no-slip cavity branch is auxiliary and does not directly close the whole-space Clay setting.
 
-For a fixed Galilean cylinder \(Q_r^V(z_0)\), singularity requires the epsilon-regularity floor, and M19-254 converts it to
+At a singular point the scale-invariant epsilon floor yields the logarithmic necessary payer
 
 \[
 \boxed{
 \mathcal P_{GMS}^{log}(V)
 =
 \int
-\frac{|u-V|^{10/3}+|p|^{5/3}}{\rho_V^{5/3}}\,dxdt
+\frac{|u-V|^{10/3}+|p|^{5/3}}{\rho_V^{5/3}}dxdt
 =\infty.
 }
 \]
 
-M19-255 gives a valid contradiction if genuine physical
+If genuine physical
 
 \[
 D^3u\in L^2_{x,t}
 \]
 
-is available, because then \(u\in L^6\), \(p\in L^3\), and \(\mathcal P_{GMS}^{log}(V)<\infty\).
+were available, M19-255 would contradict this. But the ancestral raw-H2 ledger does not supply that premise after restoring the physical base scale.
 
-The endpoint is valid; the missing issue is its physical premise.
-
-## 3. Two-scale ancestry and base-gain correction — M19-256--262
-
-The exact raw-vorticity derivative scaling is
+The two-scale correction is
 
 \[
-\int_{Q_r}|D_x^k\omega|^2dxdt
-=
-r^{1-2k}
-\int_{Q_1}|\nabla_y^k\omega^{(r)}|^2dyds.
+\rho_{j,k}=r_jR_k^{bd}=r_{j-k},
 \]
 
-For raw-H2 the physical factor is \(r^{-3}\). The historical M17 record parameter is instead a large backward blow-down factor
+and physical raw-H2 cost carries the independent fine-scale factor
 
 \[
-R_k^{bd}\asymp q^{k/2}\to\infty.
+r_j^{-3}.
 \]
 
-At first-hitting base stage \(j\),
-
-\[
-r_j\asymp q^{-j/2},
-\qquad
-\boxed{\rho_{j,k}=r_jR_k^{bd}=r_{j-k}}.
-\]
-
-Hence
-
-\[
-\boxed{
-r_j^{-3}(R_k^{bd})^{-3}h_{j,k}=r_{j-k}^{-3}h_{j,k}.}
-\]
-
-Therefore
-
-\[
-\boxed{
-\text{finite ancestral raw-H2}
-\not\Rightarrow
-D^3u\in L^2_{physical}.
-}
-\]
-
-The active gate is
+Thus the live gate remains
 
 \[
 \boxed{
 \mathcal T_{GMS}^{base-gain}:
-\text{compensate the physical fine-scale }r^{-3}\text{ amplification.}
+\text{compensate the physical }r^{-3}\text{ derivative amplification.}
 }
 \]
 
-Physical incidence, representation coherence, and root eligibility remain separate gates. A discounted finite ledger also does not imply epsilon-smallness.
+Physical incidence, representation coherence, epsilon-smallness, and root eligibility remain separate gates.
 
-## 4. CE-H and critical-tail firewalls — M19-263--267
+## 3. CE-H and critical-tail firewalls — M19-263--267
 
-Exact CE-H double-eigenline algebra is not itself singular or contradictory; regular axisymmetric no-swirl examples already show this. Navier--Stokes scaling preserves CE-H while changing low-frequency energy/enstrophy scales, so CE-H plus high-derivative control does not fix the \(\dot H^{-1}\) channel.
+Exact CE-H double-eigenline algebra is not itself singular or contradictory; regular axisymmetric no-swirl examples already show this.
+
+Navier--Stokes scaling preserves CE-H while moving kinetic energy into the low-frequency channel. Therefore CE-H plus high-derivative control does not fix the \(\dot H^{-1}\) mode.
 
 A normalized critical tail
 
 \[
-V(y)\sim\frac{A(\omega)}{|y|}
+V(y)\sim |y|^{-1}A
 \]
 
-is compatible with finite physical kinetic energy. Strong \(L^3\) grows logarithmically while weak-\(L^3\) remains critical.
+is compatible with finite physical energy, bounded weak-\(L^3\), and logarithmically divergent strong \(L^3\).
 
-On every nontrivial ergodic hard component, the terminal scattering datum has positive mean cubic density
+On every nontrivial ergodic hard component,
 
 \[
 \boxed{
@@ -122,41 +92,25 @@ c_3
 }
 \]
 
-With \(|A|\le M_A\), M19-267 gives the terminal payer dichotomy
+## 4. Exact wedge and finite-depth event — M19-268--269
 
-\[
-\boxed{
-\langle\Phi_E\rangle\ge\frac{c_3}{2M_A}
-}
-\]
-
-or
-
-\[
-\boxed{
-\left\langle\int A\cdot C\right\rangle
-\ge\frac{c_3}{2M_A}.
-}
-\]
-
-## 5. Full wedge and finite-depth signed event — M19-268--269
-
-For the exact wedge field
+For
 
 \[
 u=r^{-1}F(z,q,\omega),
-\qquad z=(-s)/r^2,
+\qquad
+z=(-s)/r^2,
 \]
 
-the q-averaged laws include
+the q-averaged energy law is
 
 \[
 \boxed{
-\mathscr E'+2z\mathscr J'+\mathscr J=\mathscr D\ge0,
+\mathscr E'+2z\mathscr J'+\mathscr J=\mathscr D\ge0.
 }
 \]
 
-and
+The vorticity law is
 
 \[
 \boxed{
@@ -166,31 +120,27 @@ and
 }
 \]
 
-M5-587 forces a finite depth \(z_*\) with
+M19-269 selects a finite depth \(z_E\) with
 
 \[
-\boxed{
-\mathscr Q_\omega(z_*)-\mathscr P_\omega(z_*)
-=
-\frac{\mathscr K_\omega(z_*)}{2z_*}>0.
-}
+\mathscr E'(z_E)=0,
+\qquad
+\mathscr D(z_E)>\frac{c_3}{M_A},
 \]
 
-On the residual terminal-payer branch, M19-269 forces an interior energy maximum \(z_E\) and
+and
 
 \[
 \boxed{
-\mathscr D(z_E)>\frac{c_3}{M_A},
-\qquad
 \frac d{dz}\bigl(\sqrt z\,\mathscr J(z)\bigr)_{z=z_E}>0.
 }
 \]
 
-This is a genuine finite-depth signed event, but it is not a globally one-way recurrent drift.
+This is a genuine signed finite-depth event, but not a globally one-way drift.
 
-## 6. Fixed-lag overlap and coboundary firewall — M19-270--271
+## 5. Fixed-lag production overlap and coboundary firewall — M19-270--271
 
-M5-589--592 already solve the old Eulerian-production/material-lineage overlap issue. Ergodicity yields one fixed finite lag \(h_*\) such that
+M5-589--592 already produce a positive-measure production-linked persistent-lineage event set. Ergodicity gives one fixed finite lag \(h_*\) with
 
 \[
 \boxed{
@@ -198,45 +148,19 @@ M5-589--592 already solve the old Eulerian-production/material-lineage overlap i
 }
 \]
 
-For every bounded/integrable state observable \(\mathcal O\), invariance gives
+For every bounded/integrable state observable \(\mathcal O\),
 
 \[
-\boxed{
 \left\langle
 \mathcal O\circ\sigma_{h_*}-\mathcal O
 \right\rangle=0.
-}
 \]
 
-Thus if
+Therefore a positive-mean signed event cannot be absorbed by a pure finite-lag coboundary.
 
-\[
-\Gamma_E
-=
-\Delta_{h_*}\mathcal O+\mathcal R,
-\]
+## 6. Stationary terminal-defect route — M19-272--274
 
-then the positive-mean signed event forces
-
-\[
-\boxed{
-\langle\mathcal R\rangle
-=
-\langle\Gamma_E\rangle>0.
-}
-\]
-
-The dynamic closure therefore requires a genuinely non-coboundary core remainder, a finite-budget forbidden defect, or an exact rigidity theorem.
-
-## 7. Stationary terminal point-force route — M19-272--274
-
-The stationary terminal point force is a signed \(\ell=1\) stress moment. It is exactly compatible with failure of uniform far-field stress tightness across approximants:
-
-\[
-\lim_{R\to\infty}\lim_{j\to\infty}F_j(R)
-\neq
-\lim_{j\to\infty}\lim_{R\to\infty}F_j(R).
-\]
+The stationary terminal point force is a signed \(\ell=1\) stress moment and can survive as a far-field stress-tightness / limit-commutation defect.
 
 The clean sufficient gate is
 
@@ -247,54 +171,255 @@ The clean sufficient gate is
 }
 \]
 
-Absent that, the alternative stationary target is
+The alternative is a critical weak-\(L^3\) zero-force stationary removability/rigidity theorem:
 
 \[
 \boxed{
-\mathcal T_{tail}^{zero-force-rigidity}
+\mathcal T_{tail}^{zero-force-rigidity}.
 }
 \]
 
-for critical weak-\(L^3\) zero-force stationary removability/rigidity.
+## 7. Graph, radial source, and ordinary winding NO-GOs — M19-275--281
 
-## 8. Graph/cohomology and spatial-source NO-GO — M19-275--278
-
-For the finite material-population graph, graph-exact edge 1-forms annihilate conservative cycle currents. Returning to the continuum yields
+Continuum bulk source satisfies
 
 \[
-\boxed{
 S_p
-:=
-\rho^p\kappa
-+\rho^p|\nabla\xi|^2
-+(p-1)\rho^{p-2}|\nabla\rho|^2
 =
 \frac1p\Delta(\rho^p).
-}
 \]
 
-Hence for every spatial test \(\psi\),
+The unique positive scale-critical radial pairing for \(p=2\) is the first radial enstrophy moment, but M5-531--534 show that this is an infinite diffuse spectator-tail quantity with vanishing direct core strain effect. It is not the missing finite payer.
+
+Ordinary great-circle winding is also not the missing signed index. Regular winding is material, total cross-sectional algebraic degree is conserved, and bounded-K CE-H prevents active/nodal membership changes except through already typed exits.
+
+## 8. M19-282: the positive-mean energy event is dissipation after q-averaging
+
+At state level define
+
+\[
+e(z,Y)=\int_{S^2}E_Yd\omega,
+\quad
+j(z,Y)=\int_{S^2}\mathcal J_{r,Y}d\omega,
+\quad
+d(z,Y)=\int_{S^2}\mathcal D_{F,Y}d\omega.
+\]
+
+Then
 
 \[
 \boxed{
-\int\psi S_p
+2\sqrt z\,\Gamma
 =
-\frac1p\int\rho^p\Delta\psi.
+\mathcal L_qj+d-\partial_ze,
+\qquad
+\Gamma:=\partial_z(\sqrt z\,j).
 }
 \]
 
-For \(p=2\), the unique scale-critical positive radial choice is \(\psi=r^3\):
+Unconditioned invariant averaging kills the q-generator and at \(z_E\), because \(\mathscr E'(z_E)=0\),
 
 \[
 \boxed{
-\int r^3S_2
-=6\int r|W|^2.
+\langle\Gamma_E\rangle
+=
+\frac{\mathscr D(z_E)}{2\sqrt{z_E}}>0.
 }
 \]
 
-But M5-531--534 show this is not a finite resource. It is the infinite first radial moment carried by a vanishing-amplitude diffuse remote spectator tail with asymptotically negligible direct strain influence on the active core.
+Thus the mean event is not a new signed source; its non-coboundary mean is ordinary wedge dissipation.
 
-Thus
+## 9. Carrier-localization audit and representation correction — M19-283--296
+
+Partial population localization was explored but exposed two extra gates:
+
+1. partial pressure-containing sphere currents require a coherent pressure gauge;
+2. finite persistent flux labels are not automatically a disjoint spatial material partition.
+
+Closed material-population energy laws are pressure-gauge invariant, and Galilean centering removes the constant velocity mode, but a quantitative velocity Poincare threshold and material-partition realization remain extra assumptions.
+
+Therefore these modules are retained as conditional refinements, not the primary dynamic route.
+
+## 10. Canonical global conditioned identity — M19-297
+
+Let
+
+\[
+m_h(Y)=m_{pd}(\sigma_{-h}Y)
+\]
+
+be a smooth lagged production marker. Define
+
+\[
+\mathscr E_m=\langle m_he\rangle,
+\quad
+\mathscr J_m=\langle m_hj\rangle,
+\quad
+\mathscr D_m=\langle m_hd\rangle,
+\]
+
+and
+
+\[
+\mathscr B_m
+:=-\langle(\mathcal L_qm_h)j\rangle.
+\]
+
+Then at \(z_E\),
+
+\[
+\boxed{
+2\sqrt{z_E}\langle m_h\Gamma_E\rangle
+=
+\mathscr D_m(z_E)
++Z_m(z_E)
++\mathscr B_m(z_E),
+}
+\]
+
+where
+
+\[
+\boxed{
+Z_m(z):=-\mathscr E_m'(z).
+}
+\]
+
+This identity is global, pressure-gauge invariant, and partition free.
+
+## 11. Conditioned depth channel — M19-298--301
+
+M5-475 backward Type-I decay gives
+
+\[
+|F(z,q,\omega)|\lesssim z^{-1/2},
+\]
+
+so
+
+\[
+\mathscr E_m(z)\to0
+\qquad(z\to\infty).
+\]
+
+At the terminal boundary
+
+\[
+\mathscr E_m(0)
+=
+\frac12
+\left\langle
+m_h\int_{S^2}|A|^2d\omega
+\right\rangle.
+\]
+
+Hence
+
+\[
+\boxed{
+\int_0^\infty Z_m(z)dz
+=
+\mathscr E_m(0).
+}
+\]
+
+Therefore `Z_m` is non-coboundary in q-time but an exact boundary derivative in wedge depth. It is a finite terminal scattering budget, not a new unbounded signed resource.
+
+At \(z_E\), because \(\mathscr E'(z_E)=0\),
+
+\[
+\boxed{
+Z_m(z_E)
+=-\operatorname{Cov}_\mu\!\left(m_h,\partial_ze(z_E)\right).
+}
+\]
+
+Thus the local sign is a production--depth-slope phase correlation. Endpoint information alone does not force it to vanish.
+
+If the depth branch supplies a fixed positive share of the event, smoothness thickens it to a positive depth lobe. That lobe is either paid by the finite terminal energy or forces quantified opposite-sign depth replenishment elsewhere.
+
+## 12. Full-depth conditioned wedge ODE — M19-300
+
+For every depth,
+
+\[
+\boxed{
+\mathscr E_m'
++2z\mathscr J_m'
++\mathscr J_m
+=
+\mathscr D_m+\mathscr B_m.
+}
+\]
+
+Equivalently,
+
+\[
+\boxed{
+Z_m
+=
+\mathscr D_m+\mathscr B_m
+-2z\mathscr J_m'-\mathscr J_m.
+}
+\]
+
+Thus conditioned dissipation, depth redistribution, and event hysteresis are exact balance channels, not three independently accumulable resources.
+
+For
+
+\[
+\mathscr G_m:=\sqrt z\,\mathscr J_m,
+\]
+
+\[
+\boxed{
+2\sqrt z\,\mathscr G_m'
+=
+\mathscr D_m+\mathscr B_m+Z_m.
+}
+\]
+
+## 13. q-z circulation source — M19-302
+
+Define
+
+\[
+K:=e+2zj.
+\]
+
+The state-level equation becomes
+
+\[
+\boxed{
+\partial_zK-\mathcal L_qj=d+j.
+}
+\]
+
+In an orbit chart this is the two-dimensional divergence law
+
+\[
+\boxed{
+\operatorname{div}_{q,z}(-j,K)=d+j.
+}
+\]
+
+Therefore the surviving q-hysteresis / z-replenishment circulation is not source free. Its exact source is nonnegative dissipation plus signed radial energy current.
+
+The conditioned weak form is
+
+\[
+\boxed{
+\left(\mathscr E_m+2z\mathscr J_m\right)'
+=
+\mathscr D_m+\mathscr J_m+\mathscr B_m.
+}
+\]
+
+A returning q-z balance must therefore be sustained by inward/negative radial current and/or event hysteresis against dissipation.
+
+## 14. Current hard-core decomposition
+
+The retained structure is
 
 \[
 \boxed{
@@ -304,136 +429,13 @@ Thus
 }
 \]
 
-The remote radial defect is not the missing M19-271 finite non-coboundary payer.
+The diffuse remote defect is not a direct order-one core payer.
 
-## 9. Great-circle winding/index audit — M19-279
+The active dynamic core has now been reduced to a coupled circulation problem rather than a search for another scalar positive payer.
 
-On the rank-one great-circle branch,
+## 15. Live closure gates
 
-\[
-f=W_1+iW_2=\rho e^{i\psi},
-\qquad
-N_\gamma=\frac1{2\pi}\oint_\gamma d\psi\in\mathbb Z.
-\]
-
-M17-007 makes regular winding filaments material, so
-
-\[
-\boxed{N_\gamma\circ\sigma_h-N_\gamma=0.}
-\]
-
-The natural regular-nodal signed multiplier is also an exact coboundary. M17-010 gives
-
-\[
-D_B\log|\det G_h|=2\kappa-3,
-\]
-
-so
-
-\[
-\boxed{
-\int_\theta^{\theta+h}(2\kappa-3)d\tau
-=
-\log|\det G_h(\theta+h)|-
-\log|\det G_h(\theta)|.
-}
-\]
-
-On a recurrent uniformly regular filament its invariant mean vanishes. Therefore neither the conserved integer winding nor the regular Jacobian drift can pay the positive-mean M19-271 remainder.
-
-## 10. Total algebraic index conservation — M19-280
-
-Let \(D(\theta)\) be a material transverse disk whose boundary remains in the active set. The boundary phase map
-
-\[
-\zeta=f/|f|:\partial D(\theta)\to S^1
-\]
-
-has materially frozen degree
-
-\[
-\boxed{
-N_{\partial D}
-=\deg(\zeta|_{\partial D(\theta)})
-=\text{constant}.
-}
-\]
-
-At regular times,
-
-\[
-\boxed{
-\sum_{p_a\in D(\theta)}\operatorname{ind}(p_a)
-=N_{\partial D}.
-}
-\]
-
-Therefore purely interior finite-jet nodal creation, annihilation, merger, splitting, or reconnection has zero net signed algebraic index change. Unsigned turnover can remain, but it is not a signed closure resource.
-
-## 11. Boundary-crossing index returns to existing CE-H exits — M19-281
-
-M17-283 gives on the bounded-K CE-H tangent corridor
-
-\[
-\partial_\tau V=\Delta V,
-\qquad
-\Delta V=KV
-\quad\Longrightarrow\quad
-\boxed{\partial_\tau V=KV.}
-\]
-
-Hence at a fixed material label
-
-\[
-V(\tau)=V(\tau_0)
-\exp\left(\int_{\tau_0}^{\tau}K\right),
-\]
-
-so active/nodal membership cannot change while bounded \(K\), CE-H continuation, amplitude representation, and the domain/interface representation remain valid.
-
-Thus a nodal crossing of the material boundary requires
-
-\[
-\boxed{
-G_{K\text{-}bound\ failure}
-\lor
-G_{CEH/active\text{-}set\ failure}
-\lor
-G_{nodal\ amplitude\ degeneration}
-\lor
-G_{domain/interface/representation}.
-}
-\]
-
-Large winding/reuse decompactification is separately reduced by M17-355--356 and M19-019 to critical packing, flux fragmentation, spatial reuse, or geometry escape.
-
-Therefore
-
-\[
-\boxed{
-\text{ordinary great-circle algebraic winding is not a standalone realization of }\mathcal T_{aper}^{signed/index}.
-}
-\]
-
-This is conditional on the bounded-K CE-H corridor; outside it, the explicit exits above remain open.
-
-## 12. Current hard-core decomposition
-
-The retained hard structure is
-
-\[
-\boxed{
-\text{active bounded/intermediate recurrent core}
-\quad\oplus\quad
-\text{diffuse remote weighted spectator defect}.
-}
-\]
-
-The active core carries positive production, persistent fixed-flux populations/lineages, projective-or-anchored events, and finite-depth signed energy transport. The remote defect carries infinite weighted radial occupation but is not a direct order-one core payer.
-
-## 13. Live closure gates
-
-### A. Physical derivative/GMS route
+### A. Physical derivative / GMS
 
 \[
 \boxed{
@@ -443,7 +445,7 @@ The active core carries positive production, persistent fixed-flux populations/l
 
 plus physical incidence, representation coherence, and root eligibility.
 
-### B. Stationary terminal-defect route
+### B. Stationary terminal defect
 
 \[
 \boxed{
@@ -453,18 +455,33 @@ plus physical incidence, representation coherence, and root eligibility.
 }
 \]
 
-### C. Dynamic recurrent-core route
+### C. Dynamic recurrent core
 
-The primary live target is now
+The live global balance is
 
 \[
 \boxed{
-\mathcal T_{tail}^{lag-defect/core}:
-\text{identify the explicit non-coboundary PDE remainder in the fixed-lag production/energy block.}
+\mathcal T_{cycle}^{qz}:
+\text{classify the coupled production-hysteresis / depth-return / signed-radial-current circulation.}
 }
 \]
 
-A more general residual target remains
+The exact source law is
+
+\[
+\boxed{d+j.}
+\]
+
+The next high-value calculation is therefore the signed radial-current endpoint/return problem:
+
+\[
+\boxed{
+\mathcal T_{radial}^{signed}:
+\text{determine whether the inward radial current required to offset dissipation is compatible with the terminal scattering flux and backward Type-I endpoint.}
+}
+\]
+
+A broader residual factor/observability route remains
 
 \[
 \boxed{
@@ -472,82 +489,53 @@ A more general residual target remains
 }
 \]
 
-The generic `signed/index` label is retained only for genuinely new index objects; **ordinary great-circle winding number and its total algebraic cross-section index are no longer candidates** on the controlled corridor.
-
 ### D. Global proof-tree gates
 
 `ROOT-CERT`, historical non-CE-H roots, ancestry/representation gates, and remote critical survivor classification remain open.
 
-## 14. Permanent firewalls through M19-281
+## 16. Permanent firewalls through M19-302
 
 \[
-\boxed{\text{ancestral }K^{-3}\text{ discount}\neq\text{physical base gain}},
+\boxed{\text{ancestral discount}\neq\text{physical base gain}},
 \]
 \[
 \boxed{\text{finite discounted ledger}\not\Rightarrow\text{epsilon-smallness}},
 \]
 \[
-\boxed{\text{exact CE-H}\not\Rightarrow\text{singularity or Liouville contradiction}},
+\boxed{\text{exact CE-H}\not\Rightarrow\text{Liouville contradiction}},
 \]
 \[
-\boxed{\text{finite physical energy}\not\Rightarrow\text{critical }1/r\text{ tail exclusion}},
-\]
-\[
-\boxed{\text{positive terminal density}\not\Rightarrow\text{nonsummable physical cost}},
+\boxed{\text{finite physical energy}\not\Rightarrow\text{critical tail exclusion}},
 \]
 \[
 \boxed{\text{finite-depth positive event}\not\Rightarrow\text{recurrent monotonicity}},
 \]
 \[
-\boxed{\text{fixed-lag bounded scalar difference has zero invariant mean}},
+\boxed{\text{finite-lag bounded state difference has zero invariant mean}},
 \]
 \[
-\boxed{\text{graph cycle freedom}\not\Rightarrow\text{source-free continuum topological charge}},
+\boxed{\text{ordinary winding/index}\not\Rightarrow\text{positive signed drift}},
 \]
 \[
-\boxed{\text{positive radial source pairing}\not\Rightarrow\text{finite critical budget}},
+\boxed{\text{conditioned depth channel}\neq\text{new unbounded signed resource}},
 \]
 \[
-\boxed{\text{ordinary conserved winding index}\not\Rightarrow\text{positive signed drift}},
-\]
-\[
-\boxed{\text{interior nodal turnover}\not\Rightarrow\text{net algebraic index production}},
+\boxed{\text{event hysteresis + depth replenishment}\not\Rightarrow\text{source-free q-z cycle}},
 \]
 \[
 \boxed{\text{conditional branch reductions}\neq\text{global 3D Navier--Stokes regularity}}.
 \]
 
-## 15. Immediate next target
+## 17. Immediate next target
 
-Do **not** generate another unsigned local payer, do **not** return to the radial spectator reservoir as a finite-budget payer, and do **not** reuse ordinary great-circle winding as a signed-index shortcut.
+Do not generate another unsigned local payer and do not reopen ordinary winding or the diffuse radial spectator moment as closure shortcuts.
 
-The immediate dynamic calculation is:
+The immediate dynamic calculation is to analyze the global signed radial energy current `j` across the full wedge:
 
-\[
-\boxed{
-\Gamma_E
-=
-\Delta_{h_*}\mathcal O
-+
-\mathcal R_{core}
-}
-\]
-
-on the M19-270 fixed-lag production/energy block, with \(\mathcal R_{core}\) written explicitly in PDE/material terms. Since
-
-\[
-\langle\Gamma_E\rangle>0,
-\]
-
-one must have
-
-\[
-\boxed{\langle\mathcal R_{core}\rangle>0.}
-\]
-
-The next audit must determine whether \(\mathcal R_{core}\) reduces to already finite-budget strain/diffusion/interface/export channels, or exposes a genuinely new forbidden defect.
-
-The factor/observability route is secondary because M19-061--074 already show that compact recurrence, injectivity, weighted contraction attempts, and recurrence plus unique continuation do not by themselves eliminate an aperiodic translation factor.
+1. certify its terminal value from the scattering flux;
+2. obtain the strongest valid large-z decay from the Type-I ancient branch;
+3. determine whether the negative radial-current compensation required by M19-302 must return, export, or create an endpoint defect;
+4. if it can circulate indefinitely, identify the resulting recurrent factor explicitly.
 
 \[
 \boxed{\text{GLOBAL 3D NAVIER--STOKES REGULARITY REMAINS UNPROVED.}}
