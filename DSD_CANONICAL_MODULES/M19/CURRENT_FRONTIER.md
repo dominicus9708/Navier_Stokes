@@ -1,8 +1,8 @@
 # M19 Current Frontier
 
 **Date:** 2026-09-15  
-**Current tip:** **M19-259**  
-**Status:** ACTIVE CALCULATION / WHOLE-SPACE TRANSPARENT MOVING-SPHERE + GALILEAN WEIGHTED-PAYER FRONTIER / LOG-SCALE DENSITY + SPACETIME INCIDENCE + REPRESENTATION/ROOT GATES OPEN / APERIODIC SIGNED FRONTIER OPEN / FINAL ROOT-PROOF CERTIFICATION OPEN
+**Current tip:** **M19-260**  
+**Status:** ACTIVE CALCULATION / WHOLE-SPACE TRANSPARENT MOVING-SPHERE + GALILEAN WEIGHTED-PAYER FRONTIER / TWO-SCALE COMPOSITE-RADIUS CORRECTION / DIAGONAL ANCESTRY-CONVERSION + TEMPORAL INCIDENCE + REPRESENTATION/ROOT GATES OPEN / APERIODIC SIGNED FRONTIER OPEN / FINAL ROOT-PROOF CERTIFICATION OPEN
 
 \[
 \boxed{\text{GLOBAL 3D NAVIER--STOKES REGULARITY REMAINS UNPROVED.}}
@@ -146,9 +146,9 @@ so Hölder gives
 \boxed{D^3u\in L^2\text{ physically}\Longrightarrow\mathcal P_{GMS}^{log}(V)<\infty.}
 \]
 
-Thus low-frequency and pressure are not independent analytic gates once the physical raw-H2 transfer is available.
+Thus low-frequency and pressure are not independent analytic gates once a genuine physical raw-H2 transfer is available.
 
-## 7. M19-256 — exact ancestry scaling match
+## 7. M19-256 — local scaling identity retained, representation interpretation corrected by M19-260
 
 For
 
@@ -167,64 +167,38 @@ r^{1-2k}
 }
 \]
 
-Therefore the M17 ancestry factors are exactly the physical parabolic derivative factors:
+Thus the raw-H2 physical exponent is \(r^{-3}\). This scaling calculation remains valid.
 
-\[
-k=1:r^{-1},\qquad k=2:r^{-3},\qquad k=3:r^{-5}.
-\]
+M19-260 corrects the interpretation of the historical M17 record symbol: the M17 `R_m` is a large backward blow-down factor, not directly a small physical radius. Therefore the exponent match must be applied after composing the first-hitting base scale with the backward record factor.
 
-The relevant raw-H2 case is \(k=2\) on vorticity because \(D^2\omega\simeq D^3u\). Hence there is no exponent mismatch between the certified M17 \(r^{-3}\) ledger and the physical derivative level needed by M19-255.
-
-For moving record centers \(X_m(t)\), define
-
-\[
-\Theta_m(V)=r_m^{-1}\sup_{t\in I_m}|X_m(t)-x_0-V(t-t_0)|.
-\]
-
-Failure of every fixed frame is the explicit exit
+For moving physical centers the tracking exit remains
 
 \[
 \boxed{
 \mathcal E_{track}:
-\forall V,\quad\limsup_{m\to\infty}\Theta_m(V)=\infty.
+\forall V,\quad\limsup_m\Theta_m(V)=\infty.
 }
 \]
 
-More generally, transfer failure is typed as
+## 8. M19-257 — abstract transfer theorem retained only for a composite physical-radius variable
+
+M19-257's algebraic statement is valid for a family of **actual physical radii** \(\rho_m\) satisfying scale comparability with the target GMS shells.
+
+It must not identify the historical M17 blow-down factor \(R_m^{bd}\to\infty\) directly with \(r_j\to0\).
+
+The historical formula
 
 \[
-\boxed{
-\mathcal E_{track}
-\lor\mathcal E_{domain}
-\lor\mathcal E_{coverage}
-\lor\mathcal E_{overlap}
-\lor\mathcal E_{genealogy}
-\lor\mathcal E_{interface}.
-}
+\sum_m(R_m^{bd})^{-3}H_m^{rec}<\infty
 \]
 
-## 8. M19-257 — explicit record-to-physical transfer contract
+is a normalized-parent ancestry ledger. Converting it to a physical shell ledger requires the first-hitting base factor as well.
 
-Let \(r_j=2^{-j}r_0\) be physical GMS scales and let \(\mathcal M(j)\) be the records assigned to physical shell \(j\). A sufficient algebraic transfer contract is:
+The root/genealogy eligibility gate isolated by M19-257 remains logically separate and OPEN.
 
-\[
-\Lambda^{-1}r_j\le R_m\le\Lambda r_j
-\qquad(m\in\mathcal M(j)),
-\]
+## 9. M19-258 — whole-space field and pressure gates collapse after genuine physical transfer
 
-physical shell cost domination by the assigned record costs, and uniformly bounded reuse
-
-\[
-\#\{j:m\in\mathcal M(j)\}\le N.
-\]
-
-Then the matching \(R^{-3}\) weight and bounded reuse convert the M17 record ledger into the required physical raw-H2 ledger. Thus exponent matching alone is not enough; scale-comparable coverage and reuse control are the actual combinatorial bridge.
-
-M19-257 also separated the upstream root/genealogy eligibility gate from the analytic transfer itself.
-
-## 9. M19-258 — whole-space field and pressure gates collapse
-
-For an untruncated whole-space divergence-free record field,
+For an untruncated whole-space divergence-free field,
 
 \[
 \widehat\omega=i\xi\times\widehat u,
@@ -243,7 +217,7 @@ so
 }
 \]
 
-Therefore, if an assigned M17 record is the same untruncated whole-space rescaled field as the physical GMS record, no separate localized Biot--Savart derivative loss occurs. Once the physical H3 transfer is achieved, M19-255 and Calderón--Zygmund give
+Therefore, once a representation-safe physical H3 transfer is genuinely established, M19-255 plus Calderón--Zygmund gives
 
 \[
 u\in L^6_{x,t},
@@ -251,122 +225,217 @@ u\in L^6_{x,t},
 \qquad \mathcal P_{GMS}^{log}(V)<\infty.
 \]
 
-If the M17 record variable is actually cutoff/truncated at the relevant step, the local field/interface gate reopens and the conservative M19-257 formulation applies.
+If the relevant record field is cutoff/truncated, the local field/interface gate reopens.
 
-## 10. M19-259 — dyadic scale comparability removes bounded reuse as an independent gate
+## 10. M19-259 — one-index scale-density audit is superseded for the historical M17 record parameter
 
-Define
+M19-259 correctly observed that an arbitrary cofinal physical-radius sequence need not be logarithmically dense and that scale comparability automatically bounds shell-index reuse.
 
-\[
-a_m=-\log_2(R_m/r_0),
-\qquad r_j=2^{-j}r_0.
-\]
-
-Then
+However its direct notation
 
 \[
-\Lambda^{-1}r_j\le R_m\le\Lambda r_j
-\iff
-|a_m-j|\le\log_2\Lambda.
+R_m\to0
 \]
 
-For a fixed record \(m\), the number of dyadic shell indices satisfying this is at most
+cannot be assigned to the historical M17 record factor, because M5-478/M17-307 use
 
 \[
-\boxed{N_\Lambda=2\lceil\log_2\Lambda\rceil+1.}
+R_m^{bd}=\sqrt{T_m}\asymp q^{m/2}\to\infty.
 \]
 
-Thus uniform scale comparability automatically supplies bounded shell-index reuse.
+Hence the generic counterexample \(R_m=2^{-2^m}r_0\) remains a valid abstract warning but is not the intrinsic scale law of the canonical first-hitting records.
 
-The actual radius-coverage condition is logarithmic relative density:
+The actual scale variable is the two-index composite radius of M19-260.
+
+## 11. M19-260 — exact two-scale composition and diagonal ancestry-conversion gate
+
+At first-hitting stage \(j\), let
+
+\[
+r_j=W_j^{-1/2},
+\qquad r_{j+1}/r_j=q^{-1/2}.
+\]
+
+Let \(K_k\asymp q^{k/2}\) be the backward record factor for age \(k\). The composed physical radius is
 
 \[
 \boxed{
-\mathcal T_{GMS}^{scale-density}:
-\forall j\gg1\quad\exists m:\ |a_m-j|\le L.
+\rho_{j,k}=r_jK_k.
 }
 \]
 
-For an ordered cofinal record sequence, a sufficient form is
+The exact ancestor-radius identity gives
 
 \[
 \boxed{
-\sup_m\log_2\frac{R_m}{R_{m+1}}<\infty.
+\rho_{j,k}=r_jK_k=r_{j-k}.
 }
 \]
 
-Cofinality \(R_m\to0\) and record-window bounded overlap do not imply this. The abstract sequence \(R_m=2^{-2^m}r_0\) is a counterexample. This does not assert that the actual M17 records are sparse; it identifies what must be checked.
-
-Scale density still does not give space-time/center coverage. Therefore
+For raw vorticity H2, the complete derivative pullback is
 
 \[
 \boxed{
-\mathcal T_{GMS}^{cover}
+r_j^{-3}K_k^{-3}H_{j,k}^{rec}
 =
-\mathcal T_{GMS}^{scale-density}
-+\mathcal T_{GMS}^{incidence}.
+\rho_{j,k}^{-3}H_{j,k}^{rec}.
 }
 \]
 
-## 11. Updated conditional closure
+Thus M19-256's exponent match is correct only after both scales are composed.
 
-Under the same-field whole-space representation, the current entered-branch transfer complex is
+The physical shell index \(n\) is represented when
+
+\[
+\boxed{j-k=n.}
+\]
+
+The actual transfer problem is therefore a diagonal ancestry-conversion theorem: choose pairs \((j_n,k_n)\) with \(j_n-k_n=n\) while preserving late-CE-H eligibility, physical representation, center/time incidence and bounded ancestry reuse.
+
+The full first-hitting radius lattice itself is geometric and has no independent scale-gap:
+
+\[
+\sup_n\log(r_n/r_{n+1})=\tfrac12\log q<\infty.
+\]
+
+A gap can re-enter only through sparse subsequence/branch selection. M5-478 does pass to compactness subsequences, and arbitrary such subsequences need not have bounded generation gaps.
+
+Accordingly the former primitive `scale-density` gate is replaced by
 
 \[
 \boxed{
-\mathcal T_{GMS}^{scale-density}
-+\mathcal T_{GMS}^{incidence}
-+\mathcal T_{GMS}^{repr}
-+\mathcal T_{GMS}^{root}.
+\mathcal T_{GMS}^{diag-AC}
 }
 \]
 
-If these hold, the M17 \(R^{-3}\) raw-H2 ledger transfers to the physical GMS neighborhood, M19-255/258 give \(\mathcal P_{GMS}^{log}(V)<\infty\), and M19-254 gives a contradiction.
+plus a possible explicit **subsequence ancestry-gap** exit when late CE-H information exists only on a sparse selected family.
+
+## 12. Incidence decomposition after M19-260
+
+M18-043 already proves the center split
+
+\[
+G_{center\ turnover}
+\Longrightarrow
+G_{center\ nesting}
+\lor
+S_{remote}^{formed},
+\]
+
+with
+
+\[
+|X_*-X_j|\lesssim r_j
+\]
+
+on the nested branch. Thus the purely spatial-center part is substantially routed versus the remote root.
+
+M18-045 shows that the remaining genealogy/contact problem is temporal: instantaneous material contact and the correct ancestor radius do not imply enough physical return time. The weighted return density
+
+\[
+\mathfrak R_k=\rho_k^{-1}\sum_\ell\tau_{k,\ell}
+\]
+
+still lacks the required lower bound on a sufficiently large age set.
+
+Therefore the physical incidence problem is now organized as
+
+\[
+\boxed{
+\mathcal T_{GMS}^{incidence}
+=
+\mathcal T_{center}
++
+\mathcal T_{time-return}
++
+\mathcal T_{diag-AC}.
+}
+\]
+
+On the center-nested non-remote branch, the active unresolved parts are temporal return and diagonal ancestry conversion.
+
+## 13. Updated conditional GMS closure
+
+The analytic endpoint remains:
+
+\[
+D^3u\in L^2_{loc}
+\Longrightarrow
+u\in L^6_{x,t},
+\quad
+p\in L^3_{x,t},
+\quad
+\mathcal P_{GMS}^{log}(V)<\infty,
+\]
+
+which contradicts the singular-point logarithmic payer.
+
+But the physical H3 input must be obtained through a representation-safe composite transfer.
+
+A corrected sufficient complex is
+
+\[
+\boxed{
+\mathcal T_{GMS}^{diag-AC}
++
+\mathcal T_{GMS}^{time-return}
++
+\mathcal T_{GMS}^{repr}
++
+\mathcal T_{GMS}^{root}.
+}
+\]
 
 This is conditional branch closure, not global regularity.
 
-## 12. Permanent firewalls through M19-259
+## 14. Permanent firewalls through M19-260
 
 \[
-\boxed{\text{unweighted finite integrability}\not\Rightarrow\text{finite critical GMS payer}},
+\boxed{\text{M17 blow-down factor }R_m^{bd}\neq\text{small physical shell radius}},
 \]
 \[
-\boxed{\text{exact scaling-exponent match}\not\Rightarrow\text{domain/scale coverage}},
+\boxed{\text{matching derivative exponent}\neq\text{physical transfer without the first-hitting base scale}},
 \]
 \[
-\boxed{\text{record scales cofinal at }0\not\Rightarrow\text{bounded logarithmic scale gaps}},
+\boxed{\rho_{j,k}=r_jR_k^{bd}=r_{j-k}\text{ must precede any scale comparison}},
 \]
 \[
-\boxed{\text{bounded record-window overlap}\not\Rightarrow\text{log-scale density}},
+\boxed{\text{full geometric first-hitting family}\neq\text{arbitrary compactness subsequence}},
 \]
 \[
-\boxed{\text{log-scale density}\not\Rightarrow\text{space-time incidence}},
+\boxed{\text{instantaneous material contact}\neq\text{parabolic spacetime incidence/return weight}},
 \]
 \[
-\boxed{\text{global Fourier velocity-vorticity identity}\not\Rightarrow\text{record-to-physical representation coherence}},
+\boxed{\text{global Fourier identity}\not\Rightarrow\text{record-to-physical representation coherence}},
 \]
 \[
 \boxed{\text{conditional GMS branch closure}\not\Rightarrow\text{ROOT-CERT or non-CE-H closure}}.
 \]
 
-## 13. Immediate next target
+## 15. Immediate next target
 
-Audit the actual M17 record-selection/first-hitting rule for a bounded logarithmic scale-gap theorem or equivalent relative-density statement.
+Audit exactly where the late CE-H/raw-H2 hypotheses become valid relative to the M5-478 record sequence.
 
-If scale density is certified, the next gate is
-
-\[
-\boxed{\mathcal T_{GMS}^{incidence}}
-\]
-
-— whether the comparable-scale record windows cover the actual candidate singular point's physical parabolic shells in one fixed Galilean frame.
-
-If no scale-density theorem exists, retain the explicit survivor
+The next binary split is:
 
 \[
-\boxed{\mathcal E_{scale-gap}}
+\boxed{
+\text{uniform prelimit CE-H/raw-H2 control on the full geometric record family}
+}
 \]
 
-unless another record-selection mechanism fills the skipped scales.
+versus
+
+\[
+\boxed{
+\text{CE-H/raw-H2 control only after subsequential ancient-limit extraction}.
+}
+\]
+
+If the former holds, construct the diagonal map \(j-k=n\) directly and proceed to the temporal-incidence theorem.
+
+If the latter holds, prove bounded-gap/syndetic return of the CE-H selected states or retain an explicit subsequence ancestry-gap survivor.
+
+Then combine the result with M18-045's temporal return-weight frontier.
 
 Global regularity remains unproved.
