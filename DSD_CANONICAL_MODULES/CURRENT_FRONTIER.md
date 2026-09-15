@@ -1,21 +1,19 @@
 # Current Canonical Frontier
 
-Date: 2026-09-11  
-Current DSD audit tip: **M18-052**  
-Detailed late-CE-H derivation index: `DSD_CANONICAL_MODULES/M17/CURRENT_FRONTIER.md`  
-Detailed current audit index: `DSD_CANONICAL_MODULES/M18/CURRENT_FRONTIER.md`  
-Status: **AUTHORITATIVE REPOSITORY NAVIGATION / GLOBAL PROOF-TREE STATUS**
+**Date:** 2026-09-16  
+**Current active calculation tip:** **M19-323**  
+**Frozen audit family:** M18  
+**Detailed active frontier:** `DSD_CANONICAL_MODULES/M19/CURRENT_FRONTIER.md`  
+**Detailed late-CE-H derivation index:** `DSD_CANONICAL_MODULES/M17/CURRENT_FRONTIER.md`  
+**Status:** AUTHORITATIVE REPOSITORY NAVIGATION / GLOBAL PROOF-TREE STATUS
 
 \[
 \boxed{\text{GLOBAL 3D NAVIER--STOKES REGULARITY REMAINS UNPROVED.}}
 \]
 
-## 1. Global proof tree after the M18 repository-wide audit
+## 1. Repository-wide proof-tree level
 
-The old navigation file treated ROOT-CERT, four non-CE-H branches, and many CE-H internal exits as parallel OPEN items.
-M18-040--052 separates their proof-tree levels.
-
-The current working upstream classification is
+The active upstream classification remains
 
 \[
 \boxed{
@@ -27,27 +25,13 @@ The current working upstream classification is
 \lor
 \mathcal R_{AC}
 \lor
-\text{compact hard similarity survivor}.
+\text{compact hard survivor}.
 }
 \]
 
-Here
+This remains an active-index DSD classification, not yet a theorem-ready universal ROOT-CERT theorem.
 
-\[
-\boxed{
-\begin{aligned}
-\mathcal R_{remote}&:=\mathcal R_{remote/II/historical},\\
-\mathcal R_{critical}&:=G_{escaping\ critical\ tail/W1\ boundary/realization},\\
-\mathcal R_{AC}&:=\mathcal R_{ancestry\ conversion}.
-\end{aligned}
-}
-\]
-
-This is an **active-index DSD classification**, not yet a theorem-ready universal ROOT-CERT result. Historical completeness and exact arbitrary-singularity dependency certification remain OPEN.
-
-## 2. Canonical survivor menu is downstream
-
-Once the compact hard production system is reached, the subsystem split is
+The compact downstream survivor menu remains
 
 \[
 \boxed{
@@ -55,344 +39,315 @@ CP\!-E\lor CP\!-S\lor CE\!-T\lor Migration\lor CE\!-H.
 }
 \]
 
-M18-040 gives
+Historical non-CE-H branches remain downstream unresolved branches; they are not promoted to new upstream roots.
 
-\[
-\boxed{
-\begin{aligned}
-CP\!-E&\to P/H,\\
-CP\!-S&\to P\text{ or compactness loss},\\
-CE\!-T&\to H,\\
-Migration&\to P.
-\end{aligned}
-}
-\]
-
-Thus the four non-CE-H branches remain unresolved downstream branches, but they are no longer separate upstream ROOT-CERT roots.
-Their standard PDE resource is known; the unresolved part is mainly ancestry placement, nonreuse, scale economics, or compactness loss.
-
-CE-H owns the long M12--M18 internal coefficient/tube/jet tree.
-
-## 3. ROOT-CERT audit status
-
-M18-041 decomposed ROOT-CERT into entry, compactness, recurrence, production, branch, and ancestry gates.
-
-M18-042 recovered the primitive W1/ratchet corridor assumptions.
-
-M18-043--049 routed the active complement families into the three root complexes or the downstream canonical tree:
-
-- center turnover -> nested center or remote active satellite;
-- normalized-enstrophy escalation -> remote active satellite;
-- Type-II / strong remote source -> Euler-scale remote root;
-- weak-L3 escalation -> remote or paid turnover;
-- high remote frequency -> remote or paid turnover;
-- stage-clock degeneration -> derived clock bounds or paid turnover;
-- broad material genealogy loss -> paid exposure/replacement, remote/critical export, or physical return-weight deficiency;
-- recurrent-core vanishing -> excluded on the compact first-hitting lane;
-- global realization/tail failure -> critical or remote root.
-
-The active-index sweep found no fourth unmatched upstream root.
-
-## 4. W1 / ratchet / terminal-hull bridge
-
-M18-050 originally isolated a missing W1--ratchet middle bridge.
-
-M18-051 shows that on the complement of the three root complexes, bounded normalized enstrophy, Type-I control, center nesting, bounded Campanato, bounded shell frequency, bounded weak-L3, and local analyticity give global \(L^p\), \(p>3\), tail tightness and a nontrivial compact complete two-sided W1 similarity hull.
-
-The first-hitting/Leray clocks satisfy
-
-\[
-\boxed{s_j=j\log q+O(1).}
-\]
-
-M18-052 then shows that the M5-567 scattering map need not be strongly continuous in a global tail topology for M5-571's ergodic-factor argument.
-On the passive branch it is a Borel measurable equivariant factor:
-
-\[
-\boxed{
-A_{\sigma_tY}(q)=A_Y(q-t/2).
-}
-\]
-
-Thus invariant and ergodic hull measures push forward to invariant and ergodic log-radius scattering measures by measure-theoretic factor theory.
-
-Failure routes back to remote, critical-tail/trace, or ancestry-conversion roots.
-
-Therefore there is no independent fourth `B-WR` root in the current active classification.
-
-## 5. Three remaining upstream root complexes
+## 2. Permanent global root complexes
 
 ### R-remote
 
-\[
-\boxed{\mathcal R_{remote/II/historical}.}
-\]
-
-Open examples:
-
-- nontrivial Euler-scale Type-II ancient profiles;
-- failure of Euler-scale compactness;
-- active remote source/historical recycling that does not reduce to a finite parent contradiction.
+Includes Euler-scale Type-II/remote source/history/compactness failures not yet reduced to a finite parent contradiction.
 
 ### R-critical
 
-\[
-\boxed{G_{escaping\ critical\ tail/W1\ boundary/realization}.}
-\]
-
-Open examples:
-
-- bounded critical \(1/R\) velocity tail;
-- W1 truncated-amplitude boundary defect;
-- low-frequency \(\dot H^{-1}\) / velocity-tail control;
-- terminal trace or global realization failures;
-- nonreturning critical export to similarity infinity.
+Includes critical velocity/tail realization, terminal trace/suitable compactness, low-frequency escape, nonreturning similarity export, and the nonconstant terminal dilation/log-radius hard object.
 
 ### R-AC
 
-\[
-\boxed{\mathcal R_{ancestry\ conversion}.}
-\]
+Includes ancestry conversion, physical incidence, bounded-reuse/overlap, parent-to-record genealogy, and finite-parent budget placement.
 
-Open examples:
+`ROOT-CERT` and all three root closures remain OPEN.
 
-- fixed-parent large-record embedding;
-- nonreuse / bounded overlap;
-- boundary-work-only turnover with no finite absolute parent budget;
-- physical ancestral return-density lower bounds.
+## 3. M19 whole-space/GMS update
 
-## 6. Exact ancestry economics
+The no-slip cavity branch is auxiliary only.
 
-For
+M19-254 gives the singular logarithmic payer
 
 \[
-\Omega_R(y,s)=R^2\Omega(Ry,R^2s),
+\mathcal P_{GMS}^{log}(V)=\infty.
 \]
 
-the spacetime derivative resource satisfies
-
-\[
-\boxed{q_k^{parent}=R^{1-2k}q_k^{(R)}.}
-\]
-
-Hence
-
-\[
-\begin{array}{c|c}
-\text{resource}&\text{parent weight}\\
-\hline
-\Omega\text{ spacetime }L^2&R^{+1}\\
-\nabla\Omega&R^{-1}\\
-D^2\Omega&R^{-3}\\
-D^3\Omega&R^{-5}
-\end{array}
-\]
-
-Each extra derivative weakens ancestry by \(R^{-2}\).
-
-One-to-one rerecording preserves the parent charge exactly and does not create multiplicity.
-
-For a certified bounded-overlap fixed-parent record family, standard energy gives the positive-\(R\) ledger
+M19-313 sharpens the analytic sufficient endpoint:
 
 \[
 \boxed{
-\sum_mR_m\int E_m(s)ds<\infty.
+D^2u\in L_t^2L_x^2
+\Longrightarrow
+\mathcal P_{GMS}^{log}(V)<\infty,
 }
 \]
 
-This is much stronger than the generic palinstrophy/raw-H2/D3 ledgers.
+and more generally strong derivative order `m>11/6` is sufficient by mixed space-time interpolation.
 
-But a fixed own-scale first-hitting payment at shrinking physical scale \(r_j\) can still have summable physical cost
+But the actual ancestral palinstrophy resource restores physically as
 
 \[
-q_{E,j}^{phys}\asymp r_jq_{E,j}.
+Q_{pal}^{phys}=ho^{-1}p_R,
 \]
 
-Thus own-scale event frequency and fixed-parent ancestry multiplicity must never be conflated.
+so the transfer remains critical.
 
-## 7. Certified late CE-H resources
+M19-315--317 show:
 
-The late CE-H chain retains the exact resources
+- palinstrophy has an `r`-weighted temporal Carleson structure;
+- the singular GMS floor is nested and cannot be charged to disjoint annuli without a nonreuse bridge;
+- even one order-one nonreused event per geometric record is compatible with the finite `R^{-1}` ancestral ledger;
+- linear-in-record multiplicity or equivalent amplification would be needed, while M18-055 only supplies `O(1)` recurrence multiplicity.
+
+Thus another multiplicity/unsigned-payer attempt is not the primary frontier.
+
+## 4. Canonical interior record packet — M19-318--321
+
+M19-318 proves that the M5-478 old-carrier mark automatically supplies a fixed EVENT-ANNULAR palinstrophy payment near normalized `s=-1`.
+
+M19-319 then proves simultaneous three-level record saturation:
 
 \[
 \boxed{
-\sum_mR_m^{-1}\int_I\|\nabla\Omega_m\|_2^2ds<\infty,
+q_0\asymp1,
+\qquad
+q_1\asymp1,
+\qquad
+q_2\asymp1,
 }
 \]
 
+for enstrophy, palinstrophy, and raw-H2 on fixed normalized record cells.
+
+Undoing the record scaling gives sharp ancient record-window rates
+
+\[
+\int E\asymp T^{1/2},
+\qquad
+\int P\asymp T^{-1/2},
+\qquad
+\int H\asymp T^{-3/2}.
+\]
+
+M19-320 proves a fixed normalized Fourier annulus carries positive enstrophy/palinstrophy/raw-H2 charge.
+
+M19-321 strengthens this to a uniform spectral variance gap
+
 \[
 \boxed{
-\sum_mR_m^{-3}\int_I\|\Delta\Omega_m\|_2^2ds<\infty,
+q_2-rac{q_1^2}{q_0}
+\ge c_{var}>0.
 }
+\]
+
+Therefore the canonical interior packet is genuinely own-scale and quantitatively non-monochromatic. It cannot be explained solely by IR or UV leakage.
+
+## 5. Exact CE-H coefficient consequence — M19-322--323
+
+On the exact CE-H compact lane
+
+\[
+\Delta\Omega=\kappa\Omega,
+\]
+
+M19-322 identifies the spectral variance with the enstrophy-weighted coefficient variance:
+
+\[
+\boxed{
+\operatorname{Var}_\Omega(\kappa)
+=
+\frac1{q_0}
+\left(
+q_2-rac{q_1^2}{q_0}
+\right)
+\ge c_\kappa>0.
+}
+\]
+
+The variance splits exactly into within-state spatial coefficient variance plus between-time coefficient-phase variance.
+
+Exact CE-H also gives
+
+\[
+D_\xi\kappa=0.
+\]
+
+M19-323 therefore disintegrates the spatial coefficient variance by vortex-line label. If
+
+\[
+L_1(\lambda)=\int_{\Gamma_\lambda}\rho ds,
+\qquad
+E=\int L_1d\nu,
 \]
 
 and
 
 \[
-\boxed{
-\int_{-\infty}^{0}\|D^3\Omega(t)\|_2^2dt<\infty,
-}
+d\Pi=\frac{L_1}{E}d\nu,
 \]
 
-with D3 record weight \(R_m^{-5}\).
-
-Under normalized coefficient compactness, the coefficient-gradient resource also lives at the D3 ancestry order.
-
-The compact common-mode interior reduces to raw-H2/palinstrophy payments, but fixed normalized charges remain ancestry-summable at generic geometric record growth.
-
-## 8. Standard-energy descent in exact CE-H
-
-With
-
-\[
-K=\|\kappa\|_\infty,
-\]
-
-exact CE-H gives
-
-\[
-H_{raw}\le K^2E,
-\qquad
-P\le KE.
-\]
-
-Therefore fixed \(P/H\) payments with bounded or sufficiently slow-growing coefficient ceiling can descend to the positive-\(R\) standard-energy ledger.
-
-For variable coefficient ceiling \(K_m\), standard energy forces
+then
 
 \[
 \boxed{
-\sum_m\frac{R_mq_{P,m}}{K_m}<\infty,
-\qquad
-\sum_m\frac{R_mq_{H,m}}{K_m^2}<\infty.
-}
-\]
-
-Thus persistent fixed payments require quantitative coefficient decompactification rather than merely `K_m unbounded`.
-
-## 9. Low-frequency firewall
-
-Whole-space divergence-free velocity satisfies
-
-\[
-\boxed{
-\|u\|_2^2
+\operatorname{Var}_{spatial,\rho^2}(\kappa)
 =
-\|\Omega\|_{\dot H^{-1}}^2
-=:B_{-1},
-\qquad
-E^2\le B_{-1}P.
+\operatorname{Var}_{\Pi}(\kappa_\lambda).
 }
 \]
 
-High-frequency vorticity ledgers do not control \(B_{-1}\).
+Thus spatial CE-H coefficient heterogeneity is necessarily transverse vortex-line-label segregation, not longitudinal coefficient recharge.
 
-If the low-frequency tail itself decompactifies, the failure is R-critical.
-If finite parent kinetic-energy information exists but is not inherited by the record genealogy, the failure is R-AC.
+Failure of a controlled transverse connection routes to thin-neck, nodal/interface/domain, component/genealogy, or remote-critical exits.
 
-Thus the M17 low-frequency firewall is an interface between two existing roots, not a fourth root.
+## 6. Unsigned additive resource firewall
 
-## 10. Current local CE-H frontier
+M18-058--059 remain fully active.
 
-The M18 local audit removes many false payer labels but does not close CE-H.
-The retained local issues include combinations of:
-
-- distributed weighted coefficient-gradient concentration;
-- second coefficient jet / level geometry;
-- strain-weighted first jet;
-- coefficient/amplitude decompactification;
-- critical-level / nodal / tube/domain loss;
-- positive-flux thinning and shape dilution;
-- normal-chart/topology/interface/rank loss;
-- placement/genealogy/ancestry conversion.
-
-Naive pointwise extraction of \(\Delta\kappa\) reaches D4, but D4 must not be called unavoidable: a lower-order weak/divergence identity may still exist.
-
-## 11. Proof-tree layer firewall
-
-The following must not be mixed:
-
-### Upstream ROOT-CERT roots
+There is currently no certified unsigned additive resource that simultaneously has
 
 \[
-\mathcal R_{remote},
-\quad
-\mathcal R_{critical},
-\quad
-\mathcal R_{AC}.
+\boxed{
+\text{finite original-parent total}
++
+\text{event additivity}
++
+\text{nonsummable first-hitting homogeneity}
++
+\text{fixed positive recurrent payment}.
+}
 \]
 
-### Downstream canonical branches
+Consequently:
+
+- a fixed palinstrophy/raw-H2 event is not enough;
+- cellwise lower-order descent is classification, not global closure;
+- fixed chronological standard-energy payments remain summable after composite-scale restoration;
+- higher derivative escalation without a finite original-parent budget is not a contradiction.
+
+## 7. Signed/recurrent route status
+
+M18-060--069 and M19-270--308 jointly show that several natural signed candidates reduce to balanced recurrence rather than one-way monotonicity.
+
+Key firewalls include:
 
 \[
-CP-E,
-CP-S,
-CE-T,
-Migration,
-CE-H.
-\]
-
-### CE-H internal exits
-
-coefficient/tube/jet/shape/level-set/topology/domain branches.
-
-A branch may remain open without being an independent ROOT-CERT root.
-
-## 12. Permanent DSD firewalls
-
-\[
-\boxed{\text{pointwise blowup}\neq\text{integrated cost}},
+\boxed{\text{bounded finite-lag state coboundary has zero invariant mean}},
 \]
 
 \[
-\boxed{\text{same event under rerecording}\neq\text{new multiplicity}},
+\boxed{\text{moment-space hysteresis area}\not\Rightarrow\text{diffusion consumed per cycle}},
 \]
+
+and the full wedge balance
 
 \[
-\boxed{\text{high-frequency derivative control}\neq\text{low-frequency tightness}},
+\partial_z(e+2zj)-\mathcal L_qj=d+j.
 \]
+
+M19-308 gives
 
 \[
-\boxed{\text{own-scale normalized cost}\neq\text{fixed-parent ancestry cost}},
+\boxed{j(z)=O(z^{-2})}
 \]
+
+and the exact inward depth budget
 
 \[
-\boxed{\text{local payer classification}\neq\text{global contradiction}},
+\int_0^\infty\mathscr J(z)dz
+=-\mathscr E(0)-\int_0^\infty\mathscr D(z)dz<0.
 \]
+
+Thus the compact temporal survivor is a recurrent phase/hysteresis/factor problem unless additional material/PDE rigidity is found.
+
+## 8. Terminal-tail rigidity bridge
+
+M5-479--482 remain canonical.
+
+A nontrivial backward-record ancient packet cannot have a suitable-zero terminal exterior.
+
+M5-480 absorbs the pressure terminal into critical velocity occupancy.
+
+On the regular bounded-amplitude lane M5-481 forces critical Dirichlet shell occupancy
 
 \[
-\boxed{\text{CE-H internal closure}\neq\text{global NS closure}}.
+\limsup_m
+R_m\int_{A_{R_m}}|\nabla V(0)|^2>0.
 \]
 
-## 13. Immediate priority
+If terminal amplitude/frequency is bounded, M5-482 extracts a nonconstant complete terminal dilation genealogy
 
-The current next step is **not** automatically another CE-H high-jet calculation.
+\[
+T_{n+1}=D_{\lambda_n}T_n,
+\qquad
+1<\lambda_-\le\lambda_n\le\lambda_+<\infty.
+\]
 
-The three upstream roots should be compared by available leverage:
+It may be DSS/periodic or genuinely aperiodic. The dynamically coherent ancient lift remains a major critical-tail rigidity frontier.
 
-1. existence of a finite parent budget;
-2. guaranteed nonzero normalized witness;
-3. ancestry scaling strength;
-4. external rigidity theorems already applicable to a subbranch;
-5. whether the root is reduced to one explicit missing inequality.
+## 9. Stationary point-force route
 
-That comparison should determine the next primary line while the downstream CE-H analysis remains preserved.
+The independent stationary route remains
 
-## 14. Repository-wide OPEN dependencies
+\[
+\boxed{
+\mathcal T_{stress}^{tight}
+\lor
+\mathcal T_{tail}^{zero-force-rigidity}.
+}
+\]
+
+Failure of uniform far-field stress tightness can carry the terminal point-force coefficient through noncommutation of limits.
+
+## 10. Current priority
+
+The active M19 priority is no longer to produce another local unsigned payer.
+
+The two highest-value compact-hard targets are:
+
+### A. CE-H transverse coefficient line packing
+
+Combine
+
+\[
+\operatorname{Var}_{\Pi}(\kappa_\lambda)>0
+\]
+
+with the late-M17 positive-flux mesoscopic carrier geometry and determine whether coefficient-separated vortex-line populations can remain interleaved without forcing
+
+- transverse coefficient-gradient cost with strengthened duration/multiplicity;
+- thin-neck / scale-free Poincare degeneration;
+- nodal/sign/interface turnover;
+- extra transverse size dilution;
+- remote/critical export.
+
+### B. Terminal dilation-hull rigidity
+
+Use the nontrivial own-scale interior packet together with the M5-479--482 terminal bridge to classify/exclude the nonconstant terminal dilation hull and its ancient lift.
+
+These are rigidity/coupling targets, not new unsigned budget searches.
+
+## 11. Permanent proof-layer firewall
+
+Do not mix:
+
+- upstream roots `R-remote`, `R-critical`, `R-AC`;
+- downstream branches `CP-E`, `CP-S`, `CE-T`, `Migration`, `CE-H`;
+- CE-H internal coefficient/tube/jet/topology exits;
+- terminal dilation-factor branches.
+
+A local CE-H reduction is not global ROOT-CERT closure.
+
+## 12. Repository-wide OPEN dependencies
 
 Still OPEN:
 
-- historical/theorem-ready ROOT-CERT completeness from an arbitrary hypothetical singularity;
+- theorem-ready ROOT-CERT completeness from an arbitrary hypothetical singularity;
 - R-remote closure;
 - R-critical closure;
 - R-AC closure;
-- downstream CP-E/CP-S/CE-T/Migration ancestry closure;
-- downstream CE-H local concentration/decompactification exits;
-- low-frequency/tail inheritance where required;
-- final payer-to-parent contradiction or rigidity;
-- global 3D Navier--Stokes regularity.
+- non-CE-H downstream ancestry/rigidity closure;
+- exact CE-H transverse coefficient line-packing/phase closure;
+- terminal DSS/aperiodic dilation-hull rigidity or suitable-terminal-defect closure;
+- stationary stress-tightness / zero-force rigidity;
+- final global 3D Navier--Stokes regularity.
 
-No current repository file should state that the Millennium problem has been solved.
+No repository file should state that the Millennium problem has been solved.
 
 ---
 
