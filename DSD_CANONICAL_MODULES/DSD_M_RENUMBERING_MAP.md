@@ -1,9 +1,9 @@
 # DSD canonical renumbering map
 
-Date: 2026-09-03
-Status: **AUTHORITATIVE CROSSWALK FOR LEGACY M5-481+**
+Date: 2026-09-19
+Status: **AUTHORITATIVE CROSSWALK + FAMILY-BOUNDARY POLICY**
 
-Legacy files are retained. Canonical IDs below are used for all future references.
+Legacy files are retained. Canonical IDs below are used for future references.
 
 | Canonical module | Legacy range | Canonical range | Conversion |
 |---|---:|---:|---|
@@ -20,36 +20,41 @@ Legacy files are retained. Canonical IDs below are used for all future reference
 | M15 | M5-667~676 | M15-001~010 | canonical local = legacy - 666 |
 | M16 | M5-677~688 | M16-001~012 | canonical local = legacy - 676 |
 
-## Boundary examples
-
-- Legacy `M5-481` -> canonical `M5-001`.
-- Legacy `M5-502` -> canonical `M5-022`.
-- Legacy `M5-503` -> canonical `M6-001`.
-- Legacy `M5-508` -> canonical `M6-006`.
-- Legacy `M5-559` -> canonical `M10-001`.
-- Legacy `M5-588` -> canonical `M10-030`.
-- Legacy `M5-599` -> canonical `M12-001`.
-- Legacy `M5-619` -> canonical `M12-021`.
-- Legacy `M5-620` -> canonical `M13-001`.
-- Legacy `M5-646` -> canonical `M13-027`.
-- Legacy `M5-647` -> canonical `M14-001`.
-- Legacy `M5-666` -> canonical `M14-020`.
-- Legacy `M5-667` -> canonical `M15-001`.
-- Legacy `M5-676` -> canonical `M15-010`.
-- Legacy `M5-677` -> canonical `M16-001`.
-- Legacy `M5-685` -> canonical `M16-009`.
-- Legacy `M5-686` -> canonical `M16-010`.
-- Legacy `M5-687` -> canonical `M16-011`.
-- Legacy `M5-688` -> canonical `M16-012`.
-
 ## Reference rule
 
-New documents use the canonical identifier in title and body. When referring to a legacy calculation for the first time in a document, use for example:
+New documents use canonical identifiers. Legacy mappings remain stable.
 
-`M16-009 (Legacy M5-685)`.
+## M19 → M20 family boundary
 
-After that, canonical ID alone is sufficient.
+As of 2026-09-19:
+
+\[
+\boxed{\text{M19 is frozen at M19-442.}}
+\]
+
+M19 IDs are not renumbered into M20. Existing cross-references remain stable.
+
+The next new calculation is
+
+\[
+\boxed{\text{M20-001}.}
+\]
+
+Semantic boundary:
+
+- M19: terminal critical survivor / terminal jets / residual and pressure audit / terminal curl classification.
+- M20: pressure-free vorticity residual / projective vorticity dynamics.
+
+Planned later boundaries:
+
+- M21: finite-depth wedge PDE coupling.
+- M22: original-variable restoration / ancestry / noncritical gain.
+- M23: final closure stage only if actually reached.
+
+These are organizational boundaries and do not imply proof completion.
 
 ## Scope firewall
 
-This map deliberately does **not** renumber legacy `M5-001~480`; that range requires its own topic-level inventory before any canonical reassignment.
+This map does not renumber legacy M5-001~480.
+
+Likewise, the M19→M20 split is forward-only: historical M19 modules remain M19 permanently.
