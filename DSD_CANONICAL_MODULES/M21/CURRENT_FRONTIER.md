@@ -2,335 +2,157 @@
 
 **Date:** 2026-09-20  
 **Active family:** M21  
-**Current tip:** M21-007  
-**Next:** M21-008  
+**Current tip:** M21-010  
+**Next:** M21-011  
 **Predecessor:** M20 frozen at M20-013  
-**Status:** ACTIVE FINITE-DEPTH WEDGE COUPLING / PHASE-TRANSITION AUDIT COMPLETE / TRANSPORT COBBOUNDARY REMOVED / PRESSURE-DIFFUSION REDUCED TO EXISTING ANALYTIC FIREWALLS / LONGITUDINAL NO-CROSSING SURVIVOR REDUCED TO MIXED-MOMENT TRANSITION OR STRONG GAMMA-K ANTI-CORRELATION
+**Status:** ACTIVE FINITE-DEPTH WEDGE COUPLING / PHASE-TRANSITION NOT AUTOMATIC / TRANSPORT COBBOUNDARY REMOVED / PRESSURE-DIFFUSION REDUCED TO EXISTING ANALYTIC FIREWALLS / LONGITUDINAL SEGREGATION REDUCED TO LOCAL RECURRENT BOUNDED-SEPARATION TRANSITION GEOMETRY
 
 \[
 \boxed{\text{GLOBAL 3D NAVIER--STOKES REGULARITY REMAINS UNPROVED.}}
 \]
 
-## 1. Compact finite-depth input
-
-M21-001 gives
+## 1. Phase discriminant and mixed moment
 
 \[
-z_{EK},z_\omega\in[a_{21},b_{21}].
+\mathscr H=6\mathscr A-\mathscr B,
 \]
 
-The two witnesses lie in one fixed finite-depth corridor, but overlap is not automatic.
-
-## 2. Common strain budget
-
-M21-002 gives
-
-\[
-\boxed{
-\mathscr S_{\omega\Sigma}
-=
-\frac{\mathscr Q_\omega^2}{W}
-+
-W\operatorname{Var}_{\pi_z}(\Gamma)
-+
-\frac12\mathscr Z.
-}
-\]
-
-Thus mean longitudinal stretching, longitudinal heterogeneity, and transverse projective noncommutation share one exact nonnegative strain-square budget.
-
-## 3. Mixed-moment ODE
-
-M21-003 defines
+and
 
 \[
 \mathscr M=\langle E\Gamma K\rangle
 \]
 
-and derives
-
-\[
-\boxed{
-\mathscr M'
-+
-2z\mathscr F_M'
-+
-9\mathscr F_M
-=
-3\mathscr A
--
-\frac12\mathscr B
--
-\mathscr C
--
-\mathscr D.
-}
-\]
-
-Define
-
-\[
-\boxed{
-\mathscr H:=6\mathscr A-\mathscr B.
-}
-\]
-
-Then
+satisfy
 
 \[
 \mathscr M'
-+
-2z\mathscr F_M'
-+
-9\mathscr F_M
++2z\mathscr F_M'
++9\mathscr F_M
 =
-\frac12\mathscr H
--
-\mathscr C
--
-\mathscr D.
+\frac12\mathscr H-\mathscr C-\mathscr D.
 \]
 
-## 4. M21-004 — phase transition is not automatic
+## 2. M21-004--006 reductions
 
-Neither \(z_\omega\) nor \(z_{EK}\) fixes the sign of \(\mathscr H\).
+A crossing \(\mathscr H=0\) is not forced by the two finite-depth witnesses.
 
-Therefore the existing two witnesses do not imply
+If no crossing occurs, compactness gives a uniform signed gap.
 
-\[
-\exists z_*:\mathscr H(z_*)=0.
-\]
+The mixed transport current is an exact depth coboundary and is not an independent bulk payer.
 
-On the no-crossing branch, continuity and compactness give
+The pressure/diffusion compensator reduces to existing:
 
-\[
-\boxed{
-|\mathscr H(z)|\ge\delta_H>0
-}
-\]
+- Calderon--Zygmund pressure;
+- palinstrophy/direction-gradient;
+- raw-H2/strain-diffusion;
+- interface firewalls.
 
-with one fixed sign throughout the corridor.
-
-M21-004 converts this into a signed compensation by:
-
-- mixed transport current;
-- pressure/diffusion correlation;
-- longitudinal/transverse segregation.
-
-## 5. M21-005 — transport is a depth coboundary
-
-Define
+Thus the structurally distinct no-crossing branch is signed segregation
 
 \[
-\mathscr Y_M
-=
-z^{7/2}\mathscr M
-+
-2z^{9/2}\mathscr F_M.
-\]
-
-Then
-
-\[
-\mathscr Y_M(0)=0,
-\qquad
-\mathscr Y_M(\infty)=0.
-\]
-
-Thus the corridor difference \(\Delta Y_M\) is only exchange with complementary depth regions.
-
-If no crossing persists while the corridor is enlarged, \(\Delta Y_M\) can be made arbitrarily small.
-
-Therefore the transport-current branch is not an independent bulk payer.
-
-The phase frontier reduces to
-
-\[
-\boxed{
-T_{\rm phase}
-\lor
-P_{PD}
-\lor
-P_{\rm segregation}.
-}
-\]
-
-## 6. M21-006 — pressure/diffusion returns to existing resources
-
-The compensator
-
-\[
-R_{PD}
-=
-\int z^{7/2}(\mathscr C+\mathscr D)\,dz
-\]
-
-expands into:
-
-- scalar vorticity diffusion;
-- direction-gradient damping;
-- transverse/longitudinal pressure-Hessian coupling;
-- strain diffusion;
-- viscous projective coupling.
-
-On the compact normalized corridor:
-
-- scalar and strain diffusion reduce to raw-\(H^2\);
-- direction gradients reduce to palinstrophy;
-- pressure returns to the M20-007 traceless Calderon--Zygmund critical channel;
-- nodal failures remain interface geometry rather than a positive-volume bulk payer.
-
-Hence
-
-\[
-\boxed{
-P_{PD}
-\Longrightarrow
-P_{\rm existing\ analytic}.
-}
-\]
-
-No new noncritical bulk resource is obtained.
-
-## 7. Distinct no-crossing survivor
-
-After M21-005--006, the structurally distinct no-crossing branch is
-
-\[
-\boxed{
 R_{\Gamma K}
-=
-\frac72
-\int
-z^{5/2}
-\langle E\Gamma K\rangle\,dz.
-}
+\propto
+\int z^{5/2}\langle E\Gamma K\rangle dz.
 \]
 
-This is signed longitudinal/transverse phase segregation.
+## 3. M21-007
 
-## 8. M21-007 — longitudinal segregation sharpens
+On the longitudinal no-crossing segregation branch, some depth contains a robust compressive-projective population.
 
-On a longitudinal no-crossing phase, if existing analytic payers do not carry the charge, then
+At the scalar enstrophy-production depth \(z_\omega\),
 
 \[
-R_{\Gamma K}<0.
+\bar\Gamma(z_\omega)>0.
 \]
 
-Therefore some depth \(z_-\) satisfies
+Therefore either
 
 \[
-\mathscr M(z_-)=\langle E\Gamma K\rangle<0.
+\exists z_M:\mathscr M(z_M)=0,
 \]
 
-Compact ceilings upgrade a fixed negative moment to a robust positive-measure packet with simultaneously:
+or
 
 \[
-\Gamma\le-\gamma_*<0,
-\qquad
-K\ge K_*>0.
-\]
-
-Thus strong compressive stretching and strong projective noncommutation coexist on a real enstrophy-weighted population.
-
-## 9. Compare with enstrophy-production shell
-
-At \(z_\omega\),
-
-\[
-\bar\Gamma(z_\omega)
-=
-\mathbb E_{\pi_{z_\omega}}\Gamma
->0.
-\]
-
-Therefore exactly one of the following occurs:
-
-### Mixed-moment transition
-
-If
-
-\[
-\mathscr M(z_\omega)\ge0,
-\]
-
-then continuity between \(z_-\) and \(z_\omega\) gives
-
-\[
-\boxed{
-\exists z_M:
-\mathscr M(z_M)=0.
-}
-\]
-
-### Strong same-depth anti-correlation
-
-If
-
-\[
-\mathscr M(z_\omega)<0,
-\]
-
-then
-
-\[
-\boxed{
 \operatorname{Cov}_{\pi_{z_\omega}}(\Gamma,K)
 <
--\bar\Gamma(z_\omega)\bar K(z_\omega).
-}
+-\bar\Gamma\bar K.
 \]
 
-Thus projective noncommutation is concentrated in below-average stretching/compressive regions strongly enough to reverse the K-weighted stretching sign.
+## 4. M21-008--009
 
-## 10. Current authoritative longitudinal frontier
+Strong negative Gamma--K covariance produces two robust populations:
 
-The longitudinal no-crossing branch is now
+- extensional enstrophy-production;
+- compressive projective noncommutation.
+
+A common connected regular cell forces Gamma-gradient / strain-direction derivative cost.
+
+Escapes are:
+
+- low-vorticity bottleneck;
+- projective-alignment K-separator;
+- phase localization.
+
+A robust K-separator itself returns to:
+
+- palinstrophy/strain-gradient;
+- low-vorticity geometry;
+- vanishing-measure microinterface;
+- pressure/diffusion cancellation;
+- rapid K-turnover.
+
+## 5. M21-010 — minimality removes unbounded phase localization
+
+Strict-margin extensional and compressive-projective packets define nonempty open finite detectors.
+
+Minimality makes each fixed detector syndetic.
+
+Hence paired events recur with
+
+\[
+|q_+-q_-|\le L_{\rm pair}<\infty.
+\]
+
+Thus q/angular phase localization cannot send the two populations arbitrarily far apart.
+
+The anti-correlation branch reduces to local recurrent bounded-separation geometry.
+
+## 6. Current frontier
 
 \[
 \boxed{
-L_{\rm no-cross}
+C_{\Gamma K}^{-}
 \Longrightarrow
-P_{\rm existing\ analytic}
+P_{\rm pal/strain-grad}
 \lor
-T_M
+P_{E\text{-bottleneck}}
 \lor
-C_{\Gamma K}^{-}.
+P_{K\text{-microinterface}}
+\lor
+P_{\rm analytic-cancel}
+\lor
+P_{K\text{-turnover}}.
 }
 \]
 
-Here:
+The remaining question is not spatial separation but **occupancy/thickness**.
 
-- \(P_{\rm existing\ analytic}\): CZ / palinstrophy / raw-\(H^2\) / interface firewalls;
-- \(T_M\): mixed moment zero crossing;
-- \(C_{\Gamma K}^{-}\): strong same-depth anti-correlation at the positive enstrophy-production slice.
+## 7. Next target — M21-011
 
-The transverse no-crossing phase is less constrained and remains separate.
+Quantify normalized z-width / physical-time residence of the bounded-pair transition geometry.
 
-## 11. Next target
+A single syndetic q-snapshot remains ancestry-summable.
 
-M21-008 should study
+The desired gain is a fixed lower occupancy of one of:
 
-\[
-C_{\Gamma K}^{-}
-\]
+- Gamma-gradient transition;
+- low-vorticity bottleneck;
+- K-alignment interface/turnover.
 
-as a two-population geometry problem inside the compact similarity annulus.
-
-The key question is whether robust:
-
-- extensional enstrophy-production populations;
-- compressive projective-strain populations;
-
-force one of:
-
-- a positive-thickness transition layer;
-- a low-vorticity bottleneck;
-- a projective-alignment separator \(K\approx0\);
-- or a high spatial/angular derivative cost.
-
-This is the current highest-value finite-depth coupling target.
+If compact derivative ceilings force fixed z-thickness, the recurrent geometry may thicken into a stronger spacetime payer.
 
 \[
-\boxed{\text{CURRENT TIP: M21-007 / NEXT: M21-008.}}
+\boxed{\text{CURRENT TIP: M21-010 / NEXT: M21-011.}}
 \]
