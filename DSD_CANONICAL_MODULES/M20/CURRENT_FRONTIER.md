@@ -1,480 +1,84 @@
-# M20 Current Frontier
+# M20 Current Frontier — FROZEN / HANDOFF TO M21
 
-**Date:** 2026-09-20  
-**Active family:** M20  
-**Current calculation tip:** M20-010  
-**Next calculation ID:** M20-011  
-**Previous frozen family:** M19 at M19-442  
-**Status:** ACTIVE PROJECTIVE-VORTICITY PHASE / GLOBAL TANGENT RESIDUAL REDUCED TO REWEIGHTING OR TRUE DIRECTION MOTION / NODAL VOLUME ESCAPE CLOSED / STRAIN BRANCH RESOLVED TO SIGNED PROJECTIVE PRESSURE-DIFFUSION COMPENSATION / REWEIGHTING BRANCH RESOLVED TO CONDITIONAL PROBABILITY CURRENT AND JOINT Q-GAMMA COVARIANCE
+**Freeze date:** 2026-09-20  
+**Frozen tip:** M20-013  
+**Next active family:** M21  
+**Status:** FROZEN PROJECTIVE-VORTICITY FAMILY / TERMINAL PROJECTIVE GEOMETRY FORCES A FINITE-DEPTH ENSTROPHY-WEIGHTED PROJECTIVE-STRAIN COMPENSATION SHELL
 
 \[
 \boxed{\text{GLOBAL 3D NAVIER--STOKES REGULARITY REMAINS UNPROVED.}}
 \]
 
-## 1. Frozen M19 input
+## Freeze reason
 
-From M19-441--442,
+M20 was defined to study the terminal pressure-free vorticity residual and its projective geometry.
+
+M20-013 reaches the M20 stop condition: terminal projective-strain activity forces a genuine finite-depth witness
 
 \[
-D_\omega=\mathcal K_3C=G_z(0),
+z_{EK}>0
 \]
 
-and
+with
 
 \[
-\boxed{
-C^\perp_{\rm mandatory}
-\Longrightarrow
-D_{\rm dip}^{\rm crit,cons}
-\lor
-V_{\rm norm}^{\rm curl}
-\lor
-V_{\rm tan}^{\rm curl}.
-}
-\]
-
-The harmonic pressure-dipole branch remains finite-dimensional, conservative, vorticity-invisible, and exactly critical.
-
-M20 studies the pressure-free projective structure of the remaining curl-visible residual.
-
-## 2. M20-001--004: exact tangent split and nodal closure
-
-Let
-
-\[
-\alpha=\frac{\langle B,D_\omega\rangle}{b_2},
-\qquad
-T_\omega=D_\omega-\alpha B.
-\]
-
-On \(\{B\neq0\}\),
-
-\[
-\lambda=\frac{B\cdot D_\omega}{|B|^2},
-\qquad
-R_\omega=P_B^\perp D_\omega.
-\]
-
-After the M20-004 zero-set audit,
-
-\[
-\boxed{
-\|T_\omega\|_H^2
+\mathscr R(z_{EK})-2\mathscr G(z_{EK})
 =
-b_2\operatorname{Var}_{\pi_B}(\lambda)
-+
-b_2\mathbb E_{\pi_B}|\partial_z\xi_B|^2.
-}
+\frac{5}{2z_{EK}}\mathscr Z(z_{EK})>0.
 \]
 
-Moreover,
+The proof object has therefore changed from terminal projective geometry to finite-depth wedge coupling.
+
+## Frozen endpoint
+
+The terminal tangent branch was refined to:
 
 \[
-\boxed{
-D_\omega=0
-\quad\text{a.e. on }\{B=0\}.
-}
-\]
-
-Thus the positive-volume nodal \(L^2\) branch is closed and
-
-\[
-\boxed{
 V_{\rm tan}^{\rm curl}
 \Longrightarrow
-V_{\rm reweight}
-\lor
-V_{\rm dir}.
-}
+V_{\rm reweight}\lor V_{\rm dir}.
 \]
 
-## 3. M20-002: genuine direction motion
+The reweighting branch was resolved through conditional observability and the exact magnitude PDE.
 
-On a robust high-vorticity subset,
+The direction branch was resolved through transport, projective strain, and viscous direction diffusion.
+
+The common-generator product ledger then yielded
 
 \[
--\partial_z\xi_B+\mathcal T_A\xi_B
+\mathscr Y_{EK}(z)
 =
-P_{\xi_B}^\perp\Sigma_A\xi_B+\mathcal V_\xi.
-\]
-
-Therefore
-
-\[
-\boxed{
-V_{\rm dir}
-\Longrightarrow
-T_{\rm texture}
-\lor
-S_{\rm eig}
-\lor
-V_{\rm proj}.
-}
-\]
-
-A fixed-coordinate depth derivative is not automatically material direction turnover.
-
-## 4. M20-003,008: exact probability reweighting and blind kernel
-
-Define
-
-\[
-d\pi_z=\frac{|G(z)|^2}{b_2(z)}d\mu.
-\]
-
-Then
-
-\[
-\boxed{
-\partial_zd\pi_z|_0
-=
-2(\lambda-\alpha)d\pi_B.
-}
-\]
-
-For any direction-only observable \(F(Q)\),
-
-\[
-\left.\frac d{dz}\mathbb E_{\pi_z}F(Q)\right|_{\rm rw}
-=
-2\mathbb E[(\lambda-\alpha)F(Q)].
-\]
-
-The exact blind kernel of every direction-only observable, including the full hierarchy of projective tensor moments, is
-
-\[
-\boxed{
-\mathbb E[\lambda-\alpha\mid Q]=0.
-}
-\]
-
-Thus
-
-\[
-\boxed{
-V_{\rm reweight}
-\Longrightarrow
-R_{\rm high}
-\lor
-R_{\rm fiber}^{Q}.
-}
-\]
-
-Pure projective moments are not a complete state description.
-
-## 5. M20-005--007: projective strain and transverse pressure compensation
-
-Let
-
-\[
-Q=\xi\otimes\xi,
-\qquad
-\gamma=\xi^TS\xi,
-\qquad
-s_\perp=P_\xi^\perp S\xi.
-\]
-
-Then
-
-\[
-\boxed{
-D_tQ|_S=[[S,Q],Q],
-}
-\]
-
-and
-
-\[
-\boxed{
-\|[S,Q]\|_F^2=2|s_\perp|^2.
-}
-\]
-
-The exact covariant material evolution is
-
-\[
-\boxed{
-\begin{aligned}
-P_\xi^\perp D_ts_\perp
-={}&
--2\gamma s_\perp
--
-P_\xi^\perp(\nabla^2p)\xi
-\\
-&+
-\nu P_\xi^\perp(\Delta S)\xi
+z^{5/2}\mathscr Z(z)
 +
-P_\xi^\perp(S-\gamma I)v_\perp.
-\end{aligned}
-}
+2z^{7/2}\mathscr F(z)
 \]
 
-Hence
+with a forced positive interior maximum.
+
+## Authoritative late modules
+
+- M20-006: signed projective-strain compensation law.
+- M20-007: transverse pressure-Hessian is an exactly critical traceless Calderon--Zygmund channel.
+- M20-008: blind kernel of every direction-only observable is \(E[\lambda-\alpha\mid Q]=0\).
+- M20-009: terminal reweighting speed is resolved into transport, stretching, scalar diffusion, and direction-gradient damping.
+- M20-010: axial stretching inserts exact negative self-covariance into reweighting.
+- M20-011: joint stretching compensation is a two-covariance snapshot matrix; generator mismatch isolated.
+- M20-012: common homogeneity-corrected material generator resolves the mismatch.
+- M20-013: terminal projective-strain activity forces a finite-depth compensation shell.
+
+## Handoff
+
+M21 begins with the finite-depth objects
 
 \[
-\boxed{
-\begin{aligned}
-\frac14D_t\|[S,Q]\|_F^2
-+\gamma\|[S,Q]\|_F^2
-={}&
--\frac12\langle[S,Q],[\nabla^2p,Q]\rangle_F
-\\
-&+
-\nu s_\perp\cdot(\Delta S)\xi
-+
-s_\perp\cdot(S-\gamma I)v_\perp.
-\end{aligned}
-}
+\mathscr Z,\quad
+\mathscr F,\quad
+\mathscr G,\quad
+\mathscr R,
 \]
 
-The pressure term uses only the traceless off-axis Hessian component because
+and the forced witness \(z_{EK}\).
 
 \[
-[(\Delta p)I/3,Q]=0.
-\]
-
-M20-007 shows
-
-\[
-\boxed{
-\|[\nabla^2p,Q]\|_2
-\lesssim
-\|\omega\|_4^2,
-}
-\]
-
-and on the terminal \(1/r\) hard tail the pressure-strain commutator correlation has annular scaling
-
-\[
-O(R^{-3}),
-\]
-
-so it remains an exactly critical Calderon--Zygmund channel.
-
-## 6. M20-009: exact PDE formula for reweighting speed
-
-Let
-
-\[
-\beta=|B|,
-\qquad
-\mathcal D_\xi
-=
-|\partial_q\xi_B|^2+|\nabla_S\xi_B|^2.
-\]
-
-Then on \(\{\beta>0\}\),
-
-\[
-\boxed{
-\lambda
-=
-A_r(\partial_q\log\beta-2)
-+
-A_T\cdot\nabla_S\log\beta
--
-\gamma
--
-\frac{\mathcal L_2\beta}{\beta}
-+
-\mathcal D_\xi.
-}
-\]
-
-Thus
-
-\[
-\boxed{
-\lambda=X_T-\gamma+X_D+X_\xi.
-}
-\]
-
-Relative amplitude reweighting is therefore generated by:
-
-- transport/homogeneity;
-- axial stretching;
-- scalar magnitude diffusion;
-- direction-gradient damping.
-
-It is not an independent fifth PDE mechanism.
-
-## 7. M20-010: exact stretching self-covariance
-
-Set
-
-\[
-Y:=X_T+X_D+X_\xi.
-\]
-
-Then
-
-\[
-\lambda=Y-\gamma.
-\]
-
-Therefore
-
-\[
-\boxed{
-\operatorname{Cov}_{\pi_B}(\lambda,\gamma)
-=
--\operatorname{Var}_{\pi_B}(\gamma)
-+
-\operatorname{Cov}_{\pi_B}(Y,\gamma).
-}
-\]
-
-Axial stretching heterogeneity automatically inserts a negative self-covariance into the backward-depth reweighting current.
-
-If
-
-\[
-\operatorname{Cov}(\lambda,\gamma)\approx0
-\]
-
-while
-
-\[
-\operatorname{Var}(\gamma)>0,
-\]
-
-then transport/diffusion/direction-gradient channels must provide a matching positive covariance.
-
-On the pure direction-fiber-silent branch,
-
-\[
-\mathbb E[\lambda-\alpha\mid Q]=0,
-\]
-
-one has the exact conditional compensation
-
-\[
-\boxed{
-\mathbb E[Y\mid Q]-\mathbb E Y
-=
-\mathbb E[\gamma\mid Q]-\mathbb E\gamma.
-}
-\]
-
-## 8. Joint observability upgrade
-
-The natural next state is
-
-\[
-\boxed{
-(Q,\gamma,[S,Q]).
-}
-\]
-
-For the joint factor \((Q,\gamma)\), the exact reweighting blind kernel is
-
-\[
-\boxed{
-\mathbb E[\lambda-\alpha\mid Q,\gamma]=0.
-}
-\]
-
-Thus
-
-\[
-\boxed{
-R_{\rm fiber}^{Q}
-\Longrightarrow
-R_{Q\gamma}
-\lor
-R_{\rm fiber}^{Q\gamma}.
-}
-\]
-
-The joint factor improves observability but does not eliminate hidden within-fiber amplitude selection in principle.
-
-## 9. Current authoritative tangent architecture
-
-A compact representation is
-
-\[
-\boxed{
-V_{\rm tan}^{\rm curl}
-\Longrightarrow
-\begin{cases}
-V_{\rm dir}
-\to
-T_{\rm texture}\lor S_{\rm eig}\lor V_{\rm proj},
-\\
-V_{\rm reweight}
-\to
-R_{\rm high}\lor R_{\rm fiber}^{Q},
-\end{cases}
-}
-\]
-
-with the strain branch further carrying
-
-\[
-\boxed{
-S_{\rm eig}
-\Longrightarrow
-S_{\gamma^-}
-\lor
-P_{\rm off}^{critical,CZ}
-\lor
-D_S
-\lor
-V_{S\xi}
-\lor
-R_{\rm material}.
-}
-\]
-
-These labels are typed mechanisms, not independent proof roots.
-
-## 10. Current highest-value target
-
-M20-011 should form a joint signed compensation system for
-
-\[
-\boxed{
-C_{\lambda\gamma}
-=
-\operatorname{Cov}_{\pi_B}(\lambda,\gamma)
-}
-\]
-
-and
-
-\[
-\boxed{
-M_{\gamma S}
-=
-\mathbb E_{\pi_B}
-[
-\gamma\|[S,Q]\|_F^2
-].
-}
-\]
-
-The goal is to test whether both can remain neutral/recurrent without forcing a detectable pressure-Hessian, scalar-diffusion, direction-gradient, or material-lineage hysteresis channel.
-
-The target is a signed compensation matrix, not another unsigned scale-critical norm.
-
-## 11. Persistent firewalls
-
-Do not infer:
-
-- global Hilbert tangent \(\Rightarrow\) pointwise direction tangent;
-- depth direction change \(\Rightarrow\) material turnover;
-- positive reweighting variance \(\Rightarrow\) projective covariance change;
-- all projective moments \(\Rightarrow\) complete observability;
-- positive \([S,Q]\) \(\Rightarrow\) monotone stretching;
-- transverse pressure-Hessian activity \(\Rightarrow\) noncritical gain;
-- q-recurrence \(\Rightarrow\) same-material-line recurrence.
-
-M19-440 remains authoritative for terminal energy-payer bookkeeping.
-
-\[
-\boxed{\text{CURRENT TIP: M20-010 / NEXT: M20-011.}}
-\]
-
-\[
-\boxed{\text{GLOBAL 3D NAVIER--STOKES REGULARITY REMAINS UNPROVED.}}
+\boxed{\text{M20 FROZEN AT M20-013; NEW CALCULATIONS START IN M21.}}
 \]
