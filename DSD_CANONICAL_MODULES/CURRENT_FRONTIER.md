@@ -1,9 +1,9 @@
 # Current Canonical Frontier
 
-**Date:** 2026-09-19  
+**Date:** 2026-09-20  
 **Current active family:** M20  
-**Current active calculation tip:** M20-005  
-**Next calculation:** M20-006  
+**Current active calculation tip:** M20-010  
+**Next calculation:** M20-011  
 **Frozen predecessor:** M19 at M19-442  
 **Detailed active frontier:** DSD_CANONICAL_MODULES/M20/CURRENT_FRONTIER.md  
 **Frozen M19 handoff:** DSD_CANONICAL_MODULES/M19/M19_TO_M20_HANDOFF_2026-09-19.md  
@@ -13,50 +13,22 @@
 \boxed{\text{GLOBAL 3D NAVIER--STOKES REGULARITY REMAINS UNPROVED.}}
 \]
 
-## 1. Repository-wide proof-tree level
+## 1. Global proof-tree level
 
-The upstream classification remains open:
+The upstream singularity classification and ROOT-CERT remain open.
 
-\[
-\boxed{
-\text{hypothetical singularity}
-\Longrightarrow
-\mathcal R_{\rm remote}
-\lor
-\mathcal R_{\rm critical}
-\lor
-\mathcal R_{\rm AC}
-\lor
-\text{compact hard survivor}.
-}
-\]
+M20 is a downstream hard-survivor projective-vorticity family. It does not certify the entire blow-up reduction.
 
-ROOT-CERT and the root closures remain unfinished.
-
-M20 is a downstream hard-survivor calculation family, not an upstream completeness theorem.
-
-## 2. M19 → M20 boundary
+## 2. M19 frozen handoff
 
 M19 is frozen at M19-442.
 
-M19-440 remains the authoritative correction removing the unconditional independent-payer interpretation of M19-423~429.
+M19-440 remains the authoritative correction removing the unconditional independent-payer reading of M19-423--429.
 
-M20 studies
-
-\[
-B,\qquad
-D_\omega=G_z(0),\qquad
-\xi_B,\qquad
-Q_\xi=\xi_B\otimes\xi_B
-\]
-
-and the projective structure of the pressure-free terminal vorticity residual.
-
-## 3. Current M20 reduction
-
-The frozen M19 handoff was
+The frozen residual handoff is
 
 \[
+\boxed{
 C^\perp_{\rm mandatory}
 \Longrightarrow
 D_{\rm dip}^{\rm crit,cons}
@@ -64,24 +36,18 @@ D_{\rm dip}^{\rm crit,cons}
 V_{\rm norm}^{\rm curl}
 \lor
 V_{\rm tan}^{\rm curl}.
-\]
-
-M20-001~004 refine the tangent branch exactly.
-
-The positive-volume nodal L2 escape is closed:
-
-\[
-\boxed{
-D_\omega=0
-\quad\text{a.e. on }\{B=0\}.
 }
 \]
 
-Hence
+## 3. M20 reduction through M20-010
+
+The positive-volume nodal curl-residual branch is closed.
+
+The tangent curl residual now splits exactly into
 
 \[
 \boxed{
-V_{\rm tan}^{curl}
+V_{\rm tan}^{\rm curl}
 \Longrightarrow
 V_{\rm reweight}
 \lor
@@ -89,101 +55,108 @@ V_{\rm dir}.
 }
 \]
 
-The reweighting branch splits into
+The direction branch becomes
 
 \[
-R_{\rm proj}\lor R_{\rm silent},
+V_{\rm dir}
+\Longrightarrow
+T_{\rm texture}\lor S_{\rm eig}\lor V_{\rm proj}.
 \]
 
-while the genuine direction branch splits into
+The reweighting branch has exact probability law
 
 \[
-T_{\rm texture}
-\lor
-S_{\rm eig}
-\lor
-V_{\rm proj}.
+\partial_zd\pi_z
+=
+2(\lambda-\alpha)d\pi,
 \]
 
-Therefore the current projective tangent architecture is
+and all direction-only observables are blind precisely when
+
+\[
+\mathbb E[\lambda-\alpha\mid Q]=0.
+\]
+
+The terminal magnitude PDE gives
+
+\[
+\lambda=X_T-\gamma+X_D+X_\xi.
+\]
+
+Hence
 
 \[
 \boxed{
-V_{\rm tan}^{curl}
-\Longrightarrow
-R_{\rm proj}
-\lor
-R_{\rm silent}
-\lor
-T_{\rm texture}
-\lor
-S_{\rm eig}
-\lor
-V_{\rm proj}.
+\operatorname{Cov}(\lambda,\gamma)
+=
+-\operatorname{Var}(\gamma)
++
+\operatorname{Cov}(X_T+X_D+X_\xi,\gamma).
 }
 \]
 
-## 4. Projective strain detector
+## 4. Projective strain law
 
-M20-005 identifies
+With
 
 \[
-Q=\xi\otimes\xi
+Q=\xi\otimes\xi,
+\qquad
+s_\perp=P_\xi^\perp S\xi,
+\]
+
+one has
+
+\[
+D_tQ|_S=[[S,Q],Q],
 \]
 
 and
 
 \[
-\boxed{
-D_tQ|_S=[[S,Q],Q].
-}
+\|[S,Q]\|_F^2=2|s_\perp|^2.
 \]
 
-Furthermore,
+The exact signed compensation law is
 
 \[
-\boxed{
-\|[S,Q]\|_F^2
+\frac14D_t\|[S,Q]\|_F^2
++\gamma\|[S,Q]\|_F^2
 =
-2|P_\xi^\perp S\xi|^2.
-}
+-\frac12\langle[S,Q],[\nabla^2p,Q]\rangle_F
++\text{viscous terms}.
 \]
 
-This removes strain-eigenvector coordinate ambiguity.
+The pressure commutator is traceless/off-axis and remains exactly critical under Calderon--Zygmund scaling.
 
-The exact Rayleigh compensation law is
+## 5. Active target
+
+The common scalar \(\gamma\) now links:
+
+- amplitude reweighting;
+- projective strain alignment/misalignment.
+
+The M20-011 target is a joint signed compensation system for
 
 \[
-D_t\gamma
+C_{\lambda\gamma}
 =
--\gamma^2
-+
-|P_\xi^\perp S\xi|^2
--
-\xi^T\nabla^2p\,\xi
-+
-\nu\xi^T\Delta S\,\xi
-+
-2v_\perp\cdot P_\xi^\perp S\xi.
+\operatorname{Cov}(\lambda,\gamma)
 \]
 
-Thus recurrent transverse strain is a signed compensation problem, not yet a monotone resource.
-
-## 5. Current priority
-
-The active priority for M20-006 is to test whether recurrent projective noncommutation
+and
 
 \[
-[S,Q]\neq0
+M_{\gamma S}
+=
+\mathbb E[\gamma\|[S,Q]\|_F^2].
 \]
 
-forces a signed covariance/pressure-Hessian structure that cannot be reduced to another critical recyclable norm.
-
-The second priority is higher projective moments for the branch where amplitude reweighting is invisible to the second-moment covariance.
+The aim is to identify whether simultaneous recurrent neutrality forces a typed pressure/diffusion/direction/lineage hysteresis channel.
 
 ## 6. Persistent global firewalls
 
-Still open:
+Still open include:
 
 - ROOT-CERT;
 - R-remote;
@@ -191,10 +164,10 @@ Still open:
 - R-AC;
 - non-CE-H downstream closure;
 - original-variable ancestry/noncritical conversion;
-- projective vorticity compensation closure;
+- projective signed-compensation closure;
 - global 3D Navier--Stokes regularity.
 
-## 7. Planned later organizational boundaries
+## 7. Later organizational boundaries
 
 - M21: finite-depth wedge PDE coupling.
 - M22: original-variable restoration / ancestry / noncritical gain.
@@ -203,5 +176,5 @@ Still open:
 These are organizational boundaries, not proof claims.
 
 \[
-\boxed{\text{ACTIVE TIP: M20-005 / NEXT: M20-006.}}
+\boxed{\text{ACTIVE TIP: M20-010 / NEXT: M20-011.}}
 \]
