@@ -2,102 +2,57 @@
 
 **Opened:** 2026-09-20  
 **Predecessor:** M20 frozen at M20-013  
-**Current tip:** M21-003  
-**Next ID:** M21-004  
+**Current tip:** M21-007  
+**Next ID:** M21-008  
 **Status:** ACTIVE FAMILY
-
-\[
-\boxed{\text{GLOBAL 3D NAVIER--STOKES REGULARITY REMAINS UNPROVED.}}
-\]
-
-## Scope
-
-M21 studies finite-depth coupling among:
-
-- enstrophy production;
-- enstrophy-weighted projective strain;
-- longitudinal/transverse strain organization;
-- pressure/diffusion compensation.
 
 ## Modules
 
 ### M21-001
-The new projective compensation shell \(z_{EK}\) is trapped in the same compact finite-depth corridor as the M5-587 enstrophy-production witness \(z_\omega\).
+The projective compensation shell and enstrophy-production shell are trapped in one compact wedge corridor.
 
 ### M21-002
-Exact enstrophy-weighted Pythagorean strain decomposition:
-
-\[
-\mathscr S_{\omega\Sigma}
-=
-\frac{\mathscr Q_\omega^2}{W}
-+
-W\,\operatorname{Var}_{\pi_z}(\Gamma)
-+
-\frac12\mathscr Z.
-\]
-
-Thus scalar stretching and projective noncommutation are orthogonal components of one common strain-square budget.
+Exact longitudinal/variance/transverse Pythagorean decomposition of the enstrophy-weighted strain-square budget.
 
 ### M21-003
-The mixed signed moment
+Exact mixed-moment ODE for
 
 \[
-\mathscr M
-=
-\langle E\Gamma K\rangle
+\mathscr M=\langle E\Gamma K\rangle,
 \]
 
-obeys
+with internal strain discriminant
 
 \[
-\mathscr M'
-+
-2z\mathscr F_M'
-+
-9\mathscr F_M
-=
-3\mathscr A
--
-\frac12\mathscr B
--
-\mathscr C
--
-\mathscr D.
+\mathscr H=6\mathscr A-\mathscr B.
 \]
 
-The internal strain competition is between
+### M21-004
+A phase transition \(\mathscr H=0\) is not forced by the two witnesses. No crossing instead gives a uniform signed gap and a quantitative compensation theorem.
+
+### M21-005
+The mixed transport current is an exact depth coboundary. It either hides a transition while the corridor is enlarged or can be pushed arbitrarily close to zero at the wedge endpoints.
+
+### M21-006
+Pressure/diffusion compensation reduces to existing critical analytic resources: Calderon--Zygmund pressure, palinstrophy, raw-\(H^2\), and interface geometry.
+
+### M21-007
+Longitudinal signed segregation forces a robust compressive projective population and either:
 
 \[
-3\Gamma^2EK
+\mathscr M(z_M)=0,
 \]
 
-and
+or strong negative covariance
 
 \[
-\frac12EK^2,
+\operatorname{Cov}_{\pi_{z_\omega}}(\Gamma,K)
+<
+-\bar\Gamma\bar K
 \]
 
-with local transition threshold
-
-\[
-K=6\Gamma^2.
-\]
+at the positive enstrophy-production slice.
 
 ## Current target
 
-M21-004 should study the finite-depth phase sets
-
-\[
-\mathcal L=\{6\mathscr A>\mathscr B\},
-\qquad
-\mathcal T=\{6\mathscr A<\mathscr B\},
-\]
-
-and determine whether the scalar enstrophy-production witness and projective compensation witness force a transition depth
-
-\[
-6\mathscr A=\mathscr B
-\]
-
-inside the compact corridor, or whether pressure/diffusion correlations can keep the phases segregated.
+M21-008 should turn the strong anti-correlation branch into a finite-depth two-population interface/bottleneck problem.
